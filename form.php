@@ -220,7 +220,7 @@
                                 <h4>Dados Organizacionais:</h4>
 
 
-                                <!--
+                                
                                 <div class="input-group">
                                     <label class="sr-only" for="f1-pj">A sua organização é juridicamente constituída?</label>
                                     <span class="input-group-addon">
@@ -228,18 +228,11 @@
                                     </span>
                                     <input type="text" class="form-control" aria-label="...">
                                 </div>
-                                 -->
+                                 
 
 
 
-    <div class="input-group">
-      <span class="input-group-addon">
-        <input type="checkbox" aria-label="...">
-      </span>
-      <input type="text" class="form-control" aria-label="...">
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-
+   
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-password">Password</label>
