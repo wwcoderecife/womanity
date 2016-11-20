@@ -218,22 +218,10 @@
 
                             <fieldset>
                                 <h4>Dados Organizacionais:</h4>
-
-
-                                
-                                <div class="input-group">
+                                <div class="form-group">
                                     <label class="sr-only" for="f1-pj">A sua organização é juridicamente constituída?</label>
-                                    <span class="input-group-addon">
                                     <input type="checkbox" aria-label="... " name="f1-pj" placeholder="CNPJ..." class="f1-pj form-control" id="f1-pj">
-                                    </span>
-                                    <input type="text" class="form-control" aria-label="...">
                                 </div>
-                                 
-
-
-
-   
-
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-password">Password</label>
                                     <input type="password" name="f1-password" placeholder="Password..." class="f1-password form-control" id="f1-password">
