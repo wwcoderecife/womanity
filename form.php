@@ -144,7 +144,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-cargo1">Cargo</label>
-                                    <input type="text" name="f1-last-name" placeholder="Cargo" class="f1-last-name form-control" id="cargo">
+                                    <input type="text" name="f1-cargo1" placeholder="Cargo" class="f1-cargo1 form-control" id="cargo">
                                 </div>
 
                                 <!--
@@ -157,20 +157,20 @@
                             
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-email1">E-mail</label>
-                                    <input type="text" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-email1">
+                                    <input type="text" name="f1-email1" placeholder="E-mail" class="f1-email1 form-control" id="f1-email1">
                                     
                                 </div>
 
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-confirma_email">Confirma E-mail</label>
-                                    <input type="text" name="f1-last-name" placeholder="Confirma E-mail" class="f1-last-name form-control" id="f1-email1">
+                                    <input type="text" name="f1-confirma_email" placeholder="Confirmar E-mail" class="f1-confirma_email form-control" id="f1-confirma_email">
                                 </div>
 
                                 
                                 <div class="form-group">
-                                    <label class="sr-only" for="f1-last-name">Celular</label>
-                                    <input type="text" name="f1-last-name" placeholder="Celular" class="f1-last-name form-control" id="f1-last-name">
+                                    <label class="sr-only" for="f1-celular">Celular</label>
+                                    <input type="text" name="f1-celular" placeholder="Celular" class="f1-celular form-control" id="f1-celular">
                                 </div>
                                 <!--
                                 <div class="form-group">
@@ -181,32 +181,32 @@
                             -->
 
                             <div class="form-group">
-                                    <label class="sr-only" for="f1-first-name">Nome</label>
-                                    <input type="text" name="f1-first-name" placeholder="Nome do responsável pela organização ou suplente" class="f1-first-name form-control" id="f1-first-name" required data-error = "Campo está em branco, favor preencher.">
+                                    <label class="sr-only" for="f1-first-name2">Nome</label>
+                                    <input type="text" name="f1-first-name2" placeholder="Nome do responsável pela organização ou suplente" class="f1-first-name2 form-control" id="f1-first-name2" required data-error = "Campo está em branco, favor preencher.">
                                     <div class="help-block with-errors"></div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only" for="f1-last-name">Cargo</label>
-                                    <input type="text" name="f1-last-name" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name">
+                                    <label class="sr-only" for="f1-cargo2">Cargo</label>
+                                    <input type="text" name="f1-cargo2" placeholder="Cargo" class="f1-cargo2 form-control" id="f1-cargo2">
                                 </div>
 
 
                             <div class="form-group">
-                                    <label class="sr-only" for="f1-last-name">E-mail</label>
-                                    <input type="text" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
+                                    <label class="sr-only" for="f1-email2">E-mail</label>
+                                    <input type="text" name="f1-email2" placeholder="E-mail" class="f1-email2 form-control" id="f1-email2">
                                     
                                 </div>
 
 
                                 <div class="form-group">
-                                    <label class="sr-only" for="f1-last-name">Confirma E-mail</label>
-                                    <input type="text" name="f1-last-name" placeholder="Confirma E-mail" class="f1-last-name form-control" id="f1-last-name">
+                                    <label class="sr-only" for="f1-confirma_email2">Confirma E-mail</label>
+                                    <input type="text" name="f1-confirma_email2" placeholder="Confirma E-mail" class="f1-confirma_email2 form-control" id="f1-confirma_email2">
                                 </div>
 
                                 
                                 <div class="form-group">
-                                    <label class="sr-only" for="f1-last-name">Celular</label>
-                                    <input type="text" name="f1-last-name" placeholder="Celular" class="f1-last-name form-control" id="f1-last-name">
+                                    <label class="sr-only" for="f1-celular2">Celular</label>
+                                    <input type="text" name="f1-celular" placeholder="Celular" class="f1-last-name form-control" id="f1-celular">
                                 </div>
 
                                 <div class="f1-buttons">
@@ -218,10 +218,16 @@
 
                             <fieldset>
                                 <h4>Dados Organizacionais:</h4>
-                                <div class="form-group">
-                                    <label class="sr-only" for="f1-email">Email</label>
-                                    <input type="text" name="f1-email" placeholder="Email..." class="f1-email form-control" id="f1-email">
+                                
+                                <div class="input-group">
+                                    <label class="sr-only" for="f1-pj">A sua organização é juridicamente constituída?</label>
+                                    <span class="input-group-addon">
+                                    <input type="checkbox" aria-label="... " name="f1-pj" placeholder="CNPJ..." class="f1-pj form-control" id="f1-pj">
+                                    </span>
+                                    <input type="text" class="form-control" aria-label="...">
                                 </div>
+                                
+
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-password">Password</label>
                                     <input type="password" name="f1-password" placeholder="Password..." class="f1-password form-control" id="f1-password">
