@@ -4,11 +4,11 @@
 
     <!-- Etapas Form Organizaçāo-->
 
-        <h3>Cadastro Womanity Ecossistema - Tipo Organizacional</h3>
+        <h3>Cadastro Womanity Ecossistema - Tipo Organizaçāo</h3>
         <p>Preencha os campos obrigatórios *</p>
         <div class="f1-steps">
             <div class="f1-progress">
-                <div class="f1-progress-line" data-now-value="12.5" data-number-of-steps="4" style="width: 12.5%;"></div>
+                <div class="f1-progress-line" data-now-value="8" data-number-of-steps="5" style="width: 8%;"></div>
             </div>
             <div class="f1-step active">
                 <div class="f1-step-icon"><i class="fa fa-address-card-o"></i></div>
@@ -108,25 +108,7 @@
                 </div>
         </fieldset>
 
-        <fieldset>
-            <h4>Social media profiles:</h4>
-            <div class="form-group">
-                <label class="sr-only" for="f1-facebook">Facebook</label>
-                <input type="text" name="f1-facebook" placeholder="Facebook..." class="f1-facebook form-control" id="f1-facebook">
-            </div>
-            <div class="form-group">
-                <label class="sr-only" for="f1-twitter">Twitter</label>
-                <input type="text" name="f1-twitter" placeholder="Twitter..." class="f1-twitter form-control" id="f1-twitter">
-            </div>
-            <div class="form-group">
-                <label class="sr-only" for="f1-google-plus">Google plus</label>
-                <input type="text" name="f1-google-plus" placeholder="Google plus..." class="f1-google-plus form-control" id="f1-google-plus">
-            </div>
-            <div class="f1-buttons">
-                <button type="button" class="btn btn-previous">Previous</button>
-                <button type="submit" class="btn btn-submit">Submit</button>
-            </div>
-        </fieldset>
+        
     
     </form>
 </div>

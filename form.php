@@ -97,7 +97,7 @@
                     </div>
                 </div>
                 
-<<<<<<< HEAD
+<!--HEAD -->
 
 <!--
                 <div class="row form_inicial">
@@ -221,7 +221,7 @@
                     </div>
                 </div>
             -->
-=======
+
                 <!--  dependendo do tipo, irá carregar o form da iniciativa ou organização -->
                 <?php
                     if ($_SESSION['usuario_tipo'] == 1){
@@ -230,7 +230,7 @@
                         include 'form_iniciativa.php';
                     }
                 ?>
->>>>>>> origin/master
+<!-- origin/master--> 
                     
             </div>
         </div>
