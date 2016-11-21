@@ -96,7 +96,8 @@
                    <div class="input-group">
                       <span class="input-group-addon">                                  
                     <label class="radio">
-                        <input type="radio" name="iniciativa-ong" value="sim" class="f1-last-name form-control"> Sim
+                        <input type="radio" name="iniciativa-ong" value="sim" class="f1-last-name form-control"> 
+                        sim
                     </span>
                     <input type="text" class="form-control" aria-label="...">
                     </label>
@@ -105,7 +106,8 @@
 
                     <div class="form-group">
                     <label class="radio">
-                        <input type="radio" name="iniciativa-ong" value="nao" class="f1-last-name form-control"> Não
+                        <input type="radio" name="iniciativa-ong" value="nao" class="f1-last-name form-control">
+                        Nāo 
                     </label>
                 </div>
 
