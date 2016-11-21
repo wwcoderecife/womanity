@@ -99,7 +99,6 @@
                 
                 <!--  dependendo do tipo, irá carregar o form da iniciativa ou organização -->
                 <?php
-                    echo $_SESSION['usuario_tipo'];
                     if ($_SESSION['usuario_tipo'] == 1){
                         include 'form_organizacao.php';
                     }else{
