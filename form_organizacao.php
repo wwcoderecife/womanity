@@ -97,7 +97,7 @@
                       <span class="input-group-addon">                                  
                     <label class="radio">
                         <input type="radio" name="iniciativa-ong" value="sim" class="f1-last-name form-control"> 
-                        sim
+                        
                     </span>
                     <input type="text" class="form-control" aria-label="...">
                     </label>
