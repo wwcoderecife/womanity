@@ -72,7 +72,7 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li>
 
-                            <span>Sem bem vindo(a): <strong><?php echo $_SESSION['usuario_nome']; ?></strong> </span><br>
+                            <span>Sem bem vindo(a)</span><br>
                             <span title="Sair do Sistema"><a href="?logout=sair" class="logout">Sair do sistema</a></span>
 						</li>
 					</ul>
@@ -97,6 +97,7 @@
                     </div>
                 </div>
                 
+<<<<<<< HEAD
                 <div class="row form_inicial">
                     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
                     	<form role="form" action="" method="post" class="f1">
@@ -217,6 +218,16 @@
                     	</form>
                     </div>
                 </div>
+=======
+                <!--  dependendo do tipo, irá carregar o form da iniciativa ou organização -->
+                <?php
+                    if ($_SESSION['usuario_tipo'] == 1){
+                        include 'form_organizacao.php';
+                    }else{
+                        include 'form_iniciativa.php';
+                    }
+                ?>
+>>>>>>> origin/master
                     
             </div>
         </div>
