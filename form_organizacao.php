@@ -84,6 +84,8 @@
                     <button type="button" class="btn btn-next">Next</button>
                 </div>
             </fieldset>
+
+
           
              <!--Etapa 2 Formulário: Organizaçāo -->
 
@@ -105,48 +107,38 @@
                     </label>
                 </div>
 
-                 <h5>A sua Organizaçāo está localizada na…*</h5>
-                <div class="form-group">
-                   <label class="radio-inline">
-                        <input type="radio" name="organizacao-zona" value="rural" class="form-control-radio"> Zona Rural
-                    </label>
 
-                    <label class="radio-inline">
-                        <input type="radio" name="organizacao-zona" value="urbana" class="form-control-radio"> Zona Urbana
-                    </label>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">Cargo</label>
+                    <input type="text" name="f1-last-name" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name">
                 </div>
 
-                <h5>Nome da Organizaçāo*</h5>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="f1-last-name" class="f1-last-name form-control" maxlength="50" id="f1-last-name">
+                    <label class="sr-only" for="f1-last-name">E-mail</label>
+                    <input type="text" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
+                    
                 </div>
 
-
-                <h5>Sigla da Organizaçāo:</h5>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">Sigla</label>
-                    <input type="text" name="f1-last-name" class="f1-last-name form-control"  style="text-transform:uppercase" id="f1-last-name">
-                </div>
-
-                <h5>Telefone da Organizaçāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="text" name="f1-last-name"  class="f1-last-name form-control" placeholder="(xx) xxxxx-xxxx" id="f1-last-name">
+                    <input type="text" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name">
                 </div>
 
-                <h5>E-mail da Organizaçāo*</h5>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">Email</label>
-                    <input type="text" name="f1-last-name" class="f1-last-name form-control" id="f1-last-name">
+                    <label class="sr-only" for="f1-last-name">Celular</label>
+                    <input type="text" name="f1-last-name" placeholder="Celular" class="f1-last-name form-control" id="f1-last-name">
                 </div>
 
-                <div class="f1-buttons">
-                    <button type="button" class="btn btn-previous">Previous</button>
-                    <button type="button" class="btn btn-next">Next</button>
-                </div>
+
+
+
+
+
+
+
             </fieldset>
 
+                 
 
             <!--Etapa 3 Formulário: Endereço/Organizaçāo -->
 
