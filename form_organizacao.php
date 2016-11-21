@@ -100,7 +100,10 @@
                     </span>
                     <input type="text" class="form-control" aria-label="...">
                     </label>
+                  </div>  
 
+
+                    <div class="form-group">
                     <label class="radio">
                         <input type="radio" name="iniciativa-ong" value="nao" class="f1-last-name form-control"> Não
                     </label>
