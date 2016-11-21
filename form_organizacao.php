@@ -108,10 +108,7 @@
                           <span class="input-group-addon">
                             <input type="radio" aria-label="...">Nāo
                           </span>
-                          <div class="form-control form-control-static">
-                           
-                            </div>
-                          <input type="text" class="form-control" aria-label="...">
+                          <input type="text" class="form-control-static" aria-label="...">
                         </div><!-- /input-group -->
                       </div><!-- /.col-lg-4 -->
                     </div><!-- /.row -->
