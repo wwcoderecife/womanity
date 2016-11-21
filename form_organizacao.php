@@ -85,9 +85,7 @@
                 </div>
             </fieldset>
 
-            <div class="f1-buttons">
-                    <button type="button" class="btn btn-next">Next</button>
-                </div>
+            
 
           
              <!--Etapa 2 Formulário: Organizaçāo -->
