@@ -106,9 +106,9 @@
                       <div class="col-lg-4">
                         <div class="input-group">
                           <span class="input-group addon">
-                            <input type="radio" value="sim" aria-label="...">Nāo
+                            <input type="radio" value="nao" aria-label="...">Nāo
                           </span>
-                          <input type="text" class=" form-control form-control-static" aria-label="...">
+                          <input type="" class="form-control" aria-label="..." disabled>
                         </div><!-- /input-group -->
                       </div><!-- /.col-lg-4 -->
                     </div><!-- /.row -->
