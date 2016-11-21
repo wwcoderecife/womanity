@@ -88,8 +88,8 @@
              <!--Etapa 2 Formulário: Organizaçāo -->
 
         <fieldset>
-                <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
-                <br><small><em>xx.xxx.xxxx/xxxx-xx, a inserção do CNPJ é opcional</em></small></br>
+                <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5><br>
+                <h6><small><em>xx.xxx.xxxx/xxxx-xx, a inserção do CNPJ é opcional</em></small></h6></br>
                 <div class="form-group">  
                    <div class="input-group">
                      <span class="input-group-addon">                                   
