@@ -94,7 +94,7 @@
                    <div class="input-group">
                      <span class="input-group-addon">                                   
                     <label class="radio-inline">
-                        <input type="radio" aria-label="..." name="organizacao-ong" value="sim" class="form-control-radio"> Sim, CNPJ:
+                        <input type="radio" aria-label="..." name="organizacao-ong" value="sim" class="form-control-radio"> Sim
                      </span>
                           <input type="text" class="form-control" aria-label="...">
                     </label>
