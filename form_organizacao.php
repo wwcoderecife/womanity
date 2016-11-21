@@ -137,21 +137,29 @@
                     <input type="text" name="iniciativa-email" class="f1-last-name form-control">
                 </div>
 
+
+                 <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus" class="f1-last-name form-control">Como sua organizaçāo se identifica</label>
+                    <select id="regiao">
+                        <option value="norte"> acadêmica</option>
+                        <option value="nordeste">coletivo</option>
+                        <option value="centro-oeste">empresa privada</option>
+                        <option value="sul">fundos</option>
+                        <option value="sudeste">governo</option>
+                        <option value="sudeste">movimento</option>
+                        <option value="sudeste">negócio social</option>
+                        <option value="sudeste">organização da sociedade civil (ex: associação, ong, oscip, etc)</option>
+                        <option value="sudeste">rede</option>
+                         <option value="sudeste">outros</option>
+                    </select> *
+                </div>
+
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Previous</button>
                     <button type="button" class="btn btn-next">Next</button>
                 </div>
 
-                <div class="form-group">
-                    <label class="sr-only" for="f1-google-plus" class="f1-last-name form-control">Como sua regiāo se identifica</label>
-                    <select id="regiao">
-                        <option value="norte">Norte</option>
-                        <option value="nordeste">Nordeste</option>
-                        <option value="centro-oeste">Centro-Oeste</option>
-                        <option value="sul">Sul</option>
-                        <option value="sudeste">Sudeste</option>
-                    </select> *
-                </div>
+
             </fieldset>
 
                  
