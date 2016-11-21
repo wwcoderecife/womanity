@@ -116,15 +116,6 @@
                     <input type="radio" name="f1-last-name" value ="rural" class="f1-last-name form-control" id="f1-last-name">Zona Urbana
                 </div>
 
-                
-
-
-
-
-
-
-
-
             </fieldset>
 
                  
