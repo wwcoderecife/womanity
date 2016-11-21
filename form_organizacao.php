@@ -89,12 +89,12 @@
 
         <fieldset>
                 <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
-                <h6><small><em>xx.xxx.xxxx/xxxx-xx, a inserção do CNPJ é opcional</em></small></h6>
+                <h6><em>Se, sim a inserção do CNPJ é opcional xx.xxx.xxxx/xxxx-xx</em></h6>
                 <div class="form-group">  
                    <div class="input-group">
                      <span class="input-group-addon">                                   
                     <label class="radio-inline">
-                        <input type="radio" aria-label="..." name="organizacao-ong" value="sim" class="form-control-radio"> Sim
+                        <input type="radio" aria-label="..." name="organizacao-ong" value="sim" class="form-control-radio">Sim
                      </span>
                           <input type="text" class="form-control" aria-label="...">
                     </label>
