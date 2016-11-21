@@ -105,7 +105,7 @@
 
 
                     <div class="form-group">
-                    <label class="radio">
+                    <label class="radio-inline">
                         <input type="radio" name="iniciativa-ong" value="nao" class="f1-last-name form-control">
                         Nāo 
                     </label>
@@ -151,16 +151,16 @@
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus" ></label>
                     <select class="f1-last-name form-control" id="regiao" >
-                        <option value="norte"> acadêmica</option>
-                        <option value="nordeste">coletivo</option>
+                        <option value="academica"> acadêmica</option>
+                        <option value="coletivo">coletivo</option>
                         <option value="centro-oeste">empresa privada</option>
-                        <option value="sul">fundos</option>
-                        <option value="sudeste">governo</option>
-                        <option value="sudeste">movimento</option>
-                        <option value="sudeste">negócio social</option>
-                        <option value="sudeste">organização da sociedade civil (ex: associação, ong, oscip, etc)</option>
-                        <option value="sudeste">rede</option>
-                         <option value="sudeste">outros</option>
+                        <option value="fundos">fundos</option>
+                        <option value="governo">governo</option>
+                        <option value="movimento">movimento</option>
+                        <option value="negócio social">negócio social</option>
+                        <option value="organização da sociedade civil">organização da sociedade civil (ex: associação, ong, oscip, etc)</option>
+                        <option value="rede">rede</option>
+                         <option value="outros">outros</option>
                     </select> 
                 </div>
 
