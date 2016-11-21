@@ -93,9 +93,9 @@
                    <div class="input-group">
                      <span class="input-group-addon">                                   
                     <label class="radio-inline">
-                        <input type="radio" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opcional" name="organizacao-ong" value="sim" class="form-control-radio"> Sim, CNPJ:
+                        <input type="radio" aria-label="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opcional" name="organizacao-ong" value="sim" class="form-control-radio"> Sim, CNPJ:
                      </span>
-                          <input type="text" class="form-control" aria-label="...">
+                          <input type="text" class="form-control" aria-label="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opcional">
                     </label>
                   </div>
 
