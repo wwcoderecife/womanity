@@ -92,7 +92,7 @@
              <!--Etapa 2 Formulário: Organizaçāo -->
 
         <fieldset>
-            <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?</h5>
+            <h5>A sua iniciativa está dentro de uma organização juridicamente constituída</h5>
                 <div class="input-group">                                   
                     <label class="radio-inline">
                         <span class="input-group-addon">
