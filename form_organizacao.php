@@ -117,7 +117,7 @@
                 <h5>A sua Organizaçāo está localizada na…*</h5>
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="iniciativa-zona" value="rural" class="ff1-last-name form-control"> Zona Rural
+                        <input type="radio" name="iniciativa-zona" value="rural" class="f1-last-name form-control"> Zona Rural
                     </label>
 
                     <label class="radio-inline">
@@ -141,13 +141,13 @@
                 <h5>Telefone da Organizaçāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Telefone</label>
-                    <input type="text" name="iniciativa-telefone" placeholder="(xx) xxxxx-xxxx">
+                    <input type="text" name="iniciativa-telefone" placeholder="(xx) xxxxx-xxxx"class="f1-last-name form-control">
                 </div>
 
                 <h5>E-mail da Organizaçāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Email</label>
-                    <input type="text" name="iniciativa-email" class="f1-last-name form-control">
+                    <input type="text" name="iniciativa-email" class="f1-last-name form-control"class="f1-last-name form-control">
                 </div>
 
                  <h5>Como sua organizaçāo se identifica*</h5>
@@ -183,7 +183,7 @@
             <fieldset>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Região</label>
-                    <select id="regiao">
+                    <select class="f1-last-name form-control" id="regiao">
                         <option value="norte">Norte</option>
                         <option value="nordeste">Nordeste</option>
                         <option value="centro-oeste">Centro-Oeste</option>
