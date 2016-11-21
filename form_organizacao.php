@@ -139,8 +139,8 @@
 
 
                  <div class="form-group">
-                    <label class="sr-only" for="f1-google-plus" class="f1-last-name form-control">Como sua organizaçāo se identifica</label>
-                    <select id="regiao">
+                    <label class="sr-only" for="f1-google-plus" >Como sua organizaçāo se identifica</label>
+                    <select id="regiao" class="f1-last-name form-control">
                         <option value="norte"> acadêmica</option>
                         <option value="nordeste">coletivo</option>
                         <option value="centro-oeste">empresa privada</option>
