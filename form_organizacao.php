@@ -92,16 +92,25 @@
         <fieldset>
                 <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
                 <h6><em>se, sim digite o CNPJ no campo ao lado.</em></h5>
-                <h5>Sim</h5> 
-                  <div class="row">   
-                   <div class="input-group">
-                      <span class="input-group-addon">
-                        <input type="radio" aria-label="...">
-                      </span>
-                      <input type="text" class="f1-last-name form-control" aria-label="...">
-                    </div><!-- /input-group --> 
-                </div>
-
+             
+                  <div class="row">
+                      <div class="col-lg-6">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                           <input type="radio" aria-label="..." value="1">Sim
+                          </span>
+                          <input type="text" class="form-control" aria-label="...">
+                        </div><!-- /input-group -->
+                      </div><!-- /.col-lg-6 -->
+                      <div class="col-lg-6">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <input type="radio" aria-label="..."value="0" form-control form-control-static>Nāo
+                          </span>
+                          <input type="text" class="form-control" aria-label="...">
+                        </div><!-- /input-group -->
+                      </div><!-- /.col-lg-6 -->
+                    </div><!-- /.row -->
                     
 
                 <h5>A sua Organizaçāo está localizada na…*</h5>
