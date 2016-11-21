@@ -102,12 +102,7 @@
                     </div><!-- /input-group --> 
                 </div>
 
-                    <div class="radio">
-                      <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="nao">
-                        Nāo 
-                      </label>
-                    </div>
+                    
 
                 <h5>A sua Organizaçāo está localizada na…*</h5>
                 <div class="form-group">
