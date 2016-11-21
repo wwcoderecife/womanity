@@ -107,14 +107,18 @@
                     </label>
                 </div>
 
+
                 <h5>A sua iniciativa está localizada na…*</h5>
                 <div class="form-group">
-                    <label class ="radio-inline "class="sr-only" for="f1-last-name"></label>
-                    <input type="radio" name="f1-last-name" value ="rural" class="f1-last-name form-control" id="f1-last-name">Zona Rural
+                   <label class="radio-inline">
+                        <input type="radio" name="iniciativa-zona" value="rural" class="f1-last-name form-control"> Zona Rural
+                    </label>
 
-                    <label class ="radio-inline "class="sr-only" for="f1-last-name"></label>
-                    <input type="radio" name="f1-last-name" value ="rural" class="f1-last-name form-control" id="f1-last-name">Zona Urbana
+                    <label class="radio-inline">
+                        <input type="radio" name="iniciativa-zona" value="urbana" class="f1-last-name form-control"> Zona Urbana
+                    </label>
                 </div>
+
 
             </fieldset>
 
