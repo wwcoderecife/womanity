@@ -91,9 +91,14 @@
 
         <fieldset>
                 <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
-                <div class="form-group">                                   
-                    <label class="radio-inline">
-                        <input type="radio" name="iniciativa-ong" value="sim" class="f1-last-name form-control"> Sim
+                <h6><em>a inserção do CNPJ número é opcional</em></h5>
+                <div class="form-group"> 
+                   <div class="input-group">
+                      <span class="input-group-addon">                                  
+                    <label class="radio">
+                        <input type="radio" name="iniciativa-ong" value="sim" class="f1-last-name form-control"> Sim,CNPJ
+                    </span>
+                    <input type="text" class="form-control" aria-label="...">
                     </label>
 
                     <label class="radio-inline">
@@ -151,7 +156,7 @@
                         <option value="sudeste">organização da sociedade civil (ex: associação, ong, oscip, etc)</option>
                         <option value="sudeste">rede</option>
                          <option value="sudeste">outros</option>
-                    </select> *
+                    </select> 
                 </div>
 
                 <div class="f1-buttons">
