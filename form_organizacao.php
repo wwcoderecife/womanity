@@ -99,7 +99,7 @@
                           <input type="text" class="form-control" aria-label="...">
                     </label>
                   </div>
-
+                    <div class="input-group">
                     <label class="radio">
                         <input type="radio" name="organizacao-ong" value="nao" class="form-control-radio"> Não
                     </label>
