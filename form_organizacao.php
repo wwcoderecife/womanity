@@ -189,39 +189,39 @@
                         <option value="centro-oeste">Centro-Oeste</option>
                         <option value="sul">Sul</option>
                         <option value="sudeste">Sudeste</option>
-                    </select> *
+                    </select> 
                 </div>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Estado</label>
-                    <select id="estados">
+                    <select class="f1-last-name form-control" id="estados">
                         <option value=""></option>
-                    </select> *
+                    </select> 
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cidade</label>
-                    <select id="cidades"> 
+                    <select class="f1-last-name form-control" id="cidades"> 
                         <option value=""></option>
-                    </select> *
+                    </select> 
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Bairro</label>
-                    <input type="text" name="iniciativa-bairro" placeholder="Bairro...">
+                    <input type="text" name="iniciativa-bairro" placeholder="Bairro..." class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-facebook">Rua</label>
-                    <input type="text" name="iniciativa-rua" placeholder="Rua/Av...*">
+                    <input type="text" name="iniciativa-rua" placeholder="Rua/Av...*" class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número</label>
-                    <input type="text" name="iniciativa-numero" placeholder="Numero...*">
+                    <input type="text" name="iniciativa-numero" placeholder="Numero...*" class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Complemento</label>
-                    <input type="text" name="iniciativa-complemento" placeholder="Complemento...*">
+                    <input type="text" name="iniciativa-complemento" placeholder="Complemento...*" class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep</label>
-                    <input type="text" name="iniciativa-cep" placeholder="CEP...*">
+                    <input type="text" name="iniciativa-cep" placeholder="CEP...*" class="f1-last-name form-control">
                 </div> 
 
                <div class="f1-buttons">
