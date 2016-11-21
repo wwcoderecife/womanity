@@ -102,14 +102,14 @@
                     </label>
                   </div>
                     <div class="input-group">
-                    <label class="radio">
+                    <label class="radio-inline">
                         <input type="radio" name="organizacao-ong" value="nao" class="form-control-radio"> Não
                     </label>
                 </div>
 
-
+                <h5>A sua iniciativa está localizada na…*</h5>
                 <div class="form-group">
-                    <label class ="radio-inline "class="sr-only" for="f1-last-name">A sua iniciativa está localizada na…*</label>
+                    <label class ="radio-inline "class="sr-only" for="f1-last-name"></label>
                     <input type="radio" name="f1-last-name" value ="rural" class="f1-last-name form-control" id="f1-last-name">Zona Rural
 
                     <label class ="radio-inline "class="sr-only" for="f1-last-name"></label>
