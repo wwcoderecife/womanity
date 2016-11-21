@@ -91,27 +91,20 @@
 
         <fieldset>
                 <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
-                <h6><em>Se, sim a inserção do CNPJ é opcional xx.xxx.xxxx/xxxx-xx</em></h6>
-                <div class="form-group">  
-                   <div class="input-group">
-                     <span class="input-group-addon">                                   
+                <div class="form-group">                                   
                     <label class="radio-inline">
-                        <input type="radio" aria-label="..." name="organizacao-ong" value="sim" class="form-control-radio">Sim
-                     </span>
-                          <input type="text" class="form-control" aria-label="...">
+                        <input type="radio" name="iniciativa-ong" value="sim" class="f1-last-name form-control"> Sim
                     </label>
-                  </div>
-                    <div class="input-group">
+
                     <label class="radio-inline">
-                        <input type="radio" name="organizacao-ong" value="nao" class="form-control-radio"> Não
+                        <input type="radio" name="iniciativa-ong" value="nao" class="f1-last-name form-control"> Não
                     </label>
                 </div>
 
-
-                <h5>A sua iniciativa está localizada na…*</h5>
+                <h5>A sua Organizaçāo está localizada na…*</h5>
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="iniciativa-zona" value="rural" class="f1-last-name form-control"> Zona Rural
+                        <input type="radio" name="iniciativa-zona" value="rural" class="ff1-last-name form-control"> Zona Rural
                     </label>
 
                     <label class="radio-inline">
@@ -119,7 +112,46 @@
                     </label>
                 </div>
 
+                <h5>Nome da Organizaçāo*</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-repeat-password">Nome</label>
+                    <input type="text" name="iniciativa-nome" maxlength="50" class="f1-last-name form-control">
+                </div>
 
+
+                <h5>Sigla da Organizaçāo:</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-repeat-password">Sigla</label>
+                    <input type="text" name="iniciativa-sigla" style="text-transform:uppercase" class="f1-last-name form-control">
+                </div>
+
+                <h5>Telefone da Organizaçāo*</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-repeat-password">Telefone</label>
+                    <input type="text" name="iniciativa-telefone" placeholder="(xx) xxxxx-xxxx">
+                </div>
+
+                <h5>E-mail da Organizaçāo*</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-repeat-password">Email</label>
+                    <input type="text" name="iniciativa-email" class="f1-last-name form-control">
+                </div>
+
+                <div class="f1-buttons">
+                    <button type="button" class="btn btn-previous">Previous</button>
+                    <button type="button" class="btn btn-next">Next</button>
+                </div>
+
+                <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus" class="f1-last-name form-control">Como sua regiāo se identifica</label>
+                    <select id="regiao">
+                        <option value="norte">Norte</option>
+                        <option value="nordeste">Nordeste</option>
+                        <option value="centro-oeste">Centro-Oeste</option>
+                        <option value="sul">Sul</option>
+                        <option value="sudeste">Sudeste</option>
+                    </select> *
+                </div>
             </fieldset>
 
                  
