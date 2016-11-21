@@ -97,16 +97,16 @@
                       <div class="col-lg-8">
                         <div class="input-group">
                           <span class="input-group-addon">
-                            <input type="radio" aria-label="...">
+                            <input type="radio" aria-label="...">Sim
                           </span>
-                          <input type="text" class="form-control" aria-label="...">Sim
+                          <input type="text" class="form-control" aria-label="...">
                         </div><!-- /input-group -->
                       </div><!-- /.col-lg-8 -->
 
                       <div class="col-lg-4">
                         <div class="input-group">
                           <span class="input-group-addon">
-                            <input type="radio" aria-label="...">
+                            <input type="radio" aria-label="...">Nāo
                           </span>
                           <div class="form-control form-control-static">
                                 Nāo
