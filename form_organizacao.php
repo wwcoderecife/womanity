@@ -118,27 +118,27 @@
 
                 <h5>Nome da Organizaçāo*</h5>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-repeat-password">Nome</label>
-                    <input type="text" name="organizacao-nome" maxlength="50">
+                    <label class="sr-only" for="f1-last-name">Nome</label>
+                    <input type="text" name="f1-last-name" class="f1-last-name form-control" maxlength="50" id="f1-last-name">
                 </div>
 
 
                 <h5>Sigla da Organizaçāo:</h5>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-repeat-password">Sigla</label>
-                    <input type="text" name="iorganizacao-sigla" style="text-transform:uppercase">
+                    <label class="sr-only" for="f1-last-name">Sigla</label>
+                    <input type="text" name="f1-last-name" class="f1-last-name form-control"  style="text-transform:uppercase" id="f1-last-name">
                 </div>
 
                 <h5>Telefone da Organizaçāo*</h5>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-repeat-password">Telefone</label>
-                    <input type="text" name="organizacao-telefone" placeholder="(xx) xxxxx-xxxx">
+                    <label class="sr-only" for="f1-last-name">Telefone</label>
+                    <input type="text" name="f1-last-name"  class="f1-last-name form-control" placeholder="(xx) xxxxx-xxxx" id="f1-last-name">
                 </div>
 
                 <h5>E-mail da Organizaçāo*</h5>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-repeat-password">Email</label>
-                    <input type="text" name="iniciativa-email">
+                    <label class="sr-only" for="f1-last-name">Email</label>
+                    <input type="text" name="f1-last-name" class="f1-last-name form-control" id="f1-last-name">
                 </div>
 
                 <div class="f1-buttons">
@@ -201,6 +201,9 @@
                 </div>
 
             </fieldset>
+
+
+
     
     </form>
 </div>
