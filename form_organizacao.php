@@ -1,38 +1,35 @@
 <div class="row form_inicial">
-<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-    <form role="form" action="" method="post" class="f1">
+    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
+        <form role="form" action="" method="post" class="f1">
 
-    <!-- Etapas Form Organizaçāo-->
+            <h3>Cadastro Womanity Ecossistema<br>Organizaçāo</h3>
+            <p>Preencha os campos obrigatórios *</p>
+            <div class="f1-steps">
+                <div class="f1-progress">
+                    <div class="f1-progress-line" data-now-value="8" data-number-of-steps="5" style="width: 8%;"></div>
+                </div>
+                <div class="f1-step step-5 active">
+                    <div class="f1-step-icon"><i class="fa fa-address-card-o"></i></div>
+                    <p>Dados Pessoais</p>
+                </div>
+                <div class="f1-step step-5">
+                    <div class="f1-step-icon"><i class="fa fa-user"></i></div>
+                    <p>Organizaçāo</p>
+                </div>   
+                <div class="f1-step step-5">
+                    <div class="f1-step-icon"><i class="fa fa-map-marker"></i></div>
+                    <p>Endereço</p>
+                </div>
+                <div class="f1-step step-5">
+                    <div class="f1-step-icon"><i class="fa fa-desktop"></i></div>
+                    <p>Redes Sociais</p>
+                </div>
+                <div class="f1-step step-5">
+                    <div class="f1-step-icon"><i class="fa fa-hand-o-right"></i></div>
+                    <p>Indicação</p>
+                </div>              
+            </div>
 
-        <h3>Cadastro Womanity Ecossistema - Tipo Organizaçāo</h3>
-        <p>Preencha os campos obrigatórios *</p>
-        <div class="f1-steps">
-            <div class="f1-progress">
-                <div class="f1-progress-line" data-now-value="8" data-number-of-steps="5" style="width: 8%;"></div>
-            </div>
-            <div class="f1-step active">
-                <div class="f1-step-icon"><i class="fa fa-address-card-o"></i></div>
-                <p>Dados Pessoais</p>
-            </div>
-            <div class="f1-step">
-                <div class="f1-step-icon"><i class="fa fa-user"></i></div>
-                <p>Organizaçāo </p>
-            </div>
-            <div class="f1-step">
-                <div class="f1-step-icon"><i class="fa fa-map-marker"></i></div>
-                <p>Endereço</p>
-            </div>
-
-            <div class="f1-step">
-                <div class="f1-step-icon"><i class="fa fa-desktop"></i></div>
-                <p>Redes Sociais</p>
-            </div>
-
-            <div class="f1-step">
-                <div class="f1-step-icon"><i class="fa fa-hand-o-right"></i></div>
-                <p>Indicaçāo</p>
-            </div>
-        </div>
 
 
         <!-- Formulário: Tipo Organizaçāo -->
@@ -88,25 +85,24 @@
                 </div>
             </fieldset>
 
+            <div class="f1-buttons">
+                    <button type="button" class="btn btn-next">Next</button>
+                </div>
+
           
              <!--Etapa 2 Formulário: Organizaçāo -->
 
         <fieldset>
-            <h5>A sua iniciativa está dentro de uma organização juridicamente constituída</h5>
-                <div class="input-group">                                   
+                <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
+                <div class="form-group">                                   
                     <label class="radio-inline">
-                        <span class="input-group-addon">
-                        <input type="radio"  aria-label="..." name="ong"  placeholder=" Digite CNPJ "value="sim" class="form-control-radio"> Sim
-                    </span>
-                    <input type="text" class="form-control" aria-label="...">
+                        <input type="radio" name="iniciativa-ong" value="sim" class="form-control-radio"> Sim
                     </label>
-                </div>
 
                     <label class="radio-inline">
-                        <input type="radio" name="ong2" value="nao" class="form-control-radio"> Não
+                        <input type="radio" name="iniciativa-ong" value="nao" class="form-control-radio"> Não
                     </label>
                 </div>
-        </fieldset>
 
         
     
