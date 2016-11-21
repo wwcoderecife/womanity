@@ -102,12 +102,12 @@
                     </div><!-- /input-group --> 
                 </div>
 
-                    <div class="form-group">
-                    <label class="radio-inline">
-                        <input type="radio" name="cnpj-ong" value="nao" class="f1-last-name form-control">Nāo
-                    
-                    </label>
-                </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="nao">
+                        Nāo 
+                      </label>
+                    </div>
 
                 <h5>A sua Organizaçāo está localizada na…*</h5>
                 <div class="form-group">
