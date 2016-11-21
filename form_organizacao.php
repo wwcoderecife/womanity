@@ -88,15 +88,15 @@
              <!--Etapa 2 Formulário: Organizaçāo -->
 
         <fieldset>
-                <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5><br>
-                <h6><small><em>xx.xxx.xxxx/xxxx-xx, a inserção do CNPJ é opcional</em></small></h6></br>
+                <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
+                <h6><small><em>xx.xxx.xxxx/xxxx-xx, a inserção do CNPJ é opcional</em></small></h6>
                 <div class="form-group">  
                    <div class="input-group">
                      <span class="input-group-addon">                                   
                     <label class="radio">
-                        <input type="radio"  name="organizacao-ong" value="sim" class="form-control-radio"> Sim, CNPJ:
+                        <input type="radio" aria-label="..." name="organizacao-ong" value="sim" class="form-control-radio"> Sim, CNPJ:
                      </span>
-                          <input type="text" class="form-control">
+                          <input type="text" class="form-control" aria-label="...">
                     </label>
                   </div>
 
