@@ -90,7 +90,7 @@
         <fieldset>
                 <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
                 <h6><em>Se, sim a inserção do CNPJ é opcional xx.xxx.xxxx/xxxx-xx</em></h6>
-                
+                <div class="form-group">  
                    <div class="input-group">
                      <span class="input-group-addon">                                   
                     <label class="radio-inline">
@@ -100,12 +100,107 @@
                     </label>
                   </div>
 
-                    <label class="radio-inline">
+                    <label class="radio">
                         <input type="radio" name="organizacao-ong" value="nao" class="form-control-radio"> Não
                     </label>
                 </div>
 
-        
+                 <h5>A sua Organizaçāo está localizada na…*</h5>
+                <div class="form-group">
+                   <label class="radio-inline">
+                        <input type="radio" name="organizacao-zona" value="rural" class="form-control-radio"> Zona Rural
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="organizacao-zona" value="urbana" class="form-control-radio"> Zona Urbana
+                    </label>
+                </div>
+
+                <h5>Nome da Organizaçāo*</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-repeat-password">Nome</label>
+                    <input type="text" name="organizacao-nome" maxlength="50">
+                </div>
+
+
+                <h5>Sigla da Organizaçāo:</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-repeat-password">Sigla</label>
+                    <input type="text" name="iorganizacao-sigla" style="text-transform:uppercase">
+                </div>
+
+                <h5>Telefone da Organizaçāo*</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-repeat-password">Telefone</label>
+                    <input type="text" name="organizacao-telefone" placeholder="(xx) xxxxx-xxxx">
+                </div>
+
+                <h5>E-mail da Organizaçāo*</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-repeat-password">Email</label>
+                    <input type="text" name="iniciativa-email">
+                </div>
+
+                <div class="f1-buttons">
+                    <button type="button" class="btn btn-previous">Previous</button>
+                    <button type="button" class="btn btn-next">Next</button>
+                </div>
+            </fieldset>
+
+
+            <!--Etapa 3 Formulário: Endereço/Organizaçāo -->
+
+
+            <fieldset>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus">Região</label>
+                    <select id="regiao">
+                        <option value="norte">Norte</option>
+                        <option value="nordeste">Nordeste</option>
+                        <option value="centro-oeste">Centro-Oeste</option>
+                        <option value="sul">Sul</option>
+                        <option value="sudeste">Sudeste</option>
+                    </select> *
+                </div>
+                 <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus">Estado</label>
+                    <select id="estados">
+                        <option value=""></option>
+                    </select> *
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus">Cidade</label>
+                    <select id="cidades"> 
+                        <option value=""></option>
+                    </select> *
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus">Bairro</label>
+                    <input type="text" name="iniciativa-bairro" placeholder="Bairro...">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-facebook">Rua</label>
+                    <input type="text" name="iniciativa-rua" placeholder="Rua/Av...*">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-twitter">Número</label>
+                    <input type="text" name="iniciativa-numero" placeholder="Numero...*">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus">Complemento</label>
+                    <input type="text" name="iniciativa-complemento" placeholder="Complemento...*">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus">Cep</label>
+                    <input type="text" name="iniciativa-cep" placeholder="CEP...*">
+                </div> 
+
+               <div class="f1-buttons">
+                    <button type="button" class="btn btn-previous">Previous</button>
+                    <button type="button" class="btn btn-next">Next</button>
+                </div>
+
+            </fieldset>
     
     </form>
 </div>

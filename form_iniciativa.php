@@ -180,7 +180,7 @@
                 </div>              
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Previous</button>
-                    <button type="button" class="btn btn-next">Next</button
+                    <button type="button" class="btn btn-next">Next</button>
                 </div>
             </fieldset>
 
