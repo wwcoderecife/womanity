@@ -84,9 +84,6 @@
                     <button type="button" class="btn btn-next">Next</button>
                 </div>
             </fieldset>
-
-            
-
           
              <!--Etapa 2 Formulário: Organizaçāo -->
 
