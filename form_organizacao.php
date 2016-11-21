@@ -93,7 +93,7 @@
                 <div class="form-group">  
                    <div class="input-group">
                      <span class="input-group-addon">                                   
-                    <label class="radio">
+                    <label class="radio-inline">
                         <input type="radio" aria-label="..." name="organizacao-ong" value="sim" class="form-control-radio"> Sim, CNPJ:
                      </span>
                           <input type="text" class="form-control" aria-label="...">
