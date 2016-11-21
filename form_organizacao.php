@@ -93,9 +93,9 @@
                    <div class="input-group">
                      <span class="input-group-addon">                                   
                     <label class="radio">
-                        <input type="radio"  name="organizacao-ong" value="sim" class="form-control-radio"> Sim, CNPJ:
+                        <input type="radio"  name="organizacao-ong" value="sim" class="form-control-radio"> Sim, CNPJ:<br><small><em>This line of text is meant to be treated as fine print.</em></small></br>
                      </span>
-                          <input type="text" class="form-control" aria-label="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opcional">
+                          <input type="text" class="form-control">
                     </label>
                   </div>
 
