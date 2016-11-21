@@ -65,7 +65,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.html">BootZard - Bootstrap Wizard Template</a>
+					<a class="navbar-brand" href="index.html">Womanity Ecossistema</a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="top-navbar-1">
@@ -98,6 +98,8 @@
                 </div>
                 
 <<<<<<< HEAD
+
+<!--
                 <div class="row form_inicial">
                     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
                     	<form role="form" action="" method="post" class="f1">
@@ -162,13 +164,13 @@
                                     <label class="sr-only" for="f1-last-name">Celular</label>
                                     <input type="text" name="f1-last-name" placeholder="Celular" class="f1-last-name form-control" id="f1-last-name">
                                 </div>
-                                <!--
+                                
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-about-yourself">About yourself</label>
                                     <textarea name="f1-about-yourself" placeholder="About yourself..." 
                                     	                 class="f1-about-yourself form-control" id="f1-about-yourself"></textarea>
                                 </div>
-                            -->
+                            
                                 <div class="f1-buttons">
                                     <button type="button" class="btn btn-next">Next</button>
                                 </div>
@@ -218,6 +220,7 @@
                     	</form>
                     </div>
                 </div>
+            -->
 =======
                 <!--  dependendo do tipo, irá carregar o form da iniciativa ou organização -->
                 <?php
