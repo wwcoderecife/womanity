@@ -96,8 +96,8 @@
                    <div class="input-group">
                       <span class="input-group-addon">                                  
                     <label class="radio-inline">
-                        <input type="radio" name="iniciativa-ong" value="sim" class="f1-last-name form-control"> 
-                        sim
+                        <input type="radio" name="cnpj-ong" value="sim" class="f1-last-name form-control">sim 
+     
                     </span>
                     <input type="text" class="form-control" aria-label="...">
                     </label>
@@ -106,8 +106,8 @@
 
                     <div class="form-group">
                     <label class="radio-inline">
-                        <input type="radio" name="iniciativa-ong" value="nao" class="f1-last-name form-control">
-                        Nāo 
+                        <input type="radio" name="iniciativa-ong" value="nao" class="f1-last-name form-control">Nāo
+                    
                     </label>
                 </div>
 
