@@ -137,10 +137,10 @@
                     <input type="text" name="iniciativa-email" class="f1-last-name form-control">
                 </div>
 
-
+                 <h5>Como sua organizaçāo se identifica*</h5>
                  <div class="form-group">
-                    <label class="sr-only" for="f1-google-plus" >Como sua organizaçāo se identifica</label>
-                    <select id="regiao" class="f1-last-name form-control">
+                    <label class="sr-only" for="f1-google-plus" ></label>
+                    <select class="f1-last-name form-control" id="regiao" >
                         <option value="norte"> acadêmica</option>
                         <option value="nordeste">coletivo</option>
                         <option value="centro-oeste">empresa privada</option>
