@@ -109,25 +109,14 @@
 
 
                 <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="f1-last-name" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name">
+                    <label class ="radio-inline "class="sr-only" for="f1-last-name">A sua iniciativa está localizada na…*</label>
+                    <input type="radio" name="f1-last-name" value ="rural" class="f1-last-name form-control" id="f1-last-name">Zona Rural
+
+                    <label class ="radio-inline "class="sr-only" for="f1-last-name"></label>
+                    <input type="radio" name="f1-last-name" value ="rural" class="f1-last-name form-control" id="f1-last-name">Zona Urbana
                 </div>
 
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="text" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
-                    
-                </div>
-
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="text" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name">
-                </div>
-
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="text" name="f1-last-name" placeholder="Celular" class="f1-last-name form-control" id="f1-last-name">
-                </div>
+                
 
 
 
