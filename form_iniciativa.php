@@ -162,9 +162,8 @@
                         <option value="redes">Outros</option> 
                         </option> 
                     </select>
-                    <h5>Outros</h5>
                     <label for="exampleInputEmail2"></label>
-                    <input type="text" class="f1-last-name form-control" id="natureza_outros" placeholder="Natureza">  
+                    <input type="text" class="f1-last-name form-control" id="natureza_outros" placeholder="Natureza...">  
                 </div>
             </fieldset>
 
