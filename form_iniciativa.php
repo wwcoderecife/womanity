@@ -172,7 +172,7 @@
                                 console.log(dropdown.selectedIndex);
                                 //pegando valor do select na variável dropdown
                                 
-                                if(dropdown.options[dropdown.selectedIndex].value == Outros) {
+                                if(dropdown.options[dropdown.selectedIndex].value == "Outros") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor Outros');
                                     //mostra o input quando o valor selecionado for outros
