@@ -186,7 +186,7 @@
 
                 <h5>Cidade</h5>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-google-plus">Cidade</label>
+                    <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="cidades"> 
                         <option value="1">Rio Branco></option>
                         <option value="2">Maceió></option>
