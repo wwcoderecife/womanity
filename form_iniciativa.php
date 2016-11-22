@@ -162,7 +162,7 @@
                         <option value="Outros">Outros</option> 
                         </option> 
                     </select>
-                    <input type="text" id="inputOutros" class="f1-last-name form-control" style='display: none' />
+                    <input type="text" id="inputOutros" class="f1-last-name form-control" placeholder="Descreva outro tipo..."style='display: none' />
                     <script>
 
                         var dropdown = document.getElementById('iniciativa-natureza');
