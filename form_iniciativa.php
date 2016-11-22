@@ -162,8 +162,7 @@
                         <option value="redes">Outros</option> 
                         </option> 
                     </select>
-                    <label for="exampleInputEmail2"></label>
-                    <input type="text" class="f1-last-name form-control" id="natureza_outros" placeholder="Natureza...">  
+                    <input type="text" class="f1-last-name form-control" id="natureza_outros" placeholder="descreva outro tipo de natureza">  
                 </div>
             </fieldset>
 
