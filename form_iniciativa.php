@@ -3,7 +3,7 @@
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
     	<form role="form" action="" method="post" class="f1">
 
-    		<h3>Cadastro Womanity Ecossistema<br>Iniciativa</h3>
+    		<h3>Cadastro UNA Ecossistema<br>Iniciativa</h3>
     		<p>Preencha os campos obrigatórios *</p>
     		<div class="f1-steps">
     			<div class="f1-progress">
@@ -135,7 +135,7 @@
                 </div>
             </fieldset>
 
-             <!--Etapa 3 Formulário: Endereço/Organizaçāo -->
+             <!--Etapa 3 Formulário: Endereço/Iniciativa -->
 
             <fieldset>
                 <h5>Regiāo</h5>
@@ -149,9 +149,10 @@
                         <option value="sudeste">Sudeste</option>
                     </select> 
                 </div>
+
                 <h5>Estado</h5>
                  <div class="form-group">
-                    <label class="sr-only" for="f1-google-plus"></label>
+                    <label class="sr-only" for="f1-google-plus">Estado</label>
                     <select class="f1-last-name form-control" id="estados">
                         <option value="1">Acre</option>
                         <option value="2">Alagoas</option>
@@ -182,9 +183,10 @@
                         <option value="27">Tocantins</option>
                     </select> 
                 </div>
+
                 <h5>Cidade</h5>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-google-plus"></label>
+                    <label class="sr-only" for="f1-google-plus">Cidade</label>
                     <select class="f1-last-name form-control" id="cidades"> 
                         <option value="Rio Branco"></option>
                         <option value="Maceió"></option>
@@ -222,7 +224,7 @@
                     <input type="text" name="iniciativa-rua" placeholder="Rua/Av...*" class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-twitter">Numero</label>
+                    <label class="sr-only" for="f1-twitter">Número</label>
                     <input type="text" name="iniciativa-numero" placeholder="Numero...*"class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
@@ -238,6 +240,8 @@
                     <button type="button" class="btn btn-next">Next</button>
                 </div>
             </fieldset>
+
+             <!--Etapa 4 Formulário: Mídia Social-->
 
             <fieldset>
                 <div class="form-group">
