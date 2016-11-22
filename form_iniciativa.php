@@ -176,8 +176,8 @@
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor Outros');
                                     //mostra o input quando o valor selecionado for outros
-                                    var inputOutros = document.getElementById('inputOutros');
-                                    inputOutros.style.display = 'block';
+                                    var meuInput = document.getElementById('inputOutros');
+                                    meuInput.style.display = 'block';
                                 }
                             }
                             
