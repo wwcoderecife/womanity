@@ -172,10 +172,7 @@
                         <option value=""></option>
                         <option value="academica">2015</option>
                         <option value="coletivo">2016</option>
-                      
                     </select>
-
-
                 
             </fieldset>
 
