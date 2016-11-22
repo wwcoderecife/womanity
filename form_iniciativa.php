@@ -188,32 +188,32 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="cidades"> 
-                        <option value="1">Rio Branco></option>
-                        <option value="2">Maceió></option>
-                        <option value="3">Macapá></option>
-                        <option value="4">Manaus></option>
-                        <option value="5">Salvador></option>
-                        <option value="6">Fortaleza></option>
-                        <option value="7">Brasília"></option>
-                        <option value="8">Vitória></option>
-                        <option value="9">Goiânia></option>
-                        <option value="10">São Luís></option>
-                        <option value="11">Cuiabá></option>
-                        <option value="12">Campo Grande></option>
-                        <option value="13">Belo Horizonte"></option>
-                        <option value="14">Belém></option>
-                        <option value="15">João Pessoa></option>
-                        <option value="16">Curitiba></option>
-                        <option value="17">Recife></option>
-                        <option value="18">Teresina></option>
-                        <option value="19">Natal></option>
-                        <option value="20">Porto Alegre></option>
-                        <option value="21">Porto Velho></option>
-                        <option value="22">Boa Vista></option>
-                        <option value="23">Florianópolis></option>
-                        <option value="24">Sāo Paulo></option>
-                        <option value="25">Aracaju></option>
-                        <option value="25">Palmas></option>
+                        <option value="1">Rio Branco</option>
+                        <option value="2">Maceió</option>
+                        <option value="3">Macapá</option>
+                        <option value="4">Manaus</option>
+                        <option value="5">Salvador</option>
+                        <option value="6">Fortaleza</option>
+                        <option value="7">Brasília</option>
+                        <option value="8">Vitória</option>
+                        <option value="9">Goiânia</option>
+                        <option value="10">São Luís</option>
+                        <option value="11">Cuiabá</option>
+                        <option value="12">Campo Grande</option>
+                        <option value="13">Belo Horizonte</option>
+                        <option value="14">Belém</option>
+                        <option value="15">João Pessoa</option>
+                        <option value="16">Curitiba</option>
+                        <option value="17">Recife</option>
+                        <option value="18">Teresina</option>
+                        <option value="19">Natal</option>
+                        <option value="20">Porto Alegre</option>
+                        <option value="21">Porto Velho</option>
+                        <option value="22">Boa Vista</option>
+                        <option value="23">Florianópolis</option>
+                        <option value="24">Sāo Paulo</option>
+                        <option value="25">Aracaju</option>
+                        <option value="25">Palmas</option>
                     </select> 
                 </div>
 
