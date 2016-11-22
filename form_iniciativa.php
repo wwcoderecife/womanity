@@ -77,9 +77,12 @@
                 </div>
 
                 <div class="f1-buttons">
-                    <button type="button" class="btn btn-next">Next</button>
+                    <button type="button" class="btn btn-next">Próximo</button>
                 </div>
-            </fieldset>
+            </fieldset><!--Dados Pessoais-->
+
+
+            <!--Etapa2  Formulário: Iniciativa -->
 
             <fieldset>
                 <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
@@ -155,8 +158,9 @@
                         <option value="negocio_social">Negócio Social</option>
                         <option value="ong_sociedade_civil">organização da sociedade civil (ex: associação, ong, oscip, etc)
                         <option value="redes">Redes</option> 
+
                         <label for="exampleInputEmail2">Outros</label>
-                        <input type="text" class="f1-last-name form-control" id="natureza_outros"   
+                        <input type="text" class="f1-last-name form-control" id="natureza_outros">   
                         </option>   
                     </select> 
                 </div>
@@ -164,8 +168,8 @@
 
 
                 <div class="f1-buttons">
-                    <button type="button" class="btn btn-previous">Previous</button>
-                    <button type="button" class="btn btn-next">Next</button>
+                    <button type="button" class="btn btn-previous">Anterior</button>
+                    <button type="button" class="btn btn-next">Próximo</button>
                 </div>
 
                 
@@ -273,8 +277,8 @@
                     <input type="text" name="iniciativa-cep" placeholder="CEP...*"class="f1-last-name form-control">
                 </div>              
                 <div class="f1-buttons">
-                    <button type="button" class="btn btn-previous">Previous</button>
-                    <button type="button" class="btn btn-next">Next</button>
+                    <button type="button" class="btn btn-previous">Anterior</button>
+                    <button type="button" class="btn btn-next">Próximo</button>
                 </div>
             </fieldset>
 
@@ -318,8 +322,8 @@
                     </div>
                 </div>
                 <div class="f1-buttons">
-                    <button type="button" class="btn btn-previous">Previous</button>
-                    <button type="button" class="btn btn-next">Next</button>
+                    <button type="button" class="btn btn-previous">Anterior</button>
+                    <button type="button" class="btn btn-next">Próximo</button>
                 </div>
             </fieldset>
 
@@ -369,8 +373,8 @@
                     <input type="text" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name">
                 </div>
                 <div class="f1-buttons">
-                    <button type="button" class="btn btn-previous">Previous</button>
-                    <button type="submit" class="btn btn-submit">Submit</button>
+                    <button type="button" class="btn btn-previous">Anterior</button>
+                    <button type="submit" class="btn btn-submit">Enviar</button>
                 </div>
             </fieldset>
             
