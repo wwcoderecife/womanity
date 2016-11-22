@@ -131,7 +131,7 @@
                        <h1><strong>UNA </strong>Ecossistema</h1>
                         <div class="description">
                        	    <p>
-                                <strong>Ecossistema de Atores pelos Direitos e Empoderamento das Mulheres:</strong>:<br>
+                                <strong>Ecossistema de Atores pelos Direitos e Empoderamento das Mulheres:</strong><br>
                                  Interconexões para maximizar impacto.</br>
                             
                             </p>
