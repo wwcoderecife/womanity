@@ -128,7 +128,7 @@
                 
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2 text">
-                        <h1><strong>UNA</h1>
+                       <h1><strong>UNA </strong>Ecossistema</h1>
                         <div class="description">
                        	    <p>
                                 <strong>Ecossistema de Atores pelos Direitos e Empoderamento das Mulheres:</strong>:<br>
