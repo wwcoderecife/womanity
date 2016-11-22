@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Womanity Ecossistema</title>
+        <title>UNA Ecossistema</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
@@ -94,7 +94,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.html">Womanity Ecossistema</a>
+					<a class="navbar-brand" href="index.html">UNA Ecossistema</a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="top-navbar-1">
@@ -128,10 +128,10 @@
                 
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2 text">
-                        <h1><strong>Womanity </strong>Ecossistema</h1>
+                        <h1><strong>UNA</h1>
                         <div class="description">
                        	    <p>
-                                <strong>Ecossitema de atores pelos direitos da mulher</strong>:<br>
+                                <strong>Ecossistema de Atores pelos Direitos e Empoderamento das Mulheres:</strong>:<br>
                                  Interconexões para maximizar impacto.</br>
                             
                             </p>
@@ -143,7 +143,7 @@
                     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
                         <form role="form" action="index.php" method="post" class="f1">
 
-                            <h3>Cadastro Womanity Ecossistema</h3>
+                            <h3>Cadastro UNA Ecossistema</h3>
                             <p>Preencha os campos obrigatórios *</p>
 
                              <!-- Etapas do Formulário: -->
