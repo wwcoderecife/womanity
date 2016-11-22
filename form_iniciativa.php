@@ -164,6 +164,22 @@
                     </select>
                     <input type="text" class="f1-last-name form-control" id="natureza_outros" placeholder="descreva outro tipo de natureza">  
                 </div>
+
+                <h5> Quando sua iniciativa começou as atividades?*</h5>
+                 <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" id="year" name="year">
+                      <script>
+                      var myDate = new Date();
+                      var year = myDate.getFullYear();
+                      for(var i = 1900; i < year+1; i++){
+                          document.write('<option value="'+i+'">'+i+'</option>');
+                      }
+                      </script>
+                    </select>
+
+
+                
             </fieldset>
 
 
