@@ -193,7 +193,7 @@
 
                     </script>
                 </div>
-
+                <!--
                 <h5> Quando sua iniciativa começou as atividades?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -206,7 +206,7 @@
                           }
                           </script>
                     </select>
-                
+                -->
             </fieldset>
 
 
