@@ -101,7 +101,7 @@
 					<ul class="nav navbar-nav navbar-left">
 						<li>
 
-                            <form class="navbar-form navbar-right" action="index.php"  method="post">
+                            <form class="navbar-form navbar-left" action="index.php"  method="post">
                                 <div class="form-group">
                                   <input type="text" placeholder="usuário" name="login" class="form-control">
                                 </div>
