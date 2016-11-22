@@ -169,13 +169,10 @@
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="year" name="year">
-                      <script>
-                      var myDate = new Date();
-                      var year = myDate.getFullYear();
-                      for(var i = 1900; i < year+1; i++){
-                          document.write('<option value="'+i+'">'+i+'</option>');
-                      }
-                      </script>
+                        <option value=""></option>
+                        <option value="academica">2015</option>
+                        <option value="coletivo">2016</option>
+                      
                     </select>
 
 
