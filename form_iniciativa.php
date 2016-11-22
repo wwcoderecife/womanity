@@ -129,10 +129,6 @@
                     <input type="text" name="iniciativa-email"class="f1-last-name form-control">
                 </div>
 
-                <div class="f1-buttons">
-                    <button type="button" class="btn btn-previous">Previous</button>
-                    <button type="button" class="btn btn-next">Next</button>
-                </div>
 
                 <h5>Como a sua iniciativa se identifica?</h5>
                 <div class="form-group">
@@ -165,6 +161,14 @@
                     </select> 
                 </div>
             </fieldset>
+
+
+                <div class="f1-buttons">
+                    <button type="button" class="btn btn-previous">Previous</button>
+                    <button type="button" class="btn btn-next">Next</button>
+                </div>
+
+                
 
              <!--Etapa 3 Formulário: Endereço/Iniciativa -->
 
