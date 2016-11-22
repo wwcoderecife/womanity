@@ -147,7 +147,7 @@
                 <h5>De qual Natureza?</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="organizacao-tipo" >
+                    <select class="f1-last-name form-control" id="iniciativa-natureza" >
                         <option value=""></option>
                         <option value="academica">Acadêmica</option>
                         <option value="coletivo">Coletivo</option>
@@ -159,10 +159,39 @@
                         <option value="negocio_social">Negócio Social</option>
                         <option value="ong_sociedade_civil">Organização da Sociedade Civil (ex: associação, ong, oscip, etc)
                         <option value="redes">Redes</option> 
-                        <option value="redes">Outros</option> 
+                        <option value="Outros">Outros</option> 
                         </option> 
                     </select>
-                    <input type="text" class="f1-last-name form-control" id="natureza_outros" placeholder="descreva outro tipo de natureza">  
+                    <input type="text" id="inputOutros" class="f1-last-name form-control" style='display: none' />
+                    <script>
+
+                        var dropdown = document.getElementById('iniciativa-natureza');
+                            
+                            function onDropdownChanged()
+                            {
+                                console.log(dropdown.selectedIndex);
+                                //pegando valor do select na variável dropdown
+                                
+                                if(dropdown.options[dropdown.selectedIndex].value == Outros) {
+                                    //faz algo quando o valor selecionado for outros
+                                    console.log('Selecionou o valor Outros');
+                                    //mostra o input quando o valor selecionado for outros
+                                    var inputOutros = document.getElementById('inputOutros');
+                                    inputOutros.style.display = 'block';
+                                }
+                            }
+                            
+                            if (dropdown.addEventListener)
+                            {
+                                dropdown.addEventListener('change', onDropdownChanged, false);
+                            }
+                            else
+                            {
+                                // suporte para o IE
+                                dropdown.attachEvent('onchange', onDropdownChanged, false);
+                            }
+
+                    </script>
                 </div>
 
                 <h5> Quando sua iniciativa começou as atividades?*</h5>
