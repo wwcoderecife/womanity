@@ -111,7 +111,7 @@
                                 <button type="submit" name="novo_login"  value="Log in" class="btn btn-submit">Log in</button>
                             </form>
 
-							<span class="li-social-left">
+							<span class="li-social">
 								<a href="#" target="_blank"><i class="fa fa-facebook"></i></a> 
 								<a href="#" target="_blank"><i class="fa fa-twitter"></i></a> 
 								<a href="#" target="_blank"><i class="fa fa-google-plus"></i></a> 
