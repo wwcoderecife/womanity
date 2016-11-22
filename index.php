@@ -98,10 +98,10 @@
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="top-navbar-1">
-					<ul class="nav navbar-nav navbar-left">
+					<ul class="nav navbar-nav navbar-right">
 						<li>
 
-                            <form class="navbar-form navbar-left" action="index.php"  method="post">
+                            <form class="navbar-form navbar-right" action="index.php"  method="post">
                                 <div class="form-group">
                                   <input type="text" placeholder="usuário" name="login" class="form-control">
                                 </div>
