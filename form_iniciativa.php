@@ -133,6 +133,37 @@
                     <button type="button" class="btn btn-previous">Previous</button>
                     <button type="button" class="btn btn-next">Next</button>
                 </div>
+
+                <h5>Como a sua iniciativa se identifica?</h5>
+                <div class="form-group">
+                   <label class="radio-inline">
+                        <input type="radio" name="iniciativa-acao" value="acao" class="form-control-radio"> Açāo
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="iniciativa-projeto" value="projeto" class="form-control-radio"> Projeto
+                    </label>
+                </div>
+
+                <h5>De qual Natureza?</h5>
+                 <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" id="organizacao-tipo" >
+                        <option value="academica">acadêmica</option>
+                        <option value="coletivo">coletivo</option>
+                        <option value="empresa_privada">empresa privada</option>
+                        <option value="investimento_social_privado">Investimento Social Privado</option>
+                        <option value="fundos">fundos</option>
+                        <option value="governo">governo</option>
+                        <option value="movimento">movimento</option>
+                        <option value="negocio_social">Negócio Social</option>
+                        <option value="ong_sociedade_civil">organização da sociedade civil (ex: associação, ong, oscip, etc)
+                        <option value="redes">Redes</option> 
+                        <label for="exampleInputEmail2">Outros</label>
+                        <input type="text" class="f1-last-name form-control" id="natureza_outros"   
+                        </option>   
+                    </select> 
+                </div>
             </fieldset>
 
              <!--Etapa 3 Formulário: Endereço/Iniciativa -->
