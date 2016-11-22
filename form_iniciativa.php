@@ -159,9 +159,10 @@
                         <option value="ong_sociedade_civil">organização da sociedade civil (ex: associação, ong, oscip, etc)
                         <option value="redes">Redes</option> 
                         </option> 
-                        <label for="exampleInputEmail2">Outros</label>
-                        <input type="text" class="f1-last-name form-control" id="natureza_outros">   
-                    </select> 
+
+                    </select>
+                    <label for="exampleInputEmail2">Outros</label>
+                    <input type="text" class="f1-last-name form-control" id="natureza_outros">  
                 </div>
             </fieldset>
 
