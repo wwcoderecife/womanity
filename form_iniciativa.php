@@ -206,6 +206,70 @@
                           }
                           </script>
                     </select>
+
+
+               <h5>Quantas pessoas estão envolvidas neste trabalho?*</h5>
+                 <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" id="iniciativa-pessoas_envolvidas" >
+                        <option value=""></option>
+                        <option value="1">1-5</option>
+                        <option value="2">6-10</option>
+                        <option value="3">11-20</option>
+                        <option value="4">21-50</option>
+                        <option value="5">51-100</option>
+                        <option value="6">101-500</option>
+                        <option value="7">251-1000</option>
+                        <option value="8">501-1000</option>
+                        <option value="9">1001+</option>     
+                    </select>
+
+               <h5>Qual foi seu orçamento da sua iniciativa?*</h5>
+                 
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">2014</label>
+                    <input type="text" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2014">
+                </div>
+
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">2015</label>
+                    <input type="text" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2015">
+                </div>
+
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">2016</label>
+                    <input type="text" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2016">
+                </div>
+
+
+                <h5>Sua iniciativa recebe recursos financeiros?</h5>
+                <div class="form-group">
+                   <label class="radio-inline">
+                        <input type="radio" name="iniciativa-recursos1" value="sim" class="form-control-radio"> Sim
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="iniciativa-recursos2" value="nao" class="form-control-radio"> Nāo
+                    </label>
+                </div>
+
+                <h5>Qual é a origem?</h5>
+                <div class="form-group">
+                   <label class="checkbox-inline">
+                        <input type="checkbox" name="iniciativa-origem1" value="origem1" class="form-control-radio">Doação Pessoa Física 
+                    </label>
+
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="iniciativa-origem2" value="origem2" class="form-control-radio">Edital 
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="iniciativa-origem3" value="origem3" class="form-control-radio">Investimento Direto/Patrocínio
+ 
+                    </label>
+                </div>
+
+
+
                 
             </fieldset>
 
