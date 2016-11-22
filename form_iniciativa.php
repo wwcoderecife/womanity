@@ -173,7 +173,7 @@
                           var myDate = new Date();
                           var year = myDate.getFullYear();
                           for(var i = 1900; i < year+1; i++){
-                              document.write('<option value="'+i+'">'+i+'</option>');
+                              document.write('<option value=""'+i+'">'+i+'</option>');
                           }
                           </script>
                     </select>
