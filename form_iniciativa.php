@@ -268,7 +268,12 @@
                     </label>
                 </div>
 
-
+           <h5>O que faz sua iniciativa?* (até 500 caracteres).</h5>                                  
+                <div class="form-group">
+                    <label class="sr-only" for="f1-about-yourself"></label>
+                    <textarea name="sobre_iniciativa" placeholder="Fale sobre a sua iniciativa...." 
+                    class="f1-about-yourself form-control" id="sobre_iniciativa"></textarea>
+                </div>
 
                 
             </fieldset>
