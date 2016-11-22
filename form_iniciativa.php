@@ -136,11 +136,11 @@
                 <h5>Como sua iniciativa se identifica?*</h5>
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="iniciativa-zona" value="rural" class="form-control-radio"> Açāo
+                        <input type="radio" name="iniciativa-acao" value="acao" class="form-control-radio"> Açāo
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="iniciativa-zona" value="urbana" class="form-control-radio"> Projeto
+                        <input type="radio" name="iniciativa-projeto" value="projeto" class="form-control-radio"> Projeto
                     </label>
                 </div>
 
