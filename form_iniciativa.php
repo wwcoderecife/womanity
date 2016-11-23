@@ -368,8 +368,8 @@
                          
                         </option> 
                     </select>
-                    <input type="text" id="inputAvaliacao" class="f1-last-name form-control" placeholder="sim, quais foram os resultados comprovados alcançados até hoje?: (500 caracteres)
-"style='display: none' />
+                    <textarea type="text" id="inputAvaliacao" class="f1-last-name form-control" placeholder="quais foram os resultados comprovados alcançados até hoje?
+"style='display: none' /></textarea>
                     <script>
 
                         var dropdown = document.getElementById('iniciativa-avaliacao');
