@@ -44,18 +44,18 @@
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="text" name="f1-last-name" placeholder="E-mail" value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="email" name="f1-last-name" placeholder="E-mail" value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name">
                     
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="text" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="tel" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name">
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="text" name="f1-last-name" placeholder="Celular" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="tel" name="f1-last-name" placeholder="Celular" class="f1-last-name form-control" id="f1-last-name">
                 </div>
 
                  <h4>Dados Pessoais Contato 2:</h4>
@@ -66,18 +66,18 @@
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="text" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="email" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
                     
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="text" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="tel" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name">
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="text" name="f1-last-name" placeholder="Celular" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="tel" name="f1-last-name" placeholder="Celular" class="f1-last-name form-control" id="f1-last-name">
                 </div>
 
                 <div class="f1-buttons">
@@ -138,37 +138,37 @@
                 <h5>A sua Organizaçāo está localizada na…*</h5>
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="iniciativa-zona" value="rural" class="f1-last-name form-control"> Zona Rural
+                        <input type="radio" name="organizacao-zona" value="rural" class="f1-last-name form-control"> Zona Rural
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="iniciativa-zona" value="urbana" class="f1-last-name form-control"> Zona Urbana
+                        <input type="radio" name="organizacao-zona" value="urbana" class="f1-last-name form-control"> Zona Urbana
                     </label>
                 </div>
 
                 <h5>Nome da Organizaçāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Nome</label>
-                    <input type="text" name="iniciativa-nome" maxlength="50" class="f1-last-name form-control">
+                    <input type="text" name="organizacao-nome" maxlength="50" class="f1-last-name form-control">
                 </div>
 
 
                 <h5>Sigla da Organizaçāo:</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Sigla</label>
-                    <input type="text" name="iniciativa-sigla" style="text-transform:uppercase" class="f1-last-name form-control">
+                    <input type="text" name="organizacao-sigla" style="text-transform:uppercase" class="f1-last-name form-control">
                 </div>
 
                 <h5>Telefone da Organizaçāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Telefone</label>
-                    <input type="text" name="iniciativa-telefone" placeholder="(xx) xxxxx-xxxx"class="f1-last-name form-control">
+                    <input type="tel" name="organizacao-telefone" placeholder="(xx) xxxxx-xxxx"class="f1-last-name form-control">
                 </div>
 
                 <h5>E-mail da Organizaçāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Email</label>
-                    <input type="text" name="iniciativa-email" class="f1-last-name form-control"class="f1-last-name form-control">
+                    <input type="email" name="organizacao-email" class="f1-last-name form-control"class="f1-last-name form-control">
                 </div>
 
                  <h5>Como sua organizaçāo se identifica*</h5>
@@ -269,8 +269,8 @@
                 </div>
 
 
-                 <h5>Qual o público direto atendido pela sua Organizaçāo?*
-</h5>
+                 <h5>Qual o público direto atendido pela sua Organizaçāo?*</h5>
+
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="organizacao-publico" >
@@ -286,21 +286,21 @@
                     </select>
 
                     <h5>Nomeie e descreva as iniciativas da sua organização que trabalham com empoderamento das mulheres*?</h5>
-                 <h5>Nome</h5> 
+                 <h5>Nome1</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona1"  class="f1-last-name form-control">
                     <textarea name="sobre_iniciativas1" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong1"></textarea>
                 </div>
-                <h5>Nome</h5> 
+                <h5>Nome2</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona2"  class="f1-last-name form-control">
                     <textarea name="sobre_iniciativas2" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong2"></textarea>
                 </div>
-                <h5>Nome</h5> 
+                <h5>Nome3</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona3" class="f1-last-name form-control">
@@ -424,7 +424,7 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="organizaçāo-comunicacao" >
+                    <select class="f1-last-name form-control" id="organizacao-comunicacao" >
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
@@ -435,7 +435,7 @@
 "style='display: none' /></textarea>
                     <script>
 
-                        var dropdown = document.getElementById('organizaçāo-comunicacao');
+                        var dropdown = document.getElementById('organizacao-comunicacao');
                             
                             function onDropdownChanged()
                             {
@@ -529,7 +529,7 @@
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona3" class="f1-last-name form-control">
                 </div> 
-            </fieldset>
+        
 
 
                 <div class="f1-buttons">
@@ -594,10 +594,104 @@
                 </div>
 
             </fieldset>
+ 
+          <!--Etapa 4 Formulário: Mídia Social-->
 
+            <fieldset>
+                <div class="form-group">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-mouse-pointer"></i></span>
+                      <input class="form-control" type="text" placeholder="Site">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-facebook-official"></i></span>
+                      <input class="form-control" type="text" placeholder="Facebook">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group margin-bottom-sm">
+                      <span class="input-group-addon"><i class="fa fa-twitter-square"></i></span>
+                      <input class="form-control" type="text" placeholder="Twitter">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group margin-bottom-sm">
+                      <span class="input-group-addon"><i class="fa fa-instagram"></i></span>
+                      <input class="form-control" type="text" placeholder="Instagram">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group margin-bottom-sm">
+                      <span class="input-group-addon"><i class="fa fa-linkedin-square"></i></span>
+                      <input class="form-control" type="text" placeholder="Linkedin">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group margin-bottom-sm">
+                      <span class="input-group-addon"><i class="fa fa-ellipsis-h"></i></span>
+                      <input class="form-control" type="text" placeholder="Outros">
+                    </div>
+                </div>
+                <div class="f1-buttons">
+                    <button type="button" class="btn btn-previous">Anterior</button>
+                    <button type="button" class="btn btn-next">Próximo</button>
+                </div>
+            </fieldset>
 
+            <fieldset>
+                <h4>Indique até três iniciativas que na sua opinião devem participar do processo de mapeamento:</h4>
+                <h5>Iniciativa 1</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">Nome</label>
+                    <input type="text" name="f1-last-name" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
+                </div>
 
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">E-mail</label>
+                    <input type="text" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
+                    
+                </div>
+
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">Telefone</label>
+                    <input type="text" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name">
+                </div>
+                <h5>Iniciativa 2</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">Nome</label>
+                    <input type="text" name="f1-last-name" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
+                </div>
+
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">E-mail</label>
+                    <input type="text" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">                    
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">Telefone</label>
+                    <input type="text" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name">
+                </div>
+                <h5>Iniciativa 3</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">Nome</label>
+                    <input type="text" name="f1-last-name" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">E-mail</label>
+                    <input type="text" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
+                </div>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">Telefone</label>
+                    <input type="text" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name">
+                </div>
+                <div class="f1-buttons">
+                    <button type="button" class="btn btn-previous">Anterior</button>
+                    <button type="submit" class="btn btn-submit">Enviar</button>
+                </div>
+            </fieldset>
+         
+        </form>
+    </div>
+</div>
     
-    </form>
-</div>
-</div>
