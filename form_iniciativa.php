@@ -428,8 +428,8 @@
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for outros
-                                    var meuInput = document.getElementById('inputComunicacao');
-                                    meuInput.style.display = 'block';
+                                    var meuInput1 = document.getElementById('inputComunicacao');
+                                    meuInput1.style.display = 'block';
                                 }
                             }
                             
