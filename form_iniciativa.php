@@ -359,32 +359,40 @@
 
 
 
-<h5>Você realiza monitoramento e avaliação sistematizada das atividades desta iniciativa?*</h5>
-
+<h5>De qual Natureza?</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="iniciativa-avaliacao" >
-                        <option value="0">Nāo</option>
-                        <option value="1">Sim</option>  
+                    <select class="f1-last-name form-control" id="iniciativa-natureza" >
+                        <option value=""></option>
+                        <option value="academica">Acadêmica</option>
+                        <option value="coletivo">Coletivo</option>
+                        <option value="empresa_privada">Empresa Privada</option>
+                        <option value="investimento_social_privado">Investimento Social Privado</option>
+                        <option value="fundos">Fundos</option>
+                        <option value="governo">Governo</option>
+                        <option value="movimento">Movimento</option>
+                        <option value="negocio_social">Negócio Social</option>
+                        <option value="ong_sociedade_civil">Organização da Sociedade Civil (ex: associação, ong, oscip, etc)
+                        <option value="redes">Redes</option> 
+                        <option value="Outros">Outros</option> 
+                        </option> 
                     </select>
-
-                    <textarea type="text" id="inputAvaliacao" class="f1-last-name form-control" placeholder="Quais foram os resultados comprovados alcançados até hoje?: (500 caracteres)
-"style='display: none' /></textarea>
+                    <input type="text" id="inputOutros" class="f1-last-name form-control" placeholder="Descreva outro tipo..."style='display: none' />
                     <script>
 
-                        var dropdown = document.getElementById('iniciativa-avaliacao');
+                        var dropdown = document.getElementById('iniciativa-natureza');
                             
-                            function onDropdownChanged2()
+                            function onDropdownChanged()
                             {
                                 console.log(dropdown.selectedIndex);
                                 //pegando valor do select na variável dropdown
                                 
-                                if(dropdown.options[dropdown.selectedIndex].value == "1") {
+                                if(dropdown.options[dropdown.selectedIndex].value == "Outros") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor Outros');
-                                    //mostra o input quando o valor selecionado
-                                    var meuInput2 = document.getElementById('inputAvaliacao');
-                                    meuInput2.style.display = 'block';
+                                    //mostra o input quando o valor selecionado for outros
+                                    var meuInput = document.getElementById('inputOutros');
+                                    meuInput.style.display = 'block';
                                 }
                             }
                             
