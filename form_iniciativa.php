@@ -325,6 +325,60 @@
                         <option value="27">Tocantins</option>
                     </select>
 
+                    <h5>Sua iniciativa influenciou políticas públicas?*</h5>
+                <div class="form-group">
+                   <label class="checkbox-inline">
+                        <input type="checkbox" name="iniciativa-municipal" value="municipal" class="form-control-radio">Municipal 
+                    </label>
+
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="iniciativa-estadual" value="estadual" class="form-control-radio">Estadual 
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="iniciativa-nacional" value="Nacional" class="form-control-radio">Nacional
+
+                 
+                   <h5>Você realiza monitoramento e avaliação sistematizada das atividades desta iniciativa?*
+</h5>
+                 <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" id="iniciativa-natureza" >
+                        <option value="0">Nāo</option>
+                        <option value="1">Sim</option>    
+                    </select>
+                    <textarea type="text" id="inputOutros" class="f1-last-name form-control" placeholder="Descreva outro tipo..."style='display: none' /></textarea>
+                    <script>
+
+                        var dropdown = document.getElementById('iniciativa-natureza');
+                            
+                            function onDropdownChanged()
+                            {
+                                console.log(dropdown.selectedIndex);
+                                //pegando valor do select na variável dropdown
+                                
+                                if(dropdown.options[dropdown.selectedIndex].value == 1) {
+                                    //faz algo quando o valor selecionado for outros
+                                    console.log('Selecionou o valor Outros');
+                                    //mostra o input quando o valor selecionado for outros
+                                    var meuInput = document.getElementById('inputOutros');
+                                    meuInput.style.display = 'block';
+                                }
+                            }
+                            
+                            if (dropdown.addEventListener)
+                            {
+                                dropdown.addEventListener('change', onDropdownChanged, false);
+                            }
+                            else
+                            {
+                                // suporte para o IE
+                                dropdown.attachEvent('onchange', onDropdownChanged, false);
+                            }
+
+                    </script>
+                </div>
+                    
+
 
                 
             </fieldset>
