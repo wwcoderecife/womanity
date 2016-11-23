@@ -90,7 +90,7 @@
              <!--Etapa 2 Formulário: Organizaçāo -->
 
         <fieldset>
-                <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
+                <h5>A sua Organizaçāo está dentro de uma organização juridicamente constituída?*</h5>
                 <h6><em>se, sim digite o CNPJ no campo ao lado.</em></h5>
              
                   <div class="row">
@@ -153,7 +153,7 @@
                  <h5>Como sua organizaçāo se identifica*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus" ></label>
-                    <select class="f1-last-name form-control" id="regiao" >
+                    <select class="f1-last-name form-control" id="organizacao-tipo" >
                         <option value="academica"> acadêmica</option>
                         <option value="coletivo">coletivo</option>
                         <option value="centro-oeste">empresa privada</option>
