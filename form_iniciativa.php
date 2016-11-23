@@ -368,7 +368,8 @@
                          
                         </option> 
                     </select>
-                    <input type="text" id="inputAvaliacao" class="f1-last-name form-control" placeholder="Descreva outro tipo..."style='display: none' />
+                    <input type="text" id="inputAvaliacao" class="f1-last-name form-control" placeholder="sim, quais foram os resultados comprovados alcançados até hoje?: (500 caracteres)
+"style='display: none' />
                     <script>
 
                         var dropdown = document.getElementById('iniciativa-avaliacao');
