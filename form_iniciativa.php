@@ -292,7 +292,7 @@
                     </select>
                     
                     <h5>Clique nos Estados que sua iniciativa tem atuação direta*</h5>
-                    <h6>Mantenha pressionado o botão Ctrl (janelas) / Comando (Mac) para selecionar várias opções.</h6>
+                    <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
                     <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" name="iniciativa_estado" multiple>
