@@ -356,7 +356,7 @@
 
 
 
-
+<!-- 26 Iniciativa-->
 
 
 <h5>Você realiza monitoramento e avaliação sistematizada das atividades desta iniciativa?*</h5>
@@ -368,7 +368,7 @@
                          
                         </option> 
                     </select>
-                    <textarea type="text" id="inputAvaliacao" class="f1-last-name form-control" placeholder="quais foram os resultados comprovados alcançados até hoje?
+                    <textarea type="text" id="inputAvaliacao" class="f1-last-name form-control" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
 "style='display: none' /></textarea>
                     <script>
 
@@ -399,7 +399,100 @@
                             }
 
                     </script>
-                </div>
+                </div><!--26/Inicitiva-->
+
+<!-- 27 Iniciativa-->
+
+<h5>Sua iniciativa tem uma estratégia de comunicação própria?
+*</h5>
+                 <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" id="iniciativa-comunicacao" >
+                        <option value="nao">Nāo</option>
+                        <option value="sim">Sim, qual?</option>
+                         
+                        </option> 
+                    </select>
+                    <textarea type="text" id="inputComunicacao" class="f1-last-name form-control" placeholder="Descreva estratégia de comunicação..
+"style='display: none' /></textarea>
+                    <script>
+
+                        var dropdown = document.getElementById('iniciativa-comunicacao');
+                            
+                            function onDropdownChanged()
+                            {
+                                console.log(dropdown.selectedIndex);
+                                //pegando valor do select na variável dropdown
+                                
+                                if(dropdown.options[dropdown.selectedIndex].value == "sim") {
+                                    //faz algo quando o valor selecionado for outros
+                                    console.log('Selecionou o valor');
+                                    //mostra o input quando o valor selecionado for outros
+                                    var meuInput = document.getElementById('inputComunicacao');
+                                    meuInput.style.display = 'block';
+                                }
+                            }
+                            
+                            if (dropdown.addEventListener)
+                            {
+                                dropdown.addEventListener('change', onDropdownChanged, false);
+                            }
+                            else
+                            {
+                                // suporte para o IE
+                                dropdown.attachEvent('onchange', onDropdownChanged, false);
+                            }
+
+                    </script>
+                </div><!--27/Inicitiva-->
+
+
+
+      <!-- 28 Iniciativa-->
+
+<h5>sua organização e/ou iniciativa recebeu premiações, certificações, etc*?
+*</h5>
+                 <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" id="iniciativa-premiacao" >
+                        <option value="nao">Nāo</option>
+                        <option value="sim">Sim, quais?</option>
+                         
+                        </option> 
+                    </select>
+                    <textarea type="text" id="inputPremiacao" class="f1-last-name form-control" placeholder="Premiações/Certificações..
+"style='display: none' /></textarea>
+                    <script>
+
+                        var dropdown = document.getElementById('iniciativa-premiacao');
+                            
+                            function onDropdownChanged()
+                            {
+                                console.log(dropdown.selectedIndex);
+                                //pegando valor do select na variável dropdown
+                                
+                                if(dropdown.options[dropdown.selectedIndex].value == "sim") {
+                                    //faz algo quando o valor selecionado for outros
+                                    console.log('Selecionou o valor');
+                                    //mostra o input quando o valor selecionado for outros
+                                    var meuInput = document.getElementById('inputPremiacao');
+                                    meuInput.style.display = 'block';
+                                }
+                            }
+                            
+                            if (dropdown.addEventListener)
+                            {
+                                dropdown.addEventListener('change', onDropdownChanged, false);
+                            }
+                            else
+                            {
+                                // suporte para o IE
+                                dropdown.attachEvent('onchange', onDropdownChanged, false);
+                            }
+
+                    </script>
+                </div><!--28/Inicitiva-->
+          
 
 
 
