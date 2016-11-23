@@ -364,8 +364,8 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="iniciativa-avaliacao" >
                         <option value=""></option>
-                        <option value="nao">Nāo</option>
-                        <option value="sim">Sim</option>
+                        <option value="0">Nāo</option>
+                        <option value="1">Sim</option>
                          
                         </option> 
                     </select>
@@ -380,12 +380,12 @@
                                 console.log(dropdown.selectedIndex);
                                 //pegando valor do select na variável dropdown
                                 
-                                if(dropdown.options[dropdown.selectedIndex].value == "sim") {
+                                if(dropdown.options[dropdown.selectedIndex].value == "1") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor Outros');
                                     //mostra o input quando o valor selecionado for outros
-                                    var meuInput = document.getElementById('inputAvaliacao');
-                                    meuInput.style.display = 'block';
+                                    var meuInput1 = document.getElementById('inputAvaliacao');
+                                    meuInput1.style.display = 'block';
                                 }
                             }
                             
@@ -404,14 +404,14 @@
 
 <!-- 27 Iniciativa-->
 
-<h5>Sua iniciativa tem uma estratégia de comunicação própria?
-*</h5>
+<h5>Sua iniciativa tem uma estratégia de comunicação própria?*</h5>
+
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="iniciativa-comunicacao" >
                         <option value=""></option>
-                        <option value="nao">Nāo</option>
-                        <option value="sim">Sim, qual?</option>
+                        <option value="0">Nāo</option>
+                        <option value="1">Sim, qual?</option>
                          
                         </option> 
                     </select>
@@ -426,7 +426,7 @@
                                 console.log(dropdown.selectedIndex);
                                 //pegando valor do select na variável dropdown
                                 
-                                if(dropdown.options[dropdown.selectedIndex].value == "sim") {
+                                if(dropdown.options[dropdown.selectedIndex].value == "1") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for outros
@@ -452,7 +452,7 @@
 
       <!-- 28 Iniciativa-->
 
-<h5>sua organização e/ou iniciativa recebeu premiações, certificações, etc*?
+<h5>A sua iniciativa recebeu premiações, certificações, etc*?
 *</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
