@@ -81,7 +81,7 @@
                 </div>
 
                 <div class="f1-buttons">
-                    <button type="button" class="btn btn-next">Next</button>
+                    <button type="button" class="btn btn-next">Próximo</button>
                 </div>
             </fieldset>
 
@@ -91,12 +91,13 @@
 
         <fieldset>
                 <h5>A sua Organizaçāo está dentro de uma organização juridicamente constituída?*</h5>
-                <h6><em>se, sim digite o CNPJ no campo ao lado.</em></h5>
+                <h6><em>se, sim digite o CNPJ no campo abaixo.</em></h5>
              
                   
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="oraganizacao-cnpj" >
+                    <select class="f1-last-name form-control" id="organizacao-cnpj" >
+                        <option value=""></option>
                         <option value="sim">sim</option>
                         <option value="nao">nao</option>
                     </select>    
@@ -104,7 +105,7 @@
                     <input type="text" id="inputcnpj" class="f1-last-name form-control" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona"style='display: none' />
                     <script>
 
-                        var dropdown = document.getElementById('oraganizacao-cnpj');
+                        var dropdown = document.getElementById('organizacao-cnpj');
                             
                             function onDropdownChanged()
                             {
@@ -535,18 +536,6 @@
                     <button type="button" class="btn btn-previous">Anterior</button>
                     <button type="button" class="btn btn-next">Próximo</button>
                 </div>
-
-
-
-
-
-
-
-                <div class="f1-buttons">
-                    <button type="button" class="btn btn-previous">Previous</button>
-                    <button type="button" class="btn btn-next">Next</button>
-                </div>
-
 
             </fieldset>
 
