@@ -363,6 +363,7 @@
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="iniciativa-avaliacao" >
+                        <option value=""></option>
                         <option value="nao">Nāo</option>
                         <option value="sim">Sim</option>
                          
@@ -408,6 +409,7 @@
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="iniciativa-comunicacao" >
+                        <option value=""></option>
                         <option value="nao">Nāo</option>
                         <option value="sim">Sim, qual?</option>
                          
@@ -455,8 +457,9 @@
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="iniciativa-premiacao" >
-                        <option value="nao">Nāo</option>
-                        <option value="sim">Sim, quais?</option>
+                        <option value=""></option>
+                        <option value="0">Nāo</option>
+                        <option value="1">Sim, quais?</option>
                          
                         </option> 
                     </select>
@@ -471,7 +474,7 @@
                                 console.log(dropdown.selectedIndex);
                                 //pegando valor do select na variável dropdown
                                 
-                                if(dropdown.options[dropdown.selectedIndex].value == "sim") {
+                                if(dropdown.options[dropdown.selectedIndex].value == "1") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for outros
