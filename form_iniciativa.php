@@ -348,7 +348,7 @@
                     <label class="checkbox-inline">
                         <input type="checkbox" name="iniciativa-origem3" value="origem3" class="form-control-radio">nacional 
                     </label>
-                    <textarea name="sobre_iniciativa" placeholder="Opcional: (campo aberto para detalhar, 500 caracteres)"
+                    <textarea name="sobre_iniciativa" placeholder="Opcional: (campo aberto para detalhar, )"
 
                     class="f1-about-yourself form-control" id="sobre_iniciativa"></textarea>
                 </div>
