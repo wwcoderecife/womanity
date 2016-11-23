@@ -338,6 +338,10 @@
                         <input type="checkbox" name="iniciativa-nacional" value="Nacional" class="form-control-radio">Nacional
 
                  
+
+
+
+
                    <h5>Você realiza monitoramento e avaliação sistematizada das atividades desta iniciativa?*
 </h5>
                  <div class="form-group">
@@ -377,8 +381,6 @@
 
                     </script>
                 </div>
-                    
-
 
                 
             </fieldset>
