@@ -363,18 +363,18 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="iniciativa-natureza" >
+                    <select class="f1-last-name form-control" id="iniciativa-avaliacao" >
                         <option value="0">Nāo</option>
-                        <option value="1">Sim</option>
-                        
+                        <option value="1">Sim</option>  
                     </select>
-                    <textarea type="text" id="inputOutros" class="f1-last-name form-control" placeholder="Quais foram os resultados comprovados alcançados até hoje?: (500 caracteres)
+                    
+                    <textarea type="text" id="inputAvaliacao" class="f1-last-name form-control" placeholder="Quais foram os resultados comprovados alcançados até hoje?: (500 caracteres)
 "style='display: none' /></textarea>
                     <script>
 
-                        var dropdown = document.getElementById('iniciativa-natureza');
+                        var dropdown = document.getElementById('iniciativa-avaliacao');
                             
-                            function onDropdownChanged()
+                            function onDropdownChanged2()
                             {
                                 console.log(dropdown.selectedIndex);
                                 //pegando valor do select na variável dropdown
@@ -383,8 +383,8 @@
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor Outros');
                                     //mostra o input quando o valor selecionado for outros
-                                    var meuInput = document.getElementById('inputOutros');
-                                    meuInput.style.display = 'block';
+                                    var meuInput2 = document.getElementById('inputAvaliacao');
+                                    meuInput2.style.display = 'block';
                                 }
                             }
                             
