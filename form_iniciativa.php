@@ -271,7 +271,7 @@
            <h5>O que faz sua iniciativa?* (até 500 caracteres).</h5>                                  
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
-                    <textarea name="sobre_iniciativa" placeholder="Fale sobre a sua iniciativa...." 
+                    <textarea name="sobre_iniciativa" maxlength="500" placeholder="Fale sobre a sua iniciativa...." 
                     class="f1-about-yourself form-control" id="sobre_iniciativa"></textarea>
                 </div>
 
@@ -369,7 +369,7 @@
                          
                         </option> 
                     </select>
-                    <textarea type="text" id="inputAvaliacao" class="f1-last-name form-control" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
+                    <textarea type="text" id="inputAvaliacao" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
 "style='display: none' /></textarea>
                     <script>
 
@@ -415,7 +415,7 @@
                          
                         </option> 
                     </select>
-                    <textarea type="text" id="inputComunicacao" class="f1-last-name form-control" placeholder="Descreva estratégia de comunicação..
+                    <textarea type="text" id="inputComunicacao" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 "style='display: none' /></textarea>
                     <script>
 
@@ -463,7 +463,7 @@
                          
                         </option> 
                     </select>
-                    <textarea type="text" id="inputPremiacao" class="f1-last-name form-control" placeholder="Premiações/Certificações..
+                    <textarea type="text" id="inputPremiacao" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 "style='display: none' /></textarea>
                     <script>
 
@@ -495,11 +495,26 @@
 
                     </script>
                 </div><!--28/Inicitiva-->
-          
 
 
+                <!-- 29-->
 
-                
+                 <h5>Quais são as organizações com atuação na temática da mulher que sua iniciativa se relaciona diretamente?</h5>
+                 <h5>Nome</h5> 
+                <div class="form-group">
+                    <label class="sr-only" for="f1-repeat-password"></label>
+                    <input type="text" name="iniciativa-relaciona1"  class="f1-last-name form-control">
+                </div>
+                <h5>Nome</h5> 
+                <div class="form-group">
+                    <label class="sr-only" for="f1-repeat-password"></label>
+                    <input type="text" name="iniciativa-relaciona2"  class="f1-last-name form-control">
+                </div>
+                <h5>Nome</h5> 
+                <div class="form-group">
+                    <label class="sr-only" for="f1-repeat-password"></label>
+                    <input type="text" name="iniciativa-relaciona3" class="f1-last-name form-control">
+                </div> 
             </fieldset>
 
 
