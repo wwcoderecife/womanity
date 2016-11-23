@@ -275,6 +275,22 @@
                     class="f1-about-yourself form-control" id="sobre_iniciativa"></textarea>
                 </div>
 
+                <h5>Qual o público direto atendido pela sua iniciativa?*
+</h5>
+                 <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" id="iniciativa-publico" >
+                        <option value=""></option>
+                        <option value="1">Empresas</option>
+                        <option value="2">Organizações Sociais</option>
+                        <option value="3">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher </option>
+                        <option value="4">Movimentos, coletivos, redes, fóruns</option>
+                        <option value="5">Adolescentes e jovens</option>
+                        <option value="6">Homens</option>
+                        <option value="7">Mulheres</option>
+                           
+                    </select>
+
                 
             </fieldset>
 
