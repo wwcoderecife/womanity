@@ -327,15 +327,32 @@
 
                     <h5>Sua iniciativa influenciou políticas públicas?*</h5>
                 <div class="form-group">
+                   <label class="radio-inline">
+                        <input type="radio" name="iniciativa-politica_sim" value="nao" class="form-control-radio"> Nāo
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="iniciativa-politica_nao" value="sim" class="form-control-radio"> Sim
+                    </label>
+                </div>
+
+              
+                <div class="form-group">
                    <label class="checkbox-inline">
-                        <input type="checkbox" name="iniciativa-municipal" value="municipal" class="form-control-radio">Municipal 
+                        <input type="checkbox" name="iniciativa-origem1" value="origem1" class="form-control-radio">municipal 
                     </label>
 
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="iniciativa-estadual" value="estadual" class="form-control-radio">Estadual 
+                        <input type="checkbox" name="iniciativa-origem2" value="origem2" class="form-control-radio">estadual
                     </label>
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="iniciativa-nacional" value="Nacional" class="form-control-radio">Nacional
+                        <input type="checkbox" name="iniciativa-origem3" value="origem3" class="form-control-radio">nacional 
+                    </label>
+                    <textarea name="sobre_iniciativa" placeholder="Opcional: (campo aberto para detalhar, 500 caracteres)"
+
+                    class="f1-about-yourself form-control" id="sobre_iniciativa"></textarea>
+                </div>
+
 
                 
             </fieldset>
