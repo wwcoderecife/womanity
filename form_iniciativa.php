@@ -367,7 +367,7 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim</option>  
                     </select>
-                    
+
                     <textarea type="text" id="inputAvaliacao" class="f1-last-name form-control" placeholder="Quais foram os resultados comprovados alcançados até hoje?: (500 caracteres)
 "style='display: none' /></textarea>
                     <script>
@@ -382,7 +382,7 @@
                                 if(dropdown.options[dropdown.selectedIndex].value == 1) {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor Outros');
-                                    //mostra o input quando o valor selecionado for outros
+                                    //mostra o input quando o valor selecionado
                                     var meuInput2 = document.getElementById('inputAvaliacao');
                                     meuInput2.style.display = 'block';
                                 }
