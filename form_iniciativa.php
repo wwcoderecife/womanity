@@ -514,6 +514,10 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="iniciativa-relaciona3" class="f1-last-name form-control">
+                </div>
+                <div class="f1-buttons">
+                    <button type="button" class="btn btn-previous">Anterior</button>
+                    <button type="button" class="btn btn-next">Próximo</button>
                 </div> 
             </fieldset> 
 
