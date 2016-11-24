@@ -663,7 +663,7 @@
     </div>
   </div>
 
-           <script type="text/javascript">
+           <script>
             var CheckMaximo = 2;
 
             function verificar() {
