@@ -661,10 +661,10 @@
     </div>
   </div>
 <!--Script Select-->
-<!--
+
 
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="js/multiselect.js" type="text/javascript"></script>
+<script src="assets/js/multiselect.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(function () {
         $('#table1').multiSelect({
@@ -696,7 +696,7 @@
 
 </script>
 
--->
+
 
 
  
