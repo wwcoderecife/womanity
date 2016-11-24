@@ -668,7 +668,7 @@
 
             function verificar() {
             var Marcados = 1;
-            var objCheck = document.forms['form1'].elements['temas'];
+            var objCheck = document.table['form1'].elements['temas'];
 
             //Percorrendo os checks para ver quantos foram selecionados:
             for (var iLoop=0; iLoop<objCheck.length; iLoop++) {
