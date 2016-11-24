@@ -176,14 +176,14 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-password">Senha *</label>
                                     <input type="password" name="password" placeholder="Senha *" class="f1-password form-control" id="f1-password" required data-error = "Campo está em branco, favor preencher.">
-                                    <div class="help-block with-errors"></div>>
+                                    <div class="help-block with-errors"></div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-repeat-password">Repetir Senha *</label>
                                     <input type="password" name="f1-repeat-password" placeholder="Repetir Senha *" 
                                                         class="f1-repeat-password form-control" id="f1-repeat-password"required data-error = "Campo está em branco, favor preencher.">
-                                    <div class="help-block with-errors"></div>>
+                                    <div class="help-block with-errors"></div>
                                 </div>
 
                                 <!--Tipo: Ong/Iniciativa-->   
