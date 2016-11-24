@@ -537,7 +537,7 @@
         <h5>Áreas de atuação da organização: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>
         <div class="form-group" name="form1" style="border: 1px solid #ddd">
         <div class="table-responsive">
-        <table id="table1" class="table table-hover col-sm-12">
+        <table id="form1" class="table table-hover col-sm-12">
 
             <thead>
             <tr>
