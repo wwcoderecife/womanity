@@ -667,7 +667,7 @@
 </script>
 
 -->
-<script>
+
 
  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="js/multiselect.js" type="text/javascript"></script>
@@ -700,7 +700,7 @@
 </script>
 
 
-</script>
+
     
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
