@@ -534,14 +534,13 @@
 
             <!--Tabela Temas-->
 
-        <!--<h5>Áreas de atuação da organização: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>-->
+        <h5>Áreas de atuação da organização: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>
         <form name="form1" action="" method="post">
-        
-        <table id="table1" class="table table-hover col-sm-12">
-        <div class="" name="table1" style="border: 1px solid #ddd">
+        <!--<div class="form-group" name="form1" style="border: 1px solid #ddd">-->
         <div class="table-responsive">
+        <table class="table table-hover col-sm-12">
 
-            <thead>
+         <thead>
             <tr>
                 <th>#</th>
                 <th>Temas</th>
@@ -551,32 +550,32 @@
             </thead>
             <tbody>
             <tr>
-                <td> <input type="checkbox" name="temas" class="no-margin" onclick="verificar()"></td>
+                <input type="checkbox" name="temas" class="no-margin" onclick="verificar()">
                 <td>Arte e Cultura</td>
                 <td>Promoção do acesso de mulheres à cultura e/ou incentivo à produção das várias expressões artísticas.</td>
                  
             </tr>
             <tr>
-                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
+                <input type="checkbox" name="temas"class="no-margin" onclick="verificar()">
                 <td>Ciência e Tecnologia</td>
                 <td>Promoção do acesso a linguagens, equipamentos e/ou à produção de ciência e tecnologia por mulheres.</td>
                
             </tr>
             <tr>
-                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
+                <input type="checkbox" name="temas"class="no-margin" onclick="verificar()">
                 <td> Democracia e Participação Política</td>
                 <td>Ações de incentivo à participação de mulheres na vida política e democrática institucional (partidos, conselhos, órgãos e instâncias dos poderes executivo, legislativo e judiciário).</td>
             </tr>
 
             <tr>
-                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
+                <input type="checkbox" name="temas"class="no-margin" onclick="verificar()">
                 <td>Educação e Formação</td>
                 <td>Oferta de educação formal (escolar ou acadêmica), incentivo à escolaridade; formação de atores sociais, ações de educação popular e informal</td>
               
             </tr>
 
             <tr>
-                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
+                <input type="checkbox" name="temas"class="no-margin" onclick="verificar()">
                 <td>Empreendedorismo feminino e autonomia econômica</td>
                 <td>Ações de incentivo ao empreendedorismo feminino e à autonomia econômica, por meio de capacitação e/ou financiamento, tais como capacitações, cooperativismo,microcrédito, etc.</td>
             </tr>
@@ -662,9 +661,13 @@
            </tr>
             </tbody>
         </table>
+      </form>
     </div>
   </div>
-</form>
+
+
+
+
 
            <script>
             var CheckMaximo = 2;
