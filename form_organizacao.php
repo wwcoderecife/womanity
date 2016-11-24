@@ -535,10 +535,10 @@
             <!--Tabela Temas/Subtemas-->
 
         <h5>Áreas de atuação da organização: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>
-        <div class="form-group" style="border: 1px solid #ddd">
+        <div class="form-group" name="form1" style="border: 1px solid #ddd">
         <div class="table-responsive">
         <table id="table1" class="table table-hover col-sm-12">
-          
+
             <thead>
             <tr>
                 <th>#</th>
@@ -549,7 +549,7 @@
             </thead>
             <tbody>
             <tr>
-                <td>1</td>
+                <td> <input type="checkbox" class="no-margin" onclick="verificar()"></td>
                 <td>Arte e Cultura</td>
                 <td>Promoção do acesso de mulheres à cultura e/ou incentivo à produção das várias expressões artísticas.</td>
                  
