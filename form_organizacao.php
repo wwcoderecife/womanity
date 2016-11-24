@@ -535,9 +535,10 @@
             <!--Tabela Temas-->
 
         <h5>Áreas de atuação da organização: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>
-        <div class="form-group" name="table1" style="border: 1px solid #ddd">
+        <form name="form1" action="" method="post">
+        <div class="form-group" name="form1" style="border: 1px solid #ddd">
         <div class="table-responsive">
-        <table id="table1" class="table table-hover col-sm-12">
+        <table id="form1" class="table table-hover col-sm-12">
 
             <thead>
             <tr>
@@ -662,13 +663,14 @@
         </table>
     </div>
   </div>
+</form>
 
            <script>
             var CheckMaximo = 2;
 
             function verificar() {
             var Marcados = 1;
-            var objCheck = document.getElementById['table1'].elements['temas'];
+            var objCheck = document.forms['form1'].elements['temas'];
 
             //Percorrendo os checks para ver quantos foram selecionados:
             for (var iLoop=0; iLoop<objCheck.length; iLoop++) {
