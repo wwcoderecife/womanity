@@ -598,13 +598,6 @@
                 <td>Esportes</td>
                 <td>Oferta, promoção e incentivo à realização de práticas esportivas por meninas e mulheres, sobretudo em modalidades tradicionalmente dominadas por homens.</td>
             </tr>
-
-
-            <tr>
-                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Esportes</td>
-                <td>Oferta, promoção e incentivo à realização de práticas esportivas por meninas e mulheres, sobretudo em modalidades tradicionalmente dominadas por homens.</td>
-            </tr>
             <tr>
                 <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
                 <td>Indígenas</td>
