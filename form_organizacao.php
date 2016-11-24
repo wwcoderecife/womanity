@@ -535,90 +535,10 @@
             <!--Tabela Temas/Subtemas-->
 
         <h5>Áreas de atuação da organização: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>
-        <form name="form1" action="" method="post">
         <div class="form-group" style="border: 1px solid #ddd">
         <div class="table-responsive">
         <table id="table1" class="table table-hover col-sm-12">
-  
-    <thead>
-      <tr>
-        <th style="width:5%">
-        
-        </th>
-        <th style="width:20%">Tema</th>
-        <th style="width:80%" class="hidden-phone">Descriçāo</th>
-       
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td>
-          <input type="checkbox" class="no-margin" onclick="verificar()">
-        </td>
-        <td>
-          <span class="name">Arte e Cultura</span>
-        </td>
-        <td class="hidden-phone">
-
-Promoção do acesso de mulheres à cultura e/ou incentivo à produção das várias expressões artísticas.
-</td>
-       
-            
-        
-      <tr>
-        <td>
-          <input type="checkbox" name="temas" class="no-margin"onclick="verificar()">
-        </td>
-        <td>
-          <span class="name">Ciência e Tecnologia</span>
-        </td>
-        <td class="hidden-phone">Promoção do acesso a linguagens, equipamentos e/ou à produção de ciência e tecnologia por mulheres.</td>
-        
-      </tr>
-      <tr>
-        <td>
-          <input type="checkbox" name="temas" class="no-margin"onclick="verificar()">
-        </td>
-        <td>
-          <span class="name">Educação e Formação</span>
-        </td>
-        <td class="hidden-phone">Oferta de educação formal (escolar ou acadêmica), incentivo à escolaridade; formação de atores sociais, ações de educação popular e informal.
-</td>
-        
-      </tr>
-      <tr>
-        <td>
-          <input type="checkbox" name="temas" class="no-margin"onclick="verificar()">
-        </td>
-        <td>
-          <span class="name">Empreendedorismo feminino e autonomia econômica
-</span>
-        </td>
-        <td class="hidden-phone">
-
-Ações de incentivo ao empreendedorismo feminino e à autonomia econômica, por meio de capacitação e/ou financiamento, tais como capacitações, cooperativismo,microcrédito, etc.
-</td>
-        
-      </tr>
-      <tr>
-        <td>
-          <input type="checkbox" name="temas" class="no-margin"onclick="verificar()">
-        </td>
-        <td>
-          <span class="name">Enfrentamento à Violência
-</span>
-        </td>
-        <td class="hidden-phone">Trabalho de enfrentamento às mais variadas formas de violência, destinado a mulheres e homens.</td>
-        
-        </tr>
-       </tbody>
-     </table>
-   </form>
-  </div>
-</div>
-
-<!--
+          
             <thead>
             <tr>
                 <th>#</th>
@@ -742,48 +662,39 @@ Ações de incentivo ao empreendedorismo feminino e à autonomia econômica, por
         </table>
     </div>
   </div>
-  -->
 
   
 
 <script type="text/javascript">
-var CheckMaximo = 2;
+    $(function () {
+        $('#table1').multiSelect({
+            actcls: 'info', 
+            selector: 'tbody tr', 
+            except: ['tbody'], 
+            statics: ['.danger', '[data-no="1"]'], 
+            callback: function (items) {
+                $('#table2').empty().append(items.clone().removeClass('info').addClass('success'));
+            }
+        });
+    })
+</script>
+<script type="text/javascript">
 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
 
-function verificar() {
-var Marcados = 1;
-var objCheck = document.forms['form1'].elements['temas'];
-
-//Percorrendo os checks para ver quantos foram selecionados:
-for (var iLoop=0; iLoop<objCheck.length; iLoop++) {
-//Se o número máximo de checkboxes ainda não tiver sido atingido, continua a verificação:
-    if (objCheck[iLoop].checked) {
-        Marcados++;
-    }
-    
-    if (Marcados <= CheckMaximo) {
-    //Habilitando todos os checkboxes, pois o máximo ainda não foi alcançado.
-    for (var i=0; i<objCheck.length; i++) {
-        objCheck[i].disabled = false;
-    }       
-    //Caso contrário, desabilitar o checkbox;
-    //Nesse caso, é necessário percorrer todas as opções novamente, desabilitando as não checadas;
-    
-    } else {
-        for (var i=0; i<objCheck.length; i++) {
-            if(objCheck[i].checked == false) {
-                objCheck[i].disabled = true;
-            }       
-      }
-    }
-}
-}
 </script>
 
 
-
-
+<script src="assets/js/multiselect.js" type="text/javascript"></script>
 
 
                 <div class="f1-buttons">
