@@ -534,11 +534,12 @@
 
             <!--Tabela Temas-->
 
-        <h5>Áreas de atuação da organização: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>
+        <!--<h5>Áreas de atuação da organização: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>-->
         <form name="form1" action="" method="post">
-        <div class="form-group" name="form1" style="border: 1px solid #ddd">
+        
+        <table id="table1" class="table table-hover col-sm-12">
+        <div class="" name="table1" style="border: 1px solid #ddd">
         <div class="table-responsive">
-        <table id="form1" class="table table-hover col-sm-12">
 
             <thead>
             <tr>
