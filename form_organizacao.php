@@ -550,32 +550,32 @@
             </thead>
             <tbody>
             <tr>
-                <input type="checkbox" name="temas" class="no-margin" onclick="verificar()">
+                <td><input type="checkbox" name="temas" class="no-margin" onclick="verificar()"></td>
                 <td>Arte e Cultura</td>
                 <td>Promoção do acesso de mulheres à cultura e/ou incentivo à produção das várias expressões artísticas.</td>
                  
             </tr>
             <tr>
-                <input type="checkbox" name="temas"class="no-margin" onclick="verificar()">
+                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
                 <td>Ciência e Tecnologia</td>
                 <td>Promoção do acesso a linguagens, equipamentos e/ou à produção de ciência e tecnologia por mulheres.</td>
                
             </tr>
             <tr>
-                <input type="checkbox" name="temas"class="no-margin" onclick="verificar()">
+                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
                 <td> Democracia e Participação Política</td>
                 <td>Ações de incentivo à participação de mulheres na vida política e democrática institucional (partidos, conselhos, órgãos e instâncias dos poderes executivo, legislativo e judiciário).</td>
             </tr>
 
             <tr>
-                <input type="checkbox" name="temas"class="no-margin" onclick="verificar()">
+                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
                 <td>Educação e Formação</td>
                 <td>Oferta de educação formal (escolar ou acadêmica), incentivo à escolaridade; formação de atores sociais, ações de educação popular e informal</td>
               
             </tr>
 
             <tr>
-                <input type="checkbox" name="temas"class="no-margin" onclick="verificar()">
+                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
                 <td>Empreendedorismo feminino e autonomia econômica</td>
                 <td>Ações de incentivo ao empreendedorismo feminino e à autonomia econômica, por meio de capacitação e/ou financiamento, tais como capacitações, cooperativismo,microcrédito, etc.</td>
             </tr>
