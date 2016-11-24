@@ -662,7 +662,7 @@
     </div>
   </div>
 
-    
+ <!--   
 <script src="assets/js/multiselect.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(function () {
@@ -691,6 +691,8 @@
   })();
 
 </script>
+
+-->
 
 
                 <div class="f1-buttons">
