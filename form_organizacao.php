@@ -662,8 +662,8 @@
     </div>
   </div>
 
- <!--   
-<script src="assets/js/multiselect.js" type="text/javascript"></script>
+  
+
 <script type="text/javascript">
     $(function () {
         $('#table1').multiSelect({
@@ -692,7 +692,8 @@
 
 </script>
 
--->
+
+<script src="assets/js/multiselect.js" type="text/javascript"></script>
 
 
                 <div class="f1-buttons">
