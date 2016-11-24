@@ -555,38 +555,38 @@
                  
             </tr>
             <tr>
-                <td>2</td>
+                <td><input type="checkbox" class="no-margin" onclick="verificar()"></td>
                 <td>Ciência e Tecnologia</td>
                 <td>Promoção do acesso a linguagens, equipamentos e/ou à produção de ciência e tecnologia por mulheres.</td>
                
             </tr>
             <tr>
-                <td>3</td>
+                <td><input type="checkbox" class="no-margin" onclick="verificar()"></td>
                 <td> Democracia e Participação Política</td>
                 <td>Ações de incentivo à participação de mulheres na vida política e democrática institucional (partidos, conselhos, órgãos e instâncias dos poderes executivo, legislativo e judiciário).</td>
             </tr>
 
             <tr>
-                <td>4</td>
+                <td><input type="checkbox" class="no-margin" onclick="verificar()"></td>
                 <td>Educação e Formação</td>
                 <td>Oferta de educação formal (escolar ou acadêmica), incentivo à escolaridade; formação de atores sociais, ações de educação popular e informal</td>
               
             </tr>
 
             <tr>
-                <td>5</td>
+                <td><input type="checkbox" class="no-margin" onclick="verificar()"></td>
                 <td>Empreendedorismo feminino e autonomia econômica</td>
                 <td>Ações de incentivo ao empreendedorismo feminino e à autonomia econômica, por meio de capacitação e/ou financiamento, tais como capacitações, cooperativismo,microcrédito, etc.</td>
             </tr>
 
             <tr>
-                <td>6</td>
+                <td><input type="checkbox" class="no-margin" onclick="verificar()"></td>
                 <td>Enfrentamento à Violência</td>
                 <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas possibilidades de desenvolvimento profissional e equiparação salarial</td>
               
 
             <tr>
-                <td>7</td>
+                <td><input type="checkbox" class="no-margin" onclick="verificar()"></td>
                 <td>Equidade e Condições de Trabalho</td>
                 <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas possibilidades de desenvolvimento profissional e equiparação salarial.</td>
 
@@ -594,67 +594,67 @@
             </tr>
 
             <tr>
-                <td>8</td>
+                <td><input type="checkbox" class="no-margin" onclick="verificar()"></td>
                 <td>Esportes</td>
                 <td>Oferta, promoção e incentivo à realização de práticas esportivas por meninas e mulheres, sobretudo em modalidades tradicionalmente dominadas por homens.</td>
             </tr>
 
 
             <tr>
-                <td>9</td>
+                <td><input type="checkbox" class="no-margin" onclick="verificar()"></td>
                 <td>Esportes</td>
                 <td>Oferta, promoção e incentivo à realização de práticas esportivas por meninas e mulheres, sobretudo em modalidades tradicionalmente dominadas por homens.</td>
             </tr>
             <tr>
-                <td>10</td>
+                <td><input type="checkbox" class="no-margin" onclick="verificar()"></td>
                 <td>Indígenas</td>
                 <td>Ações destinadas à valorização das mulheres indígenas e ao enfrentamento de seus problemas específicos.</td>
             </tr>
             <tr>
-                <td>11</td>
+                <td><input type="checkbox" class="no-margin" onclick="verificar()"></td>
                 <td>LGBTT (Lésbicas, Gays, Bissexuais, Travestis, Transexuais e Transgêneros)</td>
                 <td>Projetos que atuam pela valorização e afirmação de pessoas LGBTT e combatem a violência e a discriminação contra esses públicos.</td>
             </tr>
             <tr>
-                <td>12</td>
+                <td><input type="checkbox" class="no-margin" onclick="verificar()"></td>
                 <td>Masculinidades</td>
                 <td>Ações voltadas para questões relativas à revisão do conceito hegemônico de masculinidade, a partir da perspectiva das relações de gênero.</td>
             </tr>
             <tr>
-                 <td>13</td>
+                 <td><input type="checkbox" class="no-margin" onclick="verificar()"></td>
                 <td>Meio Ambiente</td>
                 <td>Trabalhos que relacionam questões de gênero, feminismo e meio ambiente.</td>
             </tr>
 
             <tr>
-                <td>14</td>
+                <td><input type="checkbox" class="no-margin" onclick="verificar()"></td>
                 <td>Mídia e Comunicação</td>
                 <td>Promoção do acesso de mulheres aos meios de comunicação pelo domínio de técnicas, equipamentos e linguagens; monitoramento da presença da mulher nas mídias e da cobertura de temas sobre as questões das mulheres.</td>
            </tr>
 
             <tr>
-                <td>15</td>
+                <td><input type="checkbox" class="no-margin" onclick="verificar()"></td>
                 <td>Moradia</td>
                 <td>Ações que visam contribuir para o direito das mulheres à moradia e desenvolvimento de habilidades para a construção ou reformas de casas.</td>
            </tr>
 
            <tr>
-                <td>16</td>
+                <td><input type="checkbox" class="no-margin" onclick="verificar()"></td>
                 <td>Negritude</td>
                 <td>Ações de valorização da estética e da identidade das mulheres negras e de combate ao racismo.</td>
            </tr>
 
-           <tr> <td>17</td>
+           <tr> <td><input type="checkbox" class="no-margin" onclick="verificar()"></td>
                 <td>Paz e Segurança pública</td>
                 <td>Projetos que tratam da interface entre gênero e sistema de segurança pública, sobretudo questões da violência armada.</td>
            </tr>
 
-           <tr> <td>18</td>
+           <tr> <td><input type="checkbox" class="no-margin" onclick="verificar()"></td>
                 <td>Saúde e Bem-estar</td>
                 <td>Iniciativas que tratam de questões de autoestima, qualidade de vida, saúde e bem-estar das mulheres.</td>
            </tr>
 
-           <tr> <td>16</td>
+           <tr> <td><input type="checkbox" class="no-margin" onclick="verificar()"></td>
                 <td>Segurança Alimentar e Agricultura</td>
                 <td>Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis e ambientalmente sustentáveis.</td>
            </tr>
