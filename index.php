@@ -30,6 +30,8 @@
         <script src="assets/js/retina-1.1.0.min.js"></script>
         <script src="assets/js/sweetalert.min.js"></script>
         <script src="assets/js/scripts.js"></script>
+        <script src="dist/js/validator.min.js"></script>
+        <script src="dist/js/jquery.maskedinput.js" type="text/javascript"></script>
         
         <!--[if lt IE 10]>
             <script src="assets/js/placeholder.js"></script>
@@ -142,7 +144,7 @@
 
                  <div class="row">
                     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-                        <form role="form" action="index.php" method="post" class="f1">
+                        <form role="form" data-toggle="validator" action="index.php" method="post" class="f1">
 
                             <h3>Cadastro UNA Ecossistema</h3>
                             <p>Preencha os campos obrigatórios *</p>
@@ -167,18 +169,21 @@
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-email">Email *</label>
-                                    <input type="text" name="email" placeholder="Email *" class="f1-email form-control" id="f1-email">
+                                    <input type="text" name="email" placeholder="Email *" class="f1-email form-control" id="f1-email" required data-error = "Campo está em branco, favor preencher.">
+                                    <div class="help-block with-errors"></div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-password">Senha *</label>
-                                    <input type="password" name="password" placeholder="Senha *" class="f1-password form-control" id="f1-password">
+                                    <input type="password" name="password" placeholder="Senha *" class="f1-password form-control" id="f1-password" required data-error = "Campo está em branco, favor preencher.">
+                                    <div class="help-block with-errors"></div>>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-repeat-password">Repetir Senha *</label>
                                     <input type="password" name="f1-repeat-password" placeholder="Repetir Senha *" 
-                                                        class="f1-repeat-password form-control" id="f1-repeat-password">
+                                                        class="f1-repeat-password form-control" id="f1-repeat-password"required data-error = "Campo está em branco, favor preencher.">
+                                    <div class="help-block with-errors"></div>>
                                 </div>
 
                                 <!--Tipo: Ong/Iniciativa-->   
@@ -186,7 +191,7 @@
                                     <div class="radio">
                                         <p class="text-left"><strong>Você está se inscrevendo como:</strong></p>
                                          <label>
-                                            <input type="radio" name="tipo" id="optionsRadios1" value="1" checked>
+                                            <input type="radio" name="tipo" id="optionsRadios1" value="1" checked >
                                             Organizaçāo
                                         </label>
                                         <label>
