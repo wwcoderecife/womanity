@@ -531,38 +531,7 @@
                 </div> 
 
                 
-        <script type="text/javascript">
-            var CheckMaximo = 2;
 
-            function verificar() {
-            var Marcados = 1;
-            var objCheck = document.forms['form1'].elements['temas'];
-
-            //Percorrendo os checks para ver quantos foram selecionados:
-            for (var iLoop=0; iLoop<objCheck.length; iLoop++) {
-            //Se o número máximo de checkboxes ainda não tiver sido atingido, continua a verificação:
-                if (objCheck[iLoop].checked) {
-                    Marcados++;
-                }
-                
-                if (Marcados <= CheckMaximo) {
-                //Habilitando todos os checkboxes, pois o máximo ainda não foi alcançado.
-                for (var i=0; i<objCheck.length; i++) {
-                    objCheck[i].disabled = false;
-                }       
-                //Caso contrário, desabilitar o checkbox;
-                //Nesse caso, é necessário percorrer todas as opções novamente, desabilitando as não checadas;
-                
-                } else {
-                    for (var i=0; i<objCheck.length; i++) {
-                        if(objCheck[i].checked == false) {
-                            objCheck[i].disabled = true;
-                        }       
-                  }
-                }
-            }
-            }
-</script>
             <!--Tabela Temas-->
 
         <h5>Áreas de atuação da organização: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>
@@ -693,6 +662,40 @@
         </table>
     </div>
   </div>
+
+           <script type="text/javascript">
+            var CheckMaximo = 2;
+
+            function verificar() {
+            var Marcados = 1;
+            var objCheck = document.forms['form1'].elements['temas'];
+
+            //Percorrendo os checks para ver quantos foram selecionados:
+            for (var iLoop=0; iLoop<objCheck.length; iLoop++) {
+            //Se o número máximo de checkboxes ainda não tiver sido atingido, continua a verificação:
+                if (objCheck[iLoop].checked) {
+                    Marcados++;
+                }
+                
+                if (Marcados <= CheckMaximo) {
+                //Habilitando todos os checkboxes, pois o máximo ainda não foi alcançado.
+                for (var i=0; i<objCheck.length; i++) {
+                    objCheck[i].disabled = false;
+                }       
+                //Caso contrário, desabilitar o checkbox;
+                //Nesse caso, é necessário percorrer todas as opções novamente, desabilitando as não checadas;
+                
+                } else {
+                    for (var i=0; i<objCheck.length; i++) {
+                        if(objCheck[i].checked == false) {
+                            objCheck[i].disabled = true;
+                        }       
+                  }
+                }
+            }
+            }
+</script>
+
 
 
                 <div class="f1-buttons">
