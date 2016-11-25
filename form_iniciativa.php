@@ -33,24 +33,26 @@
 
             <fieldset data-toggle="validator">
                 <h4>Dados Pessoais Contato 1:</h4>
+                <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
                     <input type="text" name="f1-last-name" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
+                <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="text" name="f1-last-name" placeholder="E-mail" value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="text" name="f1-last-name" placeholder="seunome@email.com" value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name">
                     
                 </div>
-
+                 <h5>Telefone Fixo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
                     <input type="text" name="f1-last-name" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control" id="f1-last-name" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
-
+                <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
                     <input type="text" name="f1-last-name" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control" id="f1-last-name" required data-error = "Campo está em branco, favor preencher.">
@@ -58,12 +60,13 @@
                 </div>
 
                  <h4>Dados Pessoais Contato 2:</h4>
+                <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
                     <input type="text" name="f1-last-name" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
                                     <div class="help-block with-errors"></div>
                 </div>
-
+                 <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
                     <input type="text" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
@@ -71,12 +74,13 @@
                     
                 </div>
 
+                <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
                     <input type="text" name="f1-last-name" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
                                     <div class="help-block with-errors"></div>
                 </div>
-
+                <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
                     <input type="text" name="f1-last-name" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
