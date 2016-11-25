@@ -31,9 +31,9 @@
                 </div>              
     		</div>
 
-            <fieldset>
+            <fieldset data-toggle="validator">
                 <h4>Dados Pessoais Contato 1:</h4>
-                <div class="form-group" data-toggle="validator">
+                <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
                     <input type="text" name="f1-last-name" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
