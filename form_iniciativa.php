@@ -12,6 +12,8 @@
               $("#inputCel1").mask("(99) 99999-9999",{placeholder:"(xx) xxxxx-xxxx "});
               $("#inputTel2").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
               $("#inputCel2").mask("(99) 99999-9999",{placeholder:"(xx) xxxxx-xxxx "});
+              $("#inputTel3").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
+             
             });
             </script>
 
@@ -157,8 +159,8 @@
                 <h5>Telefone da iniciativa*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Telefone</label>
-                    <input type="text" name="iniciativa-telefone" placeholder="(xx) xxxxx-xxxx"class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
-                                    <div class="help-block with-errors"></div>
+                    <input type="text" name="iniciativa-telefone" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control" id="inputTel3" required data-error = "Campo está em branco, favor preencher.">
+                    <div class="help-block with-errors"></div>
                 </div>
 
                 <h5>E-mail da iniciativa*</h5>
@@ -324,7 +326,7 @@
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="iniciativa-publico" required data-error = "Selecione uma opçāo.">
-                    <div class="help-block with-errors"></div> >
+                    <div class="help-block with-errors"></div> 
                         <option value=""></option>
                         <option value="1">Empresas</option>
                         <option value="2">Organizações Sociais</option>
