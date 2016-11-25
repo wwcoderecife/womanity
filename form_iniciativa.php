@@ -123,7 +123,7 @@
                 <div class="form-group">                                   
                     <label class="radio-inline">
                         <input type="radio" name="iniciativa-ong" value="sim" class="form-control-radio"required data-error = "Campo está em branco, favor preencher.">
-                                    <div class="help-block with-errors"></div> Sim
+                        <div class="help-block with-errors"></div> Sim
                     </label>
 
                     <label class="radio-inline">
@@ -135,13 +135,12 @@
                 <h5>A sua iniciativa está localizada na…*</h5>
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="iniciativa-zona" value="rural" class="form-control-radio" required data-error = "Campo está em branco, favor preencher.">
-                                    <div class="help-block with-errors"></div>Zona Rural
+                        <input type="radio" name="iniciativa-zona" value="rural" class="form-control-radio" required>Zona Rural
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="iniciativa-zona" value="urbana" class="form-control-radio"required data-error = "Campo está em branco, favor preencher.">
-                        <div class="help-block with-errors"></div> Zona Urbana
+                        <input type="radio" name="iniciativa-zona" value="urbana" class="form-control-radio"required>Zona Urbana
+                       
                     </label>
                 </div>
 
@@ -216,7 +215,7 @@
                                 console.log(dropdown.selectedIndex);
                                 //pegando valor do select na variável dropdown
                                 
-                                if(dropdown.options[dropdown.selectedIndex].value == "Outros") {
+                                if(dropdown.options[dropdown.selectedIndex].value === "Outros") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor Outros');
                                     //mostra o input quando o valor selecionado for outros
@@ -438,7 +437,7 @@
                                 console.log(dropdown.selectedIndex);
                                 //pegando valor do select na variável dropdown
                                 
-                                if(dropdown.options[dropdown.selectedIndex].value == "1") {
+                                if(dropdown.options[dropdown.selectedIndex].value === "1") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor Outros');
                                     //mostra o input quando o valor selecionado for outros
@@ -485,7 +484,7 @@
                                 console.log(dropdown.selectedIndex);
                                 //pegando valor do select na variável dropdown
                                 
-                                if(dropdown.options[dropdown.selectedIndex].value == "1") {
+                                if(dropdown.options[dropdown.selectedIndex].value === "1") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for outros
@@ -534,7 +533,7 @@
                                 console.log(dropdown.selectedIndex);
                                 //pegando valor do select na variável dropdown
                                 
-                                if(dropdown.options[dropdown.selectedIndex].value == "1") {
+                                if(dropdown.options[dropdown.selectedIndex].value === "1") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for outros
@@ -575,6 +574,168 @@
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="iniciativa-relaciona3" class="f1-last-name form-control">
                 </div>
+
+
+
+            <!--Tabela Temas-->
+
+        <h5>Áreas de atuação da organização: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>
+        <div class="form-group" style="border: 1px solid #ddd">
+        <div class="table-responsive">
+        <table id="form1" class="table table-hover col-sm-12" required data-error = "Selecione até 3 temas.">
+
+         <thead>
+            <tr>
+                <th>#</th>
+                <th>Temas</th>
+                <th>Descriçāo</th>
+              
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input type="checkbox" name="temas" class="no-margin" onclick="verificar()"></td>
+                <td>Arte e Cultura</td>
+                <td>Promoção do acesso de mulheres à cultura e/ou incentivo à produção das várias expressões artísticas.</td>
+                 
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
+                <td>Ciência e Tecnologia</td>
+                <td>Promoção do acesso a linguagens, equipamentos e/ou à produção de ciência e tecnologia por mulheres.</td>
+               
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
+                <td> Democracia e Participação Política</td>
+                <td>Ações de incentivo à participação de mulheres na vida política e democrática institucional (partidos, conselhos, órgãos e instâncias dos poderes executivo, legislativo e judiciário).</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
+                <td>Educação e Formação</td>
+                <td>Oferta de educação formal (escolar ou acadêmica), incentivo à escolaridade; formação de atores sociais, ações de educação popular e informal</td>
+              
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
+                <td>Empreendedorismo feminino e autonomia econômica</td>
+                <td>Ações de incentivo ao empreendedorismo feminino e à autonomia econômica, por meio de capacitação e/ou financiamento, tais como capacitações, cooperativismo,microcrédito, etc.</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
+                <td>Enfrentamento à Violência</td>
+                <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas possibilidades de desenvolvimento profissional e equiparação salarial</td>
+              
+
+            <tr>
+                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
+                <td>Equidade e Condições de Trabalho</td>
+                <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas possibilidades de desenvolvimento profissional e equiparação salarial.</td>
+
+                
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
+                <td>Esportes</td>
+                <td>Oferta, promoção e incentivo à realização de práticas esportivas por meninas e mulheres, sobretudo em modalidades tradicionalmente dominadas por homens.</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
+                <td>Indígenas</td>
+                <td>Ações destinadas à valorização das mulheres indígenas e ao enfrentamento de seus problemas específicos.</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
+                <td>LGBTT (Lésbicas, Gays, Bissexuais, Travestis, Transexuais e Transgêneros)</td>
+                <td>Projetos que atuam pela valorização e afirmação de pessoas LGBTT e combatem a violência e a discriminação contra esses públicos.</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
+                <td>Masculinidades</td>
+                <td>Ações voltadas para questões relativas à revisão do conceito hegemônico de masculinidade, a partir da perspectiva das relações de gênero.</td>
+            </tr>
+            <tr>
+                 <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
+                <td>Meio Ambiente</td>
+                <td>Trabalhos que relacionam questões de gênero, feminismo e meio ambiente.</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
+                <td>Mídia e Comunicação</td>
+                <td>Promoção do acesso de mulheres aos meios de comunicação pelo domínio de técnicas, equipamentos e linguagens; monitoramento da presença da mulher nas mídias e da cobertura de temas sobre as questões das mulheres.</td>
+           </tr>
+
+            <tr>
+                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
+                <td>Moradia</td>
+                <td>Ações que visam contribuir para o direito das mulheres à moradia e desenvolvimento de habilidades para a construção ou reformas de casas.</td>
+           </tr>
+
+           <tr>
+                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
+                <td>Negritude</td>
+                <td>Ações de valorização da estética e da identidade das mulheres negras e de combate ao racismo.</td>
+           </tr>
+
+           <tr> <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
+                <td>Paz e Segurança pública</td>
+                <td>Projetos que tratam da interface entre gênero e sistema de segurança pública, sobretudo questões da violência armada.</td>
+           </tr>
+
+           <tr> <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
+                <td>Saúde e Bem-estar</td>
+                <td>Iniciativas que tratam de questões de autoestima, qualidade de vida, saúde e bem-estar das mulheres.</td>
+           </tr>
+
+           <tr> <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
+                <td>Segurança Alimentar e Agricultura</td>
+                <td>Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis e ambientalmente sustentáveis.</td>
+           </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+
+           <script>
+            var CheckMaximo = 3;
+
+            function verificar() {
+            var Marcados = 1;
+            var objCheck = $("input[name='temas']");
+            //Percorrendo os checks para ver quantos foram selecionados:
+            for (var iLoop=0; iLoop<objCheck.length; iLoop++) {
+            //Se o número máximo de checkboxes ainda não tiver sido atingido, continua a verificação:
+                if (objCheck[iLoop].checked) {
+                    Marcados++;
+                }
+                
+                if (Marcados <= CheckMaximo) {
+                //Habilitando todos os checkboxes, pois o máximo ainda não foi alcançado.
+                for (var i=0; i<objCheck.length; i++) {
+                    objCheck[i].disabled = false;
+                }       
+                //Caso contrário, desabilitar o checkbox;
+                //Nesse caso, é necessário percorrer todas as opções novamente, desabilitando as não checadas;
+                
+                } else {
+                    for (var i=0; i<objCheck.length; i++) {
+                        if(objCheck[i].checked == false) {
+                            objCheck[i].disabled = true;
+                        }       
+                  }
+                }
+            }
+            }
+</script>
+
+
+
+
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
                     <button type="button" class="btn btn-next">Próximo</button>
