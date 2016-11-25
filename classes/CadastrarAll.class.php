@@ -1,6 +1,7 @@
 <?php
 
 require_once "Crud.class.php";
+include_once 'Conexao.class.php';
 
 class CadastrarAll extends Conexao {
     
@@ -19,7 +20,7 @@ class CadastrarAll extends Conexao {
     public function setCargo_1($cargo_1){
         $this->cargo_1 = $cargo_1;
     }
-    public function setEmail_1($senha){
+    public function setEmail_1($email_1){
         $this->email_1 = $email_1;
     }
 
@@ -33,7 +34,7 @@ class CadastrarAll extends Conexao {
     public function setCargo_2($cargo_2){
         $this->cargo_2 = $cargo_2;
     }
-    public function setEmail_2($senha){
+    public function setEmail_2($email_2){
         $this->email_2 = $email_2;
     }
 
@@ -74,17 +75,27 @@ class CadastrarAll extends Conexao {
 
     public function inserir_novo_contato(){
         $pdo = parent::getDB();
-        echo "cheguei na func";
-        // instancia classe com as operaçoes crud, passando o nome da tabela como parametro
-        $crud = new Crud('contatos');  
 
-           $crud->inserir("cargo,email,telefone,celular,tipo, organizacao_id",
-                          "'$this->cargo_1', '$this->email_1', '$this->telefone_1', 
-                          '$this->celular_1', '1', ''"); 
+        $inserir = $pdo->prepare("insert into contatos (cargo, email, telefone, celular, tipo, organizacao_id)
+                                values (?, ?, ?, ?, ?, ?)");
+        $inserir->bindValue(1, $this->getCargo_1());
+        $inserir->bindValue(2, $this->getEmail_1());
+        $inserir->bindValue(3, $this->getTelefone_1());
+        $inserir->bindValue(4, $this->getCelular_1());
+        $inserir->bindValue(5, 1);
+        $inserir->bindValue(6, 1);
+        $inserir->execute();
 
-            $crud->inserir("cargo,email,telefone,celular,tipo, organizacao_id",
-                          "'$this->cargo_2', '$this->email_2', '$this->telefone_2', 
-                          '$this->celular_2', '2', ''"); 
+        $inserir->bindValue(1, $this->getCargo_2());
+        $inserir->bindValue(2, $this->getEmail_2());
+        $inserir->bindValue(3, $this->getTelefone_2());
+        $inserir->bindValue(4, $this->getCelular_2());
+        $inserir->bindValue(5, 2);
+        $inserir->bindValue(6, 1);
+        $inserir->execute();
+
+
+    
 
            
        

@@ -13,6 +13,7 @@
     $telefone_2 = filter_input(INPUT_POST, "telefone_2", FILTER_SANITIZE_MAGIC_QUOTES);
     $celular_2 = filter_input(INPUT_POST, "celular_2", FILTER_SANITIZE_MAGIC_QUOTES);
 
+    echo "enviando os dados";
 
     $i = new CadastrarAll;
     $i->setCargo_1($cargo_1);
