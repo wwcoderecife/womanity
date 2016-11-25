@@ -13,6 +13,10 @@
               $("#inputTel2").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
               $("#inputCel2").mask("(99) 99999-9999",{placeholder:"(xx) xxxxx-xxxx "});
               $("#inputTel3").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
+              $("#inputCep").mask("99-999-999",{placeholder:"xx-xxx-xxx"});
+              $("#inputTel4").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
+              $("#inputTel5").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
+              $("#inputTel6").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
              
             });
             </script>
@@ -270,19 +274,19 @@
                  <h5>2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
-                    <input type="text" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2014"required data-error = "Campo está em branco, favor preencher.">
-                                    <div class="help-block with-errors"></div>
+                    <input type="number" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2014"required data-error = "Campo está em branco, favor preencher.">
+                    <div class="help-block with-errors"></div>
                 </div>
                 <h5>2015</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2015</label>
-                    <input type="text" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2015" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="number" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2015" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
                 <h5>2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
-                    <input type="text" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2016"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="number" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2016"required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -674,7 +678,7 @@
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número*</label>
-                    <input type="text" name="iniciativa-numero" placeholder="Numero...*"class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="number" name="iniciativa-numero" placeholder="Numero...*"class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
                         <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
@@ -684,8 +688,8 @@
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep*</label>
-                    <input type="text" name="iniciativa-cep" placeholder="CEP...*"class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
-                        <div class="help-block with-errors"></div>
+                    <input type="number" name="iniciativa-cep" id="inputCep"placeholder="CEP...*"class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
+                    <div class="help-block with-errors"></div>
                 </div>              
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
@@ -749,13 +753,13 @@
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="text" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="email" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
                     
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="text" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="tel" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="inputTel4">
                 </div>
                 <h5>Iniciativa 2</h5>
                 <div class="form-group">
@@ -769,7 +773,7 @@
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="tel" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="inputTel5">
                 </div>
                 <h5>Iniciativa 3</h5>
                 <div class="form-group">
@@ -778,11 +782,11 @@
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="text" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="email" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="tel" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="inputTel6">
                 </div>
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
