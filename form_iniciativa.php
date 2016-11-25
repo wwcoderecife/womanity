@@ -166,8 +166,8 @@
                 <h5>E-mail da iniciativa*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Email</label>
-                    <input type="text" name="iniciativa-email"class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
-                                    <div class="help-block with-errors"></div>
+                    <input type="email" name="iniciativa-email"class="f1-last-name form-control" required data-error = "Por favor, informe um e-mail correto">
+                    <div class="help-block with-errors"></div>
                 </div>
 
 
