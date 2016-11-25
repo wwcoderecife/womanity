@@ -31,7 +31,7 @@
                 </div>              
     		</div>
 
-            <fieldset data-toggle="validator">
+            <fieldset>
                 <h4>Dados Pessoais Contato 1:</h4>
                 <h5>Cargo*</h5>
                 <div class="form-group">
@@ -43,48 +43,48 @@
                 <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="text" name="f1-last-name" placeholder="seunome@email.com" value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="text" name="f1-last-name"  value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name">
                     
                 </div>
-                 <h5>Telefone Fixo*</h5>
+                <h5>Telefone Fixo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="text" name="f1-last-name" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control" id="f1-last-name" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="f1-last-name" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control" id="inputTel1" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="text" name="f1-last-name" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control" id="f1-last-name" required data-error = "Campo está em branco, favor preencher.">
-                                    <div class="help-block with-errors"></div>
+                    <input type="text" name="f1-last-name" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control" id="inputCel1" required data-error = "Campo está em branco, favor preencher.">
+                    <div class="help-block with-errors"></div>
                 </div>
 
-                 <h4>Dados Pessoais Contato 2:</h4>
+                <h4>Dados Pessoais Contato 2:</h4>
                 <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
                     <input type="text" name="f1-last-name" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
-                                    <div class="help-block with-errors"></div>
+                    <div class="help-block with-errors"></div>
                 </div>
                  <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
                     <input type="text" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
-                                    <div class="help-block with-errors"></div>
+                    <div class="help-block with-errors"></div>
                     
                 </div>
 
                 <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="text" name="f1-last-name" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
-                                    <div class="help-block with-errors"></div>
+                    <input type="text" name="f1-last-name" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control" id="inputTel2"required data-error = "Campo está em branco, favor preencher.">
+                    <div class="help-block with-errors"></div>
                 </div>
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="text" name="f1-last-name" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
-                                    <div class="help-block with-errors"></div>
+                    <input type="text" name="f1-last-name" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control" id="inputCel2"required data-error = "Campo está em branco, favor preencher.">
+                    <div class="help-block with-errors"></div>
                 </div>
 
                 <div class="f1-buttons">
@@ -730,7 +730,7 @@
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="text" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="tel" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name">
                 </div>
                 <h5>Iniciativa 3</h5>
                 <div class="form-group">
@@ -743,15 +743,15 @@
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="text" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="tel" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name">
                 </div>
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
                     <button type="submit" class="btn btn-submit">Enviar</button>
                 </div>
-            </fieldset>
-
-            <!-- Bootstrap core JavaScript
+            </fieldset> 
+    	</form>
+                 <!-- Bootstrap core JavaScript
     ================================================== -->
 
             <script src="dist/js/bootstrap.min.js"></script>
@@ -761,12 +761,12 @@
 
             <script>
               jQuery(function($){
-              $("#inputTel").mask("(99) 99999-9999",{placeholder:"(xx) xxxxx-xxxx "});
-              $("#inputTel2").mask("(99) 99999-9999",{placeholder:"(xx) xxxxx-xxxx "});
+              $("#inputTel1").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
+              $("#inputCel1").mask("(99) 99999-9999",{placeholder:"(xx) xxxxx-xxxx "});
+              $("#inputTel2").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
+              $("#inputCel2").mask("(99) 99999-9999",{placeholder:"(xx) xxxxx-xxxx "});
             });
-            </script> 
-            
-    	</form>
+            </script>
     </div>
 </div>
     
