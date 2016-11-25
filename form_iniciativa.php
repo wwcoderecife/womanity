@@ -320,9 +320,9 @@
            <h5>O que faz sua iniciativa?* (até 500 caracteres).</h5>                                  
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
-                    <textarea name="sobre_iniciativa" maxlength="500" placeholder="Fale sobre a sua iniciativa...." 
-                    class="f1-about-yourself form-control" id="sobre_iniciativa" required data-error = "Campo está em branco, favor preencher.">
-                    <div class="help-block with-errors"></div></textarea>
+                    <textarea name="sobre_iniciativa" maxlength="500" placeholder="Fale sobre a sua organizaçāo...." 
+                    class="f1-about-yourself form-control" id="sobre_organizacao" required data-error = "Campo está em branco, favor preencher.."></textarea>
+                    <div class="help-block with-errors">
                 </div>
 
                 <h5>Qual o público direto atendido pela sua iniciativa?*
