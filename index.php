@@ -182,7 +182,7 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-repeat-password">Repetir Senha *</label>
                                     <input type="password" name="f1-repeat-password" placeholder="Repetir Senha *" 
-                                    class="f1-repeat-password form-control" id="f1-repeat-password" data-match="#f1-password" data-match-error="Atenção! As senhas não estão iguais."required data-error = "Campo está em branco, favor preencher.">
+                                    class="f1-repeat-password form-control" id="f1-repeat-password" data-match="#f1-password" data-match-error="Atenção! As senhas não estão iguais.">
                                     <div class="help-block with-errors"></div>
                                 </div>
 
