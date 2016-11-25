@@ -688,7 +688,7 @@
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep*</label>
-                    <input type="number" name="iniciativa-cep" id="inputCep"placeholder="CEP...*"class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="iniciativa-cep" id="inputCep"placeholder="CEP...*"class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>              
                 <div class="f1-buttons">
