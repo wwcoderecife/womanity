@@ -1,4 +1,21 @@
-           
+                    <!-- Bootstrap core JavaScript
+         ================================================== -->
+
+            <script src="dist/js/bootstrap.min.js"></script>
+            <script src="dist/js/validator.min.js"></script>
+            <script src="dist/js/jquery.maskedinput.js" type="text/javascript"></script>
+            <script type="text/javascript"></script>
+
+            <script>
+              jQuery(function($){
+              $("#inputTel1").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
+              $("#inputCel1").mask("(99) 99999-9999",{placeholder:"(xx) xxxxx-xxxx "});
+              $("#inputTel2").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
+              $("#inputCel2").mask("(99) 99999-9999",{placeholder:"(xx) xxxxx-xxxx "});
+            });
+            </script>
+
+
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
     	<form role="form" data-toggle="validator" action="" method="post" class="f1">
@@ -751,22 +768,7 @@
                 </div>
             </fieldset> 
     	</form>
-                 <!-- Bootstrap core JavaScript
-    ================================================== -->
-
-            <script src="dist/js/bootstrap.min.js"></script>
-            <script src="dist/js/validator.min.js"></script>
-            <script src="dist/js/jquery.maskedinput.js" type="text/javascript"></script>
-            <script type="text/javascript"></script>
-
-            <script>
-              jQuery(function($){
-              $("#inputTel1").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
-              $("#inputCel1").mask("(99) 99999-9999",{placeholder:"(xx) xxxxx-xxxx "});
-              $("#inputTel2").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
-              $("#inputCel2").mask("(99) 99999-9999",{placeholder:"(xx) xxxxx-xxxx "});
-            });
-            </script>
+    
     </div>
 </div>
     
