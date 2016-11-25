@@ -1,9 +1,9 @@
                     <!-- Bootstrap core JavaScript
          ================================================== -->
 
-            <script src="dist/js/bootstrap.min.js"></script>
-            <script src="dist/js/validator.min.js"></script>
-            <script src="dist/js/jquery.maskedinput.js" type="text/javascript"></script>
+            <script src="assets/js/bootstrap.min.js"></script>
+            <script src="assets/js/validator.min.js"></script>
+            <script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>
             <script type="text/javascript"></script>
 
             <script>
