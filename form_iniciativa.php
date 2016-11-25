@@ -293,11 +293,11 @@
                 <h5>Sua iniciativa recebe recursos financeiros?</h5>
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="iniciativa-recursos1" value="sim" class="form-control-radio"> Sim
+                        <input type="radio" name="iniciativa-recurso1" value="nao" class="form-control-radio"required>Nāo
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="iniciativa-recursos2" value="nao" class="form-control-radio"> Nāo
+                        <input type="radio" name="iniciativa-recurso2" value="sim" class="form-control-radio"required>Sim
                     </label>
                 </div>
 

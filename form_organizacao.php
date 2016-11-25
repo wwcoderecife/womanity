@@ -249,7 +249,7 @@
                         <option value="9">1001+</option>     
                     </select>
 
-                    h5>Qual foi seu orçamento em?*</h5>
+                    <h5>Qual foi seu orçamento em?*</h5>
                  <h5>2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
@@ -269,11 +269,11 @@
                 <h5>Sua Organizaçāo recebe recursos financeiros?</h5>
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="organizacao_recursos1" value="sim"class="form-control-radio"required>Sim
+                        <input type="radio" name="organizacao-recurso1" value="nao" class="form-control-radio"required>Nāo
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="organizacao_recursos2" value="nao"class="form-control-radio"required>Nāo
+                        <input type="radio" name="organizacao-recurso2" value="sim" class="form-control-radio"required>Sim
                     </label>
                 </div>
 
@@ -375,16 +375,17 @@
 
 
                     <h5>Sua Organizaçāo influenciou políticas públicas?*</h5>
+
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="organizacao_politica_sim" value="nao" class="form-control-radio"required>Nāo
+                        <input type="radio" name="organizacao-politicasim" value="nao" class="form-control-radio"required>Nāo
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="organizacao_politica_nao" value="sim" class="form-control-radio"required>Sim
+                        <input type="radio" name="organizacao-politicanao" value="sim" class="form-control-radio"required>Sim
                     </label>
                 </div>
-
+                
               
                 <div class="form-group">
                    <label class="checkbox-inline">
