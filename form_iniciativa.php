@@ -251,7 +251,7 @@
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="iniciativa-pessoas_envolvidas" required data-error = "Selecione uma opçāo">
-                                    <div class="help-block with-errors"></div>
+                     <div class="help-block with-errors"></div>
                         <option value=""></option>
                         <option value="1">1-5</option>
                         <option value="2">6-10</option>
@@ -275,13 +275,13 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2015</label>
                     <input type="text" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2015" required data-error = "Campo está em branco, favor preencher.">
-                                    <div class="help-block with-errors"></div>
+                    <div class="help-block with-errors"></div>
                 </div>
                 <h5>2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
                     <input type="text" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2016"required data-error = "Campo está em branco, favor preencher.">
-                                    <div class="help-block with-errors"></div>
+                    <div class="help-block with-errors"></div>
                 </div>
 
 
@@ -315,14 +315,16 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
                     <textarea name="sobre_iniciativa" maxlength="500" placeholder="Fale sobre a sua iniciativa...." 
-                    class="f1-about-yourself form-control" id="sobre_iniciativa"></textarea>
+                    class="f1-about-yourself form-control" id="sobre_iniciativa" required data-error = "Campo está em branco, favor preencher.">
+                    <div class="help-block with-errors"></div></textarea>
                 </div>
 
                 <h5>Qual o público direto atendido pela sua iniciativa?*
 </h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="iniciativa-publico" >
+                    <select class="f1-last-name form-control" id="iniciativa-publico" required data-error = "Selecione uma opçāo.">
+                    <div class="help-block with-errors"></div> >
                         <option value=""></option>
                         <option value="1">Empresas</option>
                         <option value="2">Organizações Sociais</option>
@@ -338,7 +340,8 @@
                     <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
                     <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="iniciativa_estado" multiple>
+                    <select class="f1-last-name form-control" name="iniciativa_estado" multiple required data-error = "Selecione uma opçāo.">
+                        <div class="help-block with-errors"></div>
                       <option value="1">Acre</option>
                         <option value="2">Alagoas</option>
                         <option value="3">Amapá</option>
@@ -371,25 +374,30 @@
                     <h5>Sua iniciativa influenciou políticas públicas?*</h5>
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="iniciativa-politica_sim" value="nao" class="form-control-radio"> Nāo
+                        <input type="radio" name="iniciativa-politica_sim" value="nao" class="form-control-radio" required data-error = "Selecione uma opçāo.">
+                        <div class="help-block with-errors"></div>Nāo
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="iniciativa-politica_nao" value="sim" class="form-control-radio"> Sim
+                        <input type="radio" name="iniciativa-politica_nao" value="sim" class="form-control-radio" required data-error = "Selecione uma opçāo.">
+                        <div class="help-block with-errors"></div>Sim
                     </label>
                 </div>
 
               
                 <div class="form-group">
                    <label class="checkbox-inline">
-                        <input type="checkbox" name="iniciativa-origem1" value="origem1" class="form-control-radio">municipal 
+                        <input type="checkbox" name="iniciativa-origem1" value="origem1" class="form-control-radio" required data-error = "Selecione uma opçāo.">
+                        <div class="help-block with-errors"></div>municipal 
                     </label>
 
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="iniciativa-origem2" value="origem2" class="form-control-radio">estadual
+                        <input type="checkbox" name="iniciativa-origem2" value="origem2" class="form-control-radio"required data-error = "Selecione uma opçāo.">
+                        <div class="help-block with-errors"></div>estadual
                     </label>
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="iniciativa-origem3" value="origem3" class="form-control-radio">nacional 
+                        <input type="checkbox" name="iniciativa-origem3" value="origem3" class="form-control-radio"required data-error = "Selecione uma opçāo.">
+                        <div class="help-block with-errors"></div>nacional 
                     </label>
                     <textarea name="sobre_iniciativa" placeholder="Opcional: (campo aberto para detalhar, )"
 
@@ -405,7 +413,8 @@
 <h5>Você realiza monitoramento e avaliação sistematizada das atividades desta iniciativa?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="iniciativa-avaliacao" >
+                    <select class="f1-last-name form-control" id="iniciativa-avaliacao" required data-error = "Selecione uma opçāo.">
+                        <div class="help-block with-errors"></div>
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim</option>
@@ -451,7 +460,8 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="iniciativa-comunicacao" >
+                    <select class="f1-last-name form-control" id="iniciativa-comunicacao" required data-error = "Selecione uma opçāo.">
+                        <div class="help-block with-errors"></div>
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
@@ -499,7 +509,8 @@
 *</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="iniciativa-premiacao" >
+                    <select class="f1-last-name form-control" id="iniciativa-premiacao" required data-error = "Selecione uma opçāo.">
+                        <div class="help-block with-errors"></div>
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim, quais?</option>
@@ -567,10 +578,11 @@
              <!--Etapa 3 Formulário: Endereço/Iniciativa -->
 
             <fieldset>
-                <h5>Regiāo</h5>
+                <h5>Regiāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="regiao">
+                    <select class="f1-last-name form-control" id="regiao"required data-error = "Selecione uma opçāo.">
+                        <div class="help-block with-errors"></div>
                         <option value="norte">Norte</option>
                         <option value="nordeste">Nordeste</option>
                         <option value="centro-oeste">Centro-Oeste</option>
@@ -579,10 +591,11 @@
                     </select> 
                 </div>
 
-                <h5>Estado</h5>
+                <h5>Estado*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Estado</label>
-                    <select class="f1-last-name form-control" id="estados">
+                    <select class="f1-last-name form-control" id="estados" required data-error = "Selecione uma opçāo.">
+                        <div class="help-block with-errors"></div>
                         <option value="1">Acre</option>
                         <option value="2">Alagoas</option>
                         <option value="3">Amapá</option>
@@ -613,10 +626,11 @@
                     </select> 
                 </div>
 
-                <h5>Cidade</h5>
+                <h5>Cidade*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="cidades"> 
+                    <select class="f1-last-name form-control" id="cidades" required data-error = "Selecione uma opçāo.">
+                        <div class="help-block with-errors"></div> 
                         <option value="1">Rio Branco</option>
                         <option value="2">Maceió</option>
                         <option value="3">Macapá</option>
@@ -647,24 +661,29 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="sr-only" for="f1-google-plus">Bairro</label>
-                    <input type="text" name="iniciativa-bairro" placeholder="Bairro..." class="f1-last-name form-control">
+                    <label class="sr-only" for="f1-google-plus">Bairro*</label>
+                    <input type="text" name="iniciativa-bairro" placeholder="Bairro..." class="f1-last-name form-control" required data-error = "Selecione uma opçāo.">
+                        <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-facebook">Rua</label>
-                    <input type="text" name="iniciativa-rua" placeholder="Rua/Av...*" class="f1-last-name form-control">
+                    <label class="sr-only" for="f1-facebook">Rua*</label>
+                    <input type="text" name="iniciativa-rua" placeholder="Rua/Av...*" class="f1-last-name form-control" required data-error = "Selecione uma opçāo.">
+                        <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-twitter">Número</label>
-                    <input type="text" name="iniciativa-numero" placeholder="Numero...*"class="f1-last-name form-control">
+                    <label class="sr-only" for="f1-twitter">Número*</label>
+                    <input type="text" name="iniciativa-numero" placeholder="Numero...*"class="f1-last-name form-control" required data-error = "Selecione uma opçāo.">
+                        <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-google-plus">Complemento</label>
-                    <input type="text" name="iniciativa-complemento" placeholder="Complemento...*"class="f1-last-name form-control">
+                    <label class="sr-only" for="f1-google-plus">Complemento*</label>
+                    <input type="text" name="iniciativa-complemento" placeholder="Complemento...*"class="f1-last-name form-control" required data-error = "Selecione uma opçāo.">
+                        <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-google-plus">Cep</label>
-                    <input type="text" name="iniciativa-cep" placeholder="CEP...*"class="f1-last-name form-control">
+                    <label class="sr-only" for="f1-google-plus">Cep*</label>
+                    <input type="text" name="iniciativa-cep" placeholder="CEP...*"class="f1-last-name form-control" required data-error = "Selecione uma opçāo.">
+                        <div class="help-block with-errors"></div>
                 </div>              
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
@@ -675,6 +694,7 @@
              <!--Etapa 4 Formulário: Mídia Social-->
 
             <fieldset>
+                <h5>Onde podemos encontrar mais informação sobre sua organização?*(Preencha pelo menos 1 item):</h5>
                 <div class="form-group">
                     <div class="input-group">
                       <span class="input-group-addon"><i class="fa fa-mouse-pointer"></i></span>
