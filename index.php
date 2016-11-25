@@ -169,7 +169,7 @@
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-email">Email *</label>
-                                    <input type="text" name="email" placeholder="Email *" class="f1-email form-control" id="f1-email" required data-error = "Campo está em branco, favor preencher.">
+                                    <input type="email" name="email" placeholder="Email *" class="f1-email form-control" id="f1-email" required data-error = "Campo está em branco, favor preencher.">
                                     <div class="help-block with-errors"></div>
                                 </div>
 
