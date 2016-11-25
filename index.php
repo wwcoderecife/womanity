@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Womanity Ecossistema</title>
+        <title>UNA Ecossistema</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
@@ -30,6 +30,8 @@
         <script src="assets/js/retina-1.1.0.min.js"></script>
         <script src="assets/js/sweetalert.min.js"></script>
         <script src="assets/js/scripts.js"></script>
+        <script src="assets/js/validator.min.js"></script>
+        <script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>
         
         <!--[if lt IE 10]>
             <script src="assets/js/placeholder.js"></script>
@@ -94,7 +96,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.html">BootZard - Bootstrap Wizard Template</a>
+					<a class="navbar-brand" href="index.html">UNA Ecossistema</a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="top-navbar-1">
@@ -110,12 +112,13 @@
                                 </div>
                                 <button type="submit" name="novo_login"  value="Log in" class="btn btn-submit">Log in</button>
                             </form>
-
+                           <!--
 							<span class="li-social">
 								<a href="#" target="_blank"><i class="fa fa-facebook"></i></a> 
 								<a href="#" target="_blank"><i class="fa fa-twitter"></i></a> 
 								<a href="#" target="_blank"><i class="fa fa-google-plus"></i></a> 
 							</span>
+                        -->
 						</li>
 					</ul>
 				</div>
@@ -128,10 +131,10 @@
                 
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2 text">
-                        <h1><strong>Womanity </strong>Ecossistema</h1>
+                       <h1><strong>UNA </strong>Ecossistema</h1>
                         <div class="description">
                        	    <p>
-                                <strong>Ecossitema de atores pelos direitos da mulher</strong>:<br>
+                                <strong>Ecossistema de Atores pelos Direitos e Empoderamento das Mulheres:</strong><br>
                                  Interconexões para maximizar impacto.</br>
                             
                             </p>
@@ -141,9 +144,9 @@
 
                  <div class="row">
                     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-                        <form role="form" action="index.php" method="post" class="f1">
+                        <form role="form" data-toggle="validator" action="index.php" method="post" class="f1">
 
-                            <h3>Cadastro Womanity Ecossistema</h3>
+                            <h3>Cadastro UNA Ecossistema</h3>
                             <p>Preencha os campos obrigatórios *</p>
 
                              <!-- Etapas do Formulário: -->
@@ -166,18 +169,21 @@
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-email">Email *</label>
-                                    <input type="text" name="email" placeholder="Email *" class="f1-email form-control" id="f1-email">
+                                    <input type="email" name="email" placeholder="Email *" class="f1-email form-control" id="f1-email" required data-error = "Campo está em branco, favor preencher.">
+                                    <div class="help-block with-errors"></div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-password">Senha *</label>
-                                    <input type="password" name="password" placeholder="Senha *" class="f1-password form-control" id="f1-password">
+                                    <input type="password" name="password" placeholder="Senha *" class="f1-password form-control" id="f1-password" required data-error = "Campo está em branco, favor preencher.">
+                                    <div class="help-block with-errors"></div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-repeat-password">Repetir Senha *</label>
                                     <input type="password" name="f1-repeat-password" placeholder="Repetir Senha *" 
-                                                        class="f1-repeat-password form-control" id="f1-repeat-password">
+                                                        class="f1-repeat-password form-control" id="f1-repeat-password"required data-error = "Campo está em branco, favor preencher.">
+                                    <div class="help-block with-errors"></div>
                                 </div>
 
                                 <!--Tipo: Ong/Iniciativa-->   
@@ -185,7 +191,7 @@
                                     <div class="radio">
                                         <p class="text-left"><strong>Você está se inscrevendo como:</strong></p>
                                          <label>
-                                            <input type="radio" name="tipo" id="optionsRadios1" value="1" checked>
+                                            <input type="radio" name="tipo" id="optionsRadios1" value="1" checked >
                                             Organizaçāo
                                         </label>
                                         <label>

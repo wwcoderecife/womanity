@@ -1,9 +1,9 @@
         
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-    	<form role="form" action="" method="post" class="f1">
+    	<form role="form" action="classes/prepare_cadastro.php" method="post" class="f1">
 
-    		<h3>Cadastro Womanity Ecossistema<br>Iniciativa</h3>
+    		<h3>Cadastro UNA Ecossistema<br>Iniciativa</h3>
     		<p>Preencha os campos obrigatórios *</p>
     		<div class="f1-steps">
     			<div class="f1-progress">
@@ -35,51 +35,54 @@
                 <h4>Dados Pessoais Contato 1:</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="f1-last-name" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="text" name="cargo_1" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name">
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="text" name="f1-last-name" placeholder="E-mail" value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="text" name="email-1" placeholder="E-mail" value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name">
                     
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="text" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="text" name="telefone_1" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name">
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="text" name="f1-last-name" placeholder="Celular" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="text" name="celular_1" placeholder="Celular" class="f1-last-name form-control" id="f1-last-name">
                 </div>
 
                  <h4>Dados Pessoais Contato 2:</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="f1-last-name" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="text" name="cargo_2" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name">
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="text" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="text" name="email_2" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
                     
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="text" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="text" name="telefone_2" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name">
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="text" name="f1-last-name" placeholder="Celular" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="text" name="celular_2" placeholder="Celular" class="f1-last-name form-control" id="f1-last-name">
                 </div>
 
                 <div class="f1-buttons">
-                    <button type="button" class="btn btn-next">Next</button>
-                </div>
-            </fieldset>
+                <button type="button" class="btn btn-next">Próximo</button>
+               </div>
+            </fieldset><!--Dados Pessoais-->
+
+
+            <!--Etapa2  Formulário: Iniciativa -->
 
             <fieldset>
                 <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
@@ -107,82 +110,526 @@
                 <h5>Nome da Iniciativa*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Nome</label>
-                    <input type="text" name="iniciativa-nome" maxlength="50">
+                    <input type="text" name="iniciativa-nome" maxlength="50" class="f1-last-name form-control">
                 </div>
 
 
                 <h5>Sigla da iniciativa:</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Sigla</label>
-                    <input type="text" name="iniciativa-sigla" style="text-transform:uppercase">
+                    <input type="text" name="iniciativa-sigla" style="text-transform:uppercase"class="f1-last-name form-control">
                 </div>
 
                 <h5>Telefone da iniciativa*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Telefone</label>
-                    <input type="text" name="iniciativa-telefone" placeholder="(xx) xxxxx-xxxx">
+                    <input type="text" name="iniciativa-telefone" placeholder="(xx) xxxxx-xxxx"class="f1-last-name form-control">
                 </div>
 
-                <h5>E-mail da iniciativa*</h5>
+                <h5>E-mail da iniciativa</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Email</label>
-                    <input type="text" name="iniciativa-email">
+                    <input type="text" name="iniciativa-email"class="f1-last-name form-control">
                 </div>
 
-                <div class="f1-buttons">
-                    <button type="button" class="btn btn-previous">Previous</button>
-                    <button type="button" class="btn btn-next">Next</button>
+
+                <h5>Como sua iniciativa se identifica?*</h5>
+                <div class="form-group">
+                   <label class="radio-inline">
+                        <input type="radio" name="iniciativa-acao" value="acao" class="form-control-radio"> Açāo
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="iniciativa-projeto" value="projeto" class="form-control-radio"> Projeto
+                    </label>
                 </div>
-            </fieldset>
+
+                <h5>De qual Natureza?</h5>
+                 <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" id="iniciativa-natureza" >
+                        <option value=""></option>
+                        <option value="academica">Acadêmica</option>
+                        <option value="coletivo">Coletivo</option>
+                        <option value="empresa_privada">Empresa Privada</option>
+                        <option value="investimento_social_privado">Investimento Social Privado</option>
+                        <option value="fundos">Fundos</option>
+                        <option value="governo">Governo</option>
+                        <option value="movimento">Movimento</option>
+                        <option value="negocio_social">Negócio Social</option>
+                        <option value="ong_sociedade_civil">Organização da Sociedade Civil (ex: associação, ong, oscip, etc)
+                        <option value="redes">Redes</option> 
+                        <option value="Outros">Outros</option> 
+                        </option> 
+                    </select>
+                    <input type="text" id="inputOutros" class="f1-last-name form-control" placeholder="Descreva outro tipo..."style='display: none' />
+                    <script>
+
+                        var dropdown = document.getElementById('iniciativa-natureza');
+                            
+                            function onDropdownChanged()
+                            {
+                                console.log(dropdown.selectedIndex);
+                                //pegando valor do select na variável dropdown
+                                
+                                if(dropdown.options[dropdown.selectedIndex].value == "Outros") {
+                                    //faz algo quando o valor selecionado for outros
+                                    console.log('Selecionou o valor Outros');
+                                    //mostra o input quando o valor selecionado for outros
+                                    var meuInput = document.getElementById('inputOutros');
+                                    meuInput.style.display = 'block';
+                                }
+                            }
+                            
+                            if (dropdown.addEventListener)
+                            {
+                                dropdown.addEventListener('change', onDropdownChanged, false);
+                            }
+                            else
+                            {
+                                // suporte para o IE
+                                dropdown.attachEvent('onchange', onDropdownChanged, false);
+                            }
+
+                    </script>
+                </div>
+                
+                <h5> Quando sua iniciativa começou as atividades?*</h5>
+                 <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" id="year" name="year">
+                        <script>
+                          var myDate = new Date();
+                          var year = myDate.getFullYear();
+                          for(var i = 1900; i < year+1; i++){
+                              document.write('<option value=""'+i+'">'+i+'</option>');
+                          }
+                          </script>
+                    </select>
+
+
+               <h5>Quantas pessoas estão envolvidas neste trabalho?*</h5>
+                 <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" id="iniciativa-pessoas_envolvidas" >
+                        <option value=""></option>
+                        <option value="1">1-5</option>
+                        <option value="2">6-10</option>
+                        <option value="3">11-20</option>
+                        <option value="4">21-50</option>
+                        <option value="5">51-100</option>
+                        <option value="6">101-500</option>
+                        <option value="7">251-1000</option>
+                        <option value="8">501-1000</option>
+                        <option value="9">1001+</option>     
+                    </select>
+
+               <h5>Qual foi seu orçamento da sua iniciativa?*</h5>
+                 <h5>2014</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">2014</label>
+                    <input type="text" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2014">
+                </div>
+                <h5>2015</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">2015</label>
+                    <input type="text" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2015">
+                </div>
+                <h5>2016</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">2016</label>
+                    <input type="text" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2016">
+                </div>
+
+
+                <h5>Sua iniciativa recebe recursos financeiros?</h5>
+                <div class="form-group">
+                   <label class="radio-inline">
+                        <input type="radio" name="iniciativa-recursos1" value="sim" class="form-control-radio"> Sim
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="iniciativa-recursos2" value="nao" class="form-control-radio"> Nāo
+                    </label>
+                </div>
+
+                <h5>Qual é a origem?</h5>
+                <div class="form-group">
+                   <label class="checkbox-inline">
+                        <input type="checkbox" name="iniciativa-origem1" value="origem1" class="form-control-radio">Doação Pessoa Física 
+                    </label>
+
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="iniciativa-origem2" value="origem2" class="form-control-radio">Edital 
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="iniciativa-origem3" value="origem3" class="form-control-radio">Investimento Direto/Patrocínio
+ 
+                    </label>
+                </div>
+
+           <h5>O que faz sua iniciativa?* (até 500 caracteres).</h5>                                  
+                <div class="form-group">
+                    <label class="sr-only" for="f1-about-yourself"></label>
+                    <textarea name="sobre_iniciativa" maxlength="500" placeholder="Fale sobre a sua iniciativa...." 
+                    class="f1-about-yourself form-control" id="sobre_iniciativa"></textarea>
+                </div>
+
+                <h5>Qual o público direto atendido pela sua iniciativa?*
+</h5>
+                 <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" id="iniciativa-publico" >
+                        <option value=""></option>
+                        <option value="1">Empresas</option>
+                        <option value="2">Organizações Sociais</option>
+                        <option value="3">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher </option>
+                        <option value="4">Movimentos, coletivos, redes, fóruns</option>
+                        <option value="5">Adolescentes e jovens</option>
+                        <option value="6">Homens</option>
+                        <option value="7">Mulheres</option>
+                           
+                    </select>
+                    
+                    <h5>Clique nos Estados que sua iniciativa tem atuação direta*</h5>
+                    <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
+                    <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" name="iniciativa_estado" multiple>
+                      <option value="1">Acre</option>
+                        <option value="2">Alagoas</option>
+                        <option value="3">Amapá</option>
+                        <option value="4">Amazonas</option>
+                        <option value="5">Bahia</option>
+                        <option value="6">Ceará</option>
+                        <option value="7">Distrito Federal</option>
+                        <option value="8">Espírito Santo</option>
+                        <option value="9">Goiás</option>
+                        <option value="10">Maranhão</option>
+                        <option value="11">Mato Grosso</option>
+                        <option value="12">Mato Grosso do Sul</option>
+                        <option value="13">Minas Gerais</option>
+                        <option value="14">Pará</option>
+                        <option value="15">Paraíba</option>
+                        <option value="16">Paraná</option>
+                        <option value="17">Pernambuco</option>
+                        <option value="18">Piauí</option>
+                        <option value="19">Rio de Janeiro</option>
+                        <option value="20">Rio Grande do Norte</option>
+                        <option value="21">Rio Grande do Sul</option>
+                        <option value="22">Rondônia</option>
+                        <option value="23">Roraima</option>
+                        <option value="24">Santa Catarina</option>
+                        <option value="25">São Paulo</option>
+                        <option value="26">Sergipe</option>
+                        <option value="27">Tocantins</option>
+                    </select>
+
+                    <h5>Sua iniciativa influenciou políticas públicas?*</h5>
+                <div class="form-group">
+                   <label class="radio-inline">
+                        <input type="radio" name="iniciativa-politica_sim" value="nao" class="form-control-radio"> Nāo
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="iniciativa-politica_nao" value="sim" class="form-control-radio"> Sim
+                    </label>
+                </div>
+
+              
+                <div class="form-group">
+                   <label class="checkbox-inline">
+                        <input type="checkbox" name="iniciativa-origem1" value="origem1" class="form-control-radio">municipal 
+                    </label>
+
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="iniciativa-origem2" value="origem2" class="form-control-radio">estadual
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="iniciativa-origem3" value="origem3" class="form-control-radio">nacional 
+                    </label>
+                    <textarea name="sobre_iniciativa" placeholder="Opcional: (campo aberto para detalhar, )"
+
+                    class="f1-about-yourself form-control" id="sobre_iniciativa"></textarea>
+                </div>
+
+
+
+
+<!-- 26 Iniciativa-->
+
+
+<h5>Você realiza monitoramento e avaliação sistematizada das atividades desta iniciativa?*</h5>
+                 <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" id="iniciativa-avaliacao" >
+                        <option value=""></option>
+                        <option value="0">Nāo</option>
+                        <option value="1">Sim</option>
+                         
+                        </option> 
+                    </select>
+                    <textarea type="text" id="inputAvaliacao" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
+"style='display: none' /></textarea>
+                    <script>
+
+                        var dropdown = document.getElementById('iniciativa-avaliacao');
+                            
+                            function onDropdownChanged()
+                            {
+                                console.log(dropdown.selectedIndex);
+                                //pegando valor do select na variável dropdown
+                                
+                                if(dropdown.options[dropdown.selectedIndex].value == "1") {
+                                    //faz algo quando o valor selecionado for outros
+                                    console.log('Selecionou o valor Outros');
+                                    //mostra o input quando o valor selecionado for outros
+                                    var meuInput1 = document.getElementById('inputAvaliacao');
+                                    meuInput1.style.display = 'block';
+                                }
+                            }
+                            
+                            if (dropdown.addEventListener)
+                            {
+                                dropdown.addEventListener('change', onDropdownChanged, false);
+                            }
+                            else
+                            {
+                                // suporte para o IE
+                                dropdown.attachEvent('onchange', onDropdownChanged, false);
+                            }
+
+                    </script>
+                </div><!--26/Inicitiva-->
+
+<!-- 27 Iniciativa-->
+
+<h5>Sua iniciativa tem uma estratégia de comunicação própria?*</h5>
+
+                 <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" id="iniciativa-comunicacao" >
+                        <option value=""></option>
+                        <option value="0">Nāo</option>
+                        <option value="1">Sim, qual?</option>
+                         
+                        </option> 
+                    </select>
+                    <textarea type="text" id="inputComunicacao" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
+"style='display: none' /></textarea>
+                    <script>
+
+                        var dropdown = document.getElementById('iniciativa-comunicacao');
+                            
+                            function onDropdownChanged()
+                            {
+                                console.log(dropdown.selectedIndex);
+                                //pegando valor do select na variável dropdown
+                                
+                                if(dropdown.options[dropdown.selectedIndex].value == "1") {
+                                    //faz algo quando o valor selecionado for outros
+                                    console.log('Selecionou o valor');
+                                    //mostra o input quando o valor selecionado for outros
+                                    var meuInput1 = document.getElementById('inputComunicacao');
+                                    meuInput1.style.display = 'block';
+                                }
+                            }
+                            
+                            if (dropdown.addEventListener)
+                            {
+                                dropdown.addEventListener('change', onDropdownChanged, false);
+                            }
+                            else
+                            {
+                                // suporte para o IE
+                                dropdown.attachEvent('onchange', onDropdownChanged, false);
+                            }
+
+                    </script>
+                </div><!--27/Inicitiva-->
+
+
+
+      <!-- 28 Iniciativa-->
+
+<h5>A sua iniciativa recebeu premiações, certificações, etc*?
+*</h5>
+                 <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" id="iniciativa-premiacao" >
+                        <option value=""></option>
+                        <option value="0">Nāo</option>
+                        <option value="1">Sim, quais?</option>
+                         
+                        </option> 
+                    </select>
+                    <textarea type="text" id="inputPremiacao" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
+"style='display: none' /></textarea>
+                    <script>
+
+                        var dropdown = document.getElementById('iniciativa-premiacao');
+                            
+                            function onDropdownChanged()
+                            {
+                                console.log(dropdown.selectedIndex);
+                                //pegando valor do select na variável dropdown
+                                
+                                if(dropdown.options[dropdown.selectedIndex].value == "1") {
+                                    //faz algo quando o valor selecionado for outros
+                                    console.log('Selecionou o valor');
+                                    //mostra o input quando o valor selecionado for outros
+                                    var meuInput = document.getElementById('inputPremiacao');
+                                    meuInput.style.display = 'block';
+                                }
+                            }
+                            
+                            if (dropdown.addEventListener)
+                            {
+                                dropdown.addEventListener('change', onDropdownChanged, false);
+                            }
+                            else
+                            {
+                                // suporte para o IE
+                                dropdown.attachEvent('onchange', onDropdownChanged, false);
+                            }
+
+                    </script>
+                </div><!--28/Inicitiva-->
+
+
+                <!-- 29-->
+
+                 <h5>Quais são as organizações com atuação na temática da mulher que sua iniciativa se relaciona diretamente?</h5>
+                 <h5>Nome</h5> 
+                <div class="form-group">
+                    <label class="sr-only" for="f1-repeat-password"></label>
+                    <input type="text" name="iniciativa-relaciona1"  class="f1-last-name form-control">
+                </div>
+                <h5>Nome</h5> 
+                <div class="form-group">
+                    <label class="sr-only" for="f1-repeat-password"></label>
+                    <input type="text" name="iniciativa-relaciona2"  class="f1-last-name form-control">
+                </div>
+                <h5>Nome</h5> 
+                <div class="form-group">
+                    <label class="sr-only" for="f1-repeat-password"></label>
+                    <input type="text" name="iniciativa-relaciona3" class="f1-last-name form-control">
+                </div>
+                <div class="f1-buttons">
+                    <button type="button" class="btn btn-previous">Anterior</button>
+                    <button type="button" class="btn btn-next">Próximo</button>
+                </div> 
+            </fieldset> 
+
+             <!--Etapa 3 Formulário: Endereço/Iniciativa -->
 
             <fieldset>
+                <h5>Regiāo</h5>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-google-plus">Região</label>
-                    <select id="regiao">
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" id="regiao">
                         <option value="norte">Norte</option>
                         <option value="nordeste">Nordeste</option>
                         <option value="centro-oeste">Centro-Oeste</option>
                         <option value="sul">Sul</option>
                         <option value="sudeste">Sudeste</option>
-                    </select> *
+                    </select> 
                 </div>
+
+                <h5>Estado</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Estado</label>
-                    <select id="estados">
-                        <option value=""></option>
-                    </select> *
+                    <select class="f1-last-name form-control" id="estados">
+                        <option value="1">Acre</option>
+                        <option value="2">Alagoas</option>
+                        <option value="3">Amapá</option>
+                        <option value="4">Amazonas</option>
+                        <option value="5">Bahia</option>
+                        <option value="6">Ceará</option>
+                        <option value="7">Distrito Federal</option>
+                        <option value="8">Espírito Santo</option>
+                        <option value="9">Goiás</option>
+                        <option value="10">Maranhão</option>
+                        <option value="11">Mato Grosso</option>
+                        <option value="12">Mato Grosso do Sul</option>
+                        <option value="13">Minas Gerais</option>
+                        <option value="14">Pará</option>
+                        <option value="15">Paraíba</option>
+                        <option value="16">Paraná</option>
+                        <option value="17">Pernambuco</option>
+                        <option value="18">Piauí</option>
+                        <option value="19">Rio de Janeiro</option>
+                        <option value="20">Rio Grande do Norte</option>
+                        <option value="21">Rio Grande do Sul</option>
+                        <option value="22">Rondônia</option>
+                        <option value="23">Roraima</option>
+                        <option value="24">Santa Catarina</option>
+                        <option value="25">São Paulo</option>
+                        <option value="26">Sergipe</option>
+                        <option value="27">Tocantins</option>
+                    </select> 
                 </div>
+
+                <h5>Cidade</h5>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-google-plus">Cidade</label>
-                    <select id="cidades"> 
-                        <option value=""></option>
-                    </select> *
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" id="cidades"> 
+                        <option value="1">Rio Branco</option>
+                        <option value="2">Maceió</option>
+                        <option value="3">Macapá</option>
+                        <option value="4">Manaus</option>
+                        <option value="5">Salvador</option>
+                        <option value="6">Fortaleza</option>
+                        <option value="7">Brasília</option>
+                        <option value="8">Vitória</option>
+                        <option value="9">Goiânia</option>
+                        <option value="10">São Luís</option>
+                        <option value="11">Cuiabá</option>
+                        <option value="12">Campo Grande</option>
+                        <option value="13">Belo Horizonte</option>
+                        <option value="14">Belém</option>
+                        <option value="15">João Pessoa</option>
+                        <option value="16">Curitiba</option>
+                        <option value="17">Recife</option>
+                        <option value="18">Teresina</option>
+                        <option value="19">Natal</option>
+                        <option value="20">Porto Alegre</option>
+                        <option value="21">Porto Velho</option>
+                        <option value="22">Boa Vista</option>
+                        <option value="23">Florianópolis</option>
+                        <option value="24">Sāo Paulo</option>
+                        <option value="25">Aracaju</option>
+                        <option value="25">Palmas</option>
+                    </select> 
                 </div>
+
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Bairro</label>
-                    <input type="text" name="iniciativa-bairro" placeholder="Bairro...">
+                    <input type="text" name="iniciativa-bairro" placeholder="Bairro..." class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-facebook">Rua</label>
-                    <input type="text" name="iniciativa-rua" placeholder="Rua/Av...*">
+                    <input type="text" name="iniciativa-rua" placeholder="Rua/Av...*" class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-twitter">Numero</label>
-                    <input type="text" name="iniciativa-numero" placeholder="Numero...*">
+                    <label class="sr-only" for="f1-twitter">Número</label>
+                    <input type="text" name="iniciativa-numero" placeholder="Numero...*"class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Complemento</label>
-                    <input type="text" name="iniciativa-complemento" placeholder="Complemento...*">
+                    <input type="text" name="iniciativa-complemento" placeholder="Complemento...*"class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep</label>
-                    <input type="text" name="iniciativa-cep" placeholder="CEP...*">
+                    <input type="text" name="iniciativa-cep" placeholder="CEP...*"class="f1-last-name form-control">
                 </div>              
                 <div class="f1-buttons">
-                    <button type="button" class="btn btn-previous">Previous</button>
-                    <button type="button" class="btn btn-next">Next</button
+                    <button type="button" class="btn btn-previous">Anterior</button>
+                    <button type="button" class="btn btn-next">Próximo</button>
                 </div>
             </fieldset>
+
+             <!--Etapa 4 Formulário: Mídia Social-->
 
             <fieldset>
                 <div class="form-group">
@@ -222,8 +669,8 @@
                     </div>
                 </div>
                 <div class="f1-buttons">
-                    <button type="button" class="btn btn-previous">Previous</button>
-                    <button type="button" class="btn btn-next">Next</button>
+                    <button type="button" class="btn btn-previous">Anterior</button>
+                    <button type="button" class="btn btn-next">Próximo</button>
                 </div>
             </fieldset>
 
@@ -273,8 +720,8 @@
                     <input type="text" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name">
                 </div>
                 <div class="f1-buttons">
-                    <button type="button" class="btn btn-previous">Previous</button>
-                    <button type="submit" class="btn btn-submit">Submit</button>
+                    <button type="button" class="btn btn-previous">Anterior</button>
+                    <button type="submit" class="btn btn-submit">Enviar</button>
                 </div>
             </fieldset>
             

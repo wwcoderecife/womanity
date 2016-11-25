@@ -44,8 +44,8 @@ img { max-width: 100%; }
   
 }
 
-::-moz-selection { background: #f35b3f; color: #fff; text-shadow: none; }
-::selection { background: #f35b3f; color: #fff; text-shadow: none; }
+::-moz-selection { background: #63347d; color: #fff; text-shadow: none; }
+::selection { background: #63347d; color: #fff; text-shadow: none; }
 
 
 /***** Top menu *****/
@@ -76,13 +76,14 @@ ul.navbar-nav {
 	margin: 0 5px;
 	font-size: 28px;
 	vertical-align: middle;
+	
 }
 .navbar-inverse ul.navbar-nav li .li-social a:hover, 
 .navbar-inverse ul.navbar-nav li .li-social a:focus { border: 0; color: #63347d; }
 
 .navbar-brand {
 	width: 162px;
-	background: url(../img/logo.png) left center no-repeat;
+	background: url() left center no-repeat;
 	text-indent: -99999px;
 }
 
@@ -180,7 +181,7 @@ only screen and (                min-resolution: 2dppx) {
 	
 	/* logo */
     .navbar-brand {
-    	background-image: url(../img/logo@2x.png) !important; background-repeat: no-repeat !important; background-size: 162px 67px !important;
+    	background-image: url() !important; background-repeat: no-repeat !important; background-size: 162px 67px !important;
     }
 	
 }

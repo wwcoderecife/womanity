@@ -54,6 +54,7 @@ jQuery(document).ready(function() {
     	var current_active_step = $(this).parents('.f1').find('.f1-step.active');
     	var progress_line = $(this).parents('.f1').find('.f1-progress-line');
     	
+        /*
     	// fields validation
     	parent_fieldset.find('input[type="text"], input[type="password"], textarea').each(function() {
     		if( $(this).val() == "" ) {
@@ -65,6 +66,8 @@ jQuery(document).ready(function() {
     		}
     	});
     	// fields validation
+
+        */
     	
     	if( next_step ) {
     		parent_fieldset.fadeOut(400, function() {
@@ -101,7 +104,9 @@ jQuery(document).ready(function() {
     
     // submit
     $('.f1').on('submit', function(e) {
-    	
+
+
+    	/*
     	// fields validation
     	$(this).find('input[type="text"], input[type="password"], textarea').each(function() {
     		if( $(this).val() == "" ) {
@@ -113,6 +118,7 @@ jQuery(document).ready(function() {
     		}
     	});
     	// fields validation
+        */
     	
     });
 
