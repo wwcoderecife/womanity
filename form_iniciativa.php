@@ -293,27 +293,52 @@
                 <h5>Sua iniciativa recebe recursos financeiros?</h5>
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="iniciativa-recurso1" value="nao" class="form-control-radio"required>Nāo
+                        <input type="radio" name="iniciativa-recurso1" value="nao" class="form-control-radio">Nāo
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="iniciativa-recurso2" value="sim" class="form-control-radio"required>Sim
+                        <input type="radio" name="iniciativa-recurso2" value="sim" class="form-control-radio">Sim
                     </label>
                 </div>
 
-                <h5>Qual é a origem?</h5>
+                  <h5>Qual é a origem?</h5>
+                <h5>apoio a projetos / patrocínio</h5>
                 <div class="form-group">
-                   <label class="checkbox-inline">
-                        <input type="checkbox" name="iniciativa-origem1" value="origem1" class="form-control-radio">Doação Pessoa Física 
+                   <label class="radio">
+                        <input type="radio" name="iniciativa-origem1" value="origem1" class="form-control-radio">empresas 
                     </label>
 
-                    <label class="checkbox-inline">
-                        <input type="checkbox" name="iniciativa-origem2" value="origem2" class="form-control-radio">Edital 
+                    <label class="radio">
+                        <input type="radio" name="iniciativa-origem2" value="origem2" class="form-control-radio">institutos ou fundações empresariais 
                     </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" name="iniciativa-origem3" value="origem3" class="form-control-radio">Investimento Direto/Patrocínio
+                    <label class="radio">
+                        <input type="radio" name="iniciativa-origem3" value="origem3" class="form-control-radio">organizações do sistema ONU 
  
                     </label>
+                    <label class="radio">
+                        <input type="radio" name="iniciativa-origem4" value="origem4" class="form-control-radio">organizações não governamentais brasileiras ou internacionais
+ 
+                    </label>
+
+                    <h5>Edital Governamental</h5>
+                <div class="form-group">
+                   <label class="radio">
+                        <input type="radio" name="iniciativa-origem5" value="origem5" class="form-control-radio">munícpio
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" name="iniciativa-origem6" value="origem6" class="form-control-radio">estado
+                    <label class="radio">
+                        <input type="radio" name="iniciativa-origem7" value="origem7" class="form-control-radio">governo federal 
+                    </label>
+
+                    <div class="form-group">
+                   <label class="radio">
+                        <input type="radio" name="iniciativa-origem8" value="origem8" class="form-control-radio">Doaçāo Pessoa Física 
+                    </label>
+                    
+ 
+
                 </div>
 
            <h5>O que faz sua iniciativa?* (até 500 caracteres).</h5>                                  
@@ -379,13 +404,13 @@
                     <h5>Sua iniciativa influenciou políticas públicas?*</h5>
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="iniciativa-politica_sim" value="nao" class="form-control-radio" required data-error = "Selecione uma opçāo.">
-                        <div class="help-block with-errors"></div>Nāo
+                        <input type="radio" name="iniciativa-politica_sim" value="nao" class="form-control-radio">
+                        </div>Nāo
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="iniciativa-politica_nao" value="sim" class="form-control-radio" required data-error = "Selecione uma opçāo.">
-                        <div class="help-block with-errors"></div>Sim
+                        <input type="radio" name="iniciativa-politica_nao" value="sim" class="form-control-radio">
+                        </div>Sim
                     </label>
                 </div>
 
@@ -465,7 +490,7 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="iniciativa-comunicacao" required data-error = "Selecione uma opçāo.">
+                    <select class="f1-last-name form-control" id="iniciativa-comunicacao">
                         <div class="help-block with-errors"></div>
                         <option value=""></option>
                         <option value="0">Nāo</option>
@@ -597,13 +622,11 @@
                 <td><input type="checkbox" name="temas" class="no-margin" onclick="verificar()"></td>
                 <td>Arte e Cultura</td>
                 <td>Promoção do acesso de mulheres à cultura e/ou incentivo à produção das várias expressões artísticas.</td>
-                 
             </tr>
             <tr>
                 <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
                 <td>Ciência e Tecnologia</td>
                 <td>Promoção do acesso a linguagens, equipamentos e/ou à produção de ciência e tecnologia por mulheres.</td>
-               
             </tr>
             <tr>
                 <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
@@ -615,7 +638,6 @@
                 <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
                 <td>Educação e Formação</td>
                 <td>Oferta de educação formal (escolar ou acadêmica), incentivo à escolaridade; formação de atores sociais, ações de educação popular e informal</td>
-              
             </tr>
 
             <tr>
@@ -628,14 +650,10 @@
                 <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
                 <td>Enfrentamento à Violência</td>
                 <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas possibilidades de desenvolvimento profissional e equiparação salarial</td>
-              
-
             <tr>
                 <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
                 <td>Equidade e Condições de Trabalho</td>
-                <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas possibilidades de desenvolvimento profissional e equiparação salarial.</td>
-
-                
+                <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas possibilidades de desenvolvimento profissional e equiparação salarial.</td>  
             </tr>
 
             <tr>
@@ -658,10 +676,12 @@
                 <td>Masculinidades</td>
                 <td>Ações voltadas para questões relativas à revisão do conceito hegemônico de masculinidade, a partir da perspectiva das relações de gênero.</td>
             </tr>
-            <tr>
+            <tr>    
+                <tr>
                  <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Meio Ambiente</td>
-                <td>Trabalhos que relacionam questões de gênero, feminismo e meio ambiente.</td>
+                <td>Meio Ambiente,Segurança Alimentar e Agricultura</td>
+                <td>Trabalhos que relacionam questões de gênero, feminismo e meio ambiente. 
+Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis e ambientalmente sustentáveis.</td>
             </tr>
 
             <tr>
@@ -692,10 +712,6 @@
                 <td>Iniciativas que tratam de questões de autoestima, qualidade de vida, saúde e bem-estar das mulheres.</td>
            </tr>
 
-           <tr> <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Segurança Alimentar e Agricultura</td>
-                <td>Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis e ambientalmente sustentáveis.</td>
-           </tr>
             </tbody>
         </table>
     </div>

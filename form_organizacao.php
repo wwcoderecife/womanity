@@ -127,7 +127,7 @@
                   
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="organizacao-cnpj" required data-error = "Campo está em branco, favor preencher.">
+                    <select class="f1-last-name form-control" id="organizacao-cnpj">
                         <option value=""></option>
                         <option value="sim">sim</option>
                         <option value="nao">nao</option>
@@ -269,27 +269,52 @@
                 <h5>Sua Organizaçāo recebe recursos financeiros?</h5>
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="organizacao-recurso1" value="nao" class="form-control-radio"required>Nāo
+                        <input type="radio" name="organizacao-recurso1" value="nao" class="form-control-radio">Nāo
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="organizacao-recurso2" value="sim" class="form-control-radio"required>Sim
+                        <input type="radio" name="organizacao-recurso2" value="sim" class="form-control-radio">Sim
                     </label>
                 </div>
 
                 <h5>Qual é a origem?</h5>
+                <h5>apoio a projetos / patrocínio</h5>
                 <div class="form-group">
-                   <label class="checkbox-inline">
-                        <input type="checkbox" name="organizacao-origem1" value="origem1" class="form-control-radio">Doação Pessoa Física 
+                   <label class="radio">
+                        <input type="radio" name="organizacao-origem1" value="origem1" class="form-control-radio">empresas 
                     </label>
 
-                    <label class="checkbox-inline">
-                        <input type="checkbox" name="organizacao-origem2" value="origem2" class="form-control-radio">Edital 
+                    <label class="radio">
+                        <input type="radio" name="organizacao-origem2" value="origem2" class="form-control-radio">institutos ou fundações empresariais 
                     </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" name="organizacao-origem3" value="origem3" class="form-control-radio">Investimento Direto/Patrocínio
+                    <label class="radio">
+                        <input type="radio" name="organizacao-origem3" value="origem3" class="form-control-radio">organizações do sistema ONU 
  
                     </label>
+                    <label class="radio">
+                        <input type="radio" name="organizacao-origem4" value="origem4" class="form-control-radio">organizações não governamentais brasileiras ou internacionais
+ 
+                    </label>
+
+                    <h5>Edital Governamental</h5>
+                <div class="form-group">
+                   <label class="radio">
+                        <input type="radio" name="organizacao-origem5" value="origem5" class="form-control-radio">munícpio
+                    </label>
+
+                    <label class="radio">
+                        <input type="radio" name="organizacao-origem6" value="origem6" class="form-control-radio">estado
+                    <label class="radio">
+                        <input type="radio" name="organizacao-origem7" value="origem7" class="form-control-radio">governo federal 
+                    </label>
+
+                    <div class="form-group">
+                   <label class="radio">
+                        <input type="radio" name="organizacao-origem8" value="origem8" class="form-control-radio">Doaçāo Pessoa Física 
+                    </label>
+                    
+ 
+
                 </div>
 
                 <h5>O que faz Organizaçāo?*(até 500 caracteres)</h5>                                  
@@ -378,11 +403,11 @@
 
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="organizacao-politicasim" value="nao" class="form-control-radio"required>Nāo
+                        <input type="radio" name="organizacao-politicasim" value="nao" class="form-control-radio">Nāo
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="organizacao-politicanao" value="sim" class="form-control-radio"required>Sim
+                        <input type="radio" name="organizacao-politicanao" value="sim" class="form-control-radio">Sim
                     </label>
                 </div>
                 
@@ -410,12 +435,10 @@
 <h5>Você realiza monitoramento e avaliação sistematizada das atividades da Organizaçāo?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="organizacao-avaliacao" required data-error = "." >
+                    <select class="f1-last-name form-control" id="organizacao-avaliacao">
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim</option>
-                         
-                        </option> 
                     </select>
                     <textarea type="text" id="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
 "style='display: none' required data-error = "Campo está em branco, favor preencher."/></textarea>
@@ -456,12 +479,10 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="organizacao-comunicacao" required data-error = "." >
+                    <select class="f1-last-name form-control" id="organizacao-comunicacao">
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
-                         
-                        </option> 
                     </select>
                     <textarea type="text" id="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 "style='display: none' required data-error = "Campo está em branco, favor preencher."/></textarea>
@@ -500,16 +521,15 @@
 
       <!-- 29 Organizacao-->
 
-<h5>A sua Organizaçāo recebeu premiações, certificações, etc*?
-*</h5>
+<h5>A sua Organizaçāo recebeu premiações, certificações, etc*?*</h5>
+
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="organizacao-premiacao" required data-error = ".">
+                    <select class="f1-last-name form-control" id="organizacao-premiacao">
                         <option value=""></option>
                         <option value="0">Nāo</option>
-                        <option value="1">Sim, quais?</option>
-                         
-                        </option> 
+                        <option value="1">Sim, quais?</option> 
+                        
                     </select>
                     <textarea type="text" id="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 "style='display: none' required data-error = "Campo está em branco, favor preencher." /></textarea>
@@ -620,9 +640,7 @@
             <tr>
                 <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
                 <td>Equidade e Condições de Trabalho</td>
-                <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas possibilidades de desenvolvimento profissional e equiparação salarial.</td>
-
-                
+                <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas possibilidades de desenvolvimento profissional e equiparação salarial.</td>    
             </tr>
 
             <tr>
@@ -647,8 +665,9 @@
             </tr>
             <tr>
                  <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Meio Ambiente</td>
-                <td>Trabalhos que relacionam questões de gênero, feminismo e meio ambiente.</td>
+                <td>Meio Ambiente,Segurança Alimentar e Agricultura</td>
+                <td>Trabalhos que relacionam questões de gênero, feminismo e meio ambiente. 
+Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis e ambientalmente sustentáveis.</td>
             </tr>
 
             <tr>
@@ -679,10 +698,6 @@
                 <td>Iniciativas que tratam de questões de autoestima, qualidade de vida, saúde e bem-estar das mulheres.</td>
            </tr>
 
-           <tr> <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Segurança Alimentar e Agricultura</td>
-                <td>Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis e ambientalmente sustentáveis.</td>
-           </tr>
             </tbody>
         </table>
     </div>
