@@ -295,16 +295,22 @@
 
 
                 <h5>Sua iniciativa recebe recursos financeiros?</h5>
-                <div class="form-group">
-                    <div class="radio">
+                
+
+              <div class="form-group">
+                  <div class="radio">                                   
                     <label class="radio-inline">
-                        <input type="radio" name="iniciativa-recurso1" value="nao" class="form-control-radio">Nāo
+                        <input type="radio" name="iniciativa-recurso1" value="sim" class="form-control-radio">
+                        </div> Sim
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="iniciativa-recurso2" value="sim" class="form-control-radio">Sim
+                        <input type="radio" name="iniciativa-recurso2" value="nao" class="form-control-radio">
+                        </div> Não
                     </label>
                 </div>
+
+
 
                 <h5>Qual é a origem?</h5>
                 <h5>apoio a projetos / patrocínio</h5>
