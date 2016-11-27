@@ -120,26 +120,28 @@
 
             <fieldset>
                 <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
-                <div class="form-group">                                   
+                <div class="form-group">
+                  <div class="radio">                                   
                     <label class="radio-inline">
-                        <input type="radio" name="iniciativa-ong" value="sim" class="form-control-radio"required data-error = "Campo está em branco, favor preencher.">
-                        <div class="help-block with-errors"></div> Sim
+                        <input type="radio" name="iniciativa-ong1" value="sim" class="form-control-radio">
+                        </div> Sim
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="iniciativa-ong" value="nao" class="form-control-radio"required data-error = "Campo está em branco, favor preencher.">
-                        <div class="help-block with-errors"></div> Não
+                        <input type="radio" name="iniciativa-ong2" value="nao" class="form-control-radio">
+                        </div> Não
                     </label>
                 </div>
 
                 <h5>A sua iniciativa está localizada na…*</h5>
                 <div class="form-group">
+                  <div class="radio">
                    <label class="radio-inline">
-                        <input type="radio" name="iniciativa-zona" value="rural" class="form-control-radio" required>Zona Rural
+                        <input type="radio" name="iniciativa-zona1" value="rural" class="form-control-radio" >Zona Rural
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="iniciativa-zona" value="urbana" class="form-control-radio"required>Zona Urbana
+                        <input type="radio" name="iniciativa-zona2" value="urbana" class="form-control-radio">Zona Urbana
                        
                     </label>
                 </div>
@@ -176,14 +178,16 @@
 
                 <h5>Como sua iniciativa se identifica?*</h5>
                 <div class="form-group">
-                   <label class="radio-inline">
+                     <div class="radio">
+                      <label class="radio-inline">
                         <input type="radio" name="iniciativa-acao" value="acao" class="form-control-radio" required data-error = "Campo está em branco, favor preencher.">
                         <div class="help-block with-errors"></div> Açāo
-                    </label>
+                      </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="iniciativa-projeto" value="projeto" class="form-control-radio" required data-error = "Campo está em branco, favor preencher.">
-                                    <div class="help-block with-errors"></div> Projeto
+                        <div class="radio">
+                          <input type="radio" name="iniciativa-projeto" value="projeto" class="form-control-radio" required data-error = "Campo está em branco, favor preencher.">
+                        <div class="help-block with-errors"></div> Projeto
                     </label>
                 </div>
 
@@ -292,7 +296,8 @@
 
                 <h5>Sua iniciativa recebe recursos financeiros?</h5>
                 <div class="form-group">
-                   <label class="radio-inline">
+                    <div class="radio">
+                    <label class="radio-inline">
                         <input type="radio" name="iniciativa-recurso1" value="nao" class="form-control-radio">Nāo
                     </label>
 
@@ -301,44 +306,44 @@
                     </label>
                 </div>
 
-                  <h5>Qual é a origem?</h5>
+                <h5>Qual é a origem?</h5>
                 <h5>apoio a projetos / patrocínio</h5>
                 <div class="form-group">
-                   <label class="radio">
+                    <div class="radio">
+                      <label>
                         <input type="radio" name="iniciativa-origem1" value="origem1" class="form-control-radio">empresas 
                     </label>
 
-                    <label class="radio">
+                    <label>
                         <input type="radio" name="iniciativa-origem2" value="origem2" class="form-control-radio">institutos ou fundações empresariais 
                     </label>
-                    <label class="radio">
+                    <label >
                         <input type="radio" name="iniciativa-origem3" value="origem3" class="form-control-radio">organizações do sistema ONU 
  
                     </label>
-                    <label class="radio">
+
+                    <label>
                         <input type="radio" name="iniciativa-origem4" value="origem4" class="form-control-radio">organizações não governamentais brasileiras ou internacionais
  
                     </label>
 
                     <h5>Edital Governamental</h5>
-                <div class="form-group">
-                   <label class="radio">
+                  <div class="form-group">
+                    <div class="radio">
+                   <label>
                         <input type="radio" name="iniciativa-origem5" value="origem5" class="form-control-radio">munícpio
                     </label>
 
-                    <label class="radio">
+                    <label>
                         <input type="radio" name="iniciativa-origem6" value="origem6" class="form-control-radio">estado
-                    <label class="radio">
+                    <label>
                         <input type="radio" name="iniciativa-origem7" value="origem7" class="form-control-radio">governo federal 
                     </label>
 
                     <div class="form-group">
-                   <label class="radio">
+                   <label>
                         <input type="radio" name="iniciativa-origem8" value="origem8" class="form-control-radio">Doaçāo Pessoa Física 
                     </label>
-                    
- 
-
                 </div>
 
            <h5>O que faz sua iniciativa?* (até 500 caracteres).</h5>                                  
@@ -403,7 +408,8 @@
 
                     <h5>Sua iniciativa influenciou políticas públicas?*</h5>
                 <div class="form-group">
-                   <label class="radio-inline">
+                    <div class="radio">
+                     <label  class="radio-inline">
                         <input type="radio" name="iniciativa-politica_sim" value="nao" class="form-control-radio">
                         </div>Nāo
                     </label>
@@ -443,13 +449,12 @@
 <h5>Você realiza monitoramento e avaliação sistematizada das atividades desta iniciativa?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="iniciativa-avaliacao" required data-error = "Selecione uma opçāo.">
-                        <div class="help-block with-errors"></div>
+                    <select class="f1-last-name form-control" id="iniciativa-avaliacao">
+                 </div>
                         <option value=""></option>
                         <option value="0">Nāo</option>
-                        <option value="1">Sim</option>
-                         
-                        </option> 
+                        <option value="1">Sim</option> 
+                    
                     </select>
                     <textarea type="text" id="inputAvaliacao" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
 "style='display: none' /></textarea>
@@ -494,9 +499,7 @@
                         <div class="help-block with-errors"></div>
                         <option value=""></option>
                         <option value="0">Nāo</option>
-                        <option value="1">Sim, qual?</option>
-                         
-                        </option> 
+                        <option value="1">Sim, qual?</option>     
                     </select>
                     <textarea type="text" id="inputComunicacao" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 "style='display: none' /></textarea>
@@ -539,13 +542,12 @@
 *</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="iniciativa-premiacao" required data-error = "Selecione uma opçāo.">
+                    <select class="f1-last-name form-control" id="iniciativa-premiacao">
                         <div class="help-block with-errors"></div>
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim, quais?</option>
                          
-                        </option> 
                     </select>
                     <textarea type="text" id="inputPremiacao" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 "style='display: none' /></textarea>
