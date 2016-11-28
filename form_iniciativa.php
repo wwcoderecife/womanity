@@ -124,11 +124,11 @@
                 <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
                <div class="form-group">
                     <label class="radio-inline">
-                       <input type="radio" name="iniciativaong1" value="sim" class="form-control-radio" required>sim
+                       <input type="radio" name="sim" value="sim" class="form-control-radio" required>sim
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="iniciativaong2" value="nao" class="form-control-radio" required>nāo
+                        <input type="radio" name="nao" value="nao" class="form-control-radio" required>nāo
                     </label>
                 </div>
 
