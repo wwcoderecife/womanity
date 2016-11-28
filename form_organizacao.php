@@ -876,8 +876,8 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 </div> 
 
                <div class="f1-buttons">
-                    <button type="button" class="btn btn-previous">Previous</button>
-                    <button type="button" class="btn btn-next">Next</button>
+                    <button type="button" class="btn btn-previous">Anterior</button>
+                    <button type="button" class="btn btn-next">Próximo</button>
                 </div>
 
             </fieldset>

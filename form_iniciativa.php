@@ -861,27 +861,27 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Bairro*</label>
-                    <input type="text" name="iniciativa-bairro" placeholder="Bairro..." class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
                         <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-facebook">Rua*</label>
-                    <input type="text" name="iniciativa-rua" placeholder="Rua/Av...*" class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
                         <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número*</label>
-                    <input type="number" name="iniciativa-numero" placeholder="Numero...*"class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="number" name="numero" placeholder="Numero...*"class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
                         <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Complemento*</label>
-                    <input type="text" name="iniciativa-complemento" placeholder="Complemento...*"class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="complemento" placeholder="Complemento...*"class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
                         <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep*</label>
-                    <input type="text" name="iniciativa-cep" id="inputCep"placeholder="CEP...*"class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="cep" id="inputCep"placeholder="CEP...*"class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>              
                 <div class="f1-buttons">
@@ -897,37 +897,37 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 <div class="form-group">
                     <div class="input-group">
                       <span class="input-group-addon"><i class="fa fa-mouse-pointer"></i></span>
-                      <input class="form-control" type="text" placeholder="Site">
+                      <input class="form-control" type="text" name="site" placeholder="Site">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group">
                       <span class="input-group-addon"><i class="fa fa-facebook-official"></i></span>
-                      <input class="form-control" type="text" placeholder="Facebook">
+                      <input class="form-control" type="text" name="facebook"  placeholder="Facebook">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group margin-bottom-sm">
                       <span class="input-group-addon"><i class="fa fa-twitter-square"></i></span>
-                      <input class="form-control" type="text" placeholder="Twitter">
+                      <input class="form-control" type="text" name="twitter" placeholder="Twitter">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group margin-bottom-sm">
                       <span class="input-group-addon"><i class="fa fa-instagram"></i></span>
-                      <input class="form-control" type="text" placeholder="Instagram">
+                      <input class="form-control" type="text" name="instagram" placeholder="Instagram">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group margin-bottom-sm">
                       <span class="input-group-addon"><i class="fa fa-linkedin-square"></i></span>
-                      <input class="form-control" type="text" placeholder="Linkedin">
+                      <input class="form-control" type="text"  name="linkedin" placeholder="Linkedin">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group margin-bottom-sm">
                       <span class="input-group-addon"><i class="fa fa-ellipsis-h"></i></span>
-                      <input class="form-control" type="text" placeholder="Outros">
+                      <input class="form-control" type="text" name="outros" placeholder="Outros">
                     </div>
                 </div>
                 <div class="f1-buttons">
@@ -941,45 +941,45 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 <h5>Iniciativa 1</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="f1-last-name" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="text" name="indica_nome_1" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="email" name="indica_email_1" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
                     
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="inputTel4">
+                    <input type="tel" name="indica_telefone_1" placeholder="Telefone" class="f1-last-name form-control" id="inputTel4">
                 </div>
                 <h5>Iniciativa 2</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="f1-last-name" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="text" name="indica_nome_2" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="text" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">                    
+                    <input type="text" name="indica_email_2" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">                    
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="inputTel5">
+                    <input type="tel" name="indica_telefone_2" placeholder="Telefone" class="f1-last-name form-control" id="inputTel5">
                 </div>
                 <h5>Iniciativa 3</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="f1-last-name" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="text" name="indica_nome_3" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="email" name="indica_email_3" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="inputTel6">
+                    <input type="tel" name="indica_telefone_3" placeholder="Telefone" class="f1-last-name form-control" id="inputTel6">
                 </div>
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
