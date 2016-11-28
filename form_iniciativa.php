@@ -204,7 +204,7 @@
                         <option value="redes">Redes</option> 
                         <option value="outros">Outros</option>  
                     </select>
-                    <input type="text" id="inputoutros" name="inputoutros" class="f1-last-name form-control" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona"style='display: none' />
+                    <input type="text" id="inputoutros" name="inputoutros" class="f1-last-name form-control" placeholder="descreva outro tipo"style='display: none' />
                     <script>
 
                         var dropdownNatureza = document.getElementById('natureza');
