@@ -804,11 +804,12 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
             <option value="carol"type="checkbox">Teatro</option>
         </select>
 
-         <script type="text/javascript">
+<!--
+         <script>
         $('#subtemas').multiSelect();
         </script>
 
-
+-->
 
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
