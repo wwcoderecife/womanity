@@ -61,26 +61,26 @@
                 <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="f1-last-name" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="cargo_1" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="text" name="f1-last-name"  value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="text" name="email_1"  value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name">
                     
                 </div>
                 <h5>Telefone Fixo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="text" name="f1-last-name" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control" id="inputTel1" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control" id="inputTel1" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="text" name="f1-last-name" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control" id="inputCel1" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="celular_1" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control" id="inputCel1" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -88,13 +88,13 @@
                 <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="f1-last-name" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="cargo_2" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
                  <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="text" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="email_2" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                     
                 </div>
@@ -102,13 +102,13 @@
                 <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="text" name="f1-last-name" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control" id="inputTel2"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="telefone_2" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control" id="inputTel2"required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="text" name="f1-last-name" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control" id="inputCel2"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="celular_2" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control" id="inputCel2"required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -146,7 +146,7 @@
                 <h5>Nome da Iniciativa*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Nome</label>
-                    <input type="text" name="iniciativa-nome" maxlength="50" class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="nome" maxlength="50" class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -154,21 +154,21 @@
                 <h5>Sigla da iniciativa:</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Sigla</label>
-                    <input type="text" name="iniciativa-sigla" style="text-transform:uppercase"class="f1-last-name form-control">
+                    <input type="text" name="sigla" style="text-transform:uppercase"class="f1-last-name form-control">
                                     
                 </div>
 
                 <h5>Telefone da iniciativa*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Telefone</label>
-                    <input type="text" name="iniciativa-telefone" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control" id="inputTel3" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="telefone" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control" id="inputTel3" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <h5>E-mail da iniciativa</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Email</label>
-                    <input type="email" name="iniciativa-email"class="f1-last-name form-control"  data-error = "Por favor, informe um e-mail correto">
+                    <input type="email" name="email"class="f1-last-name form-control"  data-error = "Por favor, informe um e-mail correto">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -190,7 +190,7 @@
                 <h5>De qual Natureza?</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="natureza">           
+                    <select class="f1-last-name form-control" id="natureza" name="tipo">           
                         <option value=""></option>
                         <option value="academica">Acadêmica</option>
                         <option value="coletivo">Coletivo</option>
@@ -242,7 +242,7 @@
                 <h5> Quando sua iniciativa começou as atividades?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="year" name="year" required data-error = "Selecione o ano.">
+                    <select class="f1-last-name form-control" id="year" name="anoatividade" required data-error = "Selecione o ano.">
                     <div class="help-block with-errors"></div>
                         <script>
                           var myDate = new Date();
@@ -257,7 +257,7 @@
                <h5>Quantas pessoas estão envolvidas neste trabalho?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="iniciativa-pessoas_envolvidas" required data-error = "Selecione uma opçāo">
+                    <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas" required data-error = "Selecione uma opçāo">
                      <div class="help-block with-errors"></div>
                         <option value=""></option>
                         <option value="1">1-5</option>
@@ -275,19 +275,19 @@
                  <h5>2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
-                    <input type="text" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2014" required data-error="favor preencher, um valor correto.">
+                    <input type="text" name="orcamento_2014" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2014" required data-error="favor preencher, um valor correto.">
                     <div class="help-block with-errors"></div>
                 </div>
                 <h5>2015</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2015</label>
-                    <input type="tex" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2015" required data-error="favor preencher, um valor correto.">
+                    <input type="tex" name="orcamento_2015" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2015" required data-error="favor preencher, um valor correto.">
                     <div class="help-block with-errors"></div>
                 </div>
                 <h5>2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
-                    <input type="tex" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2016"required data-error="favor preencher, um valor correto.">
+                    <input type="tex" name="orcamento_2016" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2016"required data-error="favor preencher, um valor correto.">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -309,8 +309,8 @@
            <h5>O que faz sua iniciativa?* (até 500 caracteres).</h5>                                  
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
-                    <textarea name="sobre_iniciativa" maxlength="500" placeholder="Fale sobre a sua organizaçāo...." 
-                    class="f1-about-yourself form-control" id="sobre_organizacao" required data-error = "Campo está em branco, favor preencher.orac."></textarea>
+                    <textarea name="sobre" maxlength="500" placeholder="Fale sobre a sua organizaçāo...." 
+                    class="f1-about-yourself form-control" id="sobre" required data-error = "Campo está em branco, favor preencher.orac."></textarea>
                     <div class="help-block with-errors">
                 </div>
 
@@ -318,7 +318,7 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="iniciativa-publico" required data-error = "Selecione uma opçāo.">
+                    <select class="f1-last-name form-control" id="publico_alvo" name="publico_alvo" required data-error = "Selecione uma opçāo.">
                     <div class="help-block with-errors"></div> 
                         <option value=""></option>
                         <option value="1">Empresas</option>
@@ -335,7 +335,7 @@
                     <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
                     <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="iniciativa_estado" multiple required data-error = "Selecione uma opçāo.">
+                    <select class="f1-last-name form-control" name="organizacao_estado" multiple required data-error = "Selecione uma opçāo.">
                         <div class="help-block with-errors"></div>
                       <option value="1">Acre</option>
                         <option value="2">Alagoas</option>
@@ -369,29 +369,29 @@
                     <h5>Sua iniciativa influenciou políticas públicas?*</h5>
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="recursos" value="1" class="form-control-radio"> Sim
+                        <input type="radio" name="politicas_publicas" value="nao" class="form-control-radio"> Nāo
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="recursos" value="0" class="form-control-radio"> Nāo
+                        <input type="radio" name="politicas_publicas" value="sim" class="form-control-radio"> Sim
                     </label>
                 </div>
 
                 <div class="form-group">
                    <label class="checkbox-inline">
-                        <input type="checkbox" name="iniciativa-origem1" value="origem1" class="form-control-radio" required data-error = "Selecione uma opçāo.">
+                        <input type="checkbox" name="origem1" value="origem1" class="form-control-radio" required data-error = "Selecione uma opçāo.">
                         <div class="help-block with-errors"></div>municipal 
                     </label>
 
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="iniciativa-origem2" value="origem2" class="form-control-radio"required data-error = "Selecione uma opçāo.">
+                        <input type="checkbox" name="origem2" value="origem2" class="form-control-radio"required data-error = "Selecione uma opçāo.">
                         <div class="help-block with-errors"></div>estadual
                     </label>
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="iniciativa-origem3" value="origem3" class="form-control-radio"required data-error = "Selecione uma opçāo.">
+                        <input type="checkbox" name="origem3" value="origem3" class="form-control-radio"required data-error = "Selecione uma opçāo.">
                         <div class="help-block with-errors"></div>nacional 
                     </label>
-                    <textarea name="sobre_iniciativa" placeholder="Opcional: (campo aberto para detalhar, )"
+                    <textarea name="organizaçāo_politica_publica" placeholder="Opcional: (campo aberto para detalhar, )"
 
                     class="f1-about-yourself form-control" id="sobre_iniciativa"></textarea>
                 </div>
@@ -497,7 +497,7 @@
 <h5>A sua iniciativa recebeu premiações, certificações, etc*?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="premiacao">
+                    <select class="f1-last-name form-control" id="premiacao" name="premiacao"name="comunicacao">
                         <div class="help-block with-errors"></div>
                         <option value=""></option>
                         <option value="0">Nāo</option>
@@ -545,17 +545,17 @@
                  <h5>Nome</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="iniciativa-relaciona1"  class="f1-last-name form-control">
+                    <input type="text" name="relaciona1"  class="f1-last-name form-control">
                 </div>
                 <h5>Nome</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="iniciativa-relaciona2"  class="f1-last-name form-control">
+                    <input type="text" name="relaciona2"   class="f1-last-name form-control">
                 </div>
                 <h5>Nome</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="iniciativa-relaciona3" class="f1-last-name form-control">
+                    <input type="text" name="relaciona3" class="f1-last-name form-control">
                 </div>
 
 
@@ -565,7 +565,7 @@
         <h5>Áreas de atuação da organização: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>
         <div class="form-group" style="border: 1px solid #ddd">
         <div class="table-responsive">
-        <table id="form1" class="table table-hover col-sm-12" required data-error = "Selecione até 3 temas.">
+        <table id="form1" name="temas" class="table table-hover col-sm-12" required data-error = "Selecione até 3 temas.">
 
          <thead>
             <tr>
@@ -708,6 +708,64 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 </script>
 
 
+<h5> Clique e escolha até 3 Subtemas abaixo*</h5>
+<div class="form-group">
+<!--<label for="subtemas" for="f1-google-plus">Subtemas</label>-->
+        <select id="subtemas" name="subtemas" multiple="multiple">
+            <option value="1">Aborto</option>
+            <option value="2">Dança</option>
+            <option value="3">Inserção de mulheres na política</option>
+            <option value="4">Paternidade</option>
+            <option value="5">Tecnologia social e/ou alternativas</option>
+            <option value="6">Desenvolvimento e Programação</option>
+            <option value="7">Liderança</option>
+            <option value="8">Pessoa com deficiência</option>
+            <option value="9">Trabalho digno</option>
+            <option value="10">Advocacy</option>
+            <option value="11">Ecofeminismo</option>
+            <option value="12">Povos tradicionais</option>
+            <option value="13">Tráfico de pessoas</option>
+            <option value="14">Agua e saneamento básico</option>
+            <option value="15">Economia criativa</option>
+            <option value="16">Marketing</option>
+            <option value="17">Preconceito e discriminação</option>
+            <option value="18">Tecnologia</option>
+            <option value="19">Artes plásticas</option>
+            <option value="20">Parto Humanizado</option>
+            <option value="21">Cadeia produtiva responsável</option>
+            <option value="22">Educomunicação</option>
+            <option value="23">Microcrédito</option>
+            <option value="24">Questão presidiária</option>
+            <option value="25">Cinema</option>
+            <option value="26">Envelhecimento</option>
+            <option value="27">Mobilização</option>
+            <option value="28">Reciclagem e logísitca diversa</option>
+            <option value="29">Finanças sociais</option>
+            <option value="30">Mudanças climáticas</option>
+            <option value="32">Redes Sociais</option>
+            <option value="33">Conselhos e outras instâncias</option>
+            <option value="34">Fotografia</option>
+            <option value="35">Mulheres no mundo da ciencias</option>
+            <option value="36">Refugiados</option>
+            <option value="37">Consumo</option>
+            <option value="38">Incentivo à leitura</option>
+            <option value="39">Obesidade infantil</option>
+            <option value="30">Reparação-reconstrução</option>
+            <option value="41">Cooperativismo</option>
+            <option value="42">Inclusão Digital</option>
+            <option value="43">Teatro</option>
+
+        </select>
+
+     </div>
+<!--
+     <script type="text/javascript">
+    $(document).ready(function() {
+    $('#subtemas').multiselect();
+    });
+ </script> --> 
+
+
 
 
                 <div class="f1-buttons">
@@ -722,7 +780,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 <h5>Regiāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="regiao"required data-error = "Selecione uma opçāo.">
+                    <select class="f1-last-name form-control" name="regiao"id="regiao"required data-error = "Selecione uma opçāo.">
                         <div class="help-block with-errors"></div>
                         <option value="norte">Norte</option>
                         <option value="nordeste">Nordeste</option>

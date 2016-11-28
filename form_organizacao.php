@@ -143,7 +143,7 @@
                   
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="organizacao-cnpj">
+                    <select class="f1-last-name form-control" name="cnpj"id="organizacao-cnpj">
                         <option value=""></option>
                         <option value="sim">sim</option>
                         <option value="nao">nao</option>
@@ -233,7 +233,7 @@
                         <option value="negócio social">negócio social</option>
                         <option value="organização da sociedade civil">organização da sociedade civil (ex: associação, ong, oscip, etc)</option>
                         <option value="rede">rede</option>
-                        <option value="outros">outros</option>
+                        <option value="outros">Outros</option>
                     </select> 
                     <input type="text" id="inputoutros" name="inputoutros" class="f1-last-name form-control" placeholder="descreva outro tipo"style='display: none' />
                     <script>
@@ -273,14 +273,13 @@
                  <h5> Quando sua Organizaçāo iniciou as atividades?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="year_organizacao" name="year_organizacao" required data-error = "Selecione uma opçāo.">
+                    <select class="f1-last-name form-control" id="year" name="anoatividade" required data-error = "Selecione o ano.">
+                    <div class="help-block with-errors"></div>
                         <script>
                           var myDate = new Date();
                           var year = myDate.getFullYear();
                           for(var i = 1900; i < year+1; i++){
-                              $('#year_organizacao')
-                                .append($('<option>', { value : i })
-                                .text(i));
+                              document.write('<option value=""'+i+'">'+i+'</option>');
                           }
                           </script>
                     </select>
@@ -289,7 +288,7 @@
                     <h5>Quantas pessoas estão envolvidas neste trabalho?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="organizacao-pessoas_envolvidas" name="pessoas_envolvidas" required data-error = "Selecione uma opçāo.">
+                    <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas" required data-error = "Selecione uma opçāo.">
                         <option value=""></option>
                         <option value="1-5">1-5</option>
                         <option value="6-10">6-10</option>
@@ -334,8 +333,8 @@
                 <h5>O que faz Organizaçāo?*(até 500 caracteres)</h5>                                  
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
-                    <textarea name="sobre_iniciativa" maxlength="500" placeholder="Fale sobre a sua organizaçāo...." 
-                    class="f1-about-yourself form-control" id="sobre_organizacao" required data-error = "Campo está em branco, favor preencher."></textarea>
+                    <textarea name="sobre" maxlength="500" placeholder="Fale sobre a sua organizaçāo...." 
+                    class="f1-about-yourself form-control" id="sobre" required data-error = "Campo está em branco, favor preencher."></textarea>
                 </div>
 
 
@@ -343,7 +342,7 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="organizacao-publico" required data-error = "Selecione uma opçāo." >
+                    <select class="f1-last-name form-control" id="publico_alvo" name="publico_alvo" required data-error = "Selecione uma opçāo." >
                         <option value=""></option>
                         <option value="Empresas">Empresas</option>
                         <option value="Organizações Sociais">Organizações Sociais</option>
@@ -497,7 +496,7 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="organizacao-comunicacao" >
+                    <select class="f1-last-name form-control" id="organizacao-comunicacao" name="comunicacao">
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
@@ -545,7 +544,7 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="premiacao" >
+                    <select class="f1-last-name form-control" id="premiacao" name="premiacao">
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim, quais?</option> 
@@ -611,7 +610,7 @@
         <h5>Áreas de atuação da organização: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>
         <div class="form-group" style="border: 1px solid #ddd">
         <div class="table-responsive">
-        <table id="form1" class="table table-hover col-sm-12" required data-error = "Selecione até 3 temas.">
+        <table id="form1" name="temas"class="table table-hover col-sm-12" required data-error = "Selecione até 3 temas.">
 
          <thead>
             <tr>
