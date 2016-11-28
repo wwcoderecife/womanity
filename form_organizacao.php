@@ -63,83 +63,50 @@
                 <h4>Dados Pessoais Contato 1:</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-<<<<<<< HEAD
-                    <input type="text" name="inputCargo1" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo1" required data-error = "Campo está em branco, favor preencher.">
-=======
                     <input type="text" name="cargo_1" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo1" required data-error = "Campo está em branco, favor preencher.">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-<<<<<<< HEAD
-                    <input type="email" name="email1" placeholder="E-mail" value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name">
-=======
                     <input type="email" name="email_1" placeholder="E-mail" value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-<<<<<<< HEAD
-                    <input type="tel" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name" required data-error = "Campo está em branco, favor preencher.">
-=======
                     <input type="tel" name="telefone_1" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name" required data-error = "Campo está em branco, favor preencher.">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-<<<<<<< HEAD
-                    <input type="tel" name="inputCel1" placeholder="Celular" class="f1-last-name form-control" id="inputCel1"required data-error = "Campo está em branco, favor preencher.">
-=======
                     <input type="tel" name="celular_1" placeholder="Celular" class="f1-last-name form-control" id="inputCel1"required data-error = "Campo está em branco, favor preencher.">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                     <div class="help-block with-errors"></div>
                 </div>
 
                  <h4>Dados Pessoais Contato 2:</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-<<<<<<< HEAD
-                    <input type="text" name="inputCargo2" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo2"required data-error = "Campo está em branco, favor preencher.">
-=======
                     <input type="text" name="cargo_2" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo2"required data-error = "Campo está em branco, favor preencher.">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-<<<<<<< HEAD
-                    <input type="email" name="email2" placeholder="E-mail" class="f1-last-name form-control" id="email2"required data-error = "Campo está em branco, favor preencher.">
-=======
                     <input type="email" name="email_2" placeholder="E-mail" class="f1-last-name form-control" id="email2"required data-error = "Campo está em branco, favor preencher.">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
-                    <div class="help-block with-errors"></div>
-                    
+                    <div class="help-block with-errors"></div>                    
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-<<<<<<< HEAD
-                    <input type="tel" name="inputTel2" placeholder="Telefone" class="f1-last-name form-control" id="inputTel2"required data-error = "Campo está em branco, favor preencher.">
-=======
                     <input type="tel" name="telefone_2" placeholder="Telefone" class="f1-last-name form-control" id="inputTel2"required data-error = "Campo está em branco, favor preencher.">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-<<<<<<< HEAD
-                    <input type="tel" name="inputCel2" placeholder="Celular" class="f1-last-name form-control" id="inputCel2"required data-error = "Campo está em branco, favor preencher.">
-=======
                     <input type="tel" name="celular_2" placeholder="Celular" class="f1-last-name form-control" id="inputCel2"required data-error = "Campo está em branco, favor preencher.">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -165,11 +132,7 @@
                         <option value="nao">nao</option>
                     </select>    
 
-<<<<<<< HEAD
-                    <input type="text" id="inputcnpj" class="f1-last-name form-control" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona"style='display: none' />
-=======
-                    <input type="text" id="inputcnpj" name="inputcnpj" class="f1-last-name form-control" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona"style='display: none' />
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
+                <input type="text" id="inputcnpj" name="inputcnpj" class="f1-last-name form-control" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona"style='display: none' />
                     <script>
 
                         var dropdown = document.getElementById('organizacao-cnpj');
@@ -204,72 +167,44 @@
 
                 <h5>A sua Organizaçāo está localizada na…*</h5>
                 <div class="form-group">
-                   <label class="radio-inline">
-<<<<<<< HEAD
-                        <input type="radio" name="organizacao-zona" value="rural" class="form-control-radio"required>Zona Rural
+                    <label class="radio-inline">
+                       <input type="radio" name="zona" value="rural" class="form-control-radio" required>Zona Rural
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="organizacao-zona" value="urbana" class="form-control-radio"required>Zona Urbana
-=======
-                        <input type="radio" name="zona" value="rural" class="form-control-radio"required>Zona Rural
-                    </label>
-
-                    <label class="radio-inline">
-                        <input type="radio" name="zona" value="urbana" class="form-control-radio"required>Zona Urbana
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
+                        <input type="radio" name="zona" value="urbana" class="form-control-radio" required>Zona Urbana
                     </label>
                 </div>
 
                 <h5>Nome da Organizaçāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Nome</label>
-<<<<<<< HEAD
-                    <input type="text" name="organizacao-nome" maxlength="50" class="f1-last-name form-control"required data-error = "Campo está em branco, favor preencher.">
-=======
                     <input type="text" name="nome" maxlength="50" class="f1-last-name form-control"required data-error = "Campo está em branco, favor preencher.">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                 </div>
 
 
                 <h5>Sigla da Organizaçāo:</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Sigla</label>
-<<<<<<< HEAD
-                    <input type="text" name="organizacao-sigla" style="text-transform:uppercase" class="f1-last-name form-control">
-=======
                     <input type="text" name="sigla" style="text-transform:uppercase" class="f1-last-name form-control">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                 </div>
 
                 <h5>Telefone da Organizaçāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Telefone</label>
-<<<<<<< HEAD
-                    <input type="tel" id="inputTel1" name="organizacao-telefone" placeholder="(xx) xxxxx-xxxx"class="f1-last-name form-control"required data-error = "Campo está em branco, favor preencher.">
-=======
                     <input type="tel" id="telefone" name="organizacao-telefone" placeholder="(xx) xxxxx-xxxx"class="f1-last-name form-control"required data-error = "Campo está em branco, favor preencher.">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                 </div>
 
                 <h5>E-mail da Organizaçāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Email</label>
-<<<<<<< HEAD
-                    <input type="email" name="organizacao-email" class="f1-last-name form-control"class="f1-last-name form-control"required data-error = "Campo está em branco, favor preencher.">
-=======
                     <input type="email" name="email" class="f1-last-name form-control"class="f1-last-name form-control"required data-error = "Campo está em branco, favor preencher.">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                 </div>
 
                  <h5>Como sua organizaçāo se identifica*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus" ></label>
-<<<<<<< HEAD
-                    <select class="f1-last-name form-control" id="organizacao-tipo" required data-error = "Selecione uma opçāo.">
-=======
                     <select class="f1-last-name form-control" id="organizacao-tipo" name="tipo" required data-error = "Selecione uma opçāo.">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                         <option value="academica"> acadêmica</option>
                         <option value="coletivo">coletivo</option>
                         <option value="centro-oeste">empresa privada</option>
@@ -291,14 +226,9 @@
                           var myDate = new Date();
                           var year = myDate.getFullYear();
                           for(var i = 1900; i < year+1; i++){
-<<<<<<< HEAD
-                              document.write('<option value=""'+i+'">'+i+'</option>');
-=======
-                              //document.write('<option value=""'+i+'">'+i+'</option>');
                               $('#year_organizacao')
                                 .append($('<option>', { value : i })
                                 .text(i));
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                           }
                           </script>
                     </select>
@@ -307,26 +237,6 @@
                     <h5>Quantas pessoas estão envolvidas neste trabalho?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-<<<<<<< HEAD
-                    <select class="f1-last-name form-control" id="organizacao-pessoas_envolvidas" required data-error = "Selecione uma opçāo.">
-                        <option value=""></option>
-                        <option value="1">1-5</option>
-                        <option value="2">6-10</option>
-                        <option value="3">11-20</option>
-                        <option value="4">21-50</option>
-                        <option value="5">51-100</option>
-                        <option value="6">101-500</option>
-                        <option value="7">251-1000</option>
-                        <option value="8">501-1000</option>
-                        <option value="9">1001+</option>     
-                    </select>
-
-                    <h5>Qual foi seu orçamento em?*</h5>
-                 <h5>2014</h5>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">2014</label>
-                    <input type="text" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2014" required data-error = "Campo está em branco, favor preencher.">
-=======
                     <select class="f1-last-name form-control" id="organizacao-pessoas_envolvidas" name="pessoas_envolvidas" required data-error = "Selecione uma opçāo.">
                         <option value=""></option>
                         <option value="1-5">1-5</option>
@@ -345,43 +255,27 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
                     <input type="text" name="orcamento_2014" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2014" required data-error = "Campo está em branco, favor preencher.">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
+
                 </div>
                 <h5>2015</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2015</label>
-<<<<<<< HEAD
-                    <input type="text" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2015"required data-error = "Campo está em branco, favor preencher.">
-=======
                     <input type="text" name="orcamento_2015"  placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2015" required data-error = "Campo está em branco, favor preencher.">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                 </div>
                 <h5>2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
-<<<<<<< HEAD
-                    <input type="text" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2016"required data-error = "Campo está em branco, favor preencher.">
-=======
                     <input type="text" name="orcamento_2016"  placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2016"required data-error = "Campo está em branco, favor preencher.">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                 </div>
 
                 <h5>Sua Organizaçāo recebe recursos financeiros?</h5>
                 <div class="form-group">
                    <label class="radio-inline">
-<<<<<<< HEAD
-                        <input type="radio" name="organizacao-recurso1" value="nao" class="form-control-radio">Nāo
-                    </label>
-
-                    <label class="radio-inline">
-                        <input type="radio" name="organizacao-recurso2" value="sim" class="form-control-radio">Sim
-=======
                         <input type="radio" name="recursos" value="1" class="form-control-radio"> Sim
                     </label>
 
                     <label class="radio-inline">
                         <input type="radio" name="recursos" value="0" class="form-control-radio"> Nāo
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                     </label>
                 </div>
 
@@ -437,17 +331,6 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-<<<<<<< HEAD
-                    <select class="f1-last-name form-control" id="organizacao-publico"required data-error = "Selecione uma opçāo." >
-                        <option value=""></option>
-                        <option value="1">Empresas</option>
-                        <option value="2">Organizações Sociais</option>
-                        <option value="3">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher </option>
-                        <option value="4">Movimentos, coletivos, redes, fóruns</option>
-                        <option value="5">Adolescentes e jovens</option>
-                        <option value="6">Homens</option>
-                        <option value="7">Mulheres</option>
-=======
                     <select class="f1-last-name form-control" id="organizacao-publico" required data-error = "Selecione uma opçāo." >
                         <option value=""></option>
                         <option value="Empresas">Empresas</option>
@@ -457,7 +340,6 @@
                         <option value="Adolescentes e jovens">Adolescentes e jovens</option>
                         <option value="Homens">Homens</option>
                         <option value="Mulheres">Mulheres</option>
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                            
                     </select>
 
@@ -467,33 +349,21 @@
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona1"  class="f1-last-name form-control">
                     <textarea name="sobre_iniciativas1" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
-<<<<<<< HEAD
-                    class="f1-about-yourself form-control" id="sobre_iniciativa_ong1"required data-error = "Campo está em branco, favor preencher."></textarea>
-=======
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong1" required data-error = "Campo está em branco, favor preencher."></textarea>
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                 </div>
                 <h5>Nome2</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona2"  class="f1-last-name form-control">
                     <textarea name="sobre_iniciativas2" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
-<<<<<<< HEAD
-                    class="f1-about-yourself form-control" id="sobre_iniciativa_ong2"required data-error = "Campo está em branco, favor preencher."></textarea>
-=======
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong2" required data-error = "Campo está em branco, favor preencher."></textarea>
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                 </div>
                 <h5>Nome3</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona3" class="f1-last-name form-control">
                     <textarea name="sobre_iniciativas3" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
-<<<<<<< HEAD
-                    class="f1-about-yourself form-control" id="sobre_iniciativa_ong3"required data-error = "Campo está em branco, favor preencher."></textarea>
-=======
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong3" required data-error = "Campo está em branco, favor preencher."></textarea>
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                 </div>
 
                 <h5>Clique nos Estados em que sua organizaçāo tem atuação direta*</h5>
@@ -535,35 +405,17 @@
 
                 <div class="form-group">
                    <label class="radio-inline">
-<<<<<<< HEAD
-                        <input type="radio" name="organizacao-politicasim" value="nao" class="form-control-radio">Nāo
-                    </label>
-
-                    <label class="radio-inline">
-                        <input type="radio" name="organizacao-politicanao" value="sim" class="form-control-radio">Sim
-=======
                         <input type="radio" name="politicas_publicas" value="nao" class="form-control-radio"> Nāo
                     </label>
 
                     <label class="radio-inline">
                         <input type="radio" name="politicas_publicas" value="sim" class="form-control-radio"> Sim
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                     </label>
                 </div>
                 
               
                 <div class="form-group">
                    <label class="checkbox-inline">
-<<<<<<< HEAD
-                        <input type="checkbox" name="organizaçāo-origem1" value="origem1" class="form-control-radio">municipal 
-                    </label>
-
-                    <label class="checkbox-inline">
-                        <input type="checkbox" name="organizaçāo-origem2" value="origem2" class="form-control-radio">estadual
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" name="organizaçāo-origem3" value="origem3" class="form-control-radio">nacional 
-=======
                         <input type="checkbox" name="origem1" value="origem1" class="form-control-radio">municipal 
                     </label>
 
@@ -572,7 +424,6 @@
                     </label>
                     <label class="checkbox-inline">
                         <input type="checkbox" name="origem3" value="origem3" class="form-control-radio">nacional 
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                     </label>
                     <textarea name="organizaçāo_politica_publica" placeholder="Opcional: (campo aberto para detalhar, )"
 
@@ -586,28 +437,16 @@
 <h5>Você realiza monitoramento e avaliação sistematizada das atividades da Organizaçāo?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-<<<<<<< HEAD
-                    <select class="f1-last-name form-control" id="organizacao-avaliacao">
-=======
                     <select class="f1-last-name form-control" name="monitoramento_atv" id="avaliacao" >
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim</option>
                     </select>
-<<<<<<< HEAD
-                    <textarea type="text" id="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
-"style='display: none' required data-error = "Campo está em branco, favor preencher."/></textarea>
-                    <script>
-
-                        var dropdown = document.getElementById('organizacao-avaliacao');
-=======
                     <textarea type="text" id="inputAvaliacaoOng" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
-"style='display: none' required data-error = "Campo está em branco, favor preencher."/></textarea>
+                        "style='display: none' required data-error = "Campo está em branco, favor preencher."/></textarea>
                     <script>
 
                         var dropdown = document.getElementById('avaliacao');
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                             
                             function onDropdownChanged()
                             {
@@ -642,11 +481,7 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-<<<<<<< HEAD
-                    <select class="f1-last-name form-control" id="organizacao-comunicacao">
-=======
                     <select class="f1-last-name form-control" id="organizacao-comunicacao" >
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
@@ -692,11 +527,7 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-<<<<<<< HEAD
-                    <select class="f1-last-name form-control" id="organizacao-premiacao">
-=======
                     <select class="f1-last-name form-control" id="premiacao" >
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim, quais?</option> 
@@ -706,11 +537,7 @@
 "style='display: none' required data-error = "Campo está em branco, favor preencher." /></textarea>
                     <script>
 
-<<<<<<< HEAD
-                        var dropdown = document.getElementById('organizacao-premiacao');
-=======
-                        var dropdown = document.getElementById('premiacao');
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
+                    var dropdown = document.getElementById('premiacao');
                             
                             function onDropdownChanged()
                             {
@@ -744,29 +571,17 @@
                  <h5>Nome</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-<<<<<<< HEAD
-                    <input type="text" name="organizacao-relaciona1"  class="f1-last-name form-control" >
-=======
-                    <input type="text" name="relaciona1"  class="f1-last-name form-control">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
+                <input type="text" name="relaciona1"  class="f1-last-name form-control">
                 </div>
                 <h5>Nome</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-<<<<<<< HEAD
-                    <input type="text" name="organizacao-relaciona2"  class="f1-last-name form-control">
-=======
                     <input type="text" name="relaciona2"  class="f1-last-name form-control">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                 </div>
                 <h5>Nome</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-<<<<<<< HEAD
-                    <input type="text" name="organizacao-relaciona3" class="f1-last-name form-control">
-=======
                     <input type="text" name="relaciona3" class="f1-last-name form-control">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                 </div> 
 
                 
@@ -940,11 +755,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
             <fieldset>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Região</label>
-<<<<<<< HEAD
-                    <select class="f1-last-name form-control" id="regiao">
-=======
                     <select class="f1-last-name form-control" name="regiao" id="regiao">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                         <option value="norte">Norte</option>
                         <option value="nordeste">Nordeste</option>
                         <option value="centro-oeste">Centro-Oeste</option>
@@ -954,46 +765,19 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 </div>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Estado</label>
-<<<<<<< HEAD
-                    <select class="f1-last-name form-control" id="estados">
-=======
                     <select class="f1-last-name form-control" name="estado" id="estados">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                         <option value=""></option>
                     </select> 
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cidade</label>
-<<<<<<< HEAD
-                    <select class="f1-last-name form-control" id="cidades"> 
-=======
                     <select class="f1-last-name form-control" name="cidade" id="cidades"> 
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                         <option value=""></option>
                     </select> 
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Bairro</label>
-<<<<<<< HEAD
-                    <input type="text" name="iniciativa-bairro" placeholder="Bairro..." class="f1-last-name form-control">
-                </div>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-facebook">Rua</label>
-                    <input type="text" name="iniciativa-rua" placeholder="Rua/Av...*" class="f1-last-name form-control">
-                </div>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-twitter">Número</label>
-                    <input type="text" name="iniciativa-numero" placeholder="Numero...*" class="f1-last-name form-control">
-                </div>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-google-plus">Complemento</label>
-                    <input type="text" name="iniciativa-complemento" placeholder="Complemento...*" class="f1-last-name form-control">
-                </div>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-google-plus">Cep</label>
-                    <input type="text" name="iniciativa-cep" placeholder="CEP...*" class="f1-last-name form-control">
-=======
-                    <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control">
+                <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-facebook">Rua</label>
@@ -1010,7 +794,6 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep</label>
                     <input type="text" name="cep" placeholder="CEP...*" class="f1-last-name form-control">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                 </div> 
 
                <div class="f1-buttons">
@@ -1026,61 +809,37 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 <div class="form-group">
                     <div class="input-group">
                       <span class="input-group-addon"><i class="fa fa-mouse-pointer"></i></span>
-<<<<<<< HEAD
-                      <input class="form-control" type="text" placeholder="Site">
-=======
-                      <input class="form-control" type="text" name="site" placeholder="Site">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
+                    <input class="form-control" type="text" name="site" placeholder="Site">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group">
                       <span class="input-group-addon"><i class="fa fa-facebook-official"></i></span>
-<<<<<<< HEAD
-                      <input class="form-control" type="text" placeholder="Facebook">
-=======
-                      <input class="form-control" type="text" name="facebook" placeholder="Facebook">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
+                        <input class="form-control" type="text" name="facebook" placeholder="Facebook">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group margin-bottom-sm">
                       <span class="input-group-addon"><i class="fa fa-twitter-square"></i></span>
-<<<<<<< HEAD
-                      <input class="form-control" type="text" placeholder="Twitter">
-=======
-                      <input class="form-control" type="text" name="twitter" placeholder="Twitter">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
+                        <input class="form-control" type="text" name="twitter" placeholder="Twitter">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group margin-bottom-sm">
                       <span class="input-group-addon"><i class="fa fa-instagram"></i></span>
-<<<<<<< HEAD
-                      <input class="form-control" type="text" placeholder="Instagram">
-=======
-                      <input class="form-control" type="text" name="instagram" placeholder="Instagram">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
+                        <input class="form-control" type="text" name="instagram" placeholder="Instagram">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group margin-bottom-sm">
                       <span class="input-group-addon"><i class="fa fa-linkedin-square"></i></span>
-<<<<<<< HEAD
-                      <input class="form-control" type="text" placeholder="Linkedin">
-=======
-                      <input class="form-control" type="text" name="linkedin" placeholder="Linkedin">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
+                        <input class="form-control" type="text" name="linkedin" placeholder="Linkedin">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group margin-bottom-sm">
                       <span class="input-group-addon"><i class="fa fa-ellipsis-h"></i></span>
-<<<<<<< HEAD
-                      <input class="form-control" type="text" placeholder="Outros">
-=======
-                      <input class="form-control" type="text" name="outros" placeholder="Outros">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
+                        <input class="form-control" type="text" name="outros" placeholder="Outros">
                     </div>
                 </div>
                 <div class="f1-buttons">
@@ -1094,72 +853,37 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 <h5>Iniciativa 1</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-<<<<<<< HEAD
-                    <input type="text" name="f1-last-name" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
-=======
                     <input type="text" name="indica_nome_1" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-<<<<<<< HEAD
-                    <input type="email" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
-=======
-                    <input type="email" name="indica_email_1" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
+                <input type="email" name="indica_email_1" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
                     
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-<<<<<<< HEAD
-                    <input type="tel" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="inputTel3">
-=======
-                    <input type="tel" name="indica_telefone_1" placeholder="Telefone" class="f1-last-name form-control" id="inputTel3">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
+                <input type="tel" name="indica_telefone_1" placeholder="Telefone" class="f1-last-name form-control" id="inputTel3">
                 </div>
                 <h5>Iniciativa 2</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-<<<<<<< HEAD
-                    <input type="text" name="f1-last-name" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
-=======
-                    <input type="text" name="indica_nome_2" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
+                <input type="text" name="indica_nome_2" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-<<<<<<< HEAD
-                    <input type="email" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">                    
-                </div>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="inputTel4">
-=======
-                    <input type="email" name="indica_email_2" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">                    
+                <input type="email" name="indica_email_2" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">                    
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
                     <input type="tel" name="indica_telefone_2" placeholder="Telefone" class="f1-last-name form-control" id="inputTel4">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                 </div>
                 <h5>Iniciativa 3</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-<<<<<<< HEAD
-                    <input type="text" name="f1-last-name" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
-                </div>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="">
-                </div>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="inputTel5">
-=======
-                    <input type="text" name="indica_nome_3" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
+                <input type="text" name="indica_nome_3" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
@@ -1168,7 +892,6 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
                     <input type="tel" name="indica_telefone_3" placeholder="Telefone" class="f1-last-name form-control" id="inputTel5">
->>>>>>> fd9d96e3711a2f81e50973e40b91584debba9963
                 </div>
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
