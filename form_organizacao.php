@@ -6,6 +6,18 @@
             <script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>
             <script type="text/javascript"></script>
 
+            <!--bootstrap multiple select-->
+
+            <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>
+
+<!-- (Optional) Latest compiled and minified JavaScript translation files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/i18n/defaults-*.min.js"></script>
+
+
             <!--Include Twitter Bootstrap and jQuery: Subtemas--> 
             <!--<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css"/>-->
             <!--<script src="assets/js/jquery-2.1.3.min.js"></script>-->
