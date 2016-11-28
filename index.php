@@ -169,20 +169,20 @@
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-email">Email *</label>
-                                    <input type="email" name="email" placeholder="Email *" class="f1-email form-control" id="f1-email" required data-error = "Campo está em branco, favor preencher.">
+                                    <input type="email" name="email" placeholder="Email *" class="f1-email form-control" id="f1-email" required data-error = "Por favor, informe um e-mail correto.">
                                     <div class="help-block with-errors"></div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-password">Senha *</label>
-                                    <input type="password" name="password" placeholder="Senha *" class="f1-password form-control" id="f1-password" required data-error = "Campo está em branco, favor preencher.">
+                                    <input type="password" name="password" placeholder="Senha *" class="f1-password form-control" id="f1-password" data-minlenght="6" required data-error = "Mínimo de seis (6) digitos">
                                     <div class="help-block with-errors"></div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-repeat-password">Repetir Senha *</label>
                                     <input type="password" name="f1-repeat-password" placeholder="Repetir Senha *" 
-                                                        class="f1-repeat-password form-control" id="f1-repeat-password"required data-error = "Campo está em branco, favor preencher.">
+                                    class="f1-repeat-password form-control" id="f1-repeat-password" data-match="#f1-password" data-match-error="Atenção! As senhas não estão iguais.">
                                     <div class="help-block with-errors"></div>
                                 </div>
 
