@@ -757,10 +757,16 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
             }
 </script>
 
+  <script type="text/javascript">
+    $(document).ready(function() {
+    $('#subtemas').multiselect();
+    });
+ </script>
+
 
 <h5> Clique e escolha até 3 Subtemas abaixo*</h5>
 <div class="form-group">
-<label for="subtemas" for="f1-google-plus">Subtemas</label>
+<!--<label for="subtemas" for="f1-google-plus">Subtemas</label>-->
         <select id="subtemas" name="subtemas" multiple="multiple">
             <option value="1">Aborto</option>
             <option value="2">Dança</option>
@@ -804,20 +810,13 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
             <option value="41">Cooperativismo</option>
             <option value="42">Inclusão Digital</option>
             <option value="43">Teatro</option>
-
-         <!-- Initialize the plugin: -->
-
         </select>
 
-        <script type="text/javascript">
-                $(document).ready(function() {
-                    $('#subtemas').multiselect();
-                });
-        </script>
+      
 
 
 
-<!-- Script Subtemas -->
+
 
 
                 <div class="f1-buttons">
