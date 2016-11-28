@@ -137,8 +137,8 @@
              <!--Etapa 2 Formulário: Organizaçāo -->
 
         <fieldset>
-                <h5>A sua Organizaçāo está dentro de uma organização juridicamente constituída?*</h5>
-                <h6><em>se, sim digite o CNPJ no campo abaixo.</em></h5>
+                <h5>A sua organização está juridicamente constituída?*</h5>
+                <h6><em>se sim, digite o CNPJ no campo abaixo</em></h5>
              
                   
                  <div class="form-group">
