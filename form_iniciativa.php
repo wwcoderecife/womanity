@@ -54,6 +54,8 @@
                 </div>              
     		</div>
 
+             <!-- Formulário: Tipo Iniciativa -->
+
             <fieldset>
                 <h4>Dados Pessoais Contato 1:</h4>
                 <h5>Cargo*</h5>
@@ -199,7 +201,7 @@
                     <label class="radio-inline">
                         <input type="radio" name="iniciativa-projeto" value="projeto" class="form-control-radio"required data-error = "Campo está em branco, favor preencher.">
                       <div class="help-block with-errors"></div>Projeto
->>>>>>> origin/master
+
                     </label>
                 </div>
 
@@ -229,13 +231,16 @@
                             {
                                 console.log(dropdown.selectedIndex);
                                 //pegando valor do select na variável dropdown
-                                
+                                var meuInput = document.getElementById('inputOutros');
                                 if(dropdown.options[dropdown.selectedIndex].value === "Outros") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor Outros');
                                     //mostra o input quando o valor selecionado for outros
-                                    var meuInput = document.getElementById('inputOutros');
+                                    
                                     meuInput.style.display = 'block';
+                                }else{
+
+                                    meuInput.style.display = 'none';
                                 }
                             }
                             
@@ -250,7 +255,8 @@
                             }
 
                     </script>
-                </div>
+                </div><!--final-->
+                
                 
                 <h5> Quando sua iniciativa começou as atividades?*</h5>
                  <div class="form-group">
@@ -306,7 +312,7 @@
 
 
                 <h5>Sua iniciativa recebe recursos financeiros?</h5>
-<!--HEAD
+
                 
 
               <div class="form-group">
@@ -323,10 +329,10 @@
                 </div>
 
 
--->
 
 
-             <!--   <h5>Qual é a origem?</h5>
+
+            <h5>Qual é a origem?</h5>
 
                 <div class="form-group">                                   
                     <label class="radio-inline">
@@ -341,7 +347,7 @@
                 </div>
 
                   <h5>Qual é a origem?</h5>
->>>>>>> origin/master
+
                 <h5>apoio a projetos / patrocínio</h5>
                 <div class="form-group">
                     <div class="radio">
@@ -380,10 +386,7 @@
                         <input type="radio" name="iniciativa-origem8" value="origem8" class="form-control-radio">Doaçāo Pessoa Física 
                     </label>
                </div>-->
-<!-- HEAD
-           
-=======
->>>>>>> origin/master-->
+
 
            <h5>O que faz sua iniciativa?* (até 500 caracteres).</h5>                                  
                 <div class="form-group">
@@ -393,8 +396,8 @@
                     <div class="help-block with-errors">
                 </div>
 
-                <h5>Qual o público direto atendido pela sua iniciativa?*
-</h5>
+                <h5>Qual o público direto atendido pela sua iniciativa?*</h5>
+
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="iniciativa-publico" required data-error = "Selecione uma opçāo.">
@@ -447,16 +450,11 @@
 
                     <h5>Sua iniciativa influenciou políticas públicas?*</h5>
                 <div class="form-group">
-<!--<<<<<<< HEAD
                     <div class="radio">
-                     <label  class="radio-inline">
-                        <input type="radio" name="iniciativa-politica_sim" value="nao" class="form-control-radio">
-                        </div>Nāo
-=======
                    <label class="radio-inline">
                         <input type="radio" name="iniciativa-politica_sim" id="iniciativa-politica1" value="nao" class="form-control-radio">
                         Nāo
->>>>>>> origin/master-->
+
                     </label>
 
                     <label class="radio-inline">
@@ -465,7 +463,6 @@
                     </label>
                 </div>
 
-              
                 <div class="form-group">
                    <label class="checkbox-inline">
                         <input type="checkbox" name="iniciativa-origem1" value="origem1" class="form-control-radio" required data-error = "Selecione uma opçāo.">
@@ -485,60 +482,53 @@
                     class="f1-about-yourself form-control" id="sobre_iniciativa"></textarea>
                 </div>
 
-
-
-
 <!-- 26 Iniciativa-->
 
 
 <h5>Você realiza monitoramento e avaliação sistematizada das atividades desta iniciativa?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="iniciativa-avaliacao">
-                 </div>
+                    <select class="f1-last-name form-control" name="monitoramento_atv" id="avaliacao">
                         <option value=""></option>
                         <option value="0">Nāo</option>
-<!--<<<<<<< HEAD
-                        <option value="1">Sim</option> 
-                    
-=======
                         <option value="1">Sim</option>
-                         
-                       
->>>>>>> origin/master-->
                     </select>
-                    <textarea type="text" id="inputAvaliacao" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
-"style='display: none'></textarea>
+                    <textarea type="text" id="inputAvaliacaoOng" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
+                        "style='display: none' required data-error = "Campo está em branco, favor preencher."/></textarea>
                     <script>
 
-                        var dropdown = document.getElementById('iniciativa-avaliacao');
+                        var dropdownAvaliacao = document.getElementById('avaliacao');
                             
-                            function onDropdownChanged()
+                            function onDropdownChangedAvaliacao()
                             {
-                                console.log(dropdown.selectedIndex);
-                                //pegando valor do select na variável dropdown
+                                console.log(dropdownAvaliacao.selectedIndex);
+                                var meuInput1 = document.getElementById('inputAvaliacaoOng');
+                                //pegando valor do select na variável dropdownAvaliacao
+
                                 
-                                if(dropdown.options[dropdown.selectedIndex].value === "1") {
+                                if(dropdownAvaliacao.options[dropdownAvaliacao.selectedIndex].value == "1") {
                                     //faz algo quando o valor selecionado for outros
-                                    console.log('Selecionou o valor Outros');
+                                    console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for outros
-                                    var meuInput1 = document.getElementById('inputAvaliacao');
+                                    
                                     meuInput1.style.display = 'block';
+                                }else{
+                                    meuInput1.style.display = 'none';
                                 }
                             }
                             
-                            if (dropdown.addEventListener)
+                            if (dropdownAvaliacao.addEventListener)
                             {
-                                dropdown.addEventListener('change', onDropdownChanged, false);
+                                dropdownAvaliacao.addEventListener('change', onDropdownChangedAvaliacao, false);
                             }
                             else
                             {
                                 // suporte para o IE
-                                dropdown.attachEvent('onchange', onDropdownChanged, false);
+                                dropdownAvaliacao.attachEvent('onchange', onDropdownChangedAvaliacao, false);
                             }
 
                     </script>
-                </div><!--26/Inicitiva-->
+                </div><!--27/Organizacao-->
 
 <!-- 27 Iniciativa-->
 
@@ -549,43 +539,39 @@
                     <select class="f1-last-name form-control" id="iniciativa-comunicacao">
                         <div class="help-block with-errors"></div>
                         <option value=""></option>
-                        <option value="0">Nāo</option>
-<!--<<<<<<< HEAD
-                        <option value="1">Sim, qual?</option>     
-=======
-                        <option value="1">Sim, qual?</option>
-                         
-                        
->>>>>>> origin/master-->
+                        <option value="0">Nāo</option>    
+                        <option value="1">Sim, qual?</option>      
                     </select>
                     <textarea type="text" id="inputComunicacao" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 "style='display: none'></textarea>
                     <script>
 
-                        var dropdown = document.getElementById('iniciativa-comunicacao');
+                        var dropdownComun = document.getElementById('iniciativa-comunicacao');
                             
-                            function onDropdownChanged()
+                            function onDropdownChangedComun()
                             {
-                                console.log(dropdown.selectedIndex);
+                                console.log(dropdownComun.selectedIndex);
                                 //pegando valor do select na variável dropdown
-                                
+                                 var meuInput1 = document.getElementById('inputComunicacao');
                                 if(dropdown.options[dropdown.selectedIndex].value === "1") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for outros
-                                    var meuInput1 = document.getElementById('inputComunicacao');
+                                   
                                     meuInput1.style.display = 'block';
+                                }else{
+                                    meuInput1.style.display = 'none';
                                 }
                             }
                             
                             if (dropdown.addEventListener)
                             {
-                                dropdown.addEventListener('change', onDropdownChanged, false);
+                                dropdown.addEventListener('change', onDropdownChangedComun, false);
                             }
                             else
                             {
                                 // suporte para o IE
-                                dropdown.attachEvent('onchange', onDropdownChanged, false);
+                                dropdown.attachEvent('onchange', onDropdownChangedComun, false);
                             }
 
                     </script>
@@ -595,49 +581,45 @@
 
       <!-- 28 Iniciativa-->
 
-<h5>A sua iniciativa recebeu premiações, certificações, etc*?
-*</h5>
+<h5>A sua iniciativa recebeu premiações, certificações, etc*?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="iniciativa-premiacao">
+                    <select class="f1-last-name form-control" id="premiacao">
                         <div class="help-block with-errors"></div>
                         <option value=""></option>
                         <option value="0">Nāo</option>
-                        <option value="1">Sim, quais?</option>
-                         
-<!--<<<<<<< HEAD
-=======
-                        
->>>>>>> origin/master-->
+                        <option value="1">Sim, quais?</option>    
                     </select>
                     <textarea type="text" id="inputPremiacao" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 "style='display: none'></textarea>
                     <script>
 
-                        var dropdown = document.getElementById('iniciativa-premiacao');
+                        var dropdown = document.getElementById('premiacao');
                             
-                            function onDropdownChanged()
+                            function onDropdownChangedPremiacao()
                             {
                                 console.log(dropdown.selectedIndex);
                                 //pegando valor do select na variável dropdown
-                                
+                                var meuInput = document.getElementById('inputPremiacao');
                                 if(dropdown.options[dropdown.selectedIndex].value === "1") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for outros
-                                    var meuInput = document.getElementById('inputPremiacao');
+                                    
                                     meuInput.style.display = 'block';
+                                }else{
+                                    meuInput.style.display = 'none';
                                 }
                             }
                             
                             if (dropdown.addEventListener)
                             {
-                                dropdown.addEventListener('change', onDropdownChanged, false);
+                                dropdown.addEventListener('change', onDropdownChangedPremiacao, false);
                             }
                             else
                             {
                                 // suporte para o IE
-                                dropdown.attachEvent('onchange', onDropdownChanged, false);
+                                dropdown.attachEvent('onchange', onDropdownChangedPremiacao, false);
                             }
 
                     </script>
