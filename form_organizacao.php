@@ -226,7 +226,40 @@
                         <option value="rede">rede</option>
                          <option value="outros">outros</option>
                     </select> 
+                    <input type="text" id="inputoutros" name="inputoutros" class="f1-last-name form-control" placeholder="descreva outro tipo"style='display: none' />
+                    <script>
+
+                        var dropdownIdentifica = document.getElementById('natureza');
+                            
+                            function onDropdownChangedIDENTIFICA()
+                            {
+                                console.log(dropdownIdentifica.selectedIndex);
+                                //pegando valor do select na variável dropdownCnpj
+                                var meuInput = document.getElementById('inputoutros');
+                                if(dropdownIdentifica.options[dropdownIdentifica.selectedIndex].value === "outros") {
+                                    //faz algo quando o valor selecionado for sim
+                                    console.log('Selecionou o valor');
+                                    //mostra o input quando o valor selecionado for sim, tem cnpj
+                                    
+                                    meuInput.style.display = 'block';
+                                }else{
+                                    meuInput.style.display = 'none';
+                                }
+                            }
+                            
+                            if (dropdownIdentifica.addEventListener)
+                            {
+                                dropdownIdentifica.addEventListener('change', onDropdownChangedIDENTIFICA, false);
+                            }
+                            else
+                            {
+                                // suporte para o IE
+                                dropdownNatureza.attachEvent('onchange', onDropdownChangedIDENTIFICA, false);
+                            }
+
+                    </script>
                 </div>
+
 
                  <h5> Quando sua Organizaçāo iniciou as atividades?*</h5>
                  <div class="form-group">
