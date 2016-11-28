@@ -6,13 +6,10 @@
             <script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>
             <script type="text/javascript"></script>
 
-            <!-- Include Twitter Bootstrap and jQuery: Subtemas 
+            <!--Include Twitter Bootstrap and jQuery: Subtemas--> 
             <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css"/>
-            <script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
-            <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
-            -->
-            
-            
+            <script type="text/javascript" src="assets/js/jquery-2.1.3.min.js"></script>
+           
             Include the plugin's CSS and JS:Subtemad 
             <link rel="stylesheet" href="assets/css/bootstrap-multiselect.css" type="text/css">
             <script type="text/javascript" src="assets/js/bootstrap-multiselect.js"></script>
@@ -33,17 +30,6 @@
             });
             </script>
 
-        <!--
-            <script type="text/javascript">
-            $(document).ready(function() {
-                $('#subtemas').multiselect();
-            });
-            </script>
-            
-         -->   
-
-
-          
 
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
@@ -818,6 +804,15 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
             <option value="carol">Cooperativismo</option>
             <option value="carol">Inclusão Digital</option>
             <option value="carol">Teatro</option>
+
+         <!-- Initialize the plugin: -->
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $('#example-getting-started').multiselect();
+                });
+            </script>
+
+
         </select>
 
 
