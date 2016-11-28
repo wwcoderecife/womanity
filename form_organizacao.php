@@ -5,7 +5,7 @@
             <script src="assets/js/validator.min.js"></script>
             <script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>
             <script type="text/javascript"></script>
-            <script type="text/javascript" src="js/jquery.multi-select.js"></script>
+            <script type="text/javascript" src="assets/js/jquery.multi-select.js"></script>
 
             <script>
               jQuery(function($){
@@ -802,6 +802,12 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
             <option value="carol">Inclusão Digital</option>
             <option value="carol">Teatro</option>
         </select>
+
+         <script type="text/javascript">
+        $('#subtemas').multiSelect();
+        </script>
+
+
 
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
