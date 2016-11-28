@@ -116,14 +116,14 @@
                  <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="telefone_2" placeholder="Telefone" class="f1-last-name form-control" id="inputTel2"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="tel" name="telefone_2" placeholder="Telefone" class="f1-last-name form-control" id="inputTel2"required data-error = "Por favor, preencha corretamente o campo (xx) xxxx-xxxx.">
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_2" placeholder="Celular" class="f1-last-name form-control" id="inputCel2"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="tel" name="celular_2" placeholder="Celular" class="f1-last-name form-control" id="inputCel2"required data-error = "Por favor, preencha corretamente o campo (xx) xxxxx-xxxx.">
                     <div class="help-block with-errors"></div>
                 </div>
 

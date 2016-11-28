@@ -71,16 +71,16 @@
                     <input type="text" name="email_1"  value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name">
                     
                 </div>
-                <h5>Telefone Fixo*</h5>
+                <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="text" name="telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control" id="inputTel1" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="tel" name="telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control" id="inputTel1" required data-error="Por favor, preencha corretamente o campo (xx) xxxx-xxxx.">
                     <div class="help-block with-errors"></div>
                 </div>
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="text" name="celular_1" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control" id="inputCel1" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="celular_1" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control" id="inputCel1" required data-error="Por favor, preencha corretamente o campo (xx) xxxxx-xxxx.">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -102,13 +102,13 @@
                 <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="text" name="telefone_2" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control" id="inputTel2"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="telefone_2" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control" id="inputTel2"required data-error = "Por favor, preencha corretamente o campo (xx) xxxx-xxxx.">
                     <div class="help-block with-errors"></div>
                 </div>
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="text" name="celular_2" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control" id="inputCel2"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="celular_2" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control" id="inputCel2"required data-error = "Por favor, preencha corretamente o campo (xx) xxxxx-xxxx.">
                     <div class="help-block with-errors"></div>
                 </div>
 
