@@ -806,13 +806,16 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
             <option value="41">Cooperativismo</option>
             <option value="42">Inclusão Digital</option>
             <option value="43">Teatro</option>
-        </select>
+
 
 <script type="text/javascript">
     $(document).ready(function() {
     $('#subtemas').multiselect();
     });
  </script>
+
+        </select>
+
 
       
 
