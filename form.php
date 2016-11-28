@@ -74,7 +74,7 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li>
 
-                            <span>Sem bem vindo(a)</span><br>
+                            <span>Sem bem-vindo(a)</span><br>
                             <span title="Sair do Sistema"><a href="?logout=sair" class="logout">Sair do sistema</a></span>
 						</li>
 					</ul>
@@ -92,7 +92,7 @@
                         <div class="description">
                        	    <p>
                                 <strong>Ecossistema de Atores pelos Direitos e Empoderamento das Mulheres:</strong>:<br>
-                                 Interconexões para maximizar impacto.</br>
+                                 Interconexões para maximizar impacto</br>
                             
                             </p>
                         </div>

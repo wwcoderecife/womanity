@@ -135,7 +135,7 @@
                         <div class="description">
                        	    <p>
                                 <strong>Ecossistema de Atores pelos Direitos e Empoderamento das Mulheres:</strong><br>
-                                 Interconexões para maximizar impacto.</br>
+                                 Interconexões para maximizar impacto</br>
                             
                             </p>
                         </div>
