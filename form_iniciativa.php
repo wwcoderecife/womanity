@@ -447,18 +447,17 @@
 
 <!-- 27 Iniciativa-->
 
-<h5>Sua iniciativa tem uma estratégia de comunicação própria?*</h5>
+<h5>Sua Organizaçāo tem uma estratégia de comunicação própria?*</h5>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="iniciativa-comunicacao">
-                        <div class="help-block with-errors"></div>
+                    <select class="f1-last-name form-control" id="iniciativa-comunicacao" >
                         <option value=""></option>
-                        <option value="0">Nāo</option>    
-                        <option value="1">Sim, qual?</option>      
+                        <option value="0">Nāo</option>
+                        <option value="1">Sim, qual?</option>
                     </select>
-                    <textarea type="text" id="inputComunicacao" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
-"style='display: none'></textarea>
+                    <textarea type="text" id="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
+"style='display: none' required data-error = "Campo está em branco, favor preencher."/></textarea>
                     <script>
 
                         var dropdownComun = document.getElementById('iniciativa-comunicacao');
@@ -467,30 +466,30 @@
                             {
                                 console.log(dropdownComun.selectedIndex);
                                 //pegando valor do select na variável dropdown
-                                 var meuInput1 = document.getElementById('inputComunicacao');
-                                if(dropdown.options[dropdown.selectedIndex].value === "1") {
+                                var meuInput1 = document.getElementById('inputComunicacaoOng');
+                                if(dropdownComun.options[dropdownComun.selectedIndex].value == "1") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for outros
-                                   
+                                    
                                     meuInput1.style.display = 'block';
                                 }else{
                                     meuInput1.style.display = 'none';
                                 }
                             }
                             
-                            if (dropdown.addEventListener)
+                            if (dropdownComun.addEventListener)
                             {
-                                dropdown.addEventListener('change', onDropdownChangedComun, false);
+                                dropdownComun.addEventListener('change', onDropdownChangedComun, false);
                             }
                             else
                             {
                                 // suporte para o IE
-                                dropdown.attachEvent('onchange', onDropdownChangedComun, false);
+                                dropdownComun.attachEvent('onchange', onDropdownChangedComun, false);
                             }
 
                     </script>
-                </div><!--27/Inicitiva-->
+                </div><!--28/Organizacao-->
 
 
 
