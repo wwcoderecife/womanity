@@ -84,10 +84,10 @@
                     <div class="help-block with-errors"></div>
                 </div>
 
-                 <h5>Telefone Fixo*</h5>
+                 <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="telefone_1" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="tel" name="telefone_1" placeholder="Telefone" class="f1-last-name form-control" id="inputTel1" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
