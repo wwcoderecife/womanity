@@ -5,11 +5,7 @@
             <script src="assets/js/validator.min.js"></script>
             <script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>
             <script type="text/javascript"></script>
-            <script src="//code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-            <script type="text/javascript" src="assets/js/jquery.multi-select.js"></script>
-            <link rel="stylesheet" type="text/css" href="assets/css/example-styles.css">
-            <link rel="stylesheet" type="text/css" href="assets/css/demo-styles.css">
-
+            
             <script>
               jQuery(function($){
               $("#inputTel1").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
@@ -757,48 +753,48 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 <div class="form-group">
 <label for="subtemas" class="sr-only" for="f1-google-plus">Subtemas</label>
         <select id="subtemas" name="subtemas" multiple>
-            <option value="alice" type="checkbox">Aborto</option>
-            <option value="bob"type="checkbox">Dança</option>
-            <option value="carol"type="checkbox">Inserção de mulheres na política</option>
-            <option value="carol"type="checkbox">Paternidade</option>
-            <option value="carol"type="checkbox">Tecnologia social e/ou alternativas</option>
-            <option value="carol"type="checkbox">Desenvolvimento e Programação</option>
-            <option value="carol"type="checkbox">Liderança</option>
-            <option value="carol"type="checkbox">Pessoa com deficiência</option>
-            <option value="carol"type="checkbox">Trabalho digno</option>
-            <option value="carol"type="checkbox">Advocacy</option>
-            <option value="carol"type="checkbox">Ecofeminismo</option>
-            <option value="carol"type="checkbox">Povos tradicionais</option>
-            <option value="carol"type="checkbox">Tráfico de pessoas</option>
-            <option value="carol"type="checkbox">Agua e saneamento básico</option>
-            <option value="carol"type="checkbox">Economia criativa</option>
-            <option value="carol"type="checkbox">Marketing</option>
-            <option value="carol"type="checkbox">Preconceito e discriminação</option>
-            <option value="carol"type="checkbox">Tecnologia</option>
-            <option value="carol"type="checkbox">Artes plásticas</option>
-            <option value="carol"type="checkbox">Parto Humanizado</option>
-            <option value="carol"type="checkbox">Cadeia produtiva responsável</option>
-            <option value="carol"type="checkbox">Educomunicação</option>
-            <option value="carol"type="checkbox">Microcrédito</option>
-            <option value="carol"type="checkbox">Questão presidiária</option>
-            <option value="carol"type="checkbox">Cinema</option>
-            <option value="carol"type="checkbox">Envelhecimento</option>
-            <option value="carol"type="checkbox">Mobilização</option>
-            <option value="carol"type="checkbox">Reciclagem e logísitca diversa</option>
-            <option value="carol"type="checkbox">Finanças sociais</option>
-            <option value="carol"type="checkbox">Mudanças climáticas</option>
-            <option value="carol"type="checkbox">Redes Sociais</option>
-            <option value="carol"type="checkbox">Conselhos e outras instâncias</option>
-            <option value="carol"type="checkbox">Fotografia</option>
-            <option value="carol"type="checkbox">Mulheres no mundo da ciencias</option>
-            <option value="carol"type="checkbox">Refugiados</option>
-            <option value="carol"type="checkbox">Consumo</option>
-            <option value="carol"type="checkbox">Incentivo à leitura</option>
-            <option value="carol"type="checkbox">Obesidade infantil</option>
-            <option value="carol"type="checkbox">Reparação-reconstrução</option>
-            <option value="carol"type="checkbox">Cooperativismo</option>
-            <option value="carol"type="checkbox">Inclusão Digital</option>
-            <option value="carol"type="checkbox">Teatro</option>
+            <option value="alice">Aborto</option>
+            <option value="bob">Dança</option>
+            <option value="carol">Inserção de mulheres na política</option>
+            <option value="carol">Paternidade</option>
+            <option value="carol">Tecnologia social e/ou alternativas</option>
+            <option value="carol">Desenvolvimento e Programação</option>
+            <option value="carol">Liderança</option>
+            <option value="carol">Pessoa com deficiência</option>
+            <option value="carol">Trabalho digno</option>
+            <option value="carol">Advocacy</option>
+            <option value="carol">Ecofeminismo</option>
+            <option value="carol">Povos tradicionais</option>
+            <option value="carol">Tráfico de pessoas</option>
+            <option value="carol">Agua e saneamento básico</option>
+            <option value="carol">Economia criativa</option>
+            <option value="carol">Marketing</option>
+            <option value="carol">Preconceito e discriminação</option>
+            <option value="carol">Tecnologia</option>
+            <option value="carol">Artes plásticas</option>
+            <option value="carol">Parto Humanizado</option>
+            <option value="carol">Cadeia produtiva responsável</option>
+            <option value="carol">Educomunicação</option>
+            <option value="carol">Microcrédito</option>
+            <option value="carol">Questão presidiária</option>
+            <option value="carol">Cinema</option>
+            <option value="carol">Envelhecimento</option>
+            <option value="carol">Mobilização</option>
+            <option value="carol">Reciclagem e logísitca diversa</option>
+            <option value="carol">Finanças sociais</option>
+            <option value="carol">Mudanças climáticas</option>
+            <option value="carol">Redes Sociais</option>
+            <option value="carol">Conselhos e outras instâncias</option>
+            <option value="carol">Fotografia</option>
+            <option value="carol">Mulheres no mundo da ciencias</option>
+            <option value="carol">Refugiados</option>
+            <option value="carol">Consumo</option>
+            <option value="carol">Incentivo à leitura</option>
+            <option value="carol">Obesidade infantil</option>
+            <option value="carol">Reparação-reconstrução</option>
+            <option value="carol">Cooperativismo</option>
+            <option value="carol">Inclusão Digital</option>
+            <option value="carol">Teatro</option>
         </select>
 
 <!--
