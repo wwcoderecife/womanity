@@ -202,43 +202,42 @@
                         <option value="negocio_social">Negócio Social</option>
                         <option value="ong_sociedade_civil">Organização da Sociedade Civil (ex: associação, ong, oscip, etc)
                         <option value="redes">Redes</option> 
-                        <option value="Outros">Outros</option>  
+                        <option value="outros">Outros</option>  
                     </select>
-                    <input type="text" id="inputoutros" name="inputoutros" class="f1-last-name form-control" placeholder="Descreva outro tipo..."style='display: none' />
+                    <input type="text" id="inputoutros" name="inputoutros" class="f1-last-name form-control" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona"style='display: none' />
                     <script>
 
                         var dropdownNatureza = document.getElementById('natureza');
                             
-                            function onDropdownChangedNatureza()
+                            function onDropdownChangedNATUREZA()
                             {
                                 console.log(dropdownNatureza.selectedIndex);
-                                //pegando valor do select na variável dropdown
+                                //pegando valor do select na variável dropdownCnpj
                                 var meuInput = document.getElementById('inputoutros');
-                                if(dropdownNatureza.options[dropdownNatureza.selectedIndex].value === "Outros") {
-                                    //faz algo quando o valor selecionado for outros
-                                    console.log('Selecionou o valor Outros');
-                                    //mostra o input quando o valor selecionado for outros
+                                if(dropdownNatureza.options[dropdownNatureza.selectedIndex].value === "outros") {
+                                    //faz algo quando o valor selecionado for sim
+                                    console.log('Selecionou o valor');
+                                    //mostra o input quando o valor selecionado for sim, tem cnpj
                                     
                                     meuInput.style.display = 'block';
                                 }else{
-
                                     meuInput.style.display = 'none';
                                 }
                             }
                             
-                            if (dropdown.addEventListener)
+                            if (dropdownNatureza.addEventListener)
                             {
-                                dropdown.addEventListener('change', onDropdownChangedNatureza, false);
+                                dropdownNatureza.addEventListener('change', onDropdownChangedNATUREZA, false);
                             }
                             else
                             {
                                 // suporte para o IE
-                                dropdown.attachEvent('onchange', onDropdownChangedNatureza, false);
+                                dropdownNatureza.attachEvent('onchange', onDropdownChangedNATUREZA, false);
                             }
 
                     </script>
-                </div><!--final-->
-
+                </div>
+                    
                 
                 <h5> Quando sua iniciativa começou as atividades?*</h5>
                  <div class="form-group">
