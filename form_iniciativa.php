@@ -154,7 +154,7 @@
                 <h5>Sigla da iniciativa:</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Sigla</label>
-                    <input type="text" name="sigla" style="text-transform:uppercase"class="f1-last-name form-control">
+                    <input type="text" name="sigla" class="f1-last-name form-control">
                                     
                 </div>
 
