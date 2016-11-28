@@ -22,6 +22,11 @@
             });
             </script>
 
+             <!-- CSS Menu Select Subtemas
+         ================================================== -->
+          <link rel="stylesheet" type="text/css" href="assets/css/example-styles.css">
+          <link rel="stylesheet" type="text/css" href="assets/css/demo-styles.css">
+
 
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
@@ -753,7 +758,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 <h5> Clique e escolha até 3 Subtemas abaixo*</h5>
 <div class="form-group">
 <label for="subtemas" class="sr-only" for="f1-google-plus">Subtemas</label>
-        <select id="subtemas" name="subtemas" checkbox>
+        <select id="subtemas" name="subtemas" multiple>
             <option value="alice">Aborto</option>
             <option value="bob">Dança</option>
             <option value="carol">Inserção de mulheres na política</option>
