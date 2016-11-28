@@ -10,7 +10,7 @@
             <!--<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css"/>-->
             <script type="text/javascript" src="assets/js/jquery-2.1.3.min.js"></script>
            
-            Include the plugin's CSS and JS:Subtemad 
+            <!--Include the plugin's CSS and JS:Subtemad--> 
             <link rel="stylesheet" href="assets/css/bootstrap-multiselect.css" type="text/css">
             <script type="text/javascript" src="assets/js/bootstrap-multiselect.js"></script>
             
@@ -808,24 +808,16 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
             <option value="43">Teatro</option>
 
         </select>
-        <!--
-<script type="text/javascript">
+        
+ <script type="text/javascript">
     $(document).ready(function() {
     $('#subtemas').multiselect();
     });
  </script> 
- --> 
+ 
 
      </div> 
      
-
-
-
-      
-
-
-
-
 
 
                 <div class="f1-buttons">
