@@ -256,7 +256,7 @@
 
                     </script>
                 </div><!--final-->
-                
+
                 
                 <h5> Quando sua iniciativa começou as atividades?*</h5>
                  <div class="form-group">
@@ -327,9 +327,6 @@
                         </div> Não
                     </label>
                 </div>
-
-
-
 
 
             <h5>Qual é a origem?</h5>
