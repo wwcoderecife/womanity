@@ -7,6 +7,8 @@
             <script type="text/javascript"></script>
             <script src="//code.jquery.com/jquery-3.1.1.slim.min.js"></script>
             <script type="text/javascript" src="assets/js/jquery.multi-select.js"></script>
+            <link rel="stylesheet" type="text/css" href="assets/css/example-styles.css">
+            <link rel="stylesheet" type="text/css" href="assets/css/demo-styles.css">
 
             <script>
               jQuery(function($){
@@ -22,12 +24,7 @@
              
             });
             </script>
-
-             <!-- CSS Menu Select Subtemas
-         ================================================== -->
-          <link rel="stylesheet" type="text/css" href="assets/css/example-styles.css">
-          <link rel="stylesheet" type="text/css" href="assets/css/demo-styles.css">
-
+          
 
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
