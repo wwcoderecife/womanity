@@ -808,11 +808,13 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
             <option value="43">Teatro</option>
 
         </select>
+        <!--
 <script type="text/javascript">
     $(document).ready(function() {
     $('#subtemas').multiselect();
     });
- </script>  
+ </script> 
+ --> 
 
      </div> 
      
