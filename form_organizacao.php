@@ -757,11 +757,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
             }
 </script>
 
-  <script type="text/javascript">
-    $(document).ready(function() {
-    $('#subtemas').multiselect();
-    });
- </script>
+  
 
 
 <h5> Clique e escolha até 3 Subtemas abaixo*</h5>
@@ -811,6 +807,12 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
             <option value="42">Inclusão Digital</option>
             <option value="43">Teatro</option>
         </select>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+    $('#subtemas').multiselect();
+    });
+ </script>
 
       
 
