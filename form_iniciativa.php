@@ -177,11 +177,11 @@
 
                 <div class="form-group">
                     <label class="radio-inline">
-                       <input type="radio" name="zona" value="rural" class="form-control-radio" required>Zona Rural
+                       <input type="radio" name="identifica" value="acao" class="form-control-radio" required>Açāo
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="zona" value="urbana" class="form-control-radio" required>Zona Urbana
+                        <input type="radio" name="identifica" value="projeto" class="form-control-radio" required>Projeto
                     </label>
                 </div>
 
