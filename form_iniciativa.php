@@ -177,6 +177,7 @@
 
 
                 <h5>Como sua iniciativa se identifica?*</h5>
+<<<<<<< HEAD
                 <div class="form-group">
                      <div class="radio">
                       <label class="radio-inline">
@@ -188,6 +189,17 @@
                         <div class="radio">
                           <input type="radio" name="iniciativa-projeto" value="projeto" class="form-control-radio" required data-error = "Campo está em branco, favor preencher.">
                         <div class="help-block with-errors"></div> Projeto
+=======
+                <div class="form-group">                                   
+                    <label class="radio-inline">
+                        <input type="radio" name="iniciativa-acao" value="acao" class="form-control-radio"required data-error = "Campo está em branco, favor preencher.">
+                        <div class="help-block with-errors"></div>Açāo
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="iniciativa-projeto" value="projeto" class="form-control-radio"required data-error = "Campo está em branco, favor preencher.">
+                      <div class="help-block with-errors"></div>Projeto
+>>>>>>> origin/master
                     </label>
                 </div>
 
@@ -206,8 +218,7 @@
                         <option value="negocio_social">Negócio Social</option>
                         <option value="ong_sociedade_civil">Organização da Sociedade Civil (ex: associação, ong, oscip, etc)
                         <option value="redes">Redes</option> 
-                        <option value="Outros">Outros</option> 
-                        </option> 
+                        <option value="Outros">Outros</option>  
                     </select>
                     <input type="text" id="inputOutros" class="f1-last-name form-control" placeholder="Descreva outro tipo..."style='display: none' />
                     <script>
@@ -295,6 +306,7 @@
 
 
                 <h5>Sua iniciativa recebe recursos financeiros?</h5>
+<<<<<<< HEAD
                 
 
               <div class="form-group">
@@ -313,6 +325,21 @@
 
 <!--
                 <h5>Qual é a origem?</h5>
+=======
+                <div class="form-group">                                   
+                    <label class="radio-inline">
+                        <input type="radio" name="iniciativa-recurso1" id="iniciativa-recurso1" value="sim" class="form-control-radio"required data-error = "Campo está em branco, favor preencher.">
+                        <div class="help-block with-errors"></div> Sim
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="iniciativa-recurso2" id="iniciativa-recurso2" value="nao" class="form-control-radio"required data-error = "Campo está em branco, favor preencher.">
+                        <div class="help-block with-errors"></div> Não
+                    </label>
+                </div>
+                <!--
+                  <h5>Qual é a origem?</h5>
+>>>>>>> origin/master
                 <h5>apoio a projetos / patrocínio</h5>
                 <div class="form-group">
                     <div class="radio">
@@ -351,7 +378,11 @@
                         <input type="radio" name="iniciativa-origem8" value="origem8" class="form-control-radio">Doaçāo Pessoa Física 
                     </label>
                 </div>
+<<<<<<< HEAD
             -->
+=======
+-->
+>>>>>>> origin/master
 
            <h5>O que faz sua iniciativa?* (até 500 caracteres).</h5>                                  
                 <div class="form-group">
@@ -415,15 +446,21 @@
 
                     <h5>Sua iniciativa influenciou políticas públicas?*</h5>
                 <div class="form-group">
+<<<<<<< HEAD
                     <div class="radio">
                      <label  class="radio-inline">
                         <input type="radio" name="iniciativa-politica_sim" value="nao" class="form-control-radio">
                         </div>Nāo
+=======
+                   <label class="radio-inline">
+                        <input type="radio" name="iniciativa-politica_sim" id="iniciativa-politica1" value="nao" class="form-control-radio">
+                        Nāo
+>>>>>>> origin/master
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="iniciativa-politica_nao" value="sim" class="form-control-radio">
-                        </div>Sim
+                        <input type="radio" name="iniciativa-politica_nao" id="iniciativa-politica2" value="sim" class="form-control-radio">
+                        Sim
                     </label>
                 </div>
 
@@ -460,11 +497,17 @@
                  </div>
                         <option value=""></option>
                         <option value="0">Nāo</option>
+<<<<<<< HEAD
                         <option value="1">Sim</option> 
                     
+=======
+                        <option value="1">Sim</option>
+                         
+                       
+>>>>>>> origin/master
                     </select>
                     <textarea type="text" id="inputAvaliacao" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
-"style='display: none' /></textarea>
+"style='display: none'></textarea>
                     <script>
 
                         var dropdown = document.getElementById('iniciativa-avaliacao');
@@ -506,10 +549,16 @@
                         <div class="help-block with-errors"></div>
                         <option value=""></option>
                         <option value="0">Nāo</option>
+<<<<<<< HEAD
                         <option value="1">Sim, qual?</option>     
+=======
+                        <option value="1">Sim, qual?</option>
+                         
+                        
+>>>>>>> origin/master
                     </select>
                     <textarea type="text" id="inputComunicacao" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
-"style='display: none' /></textarea>
+"style='display: none'></textarea>
                     <script>
 
                         var dropdown = document.getElementById('iniciativa-comunicacao');
@@ -555,9 +604,13 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim, quais?</option>
                          
+<<<<<<< HEAD
+=======
+                        
+>>>>>>> origin/master
                     </select>
                     <textarea type="text" id="inputPremiacao" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
-"style='display: none' /></textarea>
+"style='display: none'></textarea>
                     <script>
 
                         var dropdown = document.getElementById('iniciativa-premiacao');
@@ -765,7 +818,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                     <button type="button" class="btn btn-previous">Anterior</button>
                     <button type="button" class="btn btn-next">Próximo</button>
                 </div> 
-            </fieldset> 
+  </fieldset> 
 
              <!--Etapa 3 Formulário: Endereço/Iniciativa -->
 
@@ -979,8 +1032,11 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                     <button type="submit" class="btn btn-submit">Enviar</button>
                 </div>
             </fieldset> 
-    	</form>
-    
-    </div>
-</div>
+     </div>
+  </div>                
+
+
+              
+               
+                 
     

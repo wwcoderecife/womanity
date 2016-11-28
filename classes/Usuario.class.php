@@ -27,6 +27,7 @@ class Login extends Conexao {
 		$logar->execute();
 		if ($logar->rowCount() == 1):
 			$dados = $logar->fetch(PDO::FETCH_OBJ);
+			$_SESSION['usuario_id'] = $dados->id;
 			$_SESSION['usuario_email'] = $dados->email;
 			$_SESSION['usuario_tipo'] = $dados->tipo;
 			$_SESSION['logado'] = true;

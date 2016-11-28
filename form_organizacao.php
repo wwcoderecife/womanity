@@ -24,7 +24,7 @@
 
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-        <form role="form" data-toggle="validator" action="" method="post" class="f1">
+        <form role="form" data-toggle="validator" action="" method="post" action="classes/prepare_cadastro.php" class="f1">
 
             <h3>Cadastro UNA Ecossistema<br>Organizaçāo</h3>
             <p>Preencha os campos obrigatórios *</p>
@@ -63,51 +63,50 @@
                 <h4>Dados Pessoais Contato 1:</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="inputCargo1" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo1" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="cargo_1" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo1" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="email1" placeholder="E-mail" value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="email" name="email_1" placeholder="E-mail" value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name">
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="tel" name="telefone_1" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="inputCel1" placeholder="Celular" class="f1-last-name form-control" id="inputCel1"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="tel" name="celular_1" placeholder="Celular" class="f1-last-name form-control" id="inputCel1"required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
                  <h4>Dados Pessoais Contato 2:</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="inputCargo2" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo2"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="cargo_2" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo2"required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="email2" placeholder="E-mail" class="f1-last-name form-control" id="email2"required data-error = "Campo está em branco, favor preencher.">
-                    <div class="help-block with-errors"></div>
-                    
+                    <input type="email" name="email_2" placeholder="E-mail" class="f1-last-name form-control" id="email2"required data-error = "Campo está em branco, favor preencher.">
+                    <div class="help-block with-errors"></div>                    
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="inputTel2" placeholder="Telefone" class="f1-last-name form-control" id="inputTel2"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="tel" name="telefone_2" placeholder="Telefone" class="f1-last-name form-control" id="inputTel2"required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="inputCel2" placeholder="Celular" class="f1-last-name form-control" id="inputCel2"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="tel" name="celular_2" placeholder="Celular" class="f1-last-name form-control" id="inputCel2"required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -133,33 +132,35 @@
                         <option value="nao">nao</option>
                     </select>    
 
-                    <input type="text" id="inputcnpj" class="f1-last-name form-control" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona"style='display: none' />
+                <input type="text" id="inputcnpj" name="inputcnpj" class="f1-last-name form-control" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona"style='display: none' />
                     <script>
 
-                        var dropdown = document.getElementById('organizacao-cnpj');
+                        var dropdownCnpj = document.getElementById('organizacao-cnpj');
                             
-                            function onDropdownChanged()
+                            function onDropdownChangedCNPJ()
                             {
-                                console.log(dropdown.selectedIndex);
-                                //pegando valor do select na variável dropdown
-                                
-                                if(dropdown.options[dropdown.selectedIndex].value==="sim") {
+                                console.log(dropdownCnpj.selectedIndex);
+                                //pegando valor do select na variável dropdownCnpj
+                                var meuInput = document.getElementById('inputcnpj');
+                                if(dropdownCnpj.options[dropdownCnpj.selectedIndex].value === "sim") {
                                     //faz algo quando o valor selecionado for sim
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for sim, tem cnpj
-                                    var meuInput = document.getElementById('inputcnpj');
+                                    
                                     meuInput.style.display = 'block';
+                                }else{
+                                    meuInput.style.display = 'none';
                                 }
                             }
                             
-                            if (dropdown.addEventListener)
+                            if (dropdownCnpj.addEventListener)
                             {
-                                dropdown.addEventListener('change', onDropdownChanged, false);
+                                dropdownCnpj.addEventListener('change', onDropdownChangedCNPJ, false);
                             }
                             else
                             {
                                 // suporte para o IE
-                                dropdown.attachEvent('onchange', onDropdownChanged, false);
+                                dropdownCnpj.attachEvent('onchange', onDropdownChangedCNPJ, false);
                             }
 
                     </script>
@@ -168,44 +169,44 @@
 
                 <h5>A sua Organizaçāo está localizada na…*</h5>
                 <div class="form-group">
-                   <label class="radio-inline">
-                        <input type="radio" name="organizacao-zona" value="rural" class="form-control-radio"required>Zona Rural
+                    <label class="radio-inline">
+                       <input type="radio" name="zona" value="rural" class="form-control-radio" required>Zona Rural
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="organizacao-zona" value="urbana" class="form-control-radio"required>Zona Urbana
+                        <input type="radio" name="zona" value="urbana" class="form-control-radio" required>Zona Urbana
                     </label>
                 </div>
 
                 <h5>Nome da Organizaçāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Nome</label>
-                    <input type="text" name="organizacao-nome" maxlength="50" class="f1-last-name form-control"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="nome" maxlength="50" class="f1-last-name form-control"required data-error = "Campo está em branco, favor preencher.">
                 </div>
 
 
                 <h5>Sigla da Organizaçāo:</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Sigla</label>
-                    <input type="text" name="organizacao-sigla" style="text-transform:uppercase" class="f1-last-name form-control">
+                    <input type="text" name="sigla" style="text-transform:uppercase" class="f1-last-name form-control">
                 </div>
 
                 <h5>Telefone da Organizaçāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Telefone</label>
-                    <input type="tel" id="inputTel1" name="organizacao-telefone" placeholder="(xx) xxxxx-xxxx"class="f1-last-name form-control"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="tel" id="telefone" name="organizacao-telefone" placeholder="(xx) xxxxx-xxxx"class="f1-last-name form-control"required data-error = "Campo está em branco, favor preencher.">
                 </div>
 
                 <h5>E-mail da Organizaçāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Email</label>
-                    <input type="email" name="organizacao-email" class="f1-last-name form-control"class="f1-last-name form-control"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="email" name="email" class="f1-last-name form-control"class="f1-last-name form-control"required data-error = "Campo está em branco, favor preencher.">
                 </div>
 
                  <h5>Como sua organizaçāo se identifica*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus" ></label>
-                    <select class="f1-last-name form-control" id="organizacao-tipo" required data-error = "Selecione uma opçāo.">
+                    <select class="f1-last-name form-control" id="organizacao-tipo" name="tipo" required data-error = "Selecione uma opçāo.">
                         <option value="academica"> acadêmica</option>
                         <option value="coletivo">coletivo</option>
                         <option value="centro-oeste">empresa privada</option>
@@ -227,7 +228,9 @@
                           var myDate = new Date();
                           var year = myDate.getFullYear();
                           for(var i = 1900; i < year+1; i++){
-                              document.write('<option value=""'+i+'">'+i+'</option>');
+                              $('#year_organizacao')
+                                .append($('<option>', { value : i })
+                                .text(i));
                           }
                           </script>
                     </select>
@@ -236,44 +239,45 @@
                     <h5>Quantas pessoas estão envolvidas neste trabalho?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="organizacao-pessoas_envolvidas" required data-error = "Selecione uma opçāo.">
+                    <select class="f1-last-name form-control" id="organizacao-pessoas_envolvidas" name="pessoas_envolvidas" required data-error = "Selecione uma opçāo.">
                         <option value=""></option>
-                        <option value="1">1-5</option>
-                        <option value="2">6-10</option>
-                        <option value="3">11-20</option>
-                        <option value="4">21-50</option>
-                        <option value="5">51-100</option>
-                        <option value="6">101-500</option>
-                        <option value="7">251-1000</option>
-                        <option value="8">501-1000</option>
-                        <option value="9">1001+</option>     
+                        <option value="1-5">1-5</option>
+                        <option value="6-10">6-10</option>
+                        <option value="11-20">11-20</option>
+                        <option value="21-50">21-50</option>
+                        <option value="51-100">51-100</option>
+                        <option value="101-500">101-500</option>
+                        <option value="251-1000">251-1000</option>
+                        <option value="501-1000">501-1000</option>
+                        <option value="1001+">1001+</option>     
                     </select>
 
-                    <h5>Qual foi seu orçamento em?*</h5>
+                <h5>Qual foi seu orçamento em?*</h5>
                  <h5>2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
-                    <input type="text" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2014" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="orcamento_2014" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2014" required data-error = "Campo está em branco, favor preencher.">
+
                 </div>
                 <h5>2015</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2015</label>
-                    <input type="text" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2015"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="orcamento_2015"  placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2015" required data-error = "Campo está em branco, favor preencher.">
                 </div>
                 <h5>2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
-                    <input type="text" name="f1-last-name" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2016"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="orcamento_2016"  placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2016"required data-error = "Campo está em branco, favor preencher.">
                 </div>
 
                 <h5>Sua Organizaçāo recebe recursos financeiros?</h5>
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="organizacao-recurso1" value="nao" class="form-control-radio">Nāo
+                        <input type="radio" name="recursos" value="1" class="form-control-radio"> Sim
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="organizacao-recurso2" value="sim" class="form-control-radio">Sim
+                        <input type="radio" name="recursos" value="0" class="form-control-radio"> Nāo
                     </label>
                 </div>
 <!--
@@ -328,15 +332,15 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="organizacao-publico"required data-error = "Selecione uma opçāo." >
+                    <select class="f1-last-name form-control" id="organizacao-publico" required data-error = "Selecione uma opçāo." >
                         <option value=""></option>
-                        <option value="1">Empresas</option>
-                        <option value="2">Organizações Sociais</option>
-                        <option value="3">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher </option>
-                        <option value="4">Movimentos, coletivos, redes, fóruns</option>
-                        <option value="5">Adolescentes e jovens</option>
-                        <option value="6">Homens</option>
-                        <option value="7">Mulheres</option>
+                        <option value="Empresas">Empresas</option>
+                        <option value="Organizações Sociais">Organizações Sociais</option>
+                        <option value="Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher</option>
+                        <option value="Movimentos, coletivos, redes, fóruns">Movimentos, coletivos, redes, fóruns</option>
+                        <option value="Adolescentes e jovens">Adolescentes e jovens</option>
+                        <option value="Homens">Homens</option>
+                        <option value="Mulheres">Mulheres</option>
                            
                     </select>
 
@@ -346,21 +350,21 @@
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona1"  class="f1-last-name form-control">
                     <textarea name="sobre_iniciativas1" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
-                    class="f1-about-yourself form-control" id="sobre_iniciativa_ong1"required data-error = "Campo está em branco, favor preencher."></textarea>
+                    class="f1-about-yourself form-control" id="sobre_iniciativa_ong1" required data-error = "Campo está em branco, favor preencher."></textarea>
                 </div>
                 <h5>Nome2</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona2"  class="f1-last-name form-control">
                     <textarea name="sobre_iniciativas2" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
-                    class="f1-about-yourself form-control" id="sobre_iniciativa_ong2"required data-error = "Campo está em branco, favor preencher."></textarea>
+                    class="f1-about-yourself form-control" id="sobre_iniciativa_ong2" required data-error = "Campo está em branco, favor preencher."></textarea>
                 </div>
                 <h5>Nome3</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona3" class="f1-last-name form-control">
                     <textarea name="sobre_iniciativas3" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
-                    class="f1-about-yourself form-control" id="sobre_iniciativa_ong3"required data-error = "Campo está em branco, favor preencher."></textarea>
+                    class="f1-about-yourself form-control" id="sobre_iniciativa_ong3" required data-error = "Campo está em branco, favor preencher."></textarea>
                 </div>
 
                 <h5>Clique nos Estados em que sua organizaçāo tem atuação direta*</h5>
@@ -402,25 +406,25 @@
 
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="organizacao-politicasim" value="nao" class="form-control-radio">Nāo
+                        <input type="radio" name="politicas_publicas" value="nao" class="form-control-radio"> Nāo
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="organizacao-politicanao" value="sim" class="form-control-radio">Sim
+                        <input type="radio" name="politicas_publicas" value="sim" class="form-control-radio"> Sim
                     </label>
                 </div>
                 
               
                 <div class="form-group">
                    <label class="checkbox-inline">
-                        <input type="checkbox" name="organizaçāo-origem1" value="origem1" class="form-control-radio">municipal 
+                        <input type="checkbox" name="origem1" value="origem1" class="form-control-radio">municipal 
                     </label>
 
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="organizaçāo-origem2" value="origem2" class="form-control-radio">estadual
+                        <input type="checkbox" name="origem2" value="origem2" class="form-control-radio">estadual
                     </label>
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="organizaçāo-origem3" value="origem3" class="form-control-radio">nacional 
+                        <input type="checkbox" name="origem3" value="origem3" class="form-control-radio">nacional 
                     </label>
                     <textarea name="organizaçāo_politica_publica" placeholder="Opcional: (campo aberto para detalhar, )"
 
@@ -434,39 +438,43 @@
 <h5>Você realiza monitoramento e avaliação sistematizada das atividades da Organizaçāo?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="organizacao-avaliacao">
+                    <select class="f1-last-name form-control" name="monitoramento_atv" id="avaliacao">
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim</option>
                     </select>
-                    <textarea type="text" id="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
-"style='display: none' required data-error = "Campo está em branco, favor preencher."/></textarea>
+                    <textarea type="text" id="inputAvaliacaoOng" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
+                        "style='display: none' required data-error = "Campo está em branco, favor preencher."/></textarea>
                     <script>
 
-                        var dropdown = document.getElementById('organizacao-avaliacao');
+                        var dropdownAvaliacao = document.getElementById('avaliacao');
                             
-                            function onDropdownChanged()
+                            function onDropdownChangedAvaliacao()
                             {
-                                console.log(dropdown.selectedIndex);
-                                //pegando valor do select na variável dropdown
+                                console.log(dropdownAvaliacao.selectedIndex);
+                                var meuInput1 = document.getElementById('inputAvaliacaoOng');
+                                //pegando valor do select na variável dropdownAvaliacao
+
                                 
-                                if(dropdown.options[dropdown.selectedIndex].value == "1") {
+                                if(dropdownAvaliacao.options[dropdownAvaliacao.selectedIndex].value == "1") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for outros
-                                    var meuInput1 = document.getElementById('inputAvaliacaoOng');
+                                    
                                     meuInput1.style.display = 'block';
+                                }else{
+                                    meuInput1.style.display = 'none';
                                 }
                             }
                             
-                            if (dropdown.addEventListener)
+                            if (dropdownAvaliacao.addEventListener)
                             {
-                                dropdown.addEventListener('change', onDropdownChanged, false);
+                                dropdownAvaliacao.addEventListener('change', onDropdownChangedAvaliacao, false);
                             }
                             else
                             {
                                 // suporte para o IE
-                                dropdown.attachEvent('onchange', onDropdownChanged, false);
+                                dropdownAvaliacao.attachEvent('onchange', onDropdownChangedAvaliacao, false);
                             }
 
                     </script>
@@ -478,7 +486,7 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="organizacao-comunicacao">
+                    <select class="f1-last-name form-control" id="organizacao-comunicacao" >
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
@@ -487,30 +495,32 @@
 "style='display: none' required data-error = "Campo está em branco, favor preencher."/></textarea>
                     <script>
 
-                        var dropdown = document.getElementById('organizacao-comunicacao');
+                        var dropdownComun = document.getElementById('organizacao-comunicacao');
                             
-                            function onDropdownChanged()
+                            function onDropdownChangedComun()
                             {
-                                console.log(dropdown.selectedIndex);
+                                console.log(dropdownComun.selectedIndex);
                                 //pegando valor do select na variável dropdown
-                                
-                                if(dropdown.options[dropdown.selectedIndex].value == "1") {
+                                var meuInput1 = document.getElementById('inputComunicacaoOng');
+                                if(dropdownComun.options[dropdownComun.selectedIndex].value == "1") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for outros
-                                    var meuInput1 = document.getElementById('inputComunicacaoOng');
+                                    
                                     meuInput1.style.display = 'block';
+                                }else{
+                                    meuInput1.style.display = 'none';
                                 }
                             }
                             
-                            if (dropdown.addEventListener)
+                            if (dropdownComun.addEventListener)
                             {
-                                dropdown.addEventListener('change', onDropdownChanged, false);
+                                dropdownComun.addEventListener('change', onDropdownChangedComun, false);
                             }
                             else
                             {
                                 // suporte para o IE
-                                dropdown.attachEvent('onchange', onDropdownChanged, false);
+                                dropdownComun.attachEvent('onchange', onDropdownChangedComun, false);
                             }
 
                     </script>
@@ -524,7 +534,7 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="organizacao-premiacao">
+                    <select class="f1-last-name form-control" id="premiacao" >
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim, quais?</option> 
@@ -534,30 +544,32 @@
 "style='display: none' required data-error = "Campo está em branco, favor preencher." /></textarea>
                     <script>
 
-                        var dropdown = document.getElementById('organizacao-premiacao');
+                    var dropdown = document.getElementById('premiacao');
                             
-                            function onDropdownChanged()
+                            function onDropdownChangedPremiacao()
                             {
                                 console.log(dropdown.selectedIndex);
                                 //pegando valor do select na variável dropdown
-                                
+                                var meuInput = document.getElementById('inputPremiacaoOng');
                                 if(dropdown.options[dropdown.selectedIndex].value == "1") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for outros
-                                    var meuInput = document.getElementById('inputPremiacaoOng');
+                                    
                                     meuInput.style.display = 'block';
+                                }else{
+                                    meuInput.style.display = 'none';
                                 }
                             }
                             
                             if (dropdown.addEventListener)
                             {
-                                dropdown.addEventListener('change', onDropdownChanged, false);
+                                dropdown.addEventListener('change', onDropdownChangedPremiacao, false);
                             }
                             else
                             {
                                 // suporte para o IE
-                                dropdown.attachEvent('onchange', onDropdownChanged, false);
+                                dropdown.attachEvent('onchange', onDropdownChangedPremiacao, false);
                             }
 
                     </script>
@@ -568,17 +580,17 @@
                  <h5>Nome</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="organizacao-relaciona1"  class="f1-last-name form-control" >
+                <input type="text" name="relaciona1"  class="f1-last-name form-control">
                 </div>
                 <h5>Nome</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="organizacao-relaciona2"  class="f1-last-name form-control">
+                    <input type="text" name="relaciona2"  class="f1-last-name form-control">
                 </div>
                 <h5>Nome</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="organizacao-relaciona3" class="f1-last-name form-control">
+                    <input type="text" name="relaciona3" class="f1-last-name form-control">
                 </div> 
 
                 
@@ -752,7 +764,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
             <fieldset>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Região</label>
-                    <select class="f1-last-name form-control" id="regiao">
+                    <select class="f1-last-name form-control" name="regiao" id="regiao">
                         <option value="norte">Norte</option>
                         <option value="nordeste">Nordeste</option>
                         <option value="centro-oeste">Centro-Oeste</option>
@@ -762,35 +774,35 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 </div>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Estado</label>
-                    <select class="f1-last-name form-control" id="estados">
+                    <select class="f1-last-name form-control" name="estado" id="estados">
                         <option value=""></option>
                     </select> 
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cidade</label>
-                    <select class="f1-last-name form-control" id="cidades"> 
+                    <select class="f1-last-name form-control" name="cidade" id="cidades"> 
                         <option value=""></option>
                     </select> 
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Bairro</label>
-                    <input type="text" name="iniciativa-bairro" placeholder="Bairro..." class="f1-last-name form-control">
+                <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-facebook">Rua</label>
-                    <input type="text" name="iniciativa-rua" placeholder="Rua/Av...*" class="f1-last-name form-control">
+                    <input type="text" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número</label>
-                    <input type="text" name="iniciativa-numero" placeholder="Numero...*" class="f1-last-name form-control">
+                    <input type="text" name="numero" placeholder="Numero...*" class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Complemento</label>
-                    <input type="text" name="iniciativa-complemento" placeholder="Complemento...*" class="f1-last-name form-control">
+                    <input type="text" name="complemento" placeholder="Complemento...*" class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep</label>
-                    <input type="text" name="iniciativa-cep" placeholder="CEP...*" class="f1-last-name form-control">
+                    <input type="text" name="cep" placeholder="CEP...*" class="f1-last-name form-control">
                 </div> 
 
                <div class="f1-buttons">
@@ -806,37 +818,37 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 <div class="form-group">
                     <div class="input-group">
                       <span class="input-group-addon"><i class="fa fa-mouse-pointer"></i></span>
-                      <input class="form-control" type="text" placeholder="Site">
+                    <input class="form-control" type="text" name="site" placeholder="Site">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group">
                       <span class="input-group-addon"><i class="fa fa-facebook-official"></i></span>
-                      <input class="form-control" type="text" placeholder="Facebook">
+                        <input class="form-control" type="text" name="facebook" placeholder="Facebook">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group margin-bottom-sm">
                       <span class="input-group-addon"><i class="fa fa-twitter-square"></i></span>
-                      <input class="form-control" type="text" placeholder="Twitter">
+                        <input class="form-control" type="text" name="twitter" placeholder="Twitter">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group margin-bottom-sm">
                       <span class="input-group-addon"><i class="fa fa-instagram"></i></span>
-                      <input class="form-control" type="text" placeholder="Instagram">
+                        <input class="form-control" type="text" name="instagram" placeholder="Instagram">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group margin-bottom-sm">
                       <span class="input-group-addon"><i class="fa fa-linkedin-square"></i></span>
-                      <input class="form-control" type="text" placeholder="Linkedin">
+                        <input class="form-control" type="text" name="linkedin" placeholder="Linkedin">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group margin-bottom-sm">
                       <span class="input-group-addon"><i class="fa fa-ellipsis-h"></i></span>
-                      <input class="form-control" type="text" placeholder="Outros">
+                        <input class="form-control" type="text" name="outros" placeholder="Outros">
                     </div>
                 </div>
                 <div class="f1-buttons">
@@ -850,45 +862,45 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 <h5>Iniciativa 1</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="f1-last-name" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="text" name="indica_nome_1" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
+                <input type="email" name="indica_email_1" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
                     
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="inputTel3">
+                <input type="tel" name="indica_telefone_1" placeholder="Telefone" class="f1-last-name form-control" id="inputTel3">
                 </div>
                 <h5>Iniciativa 2</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="f1-last-name" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
+                <input type="text" name="indica_nome_2" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">                    
+                <input type="email" name="indica_email_2" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">                    
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="inputTel4">
+                    <input type="tel" name="indica_telefone_2" placeholder="Telefone" class="f1-last-name form-control" id="inputTel4">
                 </div>
                 <h5>Iniciativa 3</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="f1-last-name" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
+                <input type="text" name="indica_nome_3" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="f1-last-name" placeholder="E-mail" class="f1-last-name form-control" id="">
+                    <input type="email" name="indica_email_3" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="f1-last-name" placeholder="Telefone" class="f1-last-name form-control" id="inputTel5">
+                    <input type="tel" name="indica_telefone_3" placeholder="Telefone" class="f1-last-name form-control" id="inputTel5">
                 </div>
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>

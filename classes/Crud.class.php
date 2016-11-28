@@ -2,7 +2,8 @@
 
 /* Classe CRUD - Create, Recovery, Update and Delete */
   
-  class Crud  extends Conexao {
+  class crud
+  {
 	private $sql_ins="";
 	private $tabela="";
 	private $sql_sel="";
@@ -14,8 +15,8 @@
 	  * @param string $tabela
 	  * @return $this->tabela
 	  */  			
-  	public function __construct($tabela){ // construtor, nome da tabela como parametro
- 
+  	public function __construct($tabela) // construtor, nome da tabela como parametro
+  	{
   		$this->tabela = $tabela;
 		return $this->tabela;
 	}
@@ -27,19 +28,20 @@
 	  * @example: $campos = "codigo, nome, email" e $valores = "1, 'João Brito', 'joao@joao.net'"
 	  * @return void
 	  */  		
-	public function inserir($campos, $valores){ // funçao de inserçao, campos e seus respectivos valores como parametros
-		
-		$pdo = parent::getDB();
-
-		$insert = $pdo->prepare("INSERT INTO " . $this->tabela . " ($campos) VALUES ($valores)");
-		$insert->execute();
-		
-
-		
+	public function inserir($campos, $valores) // funçao de inserçao, campos e seus respectivos valores como parametros
+	{
+		$this->sql_ins = "INSERT INTO " . $this->tabela . " ($campos) VALUES ($valores)";
+		if(!$this->ins = mysql_query($this->sql_ins))
+		{
+			die ("<span>Erro na inclusão " . '<br>Linha: ' . __LINE__ . "<br>" . mysql_error() . "<br>
+				<a href='index.php'>Voltar ao Menu</a></span>");
+		}else{
+			print "<script>location='index.php';</script>";
+		}
 	}
 
-	public function atualizar($camposvalores, $where = NULL){ // funçao de ediçao, campos com seus respectivos valores e o campo id que define a linha a ser editada como parametros
-	
+	public function atualizar($camposvalores, $where = NULL) // funçao de ediçao, campos com seus respectivos valores e o campo id que define a linha a ser editada como parametros
+	{
 		if ($where)
 		{
 			$this->sql_upd = "UPDATE  " . $this->tabela . " SET $camposvalores WHERE $where";			
@@ -62,8 +64,8 @@
 	  * @example: $where = " codigo=2 AND nome='João' "
 	  * @return void
 	  */  		
-	public function excluir($where = NULL){ // funçao de exclusao, campo que define a linha a ser editada como parametro
-	
+	public function excluir($where = NULL) // funçao de exclusao, campo que define a linha a ser editada como parametro
+	{
 		if ($where)
 		{
 			$this->sql_sel = "SELECT * FROM " . $this->tabela . " WHERE $where";
