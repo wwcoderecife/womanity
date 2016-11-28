@@ -6,16 +6,18 @@
             <script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>
             <script type="text/javascript"></script>
 
-            <!-- Include Twitter Bootstrap and jQuery: Subtemas -->
+            <!-- Include Twitter Bootstrap and jQuery: Subtemas 
             <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css"/>
             <script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
             <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
-             
-            <!-- Include the plugin's CSS and JS:Subtemad -->
+            -->
+            
+            <!--
+            Include the plugin's CSS and JS:Subtemad 
             <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
             <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js">
             <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-            
+            -->
             <script>
               jQuery(function($){
               $("#inputTel1").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
@@ -31,12 +33,14 @@
             });
             </script>
 
-
+        <!--
             <script type="text/javascript">
             $(document).ready(function() {
                 $('#subtemas').multiselect();
             });
             </script>
+            
+         -->   
 
 
           
