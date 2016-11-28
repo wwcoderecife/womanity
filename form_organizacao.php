@@ -12,12 +12,12 @@
             <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
             -->
             
-            <!--
+            
             Include the plugin's CSS and JS:Subtemad 
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js">
-            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-            -->
+            <link rel="stylesheet" href="assets/css/bootstrap-multiselect.css" type="text/css">
+            <script type="text/javascript" src="assets/js/bootstrap-multiselect.js"></script>
+            
+        
             <script>
               jQuery(function($){
               $("#inputTel1").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
