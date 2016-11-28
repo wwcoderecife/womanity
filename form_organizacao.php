@@ -7,7 +7,7 @@
             <script type="text/javascript"></script>
 
             <!--Include Twitter Bootstrap and jQuery: Subtemas--> 
-            <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css"/>
+            <!--<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css"/>-->
             <script type="text/javascript" src="assets/js/jquery-2.1.3.min.js"></script>
            
             Include the plugin's CSS and JS:Subtemad 
