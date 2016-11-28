@@ -774,7 +774,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 <h5> Clique e escolha até 3 Subtemas abaixo*</h5>
 <div class="form-group">
 <!--<label for="subtemas" for="f1-google-plus">Subtemas</label>-->
-        <select id="subtemas" class="selectpicker" name="subtemas" multiple>
+        <select id="subtemas" class="selectpicker" name="subtemas" data-style="btn-primary" multiple>
             <option value="1">Aborto</option>
             <option value="2">Dança</option>
             <option value="3">Inserção de mulheres na política</option>
