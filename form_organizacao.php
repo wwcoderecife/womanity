@@ -24,7 +24,7 @@
 
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-        <form role="form" data-toggle="validator" action="" method="post" class="f1">
+        <form role="form" data-toggle="validator" action="" method="post" action="classes/prepare_cadastro.php" class="f1">
 
             <h3>Cadastro UNA Ecossistema<br>Organizaçāo</h3>
             <p>Preencha os campos obrigatórios *</p>
@@ -135,30 +135,32 @@
                 <input type="text" id="inputcnpj" name="inputcnpj" class="f1-last-name form-control" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona"style='display: none' />
                     <script>
 
-                        var dropdown = document.getElementById('organizacao-cnpj');
+                        var dropdownCnpj = document.getElementById('organizacao-cnpj');
                             
-                            function onDropdownChanged()
+                            function onDropdownChangedCNPJ()
                             {
-                                console.log(dropdown.selectedIndex);
-                                //pegando valor do select na variável dropdown
-                                
-                                if(dropdown.options[dropdown.selectedIndex].value==="sim") {
+                                console.log(dropdownCnpj.selectedIndex);
+                                //pegando valor do select na variável dropdownCnpj
+                                var meuInput = document.getElementById('inputcnpj');
+                                if(dropdownCnpj.options[dropdownCnpj.selectedIndex].value === "sim") {
                                     //faz algo quando o valor selecionado for sim
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for sim, tem cnpj
-                                    var meuInput = document.getElementById('inputcnpj');
+                                    
                                     meuInput.style.display = 'block';
+                                }else{
+                                    meuInput.style.display = 'none';
                                 }
                             }
                             
-                            if (dropdown.addEventListener)
+                            if (dropdownCnpj.addEventListener)
                             {
-                                dropdown.addEventListener('change', onDropdownChanged, false);
+                                dropdownCnpj.addEventListener('change', onDropdownChangedCNPJ, false);
                             }
                             else
                             {
                                 // suporte para o IE
-                                dropdown.attachEvent('onchange', onDropdownChanged, false);
+                                dropdownCnpj.attachEvent('onchange', onDropdownChangedCNPJ, false);
                             }
 
                     </script>
@@ -437,7 +439,7 @@
 <h5>Você realiza monitoramento e avaliação sistematizada das atividades da Organizaçāo?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="monitoramento_atv" id="avaliacao" >
+                    <select class="f1-last-name form-control" name="monitoramento_atv" id="avaliacao">
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim</option>
@@ -446,30 +448,34 @@
                         "style='display: none' required data-error = "Campo está em branco, favor preencher."/></textarea>
                     <script>
 
-                        var dropdown = document.getElementById('avaliacao');
+                        var dropdownAvaliacao = document.getElementById('avaliacao');
                             
-                            function onDropdownChanged()
+                            function onDropdownChangedAvaliacao()
                             {
-                                console.log(dropdown.selectedIndex);
-                                //pegando valor do select na variável dropdown
+                                console.log(dropdownAvaliacao.selectedIndex);
+                                var meuInput1 = document.getElementById('inputAvaliacaoOng');
+                                //pegando valor do select na variável dropdownAvaliacao
+
                                 
-                                if(dropdown.options[dropdown.selectedIndex].value == "1") {
+                                if(dropdownAvaliacao.options[dropdownAvaliacao.selectedIndex].value == "1") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for outros
-                                    var meuInput1 = document.getElementById('inputAvaliacaoOng');
+                                    
                                     meuInput1.style.display = 'block';
+                                }else{
+                                    meuInput1.style.display = 'none';
                                 }
                             }
                             
-                            if (dropdown.addEventListener)
+                            if (dropdownAvaliacao.addEventListener)
                             {
-                                dropdown.addEventListener('change', onDropdownChanged, false);
+                                dropdownAvaliacao.addEventListener('change', onDropdownChangedAvaliacao, false);
                             }
                             else
                             {
                                 // suporte para o IE
-                                dropdown.attachEvent('onchange', onDropdownChanged, false);
+                                dropdownAvaliacao.attachEvent('onchange', onDropdownChangedAvaliacao, false);
                             }
 
                     </script>
@@ -490,30 +496,32 @@
 "style='display: none' required data-error = "Campo está em branco, favor preencher."/></textarea>
                     <script>
 
-                        var dropdown = document.getElementById('organizacao-comunicacao');
+                        var dropdownComun = document.getElementById('organizacao-comunicacao');
                             
-                            function onDropdownChanged()
+                            function onDropdownChangedComun()
                             {
-                                console.log(dropdown.selectedIndex);
+                                console.log(dropdownComun.selectedIndex);
                                 //pegando valor do select na variável dropdown
-                                
-                                if(dropdown.options[dropdown.selectedIndex].value == "1") {
+                                var meuInput1 = document.getElementById('inputComunicacaoOng');
+                                if(dropdownComun.options[dropdownComun.selectedIndex].value == "1") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for outros
-                                    var meuInput1 = document.getElementById('inputComunicacaoOng');
+                                    
                                     meuInput1.style.display = 'block';
+                                }else{
+                                    meuInput1.style.display = 'none';
                                 }
                             }
                             
-                            if (dropdown.addEventListener)
+                            if (dropdownComun.addEventListener)
                             {
-                                dropdown.addEventListener('change', onDropdownChanged, false);
+                                dropdownComun.addEventListener('change', onDropdownChangedComun, false);
                             }
                             else
                             {
                                 // suporte para o IE
-                                dropdown.attachEvent('onchange', onDropdownChanged, false);
+                                dropdownComun.attachEvent('onchange', onDropdownChangedComun, false);
                             }
 
                     </script>
@@ -539,28 +547,30 @@
 
                     var dropdown = document.getElementById('premiacao');
                             
-                            function onDropdownChanged()
+                            function onDropdownChangedPremiacao()
                             {
                                 console.log(dropdown.selectedIndex);
                                 //pegando valor do select na variável dropdown
-                                
+                                var meuInput = document.getElementById('inputPremiacaoOng');
                                 if(dropdown.options[dropdown.selectedIndex].value == "1") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for outros
-                                    var meuInput = document.getElementById('inputPremiacaoOng');
+                                    
                                     meuInput.style.display = 'block';
+                                }else{
+                                    meuInput.style.display = 'none';
                                 }
                             }
                             
                             if (dropdown.addEventListener)
                             {
-                                dropdown.addEventListener('change', onDropdownChanged, false);
+                                dropdown.addEventListener('change', onDropdownChangedPremiacao, false);
                             }
                             else
                             {
                                 // suporte para o IE
-                                dropdown.attachEvent('onchange', onDropdownChanged, false);
+                                dropdown.attachEvent('onchange', onDropdownChangedPremiacao, false);
                             }
 
                     </script>
