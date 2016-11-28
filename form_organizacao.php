@@ -5,6 +5,16 @@
             <script src="assets/js/validator.min.js"></script>
             <script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>
             <script type="text/javascript"></script>
+            <!-- Include Twitter Bootstrap and jQuery: -->
+            <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+            <script type="text/javascript" src="js/jquery.min.js"></script>
+            <script type="text/javascript" src="js/bootstrap.min.js"></script>
+             
+            <!-- Include the plugin's CSS and JS: -->
+            <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+            <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
+
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
             
             <script>
               jQuery(function($){
@@ -752,7 +762,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 <h5> Clique e escolha até 3 Subtemas abaixo*</h5>
 <div class="form-group">
 <label for="subtemas" class="sr-only" for="f1-google-plus">Subtemas</label>
-        <select id="subtemas" name="subtemas" multiple>
+        <select id="subtemas" multiple="multiple">
             <option value="alice">Aborto</option>
             <option value="bob">Dança</option>
             <option value="carol">Inserção de mulheres na política</option>
@@ -797,10 +807,14 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
             <option value="carol">Teatro</option>
         </select>
 
-<!--
-         <script>
-        $('#subtemas').multiSelect();
-        </script>
+
+
+<!-- Script Subtemas -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#subtemas').multiselect();
+    });
+</script>
 
 -->
 
