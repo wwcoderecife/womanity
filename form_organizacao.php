@@ -5,6 +5,7 @@
             <script src="assets/js/validator.min.js"></script>
             <script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>
             <script type="text/javascript"></script>
+            <script type="text/javascript" src="js/jquery.multi-select.js"></script>
 
             <script>
               jQuery(function($){
@@ -749,6 +750,53 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 </script>
 
 
+<h5> Clique e escolha até 3 Subtemas abaixo*</h5>
+<div class="form-group">
+<label for="subtemas" class="sr-only" for="f1-google-plus">Subtemas</label>
+        <select id="subtemas" name="subtemas" multiple>
+            <option value="alice">Aborto</option>
+            <option value="bob">Dança</option>
+            <option value="carol">Inserção de mulheres na política</option>
+            <option value="carol">Paternidade</option>
+            <option value="carol">Tecnologia social e/ou alternativas</option>
+            <option value="carol">Desenvolvimento e Programação</option>
+            <option value="carol">Liderança</option>
+            <option value="carol">Pessoa com deficiência</option>
+            <option value="carol">Trabalho digno</option>
+            <option value="carol">Advocacy</option>
+            <option value="carol">Ecofeminismo</option>
+            <option value="carol">Povos tradicionais</option>
+            <option value="carol">Tráfico de pessoas</option>
+            <option value="carol">Agua e saneamento básico</option>
+            <option value="carol">Economia criativa</option>
+            <option value="carol">Marketing</option>
+            <option value="carol">Preconceito e discriminação</option>
+            <option value="carol">Tecnologia</option>
+            <option value="carol">Artes plásticas</option>
+            <option value="carol">Parto Humanizado</option>
+            <option value="carol">Cadeia produtiva responsável</option>
+            <option value="carol">Educomunicação</option>
+            <option value="carol">Microcrédito</option>
+            <option value="carol">Questão presidiária</option>
+            <option value="carol">Cinema</option>
+            <option value="carol">Envelhecimento</option>
+            <option value="carol">Mobilização</option>
+            <option value="carol">Reciclagem e logísitca diversa</option>
+            <option value="carol">Finanças sociais</option>
+            <option value="carol">Mudanças climáticas</option>
+            <option value="carol">Redes Sociais</option>
+            <option value="carol">Conselhos e outras instâncias</option>
+            <option value="carol">Fotografia</option>
+            <option value="carol">Mulheres no mundo da ciencias</option>
+            <option value="carol">Refugiados</option>
+            <option value="carol">Consumo</option>
+            <option value="carol">Incentivo à leitura</option>
+            <option value="carol">Obesidade infantil</option>
+            <option value="carol">Reparação-reconstrução</option>
+            <option value="carol">Cooperativismo</option>
+            <option value="carol">Inclusão Digital</option>
+            <option value="carol">Teatro</option>
+        </select>
 
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
