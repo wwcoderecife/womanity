@@ -122,24 +122,24 @@
 
             <fieldset>
                 <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
-                <div class="form-group">
+               <div class="form-group">
                     <label class="radio-inline">
-                       <input type="radio" name="iniciativa-ong1" value="sim" class="form-control-radio" required>Sim
+                       <input type="radio" name="iniciativaong1" value="sim" class="form-control-radio" required>sim
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="iniciativa-ong2" value="nao" class="form-control-radio" required>Nāo
+                        <input type="radio" name="iniciativaong2" value="nao" class="form-control-radio" required>nāo
                     </label>
                 </div>
 
                 <h5>A sua iniciativa está localizada na…*</h5>
-                <div class="form-group">
-                   <label class="radio-inline">
-                        <input type="radio" name="iniciativa-zona1" value="rural" class="form-control-radio" >Zona Rural
+                 <div class="form-group">
+                    <label class="radio-inline">
+                       <input type="radio" name="zona" value="rural" class="form-control-radio" required>Zona Rural
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="iniciativa-zona2" value="urbana" class="form-control-radio">Zona Urbana   
+                        <input type="radio" name="zona" value="urbana" class="form-control-radio" required>Zona Urbana
                     </label>
                 </div>
 
@@ -175,23 +175,22 @@
 
                 <h5>Como sua iniciativa se identifica?*</h5>
 
-                <div class="form-group">
-                      <label class="radio-inline">
-                        <input type="radio" name="iniciativa-acao" value="acao" class="form-control-radio" required data-error = "Campo está em branco, favor preencher.">
-                        <div class="help-block with-errors"></div> Açāo
-                      </label>
+                 <div class="form-group">
+                    <label class="radio-inline">
+                       <input type="radio" name="acao" value="acao" class="form-control-radio" required>Açāo
+                    </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="iniciativa-projeto" value="projeto" class="form-control-radio" required data-error = "Campo está em branco, favor preencher.">
-                        <div class="help-block with-errors"></div> Projeto
-                </div>        
+                        <input type="radio" name="projeto" value="projeto" class="form-control-radio" required>Projeto
+                    </label>
+                </div>   
 
                 
 
                 <h5>De qual Natureza?</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="iniciativa-natureza">           
+                    <select class="f1-last-name form-control" id="natureza">           
                         <option value=""></option>
                         <option value="academica">Acadêmica</option>
                         <option value="coletivo">Coletivo</option>
@@ -205,17 +204,17 @@
                         <option value="redes">Redes</option> 
                         <option value="Outros">Outros</option>  
                     </select>
-                    <input type="text" id="inputOutros" class="f1-last-name form-control" placeholder="Descreva outro tipo..."style='display: none' />
+                    <input type="text" id="inputoutros" name="inputoutros" class="f1-last-name form-control" placeholder="Descreva outro tipo..."style='display: none' />
                     <script>
 
-                        var dropdown = document.getElementById('iniciativa-natureza');
+                        var dropdownNatureza = document.getElementById('natureza');
                             
-                            function onDropdownChanged()
+                            function onDropdownChangedNatureza()
                             {
-                                console.log(dropdown.selectedIndex);
+                                console.log(dropdownNatureza.selectedIndex);
                                 //pegando valor do select na variável dropdown
-                                var meuInput = document.getElementById('inputOutros');
-                                if(dropdown.options[dropdown.selectedIndex].value === "Outros") {
+                                var meuInput = document.getElementById('inputoutros');
+                                if(dropdownNatureza.options[dropdownNatureza.selectedIndex].value === "Outros") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor Outros');
                                     //mostra o input quando o valor selecionado for outros
@@ -229,12 +228,12 @@
                             
                             if (dropdown.addEventListener)
                             {
-                                dropdown.addEventListener('change', onDropdownChanged, false);
+                                dropdown.addEventListener('change', onDropdownChangedNatureza, false);
                             }
                             else
                             {
                                 // suporte para o IE
-                                dropdown.attachEvent('onchange', onDropdownChanged, false);
+                                dropdown.attachEvent('onchange', onDropdownChangedNatureza, false);
                             }
 
                     </script>
