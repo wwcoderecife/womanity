@@ -760,60 +760,60 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 
 <h5> Clique e escolha até 3 Subtemas abaixo*</h5>
 <div class="form-group">
-<label for="subtemas" class="sr-only" for="f1-google-plus">Subtemas</label>
+<label for="subtemas" for="f1-google-plus">Subtemas</label>
         <select id="subtemas" name="subtemas" multiple="multiple">
-            <option value="alice">Aborto</option>
-            <option value="bob">Dança</option>
-            <option value="carol">Inserção de mulheres na política</option>
-            <option value="carol">Paternidade</option>
-            <option value="carol">Tecnologia social e/ou alternativas</option>
-            <option value="carol">Desenvolvimento e Programação</option>
-            <option value="carol">Liderança</option>
-            <option value="carol">Pessoa com deficiência</option>
-            <option value="carol">Trabalho digno</option>
-            <option value="carol">Advocacy</option>
-            <option value="carol">Ecofeminismo</option>
-            <option value="carol">Povos tradicionais</option>
-            <option value="carol">Tráfico de pessoas</option>
-            <option value="carol">Agua e saneamento básico</option>
-            <option value="carol">Economia criativa</option>
-            <option value="carol">Marketing</option>
-            <option value="carol">Preconceito e discriminação</option>
-            <option value="carol">Tecnologia</option>
-            <option value="carol">Artes plásticas</option>
-            <option value="carol">Parto Humanizado</option>
-            <option value="carol">Cadeia produtiva responsável</option>
-            <option value="carol">Educomunicação</option>
-            <option value="carol">Microcrédito</option>
-            <option value="carol">Questão presidiária</option>
-            <option value="carol">Cinema</option>
-            <option value="carol">Envelhecimento</option>
-            <option value="carol">Mobilização</option>
-            <option value="carol">Reciclagem e logísitca diversa</option>
-            <option value="carol">Finanças sociais</option>
-            <option value="carol">Mudanças climáticas</option>
-            <option value="carol">Redes Sociais</option>
-            <option value="carol">Conselhos e outras instâncias</option>
-            <option value="carol">Fotografia</option>
-            <option value="carol">Mulheres no mundo da ciencias</option>
-            <option value="carol">Refugiados</option>
-            <option value="carol">Consumo</option>
-            <option value="carol">Incentivo à leitura</option>
-            <option value="carol">Obesidade infantil</option>
-            <option value="carol">Reparação-reconstrução</option>
-            <option value="carol">Cooperativismo</option>
-            <option value="carol">Inclusão Digital</option>
-            <option value="carol">Teatro</option>
+            <option value="1">Aborto</option>
+            <option value="2">Dança</option>
+            <option value="3">Inserção de mulheres na política</option>
+            <option value="4">Paternidade</option>
+            <option value="5">Tecnologia social e/ou alternativas</option>
+            <option value="6">Desenvolvimento e Programação</option>
+            <option value="7">Liderança</option>
+            <option value="8">Pessoa com deficiência</option>
+            <option value="9">Trabalho digno</option>
+            <option value="10">Advocacy</option>
+            <option value="11">Ecofeminismo</option>
+            <option value="12">Povos tradicionais</option>
+            <option value="13">Tráfico de pessoas</option>
+            <option value="14">Agua e saneamento básico</option>
+            <option value="15">Economia criativa</option>
+            <option value="16">Marketing</option>
+            <option value="17">Preconceito e discriminação</option>
+            <option value="18">Tecnologia</option>
+            <option value="19">Artes plásticas</option>
+            <option value="20">Parto Humanizado</option>
+            <option value="21">Cadeia produtiva responsável</option>
+            <option value="22">Educomunicação</option>
+            <option value="23">Microcrédito</option>
+            <option value="24">Questão presidiária</option>
+            <option value="25">Cinema</option>
+            <option value="26">Envelhecimento</option>
+            <option value="27">Mobilização</option>
+            <option value="28">Reciclagem e logísitca diversa</option>
+            <option value="29">Finanças sociais</option>
+            <option value="30">Mudanças climáticas</option>
+            <option value="32">Redes Sociais</option>
+            <option value="33">Conselhos e outras instâncias</option>
+            <option value="34">Fotografia</option>
+            <option value="35">Mulheres no mundo da ciencias</option>
+            <option value="36">Refugiados</option>
+            <option value="37">Consumo</option>
+            <option value="38">Incentivo à leitura</option>
+            <option value="39">Obesidade infantil</option>
+            <option value="30">Reparação-reconstrução</option>
+            <option value="41">Cooperativismo</option>
+            <option value="42">Inclusão Digital</option>
+            <option value="43">Teatro</option>
 
          <!-- Initialize the plugin: -->
-            <script type="text/javascript">
-                $(document).ready(function() {
-                    $('#example-getting-started').multiselect();
-                });
-            </script>
-
 
         </select>
+
+        <script type="text/javascript">
+                $(document).ready(function() {
+                    $('#subtemas').multiselect();
+                });
+        </script>
 
 
 
