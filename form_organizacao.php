@@ -61,24 +61,28 @@
 
           <fieldset>
                 <h4>Dados Pessoais Contato 1:</h4>
+                 <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
                     <input type="text" name="cargo_1" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo1" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
+                <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
                     <input type="email" name="email_1" placeholder="E-mail" value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name">
                     <div class="help-block with-errors"></div>
                 </div>
 
+                 <h5>Telefone Fixo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
                     <input type="tel" name="telefone_1" placeholder="Telefone" class="f1-last-name form-control" id="f1-last-name" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
+                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
                     <input type="tel" name="celular_1" placeholder="Celular" class="f1-last-name form-control" id="inputCel1"required data-error = "Campo está em branco, favor preencher.">
@@ -86,24 +90,28 @@
                 </div>
 
                  <h4>Dados Pessoais Contato 2:</h4>
+                  <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
                     <input type="text" name="cargo_2" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo2"required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
+                <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
                     <input type="email" name="email_2" placeholder="E-mail" class="f1-last-name form-control" id="email2"required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>                    
                 </div>
 
+                 <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
                     <input type="tel" name="telefone_2" placeholder="Telefone" class="f1-last-name form-control" id="inputTel2"required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
+                <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
                     <input type="tel" name="celular_2" placeholder="Celular" class="f1-last-name form-control" id="inputCel2"required data-error = "Campo está em branco, favor preencher.">
@@ -113,7 +121,7 @@
                 <div class="f1-buttons">
                 <button type="button" class="btn btn-next">Próximo</button>
                 </div>
-            </fieldset>
+            </fieldset><!--Dados Pessoais-->
 
 
           
@@ -280,45 +288,6 @@
                         <input type="radio" name="recursos" value="0" class="form-control-radio"> Nāo
                     </label>
                 </div>
-<!--
-                <h5>Qual é a origem?</h5>
-                <h5>apoio a projetos / patrocínio</h5>
-                <div class="form-group">
-                   <label class="radio">
-                        <input type="radio" name="organizacao-origem1" value="origem1" class="form-control-radio">empresas 
-                    </label>
-
-                    <label class="radio">
-                        <input type="radio" name="organizacao-origem2" value="origem2" class="form-control-radio">institutos ou fundações empresariais 
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="organizacao-origem3" value="origem3" class="form-control-radio">organizações do sistema ONU 
- 
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="organizacao-origem4" value="origem4" class="form-control-radio">organizações não governamentais brasileiras ou internacionais
- 
-                    </label>
-
-                    <h5>Edital Governamental</h5>
-                <div class="form-group">
-                   <label class="radio">
-                        <input type="radio" name="organizacao-origem5" value="origem5" class="form-control-radio">munícpio
-                    </label>
-
-                    <label class="radio">
-                        <input type="radio" name="organizacao-origem6" value="origem6" class="form-control-radio">estado
-                    <label class="radio">
-                        <input type="radio" name="organizacao-origem7" value="origem7" class="form-control-radio">governo federal 
-                    </label>
-
-                    <div class="form-group">
-                   <label class="radio">
-                        <input type="radio" name="organizacao-origem8" value="origem8" class="form-control-radio">Doaçāo Pessoa Física 
-                    </label>     
-                </div>
-
-            -->
 
                 <h5>O que faz Organizaçāo?*(até 500 caracteres)</h5>                                  
                 <div class="form-group">
@@ -907,7 +876,6 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                     <button type="submit" class="btn btn-submit">Enviar</button>
                 </div>
             </fieldset>
-         
         </form>
     </div>
 </div>

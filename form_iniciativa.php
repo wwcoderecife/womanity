@@ -175,15 +175,15 @@
 
                 <h5>Como sua iniciativa se identifica?*</h5>
 
-                 <div class="form-group">
+                <div class="form-group">
                     <label class="radio-inline">
-                       <input type="radio" name="acao" value="acao" class="form-control-radio" required>Açāo
+                       <input type="radio" name="zona" value="rural" class="form-control-radio" required>Zona Rural
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="projeto" value="projeto" class="form-control-radio" required>Projeto
+                        <input type="radio" name="zona" value="urbana" class="form-control-radio" required>Zona Urbana
                     </label>
-                </div>   
+                </div>
 
                 
 
@@ -295,61 +295,17 @@
 
                 <h5>Sua iniciativa recebe recursos financeiros?</h5>     
 
-              <div class="form-group">                                  
-                    <label class="radio-inline">
-                        <input type="radio" name="iniciativa-recurso1" value="sim" class="form-control-radio">
-                         Sim
+              <div class="form-group">
+                   <label class="radio-inline">
+                        <input type="radio" name="recursos" value="1" class="form-control-radio"> Sim
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="iniciativa-recurso2" value="nao" class="form-control-radio">
-                         Não
+                        <input type="radio" name="recursos" value="0" class="form-control-radio"> Nāo
                     </label>
                 </div>
 
-                  <h5>Qual é a origem?</h5>
-
-                <h5>apoio a projetos / patrocínio</h5>
-                <div class="form-group">
-                    <label>
-                        <input type="radio" name="iniciativa-origem1" value="origem1" class="form-control-radio">empresas 
-                    </label>
-
-
-                    <label>
-                        <input type="radio" name="iniciativa-origem2" value="origem2" class="form-control-radio">institutos ou fundações empresariais 
-                    </label>
-                    <label >
-                        <input type="radio" name="iniciativa-origem3" value="origem3" class="form-control-radio">organizações do sistema ONU 
- 
-                    </label>
-
-                    <label>
-                        <input type="radio" name="iniciativa-origem4" value="origem4" class="form-control-radio">organizações não governamentais brasileiras ou internacionais
- 
-                    </label>
-
-                   </div> 
-
-                    <h5>Edital Governamental</h5>
-                  <div class="form-group">
-                   <label>
-                        <input type="radio" name="iniciativa-origem5" value="origem5" class="form-control-radio">munícpio
-                    </label>
-
-                    <label>
-                        <input type="radio" name="iniciativa-origem6" value="origem6" class="form-control-radio">estado
-                    <label>
-                        <input type="radio" name="iniciativa-origem7" value="origem7" class="form-control-radio">governo federal 
-                    </label>
-
-                    <div class="form-group">
-                       <label>
-                           <input type="radio" name="iniciativa-origem8" value="origem8" class="form-control-radio">Doaçāo Pessoa Física 
-                      </label>
-                    </div>
-               </div>
-
+                 
 
            <h5>O que faz sua iniciativa?* (até 500 caracteres).</h5>                                  
                 <div class="form-group">
@@ -413,16 +369,12 @@
 
                     <h5>Sua iniciativa influenciou políticas públicas?*</h5>
                 <div class="form-group">
-                    <div class="radio">
                    <label class="radio-inline">
-                        <input type="radio" name="iniciativa-politica_sim" id="iniciativa-politica1" value="nao" class="form-control-radio">
-                        Nāo
-
+                        <input type="radio" name="recursos" value="1" class="form-control-radio"> Sim
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="iniciativa-politica_nao" id="iniciativa-politica2" value="sim" class="form-control-radio">
-                        Sim
+                        <input type="radio" name="recursos" value="0" class="form-control-radio"> Nāo
                     </label>
                 </div>
 
