@@ -810,12 +810,12 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
         </select>
 
      </div>
-
+<!--
      <script type="text/javascript">
     $(document).ready(function() {
     $('#subtemas').multiselect();
     });
- </script>  
+ </script> --> 
      
 
 
