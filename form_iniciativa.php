@@ -1032,6 +1032,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                     <button type="submit" class="btn btn-submit">Enviar</button>
                 </div>
             </fieldset> 
+         </form>
      </div>
   </div>                
 
