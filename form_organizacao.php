@@ -276,7 +276,7 @@
                         <input type="radio" name="organizacao-recurso2" value="sim" class="form-control-radio">Sim
                     </label>
                 </div>
-
+<!--
                 <h5>Qual é a origem?</h5>
                 <h5>apoio a projetos / patrocínio</h5>
                 <div class="form-group">
@@ -311,11 +311,10 @@
                     <div class="form-group">
                    <label class="radio">
                         <input type="radio" name="organizacao-origem8" value="origem8" class="form-control-radio">Doaçāo Pessoa Física 
-                    </label>
-                    
- 
-
+                    </label>     
                 </div>
+
+            -->
 
                 <h5>O que faz Organizaçāo?*(até 500 caracteres)</h5>                                  
                 <div class="form-group">

@@ -311,7 +311,7 @@
                 </div>
 
 
-
+<!--
                 <h5>Qual é a origem?</h5>
                 <h5>apoio a projetos / patrocínio</h5>
                 <div class="form-group">
@@ -351,6 +351,7 @@
                         <input type="radio" name="iniciativa-origem8" value="origem8" class="form-control-radio">Doaçāo Pessoa Física 
                     </label>
                 </div>
+            -->
 
            <h5>O que faz sua iniciativa?* (até 500 caracteres).</h5>                                  
                 <div class="form-group">
