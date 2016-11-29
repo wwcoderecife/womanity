@@ -465,7 +465,7 @@
                         <option value="1">Sim</option>
                     </select>
                     <textarea type="text" id="inputAvaliacaoOng" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
-                        "style='display: none' required data-error = "Campo está em branco, favor preencher."/></textarea>
+                        "style='display: none' /></textarea>
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -513,7 +513,7 @@
                         <option value="1">Sim, qual?</option>
                     </select>
                     <textarea type="text" id="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
-"style='display: none' required data-error = "Campo está em branco, favor preencher."/></textarea>
+"style='display: none' /></textarea>
                     <script>
 
                         var dropdownComun = document.getElementById('organizacao-comunicacao');
@@ -562,7 +562,7 @@
                         
                     </select>
                     <textarea type="text" id="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
-"style='display: none' required data-error = "Campo está em branco, favor preencher." /></textarea>
+"style='display: none' /></textarea>
                     <script>
 
                     var dropdown = document.getElementById('premiacao');
