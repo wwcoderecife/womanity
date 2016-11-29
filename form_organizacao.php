@@ -579,16 +579,16 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 
                  <h5>Qual é a sua função no ecossistema?*</h5>
 
-                 <div class="form-group f1-last-name form-control">
-                 <input type="checkbox" name="1" value="Advocacy">Advocacy<br>
-                 <input type="checkbox" name="2" value="Atuação direta com mulheres, homens, LGBTT, etc">Atuação direta com mulheres, homens, LGBTT, etc<br>
+                 <div class="form-group">
+                 <input type="checkbox" name="1" value="Advocacy"><strong>Advocacy<br></strong>
+                 <input type="checkbox" name="2" value="Atuação direta com mulheres, homens, LGBTT, etc"></strong>Atuação direta com mulheres, homens, LGBTT, etc<br><strong>
 
                  <input type="numeric"  name="" placeholder="número de beneficiários diretos" style="margin-left: 30px" class="f1-last-name form-control"><br>
-                 <input type="checkbox" name="3" value="Financiadores">Financiadores<br>
-                 <input type="checkbox" name="4" value="Fortalecedor institucional"> Fortalecedor institucional<br>
-                 <input type="checkbox" name="5" value="público" style="margin-left: 20px">público
-                 <input type="checkbox" name="6" value="privado" style="margin-left: 20px"> privado
-                 <input type="checkbox" name="7" value="social"  style="margin-left: 20px"> social⁠⁠⁠⁠   
+                 <input type="checkbox" name="3" value="Financiadores"><strong>Financiadores<br></strong>
+                 <input type="checkbox" name="4" value="Fortalecedor institucional"><strong>Fortalecedor institucional<br></strong>
+                 <input type="checkbox" name="5" value="público" style="margin-left: 20px"><strong>público</strong>
+                 <input type="checkbox" name="6" value="privado" style="margin-left: 20px"><strong>privado</strong>
+                 <input type="checkbox" name="7" value="social"  style="margin-left: 20px"><strong>social⁠⁠⁠⁠</strong>   
                  </div>   
 
 
