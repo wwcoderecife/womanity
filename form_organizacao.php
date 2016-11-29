@@ -564,7 +564,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
             <option value="41"name="subtemas"onclick="verificarSelect()">Cooperativismo</option>
             <option value="42"name="subtemas"onclick="verificarSelect()">Inclusão Digital</option>
             <option value="43"name="subtemas"onclick="verificarSelect()">Teatro</option>
-            <option value="43"name="subtemas"onclick="verificarSelect()">Sustentabilidade</option>
+            <option value="44"name="subtemas"onclick="verificarSelect()">Sustentabilidade</option>
 
         </select>
 
@@ -579,19 +579,19 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
             var Marcados = 1;
             var objSelect = $("option[name='subtemas']");
             //Percorrendo os checks para ver quantos foram selecionados:
-            for (var iLoop=0; iLoop<objSelect.length; iLoop++) {
-            //Se o número máximo de checkboxes ainda não tiver sido atingido, continua a verificação:
-                if (objSelect[iLoop].checked) {
+            for (var iLoop1=0; iLoop1<objSelect.length; iLoop1++) {
+            //Se o número máximo de select ainda não tiver sido atingido, continua a verificação:
+                if (objSelect[iLoop1].selected) {
                     Marcados++;
                 }
                 
                 if (Marcados <= SelectMaximo) {
-                //Habilitando todos os checkboxes, pois o máximo ainda não foi alcançado.
+                //Habilitando todos os select, pois o máximo ainda não foi alcançado.
                 for (var i=0; i<objSelect.length; i++) {
                     objSelect[i].disabled = false;
                 }       
-                //Caso contrário, desabilitar o checkbox;
-                //Nesse caso, é necessário percorrer todas as opções novamente, desabilitando as não checadas;
+                //Caso contrário, desabilitar o select;
+                //Nesse caso, é necessário percorrer todas as opções novamente, desabilitando as não selecionadas;
                 
                 } else {
                     for (var i=0; i<objSelect.length; i++) {
