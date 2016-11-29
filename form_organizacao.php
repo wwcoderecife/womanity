@@ -388,11 +388,12 @@
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong3" data-error = "Campo está em branco, favor preencher."></textarea>
                 </div>
 
-                <h5>Clique nos Estados em que sua organizaçāo tem atuação direta*</h5>
+                <h5>Clique nos Estados que sua iniciativa tem atuação direta*</h5>
                     <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
                     <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="organizacao_estado">
+                    <select class="f1-last-name form-control" name="organizacao_estado" multiple >
+                        <div class="help-block with-errors"></div>
                       <option value="1">Acre</option>
                         <option value="2">Alagoas</option>
                         <option value="3">Amapá</option>
