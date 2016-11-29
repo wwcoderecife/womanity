@@ -570,13 +570,30 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 
      </div>
 
+<script>
+     $(document).ready(function() {
+
+          var last_valid_selection = null;
+
+          $('#subtemas').change(function(event) {
+
+            if ($(this).val().length > 3) {
+
+              $(this).val(last_valid_selection);
+            } else {
+              last_valid_selection = $(this).val();
+            }
+          });
+        });
+    </script> 
 
 
+<!--
  <script>
             var SelectMaximo = 3;
 
             function verificarSelect() {
-            var Marcados = 1;
+            var Marcados = 0;
             var objSelect = $("option[name='subtemas']");
             //Percorrendo os checks para ver quantos foram selecionados:
             for (var iLoop1=0; iLoop1<objSelect.length; iLoop1++) {
@@ -603,6 +620,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
             }
             }
 </script>
+-->
 
                 <h5>O que faz sua organização?*(até 500 caracteres)</h5>                                  
                 <div class="form-group">
