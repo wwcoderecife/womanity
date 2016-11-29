@@ -166,7 +166,7 @@
                 <h5>E-mail da iniciativa</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Email</label>
-                    <input type="email" name="email"class="f1-last-name form-control"  data-error = "Por favor, informe um e-mail correto">
+                    <input type="email" name="email"class="f1-last-name form-control">
                     <div class="help-block with-errors"></div>
                 </div>
 
