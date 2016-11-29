@@ -767,6 +767,12 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 </script>
 
   
+<select class="selectpicker" multiple data-max-options="3">
+  <option>Mustard</option>
+  <option>Ketchup</option>
+  <option>Relish</option>
+</select>
+
 
 <!--
 <h5> Clique e escolha até 3 Subtemas abaixo*</h5>
