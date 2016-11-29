@@ -5,17 +5,14 @@
             <!--<script src="assets/js/validator.min.js"></script>-->
             <script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>
             <script type="text/javascript"></script>
+            <link   rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+            <script src="assets/js/bootstrap-select.min.js" ></script>
+           
 
-            <!--bootstrap multiple select-->
+        
 
-            <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css">
+           
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>
-
-<!-- (Optional) Latest compiled and minified JavaScript translation files -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/i18n/defaults-*.min.js"></script>
 
 
             <!--Include Twitter Bootstrap and jQuery: Subtemas--> 
