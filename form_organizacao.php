@@ -829,7 +829,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
  <script>
             var SelectMaximo = 3;
 
-            function verificar() {
+            function verificarSelect() {
             var Marcados = 1;
             var objSelect = $("option[name='subtemas']");
             //Percorrendo os checks para ver quantos foram selecionados:
