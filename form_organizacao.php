@@ -522,53 +522,87 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 <div class="form-group">
 <label for="subtemas" for="f1-google-plus">Subtemas</label>
         <select class="f1-last-name form-control"id="subtemas" class="selectpicker" name="subtemas" data-style="default" multiple>
-            <option value="1" name="subtemas">Aborto</option>
-            <option value="2"name="subtemas">Dança</option>
-            <option value="3"name="subtemas">Inserção de mulheres na política</option>
-            <option value="4"name="subtemas">Paternidade</option>
-            <option value="5"name="subtemas">Tecnologia social e/ou alternativas</option>
-            <option value="6"name="subtemas">Desenvolvimento e Programação</option>
-            <option value="7"name="subtemas">Liderança</option>
-            <option value="8"name="subtemas">Pessoa com deficiência</option>
-            <option value="9"name="subtemas">Trabalho digno</option>
-            <option value="10"name="subtemas">Advocacy</option>
-            <option value="11"name="subtemas">Ecofeminismo</option>
-            <option value="12"name="subtemas">Povos tradicionais</option>
-            <option value="13"name="subtemas">Tráfico de pessoas</option>
-            <option value="14"name="subtemas">Agua e saneamento básico</option>
-            <option value="15"name="subtemas">Economia criativa</option>
-            <option value="16"name="subtemas">Marketing</option>
-            <option value="17"name="subtemas">Preconceito e discriminação</option>
-            <option value="18"name="subtemas">Tecnologia</option>
-            <option value="19"name="subtemas">Artes plásticas</option>
-            <option value="20"name="subtemas">Parto Humanizado</option>
-            <option value="21"name="subtemas">Cadeia produtiva responsável</option>
-            <option value="22"name="subtemas">Educomunicação</option>
-            <option value="23"name="subtemas">Microcrédito</option>
-            <option value="24"name="subtemas">Questão presidiária</option>
-            <option value="25"name="subtemas">Cinema</option>
-            <option value="26"name="subtemas">Envelhecimento</option>
-            <option value="27"name="subtemas">Mobilização</option>
-            <option value="28"name="subtemas">Reciclagem e logísitca diversa</option>
-            <option value="29"name="subtemas">Finanças sociais</option>
-            <option value="30"name="subtemas">Mudanças climáticas</option>
-            <option value="32"name="subtemas">Redes Sociais</option>
-            <option value="33"name="subtemas">Conselhos e outras instâncias</option>
-            <option value="34"name="subtemas">Fotografia</option>
-            <option value="35"name="subtemas">Mulheres no mundo da ciencias</option>
-            <option value="36"name="subtemas">Refugiados</option>
-            <option value="37"name="subtemas">Consumo</option>
-            <option value="38"name="subtemas">Incentivo à leitura</option>
-            <option value="39"name="subtemas">Obesidade infantil</option>
-            <option value="30"name="subtemas">Reparação-reconstrução</option>
-            <option value="41"name="subtemas">Cooperativismo</option>
-            <option value="42"name="subtemas">Inclusão Digital</option>
-            <option value="43"name="subtemas">Teatro</option>
-            <option value="43"name="subtemas">Sustentabilidade</option>
+            <option value="1"name="subtemas"onclick="verificarSelect()">Aborto</option>
+            <option value="2"name="subtemas"onclick="verificarSelect()">Dança</option>
+            <option value="3"name="subtemas"onclick="verificarSelect()">Inserção de mulheres na política</option>
+            <option value="4"name="subtemas"onclick="verificarSelect()">Paternidade</option>
+            <option value="5"name="subtemas"onclick="verificarSelect()">Tecnologia social e/ou alternativas</option>
+            <option value="6"name="subtemas"onclick="verificarSelect()">Desenvolvimento e Programação</option>
+            <option value="7"name="subtemas"onclick="verificarSelect()">Liderança</option>
+            <option value="8"name="subtemas"onclick="verificarSelect()">Pessoa com deficiência</option>
+            <option value="9"name="subtemas"onclick="verificarSelect()">Trabalho digno</option>
+            <option value="10"name="subtemas"onclick="verificarSelect()">Advocacy</option>
+            <option value="11"name="subtemas"onclick="verificarSelect()">Ecofeminismo</option>
+            <option value="12"name="subtemas"onclick="verificarSelect()">Povos tradicionais</option>
+            <option value="13"name="subtemas"onclick="verificarSelect()">Tráfico de pessoas</option>
+            <option value="14"name="subtemas"onclick="verificarSelect()">Agua e saneamento básico</option>
+            <option value="15"name="subtemas"onclick="verificarSelect()">Economia criativa</option>
+            <option value="16"name="subtemas"onclick="verificarSelect()">Marketing</option>
+            <option value="17"name="subtemas"onclick="verificarSelect()">Preconceito e discriminação</option>
+            <option value="18"name="subtemas"onclick="verificarSelect()">Tecnologia</option>
+            <option value="19"name="subtemas"onclick="verificarSelect()">Artes plásticas</option>
+            <option value="20"name="subtemas"onclick="verificarSelect()">Parto Humanizado</option>
+            <option value="21"name="subtemas"onclick="verificarSelect()">Cadeia produtiva responsável</option>
+            <option value="22"name="subtemas"onclick="verificarSelect()">Educomunicação</option>
+            <option value="23"name="subtemas"onclick="verificarSelect()">Microcrédito</option>
+            <option value="24"name="subtemas"onclick="verificarSelect()">Questão presidiária</option>
+            <option value="25"name="subtemas"onclick="verificarSelect()">Cinema</option>
+            <option value="26"name="subtemas"onclick="verificarSelect()">Envelhecimento</option>
+            <option value="27"name="subtemas"onclick="verificarSelect()">Mobilização</option>
+            <option value="28"name="subtemas"onclick="verificarSelect()">Reciclagem e logísitca diversa</option>
+            <option value="29"name="subtemas"onclick="verificarSelect()">Finanças sociais</option>
+            <option value="30"name="subtemas"onclick="verificarSelect()">Mudanças climáticas</option>
+            <option value="32"name="subtemas"onclick="verificarSelect()">Redes Sociais</option>
+            <option value="33"name="subtemas"onclick="verificarSelect()">Conselhos e outras instâncias</option>
+            <option value="34"name="subtemas"onclick="verificarSelect()">Fotografia</option>
+            <option value="35"name="subtemas"onclick="verificarSelect()">Mulheres no mundo da ciencias</option>
+            <option value="36"name="subtemas"onclick="verificarSelect()">Refugiados</option>
+            <option value="37"name="subtemas"onclick="verificarSelect()">Consumo</option>
+            <option value="38"name="subtemas"onclick="verificarSelect()">Incentivo à leitura</option>
+            <option value="39"name="subtemas"onclick="verificarSelect()">Obesidade infantil</option>
+            <option value="30"name="subtemas"onclick="verificarSelect()">Reparação-reconstrução</option>
+            <option value="41"name="subtemas"onclick="verificarSelect()">Cooperativismo</option>
+            <option value="42"name="subtemas"onclick="verificarSelect()">Inclusão Digital</option>
+            <option value="43"name="subtemas"onclick="verificarSelect()">Teatro</option>
+            <option value="43"name="subtemas"onclick="verificarSelect()">Sustentabilidade</option>
 
         </select>
 
      </div>
+
+
+
+ <script>
+            var SelectMaximo = 3;
+
+            function verificarSelect() {
+            var Marcados = 1;
+            var objSelect = $("option[name='subtemas']");
+            //Percorrendo os checks para ver quantos foram selecionados:
+            for (var iLoop=0; iLoop<objSelect.length; iLoop++) {
+            //Se o número máximo de checkboxes ainda não tiver sido atingido, continua a verificação:
+                if (objSelect[iLoop].checked) {
+                    Marcados++;
+                }
+                
+                if (Marcados <= SelectMaximo) {
+                //Habilitando todos os checkboxes, pois o máximo ainda não foi alcançado.
+                for (var i=0; i<objSelect.length; i++) {
+                    objSelect[i].disabled = false;
+                }       
+                //Caso contrário, desabilitar o checkbox;
+                //Nesse caso, é necessário percorrer todas as opções novamente, desabilitando as não checadas;
+                
+                } else {
+                    for (var i=0; i<objSelect.length; i++) {
+                        if(objSelect[i].checked == false) {
+                            objSelect[i].disabled = true;
+                        }       
+                  }
+                }
+            }
+            }
+</script>
 
                 <h5>O que faz sua organização?*(até 500 caracteres)</h5>                                  
                 <div class="form-group">
@@ -859,63 +893,6 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 </div> 
 
                 
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-<!--
- <script>
-            var SelectMaximo = 3;
-
-            function verificarSelect() {
-            var Marcados = 1;
-            var objSelect = $("option[name='subtemas']");
-            //Percorrendo os checks para ver quantos foram selecionados:
-            for (var iLoop=0; iLoop<objSelect.length; iLoop++) {
-            //Se o número máximo de checkboxes ainda não tiver sido atingido, continua a verificação:
-                if (objSelect[iLoop].checked) {
-                    Marcados++;
-                }
-                
-                if (Marcados <= SelectMaximo) {
-                //Habilitando todos os checkboxes, pois o máximo ainda não foi alcançado.
-                for (var i=0; i<objSelect.length; i++) {
-                    objSelect[i].disabled = false;
-                }       
-                //Caso contrário, desabilitar o checkbox;
-                //Nesse caso, é necessário percorrer todas as opções novamente, desabilitando as não checadas;
-                
-                } else {
-                    for (var i=0; i<objSelect.length; i++) {
-                        if(objSelect[i].checked == false) {
-                            objSelect[i].disabled = true;
-                        }       
-                  }
-                }
-            }
-            }
-</script>
--->
-
-<!--
-     <script type="text/javascript">
-    $(document).ready(function() {
-    $('#subtemas').multiselect();
-    });
- </script> --> 
-     
-
-
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
                     <button type="button" class="btn btn-next">Próximo</button>
@@ -924,8 +901,6 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 </fieldset>
 
            
-                 
-
             <!--Etapa 3 Formulário: Endereço/Organizaçāo -->
 
 
