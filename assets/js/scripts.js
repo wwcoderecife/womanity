@@ -124,7 +124,7 @@ jQuery(document).ready(function() {
 
 
     //populando os combos de cidade e estado
-    $.getJSON('http://womanityecossistema.azurewebsites.net/estados_cidades.json', function (data) {
+    $.getJSON('http://womanityecossistema.azurewebsites.net/assets/js/estados_cidades.json', function (data) {
 
         var items = [];
         var options = '<option value="">escolha um estado</option>'; 
