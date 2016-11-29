@@ -85,7 +85,7 @@
                  <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="cargo_1" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo1" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="cargo_1" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo1" >
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -99,14 +99,14 @@
                  <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="telefone_1" placeholder="Telefone" class="f1-last-name form-control" id="inputTel1" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="tel" name="telefone_1" placeholder="Telefone" class="f1-last-name form-control" id="inputTel1" >
                     <div class="help-block with-errors"></div>
                 </div>
 
                  <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_1" placeholder="Celular" class="f1-last-name form-control" id="inputCel1"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="tel" name="celular_1" placeholder="Celular" class="f1-last-name form-control" id="inputCel1">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -114,28 +114,27 @@
                   <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="cargo_2" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo2"required data-error = "Campo está em branco, favor preencher.">
-                    <div class="help-block with-errors"></div>
+                    <input type="text" name="cargo_2" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo2">
                 </div>
 
                 <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="email_2" placeholder="E-mail" class="f1-last-name form-control" id="email2"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="email" name="email_2" placeholder="E-mail" class="f1-last-name form-control" id="email2">
                     <div class="help-block with-errors"></div>                    
                 </div>
 
                  <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="telefone_2" placeholder="Telefone" class="f1-last-name form-control" id="inputTel2"required data-error = "Por favor, preencha corretamente o campo (xx) xxxx-xxxx.">
+                    <input type="tel" name="telefone_2" placeholder="Telefone" class="f1-last-name form-control" id="inputTel2">
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_2" placeholder="Celular" class="f1-last-name form-control" id="inputCel2"required data-error = "Por favor, preencha corretamente o campo (xx) xxxxx-xxxx.">
+                    <input type="tel" name="celular_2" placeholder="Celular" class="f1-last-name form-control" id="inputCel2">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -199,18 +198,18 @@
                 <h5>A sua Organizaçāo está localizada na…*</h5>
                 <div class="form-group">
                     <label class="radio-inline">
-                       <input type="radio" name="zona" value="rural" class="form-control-radio" required>Zona Rural
+                       <input type="radio" name="zona" value="rural" class="form-control-radio" >Zona Rural
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="zona" value="urbana" class="form-control-radio" required>Zona Urbana
+                        <input type="radio" name="zona" value="urbana" class="form-control-radio">Zona Urbana
                     </label>
                 </div>
 
                 <h5>Nome da Organizaçāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Nome</label>
-                    <input type="text" name="nome" maxlength="50" class="f1-last-name form-control"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="nome" maxlength="50" class="f1-last-name form-control">
                 </div>
 
 
@@ -223,19 +222,19 @@
                 <h5>Telefone da Organizaçāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Telefone</label>
-                    <input type="tel" id="telefone" name="organizacao-telefone" placeholder="(xx) xxxxx-xxxx"class="f1-last-name form-control"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="tel" id="telefone" name="organizacao-telefone" placeholder="(xx) xxxxx-xxxx"class="f1-last-name form-control">
                 </div>
 
                 <h5>E-mail da Organizaçāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Email</label>
-                    <input type="email" name="email" class="f1-last-name form-control"class="f1-last-name form-control"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="email" name="email" class="f1-last-name form-control"class="f1-last-name form-control">
                 </div>
 
                  <h5>Como sua organizaçāo se identifica*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus" ></label>
-                    <select class="f1-last-name form-control" id="organizacao-tipo" name="tipo" required data-error = "Selecione uma opçāo.">
+                    <select class="f1-last-name form-control" id="organizacao-tipo" name="tipo">
                         <option value="academica"> acadêmica</option>
                         <option value="coletivo">coletivo</option>
                         <option value="centro-oeste">empresa privada</option>
@@ -285,7 +284,7 @@
                  <h5> Quando sua Organizaçāo iniciou as atividades?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="year" name="anoatividade" required data-error = "Selecione o ano.">
+                    <select class="f1-last-name form-control" id="year" name="anoatividade" >
                     <div class="help-block with-errors"></div>
                         <script>
                           var myDate = new Date();
@@ -300,7 +299,7 @@
                     <h5>Quantas pessoas estão envolvidas neste trabalho?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas" required data-error = "Selecione uma opçāo.">
+                    <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas">
                         <option value=""></option>
                         <option value="1-5">1-5</option>
                         <option value="6-10">6-10</option>
@@ -317,18 +316,18 @@
                  <h5>2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
-                    <input type="text" name="orcamento_2014" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2014" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="orcamento_2014" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2014">
 
                 </div>
                 <h5>2015</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2015</label>
-                    <input type="text" name="orcamento_2015"  placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2015" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="orcamento_2015"  placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2015" >
                 </div>
                 <h5>2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
-                    <input type="text" name="orcamento_2016"  placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2016"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="orcamento_2016"  placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2016">
                 </div>
 
                 <h5>Sua Organizaçāo recebe recursos financeiros?</h5>
@@ -346,7 +345,7 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
                     <textarea name="sobre" maxlength="500" placeholder="Fale sobre a sua organizaçāo...." 
-                    class="f1-about-yourself form-control" id="sobre" required data-error = "Campo está em branco, favor preencher."></textarea>
+                    class="f1-about-yourself form-control" id="sobre" ></textarea>
                 </div>
 
 
@@ -354,7 +353,7 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="publico_alvo" name="publico_alvo" required data-error = "Selecione uma opçāo." >
+                    <select class="f1-last-name form-control" id="publico_alvo" name="publico_alvo" >
                         <option value=""></option>
                         <option value="Empresas">Empresas</option>
                         <option value="Organizações Sociais">Organizações Sociais</option>
@@ -393,7 +392,7 @@
                     <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
                     <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="organizacao_estado" multiple required data-error = "Selecione uma opçāo.">
+                    <select class="f1-last-name form-control" name="organizacao_estado">
                       <option value="1">Acre</option>
                         <option value="2">Alagoas</option>
                         <option value="3">Amapá</option>
@@ -622,7 +621,7 @@
         <h5>Áreas de atuação da organização: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>
         <div class="form-group" style="border: 1px solid #ddd">
         <div class="table-responsive">
-        <table id="form1" name="temas"class="table table-hover col-sm-12" required data-error = "Selecione até 3 temas.">
+        <table id="form1" name="temas"class="table table-hover col-sm-12" >
 
          <thead>
             <tr>
@@ -858,7 +857,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                  <h5>Estado*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Estado</label>
-                    <select class="f1-last-name form-control" id="estados" required data-error = "Selecione uma opçāo.">
+                    <select class="f1-last-name form-control" id="estados" >
                         <div class="help-block with-errors"></div>
                         <option value="1">Acre</option>
                         <option value="2">Alagoas</option>
@@ -893,7 +892,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 <h5>Cidade*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="cidades" required data-error = "Selecione uma opçāo.">
+                    <select class="f1-last-name form-control" id="cidades" >
                         <div class="help-block with-errors"></div> 
                         <option value="1">Rio Branco</option>
                         <option value="2">Maceió</option>
