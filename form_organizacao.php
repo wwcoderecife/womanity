@@ -768,7 +768,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 
   
 
-
+<!--
 <h5> Clique e escolha até 3 Subtemas abaixo*</h5>
 <div class="form-group">
 <label for="subtemas" for="f1-google-plus">Subtemas</label>
@@ -821,8 +821,10 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 
      </div>
 
+ -->
 
 
+<!--
  <script>
             var SelectMaximo = 3;
 
@@ -854,6 +856,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
             }
             }
 </script>
+-->
 
 <!--
      <script type="text/javascript">
