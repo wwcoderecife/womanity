@@ -855,18 +855,75 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                         <option value="sudeste">Sudeste</option>
                     </select> 
                 </div>
+                 h5>Estado*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Estado</label>
-                    <select class="f1-last-name form-control" name="estado" id="estados">
-                        <option value=""></option>
+                    <select class="f1-last-name form-control" id="estados" required data-error = "Selecione uma opçāo.">
+                        <div class="help-block with-errors"></div>
+                        <option value="1">Acre</option>
+                        <option value="2">Alagoas</option>
+                        <option value="3">Amapá</option>
+                        <option value="4">Amazonas</option>
+                        <option value="5">Bahia</option>
+                        <option value="6">Ceará</option>
+                        <option value="7">Distrito Federal</option>
+                        <option value="8">Espírito Santo</option>
+                        <option value="9">Goiás</option>
+                        <option value="10">Maranhão</option>
+                        <option value="11">Mato Grosso</option>
+                        <option value="12">Mato Grosso do Sul</option>
+                        <option value="13">Minas Gerais</option>
+                        <option value="14">Pará</option>
+                        <option value="15">Paraíba</option>
+                        <option value="16">Paraná</option>
+                        <option value="17">Pernambuco</option>
+                        <option value="18">Piauí</option>
+                        <option value="19">Rio de Janeiro</option>
+                        <option value="20">Rio Grande do Norte</option>
+                        <option value="21">Rio Grande do Sul</option>
+                        <option value="22">Rondônia</option>
+                        <option value="23">Roraima</option>
+                        <option value="24">Santa Catarina</option>
+                        <option value="25">São Paulo</option>
+                        <option value="26">Sergipe</option>
+                        <option value="27">Tocantins</option>
                     </select> 
                 </div>
+
+                <h5>Cidade*</h5>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-google-plus">Cidade</label>
-                    <select class="f1-last-name form-control" name="cidade" id="cidades"> 
-                        <option value=""></option>
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" id="cidades" required data-error = "Selecione uma opçāo.">
+                        <div class="help-block with-errors"></div> 
+                        <option value="1">Rio Branco</option>
+                        <option value="2">Maceió</option>
+                        <option value="3">Macapá</option>
+                        <option value="4">Manaus</option>
+                        <option value="5">Salvador</option>
+                        <option value="6">Fortaleza</option>
+                        <option value="7">Brasília</option>
+                        <option value="8">Vitória</option>
+                        <option value="9">Goiânia</option>
+                        <option value="10">São Luís</option>
+                        <option value="11">Cuiabá</option>
+                        <option value="12">Campo Grande</option>
+                        <option value="13">Belo Horizonte</option>
+                        <option value="14">Belém</option>
+                        <option value="15">João Pessoa</option>
+                        <option value="16">Curitiba</option>
+                        <option value="17">Recife</option>
+                        <option value="18">Teresina</option>
+                        <option value="19">Natal</option>
+                        <option value="20">Porto Alegre</option>
+                        <option value="21">Porto Velho</option>
+                        <option value="22">Boa Vista</option>
+                        <option value="23">Florianópolis</option>
+                        <option value="24">Sāo Paulo</option>
+                        <option value="25">Aracaju</option>
+                        <option value="25">Palmas</option>
                     </select> 
                 </div>
+
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Bairro</label>
                 <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control">
