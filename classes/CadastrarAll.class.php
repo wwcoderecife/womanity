@@ -664,18 +664,17 @@ class CadastrarAll extends Conexao {
             $inserir_empoderamentos->execute();
 
 
-           // $inserir_atuacao_direta = $pdo->prepare("insert into atuacao_direta (estado, organizacao_id)
-            //                       values (?, ?)");
-            //$estados = $this->getEstados();
-           // echo $estados;
-            //if(isset($estados)){
-            //    foreach ($estados  as $estado){
-            ////        echo $estado;
-            //       $inserir_atuacao_direta->bindValue(1, $estado);
-            //       $inserir_atuacao_direta->bindValue(2, $organizacao_id);
-            //       $inserir_atuacao_direta->execute();
-            //    }
-           // }
+            $inserir_atuacao_direta = $pdo->prepare("insert into atuacao_direta (estado, organizacao_id)
+                                   values (?, ?)");
+            $estados = $this->getEstados();
+    
+            
+                foreach ($estados  as $estado){
+
+                   $inserir_atuacao_direta->bindValue(1, $estado);
+                   $inserir_atuacao_direta->bindValue(2, $organizacao_id);
+                   $inserir_atuacao_direta->execute();
+                }
 
 
             $inserir_relaciona = $pdo->prepare("insert into relacionadas (nome, organizacao_id)
