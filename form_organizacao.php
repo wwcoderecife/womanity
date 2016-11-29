@@ -776,52 +776,88 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 <div class="form-group">
 <label for="subtemas" for="f1-google-plus">Subtemas</label>
         <select class="f1-last-name form-control"id="subtemas" class="selectpicker" name="subtemas" data-style="default" multiple>
-            <option value="1">Aborto</option>
-            <option value="2">Dança</option>
-            <option value="3">Inserção de mulheres na política</option>
-            <option value="4">Paternidade</option>
-            <option value="5">Tecnologia social e/ou alternativas</option>
-            <option value="6">Desenvolvimento e Programação</option>
-            <option value="7">Liderança</option>
-            <option value="8">Pessoa com deficiência</option>
-            <option value="9">Trabalho digno</option>
-            <option value="10">Advocacy</option>
-            <option value="11">Ecofeminismo</option>
-            <option value="12">Povos tradicionais</option>
-            <option value="13">Tráfico de pessoas</option>
-            <option value="14">Agua e saneamento básico</option>
-            <option value="15">Economia criativa</option>
-            <option value="16">Marketing</option>
-            <option value="17">Preconceito e discriminação</option>
-            <option value="18">Tecnologia</option>
-            <option value="19">Artes plásticas</option>
-            <option value="20">Parto Humanizado</option>
-            <option value="21">Cadeia produtiva responsável</option>
-            <option value="22">Educomunicação</option>
-            <option value="23">Microcrédito</option>
-            <option value="24">Questão presidiária</option>
-            <option value="25">Cinema</option>
-            <option value="26">Envelhecimento</option>
-            <option value="27">Mobilização</option>
-            <option value="28">Reciclagem e logísitca diversa</option>
-            <option value="29">Finanças sociais</option>
-            <option value="30">Mudanças climáticas</option>
-            <option value="32">Redes Sociais</option>
-            <option value="33">Conselhos e outras instâncias</option>
-            <option value="34">Fotografia</option>
-            <option value="35">Mulheres no mundo da ciencias</option>
-            <option value="36">Refugiados</option>
-            <option value="37">Consumo</option>
-            <option value="38">Incentivo à leitura</option>
-            <option value="39">Obesidade infantil</option>
-            <option value="30">Reparação-reconstrução</option>
-            <option value="41">Cooperativismo</option>
-            <option value="42">Inclusão Digital</option>
-            <option value="43">Teatro</option>
+            <option value="1" name="subtemas">Aborto</option>
+            <option value="2"name="subtemas">Dança</option>
+            <option value="3"name="subtemas">Inserção de mulheres na política</option>
+            <option value="4"name="subtemas">Paternidade</option>
+            <option value="5"name="subtemas">Tecnologia social e/ou alternativas</option>
+            <option value="6"name="subtemas">Desenvolvimento e Programação</option>
+            <option value="7"name="subtemas">Liderança</option>
+            <option value="8"name="subtemas">Pessoa com deficiência</option>
+            <option value="9"name="subtemas">Trabalho digno</option>
+            <option value="10"name="subtemas">Advocacy</option>
+            <option value="11"name="subtemas">Ecofeminismo</option>
+            <option value="12"name="subtemas">Povos tradicionais</option>
+            <option value="13"name="subtemas">Tráfico de pessoas</option>
+            <option value="14"name="subtemas">Agua e saneamento básico</option>
+            <option value="15"name="subtemas">Economia criativa</option>
+            <option value="16"name="subtemas">Marketing</option>
+            <option value="17"name="subtemas">Preconceito e discriminação</option>
+            <option value="18"name="subtemas">Tecnologia</option>
+            <option value="19"name="subtemas">Artes plásticas</option>
+            <option value="20"name="subtemas">Parto Humanizado</option>
+            <option value="21"name="subtemas">Cadeia produtiva responsável</option>
+            <option value="22"name="subtemas">Educomunicação</option>
+            <option value="23"name="subtemas">Microcrédito</option>
+            <option value="24"name="subtemas">Questão presidiária</option>
+            <option value="25"name="subtemas">Cinema</option>
+            <option value="26"name="subtemas">Envelhecimento</option>
+            <option value="27"name="subtemas">Mobilização</option>
+            <option value="28"name="subtemas">Reciclagem e logísitca diversa</option>
+            <option value="29"name="subtemas">Finanças sociais</option>
+            <option value="30"name="subtemas">Mudanças climáticas</option>
+            <option value="32"name="subtemas">Redes Sociais</option>
+            <option value="33"name="subtemas">Conselhos e outras instâncias</option>
+            <option value="34"name="subtemas">Fotografia</option>
+            <option value="35"name="subtemas">Mulheres no mundo da ciencias</option>
+            <option value="36"name="subtemas">Refugiados</option>
+            <option value="37"name="subtemas">Consumo</option>
+            <option value="38"name="subtemas">Incentivo à leitura</option>
+            <option value="39"name="subtemas">Obesidade infantil</option>
+            <option value="30"name="subtemas">Reparação-reconstrução</option>
+            <option value="41"name="subtemas">Cooperativismo</option>
+            <option value="42"name="subtemas">Inclusão Digital</option>
+            <option value="43"name="subtemas">Teatro</option>
+            <option value="43"name="subtemas">Sustentabilidade</option>
 
         </select>
 
      </div>
+
+
+
+ <script>
+            var SelectMaximo = 3;
+
+            function verificar() {
+            var Marcados = 1;
+            var objSelect = $("option[name='subtemas']");
+            //Percorrendo os checks para ver quantos foram selecionados:
+            for (var iLoop=0; iLoop<objSelect.length; iLoop++) {
+            //Se o número máximo de checkboxes ainda não tiver sido atingido, continua a verificação:
+                if (objSelect[iLoop].checked) {
+                    Marcados++;
+                }
+                
+                if (Marcados <= SelectMaximo) {
+                //Habilitando todos os checkboxes, pois o máximo ainda não foi alcançado.
+                for (var i=0; i<objSelect.length; i++) {
+                    objSelect[i].disabled = false;
+                }       
+                //Caso contrário, desabilitar o checkbox;
+                //Nesse caso, é necessário percorrer todas as opções novamente, desabilitando as não checadas;
+                
+                } else {
+                    for (var i=0; i<objSelect.length; i++) {
+                        if(objSelect[i].checked == false) {
+                            objSelect[i].disabled = true;
+                        }       
+                  }
+                }
+            }
+            }
+</script>
+
 <!--
      <script type="text/javascript">
     $(document).ready(function() {
