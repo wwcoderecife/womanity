@@ -61,7 +61,7 @@
                 <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="cargo_1" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="cargo_1" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -74,13 +74,13 @@
                 <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control" id="inputTel1" required data-error="Por favor, preencha corretamente o campo (xx) xxxx-xxxx.">
+                    <input type="tel" name="telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control" id="inputTel1">
                     <div class="help-block with-errors"></div>
                 </div>
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="text" name="celular_1" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control" id="inputCel1" required data-error="Por favor, preencha corretamente o campo (xx) xxxxx-xxxx.">
+                    <input type="text" name="celular_1" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control" id="inputCel1">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -88,13 +88,13 @@
                 <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="cargo_2" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="cargo_2" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name">
                     <div class="help-block with-errors"></div>
                 </div>
                  <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="text" name="email_2" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="email_2" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
                     <div class="help-block with-errors"></div>
                     
                 </div>
@@ -102,13 +102,12 @@
                 <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="text" name="telefone_2" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control" id="inputTel2"required data-error = "Por favor, preencha corretamente o campo (xx) xxxx-xxxx.">
-                    <div class="help-block with-errors"></div>
+                    <input type="text" name="telefone_2" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control" id="inputTel2">
                 </div>
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="text" name="celular_2" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control" id="inputCel2"required data-error = "Por favor, preencha corretamente o campo (xx) xxxxx-xxxx.">
+                    <input type="text" name="celular_2" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control" id="inputCel2">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -124,30 +123,29 @@
                 <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
                <div class="form-group">
                     <label class="radio-inline">
-                       <input type="radio" name="zona" value="rural" class="form-control-radio" required>Sim
+                       <input type="radio" name="zona" value="rural" class="form-control-radio">Sim
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="zona" value="urbana" class="form-control-radio" required>Nāo
+                        <input type="radio" name="zona" value="urbana" class="form-control-radio">Nāo
                     </label>
                 </div>
 
                 <h5>A sua iniciativa está localizada na…*</h5>
                  <div class="form-group">
                     <label class="radio-inline">
-                       <input type="radio" name="zona" value="rural" class="form-control-radio" required>Zona Rural
+                       <input type="radio" name="zona" value="rural" class="form-control-radio">Zona Rural
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="zona" value="urbana" class="form-control-radio" required>Zona Urbana
+                        <input type="radio" name="zona" value="urbana" class="form-control-radio">Zona Urbana
                     </label>
                 </div>
 
                 <h5>Nome da Iniciativa*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Nome</label>
-                    <input type="text" name="nome" maxlength="50" class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
-                    <div class="help-block with-errors"></div>
+                    <input type="text" name="nome" maxlength="50" class="f1-last-name form-control">
                 </div>
 
 
@@ -161,7 +159,7 @@
                 <h5>Telefone da iniciativa*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Telefone</label>
-                    <input type="text" name="telefone" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control" id="inputTel3" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="telefone" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control" id="inputTel3">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -177,11 +175,11 @@
 
                 <div class="form-group">
                     <label class="radio-inline">
-                       <input type="radio" name="identifica" value="acao" class="form-control-radio" required>Açāo
+                       <input type="radio" name="identifica" value="acao" class="form-control-radio">Açāo
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="identifica" value="projeto" class="form-control-radio" required>Projeto
+                        <input type="radio" name="identifica" value="projeto" class="form-control-radio">Projeto
                     </label>
                 </div>
 
@@ -242,7 +240,7 @@
                 <h5> Quando sua iniciativa começou as atividades?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="year" name="anoatividade" required data-error = "Selecione o ano.">
+                    <select class="f1-last-name form-control" id="year" name="anoatividade">
                     <div class="help-block with-errors"></div>
                         <script>
                           var myDate = new Date();
@@ -257,7 +255,7 @@
                <h5>Quantas pessoas estão envolvidas neste trabalho?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas" required data-error = "Selecione uma opçāo">
+                    <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas" >
                      <div class="help-block with-errors"></div>
                         <option value=""></option>
                         <option value="1">1-5</option>
@@ -275,19 +273,18 @@
                  <h5>2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
-                    <input type="text" name="orcamento_2014" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2014" required data-error="favor preencher, um valor correto.">
+                    <input type="text" name="orcamento_2014" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2014">
                     <div class="help-block with-errors"></div>
                 </div>
                 <h5>2015</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2015</label>
-                    <input type="tex" name="orcamento_2015" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2015" required data-error="favor preencher, um valor correto.">
-                    <div class="help-block with-errors"></div>
+                    <input type="tex" name="orcamento_2015" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2015">
                 </div>
                 <h5>2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
-                    <input type="tex" name="orcamento_2016" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2016"required data-error="favor preencher, um valor correto.">
+                    <input type="tex" name="orcamento_2016" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2016">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -310,7 +307,7 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
                     <textarea name="sobre" maxlength="500" placeholder="Fale sobre a sua organizaçāo...." 
-                    class="f1-about-yourself form-control" id="sobre" required data-error = "Campo está em branco, favor preencher.orac."></textarea>
+                    class="f1-about-yourself form-control" id="sobre" ></textarea>
                     <div class="help-block with-errors">
                 </div>
 
@@ -318,7 +315,7 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="publico_alvo" name="publico_alvo" required data-error = "Selecione uma opçāo.">
+                    <select class="f1-last-name form-control" id="publico_alvo" name="publico_alvo" >
                     <div class="help-block with-errors"></div> 
                         <option value=""></option>
                         <option value="1">Empresas</option>
@@ -335,7 +332,7 @@
                     <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
                     <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="organizacao_estado" multiple required data-error = "Selecione uma opçāo.">
+                    <select class="f1-last-name form-control" name="organizacao_estado" multiple >
                         <div class="help-block with-errors"></div>
                       <option value="1">Acre</option>
                         <option value="2">Alagoas</option>
@@ -379,16 +376,16 @@
 
                 <div class="form-group">
                    <label class="checkbox-inline">
-                        <input type="checkbox" name="origem1" value="origem1" class="form-control-radio" required data-error = "Selecione uma opçāo.">
+                        <input type="checkbox" name="origem1" value="origem1" class="form-control-radio">
                         <div class="help-block with-errors"></div>municipal 
                     </label>
 
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="origem2" value="origem2" class="form-control-radio"required data-error = "Selecione uma opçāo.">
+                        <input type="checkbox" name="origem2" value="origem2" class="form-control-radio">
                         <div class="help-block with-errors"></div>estadual
                     </label>
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="origem3" value="origem3" class="form-control-radio"required data-error = "Selecione uma opçāo.">
+                        <input type="checkbox" name="origem3" value="origem3" class="form-control-radio">
                         <div class="help-block with-errors"></div>nacional 
                     </label>
                     <textarea name="organizaçāo_politica_publica" placeholder="Opcional: (campo aberto para detalhar, )"
@@ -408,7 +405,7 @@
                         <option value="1">Sim</option>
                     </select>
                     <textarea type="text" id="inputAvaliacaoOng" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
-                        "style='display: none' required data-error = "Campo está em branco, favor preencher."/></textarea>
+                        "style='display: none' /></textarea>
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -456,7 +453,7 @@
                         <option value="1">Sim, qual?</option>
                     </select>
                     <textarea type="text" id="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
-"style='display: none' required data-error = "Campo está em branco, favor preencher."/></textarea>
+"style='display: none' /></textarea>
                     <script>
 
                         var dropdownComun = document.getElementById('iniciativa-comunicacao');
@@ -565,7 +562,7 @@
         <h5>Áreas de atuação da organização: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>
         <div class="form-group" style="border: 1px solid #ddd">
         <div class="table-responsive">
-        <table id="form1" name="temas" class="table table-hover col-sm-12" required data-error = "Selecione até 3 temas.">
+        <table id="form1" name="temas" class="table table-hover col-sm-12">
 
          <thead>
             <tr>
@@ -781,7 +778,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 <h5>Regiāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="regiao"id="regiao"required data-error = "Selecione uma opçāo.">
+                    <select class="f1-last-name form-control" name="regiao"id="regiao">
                         <div class="help-block with-errors"></div>
                         <option value="norte">Norte</option>
                         <option value="nordeste">Nordeste</option>
@@ -794,7 +791,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 <h5>Estado*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Estado</label>
-                    <select class="f1-last-name form-control" id="estados" required data-error = "Selecione uma opçāo.">
+                    <select class="f1-last-name form-control" id="estados" >
                         <div class="help-block with-errors"></div>
                         <option value="1">Acre</option>
                         <option value="2">Alagoas</option>
@@ -829,7 +826,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 <h5>Cidade*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="cidades" required data-error = "Selecione uma opçāo.">
+                    <select class="f1-last-name form-control" id="cidades" >
                         <div class="help-block with-errors"></div> 
                         <option value="1">Rio Branco</option>
                         <option value="2">Maceió</option>
@@ -862,27 +859,26 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Bairro*</label>
-                    <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control">
                         <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-facebook">Rua*</label>
-                    <input type="text" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control">
                         <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número*</label>
-                    <input type="number" name="numero" placeholder="Numero...*"class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="number" name="numero" placeholder="Numero...*"class="f1-last-name form-control">
                         <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Complemento*</label>
-                    <input type="text" name="complemento" placeholder="Complemento...*"class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
-                        <div class="help-block with-errors"></div>
+                    <input type="text" name="complemento" placeholder="Complemento...*"class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep*</label>
-                    <input type="text" name="cep" id="inputCep"placeholder="CEP...*"class="f1-last-name form-control" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="cep" id="inputCep"placeholder="CEP...*"class="f1-last-name form-control">
                     <div class="help-block with-errors"></div>
                 </div>              
                 <div class="f1-buttons">
