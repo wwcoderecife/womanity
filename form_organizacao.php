@@ -338,6 +338,67 @@
                     </label>
                 </div>
 
+
+                <h5>Qual é a origem?</h5>
+                <h5>apoio a projetos / patrocínio</h5>
+                <div class="form-group">
+                  <div class="checkbox">
+                    <label class="checkbox">
+                        <input type="checkbox" name="origem_recursos" value="1" class="form-control">
+                        empresas 
+                    </label>
+                   </div>  
+
+                    <div class="checkbox">
+                    <label class="checkbox">
+                        <input type="checkbox" name="origem_recursos" value="2" class="form-control">
+                        institutos ou fundações empresariais 
+                    </label>
+                   </div>
+
+                   <div class="checkbox">
+                    <label class="checkbox">
+                        <input type="checkbox" name="origem_recursos" value="3" class="form-control">
+                         organizações do sistema ONU
+                    </label>
+                   </div> 
+
+                   <div class="checkbox">
+                    <label class="checkbox">
+                        <input type="checkbox" name="origem_recursos" value="4" class="form-control">
+                        organizações não governamentais brasileiras ou internacionais
+                    </label>
+                   </div> 
+                   <h5>edital governamental </h5>
+
+                   <div class="checkbox">
+                    <label class="checkbox">
+                        <input type="checkbox" name="origem_recursos" value="5" class="form-control">
+                        município 
+                    </label>
+                   </div>
+
+                   <div class="checkbox">
+                    <label class="checkbox">
+                        <input type="checkbox" name="origem_recursos" value="6" class="form-control">
+                        estado 
+                    </label>
+                   </div>
+
+                   <div class="checkbox">
+                    <label class="checkbox">
+                        <input type="checkbox" name="origem_recursos" value="7" class="form-control">
+                        governo federal
+                    </label>
+                   </div>
+
+                   <div class="checkbox-inline">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="origem_recursos" value="8" class="form-control">
+                        doação pessoa física
+                    </label>
+                   </div> 
+
                 <h5>O que faz sua organização?*(até 500 caracteres)</h5>                                  
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
