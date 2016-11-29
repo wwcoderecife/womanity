@@ -343,20 +343,20 @@
                 <div class="form-group">
                     <div>
                     <h5>Apoio a Projetos / Patrocínio<br></h5>
-                    <input type="checkbox" name="recursos_origem" class=" form-control" value="1">empresas<br>
-                    <input type="checkbox" name="recursos_origem" class=" form-control" value="2">institutos ou fundações empresariais<br>
-                    <input type="checkbox" name="recursos_origem" class=" form-control" value="3">organizações do sistema ONU<br>
+                    <input type="checkbox" name="recursos_origem" value="1">empresas<br>
+                    <input type="checkbox" name="recursos_origem" value="2">institutos ou fundações empresariais<br>
+                    <input type="checkbox" name="recursos_origem" value="3">organizações do sistema ONU<br>
                 </div>
                 <div>
                     <h5>Edital Governamental<br></h5>
-                    <input type="checkbox" name="recursos_origem" class="form-control" value="4">município<br>
-                    <input type="checkbox" name="recursos_origem" class="form-control" value="5">estado<br>
-                    <input type="checkbox" name="recursos_origem" class="form-control" value="6">governo federal<br>
+                    <input type="checkbox" name="recursos_origem" value="4">município<br>
+                    <input type="checkbox" name="recursos_origem" value="5">estado<br>
+                    <input type="checkbox" name="recursos_origem" value="6">governo federal<br>
                 </div>
 
                 <div>
                     <h5>Doação pessoa Física<br></h5>
-                    <input type="checkbox" name="recursos_origem" class="form-control" value="7"><br>
+                    <input type="checkbox" name="recursos_origem" value="7"><br>
                     
                   
                 </div><!--form group-->
