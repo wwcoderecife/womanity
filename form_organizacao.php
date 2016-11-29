@@ -2,7 +2,7 @@
          ================================================== -->
 
             <script src="assets/js/bootstrap.min.js"></script>
-            <script src="assets/js/validator.min.js"></script>
+            <!--<script src="assets/js/validator.min.js"></script>-->
             <script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>
             <script type="text/javascript"></script>
 
@@ -45,7 +45,7 @@
 
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-        <form role="form" data-toggle="validator" action="" method="post" action="classes/prepare_cadastro.php" class="f1">
+        <form role="form"  action="" method="post" action="classes/prepare_cadastro.php" class="f1">
 
             <h3>Cadastro UNA Ecossistema<br>Organizaçāo</h3>
             <p>Preencha os campos obrigatórios *</p>
@@ -448,7 +448,7 @@
                     <label class="checkbox-inline">
                         <input type="checkbox" name="origem3" value="origem3" class="form-control-radio">nacional 
                     </label>
-                    <textarea name="organizaçāo_politica_publica" placeholder="Opcional: (campo aberto para detalhar, )"
+                    <textarea name="organizaçāo_politica_publica" placeholder="Descreva como se deu essa influência em políticas públicas (em 500 caracteres)"
 
                     class="f1-about-yourself form-control" id="organizaçāo_politica_publica"></textarea>
                 </div>
@@ -552,7 +552,7 @@
 
       <!-- 29 Organizacao-->
 
-<h5>A sua Organizaçāo recebeu premiações, certificações, etc*?*</h5>
+<h5>A sua Organizaçāo recebeu premiações, certificações etc.?*</h5>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -598,18 +598,18 @@
                 </div><!--29/Organizacao-->
 
 
-                <h5>Quais são as organizações com atuação na temática da mulher que sua organizaçāo se relaciona diretamente?</h5>
-                 <h5>Nome</h5> 
+                <h5>Quais são as organizações com atuação na temática da mulher com que sua organizaçāo se relaciona diretamente?</h5>
+                 <h5>Organização 1</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                 <input type="text" name="relaciona1"  class="f1-last-name form-control">
                 </div>
-                <h5>Nome</h5> 
+                <h5>Organização 2</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="relaciona2"  class="f1-last-name form-control">
                 </div>
-                <h5>Nome</h5> 
+                <h5>Organização 3</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="relaciona3" class="f1-last-name form-control">
@@ -626,7 +626,7 @@
 
          <thead>
             <tr>
-                <th>#</th>
+                <th></th>
                 <th>Temas</th>
                 <th>Descriçāo</th>
               
@@ -635,99 +635,100 @@
             <tbody>
             <tr>
                 <td><input type="checkbox" name="temas" class="no-margin" onclick="verificar()"></td>
-                <td>Arte e Cultura</td>
+                <td>Arte e Cultura.</td>
                 <td>Promoção do acesso de mulheres à cultura e/ou incentivo à produção das várias expressões artísticas.</td>
                  
             </tr>
             <tr>
                 <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Ciência e Tecnologia</td>
+                <td>Ciência e Tecnologia.</td>
                 <td>Promoção do acesso a linguagens, equipamentos e/ou à produção de ciência e tecnologia por mulheres.</td>
                
             </tr>
             <tr>
                 <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td> Democracia e Participação Política</td>
+                <td> Democracia e Participação Política.</td>
                 <td>Ações de incentivo à participação de mulheres na vida política e democrática institucional (partidos, conselhos, órgãos e instâncias dos poderes executivo, legislativo e judiciário).</td>
             </tr>
 
             <tr>
                 <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Educação e Formação</td>
-                <td>Oferta de educação formal (escolar ou acadêmica), incentivo à escolaridade; formação de atores sociais, ações de educação popular e informal</td>
+                <td>Educação e Formação.</td>
+                <td>Oferta de educação formal (escolar ou acadêmica), incentivo à escolaridade; formação de atores sociais, ações de educação popular e informal.</td>
               
             </tr>
 
             <tr>
                 <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Empreendedorismo feminino e autonomia econômica</td>
-                <td>Ações de incentivo ao empreendedorismo feminino e à autonomia econômica, por meio de capacitação e/ou financiamento, tais como capacitações, cooperativismo,microcrédito, etc.</td>
+                <td>Empreendedorismo feminino e autonomia econômica.</td>
+                <td>Ações de incentivo ao empreendedorismo feminino e à autonomia econômica, por meio de capacitação e/ou financiamento, tais como capacitações, cooperativismo, microcrédito, etc.</td>
             </tr>
 
             <tr>
                 <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Enfrentamento à Violência</td>
-                <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas possibilidades de desenvolvimento profissional e equiparação salarial</td>
+                <td>Enfrentamento à Violência.</td>
+                <td>Trabalho de enfrentamento às mais variadas formas de violência, destinado a mulheres e homens.</td>
               
 
             <tr>
                 <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Equidade e Condições de Trabalho</td>
-                <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas possibilidades de desenvolvimento profissional e equiparação salarial.</td>    
+                <td>Equidade e Condições de Trabalho.</td>
+                <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas 
+possibilidades de desenvolvimento profissional e equiparação salarial.</td>    
             </tr>
 
             <tr>
                 <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Esportes</td>
+                <td>Esportes.</td>
                 <td>Oferta, promoção e incentivo à realização de práticas esportivas por meninas e mulheres, sobretudo em modalidades tradicionalmente dominadas por homens.</td>
             </tr>
             <tr>
                 <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Indígenas</td>
+                <td>Indígenas.</td>
                 <td>Ações destinadas à valorização das mulheres indígenas e ao enfrentamento de seus problemas específicos.</td>
             </tr>
             <tr>
                 <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>LGBTT (Lésbicas, Gays, Bissexuais, Travestis, Transexuais e Transgêneros)</td>
+                <td>LGBTT (Lésbicas, Gays, Bissexuais, Travestis, Transexuais e Transgêneros).</td>
                 <td>Projetos que atuam pela valorização e afirmação de pessoas LGBTT e combatem a violência e a discriminação contra esses públicos.</td>
             </tr>
             <tr>
                 <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Masculinidades</td>
+                <td>Masculinidades.</td>
                 <td>Ações voltadas para questões relativas à revisão do conceito hegemônico de masculinidade, a partir da perspectiva das relações de gênero.</td>
             </tr>
             <tr>
                  <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Meio Ambiente,Segurança Alimentar e Agricultura</td>
+                <td>Meio Ambiente,Segurança Alimentar e Agricultura.</td>
                 <td>Trabalhos que relacionam questões de gênero, feminismo e meio ambiente. 
 Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis e ambientalmente sustentáveis.</td>
             </tr>
 
             <tr>
                 <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Mídia e Comunicação</td>
+                <td>Mídia e Comunicação.</td>
                 <td>Promoção do acesso de mulheres aos meios de comunicação pelo domínio de técnicas, equipamentos e linguagens; monitoramento da presença da mulher nas mídias e da cobertura de temas sobre as questões das mulheres.</td>
            </tr>
 
             <tr>
                 <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Moradia</td>
+                <td>Moradia.</td>
                 <td>Ações que visam contribuir para o direito das mulheres à moradia e desenvolvimento de habilidades para a construção ou reformas de casas.</td>
            </tr>
 
            <tr>
                 <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Negritude</td>
+                <td>Negritude.</td>
                 <td>Ações de valorização da estética e da identidade das mulheres negras e de combate ao racismo.</td>
            </tr>
 
            <tr> <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Paz e Segurança pública</td>
+                <td>Paz e Segurança pública.</td>
                 <td>Projetos que tratam da interface entre gênero e sistema de segurança pública, sobretudo questões da violência armada.</td>
            </tr>
 
            <tr> <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Saúde e Bem-estar</td>
+                <td>Saúde e Bem-estar.</td>
                 <td>Iniciativas que tratam de questões de autoestima, qualidade de vida, saúde e bem-estar das mulheres.</td>
            </tr>
 
