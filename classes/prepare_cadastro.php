@@ -49,7 +49,7 @@
     $empoderamento_desc_3 = filter_input(INPUT_POST, "sobre_iniciativas3", FILTER_SANITIZE_MAGIC_QUOTES);
 
     //atuacao direta
-    $estados = filter_input(INPUT_POST, "organizacao_estado", FILTER_SANITIZE_MAGIC_QUOTES);
+    $estados = $_POST['organizacao_estado'];
 
     //Se relaciona
     $relaciona_1 = filter_input(INPUT_POST, "relaciona1", FILTER_SANITIZE_MAGIC_QUOTES);
