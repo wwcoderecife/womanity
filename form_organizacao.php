@@ -342,7 +342,7 @@
                     </label>
                 </div>
 
-                <h5>O que faz Organizaçāo?*(até 500 caracteres)</h5>                                  
+                <h5>O que faz sua organização?(até 500 caracteres)</h5>                                  
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
                     <textarea name="sobre" maxlength="500" placeholder="Fale sobre a sua organizaçāo...." 
