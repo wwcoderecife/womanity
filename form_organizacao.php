@@ -342,24 +342,22 @@
                 <h5>Qual é a origem?</h5>
                 <div class="form-group">
                     <div>
-                    Apoio a Projetos / Patrocínio<br>
-                    <input type="checkbox" name="recursos_origem" class="f1-last-name form-control" value="1">empresas<br>
-                    <input type="checkbox" name="recursos_origem" class="f1-last-name form-control" value="2">institutos ou fundações empresariais<br>
-                    <input type="checkbox" name="recursos_origem" class="f1-last-name form-control" value="3">organizações do sistema ONU<br>
+                    <h5>Apoio a Projetos / Patrocínio<br></h5>
+                    <input type="checkbox" name="recursos_origem" class=" form-control" value="1">empresas<br>
+                    <input type="checkbox" name="recursos_origem" class=" form-control" value="2">institutos ou fundações empresariais<br>
+                    <input type="checkbox" name="recursos_origem" class=" form-control" value="3">organizações do sistema ONU<br>
                 </div>
                 <div>
-                    Edital Governamental <br>
-                    <input type="checkbox" name="recursos_origem" class="f1-last-name form-control" value="4">município<br>
-                    <input type="checkbox" name="recursos_origem" class="f1-last-name form-control" value="5">estado<br>
-                    <input type="checkbox" name="recursos_origem" class="f1-last-name form-control" value="6">governo federal<br>
+                    <h5>Edital Governamental<br></h5>
+                    <input type="checkbox" name="recursos_origem" class="form-control" value="4">município<br>
+                    <input type="checkbox" name="recursos_origem" class="form-control" value="5">estado<br>
+                    <input type="checkbox" name="recursos_origem" class="form-control" value="6">governo federal<br>
                 </div>
 
                 <div>
-                    Doação pessoa Física<br>
-                    <input type="checkbox" name="recursos_origem" class="f1-last-name form-control" value="7">município<br>
-                    <input type="checkbox" name="recursos_origem" class="f1-last-name form-control" value="8">estado<br>
-                    <input type="checkbox" name="recursos_origem" class="f1-last-name form-control" value="9">governo federal<br>
-                </div>
+                    <h5>Doação pessoa Física<br></h5>
+                    <input type="checkbox" name="recursos_origem" class="form-control" value="7"><br>
+                    
                   
                 </div><!--form group-->
      
