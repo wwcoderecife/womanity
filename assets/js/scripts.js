@@ -125,7 +125,7 @@ jQuery(document).ready(function() {
 
     //populando os combos de cidade e estado
    //populando os combos de cidade e estado
-    $.getJSON('http://womanityecossistema.azurewebsites.net/index.php', function (data) {
+    //$.getJSON('http://womanityecossistema.azurewebsites.net/index.php', function (data) {
         var data = [{
       "sigla": "AC",
       "nome": "Acre",
@@ -5877,7 +5877,7 @@ jQuery(document).ready(function() {
             
         }).change();        
     
-    });
+   // });
 
     //form
     //$('#form-ong input').attr('readonly', 'readonly');
