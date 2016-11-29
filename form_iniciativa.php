@@ -780,14 +780,23 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
         </select>
 
      </div>
-<!--
-     <script type="text/javascript">
-    $(document).ready(function() {
-    $('#subtemas').multiselect();
-    });
- </script> --> 
 
+     <script>
+     $(document).ready(function() {
 
+          var last_valid_selection = null;
+
+          $('#subtemas').change(function(event) {
+
+            if ($(this).val().length > 3) {
+
+              $(this).val(last_valid_selection);
+            } else {
+              last_valid_selection = $(this).val();
+            }
+          });
+        });
+    </script>
 
 
                 <div class="f1-buttons">
