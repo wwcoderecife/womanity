@@ -583,7 +583,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                  <input type="checkbox" name="1" value="Advocacy"><h5>Advocacy<br></h5>
                  <input type="checkbox" name="2" value="Atuação direta com mulheres, homens, LGBTT, etc"></h5>Atuação direta com mulheres, homens, LGBTT, etc<br></h5>
 
-                 <input type="numeric"  name="" placeholder="número de beneficiários diretos" style="margin-left: 20px" class="f1-last-name"><br>
+                 <input type="numeric"  name="" placeholder="número de beneficiários diretos" style="margin-left: 20px" class="f1-last-name form-control"><br>
                  <input type="checkbox" name="3" value="Financiadores"><h5>Financiadores<br></h5>
                  <input type="checkbox" name="4" value="Fortalecedor institucional"><h5>Fortalecedor institucional<br></h5>
                  <input type="checkbox" name="5" value="público" style="margin-left: 20px"><h5>público</h5>
