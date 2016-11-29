@@ -45,7 +45,7 @@
 
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-        <form role="form"  action="classes/prepare_cadastro.php" method="post" class="form-ong">
+        <form role="form" action="classes/prepare_cadastro.php" method="post" class="f1 form-ong">
 
             <h3>Cadastro UNA Ecossistema<br>Organizaçāo</h3>
             <p>Preencha os campos obrigatórios *</p>
