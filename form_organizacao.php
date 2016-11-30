@@ -949,7 +949,7 @@
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep</label>
-                    <input type="text" name="cep" id="inputCep" placeholder="CEP...*" class="f1-last-name form-control">
+                    <input type="text" name="cep" id="inputCep" placeholder="xx-xxx-xxx*" class="f1-last-name form-control">
                 </div> 
 
                <div class="f1-buttons">

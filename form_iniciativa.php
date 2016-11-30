@@ -865,7 +865,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep*</label>
-                    <input type="text" name="cep" id="inputCep"placeholder="CEP...*"class="f1-last-name form-control">
+                    <input type="text" name="cep" id="inputCep"placeholder="xx-xxx-xxx*"class="f1-last-name form-control">
                     <div class="help-block with-errors"></div>
                 </div>              
                 <div class="f1-buttons">
