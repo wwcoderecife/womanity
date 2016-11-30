@@ -639,7 +639,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 <h5>O que faz sua organização?*(até 500 caracteres)</h5>                                  
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
-                    <textarea name="sobre" maxlength="500" placeholder="Fale sobre a sua organizaçāo...." 
+                    <textarea name="sobre" maxlength="500" placeholder="campo com capacidade para 500 caracteres...." 
                     class="f1-about-yourself form-control" id="sobre" ></textarea>
                 </div>
 
@@ -666,7 +666,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                         <option value=""></option>
                         <option value="Empresas">Empresas</option>
                         <option value="Organizações Sociais">Organizações Sociais</option>
-                        <option value="Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher</option>
+                        <option value="Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher</option><br>
                         <option value="Movimentos, coletivos, redes, fóruns">Movimentos, coletivos, redes, fóruns</option>
                         <option value="Adolescentes e jovens">Adolescentes e jovens</option>
                         <option value="Homens">Homens</option>
