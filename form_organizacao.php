@@ -79,6 +79,13 @@
 
           <fieldset>
                 <h4>Dados Pessoais Contato 1:</h4>
+
+                <h5>Nome*</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">Nome</label>
+                    <input type="text" name="nome1" placeholder="responsável pelo preenchimento do cadastro" class="f1-last-name form-control" id="inputNome1" >
+                    <div class="help-block with-errors"></div>
+                </div>
                  <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
@@ -108,6 +115,12 @@
                 </div>
 
                  <h4>Dados Pessoais Contato 2:</h4>
+                 <h5>Nome*</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">Nome</label>
+                    <input type="text" name="nome2" placeholder="responsável pela organização ou suplente" class="f1-last-name form-control" id="inputNome2" >
+                    <div class="help-block with-errors"></div>
+                </div>
                   <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
@@ -542,7 +555,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
             <option value="17"name="subtemas">Preconceito e discriminação</option>
             <option value="18"name="subtemas">Tecnologia</option>
             <option value="19"name="subtemas">Artes plásticas</option>
-            <option value="20"name="subtemas">Parto Humanizado</option>
+            <option value="20"name="subtemas">Parto Humano</option>
             <option value="21"name="subtemas">Cadeia produtiva responsável</option>
             <option value="22"name="subtemas">Educomunicação</option>
             <option value="23"name="subtemas">Microcrédito</option>
