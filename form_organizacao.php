@@ -36,7 +36,7 @@
         -->
         <script>
         $(document).ready(function(){
-         $('.inputcnpj').mask('xx.xxx.xxxx/xxxx-xx');
+         $('.inputcnpj').mask('00.000.000/0000-00', {reverse: true});
         });
         </script>
 
