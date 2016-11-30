@@ -675,6 +675,7 @@ class CadastrarAll extends Conexao {
                    $inserir_atuacao_direta->bindValue(2, $organizacao_id);
                    $inserir_atuacao_direta->execute();
                 }
+           
 
 
             $inserir_relaciona = $pdo->prepare("insert into relacionadas (nome, organizacao_id)
