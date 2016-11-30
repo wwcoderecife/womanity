@@ -1,7 +1,7 @@
 <?php
     session_start();
 	require_once "CadastrarAll.class.php";
-	
+
 	//organizacao
     $cnpj =  filter_input(INPUT_POST, "inputcnpj", FILTER_SANITIZE_MAGIC_QUOTES);
     $localizacao = filter_input(INPUT_POST, "zona", FILTER_SANITIZE_MAGIC_QUOTES);
@@ -10,7 +10,7 @@
     $telefone = filter_input(INPUT_POST, "organizacao-telefone", FILTER_SANITIZE_MAGIC_QUOTES);
     $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_MAGIC_QUOTES);
     $tipo = filter_input(INPUT_POST, "tipo", FILTER_SANITIZE_MAGIC_QUOTES);
-    $inicio_atv = filter_input(INPUT_POST, "year_organizacao", FILTER_SANITIZE_MAGIC_QUOTES);
+    $inicio_atv = filter_input(INPUT_POST, "anoatividade", FILTER_SANITIZE_MAGIC_QUOTES);
     $qtde_pessoas = filter_input(INPUT_POST, "pessoas_envolvidas", FILTER_SANITIZE_MAGIC_QUOTES);
     $recursos_finaceiros = filter_input(INPUT_POST, "origem1", FILTER_SANITIZE_MAGIC_QUOTES);
     $descricao = filter_input(INPUT_POST, "sobre_iniciativa", FILTER_SANITIZE_MAGIC_QUOTES);
@@ -24,11 +24,13 @@
     $usuario_id = $_SESSION['usuario_id'];
 
     //contato 1
+    $nome_1 = filter_input(INPUT_POST, "nome1", FILTER_SANITIZE_MAGIC_QUOTES);
     $cargo_1 = filter_input(INPUT_POST, "cargo_1", FILTER_SANITIZE_MAGIC_QUOTES);
     $email_1 = filter_input(INPUT_POST, "email_1", FILTER_SANITIZE_MAGIC_QUOTES);
     $telefone_1 = filter_input(INPUT_POST, "telefone_1", FILTER_SANITIZE_MAGIC_QUOTES);
     $celular_1 = filter_input(INPUT_POST, "celular_1", FILTER_SANITIZE_MAGIC_QUOTES);
     //contato 2
+    $nome_2 = filter_input(INPUT_POST, "nome2", FILTER_SANITIZE_MAGIC_QUOTES);
     $cargo_2 = filter_input(INPUT_POST, "cargo_2", FILTER_SANITIZE_MAGIC_QUOTES);
     $email_2 = filter_input(INPUT_POST, "email_2", FILTER_SANITIZE_MAGIC_QUOTES);
     $telefone_2 = filter_input(INPUT_POST, "telefone_2", FILTER_SANITIZE_MAGIC_QUOTES);
@@ -38,7 +40,16 @@
     //Orçamento
     $orcamento_2014 = filter_input(INPUT_POST, "orcamento_2014", FILTER_SANITIZE_MAGIC_QUOTES);
     $orcamento_2015 = filter_input(INPUT_POST, "orcamento_2015", FILTER_SANITIZE_MAGIC_QUOTES);
-    $orcamento_2016 = filter_input(INPUT_POST, "orcamento_2016", FILTER_SANITIZE_MAGIC_QUOTES); 
+    $orcamento_2016 = filter_input(INPUT_POST, "orcamento_2016", FILTER_SANITIZE_MAGIC_QUOTES);
+
+    //Recursos Financeiros
+    $recursos_finaceiros_lista = $_POST['recursos_origem'];
+
+    //Politicas publicas lista
+    $politicas_publicas_lista = $_POST['politicas_publicas_lista'];
+
+    $funcoes = $_POST['funcao'];
+    $numero_beneficiarios = filter_input(INPUT_POST, "numero_beneficiarios", FILTER_SANITIZE_MAGIC_QUOTES);
 
     //Iniciantivas com empoderamento
     $empoderamento_nome_1 = filter_input(INPUT_POST, "organizacao-relaciona1", FILTER_SANITIZE_MAGIC_QUOTES);
@@ -55,6 +66,12 @@
     $relaciona_1 = filter_input(INPUT_POST, "relaciona1", FILTER_SANITIZE_MAGIC_QUOTES);
     $relaciona_2 = filter_input(INPUT_POST, "relaciona2", FILTER_SANITIZE_MAGIC_QUOTES);
     $relaciona_3 = filter_input(INPUT_POST, "relaciona3", FILTER_SANITIZE_MAGIC_QUOTES);
+
+    //Temas
+    $temas = $_POST['temas'];
+
+    //Subtemas
+    $subtemas = $_POST['subtemas'];
 
     //Endereço
     $regiao =  filter_input(INPUT_POST, "regiao", FILTER_SANITIZE_MAGIC_QUOTES);
@@ -110,10 +127,12 @@
         $novo->setUsuarioId($usuario_id);
 
         //contato
+        $novo->setNome_1($nome_1);
         $novo->setCargo_1($cargo_1);
         $novo->setEmail_1($email_1);
         $novo->setTelefone_1($telefone_1);
         $novo->setCelular_1($celular_1);
+        $novo->setNome_2($nome_2);
         $novo->setCargo_2($cargo_2);
         $novo->setEmail_2($email_2);
         $novo->setTelefone_2($telefone_2);
@@ -124,6 +143,14 @@
         $novo->setOrcamento_2015($orcamento_2015);
         $novo->setOrcamento_2016($orcamento_2016);
 
+        //Recursos Financeiros
+        $novo->setRecursosFinaceirosLista($recursos_finaceiros_lista);
+
+        //Politicas Publicas List
+        $novo->setPoliticasPublicasList($politicas_publicas_lista);
+
+        $novo->setFuncoes($funcoes);
+        $novo->setNumeroBeneficiarios($numero_beneficiarios);
 
         //Iniciantivas com empoderamento
         $novo->setEmpoderamentoNome_1($empoderamento_nome_1);
@@ -140,6 +167,12 @@
         $novo->setRelaciona_1($relaciona_1);
         $novo->setRelaciona_2($relaciona_2);
         $novo->setRelaciona_3($relaciona_3);
+
+        //Temas
+        $novo->setTemas($temas);
+
+        //Subtemas
+        $novo->setSubtemas($subtemas);
 
         //Endereço
         $novo->setRegiao($regiao);
