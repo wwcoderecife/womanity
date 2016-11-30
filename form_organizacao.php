@@ -3,17 +3,12 @@
 
             <script src="assets/js/bootstrap.min.js"></script>
             <!--<script src="assets/js/validator.min.js"></script>-->
-            <script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>
+            <!--<script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>-->
+            <script src="assets/js/query.mask.min.js" type="text/javascript"></script>
             <script type="text/javascript"></script>
             <link   rel="stylesheet" href="assets/css/bootstrap-select.min.css">
             <script src="assets/js/bootstrap-select.min.js" ></script>
            
-
-        
-
-           
-
-
 
             <!--Include Twitter Bootstrap and jQuery: Subtemas--> 
             <!--<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css"/>-->
@@ -23,7 +18,7 @@
             <!--<link rel="stylesheet" href="assets/css/bootstrap-multiselect.css" type="text/css">-->
             <!--<script src="assets/js/bootstrap-multiselect.js"></script>-->
             
-        
+        <!--
             <script>
               jQuery(function($){
               $("#inputTel1").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
@@ -38,6 +33,12 @@
              
             });
             </script>
+        -->
+        <script>
+        $(document).ready(function(){
+         $('.inputcnpj').mask('xx.xxx.xxxx/xxxx-xx');
+        });
+        </script>
 
 
 <div class="row form_inicial">
@@ -170,7 +171,7 @@
                         <option value="nao">nao</option>
                     </select>    
 
-                <input type="text" id="inputcnpj" name="inputcnpj" class="f1-last-name form-control" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona"style='display: none' />
+                <input type="text" id="inputcnpj" maxlength="18" name="inputcnpj" class="f1-last-name form-control" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona"style='display: none' />
                     <script>
 
                         var dropdownCnpj = document.getElementById('organizacao-cnpj');
