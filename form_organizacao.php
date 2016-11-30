@@ -3,8 +3,8 @@
 
             <script src="assets/js/bootstrap.min.js"></script>
             <!--<script src="assets/js/validator.min.js"></script>-->
-            <!--<script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>-->
-            <script src="assets/js/query.mask.min.js" type="text/javascript"></script>
+            <script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>
+            <!--<script src="assets/js/query.mask.min.js" type="text/javascript"></script>-->
             <script type="text/javascript"></script>
             <link   rel="stylesheet" href="assets/css/bootstrap-select.min.css">
             <script src="assets/js/bootstrap-select.min.js" ></script>
@@ -18,7 +18,7 @@
             <!--<link rel="stylesheet" href="assets/css/bootstrap-multiselect.css" type="text/css">-->
             <!--<script src="assets/js/bootstrap-multiselect.js"></script>-->
             
-        <!--
+        
             <script>
               jQuery(function($){
               $("#inputTel1").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
@@ -30,15 +30,18 @@
               $("#inputTel4").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
               $("#inputTel5").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
               $("#inputTel6").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
+              $("#nputcnpj").mask("99.999.999/9999-99",{placeholder:"xx.xxx.xxxx/xxxx-xx"});
              
             });
             </script>
-        -->
+    
+        <!--
         <script>
         $(document).ready(function(){
          $('.inputcnpj').mask('00.000.000/0000-00', {reverse: true});
         });
         </script>
+    -->
 
 
 <div class="row form_inicial">
