@@ -7,7 +7,7 @@
     $localizacao = filter_input(INPUT_POST, "zona", FILTER_SANITIZE_MAGIC_QUOTES);
     $nome = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_MAGIC_QUOTES);
     $sigla = filter_input(INPUT_POST, "sigla", FILTER_SANITIZE_MAGIC_QUOTES);
-    $telefone = filter_input(INPUT_POST, "telefone", FILTER_SANITIZE_MAGIC_QUOTES);
+    $telefone = filter_input(INPUT_POST, "organizacao-telefone", FILTER_SANITIZE_MAGIC_QUOTES);
     $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_MAGIC_QUOTES);
     $tipo = filter_input(INPUT_POST, "tipo", FILTER_SANITIZE_MAGIC_QUOTES);
     $inicio_atv = filter_input(INPUT_POST, "year_organizacao", FILTER_SANITIZE_MAGIC_QUOTES);
