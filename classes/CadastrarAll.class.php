@@ -32,7 +32,7 @@
         <script src="../assets/js/scripts.js"></script>
         <script src="../assets/js/validator.min.js"></script>
         <script src="../assets/js/jquery.maskedinput.js" type="text/javascript"></script>
-        
+
         <!--[if lt IE 10]>
             <script src="assets/js/placeholder.js"></script>
         <![endif]-->
@@ -67,13 +67,15 @@ class CadastrarAll extends Conexao {
     private $organizacao_pai;
     private $natureza;
     private $usuario_id;
-    
+
     //******Contatos*******//
+    private $nome_1;
     private $cargo_1;
     private $email_1;
     private $telefone_1;
     private $celular_1;
 
+    private $nome_2;
     private $cargo_2;
     private $email_2;
     private $telefone_2;
@@ -83,6 +85,16 @@ class CadastrarAll extends Conexao {
     private $orcamento_2014;
     private $orcamento_2015;
     private $orcamento_2016;
+
+    //Recursos Financeiros lista
+    private $recursos_finaceiros_lista;
+
+    //Politicas publicas
+    private $politicas_publicas_lista;
+
+    //Funções
+    private $funcoes;
+    private $numero_beneficiarios;
 
     //Empoderamento
     private $empoderamento_nome_1;
@@ -100,6 +112,12 @@ class CadastrarAll extends Conexao {
     private $relaciona_2;
     private $relaciona_3;
 
+    //Temas
+    private $temas;
+
+    //Subtemas
+    private $subtemas;
+
     //Endereço
     private $regiao;
     private $estado;
@@ -112,7 +130,7 @@ class CadastrarAll extends Conexao {
 
     //Redes Sociais
     private $site;
-    private $facebook; 
+    private $facebook;
     private $instagram;
     private $twitter;
     private $linkedin;
@@ -122,11 +140,11 @@ class CadastrarAll extends Conexao {
     private $indica_nome_1;
     private $indica_email_1;
     private $indica_telefone_1;
-    private $indica_nome_2; 
+    private $indica_nome_2;
     private $indica_email_2;
     private $indica_telefone_2;
-    private $indica_nome_3; 
-    private $indica_email_3; 
+    private $indica_nome_3;
+    private $indica_email_3;
     private $indica_telefone_3;
 
 
@@ -251,6 +269,9 @@ class CadastrarAll extends Conexao {
 
 
     //contatos Sets
+    public function setNome_1($nome_1){
+        $this->nome_1 = $nome_1;
+    }
     public function setCargo_1($cargo_1){
         $this->cargo_1 = $cargo_1;
     }
@@ -263,6 +284,10 @@ class CadastrarAll extends Conexao {
     }
     public function setCelular_1($celular_1){
         $this->celular_1 = $celular_1;
+    }
+
+    public function setNome_2($nome_2){
+        $this->nome_2 = $nome_2;
     }
 
     public function setCargo_2($cargo_2){
@@ -280,6 +305,9 @@ class CadastrarAll extends Conexao {
     }
 
     //Contatos Gets
+    public function getNome_1(){
+        return $this->nome_1;
+    }
     public function getCargo_1(){
         return $this->cargo_1;
     }
@@ -293,6 +321,9 @@ class CadastrarAll extends Conexao {
         return $this->celular_1;
     }
 
+    public function getNome_2(){
+        return $this->nome_2;
+    }
     public function getCargo_2(){
         return $this->cargo_2;
     }
@@ -329,6 +360,41 @@ class CadastrarAll extends Conexao {
         return $this->orcamento_2016;
     }
 
+    //recursos_finaceiros_lista Gets
+    public function setRecursosFinaceirosLista($recursos_finaceiros_lista){
+        $this->recursos_finaceiros_lista = $recursos_finaceiros_lista;
+    }
+
+    //recursos_finaceiros_lista Gets
+    public function getRecursosFinaceirosLista(){
+        return $this->recursos_finaceiros_lista;
+    }
+
+    //Politicas Publicas lista Gets
+    public function setPoliticasPublicasList($politicas_publicas_lista){
+        $this->politicas_publicas_lista = $politicas_publicas_lista;
+    }
+
+    //Politicas Publicas lista Gets
+    public function getPoliticasPublicasList(){
+        return $this->politicas_publicas_lista;
+    }
+
+    //Funções Gets
+    public function setFuncoes($funcoes){
+        $this->funcoes = $funcoes;
+    }
+    public function setNumeroBeneficiarios($numero_beneficiarios){
+        $this->numero_beneficiarios = $numero_beneficiarios;
+    }
+
+    //Funções Gets
+    public function getFuncoes(){
+        return $this->funcoes;
+    }
+    public function getNumeroBeneficiarios(){
+        return $this->numero_beneficiarios;
+    }
 
     //Empoderamento Sets
     public function setEmpoderamentoNome_1($empoderamento_nome_1){
@@ -404,6 +470,26 @@ class CadastrarAll extends Conexao {
     }
     public function getRelaciona_3(){
         return $this->relaciona_3;
+    }
+
+    //Temas Sets
+    public function setTemas($temas){
+        $this->temas = $temas;
+    }
+
+    //Temas Gets
+    public function getTemas(){
+        return $this->temas;
+    }
+
+    //Subtemas Sets
+    public function setSubtemas($subtemas){
+        $this->subtemas = $subtemas;
+    }
+
+    //Subtemas Gets
+    public function getSubtemas(){
+        return $this->subtemas;
     }
 
 
@@ -564,12 +650,12 @@ class CadastrarAll extends Conexao {
     public function inserir_novo(){
         $pdo = parent::getDB();
         try{
-            
+
 
             $pdo->beginTransaction();
 
             $inserir_ong = $pdo->prepare("insert into organizacoes (
-                cnpj, localizacao, nome, sigla, telefone, email, tipo, inicio_atv, qtde_pessoas, recursos_financeiros, 
+                cnpj, localizacao, nome, sigla, telefone, email, tipo, inicio_atv, qtde_pessoas, recursos_financeiros,
                 descricao,  publico_atendido, politicas_publicas, monitoramento_atividades, estrategia_comunicacao,
                 premiacao_certificacao, organizacao_pai, natureza, usuario_id)
                                     values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
@@ -595,14 +681,15 @@ class CadastrarAll extends Conexao {
             $inserir_ong->execute();
             $organizacao_id = $pdo->lastInsertId();
 
-            $inserir_contato = $pdo->prepare("insert into contatos (cargo, email, telefone, celular, tipo, organizacao_id)
-                                    values (?, ?, ?, ?, ?, ?)");
+            $inserir_contato = $pdo->prepare("insert into contatos (cargo, email, telefone, celular, tipo, organizacao_id, nome)
+                                    values (?, ?, ?, ?, ?, ?, ?)");
             $inserir_contato->bindValue(1, $this->getCargo_1());
             $inserir_contato->bindValue(2, $this->getEmail_1());
             $inserir_contato->bindValue(3, $this->getTelefone_1());
             $inserir_contato->bindValue(4, $this->getCelular_1());
             $inserir_contato->bindValue(5, 1);
             $inserir_contato->bindValue(6, $organizacao_id);
+            $inserir_contato->bindValue(7, $this->getNome_1());
             $inserir_contato->execute();
 
             $inserir_contato->bindValue(1, $this->getCargo_2());
@@ -611,6 +698,7 @@ class CadastrarAll extends Conexao {
             $inserir_contato->bindValue(4, $this->getCelular_2());
             $inserir_contato->bindValue(5, 2);
             $inserir_contato->bindValue(6, $organizacao_id);
+            $inserir_contato->bindValue(7, $this->getNome_2());
             $inserir_contato->execute();
 
             $orcamento = $this->getOrcamento_2014();
@@ -646,6 +734,44 @@ class CadastrarAll extends Conexao {
             $inserir_orcamentos->execute();
 
 
+            $inserir_recursos_financeiros_lista = $pdo->prepare("insert into origem_recursos (tipo, organizacao_id)
+                                   values (?, ?)");
+            $recursos_finaceiros_lista = $this->getRecursosFinaceirosLista();
+                foreach ($recursos_finaceiros_lista  as $recurso){
+                   $inserir_recursos_financeiros_lista->bindValue(1, $recurso);
+                   $inserir_recursos_financeiros_lista->bindValue(2, $organizacao_id);
+                   $inserir_recursos_financeiros_lista->execute();
+                }
+
+            $inserir_politicas_publicas_lista = $pdo->prepare("insert into politicas_publicas (tipo, organizacao_id)
+                                   values (?, ?)");
+            $politicas_publicas_lista = $this->getPoliticasPublicasList();
+                foreach ($politicas_publicas_lista  as $politica){
+                   $inserir_politicas_publicas_lista->bindValue(1, $politica);
+                   $inserir_politicas_publicas_lista->bindValue(2, $organizacao_id);
+                   $inserir_politicas_publicas_lista->execute();
+                }
+
+
+            $inserir_funcoes = $pdo->prepare("insert into funcoes (tipo, complemento, organizacao_id)
+                                   values (?, ?, ?)");
+            $funcoes = $this->getFuncoes();
+
+                foreach ($funcoes  as $funcao){
+                    if ($funcao == "Atuação direta com mulheres, homens, LGBTT, etc"){
+                        $inserir_funcoes->bindValue(1, $funcao);
+                        $inserir_funcoes->bindValue(2, $this->getNumeroBeneficiarios());
+                        $inserir_funcoes->bindValue(3, $organizacao_id);
+                        $inserir_funcoes->execute();
+                    }else{
+                        $inserir_funcoes->bindValue(1, $funcao);
+                        $inserir_funcoes->bindValue(2, 0);
+                        $inserir_funcoes->bindValue(3, $organizacao_id);
+                        $inserir_funcoes->execute();
+                    }
+                   
+                }
+
             $inserir_empoderamentos = $pdo->prepare("insert into empoderamento (nome, descricao, organizacao_id)
                                     values (?, ?, ?)");
             $inserir_empoderamentos->bindValue(1, $this->getEmpoderamentoNome_1());
@@ -667,15 +793,12 @@ class CadastrarAll extends Conexao {
             $inserir_atuacao_direta = $pdo->prepare("insert into atuacao_direta (estado, organizacao_id)
                                    values (?, ?)");
             $estados = $this->getEstados();
-    
-            
-                foreach ($estados  as $estado){
+            foreach ($estados  as $estado){
 
-                   $inserir_atuacao_direta->bindValue(1, $estado);
-                   $inserir_atuacao_direta->bindValue(2, $organizacao_id);
-                   $inserir_atuacao_direta->execute();
-                }
-           
+               $inserir_atuacao_direta->bindValue(1, $estado);
+               $inserir_atuacao_direta->bindValue(2, $organizacao_id);
+               $inserir_atuacao_direta->execute();
+            }
 
 
             $inserir_relaciona = $pdo->prepare("insert into relacionadas (nome, organizacao_id)
@@ -694,7 +817,25 @@ class CadastrarAll extends Conexao {
             $inserir_relaciona->execute();
 
 
-            $inserir_endereco =  $pdo->prepare("insert into enderecos (regiao, estado, cidade, bairro, 
+            $inserir_tema = $pdo->prepare("insert into temas (tema, organizacao_id)
+                                   values (?, ?)");
+            $temas = $this->getTemas();
+            foreach ($temas  as $tema){
+               $inserir_tema->bindValue(1, $tema);
+               $inserir_tema->bindValue(2, $organizacao_id);
+               $inserir_tema->execute();
+            }
+
+            $inserir_subtema = $pdo->prepare("insert into subtemas (subtema, organizacao_id)
+                                   values (?, ?)");
+            $subtemas = $this->getSubtemas();
+            foreach ($subtemas  as $subtema){
+               $inserir_subtema->bindValue(1, $subtema);
+               $inserir_subtema->bindValue(2, $organizacao_id);
+               $inserir_subtema->execute();
+            }
+
+            $inserir_endereco =  $pdo->prepare("insert into enderecos (regiao, estado, cidade, bairro,
                 rua, numero, complemento, cep, organizacao_id)
                                    values (?, ?, ?, ?, ?, ?, ?, ?, ?)");
             $inserir_endereco->bindValue(1, $this->getRegiao());
@@ -763,12 +904,12 @@ class CadastrarAll extends Conexao {
             $inserir_indicacao->execute();
 
 
-            
+
             $pdo->commit();
 
             echo "<script type='text/javascript'>
-            
-                        sweetAlert({ 
+
+                        sweetAlert({
                           title: '',
                            text: 'Cadastro realizado!',
                            type: 'success'
@@ -776,15 +917,15 @@ class CadastrarAll extends Conexao {
                           function(){
                             window.location.href = '../form.php';
                         });
-                                               
+
                     </script>";
-        
+
         }
         catch (Exception $e){
               $pdo->rollback();
                echo "<script type='text/javascript'>
 
-                        sweetAlert({ 
+                        sweetAlert({
                           title: 'Erro',
                            text: 'Não foi possível realizar o cadastro!',
                             type: 'error'
@@ -792,15 +933,15 @@ class CadastrarAll extends Conexao {
                           function(){
                             window.location.href = '../form.php';
                         });
-                                                   
+
                     </script>";
 
         }
 
-   
+
    }
 }
-   
+
 ?>
 </body>
 </html>
