@@ -491,17 +491,17 @@
                     <td>Iniciativas que tratam de questões de autoestima, qualidade de vida, saúde e bem-estar das mulheres.</td>
                </tr>
 
-                </tbody>
+                  </tbody>
                 </table>
-            </div>
-            </div> 
+             </div>
+        </div> 
 
              <script>
             var CheckMaximo = 3;
 
             function verificar() {
             var Marcados = 1;
-            var objCheck = $("input[name='temas']");
+            var objCheck = $("input[name='temas[]']");
             //Percorrendo os checks para ver quantos foram selecionados:
             for (var iLoop=0; iLoop<objCheck.length; iLoop++) {
             //Se o número máximo de checkboxes ainda não tiver sido atingido, continua a verificação:
