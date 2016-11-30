@@ -372,7 +372,7 @@
                     <h5>Doação pessoa Física<br></h5>
                     <input type="checkbox" name="recursos_origem[]" value="Doação pessoa Física"><br>
 				
-</div><!--form group-->
+                </div>
 
 
 
@@ -602,39 +602,7 @@
     </script> 
 
 
-<!--
- <script>
-            var SelectMaximo = 3;
 
-            function verificarSelect() {
-            var Marcados = 0;
-            var objSelect = $("option[name='subtemas']");
-            //Percorrendo os checks para ver quantos foram selecionados:
-            for (var iLoop1=0; iLoop1<objSelect.length; iLoop1++) {
-            //Se o número máximo de select ainda não tiver sido atingido, continua a verificação:
-                if (objSelect[iLoop1].selected) {
-                    Marcados++;
-                }
-                
-                if (Marcados <= SelectMaximo) {
-                //Habilitando todos os select, pois o máximo ainda não foi alcançado.
-                for (var i=0; i<objSelect.length; i++) {
-                    objSelect[i].disabled = false;
-                }       
-                //Caso contrário, desabilitar o select;
-                //Nesse caso, é necessário percorrer todas as opções novamente, desabilitando as não selecionadas;
-                
-                } else {
-                    for (var i=0; i<objSelect.length; i++) {
-                        if(objSelect[i].checked == false) {
-                            objSelect[i].disabled = true;
-                        }       
-                  }
-                }
-            }
-            }
-</script>
--->
 
                 <h5>O que faz sua organização?*(até 500 caracteres)</h5>                                  
                 <div class="form-group">
@@ -703,7 +671,7 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" name="organizacao_estado[ ]" multiple >
                         <div class="help-block with-errors"></div>
-                      <option value="Acre">Acre</option>
+                        <option value="Acre">Acre</option>
                         <option value="Alagoas">Alagoas</option>
                         <option value="Amapá">Amapá</option>
                         <option value="Amazonas">Amazonas</option>
@@ -771,8 +739,8 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" name="monitoramento_atv" id="avaliacao">
                         <option value=""></option>
-                        <option value="nao">Nāo</option>
-                        <option value="sim">Sim</option>
+                        <option value="0">Nāo</option>
+                        <option value="1">Sim</option>
                     </select>
                     <textarea type="text" id="inputAvaliacaoOng" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
                         "style='display: none' /></textarea>
@@ -819,8 +787,8 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="organizacao-comunicacao" name="comunicacao">
                         <option value=""></option>
-                        <option value="nao">Nāo</option>
-                        <option value="sim,qual?">Sim, qual?</option>
+                        <option value="0">Nāo</option>
+                        <option value="1">Sim, qual?</option>
                     </select>
                     <textarea type="text" id="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 "style='display: none' /></textarea>
@@ -867,8 +835,8 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="premiacao" name="premiacao">
                         <option value=""></option>
-                        <option value="nao">Nāo</option>
-                        <option value="sim,quais?">Sim, quais?</option> 
+                        <option value="0">Nāo</option>
+                        <option value="1">Sim, quais?</option> 
                         
                     </select>
                     <textarea type="text" id="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..

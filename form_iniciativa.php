@@ -482,8 +482,8 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="iniciativa-comunicacao" >
                         <option value=""></option>
-                        <option value="nao">Nāo</option>
-                        <option value="sim">Sim, qual?</option>
+                        <option value="0">Nāo</option>
+                        <option value="1">Sim, qual?</option>
                     </select>
                     <textarea type="text" id="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 "style='display: none' /></textarea>
@@ -530,8 +530,8 @@
                     <select class="f1-last-name form-control" id="premiacao" name="premiacao"name="comunicacao">
                         <div class="help-block with-errors"></div>
                         <option value=""></option>
-                        <option value="nao">Nāo</option>
-                        <option value="sim">Sim, quais?</option>    
+                        <option value="0">Nāo</option>
+                        <option value="1">Sim, quais?</option>    
                     </select>
                     <textarea type="text" id="inputPremiacao" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 "style='display: none'></textarea>
