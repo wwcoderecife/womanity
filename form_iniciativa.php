@@ -136,11 +136,11 @@
                 <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
                <div class="form-group">
                     <label class="radio-inline">
-                       <input type="radio" name="zona" value="rural" class="form-control-radio">Sim
+                       <input type="radio" name="organizacao-pai" value="sim" class="form-control-radio">Sim
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="zona" value="urbana" class="form-control-radio">Nāo
+                        <input type="radio" name="organizacao-pai" value="nao" class="form-control-radio">Nāo
                     </label>
                 </div>
 
@@ -172,7 +172,7 @@
                 <h5>Telefone da iniciativa*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Telefone</label>
-                    <input type="text" name="telefone" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control" id="inputTel3">
+                    <input type="text" name="organizacao-telefone" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control" id="inputTel3">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -256,10 +256,12 @@
                     <select class="f1-last-name form-control" id="year" name="anoatividade">
                     <div class="help-block with-errors"></div>
                         <script>
-                          var myDate = new Date();
+                           var myDate = new Date();
                           var year = myDate.getFullYear();
                           for(var i = 1900; i < year+1; i++){
-                              document.write('<option value=""'+i+'">'+i+'</option>');
+                              $('#year_organizacao')
+                                .append($('<option>', { value : i })
+                                .text(i));
                           }
                           </script>
                     </select>
@@ -489,7 +491,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 <h5> Clique e escolha até 3 Subtemas abaixo*</h5>
 <div class="form-group">
 <!--<label for="subtemas" for="f1-google-plus">Subtemas</label>-->
-        <select class="f1-last-name form-control" id="subtemas" name="subtemas" multiple>
+        <select class="f1-last-name form-control" id="subtemas" name="subtemas[ ]" multiple>
             <option value="Aborto">Aborto</option>
             <option value="Dança">Dança</option>
             <option value="Inserção de mulheres na política">Inserção de mulheres na política</option>
@@ -602,7 +604,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                     <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
                     <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="organizacao_estado" multiple >
+                    <select class="f1-last-name form-control" name="organizacao_estado[ ]" multiple >
                         <div class="help-block with-errors"></div>
                         <option value="Acre">Acre</option>
                         <option value="Alagoas">Alagoas</option>
@@ -674,7 +676,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                         <option value="0">Nāo</option>
                         <option value="1">Sim</option>
                     </select>
-                    <textarea type="text" id="inputAvaliacaoOng" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
+                    <textarea type="text" id="inputAvaliacaoOng" name="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
                         "style='display: none' /></textarea>
                     <script>
 
@@ -722,7 +724,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
                     </select>
-                    <textarea type="text" id="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
+                    <textarea type="text" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 "style='display: none' /></textarea>
                     <script>
 
@@ -770,7 +772,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                         <option value="0">Nāo</option>
                         <option value="1">Sim, quais?</option>    
                     </select>
-                    <textarea type="text" id="inputPremiacao" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
+                    <textarea type="text" id="inputPremiacao" name="inputPremiacao" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 "style='display: none'></textarea>
                     <script>
 
@@ -843,7 +845,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 <h5>Regiāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="regiao"id="regiao">
+                    <select class="f1-last-name form-control" name="regiao" id="regiao">
                         <div class="help-block with-errors"></div>
                         <option value="norte">Norte</option>
                         <option value="nordeste">Nordeste</option>
