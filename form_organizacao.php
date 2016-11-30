@@ -308,7 +308,9 @@
                           var myDate = new Date();
                           var year = myDate.getFullYear();
                           for(var i = 1900; i < year+1; i++){
-                              document.write('<option value=""'+i+'">'+i+'</option>');
+                              $('#year_organizacao')
+                                .append($('<option>', { value : i })
+                                .text(i));
                           }
                           </script>
                     </select>
@@ -797,7 +799,7 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
                     </select>
-                    <textarea type="text" id="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
+                    <textarea type="text" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 "style='display: none' /></textarea>
                     <script>
 
@@ -846,7 +848,7 @@
                         <option value="1">Sim, quais?</option> 
                         
                     </select>
-                    <textarea type="text" id="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
+                    <textarea type="text" id="inputPremiacaoOng" name="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 "style='display: none' /></textarea>
                     <script>
 
