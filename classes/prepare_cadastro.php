@@ -12,9 +12,9 @@
     $tipo = filter_input(INPUT_POST, "tipo", FILTER_SANITIZE_MAGIC_QUOTES);
     $inicio_atv = filter_input(INPUT_POST, "anoatividade", FILTER_SANITIZE_MAGIC_QUOTES);
     $qtde_pessoas = filter_input(INPUT_POST, "pessoas_envolvidas", FILTER_SANITIZE_MAGIC_QUOTES);
-    $recursos_finaceiros = filter_input(INPUT_POST, "origem1", FILTER_SANITIZE_MAGIC_QUOTES);
-    $descricao = filter_input(INPUT_POST, "sobre_iniciativa", FILTER_SANITIZE_MAGIC_QUOTES);
-    $publico_atendido = filter_input(INPUT_POST, "organizacao-publico", FILTER_SANITIZE_MAGIC_QUOTES);
+    $recursos_finaceiros = filter_input(INPUT_POST, "recursos", FILTER_SANITIZE_MAGIC_QUOTES);
+    $descricao = filter_input(INPUT_POST, "sobre", FILTER_SANITIZE_MAGIC_QUOTES);
+    $publico_atendido = filter_input(INPUT_POST, "publico_alvo", FILTER_SANITIZE_MAGIC_QUOTES);
     $politicas_publicas = filter_input(INPUT_POST, "politicas_publicas", FILTER_SANITIZE_MAGIC_QUOTES);
     $monitoramento_atividades = filter_input(INPUT_POST, "inputAvaliacaoOng", FILTER_SANITIZE_MAGIC_QUOTES);
     $estrategia_comunicacao = filter_input(INPUT_POST, "inputComunicacaoOng", FILTER_SANITIZE_MAGIC_QUOTES);
