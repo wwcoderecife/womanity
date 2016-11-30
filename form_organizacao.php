@@ -4,7 +4,9 @@
             <script src="assets/js/bootstrap.min.js"></script>
             <!--<script src="assets/js/validator.min.js"></script>-->
             <!--<script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>-->
-            <script src="assets/js/jquery.mask.min.js"></script>
+            <!--<script src="assets/js/jquery.mask.min.js"></script>-->
+            <script src="wget https://github.com/igorescobar/jQuery-Mask-Plugin/blob/master/dist/jquery.mask.min.js"></script>
+
             <script type="text/javascript"></script>
             <link   rel="stylesheet" href="assets/css/bootstrap-select.min.css">
             <script src="assets/js/bootstrap-select.min.js" ></script>
