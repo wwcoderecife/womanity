@@ -56,8 +56,15 @@
 
              <!-- Formulário: Tipo Iniciativa -->
 
+
             <fieldset>
                 <h4>Dados Pessoais Contato 1:</h4>
+                <h5>Nome*</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">Nome</label>
+                    <input type="text" name="nome1" placeholder="responsável pelo preenchimento do cadastro" class="f1-last-name form-control" id="inputNome1" >
+                    <div class="help-block with-errors"></div>
+                </div>
                 <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
@@ -85,6 +92,12 @@
                 </div>
 
                 <h4>Dados Pessoais Contato 2:</h4>
+                <h5>Nome*</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">Nome</label>
+                    <input type="text" name="nome2" placeholder="responsável pela organização ou suplente" class="f1-last-name form-control" id="inputNome2" >
+                    <div class="help-block with-errors"></div>
+                </div>
                 <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
@@ -163,7 +176,7 @@
                     <div class="help-block with-errors"></div>
                 </div>
 
-                <h5>E-mail da iniciativa</h5>
+                <h5>E-mail da iniciativa*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Email</label>
                     <input type="email" name="email"class="f1-last-name form-control">
@@ -258,15 +271,15 @@
                     <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas" >
                      <div class="help-block with-errors"></div>
                         <option value=""></option>
-                        <option value="1">1-5</option>
-                        <option value="2">6-10</option>
-                        <option value="3">11-20</option>
-                        <option value="4">21-50</option>
-                        <option value="5">51-100</option>
-                        <option value="6">101-500</option>
-                        <option value="7">251-1000</option>
-                        <option value="8">501-1000</option>
-                        <option value="9">1001+</option>     
+                        <option value="1-5">1-5</option>
+                        <option value="6-10">6-10</option>
+                        <option value="11-20">11-20</option>
+                        <option value="21-50">21-50</option>
+                        <option value="51-100">51-100</option>
+                        <option value="101-500">101-500</option>
+                        <option value="251-1000">251-1000</option>
+                        <option value="501-1000">501-1000</option>
+                        <option value="1001+">1001+</option>     
                     </select>
 
                <h5>Qual foi seu orçamento da sua iniciativa?*</h5>
@@ -293,15 +306,34 @@
 
               <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="recursos" value="1" class="form-control-radio"> Sim
+                        <input type="radio" name="recursos" value="sim" class="form-control-radio"> Sim
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="recursos" value="0" class="form-control-radio"> Nāo
+                        <input type="radio" name="recursos" value="nao" class="form-control-radio"> Nāo
                     </label>
                 </div>
 
-                 
+
+              <h5>Qual é a origem?</h5>
+                <div class="form-group">
+                    <div>
+                    <h5>Apoio a Projetos / Patrocínio<br></h5>
+                    <input type="checkbox" name="recursos_origem[]" value="empresas">empresas<br>
+                    <input type="checkbox" name="recursos_origem[]" value="institutos ou fundações empresariais">institutos ou fundações empresariais<br>
+                    <input type="checkbox" name="recursos_origem[]" value="organizações do sistema ONU">organizações do sistema ONU<br>
+                </div>
+                <div>
+                    <h5>Edital Governamental<br></h5>
+                    <input type="checkbox" name="recursos_origem[]" value="município">município<br>
+                    <input type="checkbox" name="recursos_origem[]" value="estado">estado<br>
+                    <input type="checkbox" name="recursos_origem[]" value="governo federal">governo federal<br>
+                </div>
+
+                <div>
+                    <h5>Doação pessoa Física<br></h5>
+                    <input type="checkbox" name="recursos_origem[]" value="Doação pessoa Física"><br>
+                </div>
 
            <h5>O que faz sua iniciativa?* (até 500 caracteres).</h5>                                  
                 <div class="form-group">
@@ -318,13 +350,13 @@
                     <select class="f1-last-name form-control" id="publico_alvo" name="publico_alvo" >
                     <div class="help-block with-errors"></div> 
                         <option value=""></option>
-                        <option value="1">Empresas</option>
-                        <option value="2">Organizações Sociais</option>
-                        <option value="3">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher </option>
-                        <option value="4">Movimentos, coletivos, redes, fóruns</option>
-                        <option value="5">Adolescentes e jovens</option>
-                        <option value="6">Homens</option>
-                        <option value="7">Mulheres</option>
+                        <option value="Empresas">Empresas</option>
+                        <option value="Organizações Sociais">Organizações Sociais</option>
+                        <option value="Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher</option><br>
+                        <option value="Movimentos, coletivos, redes, fóruns">Movimentos, coletivos, redes, fóruns</option>
+                        <option value="Adolescentes e jovens">Adolescentes e jovens</option>
+                        <option value="Homens">Homens</option>
+                        <option value="Mulheres">Mulheres</option>
                            
                     </select>
                     
@@ -334,33 +366,33 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" name="organizacao_estado" multiple >
                         <div class="help-block with-errors"></div>
-                      <option value="1">Acre</option>
-                        <option value="2">Alagoas</option>
-                        <option value="3">Amapá</option>
-                        <option value="4">Amazonas</option>
-                        <option value="5">Bahia</option>
-                        <option value="6">Ceará</option>
-                        <option value="7">Distrito Federal</option>
-                        <option value="8">Espírito Santo</option>
-                        <option value="9">Goiás</option>
-                        <option value="10">Maranhão</option>
-                        <option value="11">Mato Grosso</option>
-                        <option value="12">Mato Grosso do Sul</option>
-                        <option value="13">Minas Gerais</option>
-                        <option value="14">Pará</option>
-                        <option value="15">Paraíba</option>
-                        <option value="16">Paraná</option>
-                        <option value="17">Pernambuco</option>
-                        <option value="18">Piauí</option>
-                        <option value="19">Rio de Janeiro</option>
-                        <option value="20">Rio Grande do Norte</option>
-                        <option value="21">Rio Grande do Sul</option>
-                        <option value="22">Rondônia</option>
-                        <option value="23">Roraima</option>
-                        <option value="24">Santa Catarina</option>
-                        <option value="25">São Paulo</option>
-                        <option value="26">Sergipe</option>
-                        <option value="27">Tocantins</option>
+                        <option value="Acre">Acre</option>
+                        <option value="Alagoas">Alagoas</option>
+                        <option value="Amapá">Amapá</option>
+                        <option value="Amazonas">Amazonas</option>
+                        <option value="Bahia">Bahia</option>
+                        <option value="Ceará">Ceará</option>
+                        <option value="Distrito Federal">Distrito Federal</option>
+                        <option value="Espírito Santo">Espírito Santo</option>
+                        <option value="Goiás">Goiás</option>
+                        <option value="Maranhão">Maranhão</option>
+                        <option value="Mato Grosso">Mato Grosso</option>
+                        <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                        <option value="Minas Gerais">Minas Gerais</option>
+                        <option value="Pará">Pará</option>
+                        <option value="Paraíba">Paraíba</option>
+                        <option value="Paraná">Paraná</option>
+                        <option value="Pernambuco">Pernambuco</option>
+                        <option value="Piauí">Piauí</option>
+                        <option value="Rio de Janeiro">Rio de Janeiro</option>
+                        <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                        <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                        <option value="Rondônia">Rondônia</option>
+                        <option value="Roraima">Roraima</option>
+                        <option value="Santa Catarina">Santa Catarina</option>
+                        <option value="São Paulo">São Paulo</option>
+                        <option value="Sergipe">Sergipe</option>
+                        <option value="Tocantins">Tocantins</option>
                     </select>
 
                     <h5>Sua iniciativa influenciou políticas públicas?*</h5>
@@ -376,19 +408,20 @@
 
                 <div class="form-group">
                    <label class="checkbox-inline">
-                        <input type="checkbox" name="origem1" value="origem1" class="form-control-radio">
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="municipal" class="form-control-radio">
                         <div class="help-block with-errors"></div>municipal 
                     </label>
 
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="origem2" value="origem2" class="form-control-radio">
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="estadual" class="form-control-radio">
                         <div class="help-block with-errors"></div>estadual
                     </label>
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="origem3" value="origem3" class="form-control-radio">
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="nacional" class="form-control-radio">
                         <div class="help-block with-errors"></div>nacional 
                     </label>
-                    <textarea name="organizaçāo_politica_publica" placeholder="Opcional: (campo aberto para detalhar, )"
+                    <textarea name="organizaçāo_politica_publica" placeholder="Descreva como se deu essa influência em políticas públicas (em 500 caracteres)"
+
 
                     class="f1-about-yourself form-control" id="sobre_iniciativa"></textarea>
                 </div>
@@ -449,8 +482,8 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="iniciativa-comunicacao" >
                         <option value=""></option>
-                        <option value="0">Nāo</option>
-                        <option value="1">Sim, qual?</option>
+                        <option value="nao">Nāo</option>
+                        <option value="sim">Sim, qual?</option>
                     </select>
                     <textarea type="text" id="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 "style='display: none' /></textarea>
@@ -497,8 +530,8 @@
                     <select class="f1-last-name form-control" id="premiacao" name="premiacao"name="comunicacao">
                         <div class="help-block with-errors"></div>
                         <option value=""></option>
-                        <option value="0">Nāo</option>
-                        <option value="1">Sim, quais?</option>    
+                        <option value="nao">Nāo</option>
+                        <option value="sim">Sim, quais?</option>    
                     </select>
                     <textarea type="text" id="inputPremiacao" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 "style='display: none'></textarea>
@@ -710,61 +743,70 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 <div class="form-group">
 <!--<label for="subtemas" for="f1-google-plus">Subtemas</label>-->
         <select class="f1-last-name form-control" id="subtemas" name="subtemas" multiple>
-            <option value="1">Aborto</option>
-            <option value="2">Dança</option>
-            <option value="3">Inserção de mulheres na política</option>
-            <option value="4">Paternidade</option>
-            <option value="5">Tecnologia social e/ou alternativas</option>
-            <option value="6">Desenvolvimento e Programação</option>
-            <option value="7">Liderança</option>
-            <option value="8">Pessoa com deficiência</option>
-            <option value="9">Trabalho digno</option>
-            <option value="10">Advocacy</option>
-            <option value="11">Ecofeminismo</option>
-            <option value="12">Povos tradicionais</option>
-            <option value="13">Tráfico de pessoas</option>
-            <option value="14">Agua e saneamento básico</option>
-            <option value="15">Economia criativa</option>
-            <option value="16">Marketing</option>
-            <option value="17">Preconceito e discriminação</option>
-            <option value="18">Tecnologia</option>
-            <option value="19">Artes plásticas</option>
-            <option value="20">Parto Humanizado</option>
-            <option value="21">Cadeia produtiva responsável</option>
-            <option value="22">Educomunicação</option>
-            <option value="23">Microcrédito</option>
-            <option value="24">Questão presidiária</option>
-            <option value="25">Cinema</option>
-            <option value="26">Envelhecimento</option>
-            <option value="27">Mobilização</option>
-            <option value="28">Reciclagem e logísitca diversa</option>
-            <option value="29">Finanças sociais</option>
-            <option value="30">Mudanças climáticas</option>
-            <option value="32">Redes Sociais</option>
-            <option value="33">Conselhos e outras instâncias</option>
-            <option value="34">Fotografia</option>
-            <option value="35">Mulheres no mundo da ciencias</option>
-            <option value="36">Refugiados</option>
-            <option value="37">Consumo</option>
-            <option value="38">Incentivo à leitura</option>
-            <option value="39">Obesidade infantil</option>
-            <option value="30">Reparação-reconstrução</option>
-            <option value="41">Cooperativismo</option>
-            <option value="42">Inclusão Digital</option>
-            <option value="43">Teatro</option>
-            <option value="43">Sustentabilidade</option>
+            <option value="Aborto">Aborto</option>
+            <option value="Dança">Dança</option>
+            <option value="Inserção de mulheres na política">Inserção de mulheres na política</option>
+            <option value="Paternidade">Paternidade</option>
+            <option value="Tecnologia social e/ou alternativas">Tecnologia social e/ou alternativas</option>
+            <option value="Desenvolvimento e Programação">Desenvolvimento e Programação</option>
+            <option value="Liderança">Liderança</option>
+            <option value="Pessoa com deficiência">Pessoa com deficiência</option>
+            <option value="Trabalho digno">Trabalho digno</option>
+            <option value="Advocacy">Advocacy</option>
+            <option value="Ecofeminismo">Ecofeminismo</option>
+            <option value="Povos tradicionais">Povos tradicionais</option>
+            <option value="Tráfico de pessoas">Tráfico de pessoas</option>
+            <option value="Água e saneamento básico">Água e saneamento básico</option>
+            <option value="Economia criativa">Economia criativa</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Preconceito e discriminação">Preconceito e discriminação</option>
+            <option value="Tecnologia">Tecnologia</option>
+            <option value="Artes plásticas">Artes plásticas</option>
+            <option value="Parto Humano">Parto Humano</option>
+            <option value="Cadeia produtiva responsável">Cadeia produtiva responsável</option>
+            <option value="Educomunicação">Educomunicação</option>
+            <option value="Microcrédito">Microcrédito</option>
+            <option value="Questão presidiária">Questão presidiária</option>
+            <option value="Cinema">Cinema</option>
+            <option value="Envelhecimento">Envelhecimento</option>
+            <option value="Mobilização">Mobilização</option>
+            <option value="Reciclagem e logísitca diversa">Reciclagem e logísitca diversa</option>
+            <option value="Finanças sociais">Finanças sociais</option>
+            <option value="Mudanças climáticas">Mudanças climáticas</option>
+            <option value="Redes Sociais">Redes Sociais</option>
+            <option value="Conselhos e outras instâncias">Conselhos e outras instâncias</option>
+            <option value="Fotografia">Fotografia</option>
+            <option value="Mulheres no mundo da ciências">Mulheres no mundo da ciências</option>
+            <option value="Refugiados">Refugiados</option>
+            <option value="Consumo">Consumo</option>
+            <option value="Incentivo à leitura">Incentivo à leitura</option>
+            <option value="Obesidade infantil">Obesidade infantil</option>
+            <option value="Reparação-reconstrução">Reparação-reconstrução</option>
+            <option value="Cooperativismo">Cooperativismo</option>
+            <option value="Inclusão Digital">Inclusão Digital</option>
+            <option value="Teatro">Teatro</option>
+            <option value="Sustentabilidade">Sustentabilidade</option>
 
         </select>
 
      </div>
-<!--
-     <script type="text/javascript">
-    $(document).ready(function() {
-    $('#subtemas').multiselect();
-    });
- </script> --> 
 
+     <script>
+     $(document).ready(function() {
 
+          var last_valid_selection = null;
+
+          $('#subtemas').change(function(event) {
+
+            if ($(this).val().length > 3) {
+
+              $(this).val(last_valid_selection);
+            } else {
+              last_valid_selection = $(this).val();
+            }
+          });
+        });
+    </script> 
 
 
                 <div class="f1-buttons">
