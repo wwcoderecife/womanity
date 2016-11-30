@@ -5,17 +5,14 @@
             <!--<script src="assets/js/validator.min.js"></script>-->
             <script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>
             <script type="text/javascript"></script>
+            <link   rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+            <script src="assets/js/bootstrap-select.min.js" ></script>
+           
 
-            <!--bootstrap multiple select-->
+        
 
-            <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css">
+           
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script>
-
-<!-- (Optional) Latest compiled and minified JavaScript translation files -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/i18n/defaults-*.min.js"></script>
 
 
             <!--Include Twitter Bootstrap and jQuery: Subtemas--> 
@@ -82,6 +79,13 @@
 
           <fieldset>
                 <h4>Dados Pessoais Contato 1:</h4>
+
+                <h5>Nome*</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">Nome</label>
+                    <input type="text" name="nome1" placeholder="responsável pelo preenchimento do cadastro" class="f1-last-name form-control" id="inputNome1" >
+                    <div class="help-block with-errors"></div>
+                </div>
                  <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
@@ -111,6 +115,12 @@
                 </div>
 
                  <h4>Dados Pessoais Contato 2:</h4>
+                 <h5>Nome*</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">Nome</label>
+                    <input type="text" name="nome2" placeholder="responsável pela organização ou suplente" class="f1-last-name form-control" id="inputNome2" >
+                    <div class="help-block with-errors"></div>
+                </div>
                   <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
@@ -333,20 +343,318 @@
                 <h5>Sua Organizaçāo recebe recursos financeiros?</h5>
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="recursos" value="1" class="form-control-radio"> Sim
+                        <input type="radio" name="recursos" value="sim" class="form-control-radio"> Sim
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="recursos" value="0" class="form-control-radio"> Nāo
+                        <input type="radio" name="recursos" value="nao" class="form-control-radio"> Nāo
                     </label>
                 </div>
+
+
+                <h5>Qual é a origem?</h5>
+                <div class="form-group">
+                    <div>
+                    <h5>Apoio a Projetos / Patrocínio<br></h5>
+                    <input type="checkbox" name="recursos_origem[]" value="empresas">empresas<br>
+                    <input type="checkbox" name="recursos_origem[]" value="institutos ou fundações empresariais">institutos ou fundações empresariais<br>
+                    <input type="checkbox" name="recursos_origem[]" value="organizações do sistema ONU">organizações do sistema ONU<br>
+                </div>
+                <div>
+                    <h5>Edital Governamental<br></h5>
+                    <input type="checkbox" name="recursos_origem[]" value="município">município<br>
+                    <input type="checkbox" name="recursos_origem[]" value="estado">estado<br>
+                    <input type="checkbox" name="recursos_origem[]" value="governo federal">governo federal<br>
+                </div>
+
+                <div>
+                    <h5>Doação pessoa Física<br></h5>
+                    <input type="checkbox" name="recursos_origem[]" value="Doação pessoa Física"><br>
+				
+</div><!--form group-->
+
+
+
+            <!--Tabela Temas-->
+
+            <h5>Áreas de atuação da organização: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>
+            <div class="form-group" style="border: 1px solid #ddd">
+            <div class="table-responsive">
+            <table id="form1" name="table_temas"class="table table-hover col-sm-12" >
+
+             <thead>
+                <tr>
+                    <th></th>
+                    <th>Temas</th>
+                    <th>Descriçāo</th>
+                  
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]" value="arte_cultura" class="no-margin" onclick="verificar()"></td>
+                    <td>Arte e Cultura.</td>
+                    <td>Promoção do acesso de mulheres à cultura e/ou incentivo à produção das várias expressões artísticas.</td>
+                     
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="ciencia_tecnologia"class="no-margin" onclick="verificar()"></td>
+                    <td>Ciência e Tecnologia.</td>
+                    <td>Promoção do acesso a linguagens, equipamentos e/ou à produção de ciência e tecnologia por mulheres.</td>
+                   
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="democracia_participação_politica"class="no-margin" onclick="verificar()"></td>
+                    <td> Democracia e Participação Política.</td>
+                    <td>Ações de incentivo à participação de mulheres na vida política e democrática institucional (partidos, conselhos, órgãos e instâncias dos poderes executivo, legislativo e judiciário).</td>
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="educacao_formacao"class="no-margin" onclick="verificar()"></td>
+                    <td>Educação e Formação.</td>
+                    <td>Oferta de educação formal (escolar ou acadêmica), incentivo à escolaridade; formação de atores sociais, ações de educação popular e informal.</td>
+                  
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="empreendedorismo_feminino_autonomia_economica"class="no-margin" onclick="verificar()"></td>
+                    <td>Empreendedorismo feminino e autonomia econômica.</td>
+                    <td>Ações de incentivo ao empreendedorismo feminino e à autonomia econômica, por meio de capacitação e/ou financiamento, tais como capacitações, cooperativismo, microcrédito, etc.</td>
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="enfrentamento_violencia"class="no-margin" onclick="verificar()"></td>
+                    <td>Enfrentamento à Violência.</td>
+                    <td>Trabalho de enfrentamento às mais variadas formas de violência, destinado a mulheres e homens.</td>
+                  
+
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="equidade_Condições_trabalho"class="no-margin" onclick="verificar()"></td>
+                    <td>Equidade e Condições de Trabalho.</td>
+                    <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas 
+    possibilidades de desenvolvimento profissional e equiparação salarial.</td>    
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="esporte"class="no-margin" onclick="verificar()"></td>
+                    <td>Esportes.</td>
+                    <td>Oferta, promoção e incentivo à realização de práticas esportivas por meninas e mulheres, sobretudo em modalidades tradicionalmente dominadas por homens.</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="indigenas"class="no-margin" onclick="verificar()"></td>
+                    <td>Indígenas.</td>
+                    <td>Ações destinadas à valorização das mulheres indígenas e ao enfrentamento de seus problemas específicos.</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="LGBTT"class="no-margin" onclick="verificar()"></td>
+                    <td>LGBTT (Lésbicas, Gays, Bissexuais, Travestis, Transexuais e Transgêneros).</td>
+                    <td>Projetos que atuam pela valorização e afirmação de pessoas LGBTT e combatem a violência e a discriminação contra esses públicos.</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="masculinidade"class="no-margin" onclick="verificar()"></td>
+                    <td>Masculinidades.</td>
+                    <td>Ações voltadas para questões relativas à revisão do conceito hegemônico de masculinidade, a partir da perspectiva das relações de gênero.</td>
+                </tr>
+                <tr>
+                     <td><input type="checkbox" name="temas[ ]"value="meio ambiente,seguranca,agricultura"class="no-margin" onclick="verificar()"></td>
+                    <td>Meio Ambiente,Segurança Alimentar e Agricultura.</td>
+                    <td>Trabalhos que relacionam questões de gênero, feminismo e meio ambiente. 
+    Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis e ambientalmente sustentáveis.</td>
+                </tr>
+
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="midia_comunicacao"class="no-margin" onclick="verificar()"></td>
+                    <td>Mídia e Comunicação.</td>
+                    <td>Promoção do acesso de mulheres aos meios de comunicação pelo domínio de técnicas, equipamentos e linguagens; monitoramento da presença da mulher nas mídias e da cobertura de temas sobre as questões das mulheres.</td>
+               </tr>
+
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="moradia"class="no-margin" onclick="verificar()"></td>
+                    <td>Moradia.</td>
+                    <td>Ações que visam contribuir para o direito das mulheres à moradia e desenvolvimento de habilidades para a construção ou reformas de casas.</td>
+               </tr>
+
+               <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="negritude"class="no-margin" onclick="verificar()"></td>
+                    <td>Negritude.</td>
+                    <td>Ações de valorização da estética e da identidade das mulheres negras e de combate ao racismo.</td>
+               </tr>
+
+               <tr> <td><input type="checkbox" name="temas[ ]"value="paz_seguranca_publica"class="no-margin" onclick="verificar()"></td>
+                    <td>Paz e Segurança pública.</td>
+                    <td>Projetos que tratam da interface entre gênero e sistema de segurança pública, sobretudo questões da violência armada.</td>
+               </tr>
+
+               <tr> <td><input type="checkbox" name="temas[ ]"value="saude_bemestar"class="no-margin" onclick="verificar()"></td>
+                    <td>Saúde e Bem-estar.</td>
+                    <td>Iniciativas que tratam de questões de autoestima, qualidade de vida, saúde e bem-estar das mulheres.</td>
+               </tr>
+
+                </tbody>
+                </table>
+            </div>
+            </div> 
+
+             <script>
+            var CheckMaximo = 3;
+
+            function verificar() {
+            var Marcados = 1;
+            var objCheck = $("input[name='temas']");
+            //Percorrendo os checks para ver quantos foram selecionados:
+            for (var iLoop=0; iLoop<objCheck.length; iLoop++) {
+            //Se o número máximo de checkboxes ainda não tiver sido atingido, continua a verificação:
+                if (objCheck[iLoop].checked) {
+                    Marcados++;
+                }
+                
+                if (Marcados <= CheckMaximo) {
+                //Habilitando todos os checkboxes, pois o máximo ainda não foi alcançado.
+                for (var i=0; i<objCheck.length; i++) {
+                    objCheck[i].disabled = false;
+                }       
+                //Caso contrário, desabilitar o checkbox;
+                //Nesse caso, é necessário percorrer todas as opções novamente, desabilitando as não checadas;
+                
+                } else {
+                    for (var i=0; i<objCheck.length; i++) {
+                        if(objCheck[i].checked == false) {
+                            objCheck[i].disabled = true;
+                        }       
+                  }
+                }
+            }
+            }
+</script>
+
+<!--subtemas-->
+
+
+<h5> Clique e escolha até 3 Subtemas abaixo*</h5>
+ <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar os subtemas.</em></h6>
+<div class="form-group">
+<label for="subtemas" for="f1-google-plus">Subtemas</label>
+        <select class="f1-last-name form-control"id="subtemas" class="selectpicker" name="subtemas[ ]" data-style="default" multiple>
+            <option value="Aborto">Aborto</option>
+            <option value="Dança">Dança</option>
+            <option value="Inserção de mulheres na política">Inserção de mulheres na política</option>
+            <option value="Paternidade">Paternidade</option>
+            <option value="Tecnologia social e/ou alternativas">Tecnologia social e/ou alternativas</option>
+            <option value="Desenvolvimento e Programação">Desenvolvimento e Programação</option>
+            <option value="Liderança">Liderança</option>
+            <option value="Pessoa com deficiência">Pessoa com deficiência</option>
+            <option value="Trabalho digno">Trabalho digno</option>
+            <option value="Advocacy">Advocacy</option>
+            <option value="Ecofeminismo">Ecofeminismo</option>
+            <option value="Povos tradicionais">Povos tradicionais</option>
+            <option value="Tráfico de pessoas">Tráfico de pessoas</option>
+            <option value="Água e saneamento básico">Água e saneamento básico</option>
+            <option value="Economia criativa">Economia criativa</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Preconceito e discriminação">Preconceito e discriminação</option>
+            <option value="Tecnologia">Tecnologia</option>
+            <option value="Artes plásticas">Artes plásticas</option>
+            <option value="Parto Humano">Parto Humano</option>
+            <option value="Cadeia produtiva responsável">Cadeia produtiva responsável</option>
+            <option value="Educomunicação">Educomunicação</option>
+            <option value="Microcrédito">Microcrédito</option>
+            <option value="Questão presidiária">Questão presidiária</option>
+            <option value="Cinema">Cinema</option>
+            <option value="Envelhecimento">Envelhecimento</option>
+            <option value="Mobilização">Mobilização</option>
+            <option value="Reciclagem e logísitca diversa">Reciclagem e logísitca diversa</option>
+            <option value="Finanças sociais">Finanças sociais</option>
+            <option value="Mudanças climáticas">Mudanças climáticas</option>
+            <option value="Redes Sociais">Redes Sociais</option>
+            <option value="Conselhos e outras instâncias">Conselhos e outras instâncias</option>
+            <option value="Fotografia">Fotografia</option>
+            <option value="Mulheres no mundo da ciências">Mulheres no mundo da ciências</option>
+            <option value="Refugiados">Refugiados</option>
+            <option value="Consumo">Consumo</option>
+            <option value="Incentivo à leitura">Incentivo à leitura</option>
+            <option value="Obesidade infantil">Obesidade infantil</option>
+            <option value="Reparação-reconstrução">Reparação-reconstrução</option>
+            <option value="Cooperativismo">Cooperativismo</option>
+            <option value="Inclusão Digital">Inclusão Digital</option>
+            <option value="Teatro">Teatro</option>
+            <option value="Sustentabilidade">Sustentabilidade</option>
+
+        </select>
+
+     </div>
+
+<script>
+     $(document).ready(function() {
+
+          var last_valid_selection = null;
+
+          $('#subtemas').change(function(event) {
+
+            if ($(this).val().length > 3) {
+
+              $(this).val(last_valid_selection);
+            } else {
+              last_valid_selection = $(this).val();
+            }
+          });
+        });
+    </script> 
+
+
+<!--
+ <script>
+            var SelectMaximo = 3;
+
+            function verificarSelect() {
+            var Marcados = 0;
+            var objSelect = $("option[name='subtemas']");
+            //Percorrendo os checks para ver quantos foram selecionados:
+            for (var iLoop1=0; iLoop1<objSelect.length; iLoop1++) {
+            //Se o número máximo de select ainda não tiver sido atingido, continua a verificação:
+                if (objSelect[iLoop1].selected) {
+                    Marcados++;
+                }
+                
+                if (Marcados <= SelectMaximo) {
+                //Habilitando todos os select, pois o máximo ainda não foi alcançado.
+                for (var i=0; i<objSelect.length; i++) {
+                    objSelect[i].disabled = false;
+                }       
+                //Caso contrário, desabilitar o select;
+                //Nesse caso, é necessário percorrer todas as opções novamente, desabilitando as não selecionadas;
+                
+                } else {
+                    for (var i=0; i<objSelect.length; i++) {
+                        if(objSelect[i].checked == false) {
+                            objSelect[i].disabled = true;
+                        }       
+                  }
+                }
+            }
+            }
+</script>
+-->
 
                 <h5>O que faz sua organização?*(até 500 caracteres)</h5>                                  
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
-                    <textarea name="sobre" maxlength="500" placeholder="Fale sobre a sua organizaçāo...." 
+                    <textarea name="sobre" maxlength="500" placeholder="campo com capacidade para 500 caracteres...." 
                     class="f1-about-yourself form-control" id="sobre" ></textarea>
                 </div>
+
+                 <h5>Qual é a sua função no ecossistema?*</h5>
+
+                 <div class="form-group">
+                 <input type="checkbox" name="funcao[ ]" value="Advocacy">Advocacy<br>
+                 <input type="checkbox" name="funcao[ ]" value="Atuação direta com mulheres, homens, LGBTT, etc" class="form-control-radio">Atuação direta com mulheres, homens, LGBTT, etc<br>
+
+                 <input type="numeric"  name="numero_beneficiarios" placeholder="número de beneficiários diretos" style="margin-left: 20px" class="f1-last-name form-control"><br>
+                 <input type="checkbox" name="funcao[ ]" value="Financiadores"class="form-control-radio">Financiadores<br>
+                 <input type="checkbox" name="funcao[ ]" value="Fortalecedor institucional"class="form-control-radio">Fortalecedor institucional<br>
+                 <input type="checkbox" name="funcao[ ]" value="público" style="margin-left: 20px"class="form-control-radio">público
+                 <input type="checkbox" name="funcao[ ]" value="privado" style="margin-left: 20px"class="form-control-radio">privado
+                 <input type="checkbox" name="funcao[ ]" value="social"  style="margin-left: 20px"class="form-control-radio">social⁠⁠⁠⁠   
+                 </div>   
 
 
                  <h5>Qual o público direto atendido pela sua Organizaçāo?*</h5>
@@ -357,7 +665,7 @@
                         <option value=""></option>
                         <option value="Empresas">Empresas</option>
                         <option value="Organizações Sociais">Organizações Sociais</option>
-                        <option value="Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher</option>
+                        <option value="Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher</option><br>
                         <option value="Movimentos, coletivos, redes, fóruns">Movimentos, coletivos, redes, fóruns</option>
                         <option value="Adolescentes e jovens">Adolescentes e jovens</option>
                         <option value="Homens">Homens</option>
@@ -392,35 +700,35 @@
                     <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
                     <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="organizacao_estado" multiple >
+                    <select class="f1-last-name form-control" name="organizacao_estado[ ]" multiple >
                         <div class="help-block with-errors"></div>
-                      <option value="1">Acre</option>
-                        <option value="2">Alagoas</option>
-                        <option value="3">Amapá</option>
-                        <option value="4">Amazonas</option>
-                        <option value="5">Bahia</option>
-                        <option value="6">Ceará</option>
-                        <option value="7">Distrito Federal</option>
-                        <option value="8">Espírito Santo</option>
-                        <option value="9">Goiás</option>
-                        <option value="10">Maranhão</option>
-                        <option value="11">Mato Grosso</option>
-                        <option value="12">Mato Grosso do Sul</option>
-                        <option value="13">Minas Gerais</option>
-                        <option value="14">Pará</option>
-                        <option value="15">Paraíba</option>
-                        <option value="16">Paraná</option>
-                        <option value="17">Pernambuco</option>
-                        <option value="18">Piauí</option>
-                        <option value="19">Rio de Janeiro</option>
-                        <option value="20">Rio Grande do Norte</option>
-                        <option value="21">Rio Grande do Sul</option>
-                        <option value="22">Rondônia</option>
-                        <option value="23">Roraima</option>
-                        <option value="24">Santa Catarina</option>
-                        <option value="25">São Paulo</option>
-                        <option value="26">Sergipe</option>
-                        <option value="27">Tocantins</option>
+                      <option value="Acre">Acre</option>
+                        <option value="Alagoas">Alagoas</option>
+                        <option value="Amapá">Amapá</option>
+                        <option value="Amazonas">Amazonas</option>
+                        <option value="Bahia">Bahia</option>
+                        <option value="Ceará">Ceará</option>
+                        <option value="Distrito Federal">Distrito Federal</option>
+                        <option value="Espírito Santo">Espírito Santo</option>
+                        <option value="Goiás">Goiás</option>
+                        <option value="Maranhão">Maranhão</option>
+                        <option value="Mato Grosso">Mato Grosso</option>
+                        <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                        <option value="Minas Gerais">Minas Gerais</option>
+                        <option value="Pará">Pará</option>
+                        <option value="Paraíba">Paraíba</option>
+                        <option value="Paraná">Paraná</option>
+                        <option value="Pernambuco">Pernambuco</option>
+                        <option value="Piauí">Piauí</option>
+                        <option value="Rio de Janeiro">Rio de Janeiro</option>
+                        <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                        <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                        <option value="Rondônia">Rondônia</option>
+                        <option value="Roraima">Roraima</option>
+                        <option value="Santa Catarina">Santa Catarina</option>
+                        <option value="São Paulo">São Paulo</option>
+                        <option value="Sergipe">Sergipe</option>
+                        <option value="Tocantins">Tocantins</option>
                     </select>
 
 
@@ -439,14 +747,14 @@
               
                 <div class="form-group">
                    <label class="checkbox-inline">
-                        <input type="checkbox" name="origem1" value="origem1" class="form-control-radio">municipal 
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="municipal" class="form-control-radio">municipal
                     </label>
 
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="origem2" value="origem2" class="form-control-radio">estadual
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="estadual" class="form-control-radio">estadual
                     </label>
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="origem3" value="origem3" class="form-control-radio">nacional 
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="nacional" class="form-control-radio">nacional
                     </label>
                     <textarea name="organizaçāo_politica_publica" placeholder="Descreva como se deu essa influência em políticas públicas (em 500 caracteres)"
 
@@ -462,8 +770,8 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" name="monitoramento_atv" id="avaliacao">
                         <option value=""></option>
-                        <option value="0">Nāo</option>
-                        <option value="1">Sim</option>
+                        <option value="nao">Nāo</option>
+                        <option value="sim">Sim</option>
                     </select>
                     <textarea type="text" id="inputAvaliacaoOng" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
                         "style='display: none' /></textarea>
@@ -510,8 +818,8 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="organizacao-comunicacao" name="comunicacao">
                         <option value=""></option>
-                        <option value="0">Nāo</option>
-                        <option value="1">Sim, qual?</option>
+                        <option value="nao">Nāo</option>
+                        <option value="sim,qual?">Sim, qual?</option>
                     </select>
                     <textarea type="text" id="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 "style='display: none' /></textarea>
@@ -558,8 +866,8 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="premiacao" name="premiacao">
                         <option value=""></option>
-                        <option value="0">Nāo</option>
-                        <option value="1">Sim, quais?</option> 
+                        <option value="nao">Nāo</option>
+                        <option value="sim,quais?">Sim, quais?</option> 
                         
                     </select>
                     <textarea type="text" id="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
@@ -616,257 +924,6 @@
                 </div> 
 
                 
-
-            <!--Tabela Temas-->
-
-        <h5>Áreas de atuação da organização: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>
-        <div class="form-group" style="border: 1px solid #ddd">
-        <div class="table-responsive">
-        <table id="form1" name="temas"class="table table-hover col-sm-12" >
-
-         <thead>
-            <tr>
-                <th></th>
-                <th>Temas</th>
-                <th>Descriçāo</th>
-              
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td><input type="checkbox" name="temas" class="no-margin" onclick="verificar()"></td>
-                <td>Arte e Cultura.</td>
-                <td>Promoção do acesso de mulheres à cultura e/ou incentivo à produção das várias expressões artísticas.</td>
-                 
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Ciência e Tecnologia.</td>
-                <td>Promoção do acesso a linguagens, equipamentos e/ou à produção de ciência e tecnologia por mulheres.</td>
-               
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td> Democracia e Participação Política.</td>
-                <td>Ações de incentivo à participação de mulheres na vida política e democrática institucional (partidos, conselhos, órgãos e instâncias dos poderes executivo, legislativo e judiciário).</td>
-            </tr>
-
-            <tr>
-                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Educação e Formação.</td>
-                <td>Oferta de educação formal (escolar ou acadêmica), incentivo à escolaridade; formação de atores sociais, ações de educação popular e informal.</td>
-              
-            </tr>
-
-            <tr>
-                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Empreendedorismo feminino e autonomia econômica.</td>
-                <td>Ações de incentivo ao empreendedorismo feminino e à autonomia econômica, por meio de capacitação e/ou financiamento, tais como capacitações, cooperativismo, microcrédito, etc.</td>
-            </tr>
-
-            <tr>
-                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Enfrentamento à Violência.</td>
-                <td>Trabalho de enfrentamento às mais variadas formas de violência, destinado a mulheres e homens.</td>
-              
-
-            <tr>
-                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Equidade e Condições de Trabalho.</td>
-                <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas 
-possibilidades de desenvolvimento profissional e equiparação salarial.</td>    
-            </tr>
-
-            <tr>
-                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Esportes.</td>
-                <td>Oferta, promoção e incentivo à realização de práticas esportivas por meninas e mulheres, sobretudo em modalidades tradicionalmente dominadas por homens.</td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Indígenas.</td>
-                <td>Ações destinadas à valorização das mulheres indígenas e ao enfrentamento de seus problemas específicos.</td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>LGBTT (Lésbicas, Gays, Bissexuais, Travestis, Transexuais e Transgêneros).</td>
-                <td>Projetos que atuam pela valorização e afirmação de pessoas LGBTT e combatem a violência e a discriminação contra esses públicos.</td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Masculinidades.</td>
-                <td>Ações voltadas para questões relativas à revisão do conceito hegemônico de masculinidade, a partir da perspectiva das relações de gênero.</td>
-            </tr>
-            <tr>
-                 <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Meio Ambiente,Segurança Alimentar e Agricultura.</td>
-                <td>Trabalhos que relacionam questões de gênero, feminismo e meio ambiente. 
-Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis e ambientalmente sustentáveis.</td>
-            </tr>
-
-            <tr>
-                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Mídia e Comunicação.</td>
-                <td>Promoção do acesso de mulheres aos meios de comunicação pelo domínio de técnicas, equipamentos e linguagens; monitoramento da presença da mulher nas mídias e da cobertura de temas sobre as questões das mulheres.</td>
-           </tr>
-
-            <tr>
-                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Moradia.</td>
-                <td>Ações que visam contribuir para o direito das mulheres à moradia e desenvolvimento de habilidades para a construção ou reformas de casas.</td>
-           </tr>
-
-           <tr>
-                <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Negritude.</td>
-                <td>Ações de valorização da estética e da identidade das mulheres negras e de combate ao racismo.</td>
-           </tr>
-
-           <tr> <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Paz e Segurança pública.</td>
-                <td>Projetos que tratam da interface entre gênero e sistema de segurança pública, sobretudo questões da violência armada.</td>
-           </tr>
-
-           <tr> <td><input type="checkbox" name="temas"class="no-margin" onclick="verificar()"></td>
-                <td>Saúde e Bem-estar.</td>
-                <td>Iniciativas que tratam de questões de autoestima, qualidade de vida, saúde e bem-estar das mulheres.</td>
-           </tr>
-
-            </tbody>
-        </table>
-    </div>
-  </div>
-
-           <script>
-            var CheckMaximo = 3;
-
-            function verificar() {
-            var Marcados = 1;
-            var objCheck = $("input[name='temas']");
-            //Percorrendo os checks para ver quantos foram selecionados:
-            for (var iLoop=0; iLoop<objCheck.length; iLoop++) {
-            //Se o número máximo de checkboxes ainda não tiver sido atingido, continua a verificação:
-                if (objCheck[iLoop].checked) {
-                    Marcados++;
-                }
-                
-                if (Marcados <= CheckMaximo) {
-                //Habilitando todos os checkboxes, pois o máximo ainda não foi alcançado.
-                for (var i=0; i<objCheck.length; i++) {
-                    objCheck[i].disabled = false;
-                }       
-                //Caso contrário, desabilitar o checkbox;
-                //Nesse caso, é necessário percorrer todas as opções novamente, desabilitando as não checadas;
-                
-                } else {
-                    for (var i=0; i<objCheck.length; i++) {
-                        if(objCheck[i].checked == false) {
-                            objCheck[i].disabled = true;
-                        }       
-                  }
-                }
-            }
-            }
-</script>
-
-  
-
-
-<h5> Clique e escolha até 3 Subtemas abaixo*</h5>
-<div class="form-group">
-<label for="subtemas" for="f1-google-plus">Subtemas</label>
-        <select class="f1-last-name form-control"id="subtemas" class="selectpicker" name="subtemas" data-style="default" multiple>
-            <option value="1" name="subtemas">Aborto</option>
-            <option value="2"name="subtemas">Dança</option>
-            <option value="3"name="subtemas">Inserção de mulheres na política</option>
-            <option value="4"name="subtemas">Paternidade</option>
-            <option value="5"name="subtemas">Tecnologia social e/ou alternativas</option>
-            <option value="6"name="subtemas">Desenvolvimento e Programação</option>
-            <option value="7"name="subtemas">Liderança</option>
-            <option value="8"name="subtemas">Pessoa com deficiência</option>
-            <option value="9"name="subtemas">Trabalho digno</option>
-            <option value="10"name="subtemas">Advocacy</option>
-            <option value="11"name="subtemas">Ecofeminismo</option>
-            <option value="12"name="subtemas">Povos tradicionais</option>
-            <option value="13"name="subtemas">Tráfico de pessoas</option>
-            <option value="14"name="subtemas">Agua e saneamento básico</option>
-            <option value="15"name="subtemas">Economia criativa</option>
-            <option value="16"name="subtemas">Marketing</option>
-            <option value="17"name="subtemas">Preconceito e discriminação</option>
-            <option value="18"name="subtemas">Tecnologia</option>
-            <option value="19"name="subtemas">Artes plásticas</option>
-            <option value="20"name="subtemas">Parto Humanizado</option>
-            <option value="21"name="subtemas">Cadeia produtiva responsável</option>
-            <option value="22"name="subtemas">Educomunicação</option>
-            <option value="23"name="subtemas">Microcrédito</option>
-            <option value="24"name="subtemas">Questão presidiária</option>
-            <option value="25"name="subtemas">Cinema</option>
-            <option value="26"name="subtemas">Envelhecimento</option>
-            <option value="27"name="subtemas">Mobilização</option>
-            <option value="28"name="subtemas">Reciclagem e logísitca diversa</option>
-            <option value="29"name="subtemas">Finanças sociais</option>
-            <option value="30"name="subtemas">Mudanças climáticas</option>
-            <option value="32"name="subtemas">Redes Sociais</option>
-            <option value="33"name="subtemas">Conselhos e outras instâncias</option>
-            <option value="34"name="subtemas">Fotografia</option>
-            <option value="35"name="subtemas">Mulheres no mundo da ciencias</option>
-            <option value="36"name="subtemas">Refugiados</option>
-            <option value="37"name="subtemas">Consumo</option>
-            <option value="38"name="subtemas">Incentivo à leitura</option>
-            <option value="39"name="subtemas">Obesidade infantil</option>
-            <option value="30"name="subtemas">Reparação-reconstrução</option>
-            <option value="41"name="subtemas">Cooperativismo</option>
-            <option value="42"name="subtemas">Inclusão Digital</option>
-            <option value="43"name="subtemas">Teatro</option>
-            <option value="43"name="subtemas">Sustentabilidade</option>
-
-        </select>
-
-     </div>
-
-
-
- <script>
-            var SelectMaximo = 3;
-
-            function verificarSelect() {
-            var Marcados = 1;
-            var objSelect = $("option[name='subtemas']");
-            //Percorrendo os checks para ver quantos foram selecionados:
-            for (var iLoop=0; iLoop<objSelect.length; iLoop++) {
-            //Se o número máximo de checkboxes ainda não tiver sido atingido, continua a verificação:
-                if (objSelect[iLoop].checked) {
-                    Marcados++;
-                }
-                
-                if (Marcados <= SelectMaximo) {
-                //Habilitando todos os checkboxes, pois o máximo ainda não foi alcançado.
-                for (var i=0; i<objSelect.length; i++) {
-                    objSelect[i].disabled = false;
-                }       
-                //Caso contrário, desabilitar o checkbox;
-                //Nesse caso, é necessário percorrer todas as opções novamente, desabilitando as não checadas;
-                
-                } else {
-                    for (var i=0; i<objSelect.length; i++) {
-                        if(objSelect[i].checked == false) {
-                            objSelect[i].disabled = true;
-                        }       
-                  }
-                }
-            }
-            }
-</script>
-
-<!--
-     <script type="text/javascript">
-    $(document).ready(function() {
-    $('#subtemas').multiselect();
-    });
- </script> --> 
-     
-
-
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
                     <button type="button" class="btn btn-next">Próximo</button>
@@ -875,8 +932,6 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 </fieldset>
 
            
-                 
-
             <!--Etapa 3 Formulário: Endereço/Organizaçāo -->
 
 
