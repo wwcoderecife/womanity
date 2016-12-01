@@ -320,7 +320,7 @@
                     </select>
 
 
-                    <h5>Quantas pessoas estão envolvidas neste trabalho?*</h5>
+                <h5>Quantas pessoas estão envolvidas neste trabalho?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas">
@@ -655,7 +655,7 @@
                            
                     </select>
 
-                    <h5>Nomeie e descreva as iniciativas da sua organização que trabalham com empoderamento das mulheres*?</h5>
+                 <h5>Nomeie e descreva as iniciativas da sua organização que trabalham com empoderamento das mulheres*?</h5>
                  <h5>Iniciativa 1</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
@@ -918,6 +918,7 @@
 
 
             <fieldset>
+                <h5>Regiāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Região</label>
                     <select class="f1-last-name form-control" name="regiao" id="regiao">
@@ -929,6 +930,7 @@
                         <option value="sudeste">Sudeste</option>
                     </select> 
                 </div>
+                <h5>Estado*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Estado</label>
                     <select class="f1-last-name form-control" name="estado" id="estados">
@@ -936,6 +938,7 @@
                         
                     </select> 
                 </div>
+                <h5>Cidade*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cidade</label>
                     <select class="f1-last-name form-control" name="cidade" id="cidades"> 
@@ -943,22 +946,27 @@
                     </select> 
                 </div>
 
+                <h5>Bairro*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Bairro</label>
                 <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control">
                 </div>
+                <h5>Rua*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-facebook">Rua</label>
                     <input type="text" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control">
                 </div>
+                <h5>Número*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número</label>
                     <input type="text" name="numero" placeholder="Número...*" class="f1-last-name form-control">
                 </div>
+                <h5>Complemento</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Complemento</label>
                     <input type="text" name="complemento" placeholder="Complemento..." class="f1-last-name form-control">
                 </div>
+                 <h5>Cep</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep</label>
                     <input type="text" name="cep" id="inputCep" placeholder="Cep xx-xxx-xxx*" class="f1-last-name form-control cep">
@@ -1019,44 +1027,49 @@
             <fieldset>
                 <h4>Indique até três iniciativas que na sua opinião devem participar do processo de mapeamento:</h4>
                 <h5>Organizaçāo 1</h5>
+                 <h5>Nome</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
                     <input type="text" name="indica_nome_1" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
                 </div>
-
+                <h5>E-mail</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                <input type="email" name="indica_email_1" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
-                    
+                <input type="email" name="indica_email_1" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">     
                 </div>
-
+                <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
                 <input type="tel" name="indica_telefone_1" placeholder="Telefone (xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel3">
                 </div>
+                <h5>Nome</h5>
                 <h5>Organizaçāo 2</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
                 <input type="text" name="indica_nome_2" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
                 </div>
-
+                <h5>E-mail</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
                 <input type="email" name="indica_email_2" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">                    
                 </div>
+                <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
                     <input type="tel" name="indica_telefone_2" placeholder="Telefone (xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel4">
                 </div>
+                <h5>Nome</h5>
                 <h5>Organizaçāo 3</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
                 <input type="text" name="indica_nome_3" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
                 </div>
+                <h5>E-mail</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
                     <input type="email" name="indica_email_3" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
                 </div>
+                <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
                     <input type="tel" name="indica_telefone_3" placeholder="Telefone (xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel5">

@@ -3,9 +3,10 @@
 
             <script src="assets/js/bootstrap.min.js"></script>
             <!--<script src="assets/js/validator.min.js"></script>-->
-            <script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>
-            <script type="text/javascript"></script>
-
+            <!--<script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>-->
+             <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
+            
+<!--
             <script>
               jQuery(function($){
               $("#inputTel1").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
@@ -20,6 +21,17 @@
              
             });
             </script>
+         --> 
+
+          <script>
+        $(document).ready(function(){
+         $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
+         $('.phone_with_ddd').mask('(00) 0000-0000');
+         $('.phone_with_dddcel').mask('(00) 00000-0000');
+         $('.cep').mask('00000-000');
+         $('.money').mask('000.000.000.000.000,00', {reverse: true});
+        });
+        </script>  
 
 
 <div class="row form_inicial">
@@ -81,13 +93,13 @@
                 <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control" id="inputTel1">
+                    <input type="tel" name="telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1">
                     <div class="help-block with-errors"></div>
                 </div>
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="text" name="celular_1" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control" id="inputCel1">
+                    <input type="text" name="celular_1" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel1">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -115,12 +127,12 @@
                 <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="text" name="telefone_2" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control" id="inputTel2">
+                    <input type="text" name="telefone_2" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel2">
                 </div>
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="text" name="celular_2" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control" id="inputCel2">
+                    <input type="text" name="celular_2" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel2">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -172,7 +184,7 @@
                 <h5>Telefone da iniciativa*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Telefone</label>
-                    <input type="text" name="organizacao-telefone" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control" id="inputTel3">
+                    <input type="text" name="organizacao-telefone" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd" id="inputTel3">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -288,18 +300,18 @@
                  <h5>2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
-                    <input type="text" name="orcamento_2014" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2014">
+                    <input type="text" name="orcamento_2014" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2014">
                     <div class="help-block with-errors"></div>
                 </div>
                 <h5>2015</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2015</label>
-                    <input type="tex" name="orcamento_2015" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2015">
+                    <input type="tex" name="orcamento_2015" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2015">
                 </div>
                 <h5>2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
-                    <input type="tex" name="orcamento_2016" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="iniciativa_orcamento2016">
+                    <input type="tex" name="orcamento_2016" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2016">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -855,42 +867,47 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                         <option value="sudeste">Sudeste</option>
                     </select> 
                 </div>
-                 
+                 <h5>Estado*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Estado</label>
                     <select class="f1-last-name form-control" name="estado" id="estados">
                         <option value="escolha um estado"></option>
                     </select> 
                 </div>
+                <h5>Cidade*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cidade</label>
                     <select class="f1-last-name form-control" name="cidade" id="cidades"> 
                         <option value="escolha uma cidade"></option>
                     </select> 
                 </div>
-                
+                <h5>Bairro*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Bairro*</label>
                     <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control">
                         <div class="help-block with-errors"></div>
+                <h5>Rua*</h5>        
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-facebook">Rua*</label>
                     <input type="text" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control">
                         <div class="help-block with-errors"></div>
+                <h5>Número*</h5>        
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número*</label>
                     <input type="number" name="numero" placeholder="Número...*"class="f1-last-name form-control">
                         <div class="help-block with-errors"></div>
                 </div>
+                <h5>Complemento*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Complemento</label>
                     <input type="text" name="complemento" placeholder="Complemento..."class="f1-last-name form-control">
                 </div>
+                <h5>Cep*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep*</label>
-                    <input type="text" name="cep" id="inputCep"placeholder="xx-xxx-xxx*"class="f1-last-name form-control">
+                    <input type="text" name="cep" id="inputCep"placeholder="Cep xx-xxx-xxx*"class="f1-last-name form-control cep">
                     <div class="help-block with-errors"></div>
                 </div>              
                 <div class="f1-buttons">
@@ -948,47 +965,53 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
             <fieldset>
                 <h4>Indique até três iniciativas que na sua opinião devem participar do processo de mapeamento:</h4>
                 <h5>Iniciativa 1</h5>
+                <h5>Nome*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
                     <input type="text" name="indica_nome_1" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
                 </div>
-
+                <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
                     <input type="email" name="indica_email_1" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
                     
                 </div>
-
+                <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_1" placeholder="Telefone" class="f1-last-name form-control" id="inputTel4">
+                    <input type="tel" name="indica_telefone_1" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel4">
                 </div>
+                <h5>Nome*</h5>
                 <h5>Iniciativa 2</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
                     <input type="text" name="indica_nome_2" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
                 </div>
-
+                <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
                     <input type="text" name="indica_email_2" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">                    
                 </div>
+                 <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_2" placeholder="Telefone" class="f1-last-name form-control" id="inputTel5">
+                    <input type="tel" name="indica_telefone_2" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel5">
                 </div>
+                <h5>Nome*</h5>
                 <h5>Iniciativa 3</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
                     <input type="text" name="indica_nome_3" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
                 </div>
+                 <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
                     <input type="email" name="indica_email_3" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
                 </div>
+                 <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_3" placeholder="Telefone" class="f1-last-name form-control" id="inputTel6">
+                    <input type="tel" name="indica_telefone_3" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel6">
                 </div>
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
