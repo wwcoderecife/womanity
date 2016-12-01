@@ -150,19 +150,19 @@
                             {
                                 console.log(dropdownCnpj.selectedIndex);
                                 //pegando valor do select na variável dropdownCnpj
-                                var meuInput2 = document.getElementById('inputnomeong');
-                                var meuInput = document.getElementById('inputcnpj');
+                                //var meuInput2 = document.getElementById('inputnomeong');
+                                var meuInput = document.getElementById('inputcnpj''inputnomeong');
                                 
                                 if(dropdownCnpj.options[dropdownCnpj.selectedIndex].value === "sim") {
                                     //faz algo quando o valor selecionado for sim
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for sim, tem cnpj
-                                    meuInput2.style.display = 'block';
+                                    //meuInput2.style.display = 'block';
                                     meuInput.style.display = 'block';
                                     
                                 }else{
                                     meuInput.style.display = 'none';
-                                    meuInput2.style.display = 'none';
+                                    //meuInput2.style.display = 'none';
                                 }
                             }
                             
