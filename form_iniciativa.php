@@ -134,14 +134,15 @@
               
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="organizacao-pai"id="organizacao-cnpj">
+                    <select class="f1-last-name form-control" name="organizacao-pai"id="organizacao-cnpj" required>
                         <option value=""></option>
                         <option value="sim">sim</option>
                         <option value="nao">nao</option>
                     </select> 
                 <!--<div class="iniciativapj">-->      
                 <!--<input type="text" id="inputnomeong" name="inputnomeong" class="f1-last-name form-control" placeholder="nome da organizaçāo" style='diplay: none'/>-->
-                <input type="text" id="inputcnpj" maxlength="18" name="inputcnpj" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" style='display: none'/>
+                <input type="text" id="inputcnpj" maxlength="18" name="inputcnpj" required class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" style='display: none'/ >
+
                 <!--</div>-->
                     <script>
 
@@ -153,7 +154,7 @@
                                 //pegando valor do select na variável dropdownCnpj
                                 //var meuInput = $("input.iniciativapj[type=text]");
                                 //var meuInput = $(".iniciativapj:input[name=inputnomeong,inputcnpj]");
-                                
+
                                 var meuInput = document.getElementById('inputcnpj');
                                 if(dropdownCnpj.options[dropdownCnpj.selectedIndex].value === "sim") {
                                     //faz algo quando o valor selecionado for sim
@@ -200,7 +201,7 @@
                 <h5>A sua iniciativa está localizada na…*</h5>
                  <div class="form-group">
                     <label class="radio-inline">
-                       <input type="radio" name="zona" value="rural" class="form-control-radio">Zona Rural
+                       <input type="radio" name="zona" value="rural" class="form-control-radio" >Zona Rural
                     </label>
 
                     <label class="radio-inline">
@@ -211,7 +212,7 @@
                 <h5>Nome da Iniciativa*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Nome</label>
-                    <input type="text" name="nome" maxlength="50" class="f1-last-name form-control">
+                    <input type="text" name="nome" maxlength="50" class="f1-last-name form-control" required>
                 </div>
 
 
@@ -225,14 +226,14 @@
                 <h5>Telefone da iniciativa*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Telefone</label>
-                    <input type="text" name="organizacao-telefone" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd" id="inputTel3">
+                    <input type="text" name="organizacao-telefone" required placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd" id="inputTel3">
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <h5>E-mail da iniciativa*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Email</label>
-                    <input type="email" name="email"class="f1-last-name form-control">
+                    <input type="email" name="email" required class="f1-last-name form-control">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -254,7 +255,7 @@
                 <h5>De qual Natureza?</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="natureza" name="tipo">           
+                    <select class="f1-last-name form-control" id="natureza" name="tipo" required>           
                         <option value=""></option>
                         <option value="academica">Acadêmica</option>
                         <option value="coletivo">Coletivo</option>
@@ -306,7 +307,7 @@
                 <h5> Quando sua iniciativa começou as atividades?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="year" name="anoatividade">
+                    <select class="f1-last-name form-control" id="year" name="anoatividade" required>
                     <div class="help-block with-errors"></div>
                         <script>
                            var myDate = new Date();
@@ -323,7 +324,7 @@
                <h5>Quantas pessoas estão envolvidas neste trabalho?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas" >
+                    <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas" required>
                      <div class="help-block with-errors"></div>
                         <option value=""></option>
                         <option value="1-5">1-5</option>
@@ -341,18 +342,18 @@
                  <h5>2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
-                    <input type="text" name="orcamento_2014" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2014">
+                    <input type="text" name="orcamento_2014" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2014"required data-error = "Campo está em branco, favor preencher." >
                     <div class="help-block with-errors"></div>
                 </div>
                 <h5>2015</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2015</label>
-                    <input type="tex" name="orcamento_2015" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2015">
+                    <input type="tex" name="orcamento_2015" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2015"required data-error = "Campo está em branco, favor preencher.">
                 </div>
                 <h5>2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
-                    <input type="tex" name="orcamento_2016" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2016">
+                    <input type="tex" name="orcamento_2016" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2016"required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -544,7 +545,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 <h5> Clique e escolha até 3 Subtemas abaixo*</h5>
 <div class="form-group">
 <!--<label for="subtemas" for="f1-google-plus">Subtemas</label>-->
-        <select class="f1-last-name form-control" id="subtemas" name="subtemas[ ]" multiple>
+        <select class="f1-last-name form-control" id="subtemas" name="subtemas[ ]" multiple required>
             <option value="Aborto">Aborto</option>
             <option value="Dança">Dança</option>
             <option value="Inserção de mulheres na política">Inserção de mulheres na política</option>
@@ -615,7 +616,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
                     <textarea name="sobre" maxlength="500" placeholder="Fale sobre a sua iniciativa...." 
-                    class="f1-about-yourself form-control" id="sobre" ></textarea>
+                    class="f1-about-yourself form-control" id="sobre" required ></textarea>
                     <div class="help-block with-errors">
                 </div>
 
@@ -640,7 +641,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="publico_alvo" name="publico_alvo" >
+                    <select class="f1-last-name form-control" id="publico_alvo" name="publico_alvo" required >
                     <div class="help-block with-errors"></div> 
                         <option value=""></option>
                         <option value="Empresas">Empresas</option>
@@ -657,7 +658,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                     <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
                     <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="organizacao_estado[ ]" multiple >
+                    <select class="f1-last-name form-control" name="organizacao_estado[ ]" multiple required>
                         <div class="help-block with-errors"></div>
                         <option value="Acre">Acre</option>
                         <option value="Alagoas">Alagoas</option>
@@ -724,7 +725,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 <h5>Você realiza monitoramento e avaliação sistematizada das atividades desta iniciativa?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="monitoramento_atv" id="avaliacao">
+                    <select class="f1-last-name form-control" name="monitoramento_atv" id="avaliacao" required>
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim</option>
@@ -772,7 +773,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="iniciativa-comunicacao" >
+                    <select class="f1-last-name form-control" id="iniciativa-comunicacao" required>
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
@@ -819,7 +820,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 <h5>A sua Iniciativa recebeu premiações, certificações etc.?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="premiacao" name="premiacao"name="comunicacao">
+                    <select class="f1-last-name form-control" id="premiacao" name="premiacao"name="comunicacao"required>
                         <div class="help-block with-errors"></div>
                         <option value=""></option>
                         <option value="0">Nāo</option>
@@ -898,7 +899,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 <h5>Regiāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="regiao" id="regiao">
+                    <select class="f1-last-name form-control" name="regiao" id="regiao" required>
                         <div class="help-block with-errors"></div>
                         <option value="escolha uma regiāo"></option>
                         <option value="norte">Norte</option>
@@ -911,44 +912,44 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                  <h5>Estado*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Estado</label>
-                    <select class="f1-last-name form-control" name="estado" id="estados">
+                    <select class="f1-last-name form-control" name="estado" id="estados" required>
                         <option value="escolha um estado"></option>
                     </select> 
                 </div>
                 <h5>Cidade*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cidade</label>
-                    <select class="f1-last-name form-control" name="cidade" id="cidades"> 
+                    <select class="f1-last-name form-control" name="cidade" id="cidades"required> 
                         <option value="escolha uma cidade"></option>
                     </select> 
                 </div>
                 <h5>Bairro*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Bairro*</label>
-                    <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control">
+                    <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control"required>
                         <div class="help-block with-errors"></div>
                 <h5>Rua*</h5>        
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-facebook">Rua*</label>
-                    <input type="text" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control">
+                    <input type="text" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control"required>
                         <div class="help-block with-errors"></div>
                 <h5>Número*</h5>        
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número*</label>
-                    <input type="number" name="numero" placeholder="Número...*"class="f1-last-name form-control">
+                    <input type="number" name="numero" placeholder="Número...*"class="f1-last-name form-control" required>
                         <div class="help-block with-errors"></div>
                 </div>
                 <h5>Complemento*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Complemento</label>
-                    <input type="text" name="complemento" placeholder="Complemento..."class="f1-last-name form-control">
+                    <input type="text" name="complemento" placeholder="Complemento..."class="f1-last-name form-control"required>
                 </div>
                 <h5>Cep*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep*</label>
-                    <input type="text" name="cep" id="inputCep"placeholder="Cep xx-xxx-xxx*"class="f1-last-name form-control cep">
+                    <input type="text" name="cep" id="inputCep"placeholder="Cep xx-xxx-xxx*"class="f1-last-name form-control cep" required>
                     <div class="help-block with-errors"></div>
                 </div>              
                 <div class="f1-buttons">
@@ -1063,6 +1064,22 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                     <button type="button" class="btn btn-previous">Anterior</button>
                     <button type="submit" class="btn btn-submit">Enviar</button>
                 </div>
+
+                <script>
+                // Select every button with type submit under a form with data-toggle validator
+                    $('form[data-toggle="validator"] button[type="submit"]').click(function(e) {
+                        // Select the form that has this button
+                        var form = $(this).closest('form');
+                        // Verify if the form is validated
+                        if (!form.data("bs.validator").validate().hasErrors()) {
+                            e.preventDefault();
+                            // Here go the trick! Fire a custom event to the form
+                            form.trigger('submitted');
+                        } else  {
+                            console.log('Form still not valid');
+                        }
+                    });
+                    </script>
             </fieldset> 
          </form>
      </div>
