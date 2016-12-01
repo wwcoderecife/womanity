@@ -150,8 +150,9 @@
                             {
                                 console.log(dropdownCnpj.selectedIndex);
                                 //pegando valor do select na variável dropdownCnpj
-                                var meuInput = document.getElementById('inputcnpj');
                                 var meuInput2 = document.getElementById('inputnomeong');
+                                var meuInput = document.getElementById('inputcnpj');
+                                
                                 if(dropdownCnpj.options[dropdownCnpj.selectedIndex].value === "sim") {
                                     //faz algo quando o valor selecionado for sim
                                     console.log('Selecionou o valor');
