@@ -26,11 +26,24 @@ class Login extends Conexao {
 		$logar->bindValue(2, $this->getSenha());
 		$logar->execute();
 		if ($logar->rowCount() == 1):
+			
 			$dados = $logar->fetch(PDO::FETCH_OBJ);
 			$_SESSION['usuario_id'] = $dados->id;
 			$_SESSION['usuario_email'] = $dados->email;
 			$_SESSION['usuario_tipo'] = $dados->tipo;
 			$_SESSION['logado'] = true;
+
+			//verifica se o usuário já realizou algum cadastro
+			$verifica = $pdo->prepare("SELECT * FROM organizacoes WHERE usuario_id = ?");
+			$verifica->bindValue(1, $dados->id);
+			$verifica->execute();
+
+			if ($verifica->rowCount() >= 1):
+				$_SESSION['cadastro'] = true;
+			else:
+				$_SESSION['cadastro'] = false;
+			endif;
+			
 			return true;
 		else:
 			return false;
