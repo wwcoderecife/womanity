@@ -126,7 +126,9 @@
                </div>
             </fieldset><!--Dados Pessoais-->
 
+            <!--Iniciativa-->
 
+        <fieldset>
            <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
                 <h6><em>se sim, digite o nome da organizaçāo e cnpj no campo abaixo</em></h5>
               
@@ -174,7 +176,6 @@
 
                     </script>
                 </div>
-
 
 
             <!--Etapa2  Formulário: Iniciativa -->
@@ -885,7 +886,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                     <button type="button" class="btn btn-previous">Anterior</button>
                     <button type="button" class="btn btn-next">Próximo</button>
                 </div> 
-  </fieldset> 
+</fieldset> 
 
              <!--Etapa 3 Formulário: Endereço/Iniciativa -->
 
