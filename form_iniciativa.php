@@ -152,7 +152,8 @@
                                 console.log(dropdownCnpj.selectedIndex);
                                 //pegando valor do select na variável dropdownCnpj
                                 //var meuInput = $("input.iniciativapj[type=text]");
-                                var meuInput = $(".iniciativapj");
+                               
+                                var meuInput = $(".iniciativapj:input[name=inputnomeong,inputcnpj]");
                                 //var meuInput = document.getElementById('inputcnpj');
                                 if(dropdownCnpj.options[dropdownCnpj.selectedIndex].value === "sim") {
                                     //faz algo quando o valor selecionado for sim
