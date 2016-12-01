@@ -127,8 +127,58 @@
             </fieldset><!--Dados Pessoais-->
 
 
-            <!--Etapa2  Formulário: Iniciativa -->
+           <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
+                <h6><em>se sim, digite o nome da organizaçāo e cnpj no campo abaixo</em></h5>
+              
+                 <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" name="organizacao-pai"id="organizacao-cnpj">
+                        <option value=""></option>
+                        <option value="sim">sim</option>
+                        <option value="nao">nao</option>
+                    </select>    
+                <input type="text" id="inputnomeong" name="inputnomeong" class="f1-last-name form-control" placeholder="nome da organizaçāo" style='diplay: none'/>
+                <input type="text" id="inputcnpj" maxlength="18" name="inputcnpj" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" style='display: none'/>
+                
+                    <script>
 
+                        var dropdownCnpj = document.getElementById('organizacao-cnpj');
+                            
+                            function onDropdownChangedCNPJ()
+                            {
+                                console.log(dropdownCnpj.selectedIndex);
+                                //pegando valor do select na variável dropdownCnpj
+                                var meuInput = document.getElementById('inputcnpj');
+                                var meuInput2 = document.getElementById('inputnomeong');
+                                if(dropdownCnpj.options[dropdownCnpj.selectedIndex].value === "sim") {
+                                    //faz algo quando o valor selecionado for sim
+                                    console.log('Selecionou o valor');
+                                    //mostra o input quando o valor selecionado for sim, tem cnpj
+                                    
+                                    meuInput.style.display = 'block';
+                                    meuInput2.style.display = 'block';
+                                }else{
+                                    meuInput.style.display = 'none';
+                                }
+                            }
+                            
+                            if (dropdownCnpj.addEventListener)
+                            {
+                                dropdownCnpj.addEventListener('change', onDropdownChangedCNPJ, false);
+                            }
+                            else
+                            {
+                                // suporte para o IE
+                                dropdownCnpj.attachEvent('onchange', onDropdownChangedCNPJ, false);
+                            }
+
+                    </script>
+                </div>
+
+
+
+            <!--Etapa2  Formulário: Iniciativa -->
+            <!--
             <fieldset>
                 <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
                <div class="form-group">
@@ -140,6 +190,7 @@
                         <input type="radio" name="organizacao-pai" value="nao" class="form-control-radio">Nāo
                     </label>
                 </div>
+              -->  
 
                 <h5>A sua iniciativa está localizada na…*</h5>
                  <div class="form-group">
