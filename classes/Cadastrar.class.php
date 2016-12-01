@@ -46,7 +46,7 @@ class Cadastrar extends Conexao {
 
     public function inserir_novo(){
         // instancia classe com as operaçoes crud, passando o nome da tabela como parametro
-        $crud = new Crud('usuarios');  
+        //$crud = new Crud('usuarios');  
 
         $pdo = parent::getDB();
 
@@ -55,10 +55,19 @@ class Cadastrar extends Conexao {
         $consultaNome->execute();
 
         if ($consultaNome->rowCount() == 0):
-           $crud->inserir("email,password,tipo, carta_principios,politica_privacidade",
-                          "'$this->email', '$this->senha', '$this->tipo', 
-                          '$this->carta_principios', '$this->politica_privacidade'"); 
-
+           //$crud->inserir("email,password,tipo, carta_principios,politica_privacidade",
+           //               "'$this->email', '$this->senha', '$this->tipo', 
+           //               '$this->carta_principios', '$this->politica_privacidade'"); 
+            
+            $inserir_novo = $pdo->prepare("insert into usuarios (email,password,tipo, carta_principios,politica_privacidade)
+                                    values (?, ?, ?, ?, ?)");
+            $inserir_novo->bindValue(1, $this->getEmail());
+            $inserir_novo->bindValue(2, $this->getSenha());
+            $inserir_novo->bindValue(3, $this->getTipo());
+            $inserir_novo->bindValue(4, $this->getCartaPrincipios());
+            $inserir_novo->bindValue(5, $this->getPoliticaPrivacidade());
+            $inserir_novo->execute();
+        
             $l = new Login;
             $l->setLogin($this->email);
             $l->setSenha($this->senha);
