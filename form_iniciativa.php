@@ -139,7 +139,7 @@
                         <option value="sim">sim</option>
                         <option value="nao">nao</option>
                     </select> 
-                <div class="teste">      
+                <div class="iniciativapj">      
                 <input type="text" id="inputnomeong" name="inputnomeong" class="f1-last-name form-control" placeholder="nome da organizaçāo" style='diplay: none'/>
                 <input type="text" id="inputcnpj" maxlength="18" name="inputcnpj" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" style='display: none'/>
                 </div>
@@ -151,22 +151,18 @@
                             {
                                 console.log(dropdownCnpj.selectedIndex);
                                 //pegando valor do select na variável dropdownCnpj
-                                //var meuInput2 = document.getElementById('inputnomeong');
-
-                                var meuInput =document.getElementsByClassName("teste");
-                       
+                                var meuInput = $(".iniciativapj");
                                 //var meuInput = document.getElementById('inputcnpj');
-                                
                                 if(dropdownCnpj.options[dropdownCnpj.selectedIndex].value === "sim") {
                                     //faz algo quando o valor selecionado for sim
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for sim, tem cnpj
-                                    //meuInput2.style.display = 'block';
+                
                                     meuInput.style.display = 'block';
                                     
                                 }else{
                                     meuInput.style.display = 'none';
-                                    //meuInput2.style.display = 'none';
+                                  
                                 }
                             }
                             
