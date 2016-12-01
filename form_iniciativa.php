@@ -2,26 +2,11 @@
          ================================================== -->
 
             <script src="assets/js/bootstrap.min.js"></script>
-            <!--<script src="assets/js/validator.min.js"></script>-->
-            <!--<script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>-->
+            <script src="assets/js/validator.min.js"></script>
+          
              <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
             
-<!--
-            <script>
-              jQuery(function($){
-              $("#inputTel1").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
-              $("#inputCel1").mask("(99) 99999-9999",{placeholder:"(xx) xxxxx-xxxx "});
-              $("#inputTel2").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
-              $("#inputCel2").mask("(99) 99999-9999",{placeholder:"(xx) xxxxx-xxxx "});
-              $("#inputTel3").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
-              $("#inputCep").mask("99-999-999",{placeholder:"xx-xxx-xxx"});
-              $("#inputTel4").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
-              $("#inputTel5").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
-              $("#inputTel6").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
-             
-            });
-            </script>
-         --> 
+
 
           <script>
         $(document).ready(function(){
@@ -36,7 +21,7 @@
 
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-    	 <form role="form" action="classes/prepare_cadastro.php" method="post" class="f1 form-ong">
+    	 <form role="form" data toggle="validator"action="classes/prepare_cadastro.php" method="post" class="f1 form-ong">
 
     		<h3>Cadastro UNA Ecossistema<br>Iniciativa</h3>
     		<p>Preencha os campos obrigatórios*</p>
@@ -74,32 +59,32 @@
                 <h5>Nome*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="nome1" placeholder="responsável pelo preenchimento do cadastro" class="f1-last-name form-control" id="inputNome1" >
+                    <input type="text" name="nome1" placeholder="responsável pelo preenchimento do cadastro" class="f1-last-name form-control" id="inputNome1" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
                 <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="cargo_1" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="text" name="cargo_1" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name"  required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="text" name="email_1"  value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="email" name="email_1"  value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name" required data-error = "Campo está em branco, favor preencher.">
                     
                 </div>
                 <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1">
+                    <input type="tel" name="telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1" required data-error = "Por favor, preencha corretamente o campo (xx) xxxx-xxxx.">
                     <div class="help-block with-errors"></div>
                 </div>
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="text" name="celular_1" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel1">
+                    <input type="tel" name="celular_1" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel1" required data-error = "Por favor, preencha corretamente o campo (xx) xxxxx-xxxx.">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -107,19 +92,19 @@
                 <h5>Nome*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="nome2" placeholder="responsável pela organização ou suplente" class="f1-last-name form-control" id="inputNome2" >
+                    <input type="text" name="nome2" placeholder="responsável pela organização ou suplente" class="f1-last-name form-control" id="inputNome2" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
                 <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="cargo_2" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="text" name="cargo_2" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
                  <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="text" name="email_2" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="email" name="email_2" placeholder="email@email.com" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                     
                 </div>
@@ -127,12 +112,12 @@
                 <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="text" name="telefone_2" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel2">
+                    <input type="tel" name="telefone_2" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel2"required data-error = "Por favor, preencha corretamente o campo (xx) xxxx-xxxx.">
                 </div>
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="text" name="celular_2" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel2">
+                    <input type="tel" name="celular_2" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel2"required data-error = "Por favor, preencha corretamente o campo (xx) xxxxx-xxxx.">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -965,6 +950,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
             <fieldset>
                 <h4>Indique até três iniciativas que na sua opinião devem participar do processo de mapeamento:</h4>
                 <h5>Iniciativa 1</h5>
+
                 <h5>Nome*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
@@ -979,10 +965,12 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_1" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel4">
+                    <input type="tel" name="indica_telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel4">
                 </div>
-                <h5>Nome*</h5>
+               
                 <h5>Iniciativa 2</h5>
+
+                 <h5>Nome*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
                     <input type="text" name="indica_nome_2" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
@@ -990,15 +978,17 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="text" name="indica_email_2" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">                    
+                    <input type="text" name="indica_email_2" placeholder="email@email.com" class="f1-last-name form-control" id="f1-last-name">                    
                 </div>
                  <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_2" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel5">
+                    <input type="tel" name="indica_telefone_2" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel5">
                 </div>
-                <h5>Nome*</h5>
+              
                 <h5>Iniciativa 3</h5>
+
+                  <h5>Nome*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
                     <input type="text" name="indica_nome_3" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
@@ -1006,12 +996,12 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                  <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="indica_email_3" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="email" name="indica_email_3" placeholder="email@email.com" class="f1-last-name form-control" id="f1-last-name">
                 </div>
                  <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_3" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel6">
+                    <input type="tel" name="indica_telefone_3" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel6">
                 </div>
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
