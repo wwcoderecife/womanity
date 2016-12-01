@@ -157,11 +157,12 @@
                                     //faz algo quando o valor selecionado for sim
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for sim, tem cnpj
-                                    
-                                    meuInput.style.display = 'block';
                                     meuInput2.style.display = 'block';
+                                    meuInput.style.display = 'block';
+                                    
                                 }else{
                                     meuInput.style.display = 'none';
+                                    meuInput2.style.display = 'none';
                                 }
                             }
                             
