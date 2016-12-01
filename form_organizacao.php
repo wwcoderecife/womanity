@@ -43,6 +43,10 @@
         <script>
         $(document).ready(function(){
          $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
+         $('.phone_with_ddd').mask('(00) 0000-0000');
+         $('.phone_with_dddcel').mask('(00) 00000-0000');
+         $('.cep').mask('00000-000');
+         $('.money').mask('000.000.000.000.000,00', {reverse: true});
         });
         </script>
     
@@ -111,14 +115,14 @@
                  <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="telefone_1" placeholder="Telefone" class="f1-last-name form-control" id="inputTel1" >
+                    <input type="tel" name="telefone_1" placeholder="Telefone (xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1" >
                     <div class="help-block with-errors"></div>
                 </div>
 
                  <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_1" placeholder="Celular" class="f1-last-name form-control" id="inputCel1">
+                    <input type="tel" name="celular_1" placeholder="Celular (xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel1">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -145,14 +149,14 @@
                  <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="telefone_2" placeholder="Telefone" class="f1-last-name form-control" id="inputTel2">
+                    <input type="tel" name="telefone_2" placeholder="Telefone (xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel2">
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_2" placeholder="Celular" class="f1-last-name form-control" id="inputCel2">
+                    <input type="tel" name="celular_2" placeholder="Celular (xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel2">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -336,18 +340,18 @@
                  <h5>2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
-                    <input type="text" name="orcamento_2014" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2014">
+                    <input type="text" name="orcamento_2014" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2014">
 
                 </div>
                 <h5>2015</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2015</label>
-                    <input type="text" name="orcamento_2015"  placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2015" >
+                    <input type="text" name="orcamento_2015"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2015" >
                 </div>
                 <h5>2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
-                    <input type="text" name="orcamento_2016"  placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2016">
+                    <input type="text" name="orcamento_2016"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2016">
                 </div>
 
                 <h5>Sua Organizaçāo recebe recursos financeiros?</h5>
@@ -957,7 +961,7 @@
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep</label>
-                    <input type="text" name="cep" id="inputCep" placeholder="xx-xxx-xxx*" class="f1-last-name form-control">
+                    <input type="text" name="cep" id="inputCep" placeholder="xx-xxx-xxx*" class="f1-last-name form-control cep">
                 </div> 
 
                <div class="f1-buttons">
@@ -1028,7 +1032,7 @@
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                <input type="tel" name="indica_telefone_1" placeholder="Telefone" class="f1-last-name form-control" id="inputTel3">
+                <input type="tel" name="indica_telefone_1" placeholder="Telefone (xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel3">
                 </div>
                 <h5>Organizaçāo 2</h5>
                 <div class="form-group">
@@ -1042,7 +1046,7 @@
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_2" placeholder="Telefone" class="f1-last-name form-control" id="inputTel4">
+                    <input type="tel" name="indica_telefone_2" placeholder="Telefone (xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel4">
                 </div>
                 <h5>Organizaçāo 3</h5>
                 <div class="form-group">
@@ -1055,7 +1059,7 @@
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_3" placeholder="Telefone" class="f1-last-name form-control" id="inputTel5">
+                    <input type="tel" name="indica_telefone_3" placeholder="Telefone (xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel5">
                 </div>
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
