@@ -21,7 +21,7 @@
 
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-    	 <form role="form" data toggle="validator"action="classes/prepare_cadastro.php" method="post" class="f1 form-ong">
+    	 <form role="form" data-toggle="validator"action="classes/prepare_cadastro.php" method="post" class="f1 form-ong">
 
     		<h3>Cadastro UNA Ecossistema<br>Iniciativa</h3>
     		<p>Preencha os campos obrigatórios*</p>
@@ -73,7 +73,7 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
                     <input type="email" name="email_1"  value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name" required data-error = "Campo está em branco, favor preencher.">
-                    
+                    <div class="help-block with-errors"></div>
                 </div>
                 <h5>Telefone</h5>
                 <div class="form-group">

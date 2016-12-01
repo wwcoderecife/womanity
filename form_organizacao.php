@@ -2,7 +2,7 @@
          ================================================== -->
 
             <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-            <!--<script src="assets/js/validator.min.js"></script>-->
+            <script src="assets/js/validator.min.js"></script>
             <!--<script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>-->
             <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
             <!--<script src="https://github.com/igorescobar/jQuery-Mask-Plugin/blob/master/dist/jquery.mask.min.js"></script>
@@ -54,7 +54,7 @@
 
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-        <form role="form" action="classes/prepare_cadastro.php" method="post" class="f1 form-ong">
+        <form role="form" data-toggle="validator" action="classes/prepare_cadastro.php" method="post" class="f1 form-ong">
 
             <h3>Cadastro UNA Ecossistema<br>Organizaçāo</h3>
             <p>Preencha os campos obrigatórios *</p>
@@ -95,7 +95,7 @@
                 <h5>Nome*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="nome1" placeholder="responsável pelo preenchimento do cadastro" class="f1-last-name form-control" id="inputNome1" >
+                    <input type="text" name="nome1" placeholder="responsável pelo preenchimento do cadastro" class="f1-last-name form-control" id="inputNome1" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
                  <h5>Cargo*</h5>
@@ -115,14 +115,16 @@
                  <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="telefone_1" placeholder="Telefone (xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1" >
+                    <input type="tel" name="telefone_1" placeholder="Telefone (xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1" required data-error = "Por favor, preencha corretamente o campo (xx) xxxx-xxxx.">
+ 
                     <div class="help-block with-errors"></div>
                 </div>
 
                  <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_1" placeholder="Celular (xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel1">
+                    <input type="tel" name="celular_1" placeholder="Celular (xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel1"required data-error = "Por favor, preencha corretamente o campo (xx) xxxxx-xxxx.">
+ 
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -130,33 +132,33 @@
                  <h5>Nome*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="nome2" placeholder="responsável pela organização ou suplente" class="f1-last-name form-control" id="inputNome2" >
+                    <input type="text" name="nome2" placeholder="responsável pela organização ou suplente" class="f1-last-name form-control" id="inputNome2" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
                   <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="cargo_2" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo2">
+                    <input type="text" name="cargo_2" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo2" required data-error = "Campo está em branco, favor preencher.">
                 </div>
 
                 <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="email_2" placeholder="E-mail" class="f1-last-name form-control" id="email2">
+                    <input type="email" name="email_2" placeholder="E-mail" class="f1-last-name form-control" id="email2" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>                    
                 </div>
 
                  <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="telefone_2" placeholder="Telefone (xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel2">
+                    <input type="tel" name="telefone_2" placeholder="Telefone (xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel2"required data-error = "Por favor, preencha corretamente o campo (xx) xxxx-xxxx.">
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_2" placeholder="Celular (xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel2">
+                    <input type="tel" name="celular_2" placeholder="Celular (xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel2"required data-error = "Por favor, preencha corretamente o campo (xx) xxxxx-xxxx.">
                     <div class="help-block with-errors"></div>
                 </div>
 
