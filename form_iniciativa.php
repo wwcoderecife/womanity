@@ -284,7 +284,7 @@
                         <option value="1001+">1001+</option>     
                     </select>
 
-               <h5>Qual foi seu orçamento da sua iniciativa?*</h5>
+               <h5>Qual foi o orçamento da sua iniciativa?*</h5>
                  <h5>2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
@@ -440,7 +440,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
            </tr>
 
            <tr> <td><input type="checkbox" name="temas[ ]"class="no-margin" onclick="verificar()"></td>
-                <td>Paz e Segurança pública.</td>
+                <td>Paz e Segurança Pública.</td>
                 <td>Projetos que tratam da interface entre gênero e sistema de segurança pública, sobretudo questões da violência armada.</td>
            </tr>
 
@@ -561,7 +561,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
            <h5>O que faz sua iniciativa?* (até 500 caracteres).</h5>                                  
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
-                    <textarea name="sobre" maxlength="500" placeholder="Fale sobre a sua organizaçāo...." 
+                    <textarea name="sobre" maxlength="500" placeholder="Fale sobre a sua iniciativa...." 
                     class="f1-about-yourself form-control" id="sobre" ></textarea>
                     <div class="help-block with-errors">
                 </div>
@@ -660,7 +660,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                         <input type="checkbox" name="politicas_publicas_lista[]" value="nacional" class="form-control-radio">
                         <div class="help-block with-errors"></div>nacional 
                     </label>
-                    <textarea name="organizaçāo_politica_publica" placeholder="Descreva como se deu essa influência em políticas públicas (em 500 caracteres)"
+                    <textarea name="organizaçāo_politica_publica" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
                     class="f1-about-yourself form-control" id="sobre_iniciativa">
                    </textarea>
                 </div>
@@ -763,7 +763,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 
       <!-- 28 Iniciativa-->
 
-<h5>A sua iniciativa recebeu premiações, certificações, etc*?*</h5>
+<h5>A sua Iniciativa recebeu premiações, certificações etc.?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="premiacao" name="premiacao"name="comunicacao">
@@ -810,18 +810,18 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 
                 <!-- 29-->
 
-                 <h5>Quais são as organizações com atuação na temática da mulher que sua iniciativa se relaciona diretamente?</h5>
-                 <h5>Nome</h5> 
+                 <h5>Quais são as organizações com atuação na temática da mulher com que sua organizaçāo se relaciona diretamente?</h5>
+                 <h5>Organização 1</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="relaciona1"  class="f1-last-name form-control">
                 </div>
-                <h5>Nome</h5> 
+                <h5>Organização 2</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="relaciona2"   class="f1-last-name form-control">
                 </div>
-                <h5>Nome</h5> 
+                <h5>Organização 3</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="relaciona3" class="f1-last-name form-control">
@@ -847,6 +847,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" name="regiao" id="regiao">
                         <div class="help-block with-errors"></div>
+                        <option value="escolha uma regiāo"></option>
                         <option value="norte">Norte</option>
                         <option value="nordeste">Nordeste</option>
                         <option value="centro-oeste">Centro-Oeste</option>
@@ -858,13 +859,13 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Estado</label>
                     <select class="f1-last-name form-control" name="estado" id="estados">
-                        <option value=""></option>
+                        <option value="escolha um estado"></option>
                     </select> 
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cidade</label>
                     <select class="f1-last-name form-control" name="cidade" id="cidades"> 
-                        <option value=""></option>
+                        <option value="escolha uma cidade"></option>
                     </select> 
                 </div>
                 
@@ -880,12 +881,12 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número*</label>
-                    <input type="number" name="numero" placeholder="Numero...*"class="f1-last-name form-control">
+                    <input type="number" name="numero" placeholder="Número...*"class="f1-last-name form-control">
                         <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-google-plus">Complemento*</label>
-                    <input type="text" name="complemento" placeholder="Complemento...*"class="f1-last-name form-control">
+                    <label class="sr-only" for="f1-google-plus">Complemento</label>
+                    <input type="text" name="complemento" placeholder="Complemento..."class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep*</label>

@@ -1,16 +1,16 @@
            <!-- Bootstrap core JavaScript
          ================================================== -->
 
-            <script src="assets/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
             <!--<script src="assets/js/validator.min.js"></script>-->
             <!--<script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>-->
-            <!--<script src="assets/js/jquery.mask.min.js"></script>-->
-            <script src="https://github.com/igorescobar/jQuery-Mask-Plugin/blob/master/dist/jquery.mask.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/jquery.mask/1.14.3/jquery.mask.min.js"></script>
+            <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
+            <!--<script src="https://github.com/igorescobar/jQuery-Mask-Plugin/blob/master/dist/jquery.mask.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/jquery.mask/1.14.3/jquery.mask.min.js"></script>-->
 
-            <script type="text/javascript"></script>
-            <link   rel="stylesheet" href="assets/css/bootstrap-select.min.css">
-            <script src="assets/js/bootstrap-select.min.js" ></script>
+            
+            <!--<link   rel="stylesheet" href="assets/css/bootstrap-select.min.css">-->
+            <!--<script type="text/javascript" src="assets/js/bootstrap-select.min.js" ></script>-->
            
 
             <!--Include Twitter Bootstrap and jQuery: Subtemas--> 
@@ -42,7 +42,7 @@
         
         <script>
         $(document).ready(function(){
-         $('.inputcnpj').mask('00.000.000/0000-00', {reverse: true});
+         $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
         });
         </script>
     
@@ -178,7 +178,7 @@
                         <option value="nao">nao</option>
                     </select>    
 
-                <input type="text" id="inputcnpj" maxlength="18" name="inputcnpj" class="f1-last-name form-control" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona"style='display: none' data-mask="00.000.000/0000-00" data-mask-reverse="true"/>
+                <input type="text" class="cnpj" id="inputcnpj" maxlength="18" name="inputcnpj" class="f1-last-name form-control" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" style='display: none'/>
                     <script>
 
                         var dropdownCnpj = document.getElementById('organizacao-cnpj');
@@ -260,7 +260,7 @@
                         <option value="governo">governo</option>
                         <option value="movimento">movimento</option>
                         <option value="negócio social">negócio social</option>
-                        <option value="organização da sociedade civil">organização da sociedade civil (ex: associação, ong, oscip, etc)</option>
+                        <option value="organização da sociedade civil">organização da sociedade civil (ex: associação, ong, oscip, etc.)</option>
                         <option value="rede">rede</option>
                         <option value="outros">Outros</option>
                     </select> 
@@ -491,7 +491,7 @@
                </tr>
 
                <tr> <td><input type="checkbox" name="temas[ ]"value="paz_seguranca_publica"class="no-margin" onclick="verificar()"></td>
-                    <td>Paz e Segurança pública.</td>
+                    <td>Paz e Segurança Pública.</td>
                     <td>Projetos que tratam da interface entre gênero e sistema de segurança pública, sobretudo questões da violência armada.</td>
                </tr>
 
@@ -734,7 +734,7 @@
                     <label class="checkbox-inline">
                         <input type="checkbox" name="politicas_publicas_lista[]" value="nacional" class="form-control-radio">nacional
                     </label>
-                    <textarea name="organizaçāo_politica_publica" placeholder="Descreva como se deu essa influência em políticas públicas (em 500 caracteres)"
+                    <textarea name="organizaçāo_politica_publica" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
 
                     class="f1-about-yourself form-control" id="organizaçāo_politica_publica"></textarea>
                 </div>
@@ -917,6 +917,7 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Região</label>
                     <select class="f1-last-name form-control" name="regiao" id="regiao">
+                        <option value="escolha uma regiāo"></option>
                         <option value="norte">Norte</option>
                         <option value="nordeste">Nordeste</option>
                         <option value="centro-oeste">Centro-Oeste</option>
@@ -927,13 +928,14 @@
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Estado</label>
                     <select class="f1-last-name form-control" name="estado" id="estados">
-                        <option value=""></option>
+                        <option value="escolha um estado"></option>
+                        
                     </select> 
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cidade</label>
                     <select class="f1-last-name form-control" name="cidade" id="cidades"> 
-                        <option value=""></option>
+                        <option value="escolha uma cidade"></option>
                     </select> 
                 </div>
 
@@ -947,11 +949,11 @@
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número</label>
-                    <input type="text" name="numero" placeholder="Numero...*" class="f1-last-name form-control">
+                    <input type="text" name="numero" placeholder="Número...*" class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Complemento</label>
-                    <input type="text" name="complemento" placeholder="Complemento...*" class="f1-last-name form-control">
+                    <input type="text" name="complemento" placeholder="Complemento..." class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep</label>
@@ -1012,7 +1014,7 @@
 
             <fieldset>
                 <h4>Indique até três iniciativas que na sua opinião devem participar do processo de mapeamento:</h4>
-                <h5>Iniciativa 1</h5>
+                <h5>Organizaçāo 1</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
                     <input type="text" name="indica_nome_1" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
@@ -1028,7 +1030,7 @@
                     <label class="sr-only" for="f1-last-name">Telefone</label>
                 <input type="tel" name="indica_telefone_1" placeholder="Telefone" class="f1-last-name form-control" id="inputTel3">
                 </div>
-                <h5>Iniciativa 2</h5>
+                <h5>Organizaçāo 2</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
                 <input type="text" name="indica_nome_2" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
@@ -1042,7 +1044,7 @@
                     <label class="sr-only" for="f1-last-name">Telefone</label>
                     <input type="tel" name="indica_telefone_2" placeholder="Telefone" class="f1-last-name form-control" id="inputTel4">
                 </div>
-                <h5>Iniciativa 3</h5>
+                <h5>Organizaçāo 3</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
                 <input type="text" name="indica_nome_3" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
