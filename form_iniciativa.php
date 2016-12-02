@@ -122,7 +122,7 @@
                 </div>
 
                 <div class="f1-buttons">
-                <button type="button" class="btn btn-next" disabled="disabled">Próximo</button>
+                <button type="button" class="btn btn-next" >Próximo</button>
                </div>
             </fieldset><!--Dados Pessoais-->
 
