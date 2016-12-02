@@ -134,50 +134,32 @@
               
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="organizacao-pai"id="organizacao-cnpj" required>
+                    <select class="f1-last-name form-control" name="organizacao-pai" id="organizacao-cnpj" required>
                         <option value=""></option>
                         <option value="sim">sim</option>
                         <option value="nao">nao</option>
                     </select> 
-                <!--<div class="iniciativapj">-->      
-                <!--<input type="text" id="inputnomeong" name="inputnomeong" class="f1-last-name form-control" placeholder="nome da organizaçāo" style='diplay: none'/>-->
+                <div class="iniciativapj">     
+               <input type="text" id="inputnomeong" name="inputnomeong" class="f1-last-name form-control" placeholder="nome da organizaçāo" style='display: none' />
                 <input type="text" id="inputcnpj" maxlength="18" name="inputcnpj" required class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" style='display: none'/ >
 
-                <!--</div>-->
+                </div>
                     <script>
 
-                        var dropdownCnpj = document.getElementById('organizacao-cnpj');
-                            
-                            function onDropdownChangedCNPJ()
-                            {
-                                console.log(dropdownCnpj.selectedIndex);
-                                //pegando valor do select na variável dropdownCnpj
-                                //var meuInput = $("input.iniciativapj[type=text]");
-                                //var meuInput = $(".iniciativapj:input[name=inputnomeong,inputcnpj]");
+                        function displayInput() {
 
-                                var meuInput = document.getElementById('inputcnpj');
-                                if(dropdownCnpj.options[dropdownCnpj.selectedIndex].value === "sim") {
-                                    //faz algo quando o valor selecionado for sim
-                                    console.log('Selecionou o valor');
-                                    //mostra o input quando o valor selecionado for sim, tem cnpj
-                
-                                    meuInput.style.display = 'block';
-                                    
-                                }else{
-                                    meuInput.style.display = 'none';
-                                  
-                                }
-                            }
-                            
-                            if (dropdownCnpj.addEventListener)
-                            {
-                                dropdownCnpj.addEventListener('change', onDropdownChangedCNPJ, false);
-                            }
-                            else
-                            {
-                                // suporte para o IE
-                                dropdownCnpj.attachEvent('onchange', onDropdownChangedCNPJ, false);
-                            }
+                          var value = $("#organizacao-cnpj option:selected").val();
+                          console.log(value);
+                          if(value == "sim"){
+                            $('#inputnomeong').css('display', 'block');
+                            $('#inputcnpj').css('display', 'block');
+                          }else{
+                            $('#inputnomeong').css('display', 'none');
+                            $('#inputcnpj').css('display', 'none');
+                          }
+                        }
+
+                        $( "#organizacao-cnpj" ).change( displayInput );
 
                     </script>
                 </div>
