@@ -54,7 +54,7 @@
              <!-- Formulário: Tipo Iniciativa -->
 
 
-            <fieldset data-toggle="validator">
+            <fieldset >
                 <h4>Dados Pessoais Contato 1:</h4>
                 <h5>Nome*</h5>
                 <div class="form-group">
@@ -128,7 +128,7 @@
 
             <!--Iniciativa-->
 
-        <fieldset data-toggle="validator">
+        <fieldset>
            <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
                 <h6><em>se sim, digite o nome da organizaçāo e cnpj no campo abaixo</em></h5>
               
@@ -164,21 +164,6 @@
                     </script>
                 </div>
 
-
-            <!--Etapa2  Formulário: Iniciativa -->
-            <!--
-            <fieldset>
-                <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
-               <div class="form-group">
-                    <label class="radio-inline">
-                       <input type="radio" name="organizacao-pai" value="sim" class="form-control-radio">Sim
-                    </label>
-
-                    <label class="radio-inline">
-                        <input type="radio" name="organizacao-pai" value="nao" class="form-control-radio">Nāo
-                    </label>
-                </div>
-              -->  
 
                 <h5>A sua iniciativa está localizada na…*</h5>
                  <div class="form-group">
@@ -872,7 +857,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 
              <!--Etapa 3 Formulário: Endereço/Iniciativa -->
 
-            <fieldset data-toggle="validator">
+            <fieldset>
                 <h5>Regiāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -937,7 +922,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 
              <!--Etapa 4 Formulário: Mídia Social-->
 
-            <fieldset data-toggle="validator">
+            <fieldset>
                 <h5>Onde podemos encontrar mais informação sobre sua organização?*(Preencha pelo menos 1 item):</h5>
                 <div class="form-group">
                     <div class="input-group">
@@ -981,7 +966,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 </div>
             </fieldset>
 
-            <fieldset data-toggle="validator">
+            <fieldset>
                 <h4>Indique até três iniciativas que na sua opinião devem participar do processo de mapeamento:</h4>
                 <h5>Iniciativa 1</h5>
 
@@ -1041,7 +1026,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                     <button type="button" class="btn btn-previous">Anterior</button>
                     <button type="submit" class="btn btn-submit">Enviar</button>
                 </div>
-
+                <!--
                 <script>
                 // Select every button with type submit under a form with data-toggle validator
                     $('form[data-toggle="validator"] button[type="submit"]').click(function(e) {
@@ -1057,6 +1042,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                         }
                     });
                     </script>
+                -->
             </fieldset> 
          </form>
      </div>
