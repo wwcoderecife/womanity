@@ -142,24 +142,6 @@
                     </div>
                 </div>
 
-
-
-
-
-                       
-                       <!-- 
-                       <h1><strong>Ecossistema de Atores pelos Direitos e Empoderamento das Mulheres:</strong><br> </h1>
-                                
-                        <div class="description">
-                       	    <p>
-                                <strong>Interconexões para maximizar impacto</strong><br>
-                                 </br>
-                            
-                            </p>
-                        </div>
-                    </div>
-                </div>-->
-
                  <div class="row">
                     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
                         <form role="form" data-toggle="validator" action="index.php" method="post" class="f1">
