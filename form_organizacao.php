@@ -259,14 +259,15 @@
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus" ></label>
                     <select class="f1-last-name form-control" id="organizacao-tipo" name="tipo">
+                        <option value=""></option>
                         <option value="academica"> acadêmica</option>
                         <option value="coletivo">coletivo</option>
-                        <option value="centro-oeste">empresa privada</option>
+                        <option value="empresa_privada">empresa privada</option>
                         <option value="fundos">fundos</option>
                         <option value="governo">governo</option>
                         <option value="movimento">movimento</option>
-                        <option value="negócio social">negócio social</option>
-                        <option value="organização da sociedade civil">organização da sociedade civil (ex: associação, ong, oscip, etc.)</option>
+                        <option value="negocio_social">negócio social</option>
+                        <option value="ong_sociedade_civil">organização da sociedade civil (ex: associação, ong, oscip, etc.)</option>
                         <option value="rede">rede</option>
                         <option value="outros">Outros</option>
                     </select> 

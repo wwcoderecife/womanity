@@ -607,13 +607,14 @@ class Editar extends Conexao {
 
 		$pdo = parent::getDB();
 
-		$consulta = $pdo->prepare("select 
+		$consulta = $pdo->prepare("
+            select 
 				distinct 
 				contato_1.nome as nome_1, contato_1.cargo as cargo_1, contato_1.email as email_1,
 			    contato_1.telefone as telefone_1, contato_1.celular as celular_1,
 			    contato_2.nome as nome_2, contato_2.cargo as cargo_2, contato_2.email as email_2,
 			    contato_2.telefone as telefone_2, contato_2.celular as celular_2,
-			    ong.cnpj, ong.localizacao, ong.nome, ong.sigla, ong.email, ong.tipo, ong.inicio_atv, 
+			    ong.cnpj, ong.localizacao, ong.nome, ong.sigla, ong.telefone, ong.email, ong.tipo, ong.inicio_atv, 
 			    ong.qtde_pessoas, ong.recursos_financeiros, ong.descricao,  ong.publico_atendido, 
 			    ong.politicas_publicas, ong.monitoramento_atividades, ong.estrategia_comunicacao,
 				ong.premiacao_certificacao, ong.organizacao_pai, ong.natureza
@@ -651,6 +652,15 @@ class Editar extends Conexao {
         $this->setEmail_2($result['email_2']);
         $this->setTelefone_2($result['telefone_2']);
         $this->setCelular_2($result['celular_2']);
+
+        $this->setCnpj($result['cnpj']);
+        $this->setLocalizacao($result['localizacao']);
+        $this->setNome($result['nome']);
+        $this->setSigla($result['sigla']);
+        $this->setTelefone($result['telefone']);
+        $this->setEmail($result['email']);
+        $this->setTipo($result['tipo']);
+
 	
 	}
 

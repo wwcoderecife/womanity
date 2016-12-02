@@ -46,6 +46,8 @@
     $edit = new editar;
     $edit->busca();
 
+     echo $edit->getLocalizacao();
+
 ?>
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
@@ -173,11 +175,15 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" name="cnpj"id="organizacao-cnpj">
                         <option value=""></option>
-                        <option value="sim">sim</option>
-                        <option value="nao">nao</option>
+                        <option value="sim" 
+                            <?php if($edit->getCnpj() != ""){ echo "selected"; } ?>
+                         >sim</option>
+                        <option value="nao"
+                        <?php if($edit->getCnpj() == ""){ echo "selected"; } ?>
+                        >nao</option>
                     </select>    
 
-                <input type="text" id="inputcnpj" name="inputcnpj" class="f1-last-name form-control" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona"style='display: none' />
+                <input type="text" id="inputcnpj" name="inputcnpj" value="<?php echo $edit->getCnpj()  ?>" class="f1-last-name form-control" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona"style='display: none' />
                     <script>
 
                         var dropdownCnpj = document.getElementById('organizacao-cnpj');
@@ -215,54 +221,69 @@
                 <h5>A sua Organizaçāo está localizada na…*</h5>
                 <div class="form-group">
                     <label class="radio-inline">
-                       <input type="radio" name="zona" value="rural" class="form-control-radio" >Zona Rural
+                       <input type="radio" name="zona" value="rural" class="form-control-radio" 
+                       <?php  if($edit->getLocalizacao() == "rural"){ echo "checked='checked'"; } ?>
+                       >Zona Rural
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="zona" value="urbana" class="form-control-radio">Zona Urbana
+                        <input type="radio" name="zona" value="urbana" class="form-control-radio"
+                        <?php if($edit->getLocalizacao() == "urbana"){ echo "checked='checked'"; } ?>
+                        >Zona Urbana
                     </label>
                 </div>
 
                 <h5>Nome da Organizaçāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Nome</label>
-                    <input type="text" name="nome" maxlength="50" class="f1-last-name form-control">
+                    <input type="text" name="nome" value="<?php echo $edit->getNome() ?>" maxlength="50" class="f1-last-name form-control">
                 </div>
 
 
                 <h5>Sigla da Organizaçāo:</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Sigla</label>
-                    <input type="text" name="sigla" class="f1-last-name form-control">
+                    <input type="text" name="sigla" value="<?php echo $edit->getSigla() ?>" class="f1-last-name form-control">
                 </div>
 
                 <h5>Telefone da Organizaçāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Telefone</label>
-                    <input type="tel" id="telefone" name="organizacao-telefone" placeholder="(xx) xxxxx-xxxx"class="f1-last-name form-control">
+                    <input type="tel" id="telefone" name="organizacao-telefone" value="<?php echo $edit->getTelefone() ?>" placeholder="(xx) xxxxx-xxxx"class="f1-last-name form-control">
                 </div>
 
                 <h5>E-mail da Organizaçāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Email</label>
-                    <input type="email" name="email" class="f1-last-name form-control"class="f1-last-name form-control">
+                    <input type="email" name="email" value="<?php echo $edit->getEmail() ?>" class="f1-last-name form-control"class="f1-last-name form-control">
                 </div>
 
                  <h5>Como sua organizaçāo se identifica*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus" ></label>
                     <select class="f1-last-name form-control" id="organizacao-tipo" name="tipo">
-                        <option value="academica"> acadêmica</option>
-                        <option value="coletivo">coletivo</option>
-                        <option value="centro-oeste">empresa privada</option>
-                        <option value="fundos">fundos</option>
-                        <option value="governo">governo</option>
-                        <option value="movimento">movimento</option>
-                        <option value="negócio social">negócio social</option>
-                        <option value="organização da sociedade civil">organização da sociedade civil (ex: associação, ong, oscip, etc)</option>
-                        <option value="rede">rede</option>
-                        <option value="outros">Outros</option>
-                    </select> 
+                        <option value="academica" <?=($edit->getEmail() == 'academica')?'selected':''?>>
+                         acadêmica
+                        </option>
+                        <option value="coletivo" <?=($edit->getEmail() == 'coletivo')?'selected':''?>>
+                            coletivo</option>
+                        <option value="empresa_privada" <?=($edit->getEmail() == 'empresa_privada')?'selected':''?>>
+                            empresa privada</option>
+                        <option value="fundos"  <?=($edit->getEmail() == 'fundos')?'selected':''?>>
+                            fundos</option>
+                        <option value="governo" <?=($edit->getEmail() == 'governo')?'selected':''?>>
+                            governo</option>
+                        <option value="movimento" <?=($edit->getEmail() == 'movimento')?'selected':''?>>
+                            movimento</option>
+                        <option value="negocio_social" <?=($edit->getEmail() == 'negocio_social')?'selected':''?>>
+                            negócio social</option>
+                        <option value="ong_sociedade_civil" <?=($edit->getEmail() == 'ong_sociedade_civil')?'selected':''?>>
+                            organização da sociedade civil (ex: associação, ong, oscip, etc.)</option>
+                        <option value="rede" <?=($edit->getEmail() == 'rede')?'selected':''?>>
+                            rede</option>
+                        <option value="outros" <?=($edit->getEmail() == 'outros')?'selected':''?>>
+                            Outros</option>
+                 </select> 
                     <input type="text" id="inputoutros" name="inputoutros" class="f1-last-name form-control" placeholder="descreva outro tipo"style='display: none' />
                     <script>
 
