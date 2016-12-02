@@ -54,7 +54,7 @@
              <!-- Formulário: Tipo Iniciativa -->
 
 
-            <fieldset data-validate="true">
+            <fieldset data-toggle="validator">
                 <h4>Dados Pessoais Contato 1:</h4>
                 <h5>Nome*</h5>
                 <div class="form-group">
@@ -128,7 +128,7 @@
 
             <!--Iniciativa-->
 
-        <fieldset data-validate="true">
+        <fieldset data-toggle="validator">
            <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
                 <h6><em>se sim, digite o nome da organizaçāo e cnpj no campo abaixo</em></h5>
               
@@ -872,7 +872,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 
              <!--Etapa 3 Formulário: Endereço/Iniciativa -->
 
-            <fieldset data-validate="true">
+            <fieldset data-toggle="validator">
                 <h5>Regiāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -937,7 +937,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 
              <!--Etapa 4 Formulário: Mídia Social-->
 
-            <fieldset data-validate="true">
+            <fieldset data-toggle="validator">
                 <h5>Onde podemos encontrar mais informação sobre sua organização?*(Preencha pelo menos 1 item):</h5>
                 <div class="form-group">
                     <div class="input-group">
@@ -981,7 +981,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset data-toggle="validator">
                 <h4>Indique até três iniciativas que na sua opinião devem participar do processo de mapeamento:</h4>
                 <h5>Iniciativa 1</h5>
 
