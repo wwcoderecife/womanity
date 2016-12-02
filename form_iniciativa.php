@@ -54,7 +54,7 @@
              <!-- Formulário: Tipo Iniciativa -->
 
 
-            <fieldset>
+            <fieldset data-validate="true">
                 <h4>Dados Pessoais Contato 1:</h4>
                 <h5>Nome*</h5>
                 <div class="form-group">
@@ -122,13 +122,13 @@
                 </div>
 
                 <div class="f1-buttons">
-                <button type="button" class="btn btn-next">Próximo</button>
+                <button type="button" class="btn btn-next" data-disable="true">Próximo</button>
                </div>
             </fieldset><!--Dados Pessoais-->
 
             <!--Iniciativa-->
 
-        <fieldset>
+        <fieldset data-validate="true">
            <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
                 <h6><em>se sim, digite o nome da organizaçāo e cnpj no campo abaixo</em></h5>
               
@@ -864,20 +864,15 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 </div>
 
 
-
-         
-
-
-
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="button" class="btn btn-next">Próximo</button>
+                    <button type="button" class="btn btn-next" data-disable="true">Próximo</button>
                 </div> 
 </fieldset> 
 
              <!--Etapa 3 Formulário: Endereço/Iniciativa -->
 
-            <fieldset>
+            <fieldset data-validate="true">
                 <h5>Regiāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -936,13 +931,13 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 </div>              
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="button" class="btn btn-next">Próximo</button>
+                    <button type="button" class="btn btn-next"data-disable="true">Próximo</button>
                 </div>
             </fieldset>
 
              <!--Etapa 4 Formulário: Mídia Social-->
 
-            <fieldset>
+            <fieldset data-validate="true">
                 <h5>Onde podemos encontrar mais informação sobre sua organização?*(Preencha pelo menos 1 item):</h5>
                 <div class="form-group">
                     <div class="input-group">
@@ -982,7 +977,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 </div>
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="button" class="btn btn-next">Próximo</button>
+                    <button type="button" class="btn btn-next"data-disable="true">Próximo</button>
                 </div>
             </fieldset>
 
