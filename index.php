@@ -138,6 +138,19 @@
                                 <strong>Interconexões para maximizar impacto</strong><br>
                                 </br>
                             </p>
+                            <p class="modal-body">
+
+                             O Ecossistema de Atores pelos Direitos e Empoderamento das Mulheres - Interconexões para Maximizar Impacto é uma iniciativa da ONU Mulheres, Womanity Foundation, BrazilFoundation e Instituto C&A.<br> 
+                             Tem como objetivo principal mapear organizações e iniciativas que trabalham com direitos e empoderamento da mulher para ampliar as interconexões entre elas e seu impacto. 
+
+                             Esta plataforma possibilita o cadastro das organizações e iniciativas para que as informações sejam utilizadas para traçar o perfil de cada
+                             organização e identificar conexões entre elas. Em um segundo momento, terá a função de automatizar e perpetuar esse processo, permitindo 
+                             que novos atores se cadastrem e indiquem outros. 
+
+                             Para garantir a segurança dos dados, cadastre um login e senha para preencher o questionário. As informações poderão ser atualizadas após o
+                             lançamento oficial da plataforma, em novembro/2017.       
+
+                           </p>    
                         </div>
                     </div>
                 </div>
