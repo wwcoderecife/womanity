@@ -21,23 +21,7 @@
             <!--<link rel="stylesheet" href="assets/css/bootstrap-multiselect.css" type="text/css">-->
             <!--<script src="assets/js/bootstrap-multiselect.js"></script>-->
             
-        <!--
-            <script>
-              jQuery(function($){
-              $("#inputTel1").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
-              $("#inputCel1").mask("(99) 99999-9999",{placeholder:"(xx) xxxxx-xxxx "});
-              $("#inputTel2").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
-              $("#inputCel2").mask("(99) 99999-9999",{placeholder:"(xx) xxxxx-xxxx "});
-              $("#inputTel3").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
-              $("#inputCep").mask("99-999-999",{placeholder:"xx-xxx-xxx"});
-              $("#inputTel4").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
-              $("#inputTel5").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
-              $("#inputTel6").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
-              $("#nputcnpj").mask("99.999.999/9999-99",{placeholder:"xx.xxx.xxxx/xxxx-xx"});
-             
-            });
-            </script>
-        -->
+        
     
         
         <script>
@@ -178,7 +162,7 @@
                   
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="cnpj"id="organizacao-cnpj">
+                    <select class="f1-last-name form-control" name="cnpj"id="organizacao-cnpj"required>
                         <option value=""></option>
                         <option value="sim">sim</option>
                         <option value="nao">nao</option>
@@ -233,7 +217,7 @@
                 <h5>Nome da Organizaçāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Nome</label>
-                    <input type="text" name="nome" maxlength="50" class="f1-last-name form-control">
+                    <input type="text" name="nome" maxlength="50" class="f1-last-name form-control" required>
                 </div>
 
 
@@ -246,20 +230,19 @@
                 <h5>Telefone da Organizaçāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Telefone</label>
-                    <input type="tel" id="telefone" name="organizacao-telefone" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd">
+                    <input type="tel" id="telefone" name="organizacao-telefone" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd"required>
                 </div>
 
                 <h5>E-mail da Organizaçāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Email</label>
-                    <input type="email" name="email" class="f1-last-name form-control"class="f1-last-name form-control">
+                    <input type="email" name="email" class="f1-last-name form-control"class="f1-last-name form-control" required>
                 </div>
 
                  <h5>Como sua organizaçāo se identifica*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus" ></label>
-                    <select class="f1-last-name form-control" id="organizacao-tipo" name="tipo">
-                        <option value=""></option>
+                    <select class="f1-last-name form-control" id="organizacao-tipo" name="tipo" required>
                         <option value="academica"> acadêmica</option>
                         <option value="coletivo">coletivo</option>
                         <option value="empresa_privada">empresa privada</option>
@@ -309,7 +292,7 @@
                  <h5> Quando sua Organizaçāo iniciou as atividades?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="year" name="anoatividade" >
+                    <select class="f1-last-name form-control" id="year" name="anoatividade" required>
                     <div class="help-block with-errors"></div>
                         <script>
                           var myDate = new Date();
@@ -326,7 +309,7 @@
                 <h5>Quantas pessoas estão envolvidas neste trabalho?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas">
+                    <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas" required>
                         <option value=""></option>
                         <option value="1-5">1-5</option>
                         <option value="6-10">6-10</option>
@@ -343,18 +326,18 @@
                  <h5>2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
-                    <input type="text" name="orcamento_2014" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2014">
+                    <input type="text" name="orcamento_2014" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2014" required>
 
                 </div>
                 <h5>2015</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2015</label>
-                    <input type="text" name="orcamento_2015"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2015" >
+                    <input type="text" name="orcamento_2015"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2015" required>
                 </div>
                 <h5>2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
-                    <input type="text" name="orcamento_2016"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2016">
+                    <input type="text" name="orcamento_2016"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2016"required>
                 </div>
 
                 <h5>Sua Organizaçāo recebe recursos financeiros?</h5>
@@ -617,14 +600,11 @@
         });
     </script> 
 
-
-
-
                 <h5>O que faz sua organização?*(até 500 caracteres)</h5>                                  
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
                     <textarea name="sobre" maxlength="500" placeholder="campo com capacidade para 500 caracteres...." 
-                    class="f1-about-yourself form-control" id="sobre" ></textarea>
+                    class="f1-about-yourself form-control" id="sobre" required></textarea>
                 </div>
 
                  <h5>Qual é a sua função no ecossistema?*</h5>
@@ -646,7 +626,7 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="publico_alvo" name="publico_alvo" >
+                    <select class="f1-last-name form-control" id="publico_alvo" name="publico_alvo" required>
                         <option value=""></option>
                         <option value="Empresas">Empresas</option>
                         <option value="Organizações Sociais">Organizações Sociais</option>
@@ -664,28 +644,28 @@
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona1"  class="f1-last-name form-control">
                     <textarea name="sobre_iniciativas1" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
-                    class="f1-about-yourself form-control" id="sobre_iniciativa_ong1"  data-error = "Campo está em branco, favor preencher."></textarea>
+                    class="f1-about-yourself form-control" id="sobre_iniciativa_ong1"  required data-error = "Campo está em branco, favor preencher."></textarea>
                 </div>
                 <h5>Iniciativa 2</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona2"  class="f1-last-name form-control">
                     <textarea name="sobre_iniciativas2" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
-                    class="f1-about-yourself form-control" id="sobre_iniciativa_ong2" data-error = "Campo está em branco, favor preencher."></textarea>
+                    class="f1-about-yourself form-control" id="sobre_iniciativa_ong2" required data-error = "Campo está em branco, favor preencher."></textarea>
                 </div>
                 <h5>Iniciativa 3</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona3" class="f1-last-name form-control">
                     <textarea name="sobre_iniciativas3" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
-                    class="f1-about-yourself form-control" id="sobre_iniciativa_ong3" data-error = "Campo está em branco, favor preencher."></textarea>
+                    class="f1-about-yourself form-control" id="sobre_iniciativa_ong3" required data-error = "Campo está em branco, favor preencher."></textarea>
                 </div>
 
                 <h5>Clique nos Estados que sua iniciativa tem atuação direta*</h5>
                     <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
                     <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="organizacao_estado[ ]" multiple >
+                    <select class="f1-last-name form-control" name="organizacao_estado[ ]" multiple  required>
                         <div class="help-block with-errors"></div>
                         <option value="Acre">Acre</option>
                         <option value="Alagoas">Alagoas</option>
@@ -719,7 +699,7 @@
 
                     <h5>Sua Organizaçāo influenciou políticas públicas?*</h5>
 
-                <div class="form-group">
+                <div class="form-group" required>
                    <label class="radio-inline">
                         <input type="radio" name="politicas_publicas" value="nao" class="form-control-radio"> Nāo
                     </label>
@@ -753,13 +733,13 @@
 <h5>Você realiza monitoramento e avaliação sistematizada das atividades da Organizaçāo?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="monitoramento_atv" id="avaliacao">
+                    <select class="f1-last-name form-control" name="monitoramento_atv" id="avaliacao" required>
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim</option>
                     </select>
                     <textarea type="text" id="inputAvaliacaoOng" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
-                        "style='display: none' /></textarea>
+                        "style='display: none' required/></textarea>
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -801,13 +781,13 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="organizacao-comunicacao" name="comunicacao">
+                    <select class="f1-last-name form-control" id="organizacao-comunicacao" name="comunicacao"required>
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
                     </select>
                     <textarea type="text" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
-"style='display: none' /></textarea>
+"style='display: none' required/></textarea>
                     <script>
 
                         var dropdownComun = document.getElementById('organizacao-comunicacao');
@@ -849,14 +829,14 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="premiacao" name="premiacao">
+                    <select class="f1-last-name form-control" id="premiacao" name="premiacao"required>
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim, quais?</option> 
                         
                     </select>
                     <textarea type="text" id="inputPremiacaoOng" name="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
-"style='display: none' /></textarea>
+"style='display: none' required/></textarea>
                     <script>
 
                     var dropdown = document.getElementById('premiacao');
@@ -924,7 +904,7 @@
                 <h5>Regiāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Região</label>
-                    <select class="f1-last-name form-control" name="regiao" id="regiao">
+                    <select class="f1-last-name form-control" name="regiao" id="regiao"required>
                         <option value="escolha uma regiāo"></option>
                         <option value="norte">Norte</option>
                         <option value="nordeste">Nordeste</option>
@@ -936,7 +916,7 @@
                 <h5>Estado*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Estado</label>
-                    <select class="f1-last-name form-control" name="estado" id="estados">
+                    <select class="f1-last-name form-control" name="estado" id="estados" required>
                         <option value="escolha um estado"></option>
                         
                     </select> 
@@ -944,7 +924,7 @@
                 <h5>Cidade*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cidade</label>
-                    <select class="f1-last-name form-control" name="cidade" id="cidades"> 
+                    <select class="f1-last-name form-control" name="cidade" id="cidades"required> 
                         <option value="escolha uma cidade"></option>
                     </select> 
                 </div>
@@ -952,27 +932,27 @@
                 <h5>Bairro*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Bairro</label>
-                <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control">
+                <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control"required>
                 </div>
                 <h5>Rua*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-facebook">Rua</label>
-                    <input type="text" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control">
+                    <input type="text" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control"required>
                 </div>
                 <h5>Número*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número</label>
-                    <input type="text" name="numero" placeholder="Número...*" class="f1-last-name form-control">
+                    <input type="text" name="numero" placeholder="Número...*" class="f1-last-name form-control"required>
                 </div>
                 <h5>Complemento</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Complemento</label>
-                    <input type="text" name="complemento" placeholder="Complemento..." class="f1-last-name form-control">
+                    <input type="text" name="complemento" placeholder="Complemento..." class="f1-last-name form-control"required>
                 </div>
                  <h5>Cep</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep</label>
-                    <input type="text" name="cep" id="inputCep" placeholder="Cep xx-xxx-xxx*" class="f1-last-name form-control cep">
+                    <input type="text" name="cep" id="inputCep" placeholder="Cep xx-xxx-xxx*" class="f1-last-name form-control cep"required>
                 </div> 
 
                <div class="f1-buttons">

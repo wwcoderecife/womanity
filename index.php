@@ -132,39 +132,15 @@
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2 text">
 
-                    
-
-                       <h1>Ecossistema de Atores pelos Direitos e Empoderamento das Mulheres:><br> </h1>
-                                
+                       <h1><strong>Ecossistema de Atores pelos Direitos e </strong> Empoderamento das Mulheres<br></h1>     
                         <div class="description">
                             <p>
                                 <strong>Interconexões para maximizar impacto</strong><br>
-                                 </br>
-
-                                 Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. <br>No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</br>
-                            
+                                </br>
                             </p>
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-                       
-                       <!-- 
-                       <h1><strong>Ecossistema de Atores pelos Direitos e Empoderamento das Mulheres:</strong><br> </h1>
-                                
-                        <div class="description">
-                       	    <p>
-                                <strong>Interconexões para maximizar impacto</strong><br>
-                                 </br>
-                            
-                            </p>
-                        </div>
-                    </div>
-                </div>-->
 
                  <div class="row">
                     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
