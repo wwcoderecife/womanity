@@ -122,7 +122,7 @@
                 </div>
 
                 <div class="f1-buttons">
-                <button type="button" class="btn btn-next" data-disable="true">Próximo</button>
+                <button type="button" class="btn btn-next" disabled="disabled">Próximo</button>
                </div>
             </fieldset><!--Dados Pessoais-->
 
@@ -931,7 +931,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 </div>              
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="button" class="btn btn-next"data-disable="true">Próximo</button>
+                    <button type="button" class="btn btn-next" data-disable="true">Próximo</button>
                 </div>
             </fieldset>
 
