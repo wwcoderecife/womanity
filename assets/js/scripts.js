@@ -42,7 +42,7 @@ jQuery(document).ready(function() {
     */
     $('.f1 fieldset:first').fadeIn('slow');
     
-    $('.f1 input[type="text"], .f1 input[type="password"], .f1 input[type="email"], .f1 input[type="tel"], .f1 input[type="radio"], .f1 input[type="checkbox"], .f1 textarea, .f1 select').on('focus', function() {
+    $('.f1 input[type="text"], .f1 input[type="password"], .f1 textarea').on('focus', function() {
     	$(this).removeClass('input-error');
     });
     
@@ -54,10 +54,9 @@ jQuery(document).ready(function() {
     	var current_active_step = $(this).parents('.f1').find('.f1-step.active');
     	var progress_line = $(this).parents('.f1').find('.f1-progress-line');
     	
-    
+        /*
     	// fields validation
-    	parent_fieldset.find('input[type="text"], input[type="password"], input[type="email"],
-            input[type="tel"], input[type="radio"], input[type="checkbox"] textarea, select').each(function() {
+    	parent_fieldset.find('input[type="text"], input[type="password"], textarea').each(function() {
     		if( $(this).val() == "" ) {
     			$(this).addClass('input-error');
     			next_step = false;
@@ -107,10 +106,9 @@ jQuery(document).ready(function() {
     $('.f1').on('submit', function(e) {
 
 
-    	
+    	/*
     	// fields validation
-    	$(this).find('input[type="text"], input[type="password"], input[type="email"],
-            input[type="tel"], input[type="radio"], input[type="checkbox"] textarea, select').each(function() {
+    	$(this).find('input[type="text"], input[type="password"], textarea').each(function() {
     		if( $(this).val() == "" ) {
     			e.preventDefault();
     			$(this).addClass('input-error');
@@ -120,7 +118,7 @@ jQuery(document).ready(function() {
     		}
     	});
     	// fields validation
-        
+        */
     	
     });
 
