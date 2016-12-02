@@ -56,7 +56,7 @@ jQuery(document).ready(function() {
     	
     
     	// fields validation
-    	parent_fieldset.find('input[type="text"], input[type="password"], input[type="email"],input[type="password"],
+    	parent_fieldset.find('input[type="text"], input[type="password"], input[type="email"],
             input[type="tel"], input[type="radio"], input[type="checkbox"] textarea, select').each(function() {
     		if( $(this).val() == "" ) {
     			$(this).addClass('input-error');
@@ -109,7 +109,7 @@ jQuery(document).ready(function() {
 
     	
     	// fields validation
-    	$(this).find('input[type="text"], input[type="password"], input[type="email"],input[type="password"],
+    	$(this).find('input[type="text"], input[type="password"], input[type="email"],
             input[type="tel"], input[type="radio"], input[type="checkbox"] textarea, select').each(function() {
     		if( $(this).val() == "" ) {
     			e.preventDefault();
