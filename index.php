@@ -134,15 +134,14 @@
 
                     
 
-                       <h1>Ecossistema de Atores pelos Direitos e Empoderamento das Mulheres:><br> </h1>
+                       <h1><strong>Ecossistema de Atores pelos Direitos</strong> e Empoderamento das Mulheres:><br></h1>
                                 
                         <div class="description">
                             <p>
-                                <strong>Interconexões para maximizar impacto</strong><br>
+                                <h3><strong>Interconexões para maximizar impacto</strong><br></h3>
                                  </br>
 
-                                 Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. <br>No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus. Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt sensibus.</br>
-                            
+
                             </p>
                         </div>
                     </div>
