@@ -132,8 +132,7 @@
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2 text">
 
-                       <h2><strong>Ecossistema de Atores pelos Direitos</strong>e Empoderamento das Mulheres<br></h2>
-                                
+                       <h1><strong>Ecossistema de Atores pelos Direitos e </strong> Empoderamento das Mulheres<br></h1>     
                         <div class="description">
                             <p>
                                 <strong>Interconexões para maximizar impacto</strong><br>
