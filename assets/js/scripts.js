@@ -42,7 +42,7 @@ jQuery(document).ready(function() {
     */
     $('.f1 fieldset:first').fadeIn('slow');
     
-    $('.f1 input[type="text"], .f1 input[type="password"], .f1 textarea').on('focus', function() {
+    $('.f1 input[type="text"], .f1 input[type="password"], .f1 input[type="email"], .f1 input[type="tel"], .f1 input[type="radio"], .f1 input[type="checkbox"], .f1 textarea, .f1 select').on('focus', function() {
     	$(this).removeClass('input-error');
     });
     
