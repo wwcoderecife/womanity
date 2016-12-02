@@ -134,11 +134,11 @@
 
                     
 
-                       <h1><strong>Ecossistema de Atores pelos Direitos</strong> e Empoderamento das Mulheres:><br></h1>
+                       <h1><strong>Ecossistema de Atores pelos Direitos</strong>e Empoderamento das Mulheres<br></h1>
                                 
                         <div class="description">
                             <p>
-                                <h3><strong>Interconexões para maximizar impacto</strong><br></h3>
+                                <h3>Interconexões para maximizar impacto<br></h3>
                                  </br>
 
 
