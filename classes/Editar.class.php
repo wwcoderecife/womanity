@@ -660,6 +660,126 @@ class Editar extends Conexao {
         $this->setTelefone($result['telefone']);
         $this->setEmail($result['email']);
         $this->setTipo($result['tipo']);
+        $this->setInicioAtv($result['anoatividade']);
+        $this->setQtdePessoas($result['pessoas_envolvidas']);
+        $this->setRecursosFinaceiros($result['recursos']);
+        $this->setDescricao($result['descricao']);
+        $this->setPublicoAtendido($result['publico_atendido']);
+        $this->setPoliticasPublicas($result['politicas_publicas']);
+        $this->setMonitoramentoAtividades($result['monitoramento_atividades']);
+        $this->setEstrategiaComunicacao($result['estrategia_comunicacao']);
+        $this->setPremiacaoCertificacao($result['premiacao_certificacao']);
+        $this->setOrganizacaoPai($result['organizacao_pai']);
+        $this->setNatureza($result['natureza']);
+        $this->setUsuarioId($result['usuario_id']);
+
+
+        $this->setOrcamento_2014($result['orcamento_2014']);
+        $this->setOrcamento_2015($result['orcamento_2015']);
+        $this->setOrcamento_2016($result['orcamento_2016']);
+
+
+        $this->setRecursosFinaceirosLista($result['$recursos_finaceiros_lista']);
+        $this->setPoliticasPublicasList($result['$politicas_publicas_lista']);
+        $this->setFuncoes($result['$funcoes']);
+        $this->setNumeroBeneficiarios($result['$numero_beneficiarios']);
+
+
+
+        $this->setEmpoderamentoNome_1($result['$empoderamento_nome_1;']);
+        $this->setEmpoderamentoDesc_1($result['$empoderamento_desc_1;']);
+        $this->setEmpoderamentoNome_2($result['$empoderamento_nome_2;']);
+        $this->setEmpoderamentoDesc_2($result['$empoderamento_desc_2;']);
+        $this->setEmpoderamentoNome_3($result['$empoderamento_nome_3;']);
+        $this->setEmpoderamentoDesc_3($result['$empoderamento_desc_3;']);
+
+        $this-> setEstados($result['$estados;']);
+
+        $this-> setRelaciona_1($result['$relaciona_1;']);
+        $this-> setRelaciona_2($result['$relaciona_2;']);
+        $this-> setRelaciona_3($result['$relaciona_3;']);
+
+        $this->setTemas($result['$temas;']);
+        $this->setSubtemas($result['$subtemas;']);
+
+
+        $this->setRegiao($result['$regiao;']);
+        $this->setEstado($result['$estado;']);
+        $this->setCidade($result['$cidade;']);
+        $this->setBairro($result['$bairro;']);
+        $this->setRua($result['$rua;']);
+        $this->setNumero($result['$numero;']);
+        $this->setComplemento($result['$complemento;']);
+        $this->setCep($result['$cep;']);
+
+
+        $this->setSite($result['$site;']);
+        $this->setFacebook($result['$facebook;']);
+        $this-> setTwitter($result['$twitter;']);
+        $this->setLinkedin($result['$linkedin;']);
+        $this->setInstagram($result['$instagram;']);
+        $this->setOutros($result['$outros;']);
+
+
+        $this->setIndicaNome_1($result['$indica_nome_1;']);
+        $this->setIndicaEmail_1($result['$indica_email_1;']);
+        $this->setIndicaTelefone_1($result['$indica_telefone_1;']);
+        $this->setIndicaNome_2($result['$indica_nome_2;']);
+        $this->setIndicaEmail_2($result['$indica_email_2;']);
+        $this->setIndicaTelefone_2($result['$indica_telefone_2;']);
+        $this->setIndicaNome_3($result['$indica_nome_3;']);
+        $this->setIndicaEmail_3($result['$indica_email_3;']);
+        $this->setIndicaTelefone_3($result['$indica_telefone_3;']);
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+        
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
 
 	
 	}
