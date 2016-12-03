@@ -617,7 +617,9 @@ class Editar extends Conexao {
 			    ong.cnpj, ong.localizacao, ong.nome, ong.sigla, ong.telefone, ong.email, ong.tipo, ong.inicio_atv, 
 			    ong.qtde_pessoas, ong.recursos_financeiros, ong.descricao,  ong.publico_atendido, 
 			    ong.politicas_publicas, ong.monitoramento_atividades, ong.estrategia_comunicacao,
-				ong.premiacao_certificacao, ong.organizacao_pai, ong.natureza
+				ong.premiacao_certificacao, ong.organizacao_pai, ong.natureza,
+                endereco.rua, endereco.numero, endereco.complemento, endereco.bairro,
+                endereco.cidade, endereco.estado, endereco.cep, endereco.regiao
 			from organizacoes ong
 			left join contatos contato_1 on contato_1.organizacao_id = ong.id and contato_1.tipo = 1
 			left join contatos contato_2 on contato_2.organizacao_id = ong.id and contato_2.tipo = 2
@@ -626,7 +628,6 @@ class Editar extends Conexao {
 			left join enderecos endereco on endereco.organizacao_id = ong.id
 			left join funcoes funcao on funcao.organizacao_id = ong.id
 			left join indicacoes indicacao on indicacao.organizacao_id = ong.id
-			left join orcamentos orcamento on orcamento.organizacao_id = ong.id
 			left join origem_recursos origem_recurso on origem_recurso.organizacao_id = ong.id
 			left join politicas_publicas politica_publica on politica_publica.organizacao_id = ong.id
 			left join redes_sociais rede_social on rede_social.organizacao_id = ong.id
@@ -660,9 +661,9 @@ class Editar extends Conexao {
         $this->setTelefone($result['telefone']);
         $this->setEmail($result['email']);
         $this->setTipo($result['tipo']);
-        $this->setInicioAtv($result['anoatividade']);
-        $this->setQtdePessoas($result['pessoas_envolvidas']);
-        $this->setRecursosFinaceiros($result['recursos']);
+        $this->setInicioAtv($result['inicio_atv']);
+        $this->setQtdePessoas($result['qtde_pessoas']);
+        $this->setRecursosFinaceiros($result['recursos_financeiros']);
         $this->setDescricao($result['descricao']);
         $this->setPublicoAtendido($result['publico_atendido']);
         $this->setPoliticasPublicas($result['politicas_publicas']);
@@ -671,115 +672,112 @@ class Editar extends Conexao {
         $this->setPremiacaoCertificacao($result['premiacao_certificacao']);
         $this->setOrganizacaoPai($result['organizacao_pai']);
         $this->setNatureza($result['natureza']);
-        $this->setUsuarioId($result['usuario_id']);
+
+        $this->setRegiao($result['regiao']);
+        $this->setEstado($result['estado']);
+        $this->setCidade($result['cidade']);
+        $this->setBairro($result['bairro']);
+        $this->setRua($result['rua']);
+        $this->setNumero($result['numero']);
+        $this->setComplemento($result['complemento']);
+        $this->setCep($result['cep']);
 
 
-        $this->setOrcamento_2014($result['orcamento_2014']);
-        $this->setOrcamento_2015($result['orcamento_2015']);
-        $this->setOrcamento_2016($result['orcamento_2016']);
+        $orcamentos_query_2014 = $pdo->prepare("select 
+                                        ano, valor
+                                    from orcamentos
+                                    where organizacao_id = ? and ano = ?");
+        $orcamentos_query_2014->bindValue(1, 1091);
+        $orcamentos_query_2014->bindValue(2, 2014);
+        $orcamentos_query_2014->execute();
+
+        //passando os valores encontrados para um array
+        $orcamentos_2014 =  $orcamentos_query_2014->fetch(PDO::FETCH_BOTH);
+
+        $orcamentos_query_2015 = $pdo->prepare("select 
+                                        ano, valor
+                                    from orcamentos
+                                    where organizacao_id = ? and ano = ?");
+        $orcamentos_query_2015->bindValue(1, 1091);
+        $orcamentos_query_2015->bindValue(2, 2015);
+        $orcamentos_query_2015->execute();
+
+        //passando os valores encontrados para um array
+        $orcamentos_2015 =  $orcamentos_query_2015->fetch(PDO::FETCH_BOTH);
+
+        $orcamentos_query_2016 = $pdo->prepare("select 
+                                        ano, valor
+                                    from orcamentos
+                                    where organizacao_id = ? and ano = ?");
+        $orcamentos_query_2016->bindValue(1, 1091);
+        $orcamentos_query_2016->bindValue(2, 2016);
+        $orcamentos_query_2016->execute();
+
+        //passando os valores encontrados para um array
+        $orcamentos_2016 =  $orcamentos_query_2016->fetch(PDO::FETCH_BOTH);
 
 
-        $this->setRecursosFinaceirosLista($result['$recursos_finaceiros_lista']);
-        $this->setPoliticasPublicasList($result['$politicas_publicas_lista']);
-        $this->setFuncoes($result['$funcoes']);
-        $this->setNumeroBeneficiarios($result['$numero_beneficiarios']);
+        $this->setOrcamento_2014($orcamentos_2014['valor']);
+        $this->setOrcamento_2015($orcamentos_2015['valor']);
+        $this->setOrcamento_2016($orcamentos_2016['valor']);
 
 
-
-        $this->setEmpoderamentoNome_1($result['$empoderamento_nome_1;']);
-        $this->setEmpoderamentoDesc_1($result['$empoderamento_desc_1;']);
-        $this->setEmpoderamentoNome_2($result['$empoderamento_nome_2;']);
-        $this->setEmpoderamentoDesc_2($result['$empoderamento_desc_2;']);
-        $this->setEmpoderamentoNome_3($result['$empoderamento_nome_3;']);
-        $this->setEmpoderamentoDesc_3($result['$empoderamento_desc_3;']);
-
-        $this-> setEstados($result['$estados;']);
-
-        $this-> setRelaciona_1($result['$relaciona_1;']);
-        $this-> setRelaciona_2($result['$relaciona_2;']);
-        $this-> setRelaciona_3($result['$relaciona_3;']);
-
-        $this->setTemas($result['$temas;']);
-        $this->setSubtemas($result['$subtemas;']);
-
-
-        $this->setRegiao($result['$regiao;']);
-        $this->setEstado($result['$estado;']);
-        $this->setCidade($result['$cidade;']);
-        $this->setBairro($result['$bairro;']);
-        $this->setRua($result['$rua;']);
-        $this->setNumero($result['$numero;']);
-        $this->setComplemento($result['$complemento;']);
-        $this->setCep($result['$cep;']);
-
-
-        $this->setSite($result['$site;']);
-        $this->setFacebook($result['$facebook;']);
-        $this-> setTwitter($result['$twitter;']);
-        $this->setLinkedin($result['$linkedin;']);
-        $this->setInstagram($result['$instagram;']);
-        $this->setOutros($result['$outros;']);
-
-
-        $this->setIndicaNome_1($result['$indica_nome_1;']);
-        $this->setIndicaEmail_1($result['$indica_email_1;']);
-        $this->setIndicaTelefone_1($result['$indica_telefone_1;']);
-        $this->setIndicaNome_2($result['$indica_nome_2;']);
-        $this->setIndicaEmail_2($result['$indica_email_2;']);
-        $this->setIndicaTelefone_2($result['$indica_telefone_2;']);
-        $this->setIndicaNome_3($result['$indica_nome_3;']);
-        $this->setIndicaEmail_3($result['$indica_email_3;']);
-        $this->setIndicaTelefone_3($result['$indica_telefone_3;']);
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
+        //*****Verificar como popular checkbox******//
         
+        // $recuros_financeiros_query = $pdo->prepare("select 
+        //                                                 tipo
+        //                                             from origem_recursos
+        //                                             where organizacao_id = ?");
+        // $recuros_financeiros_query->bindValue(1, 1091);
+        // $recuros_financeiros_query->execute();
+
+        // //passando os valores encontrados para um array
+        // $recuros_financeiros =  $recuros_financeiros_query->fetch(PDO::FETCH_BOTH);
+        // foreach($recuros_financeiros as $value){
+        //     $this->setRecursosFinaceirosLista($value);
+        // }
+
+
+        // $this->setPoliticasPublicasList($result['$politicas_publicas_lista']);
+        // $this->setFuncoes($result['$funcoes']);
+        // $this->setNumeroBeneficiarios($result['$numero_beneficiarios']);
 
 
 
+        // $this->setEmpoderamentoNome_1($result['$empoderamento_nome_1;']);
+        // $this->setEmpoderamentoDesc_1($result['$empoderamento_desc_1;']);
+        // $this->setEmpoderamentoNome_2($result['$empoderamento_nome_2;']);
+        // $this->setEmpoderamentoDesc_2($result['$empoderamento_desc_2;']);
+        // $this->setEmpoderamentoNome_3($result['$empoderamento_nome_3;']);
+        // $this->setEmpoderamentoDesc_3($result['$empoderamento_desc_3;']);
 
-      
+        // $this-> setEstados($result['$estados;']);
 
+        // $this-> setRelaciona_1($result['$relaciona_1;']);
+        // $this-> setRelaciona_2($result['$relaciona_2;']);
+        // $this-> setRelaciona_3($result['$relaciona_3;']);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        // $this->setTemas($result['$temas;']);
+        // $this->setSubtemas($result['$subtemas;']);
 
 
+        // $this->setSite($result['$site;']);
+        // $this->setFacebook($result['$facebook;']);
+        // $this-> setTwitter($result['$twitter;']);
+        // $this->setLinkedin($result['$linkedin;']);
+        // $this->setInstagram($result['$instagram;']);
+        // $this->setOutros($result['$outros;']);
 
 
-
-
-
-
-
-
-
-        
-        
+        // $this->setIndicaNome_1($result['$indica_nome_1;']);
+        // $this->setIndicaEmail_1($result['$indica_email_1;']);
+        // $this->setIndicaTelefone_1($result['$indica_telefone_1;']);
+        // $this->setIndicaNome_2($result['$indica_nome_2;']);
+        // $this->setIndicaEmail_2($result['$indica_email_2;']);
+        // $this->setIndicaTelefone_2($result['$indica_telefone_2;']);
+        // $this->setIndicaNome_3($result['$indica_nome_3;']);
+        // $this->setIndicaEmail_3($result['$indica_email_3;']);
+        // $this->setIndicaTelefone_3($result['$indica_telefone_3;']);
 
 	
 	}

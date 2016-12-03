@@ -46,8 +46,6 @@
     $edit = new editar;
     $edit->busca();
 
-     echo $edit->getLocalizacao();
-
 ?>
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
@@ -328,7 +326,7 @@
                           var myDate = new Date();
                           var year = myDate.getFullYear();
                           for(var i = 1900; i < year+1; i++){
-                              document.write('<option value=""'+i+'">'+i+'</option>');
+                              document.write('<option value=""'+i+'" <?=($edit->getEmail() == "'+i+'")?selected:''?>>'+i+'</option>');
                           }
                           </script>
                     </select>
@@ -339,43 +337,47 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas">
                         <option value=""></option>
-                        <option value="1-5">1-5</option>
-                        <option value="6-10">6-10</option>
-                        <option value="11-20">11-20</option>
-                        <option value="21-50">21-50</option>
-                        <option value="51-100">51-100</option>
-                        <option value="101-500">101-500</option>
-                        <option value="251-1000">251-1000</option>
-                        <option value="501-1000">501-1000</option>
-                        <option value="1001+">1001+</option>     
+                        <option value="1-5" <?=($edit->getQtdePessoas() == '1-5')?'selected':''?>>1-5</option>
+                        <option value="6-10" <?=($edit->getQtdePessoas() == '6-10')?'selected':''?>>6-10</option>
+                        <option value="11-20" <?=($edit->getQtdePessoas() == '11-20')?'selected':''?>>11-20</option>
+                        <option value="21-50" <?=($edit->getQtdePessoas() == '21-50')?'selected':''?>>21-50</option>
+                        <option value="51-100" <?=($edit->getQtdePessoas() == '51-100')?'selected':''?>>51-100</option>
+                        <option value="101-500" <?=($edit->getQtdePessoas() == '101-500')?'selected':''?>>101-500</option>
+                        <option value="251-1000" <?=($edit->getQtdePessoas() == '251-1000')?'selected':''?>>251-1000</option>
+                        <option value="501-1000" <?=($edit->getQtdePessoas() == '501-1000')?'selected':''?>>501-1000</option>
+                        <option value="1001+" <?=($edit->getQtdePessoas() == '1001+')?'selected':''?>>1001+</option>     
                     </select>
 
                 <h5>Qual foi seu orçamento em?*</h5>
                  <h5>2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
-                    <input type="text" name="orcamento_2014" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2014">
+                    <input type="text" name="orcamento_2014" value="<?php  echo $edit->getOrcamento_2014(); ?>" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2014">
 
                 </div>
                 <h5>2015</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2015</label>
-                    <input type="text" name="orcamento_2015"  placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2015" >
+                    <input type="text" name="orcamento_2015" value="<?php  echo $edit->getOrcamento_2015(); ?>"  placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2015" >
                 </div>
                 <h5>2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
-                    <input type="text" name="orcamento_2016"  placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2016">
+                    <input type="text" name="orcamento_2016" value="<?php  echo $edit->getOrcamento_2016(); ?>"  placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2016">
                 </div>
 
                 <h5>Sua Organizaçāo recebe recursos financeiros?</h5>
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="recursos" value="sim" class="form-control-radio"> Sim
+                        <input type="radio" name="recursos" value="sim"
+                        <?php if($edit->getRecursosFinaceiros() != "sim"){ echo "selected"; } ?>
+                         class="form-control-radio"> Sim
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="recursos" value="nao" class="form-control-radio"> Nāo
+                        <input type="radio" name="recursos" value="nao"
+                        <?php if($edit->getRecursosFinaceiros() != "nao"){ echo "selected"; } ?>
+                         class="form-control-radio"> Nāo
                     </label>
                 </div>
 
@@ -398,7 +400,7 @@
                 <div>
                     <h5>Doação pessoa Física<br></h5>
                     <input type="checkbox" name="recursos_origem[]" value="Doação pessoa Física"><br>
-				
+                
 </div><!--form group-->
 
 
@@ -629,45 +631,11 @@
     </script> 
 
 
-<!--
- <script>
-            var SelectMaximo = 3;
-
-            function verificarSelect() {
-            var Marcados = 0;
-            var objSelect = $("option[name='subtemas']");
-            //Percorrendo os checks para ver quantos foram selecionados:
-            for (var iLoop1=0; iLoop1<objSelect.length; iLoop1++) {
-            //Se o número máximo de select ainda não tiver sido atingido, continua a verificação:
-                if (objSelect[iLoop1].selected) {
-                    Marcados++;
-                }
-                
-                if (Marcados <= SelectMaximo) {
-                //Habilitando todos os select, pois o máximo ainda não foi alcançado.
-                for (var i=0; i<objSelect.length; i++) {
-                    objSelect[i].disabled = false;
-                }       
-                //Caso contrário, desabilitar o select;
-                //Nesse caso, é necessário percorrer todas as opções novamente, desabilitando as não selecionadas;
-                
-                } else {
-                    for (var i=0; i<objSelect.length; i++) {
-                        if(objSelect[i].checked == false) {
-                            objSelect[i].disabled = true;
-                        }       
-                  }
-                }
-            }
-            }
-</script>
--->
-
                 <h5>O que faz sua organização?*(até 500 caracteres)</h5>                                  
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
                     <textarea name="sobre" maxlength="500" placeholder="campo com capacidade para 500 caracteres...." 
-                    class="f1-about-yourself form-control" id="sobre" ></textarea>
+                    class="f1-about-yourself form-control" id="sobre" ><?php echo $edit->getDescricao() ?></textarea>
                 </div>
 
                  <h5>Qual é a sua função no ecossistema?*</h5>
@@ -691,13 +659,20 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="publico_alvo" name="publico_alvo" >
                         <option value=""></option>
-                        <option value="Empresas">Empresas</option>
-                        <option value="Organizações Sociais">Organizações Sociais</option>
-                        <option value="Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher</option><br>
-                        <option value="Movimentos, coletivos, redes, fóruns">Movimentos, coletivos, redes, fóruns</option>
-                        <option value="Adolescentes e jovens">Adolescentes e jovens</option>
-                        <option value="Homens">Homens</option>
-                        <option value="Mulheres">Mulheres</option>
+                        <option value="Empresas" <?=($edit->getPublicoAtendido() == 'Empresas')?'selected':''?>
+                            >Empresas</option>
+                        <option value="Organizações Sociais" <?=($edit->getPublicoAtendido() == 'Organizações Sociais')?'selected':''?>
+                            >Organizações Sociais</option>
+                        <option value="Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher" <?=($edit->getPublicoAtendido() == 'Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher')?'selected':''?>
+                            >Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher</option><br>
+                        <option value="Movimentos, coletivos, redes, fóruns" <?=($edit->getPublicoAtendido() == 'Movimentos, coletivos, redes, fóruns')?'selected':''?>
+                            >Movimentos, coletivos, redes, fóruns</option>
+                        <option value="Adolescentes e jovens" <?=($edit->getPublicoAtendido() == 'Adolescentes e jovens')?'selected':''?>
+                            >Adolescentes e jovens</option>
+                        <option value="Homens" <?=($edit->getPublicoAtendido() == 'Homens')?'selected':''?>
+                            >Homens</option>
+                        <option value="Mulheres" <?=($edit->getPublicoAtendido() == 'Mulheres')?'selected':''?>
+                            >Mulheres</option>
                            
                     </select>
 
@@ -764,11 +739,13 @@
 
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="politicas_publicas" value="nao" class="form-control-radio"> Nāo
+                        <input type="radio" name="politicas_publicas" <?=($edit->getPoliticasPublicas() == 'nao')?'checked=checked':''?>
+                         value="nao" class="form-control-radio"> Nāo
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="politicas_publicas" value="sim" class="form-control-radio"> Sim
+                        <input type="radio" name="politicas_publicas" <?=($edit->getPoliticasPublicas() == 'sim')?'checked=checked':''?>
+                        value="sim" class="form-control-radio"> Sim
                     </label>
                 </div>
                 
@@ -798,10 +775,12 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" name="monitoramento_atv" id="avaliacao">
                         <option value=""></option>
-                        <option value="nao">Nāo</option>
-                        <option value="sim">Sim</option>
+                        <option value="nao" <?=($edit->getMonitoramentoAtividades() == '')?'selected':''?>
+                        >Nāo</option>
+                        <option value="sim" <?=($edit->getMonitoramentoAtividades() != '')?'selected':''?>
+                        >Sim</option>
                     </select>
-                    <textarea type="text" id="inputAvaliacaoOng" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
+                    <textarea type="text" id="inputAvaliacaoOng" name= "inputAvaliacaoOng" value="<? echo $edit->getMonitoramentoAtividades(); ?>" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
                         "style='display: none' /></textarea>
                     <script>
 
@@ -846,10 +825,12 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="organizacao-comunicacao" name="comunicacao">
                         <option value=""></option>
-                        <option value="nao">Nāo</option>
-                        <option value="sim,qual?">Sim, qual?</option>
+                        <option value="nao" <?=($edit->getEstrategiaComunicacao() == '')?'selected':''?>
+                        >Nāo</option>
+                        <option value="sim,qual?" <?=($edit->getEstrategiaComunicacao() == '')?'selected':''?>
+                        >Sim, qual?</option>
                     </select>
-                    <textarea type="text" id="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
+                    <textarea type="text" id="inputComunicacaoOng" value="<? echo $edit->getEstrategiaComunicacao(); ?>" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 "style='display: none' /></textarea>
                     <script>
 
@@ -894,11 +875,13 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="premiacao" name="premiacao">
                         <option value=""></option>
-                        <option value="nao">Nāo</option>
-                        <option value="sim,quais?">Sim, quais?</option> 
+                        <option value="nao" <?=($edit->getPremiacaoCertificacao() == '')?'selected':''?>
+                        >Nāo</option>
+                        <option value="sim,quais?" <?=($edit->getPremiacaoCertificacao() == '')?'selected':''?>
+                        >Sim, quais?</option> 
                         
                     </select>
-                    <textarea type="text" id="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
+                    <textarea type="text" id="inputPremiacaoOng" value="<? echo $edit->getPremiacaoCertificacao(); ?>" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 "style='display: none' /></textarea>
                     <script>
 
@@ -967,11 +950,16 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Região</label>
                     <select class="f1-last-name form-control" name="regiao" id="regiao">
-                        <option value="norte">Norte</option>
-                        <option value="nordeste">Nordeste</option>
-                        <option value="centro-oeste">Centro-Oeste</option>
-                        <option value="sul">Sul</option>
-                        <option value="sudeste">Sudeste</option>
+                        <option value="norte" <?=($edit->getRegiao() == 'norte')?'selected':''?>
+                        >Norte</option>
+                        <option value="nordeste" <?=($edit->getRegiao() == 'nordeste')?'selected':''?>
+                        >Nordeste</option>
+                        <option value="centro-oeste" <?=($edit->getRegiao() == 'centro-oeste')?'selected':''?>
+                        >Centro-Oeste</option>
+                        <option value="sul" <?=($edit->getRegiao() == 'sul')?'selected':''?>
+                        >Sul</option>
+                        <option value="sudeste" <?=($edit->getRegiao() == 'sudeste')?'selected':''?>
+                        >Sudeste</option>
                     </select> 
                 </div>
                  <div class="form-group">
@@ -989,23 +977,23 @@
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Bairro</label>
-                <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control">
+                <input type="text" value="<?php echo $edit->getBairro(); ?>" name="bairro" placeholder="Bairro..." class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-facebook">Rua</label>
-                    <input type="text" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control">
+                    <input type="text" value="<?php echo $edit->getRua(); ?>" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número</label>
-                    <input type="text" name="numero" placeholder="Numero...*" class="f1-last-name form-control">
+                    <input type="text" value="<?php echo $edit->getNumero(); ?>" name="numero" placeholder="Numero...*" class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Complemento</label>
-                    <input type="text" name="complemento" placeholder="Complemento...*" class="f1-last-name form-control">
+                    <input type="text" value="<?php echo $edit->getComplemento(); ?>" name="complemento" placeholder="Complemento...*" class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep</label>
-                    <input type="text" name="cep" placeholder="CEP...*" class="f1-last-name form-control">
+                    <input type="text" value="<?php echo $edit->getCep(); ?>" name="cep" placeholder="CEP...*" class="f1-last-name form-control">
                 </div> 
 
                <div class="f1-buttons">
