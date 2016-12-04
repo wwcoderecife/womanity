@@ -784,7 +784,16 @@ class Editar extends Conexao {
         }
         $this->setFuncoes($array_funcoes);
 
+        $funcoes_query = $pdo->prepare("select 
+                                        complemento
+                                    from funcoes
+                                    where organizacao_id = ?
+                                    and complemento != 0");
+        $funcoes_query->bindValue(1, 1091);
+        $funcoes_query->execute();
 
+        $funcoes = $funcoes_query->fetch(PDO::FETCH_BOTH);
+        $this->setNumeroBeneficiarios($funcoes['complemento']);
 
         //*****popular checkbox******//
         
@@ -979,18 +988,43 @@ class Editar extends Conexao {
         $relacionada_3 =  $relacionada_3_query->fetch(PDO::FETCH_BOTH);
         $this-> setRelaciona_3($relacionada_3['nome']);
 
-
-        // $this->setNumeroBeneficiarios($result['$numero_beneficiarios']);
-
-
-
-        // $this-> setEstados($result['$estados;']);
-
         
 
-        // $this->setSubtemas($result['$subtemas;']);
+        //*****popular checkbox******//
+        
+        $subtemas_query = $pdo->prepare("select 
+                                        subtema
+                                    from subtemas
+                                    where organizacao_id = ? ");
+        $subtemas_query->bindValue(1, 1091);
+        $subtemas_query->execute();
 
 
+        //passando os valores encontrados para um array
+        $subtemas =  $subtemas_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_subtemas = [];
+        foreach ($subtemas as $row){
+           array_push($array_subtemas, $row);
+        }
+        $this->setSubtemas($array_subtemas);
+
+
+
+        $atuacao_direta_query = $pdo->prepare("select 
+                                        estado
+                                    from atuacao_direta
+                                    where organizacao_id = ? ");
+        $atuacao_direta_query->bindValue(1, 1091);
+        $atuacao_direta_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $atuacao_direta =  $atuacao_direta_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_atuacao_direta = [];
+        foreach ($atuacao_direta as $row){
+           array_push($array_atuacao_direta, $row);
+        }
+        $this->setEstados($array_atuacao_direta);
 
 
 	

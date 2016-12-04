@@ -52,6 +52,10 @@
     $array_temas = $edit->getTemas();
     $array_funcoes = $edit->getFuncoes();
     $array_politicas_publicas = $edit->getPoliticasPublicasList();  
+    $array_subtema = $edit->getSubtemas();
+    $array_estados = $edit->getEstados();
+
+    echo print_r ($edit->getEstados());
 
 
     echo $edit->getFacebook();
@@ -699,49 +703,264 @@
 <div class="form-group">
 <label for="subtemas" for="f1-google-plus">Subtemas</label>
         <select class="f1-last-name form-control"id="subtemas" class="selectpicker" name="subtemas[ ]" data-style="default" multiple>
-            <option value="Aborto">Aborto</option>
-            <option value="Dança">Dança</option>
-            <option value="Inserção de mulheres na política">Inserção de mulheres na política</option>
-            <option value="Paternidade">Paternidade</option>
-            <option value="Tecnologia social e/ou alternativas">Tecnologia social e/ou alternativas</option>
-            <option value="Desenvolvimento e Programação">Desenvolvimento e Programação</option>
-            <option value="Liderança">Liderança</option>
-            <option value="Pessoa com deficiência">Pessoa com deficiência</option>
-            <option value="Trabalho digno">Trabalho digno</option>
-            <option value="Advocacy">Advocacy</option>
-            <option value="Ecofeminismo">Ecofeminismo</option>
-            <option value="Povos tradicionais">Povos tradicionais</option>
-            <option value="Tráfico de pessoas">Tráfico de pessoas</option>
-            <option value="Água e saneamento básico">Água e saneamento básico</option>
-            <option value="Economia criativa">Economia criativa</option>
-            <option value="Marketing">Marketing</option>
-            <option value="Preconceito e discriminação">Preconceito e discriminação</option>
-            <option value="Tecnologia">Tecnologia</option>
-            <option value="Artes plásticas">Artes plásticas</option>
-            <option value="Parto Humano">Parto Humano</option>
-            <option value="Cadeia produtiva responsável">Cadeia produtiva responsável</option>
-            <option value="Educomunicação">Educomunicação</option>
-            <option value="Microcrédito">Microcrédito</option>
-            <option value="Questão presidiária">Questão presidiária</option>
-            <option value="Cinema">Cinema</option>
-            <option value="Envelhecimento">Envelhecimento</option>
-            <option value="Mobilização">Mobilização</option>
-            <option value="Reciclagem e logísitca diversa">Reciclagem e logísitca diversa</option>
-            <option value="Finanças sociais">Finanças sociais</option>
-            <option value="Mudanças climáticas">Mudanças climáticas</option>
-            <option value="Redes Sociais">Redes Sociais</option>
-            <option value="Conselhos e outras instâncias">Conselhos e outras instâncias</option>
-            <option value="Fotografia">Fotografia</option>
-            <option value="Mulheres no mundo da ciências">Mulheres no mundo da ciências</option>
-            <option value="Refugiados">Refugiados</option>
-            <option value="Consumo">Consumo</option>
-            <option value="Incentivo à leitura">Incentivo à leitura</option>
-            <option value="Obesidade infantil">Obesidade infantil</option>
-            <option value="Reparação-reconstrução">Reparação-reconstrução</option>
-            <option value="Cooperativismo">Cooperativismo</option>
-            <option value="Inclusão Digital">Inclusão Digital</option>
-            <option value="Teatro">Teatro</option>
-            <option value="Sustentabilidade">Sustentabilidade</option>
+            <option value="Aborto"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Aborto', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Aborto</option>
+            <option value="Dança"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Dança', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Dança</option>
+            <option value="Inserção de mulheres na política"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Inserção de mulheres na política', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Inserção de mulheres na política</option>
+            <option value="Paternidade" 
+            <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Paternidade', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+                >Paternidade</option>
+            <option value="Tecnologia social e/ou alternativas"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Tecnologia social e/ou alternativas', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Tecnologia social e/ou alternativas</option>
+            <option value="Desenvolvimento e Programação"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Desenvolvimento e Programação', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Desenvolvimento e Programação</option>
+            <option value="Liderança"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Liderança', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Liderança</option>
+            <option value="Pessoa com deficiência"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Pessoa com deficiência', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Pessoa com deficiência</option>
+            <option value="Trabalho digno"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Trabalho digno', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Trabalho digno</option>
+            <option value="Advocacy" 
+            <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Advocacy', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Advocacy</option>
+            <option value="Ecofeminismo"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Ecofeminismo', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Ecofeminismo</option>
+            <option value="Povos tradicionais"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Povos tradicionais', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Povos tradicionais</option>
+            <option value="Tráfico de pessoas"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Tráfico de pessoas', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Tráfico de pessoas</option>
+            <option value="Água e saneamento básico"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Água e saneamento básico', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Água e saneamento básico</option>
+            <option value="Economia criativa"  
+            <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Economia criativa', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Economia criativa</option>
+            <option value="Marketing"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Marketing', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Marketing</option>
+            <option value="Preconceito e discriminação"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Preconceito e discriminação', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Preconceito e discriminação</option>
+            <option value="Tecnologia"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Tecnologia', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Tecnologia</option>
+            <option value="Artes plásticas"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Artes plásticas', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Artes plásticas</option>
+            <option value="Parto Humano"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Parto Humano', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Parto Humano</option>
+            <option value="Cadeia produtiva responsável"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Cadeia produtiva responsável', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Cadeia produtiva responsável</option>
+            <option value="Educomunicação"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Educomunicação', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Educomunicação</option>
+            <option value="Microcrédito"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Microcrédito', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Microcrédito</option>
+            <option value="Questão presidiária"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Questão presidiária', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Questão presidiária</option>
+            <option value="Cinema"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Cinema', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Cinema</option>
+            <option value="Envelhecimento"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Envelhecimento', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Envelhecimento</option>
+            <option value="Mobilização"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Mobilização', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Mobilização</option>
+            <option value="Reciclagem e logísitca diversa"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Reciclagem e logísitca diversa', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Reciclagem e logísitca diversa</option>
+            <option value="Finanças sociais"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Finanças sociais', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Finanças sociais</option>
+            <option value="Mudanças climáticas"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Mudanças climáticas', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Mudanças climáticas</option>
+            <option value="Redes Sociais"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Redes Sociais', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Redes Sociais</option>
+            <option value="Conselhos e outras instâncias"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Conselhos e outras instâncias', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Conselhos e outras instâncias</option>
+            <option value="Fotografia"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Fotografia', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Fotografia</option>
+            <option value="Mulheres no mundo da ciências"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Mulheres no mundo da ciências', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Mulheres no mundo da ciências</option>
+            <option value="Refugiados"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Refugiados', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Refugiados</option>
+            <option value="Consumo"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Consumo', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Consumo</option>
+            <option value="Incentivo à leitura"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Incentivo à leitura', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Incentivo à leitura</option>
+            <option value="Obesidade infantil"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Obesidade infantil', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Obesidade infantil</option>
+            <option value="Reparação-reconstrução"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Reparação-reconstrução', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Reparação-reconstrução</option>
+            <option value="Cooperativismo"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Cooperativismo', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Cooperativismo</option>
+            <option value="Inclusão Digital"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Inclusão Digital', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Inclusão Digital</option>
+            <option value="Teatro"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Teatro', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Teatro</option>
+            <option value="Sustentabilidade"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Sustentabilidade', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Sustentabilidade</option>
 
         </select>
 
@@ -788,7 +1007,7 @@
                         } ?>
                     >Atuação direta com mulheres, homens, LGBTT, etc<br>
 
-                 <input type="numeric"  name="numero_beneficiarios" placeholder="número de beneficiários diretos" style="margin-left: 20px" class="f1-last-name form-control"><br>
+                 <input type="numeric"  name="numero_beneficiarios" value="<?php echo $edit->getNumeroBeneficiarios(); ?>" placeholder="número de beneficiários diretos" style="margin-left: 20px" class="f1-last-name form-control"><br>
                  <input type="checkbox" name="funcao[ ]" value="Financiadores"class="form-control-radio"
                     <?php 
                         for($i = 0; $i <= count($array_funcoes)-1; $i++){
@@ -874,33 +1093,166 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" name="organizacao_estado[ ]" multiple >
                         <div class="help-block with-errors"></div>
-                      <option value="Acre">Acre</option>
-                        <option value="Alagoas">Alagoas</option>
-                        <option value="Amapá">Amapá</option>
-                        <option value="Amazonas">Amazonas</option>
-                        <option value="Bahia">Bahia</option>
-                        <option value="Ceará">Ceará</option>
-                        <option value="Distrito Federal">Distrito Federal</option>
-                        <option value="Espírito Santo">Espírito Santo</option>
-                        <option value="Goiás">Goiás</option>
-                        <option value="Maranhão">Maranhão</option>
-                        <option value="Mato Grosso">Mato Grosso</option>
-                        <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
-                        <option value="Minas Gerais">Minas Gerais</option>
-                        <option value="Pará">Pará</option>
-                        <option value="Paraíba">Paraíba</option>
-                        <option value="Paraná">Paraná</option>
-                        <option value="Pernambuco">Pernambuco</option>
-                        <option value="Piauí">Piauí</option>
-                        <option value="Rio de Janeiro">Rio de Janeiro</option>
-                        <option value="Rio Grande do Norte">Rio Grande do Norte</option>
-                        <option value="Rio Grande do Sul">Rio Grande do Sul</option>
-                        <option value="Rondônia">Rondônia</option>
-                        <option value="Roraima">Roraima</option>
-                        <option value="Santa Catarina">Santa Catarina</option>
-                        <option value="São Paulo">São Paulo</option>
-                        <option value="Sergipe">Sergipe</option>
-                        <option value="Tocantins">Tocantins</option>
+                        <option value="Acre"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Acre', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Acre</option>
+                        <option value="Alagoas"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Alagoas', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Alagoas</option>
+                        <option value="Amapá"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Amapá', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Amapá</option>
+                        <option value="Amazonas"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Amazonas', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Amazonas</option>
+                        <option value="Bahia"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Bahia', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>>Bahia</option>
+                        <option value="Ceará"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Ceará', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Ceará</option>
+                        <option value="Distrito Federal"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Distrito Federal', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Distrito Federal</option>
+                        <option value="Espírito Santo"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Espírito Santo', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Espírito Santo</option>
+                        <option value="Goiás"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Goiás', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Goiás</option>
+                        <option value="Maranhão"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Maranhão', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Maranhão</option>
+                        <option value="Mato Grosso"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Mato Grosso', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Mato Grosso</option>
+                        <option value="Mato Grosso do Sul"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Mato Grosso do Sul', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Mato Grosso do Sul</option>
+                        <option value="Minas Gerais"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Minas Gerais', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Minas Gerais</option>
+                        <option value="Pará"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Pará', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Pará</option>
+                        <option value="Paraíba"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Paraíba', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Paraíba</option>
+                        <option value="Paraná"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Paraná', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Paraná</option>
+                        <option value="Pernambuco"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Pernambuco', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Pernambuco</option>
+                        <option value="Piauí"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Piauí', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>>Piauí</option>
+                        <option value="Rio de Janeiro"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Rio de Janeiro', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Rio de Janeiro</option>
+                        <option value="Rio Grande do Norte"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Rio Grande do Norte', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Rio Grande do Norte</option>
+                        <option value="Rio Grande do Sul"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Rio Grande do Sul', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Rio Grande do Sul</option>
+                        <option value="Rondônia"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Rondônia', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Rondônia</option>
+                        <option value="Roraima"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Roraima', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Roraima</option>
+                        <option value="Santa Catarina"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Santa Catarina', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Santa Catarina</option>
+                        <option value="São Paulo"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('São Paulo', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >São Paulo</option>
+                        <option value="Sergipe"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Sergipe', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Sergipe</option>
+                        <option value="Tocantins"
+                        <?php 
+                        for($i = 0; $i <= count($array_estados)-1; $i++){
+                            if(in_array('Tocantins', $array_estados[$i])) : ?> selected="selected" <?php endif; 
+                        } ?>
+                        >Tocantins</option>
                     </select>
 
 
