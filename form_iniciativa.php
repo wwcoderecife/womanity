@@ -274,10 +274,10 @@
                 <h5> Quando sua iniciativa começou as atividades?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="year" name="anoatividade" >
+                    <select class="f1-last-name form-control" id="year_organizacao" name="anoatividade" >
                     <div class="help-block with-errors"></div>
                         <script>
-                           var myDate = new Date();
+                          var myDate = new Date();
                           var year = myDate.getFullYear();
                           for(var i = 1900; i < year+1; i++){
                               $('#year_organizacao')
