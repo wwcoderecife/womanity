@@ -46,6 +46,14 @@
     $edit = new editar;
     $edit->busca();
 
+    //Array dos Checkboxs
+
+    $array_recursos_financeiros = $edit->getRecursosFinaceirosLista();
+    $array_temas = $edit->getTemas();
+    $array_funcoes = $edit->getFuncoes();
+    $array_politicas_publicas = $edit->getPoliticasPublicasList();    
+
+
 ?>
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
@@ -260,26 +268,26 @@
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus" ></label>
                     <select class="f1-last-name form-control" id="organizacao-tipo" name="tipo">
-                        <option value="academica" <?=($edit->getEmail() == 'academica')?'selected':''?>>
+                        <option value="academica" <?=($edit->getTipo() == 'academica')?'selected':''?>>
                          acadêmica
                         </option>
-                        <option value="coletivo" <?=($edit->getEmail() == 'coletivo')?'selected':''?>>
+                        <option value="coletivo" <?=($edit->getTipo() == 'coletivo')?'selected':''?>>
                             coletivo</option>
-                        <option value="empresa_privada" <?=($edit->getEmail() == 'empresa_privada')?'selected':''?>>
+                        <option value="empresa_privada" <?=($edit->getTipo() == 'empresa_privada')?'selected':''?>>
                             empresa privada</option>
-                        <option value="fundos"  <?=($edit->getEmail() == 'fundos')?'selected':''?>>
+                        <option value="fundos"  <?=($edit->getTipo() == 'fundos')?'selected':''?>>
                             fundos</option>
-                        <option value="governo" <?=($edit->getEmail() == 'governo')?'selected':''?>>
+                        <option value="governo" <?=($edit->getTipo() == 'governo')?'selected':''?>>
                             governo</option>
-                        <option value="movimento" <?=($edit->getEmail() == 'movimento')?'selected':''?>>
+                        <option value="movimento" <?=($edit->getTipo() == 'movimento')?'selected':''?>>
                             movimento</option>
-                        <option value="negocio_social" <?=($edit->getEmail() == 'negocio_social')?'selected':''?>>
+                        <option value="negocio_social" <?=($edit->getTipo() == 'negocio_social')?'selected':''?>>
                             negócio social</option>
-                        <option value="ong_sociedade_civil" <?=($edit->getEmail() == 'ong_sociedade_civil')?'selected':''?>>
+                        <option value="ong_sociedade_civil" <?=($edit->getTipo() == 'ong_sociedade_civil')?'selected':''?>>
                             organização da sociedade civil (ex: associação, ong, oscip, etc.)</option>
-                        <option value="rede" <?=($edit->getEmail() == 'rede')?'selected':''?>>
+                        <option value="rede" <?=($edit->getTipo() == 'rede')?'selected':''?>>
                             rede</option>
-                        <option value="outros" <?=($edit->getEmail() == 'outros')?'selected':''?>>
+                        <option value="outros" <?=($edit->getTipo() == 'outros')?'selected':''?>>
                             Outros</option>
                  </select> 
                     <input type="text" id="inputoutros" name="inputoutros" class="f1-last-name form-control" placeholder="descreva outro tipo"style='display: none' />
@@ -386,20 +394,56 @@
                 <div class="form-group">
                     <div>
                     <h5>Apoio a Projetos / Patrocínio<br></h5>
-                    <input type="checkbox" name="recursos_origem[]" value="empresas">empresas<br>
-                    <input type="checkbox" name="recursos_origem[]" value="institutos ou fundações empresariais">institutos ou fundações empresariais<br>
-                    <input type="checkbox" name="recursos_origem[]" value="organizações do sistema ONU">organizações do sistema ONU<br>
+                    <input type="checkbox" name="recursos_origem[]" value="empresas"
+                    <?php 
+                        for($i = 0; $i <= count($array_recursos_financeiros)-1; $i++){
+                            if(in_array('empresas', $array_recursos_financeiros[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    >empresas<br>
+                    <input type="checkbox" name="recursos_origem[]" value="institutos ou fundações empresariais"
+                    <?php 
+                        for($i = 0; $i <= count($array_recursos_financeiros)-1; $i++){
+                            if(in_array('institutos ou fundações empresariais', $array_recursos_financeiros[$i])) : ?> checked="checked" <?php endif;
+                        } ?>
+                    >institutos ou fundações empresariais<br>
+                    <input type="checkbox" name="recursos_origem[]" value="organizações do sistema ONU"
+                    <?php 
+                        for($i = 0; $i <= count($array_recursos_financeiros)-1; $i++){
+                            if(in_array('organizações do sistema ONU', $array_recursos_financeiros[$i])) : ?> checked="checked" <?php endif;
+                        } ?>
+                    >organizações do sistema ONU<br>
                 </div>
                 <div>
                     <h5>Edital Governamental<br></h5>
-                    <input type="checkbox" name="recursos_origem[]" value="município">município<br>
-                    <input type="checkbox" name="recursos_origem[]" value="estado">estado<br>
-                    <input type="checkbox" name="recursos_origem[]" value="governo federal">governo federal<br>
+                    <input type="checkbox" name="recursos_origem[]" value="município"
+                    <?php 
+                        for($i = 0; $i <= count($array_recursos_financeiros)-1; $i++){
+                            if(in_array('município', $array_recursos_financeiros[$i])) : ?> checked="checked" <?php endif; 
+                        }?>
+                    >município<br>
+                    <input type="checkbox" name="recursos_origem[]" value="estado"
+                    <?php 
+
+                        for($i = 0; $i <= count($array_recursos_financeiros)-1; $i++){
+                            if(in_array('estado', $array_recursos_financeiros[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    >estado<br>
+                    <input type="checkbox" name="recursos_origem[]" value="governo federal"
+                    <?php 
+                        for($i = 0; $i <= count($array_recursos_financeiros)-1; $i++){
+                            if(in_array('governo federal', $array_recursos_financeiros[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    >governo federal<br>
                 </div>
 
                 <div>
                     <h5>Doação pessoa Física<br></h5>
-                    <input type="checkbox" name="recursos_origem[]" value="Doação pessoa Física"><br>
+                    <input type="checkbox" name="recursos_origem[]" value="Doação pessoa Física"
+                    <?php 
+                        for($i = 0; $i <= count($array_recursos_financeiros)-1; $i++){
+                            if(in_array('Doação pessoa Física', $array_recursos_financeiros[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    ><br>
                 
 </div><!--form group-->
 
@@ -422,100 +466,187 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]" value="arte_cultura" class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" name="temas[ ]" value="arte_cultura" class="no-margin" onclick="verificar()"
+                        <?php 
+                        for($i = 0; $i <= count($array_temas)-1; $i++){
+                            if(in_array('arte_cultura', $array_temas[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    ></td>
                     <td>Arte e Cultura.</td>
                     <td>Promoção do acesso de mulheres à cultura e/ou incentivo à produção das várias expressões artísticas.</td>
                      
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="ciencia_tecnologia"class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" name="temas[ ]"value="ciencia_tecnologia"class="no-margin" onclick="verificar()"
+                         <?php 
+                        for($i = 0; $i <= count($array_temas)-1; $i++){
+                            if(in_array('ciencia_tecnologia', $array_temas[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    ></td>
                     <td>Ciência e Tecnologia.</td>
                     <td>Promoção do acesso a linguagens, equipamentos e/ou à produção de ciência e tecnologia por mulheres.</td>
                    
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="democracia_participação_politica"class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" name="temas[ ]"value="democracia_participação_politica"class="no-margin" onclick="verificar()"
+                         <?php 
+                        for($i = 0; $i <= count($array_temas)-1; $i++){
+                            if(in_array('democracia_participação_politica', $array_temas[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    ></td>
                     <td> Democracia e Participação Política.</td>
                     <td>Ações de incentivo à participação de mulheres na vida política e democrática institucional (partidos, conselhos, órgãos e instâncias dos poderes executivo, legislativo e judiciário).</td>
                 </tr>
 
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="educacao_formacao"class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" name="temas[ ]"value="educacao_formacao"class="no-margin" onclick="verificar()"
+                         <?php 
+                        for($i = 0; $i <= count($array_temas)-1; $i++){
+                            if(in_array('educacao_formacao', $array_temas[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    ></td>
                     <td>Educação e Formação.</td>
                     <td>Oferta de educação formal (escolar ou acadêmica), incentivo à escolaridade; formação de atores sociais, ações de educação popular e informal.</td>
                   
                 </tr>
 
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="empreendedorismo_feminino_autonomia_economica"class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" name="temas[ ]" value="empreendedorismo_feminino_autonomia_economica"class="no-margin" onclick="verificar()"
+                         <?php 
+                        for($i = 0; $i <= count($array_temas)-1; $i++){
+                            if(in_array('empreendedorismo_feminino_autonomia_economica', $array_temas[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    ></td>
                     <td>Empreendedorismo feminino e autonomia econômica.</td>
                     <td>Ações de incentivo ao empreendedorismo feminino e à autonomia econômica, por meio de capacitação e/ou financiamento, tais como capacitações, cooperativismo, microcrédito, etc.</td>
                 </tr>
 
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="enfrentamento_violencia"class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" name="temas[ ]" value="enfrentamento_violencia"class="no-margin" onclick="verificar()"
+                         <?php 
+                        for($i = 0; $i <= count($array_temas)-1; $i++){
+                            if(in_array('enfrentamento_violencia', $array_temas[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    ></td>
                     <td>Enfrentamento à Violência.</td>
                     <td>Trabalho de enfrentamento às mais variadas formas de violência, destinado a mulheres e homens.</td>
                   
 
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="equidade_Condições_trabalho"class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" name="temas[ ]" value="equidade_Condições_trabalho"class="no-margin" onclick="verificar()"
+                         <?php 
+                        for($i = 0; $i <= count($array_temas)-1; $i++){
+                            if(in_array('equidade_Condições_trabalho', $array_temas[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    ></td>
                     <td>Equidade e Condições de Trabalho.</td>
                     <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas 
     possibilidades de desenvolvimento profissional e equiparação salarial.</td>    
                 </tr>
 
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="esporte"class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" name="temas[ ]"value="esporte"class="no-margin" onclick="verificar()"
+                        <?php 
+                        for($i = 0; $i <= count($array_temas)-1; $i++){
+                            if(in_array('esporte', $array_temas[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    ></td>
                     <td>Esportes.</td>
                     <td>Oferta, promoção e incentivo à realização de práticas esportivas por meninas e mulheres, sobretudo em modalidades tradicionalmente dominadas por homens.</td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="indigenas"class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" name="temas[ ]"value="indigenas"class="no-margin" onclick="verificar()"
+                        <?php 
+                        for($i = 0; $i <= count($array_temas)-1; $i++){
+                            if(in_array('indigenas', $array_temas[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    ></td>
                     <td>Indígenas.</td>
                     <td>Ações destinadas à valorização das mulheres indígenas e ao enfrentamento de seus problemas específicos.</td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="LGBTT"class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" name="temas[ ]"value="LGBTT"class="no-margin" onclick="verificar()"
+                        <?php 
+                        for($i = 0; $i <= count($array_temas)-1; $i++){
+                            if(in_array('LGBTT', $array_temas[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    ></td>
                     <td>LGBTT (Lésbicas, Gays, Bissexuais, Travestis, Transexuais e Transgêneros).</td>
                     <td>Projetos que atuam pela valorização e afirmação de pessoas LGBTT e combatem a violência e a discriminação contra esses públicos.</td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="masculinidade"class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" name="temas[ ]"value="masculinidade"class="no-margin" onclick="verificar()"
+                        <?php 
+                        for($i = 0; $i <= count($array_temas)-1; $i++){
+                            if(in_array('masculinidade', $array_temas[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    ></td>
                     <td>Masculinidades.</td>
                     <td>Ações voltadas para questões relativas à revisão do conceito hegemônico de masculinidade, a partir da perspectiva das relações de gênero.</td>
                 </tr>
                 <tr>
-                     <td><input type="checkbox" name="temas[ ]"value="meio ambiente,seguranca,agricultura"class="no-margin" onclick="verificar()"></td>
+                     <td><input type="checkbox" name="temas[ ]"value="meio ambiente,seguranca,agricultura"class="no-margin" onclick="verificar()"
+                        <?php 
+                        for($i = 0; $i <= count($array_temas)-1; $i++){
+                            if(in_array('meio ambiente,seguranca,agricultura', $array_temas[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    ></td>
                     <td>Meio Ambiente,Segurança Alimentar e Agricultura.</td>
                     <td>Trabalhos que relacionam questões de gênero, feminismo e meio ambiente. 
     Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis e ambientalmente sustentáveis.</td>
                 </tr>
 
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="midia_comunicacao"class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" name="temas[ ]"value="midia_comunicacao"class="no-margin" onclick="verificar()"
+                        <?php 
+                        for($i = 0; $i <= count($array_temas)-1; $i++){
+                            if(in_array('midia_comunicacao', $array_temas[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    ></td>
                     <td>Mídia e Comunicação.</td>
                     <td>Promoção do acesso de mulheres aos meios de comunicação pelo domínio de técnicas, equipamentos e linguagens; monitoramento da presença da mulher nas mídias e da cobertura de temas sobre as questões das mulheres.</td>
                </tr>
 
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="moradia"class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" name="temas[ ]"value="moradia"class="no-margin" onclick="verificar()"
+                        <?php 
+                        for($i = 0; $i <= count($array_temas)-1; $i++){
+                            if(in_array('moradia', $array_temas[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    ></td>
                     <td>Moradia.</td>
                     <td>Ações que visam contribuir para o direito das mulheres à moradia e desenvolvimento de habilidades para a construção ou reformas de casas.</td>
                </tr>
 
                <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="negritude"class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" name="temas[ ]"value="negritude"class="no-margin" onclick="verificar()"
+                        <?php 
+                        for($i = 0; $i <= count($array_temas)-1; $i++){
+                            if(in_array('negritude', $array_temas[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    ></td>
                     <td>Negritude.</td>
                     <td>Ações de valorização da estética e da identidade das mulheres negras e de combate ao racismo.</td>
                </tr>
 
-               <tr> <td><input type="checkbox" name="temas[ ]"value="paz_seguranca_publica"class="no-margin" onclick="verificar()"></td>
+               <tr> 
+                    <td><input type="checkbox" name="temas[ ]"value="paz_seguranca_publica"class="no-margin" onclick="verificar()"
+                        <?php 
+                        for($i = 0; $i <= count($array_temas)-1; $i++){
+                            if(in_array('paz_seguranca_publica', $array_temas[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    ></td>
                     <td>Paz e Segurança pública.</td>
                     <td>Projetos que tratam da interface entre gênero e sistema de segurança pública, sobretudo questões da violência armada.</td>
                </tr>
 
-               <tr> <td><input type="checkbox" name="temas[ ]"value="saude_bemestar"class="no-margin" onclick="verificar()"></td>
+               <tr> 
+                <td><input type="checkbox" name="temas[ ]"value="saude_bemestar"class="no-margin" onclick="verificar()"
+                    <?php 
+                        for($i = 0; $i <= count($array_temas)-1; $i++){
+                            if(in_array('saude_bemestar', $array_temas[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    ></td>
                     <td>Saúde e Bem-estar.</td>
                     <td>Iniciativas que tratam de questões de autoestima, qualidade de vida, saúde e bem-estar das mulheres.</td>
                </tr>
@@ -641,15 +772,50 @@
                  <h5>Qual é a sua função no ecossistema?*</h5>
 
                  <div class="form-group">
-                 <input type="checkbox" name="funcao[ ]" value="Advocacy">Advocacy<br>
-                 <input type="checkbox" name="funcao[ ]" value="Atuação direta com mulheres, homens, LGBTT, etc" class="form-control-radio">Atuação direta com mulheres, homens, LGBTT, etc<br>
+                 <input type="checkbox" name="funcao[ ]" value="Advocacy"
+                    <?php 
+                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
+                            if(in_array('Advocacy', $array_temas[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    >Advocacy<br>
+                 <input type="checkbox" name="funcao[ ]" value="Atuação direta com mulheres, homens, LGBTT, etc" class="form-control-radio"
+                 <?php 
+                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
+                            if(in_array('Atuação direta com mulheres, homens, LGBTT, etc', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    >Atuação direta com mulheres, homens, LGBTT, etc<br>
 
                  <input type="numeric"  name="numero_beneficiarios" placeholder="número de beneficiários diretos" style="margin-left: 20px" class="f1-last-name form-control"><br>
-                 <input type="checkbox" name="funcao[ ]" value="Financiadores"class="form-control-radio">Financiadores<br>
-                 <input type="checkbox" name="funcao[ ]" value="Fortalecedor institucional"class="form-control-radio">Fortalecedor institucional<br>
-                 <input type="checkbox" name="funcao[ ]" value="público" style="margin-left: 20px"class="form-control-radio">público
-                 <input type="checkbox" name="funcao[ ]" value="privado" style="margin-left: 20px"class="form-control-radio">privado
-                 <input type="checkbox" name="funcao[ ]" value="social"  style="margin-left: 20px"class="form-control-radio">social⁠⁠⁠⁠   
+                 <input type="checkbox" name="funcao[ ]" value="Financiadores"class="form-control-radio"
+                    <?php 
+                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
+                            if(in_array('Financiadores', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    >Financiadores<br>
+                 <input type="checkbox" name="funcao[ ]" value="Fortalecedor institucional"class="form-control-radio"
+                    <?php 
+                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
+                            if(in_array('Fortalecedor institucional', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    >Fortalecedor institucional<br>
+                 <input type="checkbox" name="funcao[ ]" value="público" style="margin-left: 20px"class="form-control-radio"
+                    <?php 
+                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
+                            if(in_array('público', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    >público
+                 <input type="checkbox" name="funcao[ ]" value="privado" style="margin-left: 20px"class="form-control-radio"
+                    <?php 
+                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
+                            if(in_array('privado', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    >privado
+                 <input type="checkbox" name="funcao[ ]" value="social"  style="margin-left: 20px"class="form-control-radio"
+                    <?php 
+                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
+                            if(in_array('social', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    >social⁠⁠⁠⁠   
                  </div>   
 
 
@@ -752,14 +918,29 @@
               
                 <div class="form-group">
                    <label class="checkbox-inline">
-                        <input type="checkbox" name="politicas_publicas_lista[]" value="municipal" class="form-control-radio">municipal
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="municipal" class="form-control-radio"
+                        <?php 
+                        for($i = 0; $i <= count($array_politicas_publicas)-1; $i++){
+                            if(in_array('municipal', $array_politicas_publicas[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    >municipal
                     </label>
 
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="politicas_publicas_lista[]" value="estadual" class="form-control-radio">estadual
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="estadual" class="form-control-radio"]
+                        <?php 
+                        for($i = 0; $i <= count($array_politicas_publicas)-1; $i++){
+                            if(in_array('estadual', $array_politicas_publicas[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    >estadual
                     </label>
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="politicas_publicas_lista[]" value="nacional" class="form-control-radio">nacional
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="nacional" class="form-control-radio"
+                        <?php 
+                        for($i = 0; $i <= count($array_politicas_publicas)-1; $i++){
+                            if(in_array('nacional', $array_politicas_publicas[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                    >nacional
                     </label>
                     <textarea name="organizaçāo_politica_publica" placeholder="Descreva como se deu essa influência em políticas públicas (em 500 caracteres)"
 

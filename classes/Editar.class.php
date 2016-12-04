@@ -722,24 +722,82 @@ class Editar extends Conexao {
         $this->setOrcamento_2016($orcamentos_2016['valor']);
 
 
-        //*****Verificar como popular checkbox******//
+        //*****popular checkbox******//
         
-        // $recuros_financeiros_query = $pdo->prepare("select 
-        //                                                 tipo
-        //                                             from origem_recursos
-        //                                             where organizacao_id = ?");
-        // $recuros_financeiros_query->bindValue(1, 1091);
-        // $recuros_financeiros_query->execute();
+        $recuros_financeiros_query = $pdo->prepare("select 
+                                                        tipo
+                                                    from origem_recursos
+                                                    where organizacao_id = ?");
+        $recuros_financeiros_query->bindValue(1, 1091);
+        $recuros_financeiros_query->execute();
 
-        // //passando os valores encontrados para um array
-        // $recuros_financeiros =  $recuros_financeiros_query->fetch(PDO::FETCH_BOTH);
-        // foreach($recuros_financeiros as $value){
-        //     $this->setRecursosFinaceirosLista($value);
-        // }
+        //passando os valores encontrados para um array
+        $recuros_financeiros =  $recuros_financeiros_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_recuros_financeiros = [];
+        foreach ($recuros_financeiros as $row){
+           array_push($array_recuros_financeiros, $row);
+        }
+        $this->setRecursosFinaceirosLista($array_recuros_financeiros);
 
 
-        // $this->setPoliticasPublicasList($result['$politicas_publicas_lista']);
-        // $this->setFuncoes($result['$funcoes']);
+        //*****popular checkbox******//
+        
+        $temas_query = $pdo->prepare("select 
+                                        tema
+                                    from temas
+                                    where organizacao_id = ?");
+        $temas_query->bindValue(1, 1091);
+        $temas_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $temas =  $temas_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_temas = [];
+        foreach ($temas as $row){
+           array_push($array_temas, $row);
+        }
+        $this->setTemas($array_temas);
+
+
+        //*****popular checkbox******//
+        
+        $funcoes_query = $pdo->prepare("select 
+                                        tipo
+                                    from funcoes
+                                    where organizacao_id = ?");
+        $funcoes_query->bindValue(1, 1091);
+        $funcoes_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $funcoes =  $funcoes_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_funcoes = [];
+        foreach ($funcoes as $row){
+           array_push($array_funcoes, $row);
+        }
+        $this->setFuncoes($array_funcoes);
+
+
+
+        //*****popular checkbox******//
+        
+        $politicas_publicas_query = $pdo->prepare("select 
+                                        tipo
+                                    from politicas_publicas
+                                    where organizacao_id = ?");
+        $politicas_publicas_query->bindValue(1, 1091);
+        $politicas_publicas_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $politicas_publicas =  $politicas_publicas_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_politicas_publicas = [];
+        foreach ($politicas_publicas as $row){
+           array_push($array_politicas_publicas, $row);
+        }
+        $this->setPoliticasPublicasList($array_politicas_publicas);
+
+
         // $this->setNumeroBeneficiarios($result['$numero_beneficiarios']);
 
 
@@ -757,7 +815,6 @@ class Editar extends Conexao {
         // $this-> setRelaciona_2($result['$relaciona_2;']);
         // $this-> setRelaciona_3($result['$relaciona_3;']);
 
-        // $this->setTemas($result['$temas;']);
         // $this->setSubtemas($result['$subtemas;']);
 
 

@@ -398,18 +398,18 @@ class CadastrarAll extends Conexao {
 
     //Empoderamento Sets
     public function setEmpoderamentoNome_1($empoderamento_nome_1){
-        $this->empoderamento_nome_1 = $empoderamento_nome_1;
+        $this->empoderamento_nome_1 = $empoderamento_nome_1.= "_1";
     }
     public function setEmpoderamentoDesc_1($empoderamento_desc_1){
         $this->empoderamento_desc_1 = $empoderamento_desc_1;
     }
     public function setEmpoderamentoNome_2($empoderamento_nome_2){
-        $this->empoderamento_nome_2 = $empoderamento_nome_2;
+        $this->empoderamento_nome_2 = $empoderamento_nome_2.= "_2";
     }
     public function setEmpoderamentoDesc_2($empoderamento_desc_2){
         $this->empoderamento_desc_2 = $empoderamento_desc_2;
     }
-    public function setEmpoderamentoNome_3($empoderamento_nome_3){
+    public function setEmpoderamentoNome_3($empoderamento_nome_3.= "_3"){
         $this->empoderamento_nome_3 = $empoderamento_nome_3;
     }
     public function setEmpoderamentoDesc_3($empoderamento_desc_3){
