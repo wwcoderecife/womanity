@@ -805,16 +805,59 @@ class Editar extends Conexao {
         $this->setPoliticasPublicasList($array_politicas_publicas);
 
 
+        
+        $empoderamento_1_query = $pdo->prepare("select 
+                                                    nome, descricao 
+                                                from empoderamento 
+                                                where organizacao_id = ?
+                                                and nome like '%_1' ");
+        $empoderamento_1_query->bindValue(1, 1091);
+        $empoderamento_1_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $empoderamento_1 =  $empoderamento_1_query->fetch(PDO::FETCH_BOTH);
+
+        $this->setEmpoderamentoNome_1($empoderamento_1['nome']);
+        $this->setEmpoderamentoDesc_1($empoderamento_1['descricao']);
+
+        
+        $empoderamento_2_query = $pdo->prepare("select 
+                                                    nome, descricao 
+                                                from empoderamento 
+                                                where organizacao_id = ?
+                                                and nome like '%_2' ");
+        $empoderamento_2_query->bindValue(1, 1091);
+        $empoderamento_2_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $empoderamento_2 =  $empoderamento_2_query->fetch(PDO::FETCH_BOTH);
+
+        $this->setEmpoderamentoNome_2($empoderamento_2['nome']);
+        $this->setEmpoderamentoDesc_2($empoderamento_2['descricao']);
+
+
+        $empoderamento_3_query = $pdo->prepare("select 
+                                                    nome, descricao 
+                                                from empoderamento 
+                                                where organizacao_id = ?
+                                                and nome like '%_3' ");
+        $empoderamento_3_query->bindValue(1, 1091);
+        $empoderamento_3_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $empoderamento_3 =  $empoderamento_3_query->fetch(PDO::FETCH_BOTH);
+
+        $this->setEmpoderamentoNome_3($empoderamento_3['nome']);
+        $this->setEmpoderamentoDesc_3($empoderamento_3['descricao']);
+
+
+
         // $this->setNumeroBeneficiarios($result['$numero_beneficiarios']);
 
 
-
-        // $this->setEmpoderamentoNome_1($result['$empoderamento_nome_1;']);
-        // $this->setEmpoderamentoDesc_1($result['$empoderamento_desc_1;']);
-        // $this->setEmpoderamentoNome_2($result['$empoderamento_nome_2;']);
-        // $this->setEmpoderamentoDesc_2($result['$empoderamento_desc_2;']);
-        // $this->setEmpoderamentoNome_3($result['$empoderamento_nome_3;']);
-        // $this->setEmpoderamentoDesc_3($result['$empoderamento_desc_3;']);
 
         // $this-> setEstados($result['$estados;']);
 

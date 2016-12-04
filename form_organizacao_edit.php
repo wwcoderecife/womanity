@@ -51,7 +51,11 @@
     $array_recursos_financeiros = $edit->getRecursosFinaceirosLista();
     $array_temas = $edit->getTemas();
     $array_funcoes = $edit->getFuncoes();
-    $array_politicas_publicas = $edit->getPoliticasPublicasList();    
+    $array_politicas_publicas = $edit->getPoliticasPublicasList();  
+
+
+    echo $edit->getEmpoderamentoNome_2();
+    echo (explode("_2",$edit->getEmpoderamentoNome_2())[0]);
 
 
 ?>
@@ -846,23 +850,23 @@
                  <h5>Iniciativa 1</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="organizacao-relaciona1"  class="f1-last-name form-control">
+                    <input type="text" name="organizacao-relaciona1" value="<?php echo (explode("_1",$edit->getEmpoderamentoNome_1())[0]); ?>"  class="f1-last-name form-control">
                     <textarea name="sobre_iniciativas1" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
-                    class="f1-about-yourself form-control" id="sobre_iniciativa_ong1"  data-error = "Campo está em branco, favor preencher."></textarea>
+                    class="f1-about-yourself form-control" id="sobre_iniciativa_ong1"  data-error = "Campo está em branco, favor preencher."><?php echo $edit->getEmpoderamentoDesc_1(); ?></textarea>
                 </div>
                 <h5>Iniciativa 2</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="organizacao-relaciona2"  class="f1-last-name form-control">
-                    <textarea name="sobre_iniciativas2" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
-                    class="f1-about-yourself form-control" id="sobre_iniciativa_ong2" data-error = "Campo está em branco, favor preencher."></textarea>
+                    <input type="text" name="organizacao-relaciona2"  class="f1-last-name form-control" value="<?php echo (explode("_2",$edit->getEmpoderamentoNome_2())[0]); ?>">
+                    <textarea name="sobre_iniciativas2" maxlength="500"  placeholder="descreva as iniciativas da sua organização...." 
+                    class="f1-about-yourself form-control" id="sobre_iniciativa_ong2" data-error = "Campo está em branco, favor preencher."><?php echo $edit->getEmpoderamentoDesc_2(); ?></textarea>
                 </div>
                 <h5>Iniciativa 3</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="organizacao-relaciona3" class="f1-last-name form-control">
+                    <input type="text" name="organizacao-relaciona3" class="f1-last-name form-control"  value="<?php echo (explode("_3",$edit->getEmpoderamentoNome_3())[0]); ?>">
                     <textarea name="sobre_iniciativas3" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
-                    class="f1-about-yourself form-control" id="sobre_iniciativa_ong3" data-error = "Campo está em branco, favor preencher."></textarea>
+                    class="f1-about-yourself form-control" id="sobre_iniciativa_ong3" data-error = "Campo está em branco, favor preencher."><?php echo $edit->getEmpoderamentoDesc_3(); ?></textarea>
                 </div>
 
                 <h5>Clique nos Estados que sua iniciativa tem atuação direta*</h5>
