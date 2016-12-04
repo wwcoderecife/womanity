@@ -886,31 +886,112 @@ class Editar extends Conexao {
         }
 
 
+        $indicacoes_1_query = $pdo->prepare("select 
+                                                    nome, email, telefone 
+                                                from indicacoes 
+                                                where organizacao_id = ?
+                                                and nome like '%_1' ");
+        $indicacoes_1_query->bindValue(1, 1091);
+        $indicacoes_1_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $indicacoes_1 =  $indicacoes_1_query->fetch(PDO::FETCH_BOTH);
+
+        $this->setIndicaNome_1($indicacoes_1['nome']);
+        $this->setIndicaEmail_1($indicacoes_1['email']);
+        $this->setIndicaTelefone_1($indicacoes_1['telefone']);
+
+
+        $indicacoes_2_query = $pdo->prepare("select 
+                                                    nome, email, telefone 
+                                                from indicacoes 
+                                                where organizacao_id = ?
+                                                and nome like '%_2' ");
+        $indicacoes_2_query->bindValue(1, 1091);
+        $indicacoes_2_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $indicacoes_2 =  $indicacoes_2_query->fetch(PDO::FETCH_BOTH);
+
+        $this->setIndicaNome_2($indicacoes_2['nome']);
+        $this->setIndicaEmail_2($indicacoes_2['email']);
+        $this->setIndicaTelefone_2($indicacoes_2['telefone']);
+
+        $indicacoes_3_query = $pdo->prepare("select 
+                                                    nome, email, telefone 
+                                                from indicacoes 
+                                                where organizacao_id = ?
+                                                and nome like '%_3' ");
+        $indicacoes_3_query->bindValue(1, 1091);
+        $indicacoes_3_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $indicacoes_3 =  $indicacoes_3_query->fetch(PDO::FETCH_BOTH);
+
+        $this->setIndicaNome_3($indicacoes_3['nome']);
+        $this->setIndicaEmail_3($indicacoes_3['email']);
+        $this->setIndicaTelefone_3($indicacoes_3['telefone']);
+
+
+
+        $relacionada_1_query = $pdo->prepare("select 
+                                                    nome
+                                            from relacionadas 
+                                            where organizacao_id = ?
+                                            and nome like '%_1' ");
+        $relacionada_1_query->bindValue(1, 1091);
+        $relacionada_1_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $relacionada_1 =  $relacionada_1_query->fetch(PDO::FETCH_BOTH);
+
+        $this-> setRelaciona_1($relacionada_1['nome']);
+
+
+        $relacionada_2_query = $pdo->prepare("select 
+                                                    nome
+                                            from relacionadas 
+                                            where organizacao_id = ?
+                                            and nome like '%_2' ");
+        $relacionada_2_query->bindValue(1, 1091);
+        $relacionada_2_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $relacionada_2 =  $relacionada_2_query->fetch(PDO::FETCH_BOTH);
+        $this-> setRelaciona_2($relacionada_2['nome']);
+
+
+        $relacionada_3_query = $pdo->prepare("select 
+                                                    nome
+                                            from relacionadas 
+                                            where organizacao_id = ?
+                                            and nome like '%_3' ");
+        $relacionada_3_query->bindValue(1, 1091);
+        $relacionada_3_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $relacionada_3 =  $relacionada_3_query->fetch(PDO::FETCH_BOTH);
+        $this-> setRelaciona_3($relacionada_3['nome']);
+
+
         // $this->setNumeroBeneficiarios($result['$numero_beneficiarios']);
 
 
 
         // $this-> setEstados($result['$estados;']);
 
-        // $this-> setRelaciona_1($result['$relaciona_1;']);
-        // $this-> setRelaciona_2($result['$relaciona_2;']);
-        // $this-> setRelaciona_3($result['$relaciona_3;']);
+        
 
         // $this->setSubtemas($result['$subtemas;']);
 
 
 
-
-
-        // $this->setIndicaNome_1($result['$indica_nome_1;']);
-        // $this->setIndicaEmail_1($result['$indica_email_1;']);
-        // $this->setIndicaTelefone_1($result['$indica_telefone_1;']);
-        // $this->setIndicaNome_2($result['$indica_nome_2;']);
-        // $this->setIndicaEmail_2($result['$indica_email_2;']);
-        // $this->setIndicaTelefone_2($result['$indica_telefone_2;']);
-        // $this->setIndicaNome_3($result['$indica_nome_3;']);
-        // $this->setIndicaEmail_3($result['$indica_email_3;']);
-        // $this->setIndicaTelefone_3($result['$indica_telefone_3;']);
 
 	
 	}

@@ -1105,17 +1105,17 @@
                  <h5>Organização 1</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                <input type="text" name="relaciona1"  class="f1-last-name form-control">
+                <input type="text" name="relaciona1"  class="f1-last-name form-control" value="<?php echo (explode("_1",$edit->getRelaciona_1())[0]); ?>" >
                 </div>
                 <h5>Organização 2</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="relaciona2"  class="f1-last-name form-control">
+                    <input type="text" name="relaciona2"  class="f1-last-name form-control" value="<?php echo (explode("_2",$edit->getRelaciona_2())[0]); ?>">
                 </div>
                 <h5>Organização 3</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="relaciona3" class="f1-last-name form-control">
+                    <input type="text" name="relaciona3" class="f1-last-name form-control" value="<?php echo (explode("_3",$edit->getRelaciona_3())[0]); ?>">
                 </div> 
 
                 
@@ -1238,45 +1238,54 @@
                 <h5>Iniciativa 1</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="indica_nome_1" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="text" name="indica_nome_1" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name"
+                    value="<?php echo (explode("_1",$edit->getIndicaNome_1())[0]); ?>" >
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                <input type="email" name="indica_email_1" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
+                <input type="email" name="indica_email_1" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name"
+                value="<?php echo $edit->getIndicaEmail_1(); ?>" >
                     
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                <input type="tel" name="indica_telefone_1" placeholder="Telefone" class="f1-last-name form-control" id="inputTel3">
+                <input type="tel" name="indica_telefone_1" placeholder="Telefone" class="f1-last-name form-control" id="inputTel3"
+                value="<?php echo $edit->getIndicaTelefone_1(); ?>" >
                 </div>
                 <h5>Iniciativa 2</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                <input type="text" name="indica_nome_2" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
+                <input type="text" name="indica_nome_2" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name"
+                 value="<?php echo (explode("_2",$edit->getIndicaNome_2())[0]); ?>" >
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                <input type="email" name="indica_email_2" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">                    
+                <input type="email" name="indica_email_2" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name"
+                value="<?php echo $edit->getIndicaEmail_2(); ?>" >                    
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_2" placeholder="Telefone" class="f1-last-name form-control" id="inputTel4">
+                    <input type="tel" name="indica_telefone_2" placeholder="Telefone" class="f1-last-name form-control" id="inputTel4"
+                    value="<?php echo $edit->getIndicaTelefone_2(); ?>" >
                 </div>
                 <h5>Iniciativa 3</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                <input type="text" name="indica_nome_3" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
+                <input type="text" name="indica_nome_3" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name"
+                value="<?php echo (explode("_3",$edit->getIndicaNome_3())[0]); ?>" >
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="indica_email_3" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="email" name="indica_email_3" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name"
+                    value="<?php echo $edit->getIndicaEmail_3(); ?>" >   
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_3" placeholder="Telefone" class="f1-last-name form-control" id="inputTel5">
+                    <input type="tel" name="indica_telefone_3" placeholder="Telefone" class="f1-last-name form-control" id="inputTel5"
+                    value="<?php echo $edit->getIndicaTelefone_3(); ?>" >
                 </div>
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
