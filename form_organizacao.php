@@ -1,26 +1,25 @@
+          
+        
+                    <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+
+
            <!-- Bootstrap core JavaScript
          ================================================== -->
 
-            <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-            <script src="assets/js/validator.min.js"></script>
-            <!--<script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>-->
+            <script src="assets/js/jquery-1.11.1.min.js"></script>
+            <script src="assets/js/bootstrap.min.js"></script>
+            <script src="assets/js/jquery.backstretch.min.js"></script>
+            <script src="assets/js/retina-1.1.0.min.js"></script>
+            <!--<script src="assets/js/validator.min.js"></script>-->
+            <script src="assets/js/scripts.js"></script>
+          
             <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
-            <!--<script src="https://github.com/igorescobar/jQuery-Mask-Plugin/blob/master/dist/jquery.mask.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/jquery.mask/1.14.3/jquery.mask.min.js"></script>-->
-
-            
-            <!--<link   rel="stylesheet" href="assets/css/bootstrap-select.min.css">-->
-            <!--<script type="text/javascript" src="assets/js/bootstrap-select.min.js" ></script>-->
-           
-
-            <!--Include Twitter Bootstrap and jQuery: Subtemas--> 
-            <!--<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css"/>-->
-            <!--<script src="assets/js/jquery-2.1.3.min.js"></script>-->
-           
-            <!--Include the plugin's CSS and JS:Subtemad--> 
-            <!--<link rel="stylesheet" href="assets/css/bootstrap-multiselect.css" type="text/css">-->
-            <!--<script src="assets/js/bootstrap-multiselect.js"></script>-->
-            
         
     
         
@@ -38,7 +37,7 @@
 
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-        <form role="form" data-toggle="validator" action="classes/prepare_cadastro.php" method="post" class="f1 form-ong">
+        <form role="form" data-toggle="validator" action="classes/prepare_cadastro.php" method="post" class="f1">
 
             <h3>Cadastro UNA Ecossistema<br>Organizaçāo</h3>
             <p>Preencha os campos obrigatórios *</p>
