@@ -110,8 +110,8 @@ class Editar extends Conexao {
         $this->cnpj = $cnpj;
     }
 
-    public function setinputnomeong($inputnomeong){
-        $this->cnpj = $inputnomeong;
+    public function setInputnomeong($inputnomeong){
+        $this->inputnomeong = $inputnomeong;
     }
     public function setLocalizacao($localizacao){
         $this->localizacao = $localizacao;
@@ -172,7 +172,7 @@ class Editar extends Conexao {
     public function getCnpj(){
        return $this->cnpj;
     }
-     public function getinputnomeong(){
+     public function getInputnomeong(){
        return $this->inputnomeong;
     }
     public function getLocalizacao(){
