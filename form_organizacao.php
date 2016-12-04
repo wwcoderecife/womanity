@@ -147,7 +147,7 @@
                 </div>
 
                 <div class="f1-buttons">
-                <button data-toggle="validator" type="button" class="btn btn-next">Próximo</button>
+                <button type="button" class="btn btn-next">Próximo</button>
                 </div>
             </fieldset><!--Dados Pessoais-->
 

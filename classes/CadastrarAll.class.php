@@ -67,7 +67,7 @@ class CadastrarAll extends Conexao {
     private $organizacao_pai;
     private $natureza;
     private $usuario_id;
-    private $inputnomeong;
+    //private $inputnomeong;
 
     //******Contatos*******//
     private $nome_1;
@@ -208,9 +208,10 @@ class CadastrarAll extends Conexao {
         $this->usuario_id = $usuario_id;
     }
 
-    public function setInputnomeong($inputnomeong){
+    /*public function setInputnomeong($inputnomeong){
         $this->inputnomeong = $inputnomeong;
     }
+    */
 
     //organizacoes Gets
     public function getCnpj(){
@@ -270,9 +271,11 @@ class CadastrarAll extends Conexao {
     public function getUsuarioId(){
        return $this->usuario_id;
     }
-     public function getInputnomeong(){
+
+     /*public function getInputnomeong(){
        return $this->inputnomeong;
     }
+    */
 
 
 
@@ -665,8 +668,8 @@ class CadastrarAll extends Conexao {
             $inserir_ong = $pdo->prepare("insert into organizacoes (
                 cnpj, localizacao, nome, sigla, telefone, email, tipo, inicio_atv, qtde_pessoas, recursos_financeiros,
                 descricao,  publico_atendido, politicas_publicas, monitoramento_atividades, estrategia_comunicacao,
-                premiacao_certificacao, organizacao_pai, natureza, usuario_id,inputnomeong)
-                                    values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                premiacao_certificacao, organizacao_pai, natureza, usuario_id,)
+                                    values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             $inserir_ong->bindValue(1, $this->getCnpj());
             $inserir_ong->bindValue(2, $this->getLocalizacao());
             $inserir_ong->bindValue(3, $this->getNome());
@@ -686,7 +689,7 @@ class CadastrarAll extends Conexao {
             $inserir_ong->bindValue(17, $this->getOrganizacaoPai());
             $inserir_ong->bindValue(18, $this->getNatureza());
             $inserir_ong->bindValue(19, $this->getUsuarioId());
-            $inserir_ong->bindValue(20, $this->getInputnomeong());
+            //$inserir_ong->bindValue(20, $this->getInputnomeong());
             $inserir_ong->execute();
             $organizacao_id = $pdo->lastInsertId();
 
