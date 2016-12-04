@@ -22,7 +22,7 @@
     $organizacao_pai = filter_input(INPUT_POST, "organizacao-zona", FILTER_SANITIZE_MAGIC_QUOTES);
     $natureza = filter_input(INPUT_POST, "identifica", FILTER_SANITIZE_MAGIC_QUOTES);
     $usuario_id = $_SESSION['usuario_id'];
-    $inputnomeong = filter_input(INPUT_POST, "inputnomeong", FILTER_SANITIZE_MAGIC_QUOTES);
+    
 
     //contato 1
     $nome_1 = filter_input(INPUT_POST, "nome1", FILTER_SANITIZE_MAGIC_QUOTES);
@@ -126,7 +126,7 @@
         $novo->setOrganizacaoPai($organizacao_pai);
         $novo->setNatureza($natureza);
         $novo->setUsuarioId($usuario_id);
-        $novo->setInputnomeong($inputnomeong);
+      
 
         //contato
         $novo->setNome_1($nome_1);
