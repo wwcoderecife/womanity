@@ -42,7 +42,7 @@ jQuery(document).ready(function() {
     */
     $('.f1 fieldset:first').fadeIn('slow');
     
-    $('.f1 input[type="text"], .f1 input[type="password"], .f1 input[type="email"], .f1 input[type="tel"], .f1 input[type="radio"], .f1 input[type="select"] .f1 textarea').on('focus', function() {
+    $('.f1 input[type="text"], .f1 input[type="password"], .f1 input[type="email"], .f1 input[type="tel"], .f1 input[type="radio"], .f1 input[type="select"], .f1 textarea').on('focus', function() {
         $(this).removeClass('input-error');
     });
     
@@ -56,7 +56,7 @@ jQuery(document).ready(function() {
         
         
         // fields validation
-        parent_fieldset.find('input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="radio"], input[type="select"] textarea').each(function() {
+        parent_fieldset.find('input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="radio"], input[type="select"], textarea').each(function() {
             if( $(this).val() == "" ) {
                 $(this).addClass('input-error');
                 next_step = false;
@@ -106,7 +106,7 @@ jQuery(document).ready(function() {
     $('.f1').on('submit', function(e) {
   
         // fields validation
-        $(this).find('input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="radio"], input[type="select"] textarea').each(function() {
+        $(this).find('input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="radio"], input[type="select"], textarea').each(function() {
             if( $(this).val() == "" ) {
                 e.preventDefault();
                 $(this).addClass('input-error');
@@ -115,10 +115,11 @@ jQuery(document).ready(function() {
                 $(this).removeClass('input-error');
             }
         });
-        // fields validation
-    
+        // fields validation 
         
     });
+
+ });  
 
 
     //populando os combos de cidade e estado
