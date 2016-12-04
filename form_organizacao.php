@@ -292,7 +292,7 @@
                  <h5> Quando sua Organizaçāo iniciou as atividades?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="year" name="anoatividade" required>
+                    <select class="f1-last-name form-control" id="year_organizacao" name="anoatividade" required>
                     <div class="help-block with-errors"></div>
                         <script>
                           var myDate = new Date();
