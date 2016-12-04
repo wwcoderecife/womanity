@@ -853,6 +853,37 @@ class Editar extends Conexao {
         $this->setEmpoderamentoNome_3($empoderamento_3['nome']);
         $this->setEmpoderamentoDesc_3($empoderamento_3['descricao']);
 
+         $redes_sociais_query = $pdo->prepare("select 
+                                                    link, tipo 
+                                                from redes_sociais 
+                                                where organizacao_id = ? ");
+        $redes_sociais_query->bindValue(1, 1091);
+        $redes_sociais_query->execute();
+
+        //passando os valores encontrados para um array
+        $redes_sociais =  $redes_sociais_query->fetchAll();
+
+        foreach($redes_sociais as $rede){
+
+            if($rede['tipo'] == 'Facebook'){
+               $this->setFacebook($rede['link']); 
+            }
+            if($rede['tipo'] == 'Site'){
+               $this->setSite($rede['link']); 
+            }
+            if($rede['tipo'] == 'Instagram'){
+               $this->setInstagram($rede['link']); 
+            }
+            if($rede['tipo'] == 'Twitter'){
+               $this-> setTwitter($rede['link']); 
+            }
+            if($rede['tipo'] == 'Linkedin'){
+               $this->setLinkedin($rede['link']); 
+            }
+            if($rede['tipo'] == 'Outros'){
+               $this->setOutros($rede['link']); 
+            }
+        }
 
 
         // $this->setNumeroBeneficiarios($result['$numero_beneficiarios']);
@@ -868,12 +899,7 @@ class Editar extends Conexao {
         // $this->setSubtemas($result['$subtemas;']);
 
 
-        // $this->setSite($result['$site;']);
-        // $this->setFacebook($result['$facebook;']);
-        // $this-> setTwitter($result['$twitter;']);
-        // $this->setLinkedin($result['$linkedin;']);
-        // $this->setInstagram($result['$instagram;']);
-        // $this->setOutros($result['$outros;']);
+
 
 
         // $this->setIndicaNome_1($result['$indica_nome_1;']);

@@ -54,8 +54,7 @@
     $array_politicas_publicas = $edit->getPoliticasPublicasList();  
 
 
-    echo $edit->getEmpoderamentoNome_2();
-    echo (explode("_2",$edit->getEmpoderamentoNome_2())[0]);
+    echo $edit->getFacebook();
 
 
 ?>
@@ -1194,37 +1193,38 @@
                 <div class="form-group">
                     <div class="input-group">
                       <span class="input-group-addon"><i class="fa fa-mouse-pointer"></i></span>
-                    <input class="form-control" type="text" name="site" placeholder="Site">
+                    <input class="form-control"  value="<?php echo $edit->getSite(); ?>" type="text" name="site" placeholder="Site">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group">
                       <span class="input-group-addon"><i class="fa fa-facebook-official"></i></span>
-                        <input class="form-control" type="text" name="facebook" placeholder="Facebook">
+                        <input class="form-control" type="text" name="facebook" placeholder="Facebook"
+                        value="<?php echo $edit->getFacebook(); ?>">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group margin-bottom-sm">
                       <span class="input-group-addon"><i class="fa fa-twitter-square"></i></span>
-                        <input class="form-control" type="text" name="twitter" placeholder="Twitter">
+                        <input class="form-control"  value="<?php echo $edit->getTwitter(); ?>" type="text" name="twitter" placeholder="Twitter">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group margin-bottom-sm">
                       <span class="input-group-addon"><i class="fa fa-instagram"></i></span>
-                        <input class="form-control" type="text" name="instagram" placeholder="Instagram">
+                        <input class="form-control"  value="<?php echo $edit->getInstagram(); ?>" type="text" name="instagram" placeholder="Instagram">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group margin-bottom-sm">
                       <span class="input-group-addon"><i class="fa fa-linkedin-square"></i></span>
-                        <input class="form-control" type="text" name="linkedin" placeholder="Linkedin">
+                        <input class="form-control" type="text"  value="<?php echo $edit->getlinkedin(); ?>" name="linkedin" placeholder="Linkedin">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="input-group margin-bottom-sm">
                       <span class="input-group-addon"><i class="fa fa-ellipsis-h"></i></span>
-                        <input class="form-control" type="text" name="outros" placeholder="Outros">
+                        <input class="form-control" type="text"  value="<?php echo $edit->getOutros(); ?>" name="outros" placeholder="Outros">
                     </div>
                 </div>
                 <div class="f1-buttons">
