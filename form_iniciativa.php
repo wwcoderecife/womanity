@@ -274,7 +274,7 @@
                 <h5> Quando sua iniciativa começou as atividades?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="year" name="anoatividade" required>
+                    <select class="f1-last-name form-control" id="year" name="anoatividade" >
                     <div class="help-block with-errors"></div>
                         <script>
                            var myDate = new Date();
@@ -291,7 +291,7 @@
                <h5>Quantas pessoas estão envolvidas neste trabalho?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas" required>
+                    <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas">
                      <div class="help-block with-errors"></div>
                         <option value=""></option>
                         <option value="1-5">1-5</option>
@@ -309,18 +309,18 @@
                  <h5>2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
-                    <input type="text" name="orcamento_2014" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2014"required data-error = "Campo está em branco, favor preencher." >
+                    <input type="text" name="orcamento_2014" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2014" data-error = "Campo está em branco, favor preencher." >
                     <div class="help-block with-errors"></div>
                 </div>
                 <h5>2015</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2015</label>
-                    <input type="tex" name="orcamento_2015" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2015"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="tex" name="orcamento_2015" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2015" data-error = "Campo está em branco, favor preencher.">
                 </div>
                 <h5>2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
-                    <input type="tex" name="orcamento_2016" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2016"required data-error = "Campo está em branco, favor preencher.">
+                    <input type="tex" name="orcamento_2016" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2016" data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
