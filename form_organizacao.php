@@ -7,21 +7,6 @@
         <link rel="stylesheet" href="assets/css/form-elements.css">
         <link rel="stylesheet" href="assets/css/style.css">
 
-
-
-           <!-- Bootstrap core JavaScript
-         ================================================== -->
-
-            <script src="assets/js/jquery-1.11.1.min.js"></script>
-            <script src="assets/js/bootstrap.min.js"></script>
-            <script src="assets/js/jquery.backstretch.min.js"></script>
-            <script src="assets/js/retina-1.1.0.min.js"></script>
-            <!--<script src="assets/js/validator.min.js"></script>-->
-            <script src="assets/js/scripts.js"></script>
-          
-            <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
-        
-    
         
         <script>
         $(document).ready(function(){
@@ -37,7 +22,7 @@
 
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-        <form role="form" data-toggle="validator" action="classes/prepare_cadastro.php" method="post" class="f1">
+        <form role="form" action="classes/prepare_cadastro.php" method="post" class="f1">
 
             <h3>Cadastro UNA Ecossistema<br>Organizaçāo</h3>
             <p>Preencha os campos obrigatórios *</p>
@@ -1063,5 +1048,16 @@
             </fieldset>
         </form>
     </div>
+     <!-- Bootstrap core JavaScript
+         ================================================== -->
+
+            <script src="assets/js/jquery-1.11.1.min.js"></script>
+            <script src="assets/js/bootstrap.min.js"></script>
+            <script src="assets/js/jquery.backstretch.min.js"></script>
+            <script src="assets/js/retina-1.1.0.min.js"></script>
+            <!--<script src="assets/js/validator.min.js"></script>-->
+            <script src="assets/js/scripts.js"></script>
+          
+            <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
 </div>
     

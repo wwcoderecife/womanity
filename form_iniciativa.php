@@ -34,7 +34,7 @@
 
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-    	 <form role="form" data-toggle="validator" action="classes/prepare_cadastro.php" method="post" class="f1">
+    	 <form role="form" action="classes/prepare_cadastro.php" method="post" class="f1">
 
     		<h3>Cadastro UNA Ecossistema<br>Iniciativa</h3>
     		<p>Preencha os campos obrigatórios*</p>
@@ -1039,26 +1039,20 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                     <button type="button" class="btn btn-previous">Anterior</button>
                     <button type="submit" class="btn btn-submit">Enviar</button>
                 </div>
-                <!--
-                <script>
-                // Select every button with type submit under a form with data-toggle validator
-                    $('form[data-toggle="validator"] button[type="submit"]').click(function(e) {
-                        // Select the form that has this button
-                        var form = $(this).closest('form');
-                        // Verify if the form is validated
-                        if (!form.data("bs.validator").validate().hasErrors()) {
-                            e.preventDefault();
-                            // Here go the trick! Fire a custom event to the form
-                            form.trigger('submitted');
-                        } else  {
-                            console.log('Form still not valid');
-                        }
-                    });
-                    </script>
-                -->
             </fieldset> 
          </form>
      </div>
+     <!-- Bootstrap core JavaScript
+         ================================================== -->
+
+            <script src="assets/js/jquery-1.11.1.min.js"></script>
+            <script src="assets/js/bootstrap.min.js"></script>
+            <script src="assets/js/jquery.backstretch.min.js"></script>
+            <script src="assets/js/retina-1.1.0.min.js"></script>
+            <!--<script src="assets/js/validator.min.js"></script>-->
+            <script src="assets/js/scripts.js"></script>
+          
+            <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
   </div>                
 
 
