@@ -1,13 +1,4 @@
                    
-
-
-                    <!-- CSS -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="assets/css/form-elements.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-
                     <!-- Bootstrap core JavaScript
          ================================================== -->
             <script src="assets/js/jquery-1.11.1.min.js"></script>
@@ -1042,17 +1033,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
             </fieldset> 
          </form>
      </div>
-     <!-- Bootstrap core JavaScript
-         ================================================== -->
-
-            <script src="assets/js/jquery-1.11.1.min.js"></script>
-            <script src="assets/js/bootstrap.min.js"></script>
-            <script src="assets/js/jquery.backstretch.min.js"></script>
-            <script src="assets/js/retina-1.1.0.min.js"></script>
-            <!--<script src="assets/js/validator.min.js"></script>-->
-            <script src="assets/js/scripts.js"></script>
-          
-            <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
+    
   </div>                
 
 
