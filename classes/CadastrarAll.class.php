@@ -1231,19 +1231,19 @@ class CadastrarAll extends Conexao {
         }
         catch (Exception $e){
               $pdo->rollback();
-              echo $e->getMessage();
-               // echo "<script type='text/javascript'>
+              //echo $e->getMessage();
+               echo "<script type='text/javascript'>
 
-               //          sweetAlert({
-               //            title: 'Erro',
-               //             text: 'Não foi possível editar o cadastro!',
-               //              type: 'error'
-               //            },
-               //            function(){
-               //              window.location.href = '../form.php';
-               //          });
+                        sweetAlert({
+                          title: 'Erro',
+                           text: 'Não foi possível editar o cadastro!',
+                            type: 'error'
+                          },
+                          function(){
+                            window.location.href = '../form.php';
+                        });
 
-               //      </script>";
+                    </script>";
 
         }
     }

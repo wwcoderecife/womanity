@@ -35,9 +35,22 @@
               $("#inputTel4").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
               $("#inputTel5").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
               $("#inputTel6").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
-              
+              $(".form-ong input:radio").attr('disabled',true);
+              $(".form-ong select").attr('disabled',true);
+              $(".form-ong input:checkbox").attr('disabled',true);
+              $(".form-ong input").attr('readonly',true);
+              $(".form-ong textarea").attr('readonly',true);
              
             });
+
+           function desbloquearCampos(){
+              $(".form-ong input:radio").attr('disabled',false);
+              $(".form-ong select").attr('disabled',false);
+              $(".form-ong input:checkbox").attr('disabled',false);
+              $(".form-ong input").attr('readonly',false);
+              $(".form-ong textarea").attr('readonly',false);
+              open_dialog("ok", "Agora você pode editar os dados!", 'success');
+           }
             </script>
 
 <?php
@@ -45,7 +58,7 @@
     require_once "classes/Editar.class.php";
 
     $edit = new editar;
-    $edit->busca();
+    $edit->busca($_SESSION['organizacao_id']);
 
     //Array dos Checkboxs
 
@@ -61,7 +74,7 @@
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
         <form role="form" action="classes/prepare_cadastro.php" method="post" class="f1 form-ong">
-
+            <input type="hidden" value="editar" name="form_type" />
             <h3>Cadastro UNA Ecossistema<br>Organizaçāo</h3>
             <p>Preencha os campos obrigatórios *</p>
             <div class="f1-steps">
@@ -167,6 +180,7 @@
                 </div>
 
                 <div class="f1-buttons">
+                    <button type="button" class="btn btn-warning" onclick="desbloquearCampos();" title="Desbloquear campos para edição">Editar</button>
                 <button type="button" class="btn btn-next">Próximo</button>
                 </div>
             </fieldset><!--Dados Pessoais-->

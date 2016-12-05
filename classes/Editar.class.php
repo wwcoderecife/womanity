@@ -610,7 +610,7 @@ class Editar extends Conexao {
         return $this->indica_telefone_3;
     }
 
-	public function busca(){
+	public function busca($organizacao_id){
 
 		$pdo = parent::getDB();
 
@@ -642,7 +642,7 @@ class Editar extends Conexao {
 			left join temas tema on tema.organizacao_id = ong.id
 			left join subtemas subtema on subtema.organizacao_id = ong.id
 			where ong.id = ?");
-		$consulta->bindValue(1, 1091);
+		$consulta->bindValue(1, $organizacao_id);
         $consulta->execute();
 
         //passando os valores encontrados para um array
@@ -694,7 +694,7 @@ class Editar extends Conexao {
                                         ano, valor
                                     from orcamentos
                                     where organizacao_id = ? and ano = ?");
-        $orcamentos_query_2014->bindValue(1, 1091);
+        $orcamentos_query_2014->bindValue(1, $organizacao_id);
         $orcamentos_query_2014->bindValue(2, 2014);
         $orcamentos_query_2014->execute();
 
@@ -705,7 +705,7 @@ class Editar extends Conexao {
                                         ano, valor
                                     from orcamentos
                                     where organizacao_id = ? and ano = ?");
-        $orcamentos_query_2015->bindValue(1, 1091);
+        $orcamentos_query_2015->bindValue(1, $organizacao_id);
         $orcamentos_query_2015->bindValue(2, 2015);
         $orcamentos_query_2015->execute();
 
@@ -716,7 +716,7 @@ class Editar extends Conexao {
                                         ano, valor
                                     from orcamentos
                                     where organizacao_id = ? and ano = ?");
-        $orcamentos_query_2016->bindValue(1, 1091);
+        $orcamentos_query_2016->bindValue(1, $organizacao_id);
         $orcamentos_query_2016->bindValue(2, 2016);
         $orcamentos_query_2016->execute();
 
@@ -735,7 +735,7 @@ class Editar extends Conexao {
                                                         tipo
                                                     from origem_recursos
                                                     where organizacao_id = ?");
-        $recuros_financeiros_query->bindValue(1, 1091);
+        $recuros_financeiros_query->bindValue(1, $organizacao_id);
         $recuros_financeiros_query->execute();
 
         //passando os valores encontrados para um array
@@ -753,7 +753,7 @@ class Editar extends Conexao {
                                         tema
                                     from temas
                                     where organizacao_id = ?");
-        $temas_query->bindValue(1, 1091);
+        $temas_query->bindValue(1, $organizacao_id);
         $temas_query->execute();
 
 
@@ -772,7 +772,7 @@ class Editar extends Conexao {
                                         tipo
                                     from funcoes
                                     where organizacao_id = ?");
-        $funcoes_query->bindValue(1, 1091);
+        $funcoes_query->bindValue(1, $organizacao_id);
         $funcoes_query->execute();
 
 
@@ -789,7 +789,7 @@ class Editar extends Conexao {
                                     from funcoes
                                     where organizacao_id = ?
                                     and complemento != 0");
-        $funcoes_query->bindValue(1, 1091);
+        $funcoes_query->bindValue(1, $organizacao_id);
         $funcoes_query->execute();
 
         $funcoes = $funcoes_query->fetch(PDO::FETCH_BOTH);
@@ -801,7 +801,7 @@ class Editar extends Conexao {
                                         tipo
                                     from politicas_publicas
                                     where organizacao_id = ?");
-        $politicas_publicas_query->bindValue(1, 1091);
+        $politicas_publicas_query->bindValue(1, $organizacao_id);
         $politicas_publicas_query->execute();
 
 
@@ -820,7 +820,7 @@ class Editar extends Conexao {
                                                 from empoderamento 
                                                 where organizacao_id = ?
                                                 and nome like '%_1' ");
-        $empoderamento_1_query->bindValue(1, 1091);
+        $empoderamento_1_query->bindValue(1, $organizacao_id);
         $empoderamento_1_query->execute();
 
 
@@ -836,7 +836,7 @@ class Editar extends Conexao {
                                                 from empoderamento 
                                                 where organizacao_id = ?
                                                 and nome like '%_2' ");
-        $empoderamento_2_query->bindValue(1, 1091);
+        $empoderamento_2_query->bindValue(1, $organizacao_id);
         $empoderamento_2_query->execute();
 
 
@@ -852,7 +852,7 @@ class Editar extends Conexao {
                                                 from empoderamento 
                                                 where organizacao_id = ?
                                                 and nome like '%_3' ");
-        $empoderamento_3_query->bindValue(1, 1091);
+        $empoderamento_3_query->bindValue(1, $organizacao_id);
         $empoderamento_3_query->execute();
 
 
@@ -866,7 +866,7 @@ class Editar extends Conexao {
                                                     link, tipo 
                                                 from redes_sociais 
                                                 where organizacao_id = ? ");
-        $redes_sociais_query->bindValue(1, 1091);
+        $redes_sociais_query->bindValue(1, $organizacao_id);
         $redes_sociais_query->execute();
 
         //passando os valores encontrados para um array
@@ -900,7 +900,7 @@ class Editar extends Conexao {
                                                 from indicacoes 
                                                 where organizacao_id = ?
                                                 and nome like '%_1' ");
-        $indicacoes_1_query->bindValue(1, 1091);
+        $indicacoes_1_query->bindValue(1, $organizacao_id);
         $indicacoes_1_query->execute();
 
 
@@ -917,7 +917,7 @@ class Editar extends Conexao {
                                                 from indicacoes 
                                                 where organizacao_id = ?
                                                 and nome like '%_2' ");
-        $indicacoes_2_query->bindValue(1, 1091);
+        $indicacoes_2_query->bindValue(1, $organizacao_id);
         $indicacoes_2_query->execute();
 
 
@@ -933,7 +933,7 @@ class Editar extends Conexao {
                                                 from indicacoes 
                                                 where organizacao_id = ?
                                                 and nome like '%_3' ");
-        $indicacoes_3_query->bindValue(1, 1091);
+        $indicacoes_3_query->bindValue(1, $organizacao_id);
         $indicacoes_3_query->execute();
 
 
@@ -951,7 +951,7 @@ class Editar extends Conexao {
                                             from relacionadas 
                                             where organizacao_id = ?
                                             and nome like '%_1' ");
-        $relacionada_1_query->bindValue(1, 1091);
+        $relacionada_1_query->bindValue(1, $organizacao_id);
         $relacionada_1_query->execute();
 
 
@@ -966,7 +966,7 @@ class Editar extends Conexao {
                                             from relacionadas 
                                             where organizacao_id = ?
                                             and nome like '%_2' ");
-        $relacionada_2_query->bindValue(1, 1091);
+        $relacionada_2_query->bindValue(1, $organizacao_id);
         $relacionada_2_query->execute();
 
 
@@ -980,7 +980,7 @@ class Editar extends Conexao {
                                             from relacionadas 
                                             where organizacao_id = ?
                                             and nome like '%_3' ");
-        $relacionada_3_query->bindValue(1, 1091);
+        $relacionada_3_query->bindValue(1, $organizacao_id);
         $relacionada_3_query->execute();
 
 
@@ -996,7 +996,7 @@ class Editar extends Conexao {
                                         subtema
                                     from subtemas
                                     where organizacao_id = ? ");
-        $subtemas_query->bindValue(1, 1091);
+        $subtemas_query->bindValue(1, $organizacao_id);
         $subtemas_query->execute();
 
 
@@ -1014,7 +1014,7 @@ class Editar extends Conexao {
                                         estado
                                     from atuacao_direta
                                     where organizacao_id = ? ");
-        $atuacao_direta_query->bindValue(1, 1091);
+        $atuacao_direta_query->bindValue(1, $organizacao_id);
         $atuacao_direta_query->execute();
 
 

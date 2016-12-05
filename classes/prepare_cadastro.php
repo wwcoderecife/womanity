@@ -2,6 +2,10 @@
     session_start();
 	require_once "CadastrarAll.class.php";
 
+    //Tipo do form
+
+    $form_type = $_POST['form_type'];
+
 	//organizacao
     $cnpj =  filter_input(INPUT_POST, "inputcnpj", FILTER_SANITIZE_MAGIC_QUOTES);
     $localizacao = filter_input(INPUT_POST, "zona", FILTER_SANITIZE_MAGIC_QUOTES);
@@ -206,9 +210,11 @@
         $novo->setIndicaEmail_3($indica_email_3);
         $novo->setIndicaTelefone_3($indica_telefone_3);
 
-
-    //$novo->inserir_novo();
+    if ($form_type == "editar"){
         $novo->editar_registro($_SESSION['organizacao_id']);
+    }else{
+        $novo->inserir_novo();
+    }
 
 
 ?>
