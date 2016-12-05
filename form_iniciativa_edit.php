@@ -15,7 +15,23 @@
          $('.phone_with_dddcel').mask('(00) 00000-0000');
          $('.cep').mask('00000-000');
          $('.money').mask('000.000.000.000.000,00', {reverse: true});
-        });
+         $(".form-ong input:radio").attr('disabled',true);
+         $(".form-ong select").attr('disabled',true);
+         $(".form-ong input:checkbox").attr('disabled',true);
+         $(".form-ong input").attr('readonly',true);
+         $(".form-ong textarea").attr('readonly',true);
+             
+    });
+        
+        function desbloquearCampos(){
+              $(".form-ong input:radio").attr('disabled',false);
+              $(".form-ong select").attr('disabled',false);
+              $(".form-ong input:checkbox").attr('disabled',false);
+              $(".form-ong input").attr('readonly',false);
+              $(".form-ong textarea").attr('readonly',false);
+              open_dialog("ok", "Agora você pode editar os dados!", 'success');
+           }
+
         </script>  
 
 
@@ -24,19 +40,25 @@
     require_once "classes/Editar.class.php";
 
     $edit = new editar;
-    $edit->busca();
+    $edit->busca($_SESSION['organizacao_id']);
 
      echo $edit->getLocalizacao();
 
+     //Array dos Checkboxs
 
+    $array_recursos_financeiros = $edit->getRecursosFinaceirosLista();
+    $array_temas = $edit->getTemas();
+    $array_funcoes = $edit->getFuncoes();
+    $array_politicas_publicas = $edit->getPoliticasPublicasList();  
+    $array_subtema = $edit->getSubtemas();
+    $array_estados = $edit->getEstados();
 
 ?>       
 
-
-<div class="row form_inicial">
+div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-    	 <form role="form" action="classes/prepare_cadastro.php" method="post" class="f1 form-ong">
-
+        <form role="form" action="classes/prepare_cadastro.php" method="post" class="f1 form-ong">
+            <input type="hidden" value="editar" name="form_type" />
     		<h3>Cadastro UNA Ecossistema<br>Iniciativa</h3>
     		<p>Preencha os campos obrigatórios*</p>
     		<div class="f1-steps">
@@ -135,7 +157,8 @@
                     <div class="help-block with-errors"></div>
                 </div>
 
-                <div class="f1-buttons">
+                <div class="f1-buttons">    
+                <button type="button" class="btn btn-warning" onclick="desbloquearCampos();" title="Desbloquear campos para edição">Editar</button>
                 <button type="button" class="btn btn-next" >Próximo</button>
                </div>
             </fieldset><!--Dados Pessoais-->
@@ -154,7 +177,8 @@
                         <?php if($edit->getCnpj() != ""){ echo "selected"; } ?>
                         >sim</option>
                      
-                        <option value="nao"<?php if($edit->getCnpj() == ""){ echo "selected"; } ?>
+                        <option value="nao"
+                        <?php if($edit->getCnpj() == ""){ echo "selected"; } ?>
                          >nao</option>
                     </select> 
                 <div class="iniciativapj">     
@@ -186,12 +210,14 @@
                 <h5>A sua iniciativa está localizada na…*</h5>
                  <div class="form-group">
                     <label class="radio-inline">
-                       <input type="radio" name="zona" value="rural" class="form-control-radio" <?php  if($edit->getLocalizacao() == "rural"){ echo "checked='checked'"; } ?>
+                       <input type="radio" name="zona" value="rural" class="form-control-radio" 
+                       <?php  if($edit->getLocalizacao() == "rural"){ echo "checked='checked'"; } ?>
                        >Zona Rural
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="zona" value="urbana" class="form-control-radio" <?php if($edit->getLocalizacao() == "urbana"){ echo "checked='checked'"; } ?>
+                        <input type="radio" name="zona" value="urbana" class="form-control-radio"
+                         <?php if($edit->getLocalizacao() == "urbana"){ echo "checked='checked'"; } ?>
                         >Zona Urbana
                     </label>
                 </div>
@@ -213,7 +239,7 @@
                 <h5>Telefone da iniciativa*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Telefone</label>
-                    <input type="text" name="organizacao-telefone" required placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd" id="inputTel3">
+                    <input type="text" name="organizacao-telefone" value="<?php echo $edit->getTelefone() ?>" required placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd" id="inputTel3">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -224,16 +250,16 @@
                     <div class="help-block with-errors"></div>
                 </div>
 
-
+                <!--verificar o get e set, se está correto -->
                 <h5>Como sua iniciativa se identifica?*</h5>
 
                 <div class="form-group">
                     <label class="radio-inline">
-                       <input type="radio" name="identifica" value="acao" class="form-control-radio">Açāo
+                       <input type="radio" name="identifica" value="<?php echo $edit->getTipo() ?>" class="form-control-radio">Açāo
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="identifica" value="projeto" class="form-control-radio">Projeto
+                        <input type="radio" name="identifica" value="<?php echo $edit->getTipo() ?>" class="form-control-radio">Projeto
                     </label>
                 </div>
 
@@ -244,17 +270,28 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="natureza" name="tipo" required>           
                         <option value=""></option>
-                        <option value="academica" <?=($edit->getTipo() == 'academica')?'selected':''?>>Acadêmica</option>
-                        <option value="coletivo" <?=($edit->getTipo() == 'coletivo')?'selected':''?>>Coletivo</option>
-                        <option value="empresa_privada" <?=($edit->getTipo() == 'empresa_privada')?'selected':''?>>Empresa Privada</option>
-                        <option value="investimento_social_privado"<?=($edit->getTipo() == 'investimento_social_privado')?'selected':''?>>Investimento Social Privado</option>
-                        <option value="fundos"<?=($edit->getTipo() == 'fundos')?'selected':''?>>Fundos</option>
-                        <option value="governo"<?=($edit->getTipo() == 'governo')?'selected':''?>>Governo</option>
-                        <option value="movimento"<?=($edit->getTipo() == 'movimento')?'selected':''?>>Movimento</option>
-                        <option value="negocio_social"<?=($edit->getTipo() == 'negocio_social')?'selected':''?>>Negócio Social</option>
-                        <option value="ong_sociedade_civil"<?=($edit->getTipo() == 'ong_sociedade_civil')?'selected':''?>>Organização da Sociedade Civil (ex: associação, ong, oscip, etc)
-                        <option value="redes"<?=($edit->getTipo() == 'rede')?'selected':''?>>Redes</option> 
-                        <option value="outros"<?=($edit->getTipo() == 'outros')?'selected':''?>>Outros</option>  
+                        <option value="academica" <?=($edit->getTipo() == 'academica')?'selected':''?>>
+                            Acadêmica</option>
+                        <option value="coletivo" <?=($edit->getTipo() == 'coletivo')?'selected':''?>>
+                            Coletivo</option>
+                        <option value="empresa_privada" <?=($edit->getTipo() == 'empresa_privada')?'selected':''?>>
+                            Empresa Privada</option>
+                        <option value="investimento_social_privado"<?=($edit->getTipo() == 'investimento_social_privado')?'selected':''?>>
+                            Investimento Social Privado</option>
+                        <option value="fundos"<?=($edit->getTipo() == 'fundos')?'selected':''?>>
+                            Fundos</option>
+                        <option value="governo"<?=($edit->getTipo() == 'governo')?'selected':''?>>
+                            Governo</option>
+                        <option value="movimento"<?=($edit->getTipo() == 'movimento')?'selected':''?>>
+                            Movimento</option>
+                        <option value="negocio_social"<?=($edit->getTipo() == 'negocio_social')?'selected':''?>>
+                            Negócio Social</option>
+                        <option value="ong_sociedade_civil"<?=($edit->getTipo() == 'ong_sociedade_civil')?'selected':''?>>
+                            Organização da Sociedade Civil (ex: associação, ong, oscip, etc)
+                        <option value="redes"<?=($edit->getTipo() == 'rede')?'selected':''?>>
+                            Redes</option> 
+                        <option value="outros"<?=($edit->getTipo() == 'outros')?'selected':''?>>
+                            Outros</option>  
                     </select>
                     <input type="text" id="inputoutros" name="inputoutros" class="f1-last-name form-control" placeholder="descreva outro tipo"style='display: none' />
                     <script>
@@ -313,9 +350,9 @@
                     <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas" required>
                      <div class="help-block with-errors"></div>
                         <option value=""></option>
-                        <option value="1-5"<?=($edit->getQtdePessoas() == '1-5')?'selected':''?>>1-5>1-5</option>
-                        <option value="6-10"<?=($edit->getQtdePessoas() == '6-10')?'selected':''?>>6-10>6-10</option>
-                        <option value="11-20"<?=($edit->getQtdePessoas() == '11-20')?'selected':''?>>11-20>11-20</option>
+                        <option value="1-5"<?=($edit->getQtdePessoas() == '1-5')?'selected':''?>>1-5></option>
+                        <option value="6-10"<?=($edit->getQtdePessoas() == '6-10')?'selected':''?>>6-10></option>
+                        <option value="11-20"<?=($edit->getQtdePessoas() == '11-20')?'selected':''?>>11-20></option>
                         <option value="21-50"<?=($edit->getQtdePessoas() == '21-50')?'selected':''?>>21-50</option>
                         <option value="51-100"<?=($edit->getQtdePessoas() == '51-100')?'selected':''?>>51-100</option>
                         <option value="101-500"<?=($edit->getQtdePessoas() == '101-500')?'selected':''?>>101-500</option>
@@ -409,7 +446,7 @@
 
                    <!--Tabela Temas-->
 
-        <h5>Áreas de atuação da organização: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>
+        <h5>Áreas de atuação da iniciativa: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>
         <div class="form-group" style="border: 1px solid #ddd">
         <div class="table-responsive">
         <table id="form1" name="temas" class="table table-hover col-sm-12">
@@ -453,7 +490,7 @@
             </tr>
 
             <tr>
-                <td><input type="checkbox" name="temas[ ]" class="no-margin" onclick="verificar()"
+                <td><input type="checkbox" name="temas[ ]" value="educacao_formacao" class="no-margin" onclick="verificar()"
                     <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('educacao_formacao', $array_temas[$i])) : ?> checked="checked" <?php endif; 
@@ -467,7 +504,8 @@
                     <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('empreendedorismo_feminino_autonomia_economica', $array_temas[$i])) : ?> checked="checked" <?php endif; 
-                        } ?>></td>
+                        } ?>>
+                    </td>
                 <td>Empreendedorismo feminino e autonomia econômica.</td>
                 <td>Ações de incentivo ao empreendedorismo feminino e à autonomia econômica, por meio de capacitação e/ou financiamento, tais como capacitações, cooperativismo, microcrédito, etc.</td>
             </tr>
@@ -515,8 +553,7 @@ possibilidades de desenvolvimento profissional e equiparação salarial.</td>
             </tr>
             <tr>
                 <td><input type="checkbox" name="temas[ ]" value="LGBTT" class="no-margin" onclick="verificar()"
-                    <td><input type="checkbox" name="temas[ ]"value="LGBTT"class="no-margin" onclick="verificar()"
-                        <?php 
+                     <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('LGBTT', $array_temas[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
@@ -640,6 +677,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 
 
 <h5> Clique e escolha até 3 Subtemas abaixo*</h5>
+<h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar os subtemas.</em></h6>
 <div class="form-group">
 <!--<label for="subtemas" for="f1-google-plus">Subtemas</label>-->
         <select class="f1-last-name form-control" id="subtemas" name="subtemas[ ]" multiple required>
@@ -649,252 +687,294 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                     if(in_array('Aborto', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Aborto</option>
+
             <option value="Dança"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Dança', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Dança</option>
+
             <option value="Inserção de mulheres na política"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Inserção de mulheres na política', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Inserção de mulheres na política</option>
+
             <option value="Paternidade" 
             <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Paternidade', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
                 >Paternidade</option>
+
             <option value="Tecnologia social e/ou alternativas"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Tecnologia social e/ou alternativas', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Tecnologia social e/ou alternativas</option>
+
             <option value="Desenvolvimento e Programação"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Desenvolvimento e Programação', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Desenvolvimento e Programação</option>
+
             <option value="Liderança"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Liderança', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Liderança</option>
+
             <option value="Pessoa com deficiência"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Pessoa com deficiência', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Pessoa com deficiência</option>
+
             <option value="Trabalho digno"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Trabalho digno', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Trabalho digno</option>
+
             <option value="Advocacy" 
             <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Advocacy', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Advocacy</option>
+
             <option value="Ecofeminismo"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Ecofeminismo', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Ecofeminismo</option>
+
             <option value="Povos tradicionais"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Povos tradicionais', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Povos tradicionais</option>
+
             <option value="Tráfico de pessoas"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Tráfico de pessoas', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Tráfico de pessoas</option>
+
             <option value="Água e saneamento básico"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Água e saneamento básico', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Água e saneamento básico</option>
+
             <option value="Economia criativa"  
             <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Economia criativa', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Economia criativa</option>
+
             <option value="Marketing"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Marketing', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Marketing</option>
+
             <option value="Preconceito e discriminação"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Preconceito e discriminação', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Preconceito e discriminação</option>
+
             <option value="Tecnologia"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Tecnologia', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Tecnologia</option>
+
             <option value="Artes plásticas"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Artes plásticas', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Artes plásticas</option>
+
             <option value="Parto Humano"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Parto Humano', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Parto Humano</option>
+
             <option value="Cadeia produtiva responsável"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Cadeia produtiva responsável', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Cadeia produtiva responsável</option>
+
             <option value="Educomunicação"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Educomunicação', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Educomunicação</option>
+
             <option value="Microcrédito"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Microcrédito', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Microcrédito</option>
+
             <option value="Questão presidiária"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Questão presidiária', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Questão presidiária</option>
+
             <option value="Cinema"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Cinema', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Cinema</option>
+
             <option value="Envelhecimento"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Envelhecimento', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Envelhecimento</option>
+
             <option value="Mobilização"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Mobilização', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Mobilização</option>
+
             <option value="Reciclagem e logísitca diversa"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Reciclagem e logísitca diversa', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Reciclagem e logísitca diversa</option>
+
             <option value="Finanças sociais"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Finanças sociais', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Finanças sociais</option>
+
             <option value="Mudanças climáticas"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Mudanças climáticas', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Mudanças climáticas</option>
+
             <option value="Redes Sociais"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Redes Sociais', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Redes Sociais</option>
+
             <option value="Conselhos e outras instâncias"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Conselhos e outras instâncias', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Conselhos e outras instâncias</option>
+
             <option value="Fotografia"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Fotografia', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Fotografia</option>
+
             <option value="Mulheres no mundo da ciências"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Mulheres no mundo da ciências', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Mulheres no mundo da ciências</option>
+
             <option value="Refugiados"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Refugiados', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Refugiados</option>
+
             <option value="Consumo"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Consumo', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Consumo</option>
+
             <option value="Incentivo à leitura"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Incentivo à leitura', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Incentivo à leitura</option>
+
             <option value="Obesidade infantil"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Obesidade infantil', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Obesidade infantil</option>
+
             <option value="Reparação-reconstrução"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Reparação-reconstrução', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Reparação-reconstrução</option>
+
             <option value="Cooperativismo"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Cooperativismo', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Cooperativismo</option>
+
             <option value="Inclusão Digital"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Inclusão Digital', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Inclusão Digital</option>
+
             <option value="Teatro"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Teatro', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Teatro</option>
+
             <option value="Sustentabilidade"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
@@ -927,8 +1007,8 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
            <h5>O que faz sua iniciativa?* (até 500 caracteres).</h5>                                  
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
-                    <textarea name="sobre" maxlength="500" placeholder="Fale sobre a sua iniciativa...." 
-                    class="f1-about-yourself form-control" id="sobre" required ></textarea>
+                    <textarea name="sobre" maxlength="500" placeholder="Fale sobre a sua iniciativa...." required
+                    class="f1-about-yourself form-control" id="sobre"><?php echo $edit->getDescricao() ?></textarea>
                     <div class="help-block with-errors">
                 </div>
 
@@ -936,15 +1016,51 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                  <h5>Qual é a sua função no ecossistema?*</h5>
 
                  <div class="form-group">
-                 <input type="checkbox" name="funcao[ ]" value="Advocacy">Advocacy<br>
-                 <input type="checkbox" name="funcao[ ]" value="Atuação direta com mulheres, homens, LGBTT, etc" class="form-control-radio">Atuação direta com mulheres, homens, LGBTT, etc<br>
+                 <input type="checkbox" name="funcao[ ]" value="Advocacy"
+                 <?php 
+                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
+                            if(in_array('Advocacy', $array_temas[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                 >Advocacy<br>
+                 <input type="checkbox" name="funcao[ ]" value="Atuação direta com mulheres, homens, LGBTT, etc" class="form-control-radio"
+                 <?php 
+                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
+                            if(in_array('Atuação direta com mulheres, homens, LGBTT, etc', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                 >Atuação direta com mulheres, homens, LGBTT, etc<br>
 
-                 <input type="numeric"  name="numero_beneficiarios" placeholder="número de beneficiários diretos" style="margin-left: 20px" class="f1-last-name form-control"><br>
-                 <input type="checkbox" name="funcao[ ]" value="Financiadores"class="form-control-radio">Financiadores<br>
-                 <input type="checkbox" name="funcao[ ]" value="Fortalecedor institucional"class="form-control-radio">Fortalecedor institucional<br>
-                 <input type="checkbox" name="funcao[ ]" value="público" style="margin-left: 20px"class="form-control-radio">público
-                 <input type="checkbox" name="funcao[ ]" value="privado" style="margin-left: 20px"class="form-control-radio">privado
-                 <input type="checkbox" name="funcao[ ]" value="social"  style="margin-left: 20px"class="form-control-radio">social⁠⁠⁠⁠   
+                 <input type="numeric"  name="numero_beneficiarios" value="<?php echo $edit->getNumeroBeneficiarios(); ?>" placeholder="número de beneficiários diretos" style="margin-left: 20px" class="f1-last-name form-control"><br>
+                 <input type="checkbox" name="funcao[ ]" value="Financiadores"class="form-control-radio"
+                 <?php 
+                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
+                            if(in_array('Financiadores', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+
+                 >Financiadores<br>
+                 <input type="checkbox" name="funcao[ ]" value="Fortalecedor institucional"class="form-control-radio"
+                 <?php 
+                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
+                            if(in_array('Fortalecedor institucional', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                 >Fortalecedor institucional<br>
+                 <input type="checkbox" name="funcao[ ]" value="público" style="margin-left: 20px"class="form-control-radio"
+                 <?php 
+                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
+                            if(in_array('público', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                 >público
+                 <input type="checkbox" name="funcao[ ]" value="privado" style="margin-left: 20px"class="form-control-radio"
+                 <?php 
+                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
+                            if(in_array('privado', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                 >privado
+                 <input type="checkbox" name="funcao[ ]" value="social"  style="margin-left: 20px"class="form-control-radio"
+                 <?php 
+                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
+                            if(in_array('social', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
+                        } ?>
+                 >social⁠⁠⁠⁠   
                  </div>   
 
 
@@ -958,19 +1074,25 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                         <option value=""></option>
                         <option value="Empresas" <?=($edit->getPublicoAtendido() == 'Empresas')?'selected':''?>
                             >Empresas</option>
+
                         <option value="Organizações Sociais" <?=($edit->getPublicoAtendido() == 'Organizações Sociais')?'selected':''?>
                             >Organizações Sociais</option>
-                        <option value="Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher" <?=($edit->getPublicoAtendido() == 'Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher')?'selected':''?>
+
+                        <option value="Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher" 
+                        <?=($edit->getPublicoAtendido() == 'Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher')?'selected':''?>
                             >Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher</option><br>
+
                         <option value="Movimentos, coletivos, redes, fóruns" <?=($edit->getPublicoAtendido() == 'Movimentos, coletivos, redes, fóruns')?'selected':''?>
                             >Movimentos, coletivos, redes, fóruns</option>
+
                         <option value="Adolescentes e jovens" <?=($edit->getPublicoAtendido() == 'Adolescentes e jovens')?'selected':''?>
                             >Adolescentes e jovens</option>
+
                         <option value="Homens" <?=($edit->getPublicoAtendido() == 'Homens')?'selected':''?>
                             >Homens</option>
+
                         <option value="Mulheres" <?=($edit->getPublicoAtendido() == 'Mulheres')?'selected':''?>
-                            >Mulheres</option>
-                           
+                            >Mulheres</option>          
                     </select>
                     
                     <h5>Clique nos Estados que sua iniciativa tem atuação direta*</h5>
@@ -1196,7 +1318,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                         <option value=""></option>
                         <option value="0" <?=($edit->getMonitoramentoAtividades() == '')?'selected':''?>
                         >Nāo</option>
-                        <option value="1" <?=($edit->getMonitoramentoAtividades() == '')?'selected':''?>
+                        <option value="1" <?=($edit->getMonitoramentoAtividades() !== '')?'selected':''?>
                         >Sim</option>
                     </select>
                     <textarea type="text" id="inputAvaliacaoOng" value="<? echo $edit->getMonitoramentoAtividades(); ?>"
@@ -1239,7 +1361,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 
 <!-- 27 Iniciativa-->
 
-<h5>Sua Organizaçāo tem uma estratégia de comunicação própria?*</h5>
+<h5>Sua Iniciativa tem uma estratégia de comunicação própria?*</h5>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -1338,16 +1460,16 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 
                 <!-- 29-->
 
-                 <h5>Quais são as organizações com atuação na temática da mulher com que sua organizaçāo se relaciona diretamente?</h5>
+                 <h5>Quais são as organizações com atuação na temática da mulher com que sua iniciativa se relaciona diretamente?</h5>
                  <h5>Organização 1</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="relaciona1"  class="f1-last-name form-control" value="<?php echo (explode("_1",$edit->getRelaciona_1())[0]); ?>">
+                    <input type="text" name="relaciona1"  class="f1-last-name form-control" value="<?php echo (explode("_1",$edit->getRelaciona_1())[0]); ?>" >
                 </div>
                 <h5>Organização 2</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="relaciona2"   class="f1-last-name form-control" value="<?php echo (explode("_2",$edit->getRelaciona_2())[0]); ?>">
+                    <input type="text" name="relaciona2"   class="f1-last-name form-control" value="<?php echo (explode("_2",$edit->getRelaciona_2())[0]); ?>" >
                 </div>
                 <h5>Organização 3</h5> 
                 <div class="form-group">
@@ -1452,18 +1574,18 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 </div>              
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="button" class="btn btn-next" data-disable="true">Próximo</button>
+                    <button type="button" class="btn btn-next">Próximo</button>
                 </div>
             </fieldset>
 
              <!--Etapa 4 Formulário: Mídia Social-->
 
             <fieldset>
-                <h5>Onde podemos encontrar mais informação sobre sua organização?*(Preencha pelo menos 1 item):</h5>
+                <h5>Onde podemos encontrar mais informação sobre sua iniciativa?*(Preencha pelo menos 1 item):</h5>
                 <div class="form-group">
                     <div class="input-group">
                       <span class="input-group-addon"><i class="fa fa-mouse-pointer"></i></span>
-                      <input class="form-control" value="<?php echo $edit->getSite(); ?>"   type="text" name="site" placeholder="Site">
+                      <input class="form-control" value="<?php echo $edit->getSite(); ?>" type="text" name="site" placeholder="Site">
                     </div>
                 </div>
                 <div class="form-group">
@@ -1498,7 +1620,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 </div>
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="button" class="btn btn-next"data-disable="true">Próximo</button>
+                    <button type="button" class="btn btn-next">Próximo</button>
                 </div>
             </fieldset>
 
@@ -1571,23 +1693,6 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                     <button type="button" class="btn btn-previous">Anterior</button>
                     <button type="submit" class="btn btn-submit">Enviar</button>
                 </div>
-                <!--
-                <script>
-                // Select every button with type submit under a form with data-toggle validator
-                    $('form[data-toggle="validator"] button[type="submit"]').click(function(e) {
-                        // Select the form that has this button
-                        var form = $(this).closest('form');
-                        // Verify if the form is validated
-                        if (!form.data("bs.validator").validate().hasErrors()) {
-                            e.preventDefault();
-                            // Here go the trick! Fire a custom event to the form
-                            form.trigger('submitted');
-                        } else  {
-                            console.log('Form still not valid');
-                        }
-                    });
-                    </script>
-                -->
             </fieldset> 
          </form>
      </div>
