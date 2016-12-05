@@ -692,6 +692,7 @@ class CadastrarAll extends Conexao {
             $inserir_ong->bindValue(20, $this->getInputnomeong());
             $inserir_ong->execute();
             $organizacao_id = $pdo->lastInsertId();
+            $_SESSION['organizacao_id'] = $organizacao_id;
 
             $inserir_contato = $pdo->prepare("insert into contatos (cargo, email, telefone, celular, tipo, organizacao_id, nome)
                                     values (?, ?, ?, ?, ?, ?, ?)");
@@ -954,6 +955,298 @@ class CadastrarAll extends Conexao {
 
 
    }
+
+
+
+
+
+   //Editar
+   public function editar_registro($organizacao_id){
+        $pdo = parent::getDB();
+        try{
+
+
+            $pdo->beginTransaction();
+
+            $edit_ong = $pdo->prepare("update organizacoes set cnpj = ? , localizacao = ? , nome = ?, sigla = ?,
+                telefone = ?, email = ?, tipo = ?, inicio_atv = ?, qtde_pessoas = ?, recursos_financeiros = ?,
+                descricao = ?,  publico_atendido = ?, politicas_publicas = ?, monitoramento_atividades = ?, estrategia_comunicacao = ?,
+                premiacao_certificacao = ?, organizacao_pai = ?, natureza = ?, inputnomeong = ?
+                where usuario_id = ? ");
+            $edit_ong->bindValue(1, $this->getCnpj());
+            $edit_ong->bindValue(2, $this->getLocalizacao());
+            $edit_ong->bindValue(3, $this->getNome());
+            $edit_ong->bindValue(4, $this->getSigla());
+            $edit_ong->bindValue(5, $this->getTelefone());
+            $edit_ong->bindValue(6, $this->getEmail());
+            $edit_ong->bindValue(7, $this->getTipo());
+            $edit_ong->bindValue(8, $this->getInicioAtv());
+            $edit_ong->bindValue(9, $this->getQtdePessoas());
+            $edit_ong->bindValue(10, $this->getRecursosFinaceiros());
+            $edit_ong->bindValue(11, $this->getDescricao());
+            $edit_ong->bindValue(12, $this->getPublicoAtendido());
+            $edit_ong->bindValue(13, $this->getPoliticasPublicas());
+            $edit_ong->bindValue(14, $this->getMonitoramentoAtividades());
+            $edit_ong->bindValue(15, $this->getEstrategiaComunicacao());
+            $edit_ong->bindValue(16, $this->getPremiacaoCertificacao());
+            $edit_ong->bindValue(17, $this->getOrganizacaoPai());
+            $edit_ong->bindValue(18, $this->getNatureza());
+            $edit_ong->bindValue(19, $this->getInputnomeong());
+            $edit_ong->bindValue(20, $this->getUsuarioId());
+            
+            $edit_ong->execute();
+            //$organizacao_id = $pdo->lastInsertId();
+
+            $edit_contato = $pdo->prepare("update contatos set cargo = ?, email = ?, telefone = ?,
+                                    celular = ?, tipo = ?, nome = ?
+                                    where  organizacao_id = ? ");
+            $edit_contato->bindValue(1, $this->getCargo_1());
+            $edit_contato->bindValue(2, $this->getEmail_1());
+            $edit_contato->bindValue(3, $this->getTelefone_1());
+            $edit_contato->bindValue(4, $this->getCelular_1());
+            $edit_contato->bindValue(5, 1);
+            $edit_contato->bindValue(6, $this->getNome_1());
+            $edit_contato->bindValue(7, $organizacao_id);
+            
+            $edit_contato->execute();
+
+            $edit_contato->bindValue(1, $this->getCargo_2());
+            $edit_contato->bindValue(2, $this->getEmail_2());
+            $edit_contato->bindValue(3, $this->getTelefone_2());
+            $edit_contato->bindValue(4, $this->getCelular_2());
+            $edit_contato->bindValue(5, 2);
+            $edit_contato->bindValue(6, $this->getNome_2());
+            $edit_contato->bindValue(7, $organizacao_id);
+            $edit_contato->execute();
+
+            $orcamento = $this->getOrcamento_2014();
+            $edit_orcamentos = $pdo->prepare("update orcamentos  set ano = ?, valor = ? where organizacao_id = ? ");
+            $edit_orcamentos->bindValue(1, 2014);
+            if ($orcamento == ""){
+                $edit_orcamentos->bindValue(2, '0.00');
+            }else{
+                $edit_orcamentos->bindValue(2, $this->getOrcamento_2014());
+            }
+            $edit_orcamentos->bindValue(3, $organizacao_id);
+            $edit_orcamentos->execute();
+
+            $orcamento = $this->getOrcamento_2015();
+            $edit_orcamentos->bindValue(1, 2015);
+            if ($orcamento == ""){
+                $edit_orcamentos->bindValue(2, '0.00');
+            }else{
+                $edit_orcamentos->bindValue(2, $this->getOrcamento_2015());
+            }
+            $edit_orcamentos->bindValue(3, $organizacao_id);
+            $edit_orcamentos->execute();
+
+            $orcamento = $this->getOrcamento_2016();
+            $edit_orcamentos->bindValue(1, 2016);
+            if ($orcamento == ""){
+                $edit_orcamentos->bindValue(2, '0.00');
+            }else{
+                $edit_orcamentos->bindValue(2, $this->getOrcamento_2016());
+            }
+            $edit_orcamentos->bindValue(3, $organizacao_id);
+            $edit_orcamentos->execute();
+
+
+            $edit_recursos_financeiros_lista = $pdo->prepare("update origem_recursos set tipo = ? where organizacao_id = ? ");
+            $recursos_finaceiros_lista = $this->getRecursosFinaceirosLista();
+                foreach ($recursos_finaceiros_lista  as $recurso){
+                   $edit_recursos_financeiros_lista->bindValue(1, $recurso);
+                   $edit_recursos_financeiros_lista->bindValue(2, $organizacao_id);
+                   $edit_recursos_financeiros_lista->execute();
+                }
+
+            $edit_politicas_publicas_lista = $pdo->prepare("update politicas_publicas set tipo = ? where organizacao_id = ? ");
+            $politicas_publicas_lista = $this->getPoliticasPublicasList();
+                foreach ($politicas_publicas_lista  as $politica){
+                   $edit_politicas_publicas_lista->bindValue(1, $politica);
+                   $edit_politicas_publicas_lista->bindValue(2, $organizacao_id);
+                   $edit_politicas_publicas_lista->execute();
+                }
+
+
+            $edit_funcoes = $pdo->prepare("update funcoes set tipo = ?, complemento = ? where organizacao_id = ? ");
+            $funcoes = $this->getFuncoes();
+
+                foreach ($funcoes  as $funcao){
+                    if ($funcao == "Atuação direta com mulheres, homens, LGBTT, etc"){
+                        $edit_funcoes->bindValue(1, $funcao);
+                        $edit_funcoes->bindValue(2, $this->getNumeroBeneficiarios());
+                        $edit_funcoes->bindValue(3, $organizacao_id);
+                        $edit_funcoes->execute();
+                    }else{
+                        $edit_funcoes->bindValue(1, $funcao);
+                        $edit_funcoes->bindValue(2, 0);
+                        $edit_funcoes->bindValue(3, $organizacao_id);
+                        $edit_funcoes->execute();
+                    }
+                   
+                }
+
+            $edit_empoderamentos = $pdo->prepare("update empoderamento set nome = ?, descricao = ? where organizacao_id = ? ");
+            $edit_empoderamentos->bindValue(1, $this->getEmpoderamentoNome_1());
+            $edit_empoderamentos->bindValue(2, $this->getEmpoderamentoDesc_1());
+            $edit_empoderamentos->bindValue(3, $organizacao_id);
+            $edit_empoderamentos->execute();
+
+            $edit_empoderamentos->bindValue(1, $this->getEmpoderamentoNome_2());
+            $edit_empoderamentos->bindValue(2, $this->getEmpoderamentoDesc_2());
+            $edit_empoderamentos->bindValue(3, $organizacao_id);
+            $edit_empoderamentos->execute();
+
+            $edit_empoderamentos->bindValue(1, $this->getEmpoderamentoNome_3());
+            $edit_empoderamentos->bindValue(2, $this->getEmpoderamentoDesc_3());
+            $edit_empoderamentos->bindValue(3, $organizacao_id);
+            $edit_empoderamentos->execute();
+
+
+            $edit_atuacao_direta = $pdo->prepare("update atuacao_direta set estado = ? where organizacao_id = ? ");
+            $estados = $this->getEstados();
+            foreach ($estados  as $estado){
+
+               $edit_atuacao_direta->bindValue(1, $estado);
+               $edit_atuacao_direta->bindValue(2, $organizacao_id);
+               $edit_atuacao_direta->execute();
+            }
+
+
+            $edit_relaciona = $pdo->prepare("update relacionadas set nome = ? where organizacao_id = ? ");
+            $edit_relaciona->bindValue(1, $this->getRelaciona_1());
+            $edit_relaciona->bindValue(2, $organizacao_id);
+            $edit_relaciona->execute();
+
+            $edit_relaciona->bindValue(1, $this->getRelaciona_2());
+            $edit_relaciona->bindValue(2, $organizacao_id);
+            $edit_relaciona->execute();
+
+
+            $edit_relaciona->bindValue(1, $this->getRelaciona_3());
+            $edit_relaciona->bindValue(2, $organizacao_id);
+            $edit_relaciona->execute();
+
+
+            $edit_tema = $pdo->prepare("update temas set tema = ? where organizacao_id = ? ");
+            $temas = $this->getTemas();
+            foreach ($temas  as $tema){
+               $edit_tema->bindValue(1, $tema);
+               $edit_tema->bindValue(2, $organizacao_id);
+               $edit_tema->execute();
+            }
+
+            $edit_subtema = $pdo->prepare("update subtemas set subtema = ? where organizacao_id = ? ");
+            $subtemas = $this->getSubtemas();
+            foreach ($subtemas  as $subtema){
+               $edit_subtema->bindValue(1, $subtema);
+               $edit_subtema->bindValue(2, $organizacao_id);
+               $edit_subtema->execute();
+            }
+
+            $edit_endereco =  $pdo->prepare("update enderecos set regiao = ?, estado = ?, cidade = ?, bairro = ?,
+                rua = ?, numero = ?, complemento = ?, cep = ? where organizacao_id = ? ");
+            $edit_endereco->bindValue(1, $this->getRegiao());
+            $edit_endereco->bindValue(2, $this->getEstado());
+            $edit_endereco->bindValue(3, $this->getCidade());
+            $edit_endereco->bindValue(4, $this->getBairro());
+            $edit_endereco->bindValue(5, $this->getRua());
+            $edit_endereco->bindValue(6, $this->getNumero());
+            $edit_endereco->bindValue(7, $this->getComplemento());
+            $edit_endereco->bindValue(8, $this->getCep());
+            $edit_endereco->bindValue(9, $organizacao_id);
+            $edit_endereco->execute();
+
+
+            $edit_rede_social =  $pdo->prepare("update redes_sociais set link = ?, tipo = ? where organizacao_id = ? ");
+            $edit_rede_social->bindValue(1, $this->getSite());
+            $edit_rede_social->bindValue(2, 'Site');
+            $edit_rede_social->bindValue(3, $organizacao_id);
+            $edit_rede_social->execute();
+
+            $edit_rede_social->bindValue(1, $this->getFacebook());
+            $edit_rede_social->bindValue(2, 'Facebook');
+            $edit_rede_social->bindValue(3, $organizacao_id);
+            $edit_rede_social->execute();
+
+            $edit_rede_social->bindValue(1, $this->getInstagram());
+            $edit_rede_social->bindValue(2, 'Instagram');
+            $edit_rede_social->bindValue(3, $organizacao_id);
+            $edit_rede_social->execute();
+
+            $edit_rede_social->bindValue(1, $this->getTwitter());
+            $edit_rede_social->bindValue(2, 'Twitter');
+            $edit_rede_social->bindValue(3, $organizacao_id);
+            $edit_rede_social->execute();
+
+            $edit_rede_social->bindValue(1, $this->getLinkedin());
+            $edit_rede_social->bindValue(2, 'Linkedin');
+            $edit_rede_social->bindValue(3, $organizacao_id);
+            $edit_rede_social->execute();
+
+            $edit_rede_social->bindValue(1, $this->getOutros());
+            $edit_rede_social->bindValue(2, 'Outros');
+            $edit_rede_social->bindValue(3, $organizacao_id);
+            $edit_rede_social->execute();
+
+
+            $edit_indicacao =  $pdo->prepare("update indicacoes set nome = ?, email = ?, telefone = ? where organizacao_id = ? ");
+            $edit_indicacao->bindValue(1, $this->getIndicaNome_1());
+            $edit_indicacao->bindValue(2, $this->getIndicaEmail_1());
+            $edit_indicacao->bindValue(3, $this->getIndicaTelefone_1());
+            $edit_indicacao->bindValue(4, $organizacao_id);
+            $edit_indicacao->execute();
+
+            $edit_indicacao->bindValue(1, $this->getIndicaNome_2());
+            $edit_indicacao->bindValue(2, $this->getIndicaEmail_2());
+            $edit_indicacao->bindValue(3, $this->getIndicaTelefone_2());
+            $edit_indicacao->bindValue(4, $organizacao_id);
+            $edit_indicacao->execute();
+
+            $edit_indicacao->bindValue(1, $this->getIndicaNome_3());
+            $edit_indicacao->bindValue(2, $this->getIndicaEmail_3());
+            $edit_indicacao->bindValue(3, $this->getIndicaTelefone_3());
+            $edit_indicacao->bindValue(4, $organizacao_id);
+            $edit_indicacao->execute();
+
+
+
+            $pdo->commit();
+
+            $_SESSION['cadastro'] = true;
+
+            echo "<script type='text/javascript'>
+
+                        sweetAlert({
+                          title: '',
+                           text: 'Editado com sucesso!',
+                           type: 'success'
+                          },
+                          function(){
+                            window.location.href = '../form.php';
+                        });
+
+                    </script>";
+
+        }
+        catch (Exception $e){
+              $pdo->rollback();
+              echo $e->getMessage();
+               // echo "<script type='text/javascript'>
+
+               //          sweetAlert({
+               //            title: 'Erro',
+               //             text: 'Não foi possível editar o cadastro!',
+               //              type: 'error'
+               //            },
+               //            function(){
+               //              window.location.href = '../form.php';
+               //          });
+
+               //      </script>";
+
+        }
+    }
 }
 
 ?>

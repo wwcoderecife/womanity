@@ -15,7 +15,7 @@
     $recursos_finaceiros = filter_input(INPUT_POST, "recursos", FILTER_SANITIZE_MAGIC_QUOTES);
     $descricao = filter_input(INPUT_POST, "sobre", FILTER_SANITIZE_MAGIC_QUOTES);
     $publico_atendido = filter_input(INPUT_POST, "publico_alvo", FILTER_SANITIZE_MAGIC_QUOTES);
-    $politicas_publicas = filter_input(INPUT_POST, "politicas_publicas", FILTER_SANITIZE_MAGIC_QUOTES);
+    $politicas_publicas = filter_input(INPUT_POST, "organizaçāo_politica_publica", FILTER_SANITIZE_MAGIC_QUOTES);
     $monitoramento_atividades = filter_input(INPUT_POST, "inputAvaliacaoOng", FILTER_SANITIZE_MAGIC_QUOTES);
     $estrategia_comunicacao = filter_input(INPUT_POST, "inputComunicacaoOng", FILTER_SANITIZE_MAGIC_QUOTES);
     $premiacao_certificacao = filter_input(INPUT_POST, "inputPremiacaoOng", FILTER_SANITIZE_MAGIC_QUOTES);
@@ -207,7 +207,8 @@
         $novo->setIndicaTelefone_3($indica_telefone_3);
 
 
-    $novo->inserir_novo();
+    //$novo->inserir_novo();
+        $novo->editar_registro($_SESSION['organizacao_id']);
 
 
 ?>

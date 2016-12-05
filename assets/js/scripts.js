@@ -5900,6 +5900,5 @@ jQuery(document).ready(function() {
     
     //});
 
-    //form
-    //$('#form-ong input').attr('readonly', 'readonly');
+
 });

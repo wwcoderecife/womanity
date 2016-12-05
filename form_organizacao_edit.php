@@ -35,6 +35,7 @@
               $("#inputTel4").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
               $("#inputTel5").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
               $("#inputTel6").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
+              
              
             });
             </script>
@@ -1255,12 +1256,12 @@
 
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="politicas_publicas" <?=($edit->getPoliticasPublicas() == 'nao')?'checked=checked':''?>
+                        <input type="radio" name="politicas_publicas" <?=($edit->getPoliticasPublicas() == '')?'checked=checked':''?>
                          value="nao" class="form-control-radio"> Nāo
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="politicas_publicas" <?=($edit->getPoliticasPublicas() == 'sim')?'checked=checked':''?>
+                        <input type="radio" name="politicas_publicas" <?=($edit->getPoliticasPublicas() != '')?'checked=checked':''?>
                         value="sim" class="form-control-radio"> Sim
                     </label>
                 </div>
@@ -1292,7 +1293,7 @@
                         } ?>
                     >nacional
                     </label>
-                    <textarea name="organizaçāo_politica_publica" placeholder="Descreva como se deu essa influência em políticas públicas (em 500 caracteres)"
+                    <textarea name="organizaçāo_politica_publica" value="<?php echo $edit->getPoliticasPublicas(); ?>" placeholder="Descreva como se deu essa influência em políticas públicas (em 500 caracteres)"
 
                     class="f1-about-yourself form-control" id="organizaçāo_politica_publica"></textarea>
                 </div>

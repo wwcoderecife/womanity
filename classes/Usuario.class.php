@@ -40,6 +40,7 @@ class Login extends Conexao {
 
 			if ($verifica->rowCount() >= 1):
 				$_SESSION['cadastro'] = true;
+				$_SESSION['organizacao_id'] = $verifica->id;
 			else:
 				$_SESSION['cadastro'] = false;
 			endif;
