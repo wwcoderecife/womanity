@@ -26,7 +26,6 @@
     $edit = new editar;
     $edit->busca();
 
-     echo $edit->getLocalizacao();
 
 ?>       
 
@@ -156,7 +155,7 @@
                          >nao</option>
                     </select> 
                 <div class="iniciativapj">     
-               <input type="text" id="inputnomeong" value="<?php echo $edit->getinputnomeong() ?>"  name="inputnomeong" class="f1-last-name form-control" placeholder="nome da organizaçāo" style='display: none' />
+               <input type="text" id="inputnomeong" name="inputnomeong" value="<?php echo $edit->getinputnomeong() ?>"  name="inputnomeong" class="f1-last-name form-control" placeholder="nome da organizaçāo" style='display: none' />
                 <input type="text" id="inputcnpj" maxlength="18" value="<?php echo $edit->getCnpj()  ?>" name="inputcnpj" required class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" style='display: none'/ >
 
                 </div>

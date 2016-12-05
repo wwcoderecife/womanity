@@ -21,6 +21,7 @@
     $premiacao_certificacao = filter_input(INPUT_POST, "inputPremiacaoOng", FILTER_SANITIZE_MAGIC_QUOTES);
     $organizacao_pai = filter_input(INPUT_POST, "organizacao-zona", FILTER_SANITIZE_MAGIC_QUOTES);
     $natureza = filter_input(INPUT_POST, "identifica", FILTER_SANITIZE_MAGIC_QUOTES);
+    $inputnomeong = filter_input(INPUT_POST, "inputnomeong", FILTER_SANITIZE_MAGIC_QUOTES);
     $usuario_id = $_SESSION['usuario_id'];
     
 

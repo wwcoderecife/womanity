@@ -54,7 +54,6 @@
             $l->deslogar();
         }
 
-        
 
 ?>
 		<!-- Top menu -->
@@ -105,12 +104,14 @@
 
                 <!--  dependendo do tipo, irá carregar o form da iniciativa ou organização -->
                 <?php
-                    if ($_SESSION['usuario_tipo'] == 1 && $_SESSION['cadastro'] == false){
+                    if ($_SESSION['usuario_tipo'] == 1 && $_SESSION['cadastro'] == 0){
                         include 'form_organizacao.php';
-                    }else if($_SESSION['usuario_tipo'] == 2 && $_SESSION['cadastro'] == false){
+                    }else if($_SESSION['usuario_tipo'] == 2 && $_SESSION['cadastro'] == 0){
                         include 'form_iniciativa.php';
-                    }else if($_SESSION['usuario_tipo'] == 1 && $_SESSION['cadastro'] == true){
+                    }else if($_SESSION['usuario_tipo'] == 1 && $_SESSION['cadastro'] == 1){
                         include 'form_organizacao_edit.php';
+                    }else if($_SESSION['usuario_tipo'] == 2 && $_SESSION['cadastro'] == 1){
+                        include 'form_iniciativa_edit.php';
                     }
                 ?>
 <!-- origin/master--> 
