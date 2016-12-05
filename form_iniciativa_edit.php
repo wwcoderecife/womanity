@@ -2,7 +2,7 @@
          ================================================== -->
 
             <script src="assets/js/bootstrap.min.js"></script>
-            <script src="assets/js/validator.min.js"></script>
+            <!--<script src="assets/js/validator.min.js"></script>-->
           
              <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
             
