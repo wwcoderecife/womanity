@@ -286,6 +286,42 @@
             </div>
         </div>
 
+        <div class="row">
+                    <div class="col-sm-12 c-form-info-title wow fadeInUp">
+                        <h3>Parceiros:</h3>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-3 c-form-info-box wow fadeInUp">
+                        <div class="c-form-info-box-icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <p>logo1<br>Womanity Foundation</p>
+                    </div>
+                    <div class="col-sm-3 c-form-info-box wow fadeInDown">
+                        <div class="c-form-info-box-icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <p>logo2<br>Instituto C&A</p>
+                    </div>
+                    <div class="col-sm-3 c-form-info-box wow fadeInUp">
+                        <div class="c-form-info-box-icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <p>logo3<br>ONU Mulheres</p>
+                    </div>
+                    <div class="col-sm-3 c-form-info-box wow fadeInDown">
+                        <div class="c-form-info-box-icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <p>logo4<br>Brazil Foundation</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
     </body>
     <?php
         endif;
