@@ -242,8 +242,8 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="natureza" name="tipo" required>           
                         <option value=""></option>
-                        <option value="academica">Acadêmica</option>
-                        <option value="coletivo">Coletivo</option>
+                        <option value="academica" <?=($edit->getEmail() == 'academica')?'selected':''?>>Acadêmica</option>
+                        <option value="coletivo"value="coletivo" <?=($edit->getEmail() == 'coletivo')?'selected':''?>>Coletivo</option>
                         <option value="empresa_privada">Empresa Privada</option>
                         <option value="investimento_social_privado">Investimento Social Privado</option>
                         <option value="fundos">Fundos</option>
@@ -292,7 +292,7 @@
                 <h5> Quando sua iniciativa começou as atividades?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="year" name="anoatividade" required>
+                    <select class="f1-last-name form-control" id="year_organizacao" name="anoatividade" required>
                     <div class="help-block with-errors"></div>
                         <script>
                            var myDate = new Date();
