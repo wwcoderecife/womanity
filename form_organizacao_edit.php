@@ -55,11 +55,6 @@
     $array_subtema = $edit->getSubtemas();
     $array_estados = $edit->getEstados();
 
-    echo print_r ($edit->getEstados());
-
-
-    echo $edit->getFacebook();
-
 
 ?>
 <div class="row form_inicial">
@@ -1501,13 +1496,37 @@
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Estado</label>
                     <select class="f1-last-name form-control" name="estado" id="estados">
+                        <?php echo "<script type='text/javascript'> var estado = '".$edit->getEstado()."'; </script>"; ?>
+                        <script type="text/javascript">
+                        jQuery(document).ready(function() {
+                           
+                           $("#estados option").each(function(){     
+                                if($(this).val() == estado ){
+                                    $(this).attr('selected', 'selected');   
+                                } 
+                            });
+
+                        });
+                        </script>
                         <option value=""></option>
                     </select> 
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cidade</label>
                     <select class="f1-last-name form-control" name="cidade" id="cidades"> 
+                       <?php echo "<script type='text/javascript'> var cidade = '".$edit->getCidade()."'; </script>"; ?>
+                        <script type="text/javascript">
+                          
+                           $("#cidades option").each(function(){
+                                if($(this).val() == cidade ){
+                                    $(this).attr('selected', 'selected');   
+                                }
+                            });
+
+                       
+                        </script>
                         <option value=""></option>
+
                     </select> 
                 </div>
 

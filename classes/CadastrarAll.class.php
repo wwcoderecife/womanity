@@ -420,8 +420,8 @@ class CadastrarAll extends Conexao {
     public function setEmpoderamentoDesc_2($empoderamento_desc_2){
         $this->empoderamento_desc_2 = $empoderamento_desc_2;
     }
-    public function setEmpoderamentoNome_3($empoderamento_nome_3.= "_3"){
-        $this->empoderamento_nome_3 = $empoderamento_nome_3;
+    public function setEmpoderamentoNome_3($empoderamento_nome_3){
+        $this->empoderamento_nome_3 = $empoderamento_nome_3.= "_3";
     }
     public function setEmpoderamentoDesc_3($empoderamento_desc_3){
         $this->empoderamento_desc_3 = $empoderamento_desc_3;
@@ -462,13 +462,13 @@ class CadastrarAll extends Conexao {
 
     //Realaciona Sets
     public function setRelaciona_1($relaciona_1){
-        $this->relaciona_1 = $relaciona_1;
+        $this->relaciona_1 = $relaciona_1.= "_1";
     }
     public function setRelaciona_2($relaciona_2){
-        $this->relaciona_2 = $relaciona_2;
+        $this->relaciona_2 = $relaciona_2.= "_2";
     }
     public function setRelaciona_3($relaciona_3){
-        $this->relaciona_3 = $relaciona_3;
+        $this->relaciona_3 = $relaciona_3.= "_3";
     }
 
 
@@ -601,7 +601,7 @@ class CadastrarAll extends Conexao {
 
     //Indicações Sets
     public function setIndicaNome_1($indica_nome_1){
-        $this->indica_nome_1 = $indica_nome_1;
+        $this->indica_nome_1 = $indica_nome_1.= "_1";
     }
     public function setIndicaEmail_1($indica_email_1){
         $this->indica_email_1 = $indica_email_1;
@@ -610,7 +610,7 @@ class CadastrarAll extends Conexao {
         $this->indica_telefone_1 = $indica_telefone_1;
     }
     public function setIndicaNome_2($indica_nome_2){
-        $this->indica_nome_2 = $indica_nome_2;
+        $this->indica_nome_2 = $indica_nome_2.= "_2";
     }
     public function setIndicaEmail_2($indica_email_2){
         $this->indica_email_2 = $indica_email_2;
@@ -619,7 +619,7 @@ class CadastrarAll extends Conexao {
         $this->indica_telefone_2 = $indica_telefone_2;
     }
     public function setIndicaNome_3($indica_nome_3){
-        $this->indica_nome_3 = $indica_nome_3;
+        $this->indica_nome_3 = $indica_nome_3.= "_3";
     }
     public function setIndicaEmail_3($indica_email_3){
         $this->indica_email_3 = $indica_email_3;

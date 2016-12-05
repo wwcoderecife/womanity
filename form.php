@@ -105,10 +105,12 @@
 
                 <!--  dependendo do tipo, irá carregar o form da iniciativa ou organização -->
                 <?php
-                    if ($_SESSION['usuario_tipo'] == 1){
+                    if ($_SESSION['usuario_tipo'] == 1 && $_SESSION['cadastro'] == false){
                         include 'form_organizacao.php';
-                    }else{
+                    }else if($_SESSION['usuario_tipo'] == 2 && $_SESSION['cadastro'] == false){
                         include 'form_iniciativa.php';
+                    }else if($_SESSION['usuario_tipo'] == 1 && $_SESSION['cadastro'] == true){
+                        include 'form_organizacao_edit.php';
                     }
                 ?>
 <!-- origin/master--> 
