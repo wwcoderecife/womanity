@@ -11,7 +11,6 @@
             <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
 
 
-
           <script>
         $(document).ready(function(){
          $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
@@ -855,7 +854,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="button" class="btn btn-next" data-disable="true">Próximo</button>
+                    <button type="button" class="btn btn-next">Próximo</button>
                 </div> 
 </fieldset> 
 
@@ -920,7 +919,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 </div>              
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="button" class="btn btn-next" data-disable="true">Próximo</button>
+                    <button type="button" class="btn btn-next">Próximo</button>
                 </div>
             </fieldset>
 
@@ -966,7 +965,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 </div>
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="button" class="btn btn-next"data-disable="true">Próximo</button>
+                    <button type="button" class="btn btn-next">Próximo</button>
                 </div>
             </fieldset>
 
