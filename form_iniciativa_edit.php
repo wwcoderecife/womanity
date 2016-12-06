@@ -493,17 +493,11 @@
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('democracia_participação_politica', $array_temas[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
-<<<<<<< HEAD
+
                         ></td>
                 <td> Democracia e Participação Política.</td>
                 <td>Ações de incentivo à participação de mulheres na vida política e democrática institucional (partidos, conselhos, órgãos e instâncias dos poderes executivo, legislativo e judiciário).</td>
             </tr>
-=======
-                    ></td>
-                    <td> Democracia e Participação Política.</td>
-                    <td>Ações de incentivo à participação de mulheres na vida política e democrática institucional (partidos, conselhos, órgãos e instâncias dos poderes executivo, legislativo e judiciário).</td>
-                </tr>
->>>>>>> origin/master
 
                 <tr>
                     <td><input type="checkbox" name="temas[ ]"value="educacao_formacao"class="no-margin" onclick="verificar()"

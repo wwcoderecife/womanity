@@ -157,7 +157,7 @@
                         <option value="nao">nao</option>
                     </select>    
 
-                <input type="text" id="inputcnpj" maxlength="18" name="inputcnpj" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" style='display: none'/>
+                <input type="text" id="inputcnpj" maxlength="18" name="inputcnpj" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opcional" style='display: none'/>
                     <script>
 
                         var dropdownCnpj = document.getElementById('organizacao-cnpj');
