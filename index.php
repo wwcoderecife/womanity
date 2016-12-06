@@ -332,7 +332,7 @@
 
             img.logos{
 
-                margin: 10px 5px 15px 20px;
+                margin: 25px 5px 15px 20px;
 
             }
 
