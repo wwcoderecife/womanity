@@ -283,52 +283,64 @@
                 </div>
 
                 <div class="container">
-                    <div class="row">
+                    <div class="row" >
                         <h3 class="description">Parceiros:</h3>   
 
                    <div class="col-md-3">
                    
-                         <img src="assets/img/logo_womanity.png"class="img-responsive"><a href="#"></a>
+                         <img src="assets/img/logo_womanity.png"class="logos"><a href="#"></a>
                    </div>
 
                     <div class="col-md-3">
                
-                         <img src="assets/img/logo_onumulheres.png"class="img-responsive"><a href="#"></a>
+                         <img src="assets/img/logo_onumulheres.png"class="logos"><a href="#"></a>
 
                     </div>
 
                     <div class="col-md-3">
 
-                        <img src="assets/img/logocea.png" class="img-responsive"><a href="#"></a>
+                        <img src="assets/img/logocea.png" class="logos"><a href="#"></a>
 
                     </div> 
 
                     <div class="col-md-3">
                    
-                    <img src="assets/img/logo_brazil.png"class="img-responsive"><a href="#"></a>
+                    <img src="assets/img/logo_brazil.png"class="logo"><a href="#"></a>
 
                     </div> 
 
                     <div class="container footer">
                     <div class="row">
                         <div class="col-sm-12">
-                             By Women Who Code Recife &copy; 2016 <a href="womenwhocode.com" target="_blank">Women Who Code</a>.
+                             By Women Who Code Recife &copy; 2016 <a href="womenwhocode.com" target="_blank"></a>.
                         </div>
-                    </div>
-                </div>
 
-                 
-               </div>
+                            </div><!--/ row footer-->
 
-            </div>                
-       
-            </div>
+                        </div><!--/container footer-->
 
-          </div>
+                         
+                     </div><!--/ row-->
 
-          
+                </div><!--/ container-->                
+               
+              </div><!--/ container Top Container--> 
+
+          </div><!--top-content-->
+
+          <style>
+
+            img.logos{
+
+                margin-top: 25px;
+
+            }
+
+
+          </style>
 
        </body>
+
     <?php
         endif;
     ?>
