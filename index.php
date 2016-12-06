@@ -313,20 +313,19 @@
                    
                     <img src="assets/img/logo_brazil.png"class="logos"><a href="#"></a>
 
+
+                    </div> 
+
                     <style>
 
                     .logos{
 
-                        display: inline-block;
-                        margin: 25px auto 10px auto;
+                       display: inline-block;
+                       margin: 25px auto 10px auto;
 
                     }
 
-
                     </style>
-
-
-                    </div> 
 
                     <div class="container footer">
                     <div class="row">
