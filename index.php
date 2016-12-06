@@ -282,9 +282,12 @@
                     </div>
                 </div>
 
+
+                
+
                 <div class="container">
                     <div class="row" >
-                        
+
                         <h3 style="color:white;">Parceiros:</h3>   
 
                    <div class="col-md-3">
