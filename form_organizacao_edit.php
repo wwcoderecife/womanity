@@ -3,38 +3,19 @@
 
             <script src="assets/js/bootstrap.min.js"></script>
             <!--<script src="assets/js/validator.min.js"></script>-->
-            <script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>
-            <script type="text/javascript"></script>
-            <link   rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+            <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
             <script src="assets/js/bootstrap-select.min.js" ></script>
+            <link   rel="stylesheet" href="assets/css/bootstrap-select.min.css">
            
-
-        
-
-           
-
-
-
-            <!--Include Twitter Bootstrap and jQuery: Subtemas--> 
-            <!--<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css"/>-->
-            <!--<script src="assets/js/jquery-2.1.3.min.js"></script>-->
-           
-            <!--Include the plugin's CSS and JS:Subtemad--> 
-            <!--<link rel="stylesheet" href="assets/css/bootstrap-multiselect.css" type="text/css">-->
-            <!--<script src="assets/js/bootstrap-multiselect.js"></script>-->
             
         
             <script>
-              jQuery(function($){
-              $("#inputTel1").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
-              $("#inputCel1").mask("(99) 99999-9999",{placeholder:"(xx) xxxxx-xxxx "});
-              $("#inputTel2").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
-              $("#inputCel2").mask("(99) 99999-9999",{placeholder:"(xx) xxxxx-xxxx "});
-              $("#inputTel3").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
-              $("#inputCep").mask("99-999-999",{placeholder:"xx-xxx-xxx"});
-              $("#inputTel4").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
-              $("#inputTel5").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
-              $("#inputTel6").mask("(99) 9999-9999",{placeholder:"(xx) xxxx-xxxx "});
+              $(document).ready(function(){
+              $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
+              $('.phone_with_ddd').mask('(00) 0000-0000');
+              $('.phone_with_dddcel').mask('(00) 00000-0000');
+              $('.cep').mask('00000-000');
+              $('.money').mask('000.000.000.000.000,00', {reverse: true});
               $(".form-ong input:radio").attr('disabled',true);
               $(".form-ong select").attr('disabled',true);
               $(".form-ong input:checkbox").attr('disabled',true);
@@ -135,14 +116,14 @@
                  <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="telefone_1" value="<?php echo $edit->getTelefone_1() ?>" placeholder="Telefone" class="f1-last-name form-control" id="inputTel1" >
+                    <input type="tel" name="telefone_1" value="<?php echo $edit->getTelefone_1() ?>" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel1" >
                     <div class="help-block with-errors"></div>
                 </div>
 
                  <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_1" value="<?php echo $edit->getCelular_1() ?>" placeholder="Celular" class="f1-last-name form-control" id="inputCel1">
+                    <input type="tel" name="celular_1" value="<?php echo $edit->getCelular_1() ?>" placeholder="Celular" class="f1-last-name form-control phone_with_dddcel" id="inputCel1">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -169,14 +150,14 @@
                  <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="telefone_2" value="<?php echo $edit->getTelefone_2() ?>" placeholder="Telefone" class="f1-last-name form-control" id="inputTel2">
+                    <input type="tel" name="telefone_2" value="<?php echo $edit->getTelefone_2() ?>" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel2">
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_2" value="<?php echo $edit->getCelular_2() ?>" placeholder="Celular" class="f1-last-name form-control" id="inputCel2">
+                    <input type="tel" name="celular_2" value="<?php echo $edit->getCelular_2() ?>" placeholder="Celular" class="f1-last-name form-control phone_with_dddcel" id="inputCel2">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -272,17 +253,17 @@
 
                 <h5>Telefone da Organizaçāo*</h5>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-repeat-password">Telefone</label>
-                    <input type="tel" id="telefone" name="organizacao-telefone" value="<?php echo $edit->getTelefone() ?>" placeholder="(xx) xxxxx-xxxx"class="f1-last-name form-control">
+                    <label class="sr-only" for="f1-repeat-password">Telefone da Organizaçāo</label>
+                    <input type="tel" id="telefone" name="organizacao-telefone" value="<?php echo $edit->getTelefone() ?>" placeholder="(xx) xxxxx-xxxx"class="f1-last-name form-control phone_with_ddd">
                 </div>
 
                 <h5>E-mail da Organizaçāo*</h5>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-repeat-password">Email</label>
+                    <label class="sr-only" for="f1-repeat-password">Email da Organizaçāo</label>
                     <input type="email" name="email" value="<?php echo $edit->getEmail() ?>" class="f1-last-name form-control"class="f1-last-name form-control">
                 </div>
 
-                 <h5>Como sua organizaçāo se identifica*</h5>
+                 <h5>Como sua organizaçāo se identifica?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus" ></label>
                     <select class="f1-last-name form-control" id="organizacao-tipo" name="tipo">
@@ -378,18 +359,18 @@
                  <h5>2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
-                    <input type="text" name="orcamento_2014" value="<?php  echo $edit->getOrcamento_2014(); ?>" placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2014">
+                    <input type="text" name="orcamento_2014" value="<?php  echo $edit->getOrcamento_2014(); ?>" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2014">
 
                 </div>
                 <h5>2015</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2015</label>
-                    <input type="text" name="orcamento_2015" value="<?php  echo $edit->getOrcamento_2015(); ?>"  placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2015" >
+                    <input type="text" name="orcamento_2015" value="<?php  echo $edit->getOrcamento_2015(); ?>"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2015" >
                 </div>
                 <h5>2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
-                    <input type="text" name="orcamento_2016" value="<?php  echo $edit->getOrcamento_2016(); ?>"  placeholder="R$ xxxxxx" class="f1-last-name form-control" id="organizacao_orcamento2016">
+                    <input type="text" name="orcamento_2016" value="<?php  echo $edit->getOrcamento_2016(); ?>"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2016">
                 </div>
 
                 <h5>Sua Organizaçāo recebe recursos financeiros?</h5>
@@ -469,7 +450,7 @@
 
             <!--Tabela Temas-->
 
-            <h5>Áreas de atuação da organização: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>
+            <h5>Áreas de atuação da organização: escolha até 5 Temas e até 5 Subtemas abaixo*:</h5>
             <div class="form-group" style="border: 1px solid #ddd">
             <div class="table-responsive">
             <table id="form1" name="table_temas"class="table table-hover col-sm-12" >
@@ -669,10 +650,10 @@
                     <td>Iniciativas que tratam de questões de autoestima, qualidade de vida, saúde e bem-estar das mulheres.</td>
                </tr>
 
-                </tbody>
+                    </tbody>
                 </table>
             </div>
-            </div> 
+        </div> 
 
              <script>
             var CheckMaximo = 5;
@@ -700,16 +681,16 @@
                         if(objCheck[i].checked == false) {
                             objCheck[i].disabled = true;
                         }       
-                  }
-                }
-            }
-            }
+                    }
+               }
+           }
+        }
 </script>
 
 <!--subtemas-->
 
 
-<h5> Clique e escolha até 3 Subtemas abaixo*</h5>
+<h5> Clique e escolha até 5 Subtemas abaixo*</h5>
  <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar os subtemas.</em></h6>
 <div class="form-group">
 <label for="subtemas" for="f1-google-plus">Subtemas</label>
@@ -1548,7 +1529,7 @@
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número</label>
-                    <input type="text" value="<?php echo $edit->getNumero(); ?>" name="numero" placeholder="Numero...*" class="f1-last-name form-control">
+                    <input type="numeric" value="<?php echo $edit->getNumero(); ?>" name="numero" placeholder="Numero...*" class="f1-last-name form-control">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Complemento</label>
@@ -1556,7 +1537,7 @@
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep</label>
-                    <input type="text" value="<?php echo $edit->getCep(); ?>" name="cep" placeholder="CEP...*" class="f1-last-name form-control">
+                    <input type="text" value="<?php echo $edit->getCep(); ?>" name="cep" placeholder="CEP...*" class="f1-last-name form-control cep">
                 </div> 
 
                <div class="f1-buttons">
@@ -1627,10 +1608,11 @@
                 value="<?php echo $edit->getIndicaEmail_1(); ?>" >
                     
                 </div>
-
+<!--phone_with_ddd
+ -->
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                <input type="tel" name="indica_telefone_1" placeholder="Telefone" class="f1-last-name form-control" id="inputTel3"
+                <input type="tel" name="indica_telefone_1" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel3"
                 value="<?php echo $edit->getIndicaTelefone_1(); ?>" >
                 </div>
                 <h5>Iniciativa 2</h5>
@@ -1647,7 +1629,7 @@
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_2" placeholder="Telefone" class="f1-last-name form-control" id="inputTel4"
+                    <input type="tel" name="indica_telefone_2" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel4"
                     value="<?php echo $edit->getIndicaTelefone_2(); ?>" >
                 </div>
                 <h5>Iniciativa 3</h5>
@@ -1663,7 +1645,7 @@
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_3" placeholder="Telefone" class="f1-last-name form-control" id="inputTel5"
+                    <input type="tel" name="indica_telefone_3" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel5"
                     value="<?php echo $edit->getIndicaTelefone_3(); ?>" >
                 </div>
                 <div class="f1-buttons">
