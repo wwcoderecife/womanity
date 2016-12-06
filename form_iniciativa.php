@@ -480,7 +480,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
   </div>
 
            <script>
-            var CheckMaximo = 3;
+            var CheckMaximo = 5;
 
             function verificar() {
             var Marcados = 1;
@@ -505,9 +505,9 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                         if(objCheck[i].checked == false) {
                             objCheck[i].disabled = true;
                         }       
-                  }
+                    }
                 }
-            }
+              }
             }
 </script>
 
@@ -572,7 +572,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
 
           $('#subtemas').change(function(event) {
 
-            if ($(this).val().length > 3) {
+            if ($(this).val().length > 5) {
 
               $(this).val(last_valid_selection);
             } else {
