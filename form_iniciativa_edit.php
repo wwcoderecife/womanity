@@ -657,7 +657,7 @@
   </div>
 
            <script>
-            var CheckMaximo = 3;
+            var CheckMaximo = 5;
 
             function verificar() {
             var Marcados = 1;
@@ -1007,7 +1007,7 @@
 
           $('#subtemas').change(function(event) {
 
-            if ($(this).val().length > 3) {
+            if ($(this).val().length > 5) {
 
               $(this).val(last_valid_selection);
             } else {
