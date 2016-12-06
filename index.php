@@ -281,46 +281,44 @@
                         </form>
                     </div>
                 </div>
-
                 <div class="row">
-
-                    <footer class="footer-basic-centered">
-                        
-
-                     <h3><strong>Parceiros:</strong></h3>   
-
-                   <div class="col-xs-6 col-sm-3">
-
+                    <div class="col-sm-6 col-sm-offset-4 social-login">
+                        <h3>Parceiros:</h3>
+                          
+                   <!--<div class="col-xs-6 col-sm-3">-->
+                   <div class="social-login-buttons">
                          <img src="assets/img/logo_womanity.png"  class="img-rounded"><a href="#"></a>
                    </div>
 
-                 <div class="col-xs-6 col-sm-3">
-
+                 <!--<div class="col-xs-6 col-sm-3">-->
+                <div class="social-login-buttons">
                          <img src="assets/img/logo_onumulheres.png"  class="img-rounded"><a href="#"></a>
                  </div>
-
-                  <div class="col-xs-6 col-sm-3">
-
-                         <img src="assets/img/logocea.png"  class="img-rounded"><a href="#"></a>
+                   <div class="social-login-buttons">  
+                  <!--<div class="col-xs-6 col-sm-3">-->
+                    <img src="assets/img/logocea.png"  class="img-rounded"><a href="#"></a>
 
                   </div>
 
-                  <div class="col-xs-6 col-sm-3">
-
+                  <!--<div class="col-xs-6 col-sm-3">-->
+                <div class="social-login-buttons">
                     <img src="assets/img/logo_brazil.png"  class="img-rounded"><a href="#"></a>
 
-                  </div>
-
-            </p>
-
-            <p class="footer-company-name">By Women Who Code Recife &copy; 2016</p>
-
-      </footer>                    
+                </div>
+       
             </div><!--div row-->
 
+          </div>
+
+          <div class="container footer">
+            <div class="row">
+                <div class="col-sm-12">
+                     By Women Who Code Recife &copy; 2016 <a href="womenwhocode.com" target="_blank">Women Who Code</a>.
+                </div>
+            </div>
         </div>
 
-    </body>
+       </body>
     <?php
         endif;
     ?>
