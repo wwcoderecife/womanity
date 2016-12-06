@@ -995,36 +995,42 @@ class CadastrarAll extends Conexao {
             $edit_ong->bindValue(20, $this->getUsuarioId());
             
             $edit_ong->execute();
-            //$organizacao_id = $pdo->lastInsertId();
 
-            $edit_contato = $pdo->prepare("update contatos set cargo = ?, email = ?, telefone = ?,
-                                    celular = ?, tipo = ?, nome = ?
-                                    where  organizacao_id = ? and tipo = 1 ");
+
+            //Delete
+            $delete_contatos = $pdo->prepare("delete from contatos where organizacao_id = ?");
+            $delete_contatos->bindValue(1, $organizacao_id);
+            $delete_contatos->execute();
+
+            $edit_contato = $pdo->prepare("insert into contatos (cargo, email, telefone, celular, tipo, organizacao_id, nome)
+                                    values (?, ?, ?, ?, ?, ?, ?)");
             $edit_contato->bindValue(1, $this->getCargo_1());
             $edit_contato->bindValue(2, $this->getEmail_1());
             $edit_contato->bindValue(3, $this->getTelefone_1());
             $edit_contato->bindValue(4, $this->getCelular_1());
             $edit_contato->bindValue(5, 1);
-            $edit_contato->bindValue(6, $this->getNome_1());
-            $edit_contato->bindValue(7, $organizacao_id);
-            
+            $edit_contato->bindValue(6, $organizacao_id);
+            $edit_contato->bindValue(7, $this->getNome_1());
             $edit_contato->execute();
-
-            $edit_contato = $pdo->prepare("update contatos set cargo = ?, email = ?, telefone = ?,
-                                    celular = ?, tipo = ?, nome = ?
-                                    where  organizacao_id = ? and tipo = 2 ");
 
             $edit_contato->bindValue(1, $this->getCargo_2());
             $edit_contato->bindValue(2, $this->getEmail_2());
             $edit_contato->bindValue(3, $this->getTelefone_2());
             $edit_contato->bindValue(4, $this->getCelular_2());
             $edit_contato->bindValue(5, 2);
-            $edit_contato->bindValue(6, $this->getNome_2());
-            $edit_contato->bindValue(7, $organizacao_id);
+            $edit_contato->bindValue(6, $organizacao_id);
+            $edit_contato->bindValue(7, $this->getNome_2());
             $edit_contato->execute();
 
+
+            //Delete
+            $delete_orcamentos = $pdo->prepare("delete from orcamentos where organizacao_id = ?");
+            $delete_orcamentos->bindValue(1, $organizacao_id);
+            $delete_orcamentos->execute();
+
             $orcamento = $this->getOrcamento_2014();
-            $edit_orcamentos = $pdo->prepare("update orcamentos  set ano = ?, valor = ? where organizacao_id = ? and ano = 2014");
+            $edit_orcamentos = $pdo->prepare("insert into orcamentos (ano, valor, organizacao_id)
+                                    values (?, ?, ?)");
             $edit_orcamentos->bindValue(1, 2014);
             if ($orcamento == ""){
                 $edit_orcamentos->bindValue(2, '0.00');
@@ -1035,7 +1041,6 @@ class CadastrarAll extends Conexao {
             $edit_orcamentos->execute();
 
             $orcamento = $this->getOrcamento_2015();
-            $edit_orcamentos = $pdo->prepare("update orcamentos  set ano = ?, valor = ? where organizacao_id = ? and ano = 2015");
             $edit_orcamentos->bindValue(1, 2015);
             if ($orcamento == ""){
                 $edit_orcamentos->bindValue(2, '0.00');
@@ -1046,7 +1051,6 @@ class CadastrarAll extends Conexao {
             $edit_orcamentos->execute();
 
             $orcamento = $this->getOrcamento_2016();
-            $edit_orcamentos = $pdo->prepare("update orcamentos  set ano = ?, valor = ? where organizacao_id = ? and ano = 2016");
             $edit_orcamentos->bindValue(1, 2016);
             if ($orcamento == ""){
                 $edit_orcamentos->bindValue(2, '0.00');
@@ -1110,19 +1114,24 @@ class CadastrarAll extends Conexao {
                    
                 }
 
-            $edit_empoderamentos = $pdo->prepare("update empoderamento set nome = ?, descricao = ? where organizacao_id = ? and nome like '%_1' ");
+
+            //Delete
+            $delete_empoderamento = $pdo->prepare("delete from empoderamento where organizacao_id = ?");
+            $delete_empoderamento->bindValue(1, $organizacao_id);
+            $delete_empoderamento->execute();
+
+            $edit_empoderamentos = $pdo->prepare("insert into empoderamento (nome, descricao, organizacao_id)
+                                    values (?, ?, ?)");
             $edit_empoderamentos->bindValue(1, $this->getEmpoderamentoNome_1());
             $edit_empoderamentos->bindValue(2, $this->getEmpoderamentoDesc_1());
             $edit_empoderamentos->bindValue(3, $organizacao_id);
             $edit_empoderamentos->execute();
 
-            $edit_empoderamentos = $pdo->prepare("update empoderamento set nome = ?, descricao = ? where organizacao_id = ? and nome like '%_2' ");
             $edit_empoderamentos->bindValue(1, $this->getEmpoderamentoNome_2());
             $edit_empoderamentos->bindValue(2, $this->getEmpoderamentoDesc_2());
             $edit_empoderamentos->bindValue(3, $organizacao_id);
             $edit_empoderamentos->execute();
 
-            $edit_empoderamentos = $pdo->prepare("update empoderamento set nome = ?, descricao = ? where organizacao_id = ? and nome like '%_3' ");
             $edit_empoderamentos->bindValue(1, $this->getEmpoderamentoNome_3());
             $edit_empoderamentos->bindValue(2, $this->getEmpoderamentoDesc_3());
             $edit_empoderamentos->bindValue(3, $organizacao_id);
@@ -1146,17 +1155,22 @@ class CadastrarAll extends Conexao {
             }
 
 
-            $edit_relaciona = $pdo->prepare("update relacionadas set nome = ? where organizacao_id = ? and nome like '%_1' ");
+            //Delete
+            $delete_relacionadas = $pdo->prepare("delete from relacionadas where organizacao_id = ?");
+            $delete_relacionadas->bindValue(1, $organizacao_id);
+            $delete_relacionadas->execute();
+
+            $edit_relaciona = $pdo->prepare("insert into relacionadas (nome, organizacao_id)
+                                   values (?, ?)");
             $edit_relaciona->bindValue(1, $this->getRelaciona_1());
             $edit_relaciona->bindValue(2, $organizacao_id);
             $edit_relaciona->execute();
 
-            $edit_relaciona = $pdo->prepare("update relacionadas set nome = ? where organizacao_id = ? and nome like '%_2' ");
             $edit_relaciona->bindValue(1, $this->getRelaciona_2());
             $edit_relaciona->bindValue(2, $organizacao_id);
             $edit_relaciona->execute();
 
-            $edit_relaciona = $pdo->prepare("update relacionadas set nome = ? where organizacao_id = ? and nome like '%_3' ");
+
             $edit_relaciona->bindValue(1, $this->getRelaciona_3());
             $edit_relaciona->bindValue(2, $organizacao_id);
             $edit_relaciona->execute();
@@ -1207,64 +1221,67 @@ class CadastrarAll extends Conexao {
             $edit_endereco->execute();
 
 
-            $edit_rede_social =  $pdo->prepare("update redes_sociais set link = ?, tipo = ? where organizacao_id = ? and tipo = 'Site' ");
+             //Delete
+            $delete_redes_sociais = $pdo->prepare("delete from redes_sociais where organizacao_id = ?");
+            $delete_redes_sociais->bindValue(1, $organizacao_id);
+            $delete_redes_sociais->execute();
+
+           $edit_rede_social =  $pdo->prepare("insert into redes_sociais (link, tipo, organizacao_id)
+                                   values (?, ?, ?)");
             $edit_rede_social->bindValue(1, $this->getSite());
             $edit_rede_social->bindValue(2, 'Site');
             $edit_rede_social->bindValue(3, $organizacao_id);
             $edit_rede_social->execute();
 
-            $edit_rede_social =  $pdo->prepare("update redes_sociais set link = ?, tipo = ? where organizacao_id = ? and tipo = 'Facebook' ");
             $edit_rede_social->bindValue(1, $this->getFacebook());
             $edit_rede_social->bindValue(2, 'Facebook');
             $edit_rede_social->bindValue(3, $organizacao_id);
             $edit_rede_social->execute();
 
-            $edit_rede_social =  $pdo->prepare("update redes_sociais set link = ?, tipo = ? where organizacao_id = ? and tipo = 'Instagram' ");
             $edit_rede_social->bindValue(1, $this->getInstagram());
             $edit_rede_social->bindValue(2, 'Instagram');
             $edit_rede_social->bindValue(3, $organizacao_id);
             $edit_rede_social->execute();
 
-            $edit_rede_social =  $pdo->prepare("update redes_sociais set link = ?, tipo = ? where organizacao_id = ? and tipo = 'Twitter' ");
             $edit_rede_social->bindValue(1, $this->getTwitter());
             $edit_rede_social->bindValue(2, 'Twitter');
             $edit_rede_social->bindValue(3, $organizacao_id);
             $edit_rede_social->execute();
 
-            $edit_rede_social =  $pdo->prepare("update redes_sociais set link = ?, tipo = ? where organizacao_id = ? and tipo = 'Linkedin' ");
             $edit_rede_social->bindValue(1, $this->getLinkedin());
             $edit_rede_social->bindValue(2, 'Linkedin');
             $edit_rede_social->bindValue(3, $organizacao_id);
             $edit_rede_social->execute();
 
-            $edit_rede_social =  $pdo->prepare("update redes_sociais set link = ?, tipo = ? where organizacao_id = ? and tipo = 'Outros' ");
             $edit_rede_social->bindValue(1, $this->getOutros());
             $edit_rede_social->bindValue(2, 'Outros');
             $edit_rede_social->bindValue(3, $organizacao_id);
             $edit_rede_social->execute();
 
 
-            $edit_indicacao =  $pdo->prepare("update indicacoes set nome = ?, email = ?, telefone = ? where organizacao_id = ? and nome like '%_1' ");
+            $delete_indicacoes = $pdo->prepare("delete from indicacoes where organizacao_id = ?");
+            $delete_indicacoes->bindValue(1, $organizacao_id);
+            $delete_indicacoes->execute();
+
+            $edit_indicacao =  $pdo->prepare("insert into indicacoes (nome, email, telefone, organizacao_id)
+                                   values (?, ?, ?, ?)");
             $edit_indicacao->bindValue(1, $this->getIndicaNome_1());
             $edit_indicacao->bindValue(2, $this->getIndicaEmail_1());
             $edit_indicacao->bindValue(3, $this->getIndicaTelefone_1());
             $edit_indicacao->bindValue(4, $organizacao_id);
             $edit_indicacao->execute();
 
-            $edit_indicacao =  $pdo->prepare("update indicacoes set nome = ?, email = ?, telefone = ? where organizacao_id = ? and nome like '%_2' ");
             $edit_indicacao->bindValue(1, $this->getIndicaNome_2());
             $edit_indicacao->bindValue(2, $this->getIndicaEmail_2());
             $edit_indicacao->bindValue(3, $this->getIndicaTelefone_2());
             $edit_indicacao->bindValue(4, $organizacao_id);
             $edit_indicacao->execute();
 
-            $edit_indicacao =  $pdo->prepare("update indicacoes set nome = ?, email = ?, telefone = ? where organizacao_id = ? and nome like '%_3' ");
             $edit_indicacao->bindValue(1, $this->getIndicaNome_3());
             $edit_indicacao->bindValue(2, $this->getIndicaEmail_3());
             $edit_indicacao->bindValue(3, $this->getIndicaTelefone_3());
             $edit_indicacao->bindValue(4, $organizacao_id);
             $edit_indicacao->execute();
-
 
 
             $pdo->commit();

@@ -1308,9 +1308,9 @@
                         } ?>
                     >nacional
                     </label>
-                    <textarea name="organizaçāo_politica_publica" value="<?php echo $edit->getPoliticasPublicas(); ?>" placeholder="Descreva como se deu essa influência em políticas públicas (em 500 caracteres)"
+                    <textarea name="organizaçāo_politica_publica" placeholder="Descreva como se deu essa influência em políticas públicas (em 500 caracteres)"
 
-                    class="f1-about-yourself form-control" id="organizaçāo_politica_publica"></textarea>
+                    class="f1-about-yourself form-control" id="organizaçāo_politica_publica"><?php echo $edit->getPoliticasPublicas(); ?></textarea>
                 </div>
 
 
