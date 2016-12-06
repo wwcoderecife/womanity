@@ -38,9 +38,12 @@ class Login extends Conexao {
 			$verifica->bindValue(1, $dados->id);
 			$verifica->execute();
 
+			$res = $verifica->fetch(PDO::FETCH_OBJ);
+
 			if ($verifica->rowCount() >= 1):
 				$_SESSION['cadastro'] = true;
-				$_SESSION['organizacao_id'] = $verifica->id;
+				$_SESSION['organizacao_id'] = $res->id;
+				echo $verifica->id;
 			else:
 				$_SESSION['cadastro'] = false;
 			endif;

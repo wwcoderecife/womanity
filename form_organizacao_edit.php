@@ -69,6 +69,8 @@
     $array_subtema = $edit->getSubtemas();
     $array_estados = $edit->getEstados();
 
+    echo $edit->getNome_1();
+
 
 ?>
 <div class="row form_inicial">
