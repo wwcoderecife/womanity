@@ -448,7 +448,7 @@ div class="row form_inicial">
 
                    <!--Tabela Temas-->
 
-        <h5>Áreas de atuação da iniciativa: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>
+        <h5>Áreas de atuação da iniciativa: escolha até 5 Temas e até 5 Subtemas abaixo*:</h5>
         <div class="form-group" style="border: 1px solid #ddd">
         <div class="table-responsive">
         <table id="form1" name="temas" class="table table-hover col-sm-12">
@@ -486,7 +486,8 @@ div class="row form_inicial">
                     <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('democracia_participação_politica', $array_temas[$i])) : ?> checked="checked" <?php endif; 
-                        } ?>></td>
+                        } ?>
+                        ></td>
                 <td> Democracia e Participação Política.</td>
                 <td>Ações de incentivo à participação de mulheres na vida política e democrática institucional (partidos, conselhos, órgãos e instâncias dos poderes executivo, legislativo e judiciário).</td>
             </tr>
@@ -670,15 +671,15 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                         if(objCheck[i].checked == false) {
                             objCheck[i].disabled = true;
                         }       
-                  }
+                    }
                 }
             }
-            }
+        }
 </script>
 
 
 
-<h5> Clique e escolha até 3 Subtemas abaixo*</h5>
+<h5> Clique e escolha até 5 Subtemas abaixo*</h5>
 <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar os subtemas.</em></h6>
 <div class="form-group">
 <!--<label for="subtemas" for="f1-google-plus">Subtemas</label>-->
@@ -1646,7 +1647,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_1" placeholder="Telefone" class="f1-last-name form-control" id="inputTel3"
+                    <input type="tel" name="indica_telefone_1" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel3"
                     value="<?php echo $edit->getIndicaTelefone_1(); ?>" >
                 </div>
                
@@ -1667,7 +1668,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                  <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_2" placeholder="Telefone" class="f1-last-name form-control" id="inputTel4"
+                    <input type="tel" name="indica_telefone_2" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel4"
                     value="<?php echo $edit->getIndicaTelefone_2(); ?>" >
                 </div>
               
@@ -1688,7 +1689,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                  <h5>Telefone*</h5>
                 <div class="form-group">
                      <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_3" placeholder="Telefone" class="f1-last-name form-control" id="inputTel5"
+                    <input type="tel" name="indica_telefone_3" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel5"
                     value="<?php echo $edit->getIndicaTelefone_3(); ?>" >
                 </div>
                 <div class="f1-buttons">
