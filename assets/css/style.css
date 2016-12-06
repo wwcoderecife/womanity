@@ -139,6 +139,14 @@ ul.navbar-nav {
 
 .f1 .input-error { border-color: #63347d; }
 
+.social-login {
+	margin-top: 35px;
+}
+
+.social-login h3 {
+	color: #fff;
+}
+
 
 
 /***** Media queries *****/
