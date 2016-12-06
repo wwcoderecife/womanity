@@ -693,7 +693,7 @@ class Editar extends Conexao {
 
 
         $orcamentos_query_2014 = $pdo->prepare("select 
-                                        ano, valor
+                                        ano, truncate(valor,2) as valor
                                     from orcamentos
                                     where organizacao_id = ? and ano = ?");
         $orcamentos_query_2014->bindValue(1, $organizacao_id);
@@ -704,7 +704,7 @@ class Editar extends Conexao {
         $orcamentos_2014 =  $orcamentos_query_2014->fetch(PDO::FETCH_BOTH);
 
         $orcamentos_query_2015 = $pdo->prepare("select 
-                                        ano, valor
+                                        ano, truncate(valor,2) as valor
                                     from orcamentos
                                     where organizacao_id = ? and ano = ?");
         $orcamentos_query_2015->bindValue(1, $organizacao_id);
@@ -715,7 +715,7 @@ class Editar extends Conexao {
         $orcamentos_2015 =  $orcamentos_query_2015->fetch(PDO::FETCH_BOTH);
 
         $orcamentos_query_2016 = $pdo->prepare("select 
-                                        ano, valor
+                                        ano, truncate(valor,2) as valor
                                     from orcamentos
                                     where organizacao_id = ? and ano = ?");
         $orcamentos_query_2016->bindValue(1, $organizacao_id);
@@ -726,9 +726,9 @@ class Editar extends Conexao {
         $orcamentos_2016 =  $orcamentos_query_2016->fetch(PDO::FETCH_BOTH);
 
 
-        $this->setOrcamento_2014($orcamentos_2014['valor']);
-        $this->setOrcamento_2015($orcamentos_2015['valor']);
-        $this->setOrcamento_2016($orcamentos_2016['valor']);
+        $this->setOrcamento_2014(str_replace('.',',',$orcamentos_2014['valor']));
+        $this->setOrcamento_2015(str_replace('.',',',$orcamentos_2015['valor']));
+        $this->setOrcamento_2016(str_replace('.',',',$orcamentos_2016['valor']));
 
 
         //*****popular checkbox******//
