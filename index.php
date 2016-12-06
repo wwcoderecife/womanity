@@ -338,7 +338,7 @@
 
             img.logos{
 
-                margin: 25px 5px 15px 40px;*/
+                margin: 25px 5px 15px 5px;*/
 
                 display: inline-block;
                 /*margin: 10px;*/
