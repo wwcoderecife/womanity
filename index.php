@@ -284,7 +284,8 @@
 
                 <div class="container">
                     <div class="row" >
-                        <h3 class="description" style:"color: white">Parceiros:</h3>   
+                        
+                        <h3 style="color:white;">Parceiros:</h3>   
 
                    <div class="col-md-3">
                    
@@ -311,8 +312,8 @@
 
                     <div class="container footer">
                     <div class="row">
-                        <div class="col-sm-12" style:"color: white">
-                             By Women Who Code Recife &copy; 2016 <a href="http://www.womenwhocode.com" target="_blank"></a>
+                        <div class="col-sm-12">
+                             <p style="color:white;">By Women Who Code Recife &copy; 2016 </p><a href="http://www.womenwhocode.com" target="_blank"></a>
                         </div>
 
                             </div><!--/ row footer-->
