@@ -290,7 +290,7 @@
                         <div class="description">
 
                         <h3 style="color:white;">Parceiros:</h3>
-                           
+
 
                    <div class="col-md-3">
                    
@@ -338,11 +338,10 @@
 
             img.logos{
 
-                /*margin: 25px 5px 15px 20px;*/
+                margin: 25px 5px 15px 20px;*/
 
                 display: inline-block;
-                float: left;
-                margin: 10px;
+                /*margin: 10px;*/
 
             }
 
