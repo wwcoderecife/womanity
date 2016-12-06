@@ -284,22 +284,22 @@
                 <div class="row">
                         <h3>Parceiros:</h3>
                           
-                   <div class="col-xs-6 col-sm-3">
+                   <div class="col-xs-6 col-sm-4">
                    
                          <img src="assets/img/logo_womanity.png"class="img-rounded"><a href="#"></a>
                    </div>
 
-                 <div class="col-xs-6 col-sm-3">
+                 <div class="col-xs-6 col-sm-4">
                 <div class="social-login-buttons">
                          <img src="assets/img/logo_onumulheres.png"class="img-rounded"><a href="#"></a>
                  </div>
                
-                     <div class="col-xs-6 col-sm-3">
+                     <div class="col-xs-6 col-sm-4">
                     <img src="assets/img/logocea.png" class="img-rounded"><a href="#"></a>
 
                   </div>
 
-                  <div class="col-xs-6 col-sm-3">
+                  <div class="col-xs-6 col-sm-4">
                    
                     <img src="assets/img/logo_brazil.png"class="img-rounded"><a href="#"></a>
 
