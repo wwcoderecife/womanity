@@ -288,24 +288,24 @@
 
                    <div class="col-md-3">
                    
-                         <img src="assets/img/logo_womanity.png"class="floating-box"><a href="#"></a>
+                         <img src="assets/img/logo_womanity.png"class="logos"><a href="#"></a>
                    </div>
 
                     <div class="col-md-3">
                
-                         <img src="assets/img/logo_onumulheres.png"class="floating-box"><a href="#"></a>
+                         <img src="assets/img/logo_onumulheres.png"class="logos"><a href="#"></a>
 
                     </div>
 
                     <div class="col-md-3">
 
-                        <img src="assets/img/logocea.png" class="floating-box"><a href="#"></a>
+                        <img src="assets/img/logocea.png" class="logos"><a href="#"></a>
 
                     </div> 
 
                     <div class="col-md-3">
                    
-                    <img src="assets/img/logo_brazil.png"class="floating-box"><a href="#"></a>
+                    <img src="assets/img/logo_brazil.png"class="logos"><a href="#"></a>
 
                     </div> 
 
@@ -330,13 +330,12 @@
 
           <style>
 
-            img.floating-box{
+            img.logos{
 
                 /*margin: 25px 5px 15px 20px;*/
- 
+
+                display: inline-block;
                 float: left;
-                width: 150px;
-                height: 75px;
                 margin: 10px;
 
             }
