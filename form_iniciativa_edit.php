@@ -20,6 +20,7 @@
          $(".form-ong input:checkbox").attr('disabled',true);
          $(".form-ong input").attr('readonly',true);
          $(".form-ong textarea").attr('readonly',true);
+         $(".edit-button").attr('disabled', true);
              
     });
         
@@ -29,6 +30,7 @@
               $(".form-ong input:checkbox").attr('disabled',false);
               $(".form-ong input").attr('readonly',false);
               $(".form-ong textarea").attr('readonly',false);
+              $(".edit-button").attr('disabled', false);
               open_dialog("ok", "Agora você pode editar os dados!", 'success');
            }
 
@@ -1691,7 +1693,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                 </div>
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="submit" class="btn btn-submit">Enviar</button>
+                    <button type="submit" class="btn btn-submit edit-button">Enviar</button>
                 </div>
             </fieldset> 
          </form>
