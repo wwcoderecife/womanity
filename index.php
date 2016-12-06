@@ -278,48 +278,45 @@
                                 </div>
                                 <?php echo isset($erro) ? $erro : ''; ?>
                             </fieldset>
-
-                          
                         </form>
                     </div>
-                </div>                    
-            </div>
-        </div>
+                </div>
 
-        <div class="row">
-                    <div class="col-sm-12 c-form-info-title wow fadeInUp">
-                        <h3>Parceiros:</h3>
-                    </div>
-                </div>
-                
                 <div class="row">
-                    <div class="col-sm-3 c-form-info-box wow fadeInUp">
-                        <div class="c-form-info-box-icon">
-                            <i class="fa fa-map-marker"></i>
-                        </div>
-                        <p>logo1<br>Womanity Foundation</p>
-                    </div>
-                    <div class="col-sm-3 c-form-info-box wow fadeInDown">
-                        <div class="c-form-info-box-icon">
-                            <i class="fa fa-map-marker"></i>
-                        </div>
-                        <p>logo2<br>Instituto C&A</p>
-                    </div>
-                    <div class="col-sm-3 c-form-info-box wow fadeInUp">
-                        <div class="c-form-info-box-icon">
-                            <i class="fa fa-map-marker"></i>
-                        </div>
-                        <p>logo3<br>ONU Mulheres</p>
-                    </div>
-                    <div class="col-sm-3 c-form-info-box wow fadeInDown">
-                        <div class="c-form-info-box-icon">
-                            <i class="fa fa-map-marker"></i>
-                        </div>
-                        <p>logo4<br>Brazil Foundation</p>
-                    </div>
-                </div>
-                
-            </div>
+
+                    <footer class="footer-basic-centered">
+
+                     <p class="footer-company-motto">Parceiros.</p>   
+
+                   <div class="col-xs-6 col-sm-4">
+
+                         <img src="assets/img/logo_womanity.png"  class="img-rounded"><a href="#">Womanity Foundation</a>
+                   </div>
+
+                 <div class="col-xs-6 col-sm-4">
+
+                         <img src="assets/img/logo_onumulheres.png"  class="img-rounded"><a href="#">ONU Mulheres</a>
+                 </div>
+
+                  <div class="col-xs-6 col-sm-4">
+
+                         <img src="assets/img/logocea.png"  class="img-rounded"><a href="#">Instituto C&A</a>
+
+                  </div>
+
+                  <div class="col-xs-6 col-sm-4">
+
+                    <img src="assets/img/logo_brazil.png"  class="img-rounded"><a href="#">Brazil Foundation</a>
+
+                  </div>
+
+            </p>
+
+            <p class="footer-company-name">By Women Who Code Recife &copy; 2016</p>
+
+      </footer>                    
+            </div><!--div row-->
+
         </div>
 
     </body>
