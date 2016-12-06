@@ -208,7 +208,7 @@
                         >nao</option>
                     </select>    
 
-                <input type="text" id="inputcnpj" name="inputcnpj" value="<?php echo $edit->getCnpj()  ?>" class="f1-last-name form-control" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona"style='display: none' />
+                <input type="text" id="inputcnpj" name="inputcnpj" value="<?php echo $edit->getCnpj()  ?>" class="f1-last-name form-control" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" <?php if($edit->getCnpj() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> />
                     <script>
 
                         var dropdownCnpj = document.getElementById('organizacao-cnpj');
@@ -1328,8 +1328,8 @@
                         <option value="sim" <?=($edit->getMonitoramentoAtividades() != '')?'selected':''?>
                         >Sim</option>
                     </select>
-                    <textarea type="text" id="inputAvaliacaoOng" name= "inputAvaliacaoOng" value="<? echo $edit->getMonitoramentoAtividades(); ?>" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
-                        "style='display: none' /></textarea>
+                    <textarea type="text" id="inputAvaliacaoOng" name="inputAvaliacaoOng" value="<? echo $edit->getMonitoramentoAtividades(); ?>" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres.."
+                        <?php if($edit->getMonitoramentoAtividades() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /></textarea>
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -1379,7 +1379,7 @@
                         >Sim, qual?</option>
                     </select>
                     <textarea type="text" id="inputComunicacaoOng" value="<? echo $edit->getEstrategiaComunicacao(); ?>" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
-"style='display: none' /></textarea>
+" <?php if($edit->getEstrategiaComunicacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /></textarea>
                     <script>
 
                         var dropdownComun = document.getElementById('organizacao-comunicacao');
@@ -1430,7 +1430,7 @@
                         
                     </select>
                     <textarea type="text" id="inputPremiacaoOng" value="<? echo $edit->getPremiacaoCertificacao(); ?>" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
-"style='display: none' /></textarea>
+" <?php if($edit->getPremiacaoCertificacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /></textarea>
                     <script>
 
                     var dropdown = document.getElementById('premiacao');

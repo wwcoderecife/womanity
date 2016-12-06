@@ -44,7 +44,7 @@
     $edit = new editar;
     $edit->busca($_SESSION['organizacao_id']);
 
-     echo $edit->getLocalizacao();
+     echo $edit->getInputnomeong();
 
      //Array dos Checkboxs
 
@@ -57,7 +57,7 @@
 
 ?>       
 
-div class="row form_inicial">
+<div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
         <form role="form" action="classes/prepare_cadastro.php" method="post" class="f1 form-ong">
             <input type="hidden" value="editar" name="form_type" />
@@ -176,16 +176,16 @@ div class="row form_inicial">
                     <select class="f1-last-name form-control" name="organizacao-pai" id="organizacao-cnpj" required>
                         <option value=""></option>
                         <option value="sim"  
-                        <?php if($edit->getCnpj() != ""){ echo "selected"; } ?>
+                        <?php if($edit->getOrganizacaoPai() != ""){ echo "selected"; } ?>
                         >sim</option>
                      
                         <option value="nao"
-                        <?php if($edit->getCnpj() == ""){ echo "selected"; } ?>
+                        <?php if($edit->getOrganizacaoPai() == ""){ echo "selected"; } ?>
                          >nao</option>
                     </select> 
                 <div class="iniciativapj">     
-               <input type="text" id="inputnomeong" value="<?php echo $edit->getinputnomeong() ?>"  name="inputnomeong" class="f1-last-name form-control" placeholder="nome da organizaçāo" style='display: none' />
-                <input type="text" id="inputcnpj" maxlength="18" value="<?php echo $edit->getCnpj()  ?>" name="inputcnpj" required class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" style='display: none'/ >
+               <input type="text" id="inputnomeong" value="<?php echo $edit->getInputnomeong() ?>"  name="inputnomeong" class="f1-last-name form-control" placeholder="nome da organizaçāo" <?php if($edit->getInputnomeong() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> />
+                <input type="text" id="inputcnpj" maxlength="18" value="<?php echo $edit->getOrganizacaoPai()  ?>" name="organizacao_pai" required class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" <?php if($edit->getOrganizacaoPai() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> />
 
                 </div>
                     <script>
@@ -257,11 +257,15 @@ div class="row form_inicial">
 
                 <div class="form-group">
                     <label class="radio-inline">
-                       <input type="radio" name="identifica" value="<?php echo $edit->getTipo() ?>" class="form-control-radio">Açāo
+                       <input type="radio" name="identifica" value="acao"
+                       <?=($edit->getNatureza() == 'acao')?'checked=checked':''?>
+                        class="form-control-radio">Açāo
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="identifica" value="<?php echo $edit->getTipo() ?>" class="form-control-radio">Projeto
+                        <input type="radio" name="identifica" value="projeto" 
+                        <?=($edit->getNatureza() == 'projeto')?'checked=checked':''?>
+                        class="form-control-radio">Projeto
                     </label>
                 </div>
 
@@ -352,8 +356,8 @@ div class="row form_inicial">
                     <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas" required>
                      <div class="help-block with-errors"></div>
                         <option value=""></option>
-                        <option value="1-5"<?=($edit->getQtdePessoas() == '1-5')?'selected':''?>>1-5></option>
-                        <option value="6-10"<?=($edit->getQtdePessoas() == '6-10')?'selected':''?>>6-10></option>
+                        <option value="1-5"<?=($edit->getQtdePessoas() == '1-5')?'selected':''?>>1-5</option>
+                        <option value="6-10"<?=($edit->getQtdePessoas() == '6-10')?'selected':''?>>6-10</option>
                         <option value="11-20"<?=($edit->getQtdePessoas() == '11-20')?'selected':''?>>11-20></option>
                         <option value="21-50"<?=($edit->getQtdePessoas() == '21-50')?'selected':''?>>21-50</option>
                         <option value="51-100"<?=($edit->getQtdePessoas() == '51-100')?'selected':''?>>51-100</option>
@@ -451,196 +455,205 @@ div class="row form_inicial">
         <h5>Áreas de atuação da iniciativa: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>
         <div class="form-group" style="border: 1px solid #ddd">
         <div class="table-responsive">
-        <table id="form1" name="temas" class="table table-hover col-sm-12">
+        <table id="form1" name="table_temas"class="table table-hover col-sm-12" >
 
-         <thead>
-            <tr>
-                <th></th>
-                <th>Temas</th>
-                <th>Descriçāo</th>
-              
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td><input type="checkbox" name="temas[ ]" value="arte_cultura" class="no-margin" onclick="verificar()"
-                    <?php 
+             <thead>
+                <tr>
+                    <th></th>
+                    <th>Temas</th>
+                    <th>Descriçāo</th>
+                  
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]" value="arte_cultura" class="no-margin" onclick="verificar()"
+                        <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('arte_cultura', $array_temas[$i])) : ?> checked="checked" <?php endif; 
-                        } ?>></td>
-                <td>Arte e Cultura.</td>
-                <td>Promoção do acesso de mulheres à cultura e/ou incentivo à produção das várias expressões artísticas.</td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="temas[ ]" value="ciencia_tecnologia" class="no-margin" onclick="verificar()"
-                    <?php 
+                        } ?>
+                    ></td>
+                    <td>Arte e Cultura.</td>
+                    <td>Promoção do acesso de mulheres à cultura e/ou incentivo à produção das várias expressões artísticas.</td>
+                     
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="ciencia_tecnologia"class="no-margin" onclick="verificar()"
+                         <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('ciencia_tecnologia', $array_temas[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
-                        ></td>
-                <td>Ciência e Tecnologia.</td>
-                <td>Promoção do acesso a linguagens, equipamentos e/ou à produção de ciência e tecnologia por mulheres.</td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="temas[ ]" value="democracia_participação_politica" class="no-margin" onclick="verificar()" 
-                    <?php 
+                    ></td>
+                    <td>Ciência e Tecnologia.</td>
+                    <td>Promoção do acesso a linguagens, equipamentos e/ou à produção de ciência e tecnologia por mulheres.</td>
+                   
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="democracia_participação_politica"class="no-margin" onclick="verificar()"
+                         <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('democracia_participação_politica', $array_temas[$i])) : ?> checked="checked" <?php endif; 
-                        } ?>></td>
-                <td> Democracia e Participação Política.</td>
-                <td>Ações de incentivo à participação de mulheres na vida política e democrática institucional (partidos, conselhos, órgãos e instâncias dos poderes executivo, legislativo e judiciário).</td>
-            </tr>
+                        } ?>
+                    ></td>
+                    <td> Democracia e Participação Política.</td>
+                    <td>Ações de incentivo à participação de mulheres na vida política e democrática institucional (partidos, conselhos, órgãos e instâncias dos poderes executivo, legislativo e judiciário).</td>
+                </tr>
 
-            <tr>
-                <td><input type="checkbox" name="temas[ ]" value="educacao_formacao" class="no-margin" onclick="verificar()"
-                    <?php 
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="educacao_formacao"class="no-margin" onclick="verificar()"
+                         <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('educacao_formacao', $array_temas[$i])) : ?> checked="checked" <?php endif; 
-                        } ?>></td>
-                <td>Educação e Formação.</td>
-                <td>Oferta de educação formal (escolar ou acadêmica), incentivo à escolaridade; formação de atores sociais, ações de educação popular e informal</td>
-            </tr>
+                        } ?>
+                    ></td>
+                    <td>Educação e Formação.</td>
+                    <td>Oferta de educação formal (escolar ou acadêmica), incentivo à escolaridade; formação de atores sociais, ações de educação popular e informal.</td>
+                  
+                </tr>
 
-            <tr>
-                <td><input type="checkbox" name="temas[ ]" value="empreendedorismo_feminino_autonomia_economica" class="no-margin" onclick="verificar()"
-                    <?php 
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]" value="empreendedorismo_feminino_autonomia_economica"class="no-margin" onclick="verificar()"
+                         <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('empreendedorismo_feminino_autonomia_economica', $array_temas[$i])) : ?> checked="checked" <?php endif; 
-                        } ?>>
-                    </td>
-                <td>Empreendedorismo feminino e autonomia econômica.</td>
-                <td>Ações de incentivo ao empreendedorismo feminino e à autonomia econômica, por meio de capacitação e/ou financiamento, tais como capacitações, cooperativismo, microcrédito, etc.</td>
-            </tr>
+                        } ?>
+                    ></td>
+                    <td>Empreendedorismo feminino e autonomia econômica.</td>
+                    <td>Ações de incentivo ao empreendedorismo feminino e à autonomia econômica, por meio de capacitação e/ou financiamento, tais como capacitações, cooperativismo, microcrédito, etc.</td>
+                </tr>
 
-            <tr>
-                <td><input type="checkbox" name="temas[ ]" value="enfrentamento_violencia" class="no-margin" onclick="verificar()"
-                    <?php 
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]" value="enfrentamento_violencia"class="no-margin" onclick="verificar()"
+                         <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('enfrentamento_violencia', $array_temas[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
                     ></td>
-                <td>Enfrentamento à Violência.</td>
-                <td>Trabalho de enfrentamento às mais variadas formas de violência, destinado a mulheres e homens.</td>
-            <tr>
-                <td><input type="checkbox" name="temas[ ]" value="equidade_Condições_trabalho" class="no-margin" onclick="verificar()"
-                    <?php 
+                    <td>Enfrentamento à Violência.</td>
+                    <td>Trabalho de enfrentamento às mais variadas formas de violência, destinado a mulheres e homens.</td>
+                  
+
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]" value="equidade_Condições_trabalho"class="no-margin" onclick="verificar()"
+                         <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('equidade_Condições_trabalho', $array_temas[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
                     ></td>
-                <td>Equidade e Condições de Trabalho.</td>
-                <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas 
-possibilidades de desenvolvimento profissional e equiparação salarial.</td>  
-            </tr>
+                    <td>Equidade e Condições de Trabalho.</td>
+                    <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas 
+    possibilidades de desenvolvimento profissional e equiparação salarial.</td>    
+                </tr>
 
-            <tr>
-                <td><input type="checkbox" name="temas[ ]" value="esporte" class="no-margin" onclick="verificar()"
-                    <?php 
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="esporte"class="no-margin" onclick="verificar()"
+                        <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('esporte', $array_temas[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
                     ></td>
-                <td>Esportes.</td>
-                <td>Oferta, promoção e incentivo à realização de práticas esportivas por meninas e mulheres, sobretudo em modalidades tradicionalmente dominadas por homens.</td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="temas[ ]" value="indigenas" class="no-margin" onclick="verificar()"
-                    <?php 
+                    <td>Esportes.</td>
+                    <td>Oferta, promoção e incentivo à realização de práticas esportivas por meninas e mulheres, sobretudo em modalidades tradicionalmente dominadas por homens.</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="indigenas"class="no-margin" onclick="verificar()"
+                        <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('indigenas', $array_temas[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
                     ></td>
-                <td>Indígenas.</td>
-                <td>Ações destinadas à valorização das mulheres indígenas e ao enfrentamento de seus problemas específicos.</td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="temas[ ]" value="LGBTT" class="no-margin" onclick="verificar()"
-                     <?php 
+                    <td>Indígenas.</td>
+                    <td>Ações destinadas à valorização das mulheres indígenas e ao enfrentamento de seus problemas específicos.</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="LGBTT"class="no-margin" onclick="verificar()"
+                        <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('LGBTT', $array_temas[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
                     ></td>
-                <td>LGBTT (Lésbicas, Gays, Bissexuais, Travestis, Transexuais e Transgêneros).</td>
-                <td>Projetos que atuam pela valorização e afirmação de pessoas LGBTT e combatem a violência e a discriminação contra esses públicos.</td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="temas[ ]" value="masculinidade" class="no-margin" onclick="verificar()"
-                    <?php 
+                    <td>LGBTT (Lésbicas, Gays, Bissexuais, Travestis, Transexuais e Transgêneros).</td>
+                    <td>Projetos que atuam pela valorização e afirmação de pessoas LGBTT e combatem a violência e a discriminação contra esses públicos.</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="masculinidade"class="no-margin" onclick="verificar()"
+                        <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('masculinidade', $array_temas[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
                     ></td>
-                <td>Masculinidades.</td>
-                <td>Ações voltadas para questões relativas à revisão do conceito hegemônico de masculinidade, a partir da perspectiva das relações de gênero.</td>
-            </tr>
-            <tr>    
+                    <td>Masculinidades.</td>
+                    <td>Ações voltadas para questões relativas à revisão do conceito hegemônico de masculinidade, a partir da perspectiva das relações de gênero.</td>
+                </tr>
                 <tr>
-                 <td><input type="checkbox" name="temas[ ]" value="meio ambiente,seguranca,agricultura" class="no-margin" onclick="verificar()"
-                    <?php 
+                     <td><input type="checkbox" name="temas[ ]"value="meio ambiente,seguranca,agricultura"class="no-margin" onclick="verificar()"
+                        <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('meio ambiente,seguranca,agricultura', $array_temas[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
                     ></td>
-                <td>Meio Ambiente,Segurança Alimentar e Agricultura.</td>
-                <td>Trabalhos que relacionam questões de gênero, feminismo e meio ambiente. 
-Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis e ambientalmente sustentáveis.</td>
-            </tr>
+                    <td>Meio Ambiente,Segurança Alimentar e Agricultura.</td>
+                    <td>Trabalhos que relacionam questões de gênero, feminismo e meio ambiente. 
+    Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis e ambientalmente sustentáveis.</td>
+                </tr>
 
-            <tr>
-                <td><input type="checkbox" name="temas[ ]" value="midia_comunicacao" class="no-margin" onclick="verificar()"
-                    <?php 
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="midia_comunicacao"class="no-margin" onclick="verificar()"
+                        <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('midia_comunicacao', $array_temas[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
                     ></td>
-                <td>Mídia e Comunicação.</td>
-                <td>Promoção do acesso de mulheres aos meios de comunicação pelo domínio de técnicas, equipamentos e linguagens; monitoramento da presença da mulher nas mídias e da cobertura de temas sobre as questões das mulheres.</td>
-           </tr>
+                    <td>Mídia e Comunicação.</td>
+                    <td>Promoção do acesso de mulheres aos meios de comunicação pelo domínio de técnicas, equipamentos e linguagens; monitoramento da presença da mulher nas mídias e da cobertura de temas sobre as questões das mulheres.</td>
+               </tr>
 
-            <tr>
-                <td><input type="checkbox" name="temas[ ]" value="moradia" class="no-margin" onclick="verificar()"
-                    <?php 
+                <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="moradia"class="no-margin" onclick="verificar()"
+                        <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('moradia', $array_temas[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
                     ></td>
-                <td>Moradia.</td>
-                <td>Ações que visam contribuir para o direito das mulheres à moradia e desenvolvimento de habilidades para a construção ou reformas de casas.</td>
-           </tr>
+                    <td>Moradia.</td>
+                    <td>Ações que visam contribuir para o direito das mulheres à moradia e desenvolvimento de habilidades para a construção ou reformas de casas.</td>
+               </tr>
 
-           <tr>
-                <td><input type="checkbox" name="temas[ ]"value="negritude" class="no-margin" onclick="verificar()"
-                    <?php 
+               <tr>
+                    <td><input type="checkbox" name="temas[ ]"value="negritude"class="no-margin" onclick="verificar()"
+                        <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('negritude', $array_temas[$i])) : ?> checked="checked" <?php endif; 
-                        } ?> 
+                        } ?>
                     ></td>
-                <td>Negritude.</td>
-                <td>Ações de valorização da estética e da identidade das mulheres negras e de combate ao racismo.</td>
-           </tr>
+                    <td>Negritude.</td>
+                    <td>Ações de valorização da estética e da identidade das mulheres negras e de combate ao racismo.</td>
+               </tr>
 
-           <tr> <td><input type="checkbox" name="temas[ ]"value="paz_seguranca_publica" class="no-margin" onclick="verificar()"
-            <?php 
+               <tr> 
+                    <td><input type="checkbox" name="temas[ ]"value="paz_seguranca_publica"class="no-margin" onclick="verificar()"
+                        <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('paz_seguranca_publica', $array_temas[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
-            ></td>
-                <td>Paz e Segurança Pública.</td>
-                <td>Projetos que tratam da interface entre gênero e sistema de segurança pública, sobretudo questões da violência armada.</td>
-           </tr>
+                    ></td>
+                    <td>Paz e Segurança pública.</td>
+                    <td>Projetos que tratam da interface entre gênero e sistema de segurança pública, sobretudo questões da violência armada.</td>
+               </tr>
 
-           <tr> <td><input type="checkbox" name="temas[ ]" value="saude_bemestar" class="no-margin" onclick="verificar()"
-            <?php 
+               <tr> 
+                <td><input type="checkbox" name="temas[ ]"value="saude_bemestar"class="no-margin" onclick="verificar()"
+                    <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('saude_bemestar', $array_temas[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
-            ></td>
-                <td>Saúde e Bem-estar.</td>
-                <td>Iniciativas que tratam de questões de autoestima, qualidade de vida, saúde e bem-estar das mulheres.</td>
-           </tr>
+                    ></td>
+                    <td>Saúde e Bem-estar.</td>
+                    <td>Iniciativas que tratam de questões de autoestima, qualidade de vida, saúde e bem-estar das mulheres.</td>
+               </tr>
 
-            </tbody>
-        </table>
+                </tbody>
+                </table>
     </div>
   </div>
 
@@ -1325,7 +1338,7 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                     </select>
                     <textarea type="text" id="inputAvaliacaoOng" value="<? echo $edit->getMonitoramentoAtividades(); ?>"
                      name="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
-                        "style='display: none' /></textarea>
+                        " <?php if($edit->getMonitoramentoAtividades() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /></textarea>
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -1371,11 +1384,11 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                         <option value=""></option>
                         <option value="0" <?=($edit->getEstrategiaComunicacao() == '')?'selected':''?>
                         >Nāo</option>
-                        <option value="1" <?=($edit->getEstrategiaComunicacao() == '')?'selected':''?>
+                        <option value="1" <?=($edit->getEstrategiaComunicacao() != '')?'selected':''?>
                         >Sim, qual?</option>
                     </select>
                     <textarea type="text" id="inputComunicacaoOng" value="<? echo $edit->getEstrategiaComunicacao(); ?>" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
-"style='display: none' /></textarea>
+" <?php if($edit->getEstrategiaComunicacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /></textarea>
                     <script>
 
                         var dropdownComun = document.getElementById('iniciativa-comunicacao');
@@ -1421,11 +1434,11 @@ Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis 
                         <option value=""></option>
                         <option value="0" <?=($edit->getPremiacaoCertificacao() == '')?'selected':''?>
                         >Nāo</option>
-                        <option value="1" <?=($edit->getPremiacaoCertificacao() == '')?'selected':''?>
+                        <option value="1" <?=($edit->getPremiacaoCertificacao() != '')?'selected':''?>
                         >Sim, quais?</option>    
                     </select>
                     <textarea type="text" id="inputPremiacao" name="inputPremiacao"  value="<? echo $edit->getPremiacaoCertificacao(); ?>" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
-"style='display: none'></textarea>
+" <?php if($edit->getPremiacaoCertificacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /></textarea>
                     <script>
 
                         var dropdown = document.getElementById('premiacao');
