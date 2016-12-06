@@ -938,6 +938,7 @@ class CadastrarAll extends Conexao {
         }
         catch (Exception $e){
               $pdo->rollback();
+              echo $e->getMessage();
                echo "<script type='text/javascript'>
 
                         sweetAlert({
@@ -1304,7 +1305,7 @@ class CadastrarAll extends Conexao {
         }
         catch (Exception $e){
               $pdo->rollback();
-              //echo $e->getMessage();
+              echo $e->getMessage();
                echo "<script type='text/javascript'>
 
                         sweetAlert({

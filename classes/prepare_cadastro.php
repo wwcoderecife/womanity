@@ -131,6 +131,7 @@
         $novo->setOrganizacaoPai($organizacao_pai);
         $novo->setNatureza($natureza);
         $novo->setUsuarioId($usuario_id);
+        $novo->setInputnomeong($inputnomeong);
       
 
         //contato
