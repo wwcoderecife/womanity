@@ -71,7 +71,6 @@
     $array_subtema = $edit->getSubtemas();
     $array_estados = $edit->getEstados();
 
-
 ?>
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
@@ -1534,16 +1533,7 @@
                        <?php echo "<script type='text/javascript'> var cidade = '".$edit->getCidade()."'; </script>"; ?>
                         
                         <option value=""></option>
-                        <script type="text/javascript">
-                          
-                           $("#cidades option").each(function(){
-                                if($(this).val() == cidade ){
-                                    $(this).attr('selected', 'selected');   
-                                }
-                            });
-
-                       
-                        </script>
+                        
 
                     </select> 
                 </div>

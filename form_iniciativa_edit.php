@@ -44,8 +44,6 @@
     $edit = new editar;
     $edit->busca($_SESSION['organizacao_id']);
 
-     echo $edit->getInputnomeong();
-
      //Array dos Checkboxs
 
     $array_recursos_financeiros = $edit->getRecursosFinaceirosLista();
@@ -54,6 +52,7 @@
     $array_politicas_publicas = $edit->getPoliticasPublicasList();  
     $array_subtema = $edit->getSubtemas();
     $array_estados = $edit->getEstados();
+
 
 ?>       
 
@@ -1545,15 +1544,7 @@
                     <select class="f1-last-name form-control" name="cidade" id="cidades"> 
 
                         <?php echo "<script type='text/javascript'> var cidade = '".$edit->getCidade()."'; </script>"; ?>
-                        <script type="text/javascript">
-                          
-                           $("#cidades option").each(function(){
-                                if($(this).val() == cidade ){
-                                    $(this).attr('selected', 'selected');   
-                                }
-                            });
-
-                           </script>
+                        
                         <option value=""></option>
 
                     </select> 
