@@ -1327,8 +1327,8 @@
                         <option value="sim" <?=($edit->getMonitoramentoAtividades() != '')?'selected':''?>
                         >Sim</option>
                     </select>
-                    <textarea type="text" id="inputAvaliacaoOng" name="inputAvaliacaoOng" value="<? echo $edit->getMonitoramentoAtividades(); ?>" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres.."
-                        <?php if($edit->getMonitoramentoAtividades() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /></textarea>
+                    <textarea type="text" id="inputAvaliacaoOng" name="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres.."
+                        <?php if($edit->getMonitoramentoAtividades() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getMonitoramentoAtividades(); ?></textarea>
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -1377,8 +1377,8 @@
                         <option value="sim,qual?" <?=($edit->getEstrategiaComunicacao() != '')?'selected':''?>
                         >Sim, qual?</option>
                     </select>
-                    <textarea type="text" id="inputComunicacaoOng" value="<? echo $edit->getEstrategiaComunicacao(); ?>" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
-" <?php if($edit->getEstrategiaComunicacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /></textarea>
+                    <textarea type="text" id="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
+" <?php if($edit->getEstrategiaComunicacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getEstrategiaComunicacao(); ?></textarea>
                     <script>
 
                         var dropdownComun = document.getElementById('organizacao-comunicacao');
@@ -1428,8 +1428,8 @@
                         >Sim, quais?</option> 
                         
                     </select>
-                    <textarea type="text" id="inputPremiacaoOng" value="<? echo $edit->getPremiacaoCertificacao(); ?>" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
-" <?php if($edit->getPremiacaoCertificacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /></textarea>
+                    <textarea type="text" id="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
+" <?php if($edit->getPremiacaoCertificacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getPremiacaoCertificacao(); ?></textarea>
                     <script>
 
                     var dropdown = document.getElementById('premiacao');
