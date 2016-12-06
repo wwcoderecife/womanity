@@ -338,10 +338,8 @@
 
             .logos{
 
-                margin: 25px 5px 10px 0px;*/
-
                 display: inline-block;
-               /*margin: 10px;*/
+                margin: 25px auto 10px auto;
 
             }
 
