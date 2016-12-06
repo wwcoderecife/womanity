@@ -388,13 +388,13 @@ div class="row form_inicial">
               <div class="form-group">
                    <label class="radio-inline">
                         <input type="radio" name="recursos" value="sim" 
-                        <?php if($edit->getRecursosFinaceiros() != "sim"){ echo "selected"; } ?>
+                        <?=($edit->getRecursosFinaceiros() == 'sim')?'checked=checked':''?>
                         class="form-control-radio"> Sim
                     </label>
 
                     <label class="radio-inline">
                         <input type="radio" name="recursos" value="nao" 
-                        <?php if($edit->getRecursosFinaceiros() != "nao"){ echo "selected"; } ?>
+                        <?=($edit->getRecursosFinaceiros() == 'nao')?'checked=checked':''?>
                         class="form-control-radio"> Nāo
                     </label>
                 </div>

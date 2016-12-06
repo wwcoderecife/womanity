@@ -71,8 +71,6 @@
     $array_subtema = $edit->getSubtemas();
     $array_estados = $edit->getEstados();
 
-    echo $edit->getNome_1();
-
 
 ?>
 <div class="row form_inicial">
@@ -399,13 +397,13 @@
                 <div class="form-group">
                    <label class="radio-inline">
                         <input type="radio" name="recursos" value="sim"
-                        <?php if($edit->getRecursosFinaceiros() != "sim"){ echo "selected"; } ?>
+                        <?=($edit->getRecursosFinaceiros() == 'sim')?'checked=checked':''?>
                          class="form-control-radio"> Sim
                     </label>
 
                     <label class="radio-inline">
                         <input type="radio" name="recursos" value="nao"
-                        <?php if($edit->getRecursosFinaceiros() != "nao"){ echo "selected"; } ?>
+                        <?=($edit->getRecursosFinaceiros() == 'nao')?'checked=checked':''?>
                          class="form-control-radio"> Nāo
                     </label>
                 </div>
@@ -1377,7 +1375,7 @@
                         <option value=""></option>
                         <option value="nao" <?=($edit->getEstrategiaComunicacao() == '')?'selected':''?>
                         >Nāo</option>
-                        <option value="sim,qual?" <?=($edit->getEstrategiaComunicacao() == '')?'selected':''?>
+                        <option value="sim,qual?" <?=($edit->getEstrategiaComunicacao() != '')?'selected':''?>
                         >Sim, qual?</option>
                     </select>
                     <textarea type="text" id="inputComunicacaoOng" value="<? echo $edit->getEstrategiaComunicacao(); ?>" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
@@ -1427,7 +1425,7 @@
                         <option value=""></option>
                         <option value="nao" <?=($edit->getPremiacaoCertificacao() == '')?'selected':''?>
                         >Nāo</option>
-                        <option value="sim,quais?" <?=($edit->getPremiacaoCertificacao() == '')?'selected':''?>
+                        <option value="sim,quais?" <?=($edit->getPremiacaoCertificacao() != '')?'selected':''?>
                         >Sim, quais?</option> 
                         
                     </select>
@@ -1534,6 +1532,8 @@
                     <label class="sr-only" for="f1-google-plus">Cidade</label>
                     <select class="f1-last-name form-control" name="cidade" id="cidades"> 
                        <?php echo "<script type='text/javascript'> var cidade = '".$edit->getCidade()."'; </script>"; ?>
+                        
+                        <option value=""></option>
                         <script type="text/javascript">
                           
                            $("#cidades option").each(function(){
@@ -1544,7 +1544,6 @@
 
                        
                         </script>
-                        <option value=""></option>
 
                     </select> 
                 </div>
