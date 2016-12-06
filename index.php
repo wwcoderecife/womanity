@@ -286,35 +286,36 @@
                     <div class="row">
                         <h3 class="description">Parceiros:</h3>
 
+                   <div class= "col-sx-12">     
+
                    <div class="col-md-3">
                    
-                         <img src="assets/img/logo_womanity.png"class="img-rounded"><a href="#"></a>
+                         <img src="assets/img/logo_womanity.png"class="img-responsive"><a href="#"></a>
                    </div>
 
                     <div class="col-md-3">
                
-                         <img src="assets/img/logo_onumulheres.png"class="img-rounded"><a href="#"></a>
+                         <img src="assets/img/logo_onumulheres.png"class="img-responsive"><a href="#"></a>
 
                     </div>
 
                     <div class="col-md-3">
 
-                        <img src="assets/img/logocea.png" class="img-rounded"><a href="#"></a>
+                        <img src="assets/img/logocea.png" class="img-responsive"><a href="#"></a>
 
                     </div> 
 
                     <div class="col-md-3">
                    
-                    <img src="assets/img/logo_brazil.png"class="img-rounded"><a href="#"></a>
+                    <img src="assets/img/logo_brazil.png"class="img-responsive"><a href="#"></a>
 
                    </div> 
+                 </div>  
            </div>
 
-       </div>
-
-                         
+            </div>                
        
-            </div><!--div row-->
+            </div>
 
           </div>
 
