@@ -1340,7 +1340,7 @@
                                 //pegando valor do select na variável dropdownAvaliacao
 
                                 
-                                if(dropdownAvaliacao.options[dropdownAvaliacao.selectedIndex].value == "1") {
+                                if(dropdownAvaliacao.options[dropdownAvaliacao.selectedIndex].value == "sim") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for outros
@@ -1374,10 +1374,10 @@
                         <option value=""></option>
                         <option value="nao" <?=($edit->getEstrategiaComunicacao() == '')?'selected':''?>
                         >Nāo</option>
-                        <option value="sim,qual?" <?=($edit->getEstrategiaComunicacao() != '')?'selected':''?>
+                        <option value="sim" <?=($edit->getEstrategiaComunicacao() != '')?'selected':''?>
                         >Sim, qual?</option>
                     </select>
-                    <textarea type="text" id="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
+                    <textarea type="text" name="inputComunicacaoOng" id="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 " <?php if($edit->getEstrategiaComunicacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getEstrategiaComunicacao(); ?></textarea>
                     <script>
 
@@ -1388,7 +1388,7 @@
                                 console.log(dropdownComun.selectedIndex);
                                 //pegando valor do select na variável dropdown
                                 var meuInput1 = document.getElementById('inputComunicacaoOng');
-                                if(dropdownComun.options[dropdownComun.selectedIndex].value == "1") {
+                                if(dropdownComun.options[dropdownComun.selectedIndex].value == "sim") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for outros
@@ -1424,11 +1424,11 @@
                         <option value=""></option>
                         <option value="nao" <?=($edit->getPremiacaoCertificacao() == '')?'selected':''?>
                         >Nāo</option>
-                        <option value="sim,quais?" <?=($edit->getPremiacaoCertificacao() != '')?'selected':''?>
+                        <option value="sim" <?=($edit->getPremiacaoCertificacao() != '')?'selected':''?>
                         >Sim, quais?</option> 
                         
                     </select>
-                    <textarea type="text" id="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
+                    <textarea type="text" name="inputPremiacaoOng" id="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 " <?php if($edit->getPremiacaoCertificacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getPremiacaoCertificacao(); ?></textarea>
                     <script>
 
@@ -1436,10 +1436,10 @@
                             
                             function onDropdownChangedPremiacao()
                             {
-                                console.log(dropdown.selectedIndex);
+                                console.log(dropdown.options[dropdown.selectedIndex].value);
                                 //pegando valor do select na variável dropdown
                                 var meuInput = document.getElementById('inputPremiacaoOng');
-                                if(dropdown.options[dropdown.selectedIndex].value == "1") {
+                                if(dropdown.options[dropdown.selectedIndex].value == "sim") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for outros
