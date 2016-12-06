@@ -23,7 +23,7 @@
     $monitoramento_atividades = filter_input(INPUT_POST, "inputAvaliacaoOng", FILTER_SANITIZE_MAGIC_QUOTES);
     $estrategia_comunicacao = filter_input(INPUT_POST, "inputComunicacaoOng", FILTER_SANITIZE_MAGIC_QUOTES);
     $premiacao_certificacao = filter_input(INPUT_POST, "inputPremiacaoOng", FILTER_SANITIZE_MAGIC_QUOTES);
-    $organizacao_pai = filter_input(INPUT_POST, "organizacao-zona", FILTER_SANITIZE_MAGIC_QUOTES);
+    $organizacao_pai = filter_input(INPUT_POST, "organizacao_pai", FILTER_SANITIZE_MAGIC_QUOTES);
     $natureza = filter_input(INPUT_POST, "identifica", FILTER_SANITIZE_MAGIC_QUOTES);
     $inputnomeong = filter_input(INPUT_POST, "inputnomeong", FILTER_SANITIZE_MAGIC_QUOTES);
     $usuario_id = $_SESSION['usuario_id'];

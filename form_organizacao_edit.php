@@ -52,9 +52,6 @@
     $array_subtema = $edit->getSubtemas();
     $array_estados = $edit->getEstados();
 
-    echo $edit->getNome_1();
-
-
 ?>
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
@@ -191,7 +188,7 @@
                         >nao</option>
                     </select>    
 
-                <input type="text" id="inputcnpj" name="inputcnpj" value="<?php echo $edit->getCnpj()  ?>" class="f1-last-name form-control" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona"style='display: none' />
+                <input type="text" id="inputcnpj" name="inputcnpj" value="<?php echo $edit->getCnpj()  ?>" class="f1-last-name form-control" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" <?php if($edit->getCnpj() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> />
                     <script>
 
                         var dropdownCnpj = document.getElementById('organizacao-cnpj');
@@ -380,13 +377,13 @@
                 <div class="form-group">
                    <label class="radio-inline">
                         <input type="radio" name="recursos" value="sim"
-                        <?php if($edit->getRecursosFinaceiros() != "sim"){ echo "selected"; } ?>
+                        <?=($edit->getRecursosFinaceiros() == 'sim')?'checked=checked':''?>
                          class="form-control-radio"> Sim
                     </label>
 
                     <label class="radio-inline">
                         <input type="radio" name="recursos" value="nao"
-                        <?php if($edit->getRecursosFinaceiros() != "nao"){ echo "selected"; } ?>
+                        <?=($edit->getRecursosFinaceiros() == 'nao')?'checked=checked':''?>
                          class="form-control-radio"> Nāo
                     </label>
                 </div>
@@ -1311,8 +1308,8 @@
                         <option value="sim" <?=($edit->getMonitoramentoAtividades() != '')?'selected':''?>
                         >Sim</option>
                     </select>
-                    <textarea type="text" id="inputAvaliacaoOng" name= "inputAvaliacaoOng" value="<? echo $edit->getMonitoramentoAtividades(); ?>" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
-                        "style='display: none' /></textarea>
+                    <textarea type="text" id="inputAvaliacaoOng" name="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres.."
+                        <?php if($edit->getMonitoramentoAtividades() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getMonitoramentoAtividades(); ?></textarea>
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -1324,7 +1321,7 @@
                                 //pegando valor do select na variável dropdownAvaliacao
 
                                 
-                                if(dropdownAvaliacao.options[dropdownAvaliacao.selectedIndex].value == "1") {
+                                if(dropdownAvaliacao.options[dropdownAvaliacao.selectedIndex].value == "sim") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for outros
@@ -1358,11 +1355,11 @@
                         <option value=""></option>
                         <option value="nao" <?=($edit->getEstrategiaComunicacao() == '')?'selected':''?>
                         >Nāo</option>
-                        <option value="sim,qual?" <?=($edit->getEstrategiaComunicacao() == '')?'selected':''?>
+                        <option value="sim" <?=($edit->getEstrategiaComunicacao() != '')?'selected':''?>
                         >Sim, qual?</option>
                     </select>
-                    <textarea type="text" id="inputComunicacaoOng" value="<? echo $edit->getEstrategiaComunicacao(); ?>" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
-"style='display: none' /></textarea>
+                    <textarea type="text" name="inputComunicacaoOng" id="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
+" <?php if($edit->getEstrategiaComunicacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getEstrategiaComunicacao(); ?></textarea>
                     <script>
 
                         var dropdownComun = document.getElementById('organizacao-comunicacao');
@@ -1372,7 +1369,7 @@
                                 console.log(dropdownComun.selectedIndex);
                                 //pegando valor do select na variável dropdown
                                 var meuInput1 = document.getElementById('inputComunicacaoOng');
-                                if(dropdownComun.options[dropdownComun.selectedIndex].value == "1") {
+                                if(dropdownComun.options[dropdownComun.selectedIndex].value == "sim") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for outros
@@ -1408,22 +1405,22 @@
                         <option value=""></option>
                         <option value="nao" <?=($edit->getPremiacaoCertificacao() == '')?'selected':''?>
                         >Nāo</option>
-                        <option value="sim,quais?" <?=($edit->getPremiacaoCertificacao() == '')?'selected':''?>
+                        <option value="sim" <?=($edit->getPremiacaoCertificacao() != '')?'selected':''?>
                         >Sim, quais?</option> 
                         
                     </select>
-                    <textarea type="text" id="inputPremiacaoOng" value="<? echo $edit->getPremiacaoCertificacao(); ?>" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
-"style='display: none' /></textarea>
+                    <textarea type="text" name="inputPremiacaoOng" id="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
+" <?php if($edit->getPremiacaoCertificacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getPremiacaoCertificacao(); ?></textarea>
                     <script>
 
                     var dropdown = document.getElementById('premiacao');
                             
                             function onDropdownChangedPremiacao()
                             {
-                                console.log(dropdown.selectedIndex);
+                                console.log(dropdown.options[dropdown.selectedIndex].value);
                                 //pegando valor do select na variável dropdown
                                 var meuInput = document.getElementById('inputPremiacaoOng');
-                                if(dropdown.options[dropdown.selectedIndex].value == "1") {
+                                if(dropdown.options[dropdown.selectedIndex].value == "sim") {
                                     //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor');
                                     //mostra o input quando o valor selecionado for outros
@@ -1515,17 +1512,9 @@
                     <label class="sr-only" for="f1-google-plus">Cidade</label>
                     <select class="f1-last-name form-control" name="cidade" id="cidades"> 
                        <?php echo "<script type='text/javascript'> var cidade = '".$edit->getCidade()."'; </script>"; ?>
-                        <script type="text/javascript">
-                          
-                           $("#cidades option").each(function(){
-                                if($(this).val() == cidade ){
-                                    $(this).attr('selected', 'selected');   
-                                }
-                            });
-
-                       
-                        </script>
+                        
                         <option value=""></option>
+                        
 
                     </select> 
                 </div>

@@ -24,6 +24,7 @@ class Editar extends Conexao {
     private $organizacao_pai;
     private $natureza;
     private $usuario_id;
+    private $inputnomeong;
 
     //******Contatos*******//
     private $nome_1;
@@ -624,7 +625,7 @@ class Editar extends Conexao {
 			    ong.cnpj, ong.localizacao, ong.nome, ong.sigla, ong.telefone, ong.email, ong.tipo, ong.inicio_atv, 
 			    ong.qtde_pessoas, ong.recursos_financeiros, ong.descricao,  ong.publico_atendido, 
 			    ong.politicas_publicas, ong.monitoramento_atividades, ong.estrategia_comunicacao,
-				ong.premiacao_certificacao, ong.organizacao_pai, ong.natureza,
+				ong.premiacao_certificacao, ong.organizacao_pai, ong.identifica_iniciativa, ong.inputnomeong,
                 endereco.rua, endereco.numero, endereco.complemento, endereco.bairro,
                 endereco.cidade, endereco.estado, endereco.cep, endereco.regiao
 			from organizacoes ong
@@ -678,7 +679,8 @@ class Editar extends Conexao {
         $this->setEstrategiaComunicacao($result['estrategia_comunicacao']);
         $this->setPremiacaoCertificacao($result['premiacao_certificacao']);
         $this->setOrganizacaoPai($result['organizacao_pai']);
-        $this->setNatureza($result['natureza']);
+        $this->setNatureza($result['identifica_iniciativa']);
+        $this->setInputnomeong($result['inputnomeong']);
 
         $this->setRegiao($result['regiao']);
         $this->setEstado($result['estado']);

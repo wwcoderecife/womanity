@@ -5877,8 +5877,8 @@ jQuery(document).ready(function() {
         }).change();  
 
 
-        $("#estados").ready(function () {              
-        
+        $("#estados").ready(function () {   
+ 
             var options_cidades = '';
             var str = "";                   
             
@@ -5889,7 +5889,11 @@ jQuery(document).ready(function() {
             $.each(data, function (key, val) {
                 if(val.nome == str) {                           
                     $.each(val.cidades, function (key_city, val_city) {
-                        options_cidades += '<option value="' + val_city + '">' + val_city + '</option>';
+                        if(cidade == val_city){
+                            options_cidades += '<option value="' + val_city + '" selected=selected>' + val_city + '</option>';
+                        }else{
+                            options_cidades += '<option value="' + val_city + '">' + val_city + '</option>';
+                        }
                     });                         
                 }
             });
