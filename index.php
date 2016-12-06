@@ -285,28 +285,29 @@
                 <div class="row">
 
                     <footer class="footer-basic-centered">
+                        
 
-                     <p class="footer-company-motto">Parceiros.</p>   
+                     <h3><strong>Parceiros:</strong></h3>   
 
-                   <div class="col-xs-6 col-sm-4">
+                   <div class="col-xs-6 col-sm-3">
 
-                         <img src="assets/img/logo_womanity.png"  class="img-rounded"><a href="#">Womanity Foundation</a>
+                         <img src="assets/img/logo_womanity.png"  class="img-rounded"><a href="#"></a>
                    </div>
 
-                 <div class="col-xs-6 col-sm-4">
+                 <div class="col-xs-6 col-sm-3">
 
-                         <img src="assets/img/logo_onumulheres.png"  class="img-rounded"><a href="#">ONU Mulheres</a>
+                         <img src="assets/img/logo_onumulheres.png"  class="img-rounded"><a href="#"></a>
                  </div>
 
-                  <div class="col-xs-6 col-sm-4">
+                  <div class="col-xs-6 col-sm-3">
 
-                         <img src="assets/img/logocea.png"  class="img-rounded"><a href="#">Instituto C&A</a>
+                         <img src="assets/img/logocea.png"  class="img-rounded"><a href="#"></a>
 
                   </div>
 
-                  <div class="col-xs-6 col-sm-4">
+                  <div class="col-xs-6 col-sm-3">
 
-                    <img src="assets/img/logo_brazil.png"  class="img-rounded"><a href="#">Brazil Foundation</a>
+                    <img src="assets/img/logo_brazil.png"  class="img-rounded"><a href="#"></a>
 
                   </div>
 
