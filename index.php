@@ -288,31 +288,31 @@
 
                    <div class="col-md-3">
                    
-                         <img src="assets/img/logo_womanity.png"class="logos"><a href="#"></a>
+                         <img src="assets/img/logo_womanity.png"class="floating-box"><a href="#"></a>
                    </div>
 
                     <div class="col-md-3">
                
-                         <img src="assets/img/logo_onumulheres.png"class="logos"><a href="#"></a>
+                         <img src="assets/img/logo_onumulheres.png"class="floating-box"><a href="#"></a>
 
                     </div>
 
                     <div class="col-md-3">
 
-                        <img src="assets/img/logocea.png" class="logos"><a href="#"></a>
+                        <img src="assets/img/logocea.png" class="floating-box"><a href="#"></a>
 
                     </div> 
 
                     <div class="col-md-3">
                    
-                    <img src="assets/img/logo_brazil.png"class="logo"><a href="#"></a>
+                    <img src="assets/img/logo_brazil.png"class="floating-box"><a href="#"></a>
 
                     </div> 
 
                     <div class="container footer">
                     <div class="row">
                         <div class="col-sm-12">
-                             By Women Who Code Recife &copy; 2016 <a href="womenwhocode.com" target="_blank"></a>.
+                             By Women Who Code Recife &copy; 2016 <a href="http://www.womenwhocode.com" target="_blank"></a>
                         </div>
 
                             </div><!--/ row footer-->
@@ -330,9 +330,14 @@
 
           <style>
 
-            img.logos{
+            img.floating-box{
 
-                margin: 25px 5px 15px 20px;
+                /*margin: 25px 5px 15px 20px;*/
+ 
+                float: left;
+                width: 150px;
+                height: 75px;
+                margin: 10px;
 
             }
 
