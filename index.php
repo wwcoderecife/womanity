@@ -284,9 +284,7 @@
 
                 <div class="container">
                     <div class="row">
-                        <h3 class="description">Parceiros:</h3>
-
-                   <div class= "col-sx-12">     
+                        <h3 class="description">Parceiros:</h3>   
 
                    <div class="col-md-3">
                    
@@ -309,9 +307,18 @@
                    
                     <img src="assets/img/logo_brazil.png"class="img-responsive"><a href="#"></a>
 
-                   </div> 
-                 </div>  
-           </div>
+                    </div> 
+
+                    <div class="container footer">
+                    <div class="row">
+                        <div class="col-sm-12">
+                             By Women Who Code Recife &copy; 2016 <a href="womenwhocode.com" target="_blank">Women Who Code</a>.
+                        </div>
+                    </div>
+                </div>
+
+                 
+               </div>
 
             </div>                
        
@@ -319,13 +326,7 @@
 
           </div>
 
-          <div class="container footer">
-            <div class="row">
-                <div class="col-sm-12">
-                     By Women Who Code Recife &copy; 2016 <a href="womenwhocode.com" target="_blank">Women Who Code</a>.
-                </div>
-            </div>
-        </div>
+          
 
        </body>
     <?php
