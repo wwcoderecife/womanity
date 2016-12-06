@@ -285,7 +285,7 @@
 
 
 
-                <div class="container">
+                <div class="container footer">
                     <div class="row" >
                         <div class="description">
 
@@ -313,6 +313,19 @@
                    
                     <img src="assets/img/logo_brazil.png"class="logos"><a href="#"></a>
 
+                    <style>
+
+                    .logos{
+
+                        display: inline-block;
+                        margin: 25px auto 10px auto;
+
+                    }
+
+
+                    </style>
+
+
                     </div> 
 
                     <div class="container footer">
@@ -333,18 +346,6 @@
               </div><!--/ container Top Container--> 
 
           </div><!--top-content-->
-
-          <style>
-
-            .logos{
-
-                display: inline-block;
-                margin: 25px auto 10px auto;
-
-            }
-
-
-          </style>
 
        </body>
 
