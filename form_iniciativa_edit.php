@@ -987,7 +987,7 @@
             <option value="Promoção à cargos de liderança"
             <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
-                    if(in_array('Preconceito e discriminação', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                    if(in_array('Promoção à cargos de liderança', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Promoção à cargos de liderança</option>
             <option value="Questão presidiária"
