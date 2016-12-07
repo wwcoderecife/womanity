@@ -14,6 +14,7 @@ class Editar extends Conexao {
     private $tipo;
     private $inicio_atv;
     private $qtde_pessoas;
+    private $qtde_beneficiadas;
     private $recursos_finaceiros;
     private $descricao;
     private $publico_atendido;
@@ -25,6 +26,7 @@ class Editar extends Conexao {
     private $natureza;
     private $usuario_id;
     private $inputnomeong;
+    private $justificativa_orcamento;
 
     //******Contatos*******//
     private $nome_1;
@@ -138,6 +140,9 @@ class Editar extends Conexao {
     public function setQtdePessoas($qtde_pessoas){
         $this->qtde_pessoas = $qtde_pessoas;
     }
+    public function setQtdeBeneficiadas($qtde_beneficiadas){
+        $this->qtde_beneficiadas = $qtde_beneficiadas;
+    }
     public function setRecursosFinaceiros($recursos_finaceiros){
         $this->recursos_finaceiros = $recursos_finaceiros;
     }
@@ -167,6 +172,9 @@ class Editar extends Conexao {
     }
     public function setUsuarioId($usuario_id){
         $this->usuario_id = $usuario_id;
+    }
+    public function setJustificativaOrcamento($justificativa_orcamento){
+        $this->justificativa_orcamento = $justificativa_orcamento;
     }
 
     //organizacoes Gets
@@ -200,6 +208,9 @@ class Editar extends Conexao {
     public function getQtdePessoas(){
        return $this->qtde_pessoas;
     }
+    public function getQtdeBeneficiadas(){
+       return $this->qtde_beneficiadas;
+    }
     public function getRecursosFinaceiros(){
        return $this->recursos_finaceiros;
     }
@@ -229,6 +240,9 @@ class Editar extends Conexao {
     }
     public function getUsuarioId(){
        return $this->usuario_id;
+    }
+    public function getJustificativaOrcamento(){
+       return $this->justificativa_orcamento;
     }
 
 
@@ -623,9 +637,9 @@ class Editar extends Conexao {
 			    contato_2.nome as nome_2, contato_2.cargo as cargo_2, contato_2.email as email_2,
 			    contato_2.telefone as telefone_2, contato_2.celular as celular_2,
 			    ong.cnpj, ong.localizacao, ong.nome, ong.sigla, ong.telefone, ong.email, ong.tipo, ong.inicio_atv, 
-			    ong.qtde_pessoas, ong.recursos_financeiros, ong.descricao,  ong.publico_atendido, 
+			    ong.qtde_pessoas, ong.pessoas_benefeciadas, ong.recursos_financeiros, ong.descricao,  ong.publico_atendido, 
 			    ong.politicas_publicas, ong.monitoramento_atividades, ong.estrategia_comunicacao,
-				ong.premiacao_certificacao, ong.organizacao_pai, ong.identifica_iniciativa, ong.inputnomeong,
+				ong.premiacao_certificacao, ong.organizacao_pai, ong.identifica_iniciativa, ong.inputnomeong, ong.justificativa_orcamento,
                 endereco.rua, endereco.numero, endereco.complemento, endereco.bairro,
                 endereco.cidade, endereco.estado, endereco.cep, endereco.regiao
 			from organizacoes ong
@@ -671,6 +685,7 @@ class Editar extends Conexao {
         $this->setTipo($result['tipo']);
         $this->setInicioAtv($result['inicio_atv']);
         $this->setQtdePessoas($result['qtde_pessoas']);
+        $this->setQtdeBeneficiadas($result['pessoas_benefeciadas']);
         $this->setRecursosFinaceiros($result['recursos_financeiros']);
         $this->setDescricao($result['descricao']);
         $this->setPublicoAtendido($result['publico_atendido']);
@@ -681,6 +696,7 @@ class Editar extends Conexao {
         $this->setOrganizacaoPai($result['organizacao_pai']);
         $this->setNatureza($result['identifica_iniciativa']);
         $this->setInputnomeong($result['inputnomeong']);
+        $this->setJustificativaOrcamento($result['justificativa_orcamento']);
 
         $this->setRegiao($result['regiao']);
         $this->setEstado($result['estado']);

@@ -69,6 +69,7 @@ class CadastrarAll extends Conexao {
     private $usuario_id;
     private $inputnomeong;
 
+
     //******Contatos*******//
     private $nome_1;
     private $cargo_1;
@@ -721,7 +722,7 @@ class CadastrarAll extends Conexao {
             if ($orcamento == ""){
                 $inserir_orcamentos->bindValue(2, '0.00');
             }else{
-                $inserir_orcamentos->bindValue(2, str_replace(',', '.',$this->getOrcamento_2014()));
+                $inserir_orcamentos->bindValue(2, str_replace(',', '.',str_replace('.', '',$this->getOrcamento_2014())));
             }
             $inserir_orcamentos->bindValue(3, $organizacao_id);
             $inserir_orcamentos->execute();
@@ -731,7 +732,7 @@ class CadastrarAll extends Conexao {
             if ($orcamento == ""){
                 $inserir_orcamentos->bindValue(2, '0.00');
             }else{
-                $inserir_orcamentos->bindValue(2, str_replace(',', '.',$this->getOrcamento_2015()));
+                $inserir_orcamentos->bindValue(2, str_replace(',', '.',str_replace('.', '',$this->getOrcamento_2015())));
             }
             $inserir_orcamentos->bindValue(3, $organizacao_id);
             $inserir_orcamentos->execute();
@@ -741,7 +742,7 @@ class CadastrarAll extends Conexao {
             if ($orcamento == ""){
                 $inserir_orcamentos->bindValue(2, '0.00');
             }else{
-                $inserir_orcamentos->bindValue(2, str_replace(',', '.',$this->getOrcamento_2016()));
+                $inserir_orcamentos->bindValue(2, str_replace(',', '.',str_replace('.', '',$this->getOrcamento_2016())));
             }
             $inserir_orcamentos->bindValue(3, $organizacao_id);
             $inserir_orcamentos->execute();
@@ -1036,7 +1037,7 @@ class CadastrarAll extends Conexao {
             if ($orcamento == ""){
                 $edit_orcamentos->bindValue(2, '0.00');
             }else{
-                $edit_orcamentos->bindValue(2, str_replace(',', '.',$this->getOrcamento_2014()));
+                $edit_orcamentos->bindValue(2, str_replace(',', '.',str_replace('.', '',$this->getOrcamento_2014())));
             }
             $edit_orcamentos->bindValue(3, $organizacao_id);
             $edit_orcamentos->execute();
@@ -1046,7 +1047,7 @@ class CadastrarAll extends Conexao {
             if ($orcamento == ""){
                 $edit_orcamentos->bindValue(2, '0.00');
             }else{
-                $edit_orcamentos->bindValue(2, str_replace(',', '.',$this->getOrcamento_2015()));
+                $edit_orcamentos->bindValue(2, str_replace(',', '.',str_replace('.', '',$this->getOrcamento_2015())));
             }
             $edit_orcamentos->bindValue(3, $organizacao_id);
             $edit_orcamentos->execute();
@@ -1056,7 +1057,7 @@ class CadastrarAll extends Conexao {
             if ($orcamento == ""){
                 $edit_orcamentos->bindValue(2, '0.00');
             }else{
-                $edit_orcamentos->bindValue(2, str_replace(',', '.',$this->getOrcamento_2016()));
+                $edit_orcamentos->bindValue(2, str_replace(',', '.',str_replace('.', '',$this->getOrcamento_2016())));
             }
             $edit_orcamentos->bindValue(3, $organizacao_id);
             $edit_orcamentos->execute();

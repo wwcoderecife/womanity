@@ -52,6 +52,8 @@
     $array_subtema = $edit->getSubtemas();
     $array_estados = $edit->getEstados();
 
+    echo str_replace(',', '.',str_replace('.', '','1.500,00'))
+
 ?>
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
@@ -272,19 +274,25 @@
                         </option>
                         <option value="coletivo" <?=($edit->getTipo() == 'coletivo')?'selected':''?>>
                             coletivo</option>
+                        <option value="cooperativa" <?=($edit->getTipo() == 'cooperativa')?'selected':''?>>
+                        Cooperativa</option>
                         <option value="empresa_privada" <?=($edit->getTipo() == 'empresa_privada')?'selected':''?>>
                             empresa privada</option>
+                        <option value="investimento_social_privado" <?=($edit->getTipo() == 'investimento_social_privado')?'selected':''?>>
+                            Investimento Social Privado</option>
                         <option value="fundos"  <?=($edit->getTipo() == 'fundos')?'selected':''?>>
                             fundos</option>
                         <option value="governo" <?=($edit->getTipo() == 'governo')?'selected':''?>>
                             governo</option>
+                        <option value="grupos_produtivos" <?=($edit->getTipo() == 'grupos_produtivos')?'selected':''?>>
+                            Grupos Produtivos</option>
                         <option value="movimento" <?=($edit->getTipo() == 'movimento')?'selected':''?>>
                             movimento</option>
                         <option value="negocio_social" <?=($edit->getTipo() == 'negocio_social')?'selected':''?>>
                             negócio social</option>
                         <option value="ong_sociedade_civil" <?=($edit->getTipo() == 'ong_sociedade_civil')?'selected':''?>>
                             organização da sociedade civil (ex: associação, ong, oscip, etc.)</option>
-                        <option value="rede" <?=($edit->getTipo() == 'rede')?'selected':''?>>
+                        <option value="redes" <?=($edit->getTipo() == 'redes')?'selected':''?>>
                             rede</option>
                         <option value="outros" <?=($edit->getTipo() == 'outros')?'selected':''?>>
                             Outros</option>
@@ -339,7 +347,7 @@
                     </select>
 
 
-                    <h5>Quantas pessoas estão envolvidas neste trabalho?*</h5>
+                <h5>Quantos colaboradores,funcionários ou voluntários estão envolvidos neste trabalho?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas">
@@ -354,7 +362,24 @@
                         <option value="501-1000" <?=($edit->getQtdePessoas() == '501-1000')?'selected':''?>>501-1000</option>
                         <option value="1001+" <?=($edit->getQtdePessoas() == '1001+')?'selected':''?>>1001+</option>     
                     </select>
+                </div>
 
+               <!--  <h5>Qual é o número de pessoas que a sua organização beneficia diretamente?*</h5>
+                 <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" id="pessoas_beneficiadas" name="pessoas_beneficiadas" required>
+                        <option value=""></option>
+                        <option value="1-5" <?=($edit->getQtdeBeneficiadas() == '1-5')?'selected':''?>>1-5</option>
+                        <option value="6-10" <?=($edit->getQtdeBeneficiadas() == '6-10')?'selected':''?>>6-10</option>
+                        <option value="11-20" <?=($edit->getQtdeBeneficiadas() == '11-20')?'selected':''?>>11-20</option>
+                        <option value="21-50" <?=($edit->getQtdeBeneficiadas() == '21-50')?'selected':''?>>21-50</option>
+                        <option value="51-100" <?=($edit->getQtdeBeneficiadas() == '51-100')?'selected':''?>>51-100</option>
+                        <option value="101-500" <?=($edit->getQtdeBeneficiadas() == '101-500')?'selected':''?>>101-500</option>
+                        <option value="251-1000" <?=($edit->getQtdeBeneficiadas() == '251-1000')?'selected':''?>>251-1000</option>
+                        <option value="501-1000" <?=($edit->getQtdeBeneficiadas() == '501-1000')?'selected':''?>>501-1000</option>
+                        <option value="1001+" <?=($edit->getQtdeBeneficiadas() == '1001+')?'selected':''?>>1001+</option>     
+                    </select>
+                </div> -->
                 <h5>Qual foi seu orçamento em?*</h5>
                  <h5>2014</h5>
                 <div class="form-group">
@@ -372,6 +397,13 @@
                     <label class="sr-only" for="f1-last-name">2016</label>
                     <input type="text" name="orcamento_2016" value="<?php  echo $edit->getOrcamento_2016(); ?>"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2016">
                 </div>
+
+                <!--novo item -->
+               <!--  <h5>Não tenho orçamento</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name"></label>
+                    <input type="text" name="justificativa_orcamento"  placeholder=" caso não tem orçamento,descreva o motivo..." class="f1-last-name form-control">
+                </div> -->
 
                 <h5>Sua Organizaçāo recebe recursos financeiros?</h5>
                 <div class="form-group">

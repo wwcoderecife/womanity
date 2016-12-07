@@ -232,15 +232,19 @@
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus" ></label>
                     <select class="f1-last-name form-control" id="organizacao-tipo" name="tipo" required>
-                        <option value="academica"> acadêmica</option>
-                        <option value="coletivo">coletivo</option>
-                        <option value="empresa_privada">empresa privada</option>
-                        <option value="fundos">fundos</option>
-                        <option value="governo">governo</option>
-                        <option value="movimento">movimento</option>
-                        <option value="negocio_social">negócio social</option>
-                        <option value="ong_sociedade_civil">organização da sociedade civil (ex: associação, ong, oscip, etc.)</option>
-                        <option value="rede">rede</option>
+                        <option value=""></option>
+                        <option value="academica">Academia</option>
+                        <option value="coletivo">Coletivo</option>
+                        <option value="cooperativa">Cooperativa</option>
+                        <option value="empresa_privada">Empresa Privada</option>
+                        <option value="investimento_social_privado">Investimento Social Privado</option>
+                        <option value="fundos">Fundos</option>
+                        <option value="governo">Governo</option>
+                        <option value="grupos_produtivos">Grupos Produtivos</option>
+                        <option value="movimento">Movimento</option>
+                        <option value="negocio_social">Negócio Social</option>
+                        <option value="ong_sociedade_civil">Organização da Sociedade Civil (ex: associação, ong, oscip, etc)
+                        <option value="redes">Redes</option> 
                         <option value="outros">Outros</option>
                     </select> 
                     <input type="text" id="inputoutros" name="inputoutros" class="f1-last-name form-control" placeholder="descreva outro tipo"style='display: none' />
@@ -295,7 +299,7 @@
                     </select>
 
 
-                <h5>Quantas pessoas estão envolvidas neste trabalho?*</h5>
+                <h5>Quantos colaboradores,funcionários ou voluntários estão envolvidos neste trabalho?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas" required>
@@ -310,6 +314,27 @@
                         <option value="501-1000">501-1000</option>
                         <option value="1001+">1001+</option>     
                     </select>
+                </div>
+
+
+                <!-- <h5> Qual é o número de pessoas que a sua organização beneficia diretamente?*</h5>
+                 <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" id="pessoas_beneficiadas" name="pessoas_beneficiadas">
+                        <option value=""></option>
+                        <option value="até 50">1-5</option>
+                        <option value="51-250">51-250</option>
+                        <option value="251-500">251-500</option>
+                        <option value="1001-2500">1001-2500</option>
+                        <option value="2501-5000">2501-5000</option>
+                        <option value="5001-10000">5001-10000</option>
+                        <option value="10001-50000">10001-50000</option>
+                        <option value="50001-100000">50001-100000</option>
+                        <option value="100000-500000">100000-500000</option>
+                        <option value="500000-1000000">500000-1000000</option> 
+                        <option value="1000000+">1000000+</option>           
+                    </select>
+                  </div> -->
 
                 <h5>Qual foi seu orçamento em?*</h5>
                  <h5>2014</h5>
@@ -328,6 +353,13 @@
                     <label class="sr-only" for="f1-last-name">2016</label>
                     <input type="text" name="orcamento_2016"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2016"required>
                 </div>
+
+                <!--novo item -->
+               <!--  <h5>Não tenho orçamento</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name"></label>
+                    <input type="text" name="justificativa_orcamento" placeholder=" caso não tem orçamento,descreva o motivo..."class="f1-last-name form-control">
+                </div> -->
 
                 <h5>Sua Organizaçāo recebe recursos financeiros?</h5>
                 <div class="form-group">
