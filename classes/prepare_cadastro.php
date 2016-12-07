@@ -134,7 +134,7 @@
         $novo->setOrganizacaoPai($organizacao_pai);
         $novo->setNatureza($natureza);
         $novo->setUsuarioId($usuario_id);
-        //$novo->setJustificativaOrcamento($justificativa_orcamento);
+        $novo->setJustificativaOrcamento($justificativa_orcamento);
         $novo->setInputnomeong($inputnomeong);
       
 

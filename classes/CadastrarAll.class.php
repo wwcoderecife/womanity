@@ -68,6 +68,7 @@ class CadastrarAll extends Conexao {
     private $natureza;
     private $usuario_id;
     private $inputnomeong;
+    private $justificativa_orcamento;
 
 
     //******Contatos*******//
@@ -212,6 +213,10 @@ class CadastrarAll extends Conexao {
     public function setInputnomeong($inputnomeong){
         $this->inputnomeong = $inputnomeong;
     }
+
+    public function setJustificativaOrcamento($justificativa_orcamento){
+        $this->justificativa_orcamento = $justificativa_orcamento;
+    }
     
 
     //organizacoes Gets
@@ -277,6 +282,9 @@ class CadastrarAll extends Conexao {
        return $this->inputnomeong;
     }
     
+    public function getJustificativaOrcamento(){
+       return $this->justificativa_orcamento;
+    }
 
 
 
@@ -669,8 +677,8 @@ class CadastrarAll extends Conexao {
             $inserir_ong = $pdo->prepare("insert into organizacoes (
                 cnpj, localizacao, nome, sigla, telefone, email, tipo, inicio_atv, qtde_pessoas, recursos_financeiros,
                 descricao,  publico_atendido, politicas_publicas, monitoramento_atividades, estrategia_comunicacao,
-                premiacao_certificacao, organizacao_pai, identifica_iniciativa, usuario_id, inputnomeong)
-                                    values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                premiacao_certificacao, organizacao_pai, identifica_iniciativa, usuario_id, inputnomeong, justificativa_orcamento)
+                                    values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             $inserir_ong->bindValue(1, $this->getCnpj());
             $inserir_ong->bindValue(2, $this->getLocalizacao());
             $inserir_ong->bindValue(3, $this->getNome());
@@ -691,6 +699,7 @@ class CadastrarAll extends Conexao {
             $inserir_ong->bindValue(18, $this->getNatureza());
             $inserir_ong->bindValue(19, $this->getUsuarioId());
             $inserir_ong->bindValue(20, $this->getInputnomeong());
+            $inserir_ong->bindValue(21, $this->getJustificativaOrcamento());
             $inserir_ong->execute();
             $organizacao_id = $pdo->lastInsertId();
             $_SESSION['organizacao_id'] = $organizacao_id;
@@ -973,7 +982,7 @@ class CadastrarAll extends Conexao {
             $edit_ong = $pdo->prepare("update organizacoes set cnpj = ? , localizacao = ? , nome = ?, sigla = ?,
                 telefone = ?, email = ?, tipo = ?, inicio_atv = ?, qtde_pessoas = ?, recursos_financeiros = ?,
                 descricao = ?,  publico_atendido = ?, politicas_publicas = ?, monitoramento_atividades = ?, estrategia_comunicacao = ?,
-                premiacao_certificacao = ?, organizacao_pai = ?, identifica_iniciativa = ?, inputnomeong = ?
+                premiacao_certificacao = ?, organizacao_pai = ?, identifica_iniciativa = ?, inputnomeong = ?, justificativa_orcamento = ?
                 where usuario_id = ? ");
             $edit_ong->bindValue(1, $this->getCnpj());
             $edit_ong->bindValue(2, $this->getLocalizacao());
@@ -994,7 +1003,8 @@ class CadastrarAll extends Conexao {
             $edit_ong->bindValue(17, $this->getOrganizacaoPai());
             $edit_ong->bindValue(18, $this->getNatureza());
             $edit_ong->bindValue(19, $this->getInputnomeong());
-            $edit_ong->bindValue(20, $this->getUsuarioId());
+            $edit_ong->bindValue(20, $this->getJustificativaOrcamento());
+            $edit_ong->bindValue(21, $this->getUsuarioId());
             
             $edit_ong->execute();
 

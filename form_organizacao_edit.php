@@ -398,11 +398,11 @@
                 </div>
 
                 <!--novo item -->
-               <!--  <h5>Não tenho orçamento</h5>
+                <h5>Não tenho orçamento</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name"></label>
-                    <input type="text" name="justificativa_orcamento"  placeholder=" caso não tem orçamento,descreva o motivo..." class="f1-last-name form-control">
-                </div> -->
+                    <input type="text" name="justificativa_orcamento" value="<?php echo $edit->getJustificativaOrcamento(); ?>" placeholder=" caso não tem orçamento,descreva o motivo..." class="f1-last-name form-control">
+                </div>
 
                 <h5>Sua Organizaçāo recebe recursos financeiros?</h5>
                 <div class="form-group">
