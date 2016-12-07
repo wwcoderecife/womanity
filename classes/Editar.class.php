@@ -639,7 +639,7 @@ class Editar extends Conexao {
 			    ong.cnpj, ong.localizacao, ong.nome, ong.sigla, ong.telefone, ong.email, ong.tipo, ong.inicio_atv, 
 			    ong.qtde_pessoas, ong.pessoas_benefeciadas, ong.recursos_financeiros, ong.descricao,  ong.publico_atendido, 
 			    ong.politicas_publicas, ong.monitoramento_atividades, ong.estrategia_comunicacao,
-				ong.premiacao_certificacao, ong.organizacao_pai, ong.identifica_iniciativa, ong.inputnomeong, ong.justificativa_orcamento,
+				ong.premiacao_certificacao, ong.organizacao_pai, ong.identifica_iniciativa, ong.inputnomeong, ong.justificativa_orcamento, 
                 endereco.rua, endereco.numero, endereco.complemento, endereco.bairro,
                 endereco.cidade, endereco.estado, endereco.cep, endereco.regiao
 			from organizacoes ong

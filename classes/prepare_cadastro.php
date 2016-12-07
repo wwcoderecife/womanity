@@ -16,7 +16,7 @@
     $tipo = filter_input(INPUT_POST, "tipo", FILTER_SANITIZE_MAGIC_QUOTES);
     $inicio_atv = filter_input(INPUT_POST, "anoatividade", FILTER_SANITIZE_MAGIC_QUOTES);
     $qtde_pessoas = filter_input(INPUT_POST, "pessoas_envolvidas", FILTER_SANITIZE_MAGIC_QUOTES);
-    //$qtde_beneficiadas = filter_input(INPUT_POST, "pessoas_beneficiadas", FILTER_SANITIZE_MAGIC_QUOTES);
+    $qtde_beneficiadas = filter_input(INPUT_POST, "pessoas_beneficiadas", FILTER_SANITIZE_MAGIC_QUOTES);
     $recursos_finaceiros = filter_input(INPUT_POST, "recursos", FILTER_SANITIZE_MAGIC_QUOTES);
     $descricao = filter_input(INPUT_POST, "sobre", FILTER_SANITIZE_MAGIC_QUOTES);
     $publico_atendido = filter_input(INPUT_POST, "publico_alvo", FILTER_SANITIZE_MAGIC_QUOTES);
@@ -123,7 +123,7 @@
         $novo->setTipo($tipo);
         $novo->setInicioAtv($inicio_atv);
         $novo->setQtdePessoas($qtde_pessoas);
-        //$novo->setQtdeBeneficiadas($qtde_beneficiadas);
+        $novo->setQtdeBeneficiadas($qtde_beneficiadas);
         $novo->setRecursosFinaceiros($recursos_finaceiros);
         $novo->setDescricao($descricao);
         $novo->setPublicoAtendido($publico_atendido);

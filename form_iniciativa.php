@@ -145,7 +145,7 @@
                     </select> 
                 <div class="iniciativapj">     
                <input type="text" id="inputnomeong" name="inputnomeong" class="f1-last-name form-control" placeholder="nome da organizaçāo" style='display: none' />
-                <input type="text" id="inputcnpj" maxlength="18" name="organizacao_pai" required class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" style='display: none'/ >
+                <input type="text" id="inputcnpj" maxlength="18" name="organizacao_pai"  class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" style='display: none'/ >
 
                 </div>
                     <script>
@@ -295,8 +295,7 @@
                <h5>Quantos colaboradores,funcionários ou voluntários estão envolvidos neste trabalho?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas">
-                     <div class="help-block with-errors"></div>
+                    <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas" required>
                         <option value=""></option>
                         <option value="1-5">1-5</option>
                         <option value="6-10">6-10</option>
@@ -308,8 +307,29 @@
                         <option value="501-1000">501-1000</option>
                         <option value="1001+">1001+</option>     
                     </select>
+                </div>
 
-               <h5>Qual foi o orçamento bruto da sua iniciativa em:?*</h5>
+
+                <h5> Qual é o número de pessoas que a sua iniciativa beneficia diretamente?*</h5>
+                 <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" id="pessoas_beneficiadas" name="pessoas_beneficiadas">
+                        <option value=""></option>
+                        <option value="até 50">1-5</option>
+                        <option value="51-250">51-250</option>
+                        <option value="251-500">251-500</option>
+                        <option value="1001-2500">1001-2500</option>
+                        <option value="2501-5000">2501-5000</option>
+                        <option value="5001-10000">5001-10000</option>
+                        <option value="10001-50000">10001-50000</option>
+                        <option value="50001-100000">50001-100000</option>
+                        <option value="100000-500000">100000-500000</option>
+                        <option value="500000-1000000">500000-1000000</option> 
+                        <option value="1000000+">1000000+</option>           
+                    </select>
+                  </div>
+
+               <h5>Qual foi o orçamento bruto da sua iniciativa em: *</h5>
                  <h5>2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
@@ -347,26 +367,28 @@
                     </label>
                 </div>
 
+            <!--campo novo, substituiu a 19.2-->
 
-              <h5>Quais são as principais fontes de recursos para a realização dos projetos?</h5>
+                <h5>Quais são as principais fontes de recursos para a realização dos projetos?</h5>
                 <div class="form-group">
-                    <div>
-                    <h5>Apoio a Projetos / Patrocínio<br></h5>
-                    <input type="checkbox" name="recursos_origem[]" value="empresas">empresas<br>
-                    <input type="checkbox" name="recursos_origem[]" value="institutos ou fundações empresariais">institutos ou fundações empresariais<br>
+                    <input type="checkbox" name="recursos_origem[]" value="doação pessoa física">doação pessoa física</br>
+                    <input type="checkbox" name="recursos_origem[]" value="edital público governo federal">edital público governo federal</br>
+                    <input type="checkbox" name="recursos_origem[]" value="edital público governo estadual">edital público governo estadual</br>
+                    <input type="checkbox" name="recursos_origem[]" value="edital público municipal">edital público municipal</br>
+                    <input type="checkbox" name="recursos_origem[]" value="empresas">empresas</br>
+                    <input type="checkbox" name="recursos_origem[]" value="endowment/fundo patrimonial">endowment/fundo patrimonial</br>
+                    <input type="checkbox" name="recursos_origem[]" value="fomento à pesquisa">fomento à pesquisa</br>
+                    <input type="checkbox" name="recursos_origem[]" value="institutos ou fundações empresariais">institutos ou fundações empresariais</br>
+                    <input type="checkbox" name="recursos_origem[]" value="investimento direto/patrocínio">investimento direto/patrocínio</br>
+                    <input type="checkbox" name="recursos_origem[]" value="investimento de impacto">investimento de impacto</br>
+                    <input type="checkbox" name="recursos_origem[]" value="leis de incentivo">leis de incentivo><br>
                     <input type="checkbox" name="recursos_origem[]" value="organizações do sistema ONU">organizações do sistema ONU<br>
-                </div>
-                <div>
-                    <h5>Edital Governamental<br></h5>
-                    <input type="checkbox" name="recursos_origem[]" value="município">município<br>
-                    <input type="checkbox" name="recursos_origem[]" value="estado">estado<br>
-                    <input type="checkbox" name="recursos_origem[]" value="governo federal">governo federal<br>
-                </div>
-
-                <div>
-                    <h5>Doação pessoa Física<br></h5>
-                    <input type="checkbox" name="recursos_origem[]" value="Doação pessoa Física"><br>
-                </div>
+                    <input type="checkbox" name="recursos_origem[]" value="organizações não governamentais brasileiras ou internacionais">organizações não governamentais brasileiras ou internacionais<br>
+                    <input type="checkbox" name="recursos_origem[]" value="subvenções públicas ">subvenções públicas<br>
+                    <input type="checkbox" name="recursos_origem[]" value="venda de produtos/prestação de serviços">venda de produtos/prestação de serviços<br>
+                    <input type="checkbox" name="recursos_origem[]" value="outros">outros<br>
+                    <!-- <input type="text"     name="outrosprojetos" placeholder=" outros..." style="display:block;" class="f1-last-name form-control"> -->
+               </div>  
 
 
                    <!--Tabela Temas-->
@@ -388,7 +410,7 @@
                 <tr>
                     <td><input type="checkbox" name="temas[ ]" value="arte_cultura" class="no-margin" onclick="verificar()"></td>
                     <td>Arte e Cultura.</td>
-                    <td>Promoção do acesso de mulheres à cultura e/ou incentivo à produção das várias expressões artísticas.</td>
+                    <td>Promoção do acesso de mulheres à cultura e/ou incentivo à produção das várias expressões artísticas e valorização de práticas culturais e tradicionais.</td>
                      
                 </tr>
                 <tr>
@@ -426,7 +448,7 @@
                     <td><input type="checkbox" name="temas[ ]"value="equidade_Condições_trabalho"class="no-margin" onclick="verificar()"></td>
                     <td>Equidade e Condições de Trabalho.</td>
                     <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas 
-    possibilidades de desenvolvimento profissional e equiparação salarial.</td>    
+    possibilidades de desenvolvimento profissional e equiparação salarial; participação em cargos de liderança e conselho.</td>    
                 </tr>
 
                 <tr>
@@ -437,7 +459,7 @@
                 <tr>
                     <td><input type="checkbox" name="temas[ ]"value="indigenas"class="no-margin" onclick="verificar()"></td>
                     <td>Indígenas.</td>
-                    <td>Ações destinadas à valorização das mulheres indígenas e ao enfrentamento de seus problemas específicos.</td>
+                    <td>Ações destinadas à valorização das mulheres indígenas; ao enfrentamento de seus problemas específicos, a geração de renda e ao emponderamento político.</td>
                 </tr>
                 <tr>
                     <td><input type="checkbox" name="temas[ ]"value="LGBTT"class="no-margin" onclick="verificar()"></td>
@@ -526,50 +548,54 @@
 <h5> Clique e escolha até 3 Subtemas abaixo*</h5>
 <div class="form-group">
 <!--<label for="subtemas" for="f1-google-plus">Subtemas</label>-->
-        <select class="f1-last-name form-control" id="subtemas" name="subtemas[ ]" multiple required>
+       <select class="f1-last-name form-control"id="subtemas" class="selectpicker" name="subtemas[ ]" data-style="default" multiple>
             <option value="Aborto">Aborto</option>
-            <option value="Dança">Dança</option>
-            <option value="Inserção de mulheres na política">Inserção de mulheres na política</option>
-            <option value="Paternidade">Paternidade</option>
-            <option value="Tecnologia social e/ou alternativas">Tecnologia social e/ou alternativas</option>
-            <option value="Desenvolvimento e Programação">Desenvolvimento e Programação</option>
-            <option value="Liderança">Liderança</option>
-            <option value="Pessoa com deficiência">Pessoa com deficiência</option>
-            <option value="Trabalho digno">Trabalho digno</option>
             <option value="Advocacy">Advocacy</option>
-            <option value="Ecofeminismo">Ecofeminismo</option>
-            <option value="Povos tradicionais">Povos tradicionais</option>
-            <option value="Tráfico de pessoas">Tráfico de pessoas</option>
             <option value="Água e saneamento básico">Água e saneamento básico</option>
-            <option value="Economia criativa">Economia criativa</option>
-            <option value="Marketing">Marketing</option>
-            <option value="Preconceito e discriminação">Preconceito e discriminação</option>
-            <option value="Tecnologia">Tecnologia</option>
             <option value="Artes plásticas">Artes plásticas</option>
-            <option value="Parto Humano">Parto Humano</option>
             <option value="Cadeia produtiva responsável">Cadeia produtiva responsável</option>
-            <option value="Educomunicação">Educomunicação</option>
-            <option value="Microcrédito">Microcrédito</option>
-            <option value="Questão presidiária">Questão presidiária</option>
             <option value="Cinema">Cinema</option>
-            <option value="Envelhecimento">Envelhecimento</option>
-            <option value="Mobilização">Mobilização</option>
-            <option value="Reciclagem e logísitca diversa">Reciclagem e logísitca diversa</option>
-            <option value="Finanças sociais">Finanças sociais</option>
-            <option value="Mudanças climáticas">Mudanças climáticas</option>
-            <option value="Redes Sociais">Redes Sociais</option>
             <option value="Conselhos e outras instâncias">Conselhos e outras instâncias</option>
-            <option value="Fotografia">Fotografia</option>
-            <option value="Mulheres no mundo da ciências">Mulheres no mundo da ciências</option>
-            <option value="Refugiados">Refugiados</option>
             <option value="Consumo">Consumo</option>
-            <option value="Incentivo à leitura">Incentivo à leitura</option>
-            <option value="Obesidade infantil">Obesidade infantil</option>
-            <option value="Reparação-reconstrução">Reparação-reconstrução</option>
             <option value="Cooperativismo">Cooperativismo</option>
+            <option value="Dança">Dança</option>
+            <option value="Desenvolvimento e Programação">Desenvolvimento e Programação</option>
+            <option value="Ecofeminismo">Ecofeminismo</option>
+            <option value="Economia criativa">Economia criativa</option>
+            <option value="Educomunicação">Educomunicação</option>
+            <option value="Envelhecimento">Envelhecimento</option>
+            <option value="Estudo e pesquisa">Estudo e pesquisa</option>
+            <option value="Finanças sociais">Finanças sociais</option>
+            <option value="Fotografia">Fotografia</option>
+            <option value="Incentivo à leitura">Incentivo à leitura</option>
             <option value="Inclusão Digital">Inclusão Digital</option>
-            <option value="Teatro">Teatro</option>
+            <option value="Inserção de mulheres na política">Inserção de mulheres na política</option>
+            <option value="Liderança">Liderança</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Microcrédito">Microcrédito</option>
+            <option value="Mobilização">Mobilização</option>
+            <option value="Mudanças climáticas">Mudanças climáticas</option>
+            <option value="Mulheres no mundo da ciências">Mulheres no mundo da ciências</option>
+            <option value="Obesidade infantil">Obesidade infantil</option>
+            <option value="Parto Humano">Parto Humano</option>
+            <option value="Paternidade">Paternidade</option>
+            <option value="Pessoa com deficiência">Pessoa com deficiência</option>
+            <option value="Povos tradicionais">Povos tradicionais</option>
+            <option value="Preconceito e discriminação">Preconceito e discriminação</option>
+            <option value="Promoção à cargos de liderança">Promoção à cargos de liderança</option>
+            <option value="Questão presidiária">Questão presidiária</option>
+            <option value="Reciclagem e logísitca diversa">Reciclagem e logística reversa</option>
+            <option value="Redes Sociais">Redes Sociais</option>
+            <option value="Refugiados">Refugiados</option>
+            <option value="Reparação-reconstrução">Reparação-reconstrução</option>
+            <option value="Saúde sexual e reprodutiva">Saúde sexual e reprodutiva</option>
             <option value="Sustentabilidade">Sustentabilidade</option>
+            <option value="Teatro">Teatro</option>
+            <option value="Tecnologia social e/ou alternativas">Tecnologia social e/ou alternativas</option>
+            <option value="Tecnologia">Tecnologia</option>
+            <option value="Trabalho digno">Trabalho digno</option>
+            <option value="Tráfico de pessoas">Tráfico de pessoas</option>
+            <option value="Outros">Outros</option>
 
         </select>
 
