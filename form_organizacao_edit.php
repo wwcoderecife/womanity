@@ -550,7 +550,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
+                                <tr>
                     <td><input type="checkbox" name="temas[ ]" value="arte_cultura" class="no-margin" onclick="verificar()"
                         <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
@@ -558,7 +558,7 @@
                         } ?>
                     ></td>
                     <td>Arte e Cultura.</td>
-                    <td>Promoção do acesso de mulheres à cultura e/ou incentivo à produção das várias expressões artísticas e valorização de práticas culturais e tradicionais.</td>
+                    <td>Promoção do acesso de mulheres à cultura e/ou incentivo à produção das várias expressões artísticas.</td>
                      
                 </tr>
                 <tr>
@@ -578,10 +578,11 @@
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('democracia_participação_politica', $array_temas[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
-                    ></td>
-                    <td> Democracia e Participação Política.</td>
-                    <td>Ações de incentivo à participação de mulheres na vida política e democrática institucional (partidos, conselhos, órgãos e instâncias dos poderes executivo, legislativo e judiciário).</td>
-                </tr>
+
+                        ></td>
+                <td> Democracia e Participação Política.</td>
+                <td>Ações de incentivo à participação de mulheres na vida política e democrática institucional (partidos, conselhos, órgãos e instâncias dos poderes executivo, legislativo e judiciário).</td>
+            </tr>
 
                 <tr>
                     <td><input type="checkbox" name="temas[ ]"value="educacao_formacao"class="no-margin" onclick="verificar()"
@@ -626,7 +627,7 @@
                     ></td>
                     <td>Equidade e Condições de Trabalho.</td>
                     <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas 
-    possibilidades de desenvolvimento profissional e equipara çãosalarial;participação em cargos de liderança e conselho.</td>    
+    possibilidades de desenvolvimento profissional e equiparação salarial.</td>    
                 </tr>
 
                 <tr>
@@ -647,7 +648,7 @@
                         } ?>
                     ></td>
                     <td>Indígenas.</td>
-                    <td>Ações destinadas à valorização das mulheres indígena; ao enfrentamento de seus problemas específicos, a geração de renda e ao emponderamento político.</td>
+                    <td>Ações destinadas à valorização das mulheres indígenas e ao enfrentamento de seus problemas específicos.</td>
                 </tr>
                 <tr>
                     <td><input type="checkbox" name="temas[ ]"value="LGBTT"class="no-margin" onclick="verificar()"
@@ -736,17 +737,17 @@
                     <td>Iniciativas que tratam de questões de autoestima, qualidade de vida, saúde e bem-estar das mulheres.</td>
                </tr>
 
-                    </tbody>
+                </tbody>
                 </table>
-            </div>
-        </div> 
+        </div>
+  </div>
 
-             <script>
+           <script>
             var CheckMaximo = 5;
 
             function verificar() {
             var Marcados = 1;
-            var objCheck = $("input[name='temas']");
+            var objCheck = $("input[name='temas[ ]']");
             //Percorrendo os checks para ver quantos foram selecionados:
             for (var iLoop=0; iLoop<objCheck.length; iLoop++) {
             //Se o número máximo de checkboxes ainda não tiver sido atingido, continua a verificação:
@@ -768,10 +769,11 @@
                             objCheck[i].disabled = true;
                         }       
                     }
-               }
-           }
+                }
+            }
         }
 </script>
+
 
 <!--subtemas-->
 

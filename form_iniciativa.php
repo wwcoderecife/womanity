@@ -393,7 +393,7 @@
 
                    <!--Tabela Temas-->
 
-        <h5>Áreas de atuação da organização: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>
+        <h5>Áreas de atuação da organização: escolha até 5 Temas e até 5 Subtemas abaixo*:</h5>
         <div class="form-group" style="border: 1px solid #ddd">
         <div class="table-responsive">
         <table id="form1" name="table_temas"class="table table-hover col-sm-12" >
@@ -545,7 +545,7 @@
 
 
 
-<h5> Clique e escolha até 3 Subtemas abaixo*</h5>
+<h5> Clique e escolha até 5 Subtemas abaixo*</h5>
 <div class="form-group">
 <!--<label for="subtemas" for="f1-google-plus">Subtemas</label>-->
        <select class="f1-last-name form-control"id="subtemas" class="selectpicker" name="subtemas[ ]" data-style="default" multiple>
