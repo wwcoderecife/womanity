@@ -335,8 +335,8 @@
                  <h5> Quando sua Organizaçāo iniciou as atividades?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="year_organizacao" name="anoatividade" >
-                    <option value=""></option>
+                    <select class="f1-last-name form-control" id="year_organizacao" name="anoatividade" required>
+                        <option value=""></option>
                         <?php echo "<script type='text/javascript'> var ano = '".$edit->getInicioAtv()."'; </script>"; ?>
                         <script>
 
@@ -353,7 +353,6 @@
                               
                           </script>
                     </select>
-
 
                 <h5>Quantos colaboradores,funcionários ou voluntários estão envolvidos neste trabalho?*</h5>
                  <div class="form-group">
