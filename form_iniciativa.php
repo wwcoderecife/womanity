@@ -292,7 +292,7 @@
                     </select>
 
 
-               <h5>Quantas pessoas estão envolvidas neste trabalho?*</h5>
+               <h5>Quantos colaboradores,funcionários ou voluntários estão envolvidos neste trabalho?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas">
@@ -309,7 +309,7 @@
                         <option value="1001+">1001+</option>     
                     </select>
 
-               <h5>Qual foi o orçamento da sua iniciativa?*</h5>
+               <h5>Qual foi o orçamento bruto da sua iniciativa em:?*</h5>
                  <h5>2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
@@ -342,7 +342,7 @@
                 </div>
 
 
-              <h5>Qual é a origem?</h5>
+              <h5>Quais são as principais fontes de recursos para a realização dos projetos?</h5>
                 <div class="form-group">
                     <div>
                     <h5>Apoio a Projetos / Patrocínio<br></h5>
