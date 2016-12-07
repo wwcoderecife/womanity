@@ -379,7 +379,7 @@
                         <option value="1001+" <?=($edit->getQtdeBeneficiadas() == '1001+')?'selected':''?>>1001+</option>     
                     </select>
                 </div> -->
-                <h5>Qual foi seu orçamento em?*</h5>
+                <h5>Qual foi seu orçamento bruto em:?*</h5>
                  <h5>2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
