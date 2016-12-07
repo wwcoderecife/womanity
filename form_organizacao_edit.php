@@ -52,7 +52,6 @@
     $array_subtema = $edit->getSubtemas();
     $array_estados = $edit->getEstados();
 
-    echo str_replace(',', '.',str_replace('.', '','1.500,00'))
 
 ?>
 <div class="row form_inicial">
