@@ -27,6 +27,7 @@ class Editar extends Conexao {
     private $usuario_id;
     private $inputnomeong;
     private $justificativa_orcamento;
+    private $inputoutros;
 
     //******Contatos*******//
     private $nome_1;
@@ -177,6 +178,10 @@ class Editar extends Conexao {
         $this->justificativa_orcamento = $justificativa_orcamento;
     }
 
+    public function setInputoutros($inputoutros){
+        $this->inputoutros = $inputoutros;
+    }
+
     //organizacoes Gets
     public function getCnpj(){
        return $this->cnpj;
@@ -243,6 +248,10 @@ class Editar extends Conexao {
     }
     public function getJustificativaOrcamento(){
        return $this->justificativa_orcamento;
+    }
+
+     public function getInputoutros($inputoutros){
+        $this->inputoutros = $inputoutros;
     }
 
 
@@ -639,7 +648,7 @@ class Editar extends Conexao {
 			    ong.cnpj, ong.localizacao, ong.nome, ong.sigla, ong.telefone, ong.email, ong.tipo, ong.inicio_atv, 
 			    ong.qtde_pessoas, ong.pessoas_benefeciadas, ong.recursos_financeiros, ong.descricao,  ong.publico_atendido, 
 			    ong.politicas_publicas, ong.monitoramento_atividades, ong.estrategia_comunicacao,
-				ong.premiacao_certificacao, ong.organizacao_pai, ong.identifica_iniciativa, ong.inputnomeong, ong.justificativa_orcamento, 
+				ong.premiacao_certificacao, ong.organizacao_pai, ong.identifica_iniciativa, ong.inputnomeong, ong.inputoutros, ong.justificativa_orcamento, 
                 endereco.rua, endereco.numero, endereco.complemento, endereco.bairro,
                 endereco.cidade, endereco.estado, endereco.cep, endereco.regiao
 			from organizacoes ong
@@ -697,6 +706,7 @@ class Editar extends Conexao {
         $this->setNatureza($result['identifica_iniciativa']);
         $this->setInputnomeong($result['inputnomeong']);
         $this->setJustificativaOrcamento($result['justificativa_orcamento']);
+        $this->setInputoutros($result['inputoutros']);
 
         $this->setRegiao($result['regiao']);
         $this->setEstado($result['estado']);
