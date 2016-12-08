@@ -255,13 +255,15 @@ class Editar extends Conexao {
        return $this->justificativa_orcamento;
     }
 
-     public function getInputoutros($inputoutros){
-        $this->inputoutros = $inputoutros;
+    public function getInputoutros(){
+       return $this->inputoutros;
     }
 
-     public function getInputoutrosprojetos($inputoutrosprojetos){
-        $this->inputoutrosprojetos = $inputoutrosprojetos;
+
+     public function getInputoutrosprojetos(){
+       return $this->inputoutrosprojetos;
     }
+
 
 
 
