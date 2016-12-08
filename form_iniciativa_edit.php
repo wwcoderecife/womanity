@@ -297,10 +297,15 @@
                         <option value="ong_sociedade_civil"<?=($edit->getTipo() == 'ong_sociedade_civil')?'selected':''?>>
                             Organização da Sociedade Civil (ex: associação, ong, oscip, etc)
                         <option value="redes"<?=($edit->getTipo() == 'rede')?'selected':''?>>
-                            Redes</option> 
-                        <option value="outros"<?=($edit->getTipo() == 'outros')?'selected':''?>>
-                            Outros</option>  
+                            Redes</option>
+
+                        <!--  comentário feito por karina
+                        <option value="outros"<?/*=($edit->getTipo() == 'outros')?'selected':''*/?>>
+                            Outros</option>-->
+                             <option value="outros"<?php if($edit->getInputoutros() != ""){ echo "selected"; } ?>
+                         >Outros</option>
                     </select>
+                    <input type="text" id="inputoutros" value="<?php echo $edit->getInputoutros() ?>"  name="inputoutros" class="f1-last-name form-control" placeholder="outros" <?php if($edit->getInputoutros() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> />
                     <!-- <input type="text" id="inputoutros" name="inputoutros" class="f1-last-name form-control" placeholder="descreva outro tipo"style='display: none' /> -->
                     <script>
 

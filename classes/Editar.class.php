@@ -28,6 +28,7 @@ class Editar extends Conexao {
     private $inputnomeong;
     private $justificativa_orcamento;
     private $inputoutros;
+    private $inputoutrosprojetos;
 
     //******Contatos*******//
     private $nome_1;
@@ -182,6 +183,10 @@ class Editar extends Conexao {
         $this->inputoutros = $inputoutros;
     }
 
+    public function setInputoutrosprojetos($inputoutrosprojetos){
+        $this->inputoutrosprojetos = $inputoutrosprojetos;
+    }
+
     //organizacoes Gets
     public function getCnpj(){
        return $this->cnpj;
@@ -252,6 +257,10 @@ class Editar extends Conexao {
 
      public function getInputoutros($inputoutros){
         $this->inputoutros = $inputoutros;
+    }
+
+     public function getInputoutrosprojetos($inputoutrosprojetos){
+        $this->inputoutrosprojetos = $inputoutrosprojetos;
     }
 
 
@@ -648,7 +657,7 @@ class Editar extends Conexao {
 			    ong.cnpj, ong.localizacao, ong.nome, ong.sigla, ong.telefone, ong.email, ong.tipo, ong.inicio_atv, 
 			    ong.qtde_pessoas, ong.pessoas_benefeciadas, ong.recursos_financeiros, ong.descricao,  ong.publico_atendido, 
 			    ong.politicas_publicas, ong.monitoramento_atividades, ong.estrategia_comunicacao,
-				ong.premiacao_certificacao, ong.organizacao_pai, ong.identifica_iniciativa, ong.inputnomeong, ong.inputoutros, ong.justificativa_orcamento, 
+				ong.premiacao_certificacao, ong.organizacao_pai, ong.identifica_iniciativa, ong.inputnomeong, ong.inputoutros, ong.inputoutrosprojetos, ong.justificativa_orcamento, 
                 endereco.rua, endereco.numero, endereco.complemento, endereco.bairro,
                 endereco.cidade, endereco.estado, endereco.cep, endereco.regiao
 			from organizacoes ong
@@ -707,6 +716,7 @@ class Editar extends Conexao {
         $this->setInputnomeong($result['inputnomeong']);
         $this->setJustificativaOrcamento($result['justificativa_orcamento']);
         $this->setInputoutros($result['inputoutros']);
+        $this->setInputoutrosprojetos($result['inputoutrosprojetos']);
 
         $this->setRegiao($result['regiao']);
         $this->setEstado($result['estado']);

@@ -387,7 +387,7 @@
                     <input type="checkbox" name="recursos_origem[]" value="subvenções públicas ">subvenções públicas<br>
                     <input type="checkbox" name="recursos_origem[]" value="venda de produtos/prestação de serviços">venda de produtos/prestação de serviços<br>
                     <label class="checkbox-inline">
-                    <input type="checkbox" name="recursos_origem[]" value="outros_projetos"><input type = "text" value="outros_projetos" name="recurso_origem[]">
+                    <input type="checkbox" name="recursos_origem[]" value="inputoutrosprojetos"><input type = "text" value="inputoutrosprojetos" name="recurso_origem[]">
                     </label>
                     <!--<input type="checkbox" name="recursos_origem[]" value="outros">outros<br>-->
                     <!-- <input type="text"     name="outrosprojetos" placeholder=" outros..." style="display:block;" class="f1-last-name form-control"> -->
