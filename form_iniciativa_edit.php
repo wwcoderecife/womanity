@@ -298,14 +298,11 @@
                             Organização da Sociedade Civil (ex: associação, ong, oscip, etc)
                         <option value="redes"<?=($edit->getTipo() == 'rede')?'selected':''?>>
                             Redes</option>
-
-                        <!--  comentário feito por karina
-                        <option value="outros"<?/*=($edit->getTipo() == 'outros')?'selected':''*/?>>
-                            Outros</option>-->
-                             <option value="outros"<?php if($edit->getInputoutros() != ""){ echo "selected"; } ?>
-                         >Outros</option>
+                        <option value="outros"<?=($edit->getTipo() == 'outros')?'selected':''?>>
+                            Outros</option>
+                            
                     </select>
-                    <input type="text" id="inputoutros" value="<?php echo $edit->getInputoutros() ?>"  name="inputoutros" class="f1-last-name form-control" placeholder="outros" <?php if($edit->getInputoutros() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> />
+                      <input type="text" id="inputoutros" value="<?php echo $edit->getInputoutros() ?>"  name="inputoutros" class="f1-last-name form-control" placeholder="outros" <?php if($edit->getInputoutros() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> />
                     <!-- <input type="text" id="inputoutros" name="inputoutros" class="f1-last-name form-control" placeholder="descreva outro tipo"style='display: none' /> -->
                     <script>
 
@@ -319,7 +316,7 @@
                                 if(dropdownNatureza.options[dropdownNatureza.selectedIndex].value === "outros") {
                                     //faz algo quando o valor selecionado for sim
                                     console.log('Selecionou o valor');
-                                    //mostra o input quando o valor selecionado for sim, tem cnpj
+                                    //mostra o input quando o valor selecionado for sim, tem outros.
                                     
                                     meuInput.style.display = 'block';
                                 }else{
@@ -535,10 +532,10 @@
                                 if(in_array('venda de produtos/prestação de serviços', $array_recursos_financeiros[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
                     >venda de produtos/prestação de serviços<br>
-                    <input type="checkbox" name="recursos_origem[]" value="outros"
+                    <input type="checkbox" name="recursos_origem[]" value="inputoutrosprojetos"
                         <?php 
                             for($i = 0; $i <= count($array_recursos_financeiros)-1; $i++){
-                                if(in_array('outros', $array_recursos_financeiros[$i])) : ?> checked="checked" <?php endif; 
+                                if(in_array('inputoutrosprojetos', $array_recursos_financeiros[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
                     >outros<br>
                     <!-- <input type="text"     name="outrosprojetos" placeholder=" outros..." style="display:block;" class="f1-last-name form-control"> -->
