@@ -2,7 +2,8 @@
          ================================================== -->
 
             <script src="assets/js/bootstrap.min.js"></script>
-            <!--<script src="assets/js/validator.min.js"></script>-->
+            
+            <script src="assets/js/validator.min.js"></script>
           
              <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
             
@@ -58,7 +59,7 @@
 
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-        <form role="form" action="classes/prepare_cadastro.php" method="post" class="f1 form-ong">
+        <form role="form" data-toggle="validator" action="classes/prepare_cadastro.php" method="post" class="f1 form-ong">
             <input type="hidden" value="editar" name="form_type" />
     		<h3>Cadastro UNA Ecossistema<br>Iniciativa</h3>
     		<p>Preencha os campos obrigatórios*</p>
