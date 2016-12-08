@@ -71,7 +71,7 @@ class CadastrarAll extends Conexao {
     private $justificativa_orcamento;
     private $qtde_beneficiadas;
     private $inputoutros;
-    private $inputoutrosprojetos
+    private $inputoutrosprojetos;
 
 
     //******Contatos*******//
@@ -1009,7 +1009,8 @@ class CadastrarAll extends Conexao {
             $edit_ong = $pdo->prepare("update organizacoes set cnpj = ? , localizacao = ? , nome = ?, sigla = ?,
                 telefone = ?, email = ?, tipo = ?, inicio_atv = ?, qtde_pessoas = ?, recursos_financeiros = ?,
                 descricao = ?,  publico_atendido = ?, politicas_publicas = ?, monitoramento_atividades = ?, estrategia_comunicacao = ?,
-                premiacao_certificacao = ?, organizacao_pai = ?, identifica_iniciativa = ?, inputnomeong = ?, inputoutros = ?, inputoutrosprojetos = ?, justificativa_orcamento = ?, pessoas_benefeciadas = ?
+                premiacao_certificacao = ?, organizacao_pai = ?, identifica_iniciativa = ?, inputnomeong = ?,
+                justificativa_orcamento = ?, pessoas_benefeciadas = ?,inputoutros = ?, inputoutrosprojetos = ?
                 where usuario_id = ? ");
             $edit_ong->bindValue(1, $this->getCnpj());
             $edit_ong->bindValue(2, $this->getLocalizacao());
@@ -1032,9 +1033,9 @@ class CadastrarAll extends Conexao {
             $edit_ong->bindValue(19, $this->getInputnomeong());
             $edit_ong->bindValue(20, $this->getJustificativaOrcamento());
             $edit_ong->bindValue(21, $this->getQtdeBeneficiadas());
-            $edit_ong->bindValue(22, $this->getUsuarioId());
-            $edit_ong->bindValue(23, $this->getInputoutros());
-            $edit_ong->bindValue(24, $this->getInputoutrosprojetos());
+            $edit_ong->bindValue(22, $this->getInputoutros());
+            $edit_ong->bindValue(23, $this->getInputoutrosprojetos());
+            $edit_ong->bindValue(24, $this->getUsuarioId());
             
             $edit_ong->execute();
 
