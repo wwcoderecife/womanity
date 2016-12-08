@@ -71,7 +71,7 @@ class CadastrarAll extends Conexao {
     private $justificativa_orcamento;
     private $qtde_beneficiadas;
     private $inputoutros;
-    //private $outros;
+    //private $outros; // fiquei na dúvida coluna do banco.
 
 
     //******Contatos*******//
