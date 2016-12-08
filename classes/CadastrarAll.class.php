@@ -221,6 +221,10 @@ class CadastrarAll extends Conexao {
         $this->justificativa_orcamento = $justificativa_orcamento;
     }
 
+    public function setQtdeBeneficiadas($qtde_beneficiadas){
+        $this->qtde_beneficiadas = $qtde_beneficiadas;
+    }
+
     public function setInputoutros($inputoutros){
         $this->inputoutros = $inputoutros;
     }
@@ -691,8 +695,7 @@ class CadastrarAll extends Conexao {
 
 
     public function inserir_novo(){
-        $pdo = parent::getDB();
-        try{
+        $pdo = parent::getDB();       
 
 
             $pdo->beginTransaction();
