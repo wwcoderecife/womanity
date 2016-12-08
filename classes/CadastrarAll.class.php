@@ -701,7 +701,7 @@ class CadastrarAll extends Conexao {
             $inserir_ong = $pdo->prepare("insert into organizacoes (
                 cnpj, localizacao, nome, sigla, telefone, email, tipo, inicio_atv, qtde_pessoas, recursos_financeiros,
                 descricao,  publico_atendido, politicas_publicas, monitoramento_atividades, estrategia_comunicacao,
-                premiacao_certificacao, organizacao_pai, identifica_iniciativa, usuario_id, inputnomeong, inputoutros, inputoutrosprojetos, justificativa_orcamento, pessoas_benefeciadas)
+                premiacao_certificacao, organizacao_pai, identifica_iniciativa, usuario_id, inputnomeong, justificativa_orcamento, pessoas_benefeciadas, inputoutros, inputoutrosprojetos)
                                     values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,)");
             $inserir_ong->bindValue(1, $this->getCnpj());
             $inserir_ong->bindValue(2, $this->getLocalizacao());
