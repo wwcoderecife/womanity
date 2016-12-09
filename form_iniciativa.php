@@ -133,8 +133,8 @@
             <!--Iniciativa-->
 
         <fieldset>
-           <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
-                <h6><em>se sim, digite o nome da organizaçāo e cnpj no campo abaixo</em></h5>
+           <h4>1. A sua iniciativa está dentro de uma organização juridicamente constituída?*</h4>
+                <h6><em>Se sim, digite o nome da organizaçāo e CNPJ nos campos abaixo</em></h5>
               
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -144,8 +144,8 @@
                         <option value="nao">não</option>
                     </select> 
                 <div class="iniciativapj">     
-               <input type="text" id="inputnomeong" name="inputnomeong" class="f1-last-name form-control" placeholder="nome da organizaçāo" style='display: none' />
-                <input type="text" id="inputcnpj" maxlength="18" name="organizacao_pai"  class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" style='display: none'/ >
+               <input type="text" id="inputnomeong" name="inputnomeong" class="f1-last-name form-control" placeholder="Nome da organizaçāo" style='display: none' />
+                <input type="text" id="inputcnpj" maxlength="18" name="organizacao_pai"  class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx (Número de CNPJ é opcional)" style='display: none'/ >
 
                 </div>
                     <script>
@@ -169,7 +169,7 @@
                 </div>
 
 
-                <h5>A sua iniciativa está localizada na…*</h5>
+                <h4>2. Onde a sua iniciativa está localizada?*</h4>
                  <div class="form-group">
                     <label class="radio-inline">
                        <input type="radio" name="zona" value="rural" class="form-control-radio" >Zona Rural
@@ -180,28 +180,28 @@
                     </label>
                 </div>
 
-                <h5>Nome da Iniciativa*</h5>
+                <h4>3. Qual o nome da sua iniciativa?*</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Nome</label>
                     <input type="text" name="nome" maxlength="50" class="f1-last-name form-control" required>
                 </div>
 
 
-                <h5>Sigla da iniciativa:</h5>
+                <h4>4. Qual a sigla da sua iniciativa?</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Sigla</label>
                     <input type="text" name="sigla" class="f1-last-name form-control">
                                     
                 </div>
 
-                <h5>Telefone da iniciativa*</h5>
+               <h4>5. Informe o telefone da sua iniciativa*</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Telefone</label>
                     <input type="text" name="organizacao-telefone" required placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd" id="inputTel3">
                     <div class="help-block with-errors"></div>
                 </div>
 
-                <h5>E-mail da iniciativa*</h5>
+                <h4>6. Informe o e-mail da sua iniciativa*</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Email</label>
                     <input type="email" name="email" required class="f1-last-name form-control">
@@ -209,7 +209,7 @@
                 </div>
 
 
-                <h5>Como sua iniciativa se identifica?*</h5>
+                <h4>7. Como sua iniciativa se identifica?*</h4>
 
                 <div class="form-group">
                     <label class="radio-inline">
@@ -223,7 +223,7 @@
 
                 
 
-                <h5>De qual Natureza?</h5>
+                <h5>7.1. De qual natureza?</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="natureza" name="tipo" required>           
@@ -275,7 +275,7 @@
                 </div>
                     
                 
-                <h5> Quando sua iniciativa começou as atividades?*</h5>
+                <h4> 8. Em que ano começaram as atividades de sua iniciativa?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="year_organizacao" name="anoatividade" >
@@ -292,7 +292,7 @@
                     </select>
 
 
-               <h5>Quantos colaboradores,funcionários ou voluntários estão envolvidos diretamente neste trabalho?*</h5>
+               <h4>9. Quantos colaboradores,funcionários ou voluntários estão envolvidos diretamente neste trabalho?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas" required>
@@ -310,7 +310,7 @@
                 </div>
 
 
-                <h5> Qual é o número de pessoas que a sua iniciativa beneficia diretamente?*</h5>
+                <h4>10. Quantas pessoas a sua iniciativa beneficia diretamente?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="pessoas_beneficiadas" name="pessoas_beneficiadas">
@@ -329,33 +329,34 @@
                     </select>
                   </div>
 
-               <h5>Qual foi o orçamento bruto da sua iniciativa em: *</h5>
-                 <h5>2014</h5>
+               <h4>11. Qual foi o orçamento bruto da sua iniciativa? *</h4>
+                 <h5>Em 2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
                     <input type="text" name="orcamento_2014" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2014" data-error = "Campo está em branco, favor preencher." >
                     <div class="help-block with-errors"></div>
                 </div>
-                <h5>2015</h5>
+                <h5>Em 2015</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2015</label>
                     <input type="tex" name="orcamento_2015" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2015" data-error = "Campo está em branco, favor preencher.">
                 </div>
-                <h5>2016</h5>
+                <h5>Em 2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
                     <input type="tex" name="orcamento_2016" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2016" data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
-                <h5>Não tenho orçamento</h5>
+                <h5>Sem orçamento</h5>
+               <!--  ajustar esse campo para um radio -->
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name"></label>
                     <input type="text" name="justificativa_orcamento" placeholder=" caso não tem orçamento,descreva o motivo..."class="f1-last-name form-control">
                 </div>
 
 
-                <h5>Sua iniciativa recebe recursos financeiros?</h5>     
+                <h5>11.1. A sua iniciativa recebe recursos financeiros?</h5>     
 
               <div class="form-group">
                    <label class="radio-inline">
@@ -369,7 +370,7 @@
 
             <!--campo novo, substituiu a 19.2-->
 
-                <h5>Quais são as principais fontes de recursos para a realização dos projetos?</h5>
+                <h5>11.1.1. Quais são as principais fontes de recursos para a realização dos projetos?</h5>
                 <div class="form-group">
                     <input type="checkbox" name="recursos_origem[]" value="doação pessoa física">doação pessoa física</br>
                     <input type="checkbox" name="recursos_origem[]" value="edital público governo federal">edital público governo federal</br>
@@ -397,7 +398,8 @@
 
                    <!--Tabela Temas-->
 
-        <h5>Quais são as áreas de atuação da sua iniciativa? Escolha até 5 Temas e todos os Subtemas dentro da sua área de atuação*:</h5>
+        <h4>12. Quais são as áreas de atuação da sua iniciativa? </h4>
+        <h5>Escolha até 5 Temas e todos os Subtemas dentro da sua área de atuação*:</h5>
         <div class="form-group" style="border: 1px solid #ddd">
         <div class="table-responsive">
         <table id="form1" name="table_temas"class="table table-hover col-sm-12" >
@@ -549,7 +551,7 @@
 
 
 
-<h5> Clique e escolha todos os subtemas dentro da sua área de atuação*</h5>
+<h5> 12.1. Escolha todos os subtemas dentro da sua área de atuação*</h5>
 <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar vários subtemas.</em></h6>
 <div class="form-group">
 <!--<label for="subtemas" for="f1-google-plus">Subtemas</label>-->
@@ -624,7 +626,8 @@
     </script> 
 
 
-           <h5>O que faz sua iniciativa?* (até 500 caracteres).</h5>                                  
+           <h4>13. O que faz a sua iniciativa?* </h4> 
+           <h6>(até 500 caracteres)</h6>                             
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
                     <textarea name="sobre" maxlength="500" placeholder="Fale sobre a sua iniciativa...." 
@@ -649,7 +652,7 @@
 
 
 
-                <h5>Qual o público direto atendido pela sua iniciativa?*</h5>
+                <h4>14. Qual o público diretamente atendido pela sua iniciativa?*</h4>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -666,7 +669,7 @@
                            
                     </select>
                     
-                    <h5>Clique nos Estados que sua iniciativa tem atuação direta*</h5>
+                    <h4>15. Em quais estados a sua iniciativa tem atuação direta?*</h4>
                     <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
                     <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -701,7 +704,7 @@
                         <option value="Tocantins">Tocantins</option>
                     </select>
 
-                    <h5>Sua iniciativa influenciou políticas públicas?*</h5>
+                <h4>16. A sua iniciativa influenciou políticas públicas?*</h4>
                 <div class="form-group">
                    <label class="radio-inline">
                         <input type="radio" name="politicas_publicas" value="nao" class="form-control-radio"> Nāo
@@ -711,7 +714,7 @@
                         <input type="radio" name="politicas_publicas" value="sim" class="form-control-radio"> Sim
                     </label>
                 </div>
-
+                <h5>16.1. Se sim, em quais níveis?</h5>
                 <div class="form-group">
                    <label class="checkbox-inline">
                         <input type="checkbox" name="politicas_publicas_lista[]" value="municipal" class="form-control-radio">
@@ -726,7 +729,7 @@
                         <input type="checkbox" name="politicas_publicas_lista[]" value="nacional" class="form-control-radio">
                         <div class="help-block with-errors"></div>nacional 
                     </label>
-                    <textarea name="organizaçāo_politica_publica" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
+                    <textarea name="organizaçāo_politica_publica" placeholder="Descreva como se deu essa influência em políticas públicas(em até 500 caracteres)"
                     class="f1-about-yourself form-control" id="sobre_iniciativa">
                    </textarea>
                 </div>
@@ -734,7 +737,7 @@
 <!-- 26 Iniciativa-->
 
 
-<h5>Você realiza monitoramento e avaliação sistematizada das atividades desta iniciativa?*</h5>
+<h4>17. A sua iniciativa realiza monitoramento e avaliação sistematizada das atividades?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" name="monitoramento_atv" id="avaliacao" required>
@@ -742,7 +745,7 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim</option>
                     </select>
-                    <textarea type="text" id="inputAvaliacaoOng" name="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
+                    <textarea type="text" id="inputAvaliacaoOng" name="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? (até 500 caracteres)
                         "style='display: none' /></textarea>
                     <script>
 
@@ -781,7 +784,7 @@
 
 <!-- 27 Iniciativa-->
 
-<h5>Sua Organizaçāo tem uma estratégia de comunicação própria?*</h5>
+<h4>18. A sua Iniciativa tem uma estratégia de comunicação própria?*</h4>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -829,7 +832,7 @@
 
       <!-- 28 Iniciativa-->
 
-<h5>A sua Iniciativa recebeu premiações, certificações etc.?*</h5>
+<h4>19. A sua iniciativa recebeu premiações, certificações, etc.?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="premiacao" name="premiacao"name="comunicacao"required>
