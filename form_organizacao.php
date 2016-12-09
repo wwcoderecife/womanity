@@ -299,7 +299,11 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <h5>Quantos colaboradores,funcionários ou voluntários estão envolvidos neste trabalho?*</h5>
+=======
+                <h4>9. Quantos colaboradores,funcionários ou voluntários estão envolvidos diretamente neste trabalho?*</h4>
+>>>>>>> origin/master
 =======
                 <h4>9. Quantos colaboradores,funcionários ou voluntários estão envolvidos diretamente neste trabalho?*</h4>
 >>>>>>> origin/master
@@ -396,7 +400,11 @@
                     <input type="checkbox" name="recursos_origem[]" value="venda de produtos/prestação de serviços">venda de produtos/prestação de serviços<br>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <label class="checkbox-inline">
+=======
+                     <label class="checkbox-inline">
+>>>>>>> origin/master
                     <input type="checkbox" name="recursos_origem[]" value="outros">Outros<br>
                     <input type = "text" value="inputoutrosprojetos" name="inputoutrosprojetos" placeholder=" outros..." class="f1-last-name form-control">
                     </label><br>
@@ -408,6 +416,9 @@
                     </label>
                     <!--<input type="checkbox" name="recursos_origem[]" value="outros">outros<br>-->
                </div>
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 
 
@@ -415,7 +426,12 @@
             <!--Tabela Temas-->
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h5>Áreas de atuação da organização: escolha até 5 Temas e até 5 Subtemas abaixo*:</h5>
+=======
+           <h4>12. Quais são as áreas de atuação da sua Organização? </h4>
+            <h5>Escolha até 5 Temas e todos os Subtemas dentro da sua área de atuação*:</h5>
+>>>>>>> origin/master
 =======
            <h4>12. Quais são as áreas de atuação da sua Organização? </h4>
             <h5>Escolha até 5 Temas e todos os Subtemas dentro da sua área de atuação*:</h5>
@@ -573,7 +589,11 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <h5> Clique e escolha até 5 Subtemas abaixo*</h5>
+=======
+<h5> 12.1. Escolha todos os subtemas dentro da sua área de atuação*</h5>
+>>>>>>> origin/master
 =======
 <h5> 12.1. Escolha todos os subtemas dentro da sua área de atuação*</h5>
 >>>>>>> origin/master
@@ -690,7 +710,11 @@
                     </select>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                  <h5>Nomeie e descreva as iniciativas da sua organização que trabalham com empoderamento das mulheres*?</h5>
+=======
+                 <h4>15. Nomeie e descreva as iniciativas e/ou projetos da sua organização que trabalham com empoderamento das mulheres*?</h4>
+>>>>>>> origin/master
 =======
                  <h4>15. Nomeie e descreva as iniciativas e/ou projetos da sua organização que trabalham com empoderamento das mulheres*?</h4>
 >>>>>>> origin/master
