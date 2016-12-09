@@ -209,7 +209,7 @@
                 </div>
 
 
-                <h4>7. Como sua iniciativa se identifica?*</h4>
+                <h4>7. Como a sua iniciativa se identifica?*</h4>
 
                 <div class="form-group">
                     <label class="radio-inline">
@@ -275,7 +275,7 @@
                 </div>
                     
                 
-                <h4> 8. Em que ano começaram as atividades de sua iniciativa?*</h4>
+                <h4> 8. Em que ano começaram as atividades da sua iniciativa?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="year_organizacao" name="anoatividade" >

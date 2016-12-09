@@ -168,7 +168,7 @@
             <!--Iniciativa-->
 
         <fieldset>
-           <h4>1. Sua iniciativa está dentro de uma organização juridicamente constituída?*</h4>
+           <h4>1. A sua iniciativa está dentro de uma organização juridicamente constituída?*</h4>
                 <h6><em>Se sim, digite o nome da organizaçāo e cnpj nos campos abaixo</em></h5>
               
                  <div class="form-group">
@@ -211,7 +211,7 @@
                 </div>
 
 
-                <h4>2. Onde sua iniciativa está localizada?*</h4>
+                <h4>2. Onde a sua iniciativa está localizada?*</h4>
                  <div class="form-group">
                     <label class="radio-inline">
                        <input type="radio" name="zona" value="rural" class="form-control-radio" 
@@ -255,7 +255,7 @@
                 </div>
 
                 <!--verificar o get e set, se está correto -->
-                <h4>7. Como sua iniciativa se identifica?*</h4>
+                <h4>7. Como a sua iniciativa se identifica?*</h4>
 
                 <div class="form-group">
                     <label class="radio-inline">
@@ -338,7 +338,7 @@
                 </div>
                     
                 
-                <h4> 8. Em que ano começaram as atividades de sua iniciativa?*</h4>
+                <h4> 8. Em que ano começaram as atividades da sua iniciativa?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="year_organizacao" name="anoatividade" required>
