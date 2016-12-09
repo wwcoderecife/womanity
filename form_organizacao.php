@@ -298,7 +298,7 @@
                     </select>
 
 
-                <h5>Quantos colaboradores,funcionários ou voluntários estão envolvidos neste trabalho?*</h5>
+                <h5>Quantos colaboradores,funcionários ou voluntários estão envolvidos diretamente neste trabalho?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas" required>
@@ -397,7 +397,7 @@
 
             <!--Tabela Temas-->
 
-            <h5>Áreas de atuação da organização: escolha até 5 Temas e até 5 Subtemas abaixo*:</h5>
+            <h5>Quais são as áreas de atuação da sua organização? Escolha até 5 Temas e todos os Subtemas dentro da sua área de atuação*:</h5>
             <div class="form-group" style="border: 1px solid #ddd">
             <div class="table-responsive">
             <table id="form1" name="table_temas"class="table table-hover col-sm-12" >
@@ -550,7 +550,7 @@
 <!--subtemas-->
 
 
-<h5> Clique e escolha até 5 Subtemas abaixo*</h5>
+<h5> Clique e escolha todos os subtemas dentro da sua área de atuação*</h5>
  <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar os subtemas.</em></h6>
 <div class="form-group">
 <label for="subtemas" for="f1-google-plus">Subtemas</label>
@@ -590,7 +590,7 @@
             <option value="Preconceito e discriminação">Preconceito e discriminação</option>
             <option value="Promoção à cargos de liderança">Promoção à cargos de liderança</option>
             <option value="Questão presidiária">Questão presidiária</option>
-            <option value="Reciclagem e logísitca diversa">Reciclagem e logística reversa</option>
+            <option value="Reciclagem e logística reversa">Reciclagem e logística reversa</option>
             <option value="Redes Sociais">Redes Sociais</option>
             <option value="Refugiados">Refugiados</option>
             <option value="Reparação-reconstrução">Reparação-reconstrução</option>
@@ -614,7 +614,7 @@
 
           $('#subtemas').change(function(event) {
 
-            if ($(this).val().length > 5) {
+            if ($(this).val().length > 47) {
 
               $(this).val(last_valid_selection);
             } else {
@@ -662,7 +662,7 @@
                            
                     </select>
 
-                 <h5>Nomeie e descreva as iniciativas da sua organização que trabalham com empoderamento das mulheres*?</h5>
+                 <h5>Nomeie e descreva as iniciativas e/ou projetos da sua organização que trabalham com empoderamento das mulheres*?</h5>
                  <h5>Iniciativa 1</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
@@ -910,13 +910,13 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="relaciona3" class="f1-last-name form-control">
-                </div> 
+                </div> -->
 
                 
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
                     <button type="button" class="btn btn-next">Próximo</button>
-                </div> -->
+                </div> 
 
 </fieldset>
 
@@ -937,9 +937,9 @@
                         <option value="sudeste">Sudeste</option>
                     </select> 
                 </div>
-                <h5>Estado*</h5>
+                <h5>UF*</h5>
                  <div class="form-group">
-                    <label class="sr-only" for="f1-google-plus">Estado</label>
+                    <label class="sr-only" for="f1-google-plus">UF</label>
                     <select class="f1-last-name form-control" name="estado" id="estados" required>
                         <option value="escolha um estado"></option>
                         

@@ -354,7 +354,7 @@
                           </script>
                     </select>
 
-                <h5>Quantos colaboradores,funcionários ou voluntários estão envolvidos neste trabalho?*</h5>
+                <h5>Quantos colaboradores,funcionários ou voluntários estão envolvidos diretamente neste trabalho?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas">
@@ -535,7 +535,7 @@
 
             <!--Tabela Temas-->
 
-            <h5>Áreas de atuação da organização: escolha até 5 Temas e até 5 Subtemas abaixo*:</h5>
+            <h5>Quais são as áreas de atuação da sua organização? Escolha até 5 Temas e todos os Subtemas dentro da sua área de atuação*:</h5>
             <div class="form-group" style="border: 1px solid #ddd">
             <div class="table-responsive">
             <table id="form1" name="table_temas"class="table table-hover col-sm-12" >
@@ -557,7 +557,7 @@
                         } ?>
                     ></td>
                     <td>Arte e Cultura.</td>
-                    <td>Promoção do acesso de mulheres à cultura e/ou incentivo à produção das várias expressões artísticas.</td>
+                    <td>Promoção do acesso de mulheres à cultura e/ou incentivo à produção das várias expressões artísticas e valorização de práticas culturais e tradicionais.</td>
                      
                 </tr>
                 <tr>
@@ -626,7 +626,7 @@
                     ></td>
                     <td>Equidade e Condições de Trabalho.</td>
                     <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas 
-    possibilidades de desenvolvimento profissional e equiparação salarial.</td>    
+    possibilidades de desenvolvimento profissional e equiparação salarial; participação em cargos de liderança e conselho.</td>    
                 </tr>
 
                 <tr>
@@ -647,7 +647,7 @@
                         } ?>
                     ></td>
                     <td>Indígenas.</td>
-                    <td>Ações destinadas à valorização das mulheres indígenas e ao enfrentamento de seus problemas específicos.</td>
+                    <td>Ações destinadas à valorização das mulheres indígenas e ao enfrentamento de seus problemas específicos, a geração de renda e ao emponderamento político.</td>
                 </tr>
                 <tr>
                     <td><input type="checkbox" name="temas[ ]"value="LGBTT"class="no-margin" onclick="verificar()"
@@ -777,8 +777,8 @@
 <!--subtemas-->
 
 
-<h5> Clique e escolha até 5 Subtemas abaixo*</h5>
- <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar os subtemas.</em></h6>
+<h5> Clique e escolha todos os subtemas dentro da sua área de atuação*</h5>
+ <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar vários subtemas.</em></h6>
 <div class="form-group">
 <label for="subtemas" for="f1-google-plus">Subtemas</label>
         <select class="f1-last-name form-control"id="subtemas" class="selectpicker" name="subtemas[ ]" data-style="default" multiple>
@@ -992,12 +992,12 @@
                     if(in_array('Questão presidiária', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Questão presidiária</option>
-             <option value="Reciclagem e logísitca diversa"
+             <option value="Reciclagem e logística reversa"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Reciclagem e logísitca diversa', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
-            >Reciclagem e logísitca diversa</option>
+            >Reciclagem e logística reversa</option>
             <option value="Redes Sociais"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
@@ -1070,7 +1070,7 @@
 
           $('#subtemas').change(function(event) {
 
-            if ($(this).val().length > 5) {
+            if ($(this).val().length > 47) {
 
               $(this).val(last_valid_selection);
             } else {
@@ -1161,7 +1161,7 @@
                            
                     </select>
 
-                    <h5>Nomeie e descreva as iniciativas da sua organização que trabalham com empoderamento das mulheres*?</h5>
+                    <h5>Nomeie e descreva as iniciativas e/ou projetos da sua organização que trabalham com empoderamento das mulheres*?</h5>
                  <h5>Iniciativa 1</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
@@ -1599,7 +1599,7 @@
                     </select> 
                 </div>
                  <div class="form-group">
-                    <label class="sr-only" for="f1-google-plus">Estado</label>
+                    <label class="sr-only" for="f1-google-plus">UF</label>
                     <select class="f1-last-name form-control" name="estado" id="estados">
                         <?php echo "<script type='text/javascript'> var estado = '".$edit->getEstado()."'; </script>"; ?>
                         <script type="text/javascript">
