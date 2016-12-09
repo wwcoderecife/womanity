@@ -348,16 +348,12 @@
                     <div class="help-block with-errors"></div>
                 </div>
 
- 
-
-        <h5>Sem orçamento</h5>
-             <div class = "form-group">
-                    <label class="sr-only" for="f1-last-name"></label>
-                    <input type="radio-inline" name="justificativa_orcamento" class="f1-last-name form-control">Sem Orçamento
+ <!-- Sem Orçamento-->
+             <div class="form-group">
+                <label class="radio-inline" class="sr-only" for="f1-last-name"></label>
+                  <input type="radio" name="justificativa_orcamento" class="f1-last-name form-control">Sem Orçamento
             </div>
              
-       
-
 
                 <h5>Sua iniciativa recebe recursos financeiros?</h5>     
 

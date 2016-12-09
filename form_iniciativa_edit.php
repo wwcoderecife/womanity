@@ -416,13 +416,23 @@
                     <div class="help-block with-errors"></div>
                 </div>
 
-                <!--novo item -->
+
+                <div class="form-group">
+                    <label class="radio-inline" class="sr-only" for="f1-last-name"></label>Sem Orçamento
+                    <input type="radio" name="justificativa_orcamento" value="<?php echo $edit->getJustificativaOrcamento(); ?>"  class="f1-last-name form-control">
+                </div>
+
+
+              <!--
                 <h5>Sem orçamento</h5>
-                <!--  ajustar esse campo para um radio -->
+               
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name"></label>
-                    <input type="text" name="justificativa_orcamento" value="<?php echo $edit->getJustificativaOrcamento(); ?>" placeholder=" caso não tem orçamento,descreva o motivo..." class="f1-last-name form-control">
+                    <input type="text" name="justificativa_orcamento" value="<?php //echo $edit->getJustificativaOrcamento(); ?>" placeholder=" caso não tem orçamento,descreva o motivo..." class="f1-last-name form-control">
                 </div>
+
+            -->
+
 
                 <h5>11.1. A sua iniciativa recebe recursos financeiros?</h5>    
 

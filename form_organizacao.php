@@ -361,11 +361,12 @@
                     <input type="text" name="orcamento_2016"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2016"required>
                 </div>
 
-                <!--novo item -->               
-             <div class = "form-group">
-                    <label class="sr-only" for="f1-last-name"></label>
-                    <input type="radio-inline" name="justificativa_orcamento" class="f1-last-name form-control">Sem Orçamento.   
-              </div>
+                <!--sem orçamento -->               
+               <div class="form-group">
+                <label class="radio-inline" class="sr-only" for="f1-last-name"></label>
+                  <input type="radio" name="justificativa_orcamento" class="f1-last-name form-control">Sem Orçamento
+                </div>
+                
 
                 <h5>11.1. A sua Organizaçāo recebe recursos financeiros?</h5>
                 <div class="form-group">
