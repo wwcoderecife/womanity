@@ -895,7 +895,7 @@
                 </div><!--29/Organizacao-->
 
 
-                <h5>Quais são as organizações com atuação na temática da mulher com que sua organizaçāo se relaciona diretamente?</h5>
+                <!-- <h5>Quais são as organizações com atuação na temática da mulher com que sua organizaçāo se relaciona diretamente?</h5>
                  <h5>Organização 1</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
@@ -916,7 +916,7 @@
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
                     <button type="button" class="btn btn-next">Próximo</button>
-                </div>
+                </div> -->
 
 </fieldset>
 

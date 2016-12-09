@@ -74,9 +74,9 @@
     $estados = $_POST['organizacao_estado'];
 
     //Se relaciona
-    $relaciona_1 = filter_input(INPUT_POST, "relaciona1", FILTER_SANITIZE_MAGIC_QUOTES);
-    $relaciona_2 = filter_input(INPUT_POST, "relaciona2", FILTER_SANITIZE_MAGIC_QUOTES);
-    $relaciona_3 = filter_input(INPUT_POST, "relaciona3", FILTER_SANITIZE_MAGIC_QUOTES);
+    // $relaciona_1 = filter_input(INPUT_POST, "relaciona1", FILTER_SANITIZE_MAGIC_QUOTES);
+    // $relaciona_2 = filter_input(INPUT_POST, "relaciona2", FILTER_SANITIZE_MAGIC_QUOTES);
+    // $relaciona_3 = filter_input(INPUT_POST, "relaciona3", FILTER_SANITIZE_MAGIC_QUOTES);
 
     //Temas
     $temas = $_POST['temas'];

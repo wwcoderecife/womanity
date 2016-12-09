@@ -1553,7 +1553,7 @@
                 </div><!--29/Organizacao-->
 
 
-                <h5>Quais são as organizações com atuação na temática da mulher com que sua organizaçāo se relaciona diretamente?</h5>
+                <!-- <h5>Quais são as organizações com atuação na temática da mulher com que sua organizaçāo se relaciona diretamente?</h5>
                  <h5>Organização 1</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
@@ -1568,7 +1568,7 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="relaciona3" class="f1-last-name form-control" value="<?php echo (explode("_3",$edit->getRelaciona_3())[0]); ?>">
-                </div> 
+                </div>  -->
 
                 
                 <div class="f1-buttons">
