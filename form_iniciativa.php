@@ -348,18 +348,14 @@
                     <div class="help-block with-errors"></div>
                 </div>
 
-<<<<<<< HEAD
-                <h5>Não tenho orçamento</h5>
-=======
                 <h5>Sem orçamento</h5>
-               <!--  TO DO ajustar esse campo para um radio -->
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
-                <div class="form-group">
+                <div class="input-group">
+                 <span class="input-group-addon">
                     <label class="sr-only" for="f1-last-name"></label>
-                    <input type="text" name="justificativa_orcamento" placeholder=" caso não tem orçamento,descreva o motivo..."class="f1-last-name form-control">
+                    <input type="radio" name="justificativa_orcamento" class="f1-last-name form-control">
+                 </span>
+                 <input class="form-control" id="disabledInput" type="text" placeholder="Sem orçamento" disabled>
+                  </div>
                 </div>
 
 
