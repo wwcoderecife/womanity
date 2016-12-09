@@ -528,7 +528,10 @@
                                 if(in_array('outros', $array_recursos_financeiros[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
                     >outros<br>
-                    <!-- <input type="text"     name="outrosprojetos" placeholder=" outros..." style="display:block;" class="f1-last-name form-control"> -->
+
+                    <input type="text" id="inputoutrosprojetos" name="inputoutrosprojetos" value="<?php echo $edit->getInputoutrosprojetos() ?>" class="f1-last-name form-control" <?php if($edit->getInputoutros() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?>
+                        
+                    ><br>
                </div> 
 
 
