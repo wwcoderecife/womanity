@@ -351,8 +351,7 @@
  
 
         <h5>Sem orçamento</h5>
-             <div class="row">
-              <div class="col-lg-6">
+             <div class = "form-group">   
                 <div class="input-group">
                  <span class="input-group-addon">
                     <label class="sr-only" for="f1-last-name"></label>
@@ -361,7 +360,7 @@
                  <input class="form-control" id="disabledInput" type="text" placeholder="Sem orçamento" disabled>
                   </div>
                 </div>
-            </div> 
+       
 
 
                 <h5>Sua iniciativa recebe recursos financeiros?</h5>     
