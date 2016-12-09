@@ -1088,7 +1088,7 @@
                     class="f1-about-yourself form-control" id="sobre" ><?php echo $edit->getDescricao() ?></textarea>
                 </div>
 
-                 <h5>Qual é a sua função no ecossistema?*</h5>
+                 <!-- <h5>Qual é a sua função no ecossistema?*</h5>
 
                  <div class="form-group">
                  <input type="checkbox" name="funcao[ ]" value="Advocacy"
@@ -1135,7 +1135,7 @@
                             if(in_array('social', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
                     >social⁠⁠⁠⁠   
-                 </div>   
+                 </div>  -->  
 
 
                  <h5>Qual o público direto atendido pela sua Organizaçāo?*</h5>

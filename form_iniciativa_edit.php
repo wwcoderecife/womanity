@@ -1104,7 +1104,7 @@
                 </div>
 
 
-                 <h5>Qual é a sua função no ecossistema?*</h5>
+                 <!-- <h5>Qual é a sua função no ecossistema?*</h5>
 
                  <div class="form-group">
                  <input type="checkbox" name="funcao[ ]" value="Advocacy"
@@ -1153,7 +1153,7 @@
                         } ?>
                  >social⁠⁠⁠⁠   
                  </div>   
-
+ -->
 
 
                 <h5>Qual o público direto atendido pela sua iniciativa?*</h5>

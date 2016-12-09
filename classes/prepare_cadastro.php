@@ -58,8 +58,9 @@
     //Politicas publicas lista
     $politicas_publicas_lista = $_POST['politicas_publicas_lista'];
 
-    $funcoes = $_POST['funcao'];
-    $numero_beneficiarios = filter_input(INPUT_POST, "numero_beneficiarios", FILTER_SANITIZE_MAGIC_QUOTES);
+    // $funcoes = $_POST['funcao'];
+    
+    // $numero_beneficiarios = filter_input(INPUT_POST, "numero_beneficiarios", FILTER_SANITIZE_MAGIC_QUOTES);
 
     //Iniciantivas com empoderamento
     $empoderamento_nome_1 = filter_input(INPUT_POST, "organizacao-relaciona1", FILTER_SANITIZE_MAGIC_QUOTES);

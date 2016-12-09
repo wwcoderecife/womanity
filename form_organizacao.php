@@ -631,7 +631,7 @@
                     class="f1-about-yourself form-control" id="sobre" required></textarea>
                 </div>
 
-                 <h5>Qual é a sua função no ecossistema?*</h5>
+               <!--   <h5>Qual é a sua função no ecossistema?*</h5>
 
                  <div class="form-group">
                  <input type="checkbox" name="funcao[ ]" value="Advocacy">Advocacy<br>
@@ -643,7 +643,7 @@
                  <input type="checkbox" name="funcao[ ]" value="público" style="margin-left: 20px"class="form-control-radio">público
                  <input type="checkbox" name="funcao[ ]" value="privado" style="margin-left: 20px"class="form-control-radio">privado
                  <input type="checkbox" name="funcao[ ]" value="social"  style="margin-left: 20px"class="form-control-radio">social⁠⁠⁠⁠   
-                 </div>   
+                 </div>   --> 
 
 
                  <h5>Qual o público direto atendido pela sua Organizaçāo?*</h5>
