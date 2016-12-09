@@ -408,15 +408,15 @@
                     <input type="text" name="orcamento_2016" value="<?php  echo $edit->getOrcamento_2016(); ?>"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2016">
                 </div>
 
-<!-- novo item implementado radio-->
+ <!-- Novo sem Orcamento com radio-->
                  <div class="form-group">
-                    <label class="radio-inline" class="sr-only" for="f1-last-name"></label>Sem Orçamento
-                    <input type="radio" name="justificativa_orcamento" value="<?php echo $edit->getJustificativaOrcamento(); ?>"  class="f1-last-name form-control">
+                    <label class="radio-inline"></label>
+                    <input type="radio" name="justificativa_orcamento" value="<?php echo $edit->getJustificativaOrcamento(); ?>"  class="f1-last-name form-radio">Sem Orçamento
                 </div>
 
            
               <!--
-                <h5>Sem orçamento</h5>
+                <h5>Anterior Sem orçamento</h5>
                 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name"></label>

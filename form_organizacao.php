@@ -362,11 +362,14 @@
                 </div>
 
                 <!--sem orçamento -->               
-               <div class="form-group">
-                <label class="radio-inline" class="sr-only" for="f1-last-name"></label>
-                  <input type="radio" name="justificativa_orcamento" class="f1-last-name form-control">Sem Orçamento
-                </div>
-                
+
+               
+                <div class="form-group">
+                   <label class="radio-inline">
+                        <input type="radio" name="justificativa_orcamento" value="sim" class="form-control-radio">Sem Orçamento
+                </label>
+
+
 
                 <h5>11.1. A sua Organizaçāo recebe recursos financeiros?</h5>
                 <div class="form-group">

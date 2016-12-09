@@ -416,10 +416,11 @@
                     <div class="help-block with-errors"></div>
                 </div>
 
+               <!-- Novo sem Orcamento com radio-->
 
-                <div class="form-group">
-                    <label class="radio-inline" class="sr-only" for="f1-last-name"></label>Sem Orçamento
-                    <input type="radio" name="justificativa_orcamento" value="<?php echo $edit->getJustificativaOrcamento(); ?>"  class="f1-last-name form-control">
+                 <div class="form-group">
+                    <label class="radio-inline"></label>
+                    <input type="radio" name="justificativa_orcamento" value="<?php echo $edit->getJustificativaOrcamento(); ?>"  class="f1-last-name form-radio">Sem Orçamento
                 </div>
 
 
