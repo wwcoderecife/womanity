@@ -348,19 +348,9 @@
                     <div class="help-block with-errors"></div>
                 </div>
 
- <div class="row">
- <div class="col-lg-6">
-    <div class="input-group">
-      <span class="input-group-addon">
-        <input type="radio" aria-label="...">
-      </span>
-      <input type="text" class="form-control" aria-label="...">
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->
+ 
 
-
-            <h5>Sem orçamento</h5>
+        <h5>Sem orçamento</h5>
              <div class="row">
               <div class="col-lg-6">
                 <div class="input-group">
