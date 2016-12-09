@@ -351,15 +351,12 @@
  
 
         <h5>Sem orçamento</h5>
-             <div class = "form-group">   
-                <div class="input-group">
-                 <span class="input-group-addon">
+             <div class = "form-group">
                     <label class="sr-only" for="f1-last-name"></label>
-                    <input type="radio" name="justificativa_orcamento" class="f1-last-name form-control">
-                 </span>
-                 <input class="form-control" id="disabledInput" type="text" placeholder="Sem orçamento" disabled>
-                  </div>
-                </div>
+                    <input type="radio" name="justificativa_orcamento" class="f1-last-name form-control">Sem Orçamento   
+
+             </div>
+             
        
 
 
