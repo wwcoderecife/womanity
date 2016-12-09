@@ -363,6 +363,7 @@
 
                 <!--novo item -->
                 <h5>Sem orçamento</h5>
+            <div class = "form-group">
                 <div class="input-group">
                  <span class="input-group-addon">
                     <label class="sr-only" for="f1-last-name"></label>
