@@ -344,7 +344,7 @@
                     <select class="f1-last-name form-control" id="year_organizacao" name="anoatividade" required>
                         <option value=""></option>
                         <?php echo "<script type='text/javascript'> var ano = '".$edit->getInicioAtv()."'; </script>"; ?>
-                       <!--  <script>
+                        <script>
 
                           var myDate = new Date();
                           var year = myDate.getFullYear();
@@ -357,7 +357,7 @@
                             }
                           }
                               
-                          </script> -->
+                          </script>
                     </select>
 
 
