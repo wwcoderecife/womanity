@@ -29,7 +29,7 @@
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
         <form role="form" action="classes/prepare_cadastro.php" method="post" class="f1">
 
-            <h3>Cadastro do Ecossistema<br>Organizaçāo</h3>
+            <h3>Cadastro UNA Ecossistema<br>Organizaçāo</h3>
             <p>Preencha os campos obrigatórios *</p>
             <div class="f1-steps">
                 <div class="f1-progress">
@@ -145,8 +145,8 @@
              <!--Etapa 2 Formulário: Organizaçāo -->
 
         <fieldset>
-                <h5>A sua organização está juridicamente constituída?*</h5>
-                <h6><em>se sim, digite o CNPJ no campo abaixo</em></h5>
+                <h4>1. A sua organização está juridicamente constituída?*</h4>
+                <h6><em>Se sim, digite o CNPJ no campo abaixo</em></h5>
              
                   
                  <div class="form-group">
@@ -154,10 +154,10 @@
                     <select class="f1-last-name form-control" name="cnpj"id="organizacao-cnpj"required>
                         <option value=""></option>
                         <option value="sim">sim</option>
-                        <option value="nao">não</option>
+                        <option value="nao">nao</option>
                     </select>    
 
-                <input type="text" id="inputcnpj" maxlength="18" name="inputcnpj" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opcional" style='display: none'/>
+                <input type="text" id="inputcnpj" maxlength="18" name="inputcnpj" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx (a inserção do CNPJ é opcional)" style='display: none'/>
                     <script>
 
                         var dropdownCnpj = document.getElementById('organizacao-cnpj');
@@ -192,7 +192,7 @@
                 </div>
                     
 
-                <h5>A sua Organizaçāo está localizada na…*</h5>
+                <h4>2. Onde a sua organizaçāo está localizada?*</h4>
                 <div class="form-group">
                     <label class="radio-inline">
                        <input type="radio" name="zona" value="rural" class="form-control-radio" >Zona Rural
@@ -203,32 +203,32 @@
                     </label>
                 </div>
 
-                <h5>Nome da Organizaçāo*</h5>
+                <h4>3. Qual o nome da sua organizaçāo?*</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Nome</label>
                     <input type="text" name="nome" maxlength="50" class="f1-last-name form-control" required>
                 </div>
 
 
-                <h5>Sigla da Organizaçāo:</h5>
+                <h4>4. Qual a sigla da sua organizaçāo?</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Sigla</label>
                     <input type="text" name="sigla" class="f1-last-name form-control">
                 </div>
 
-                <h5>Telefone da Organizaçāo*</h5>
+                <h4>5. Qual o telefone da sua organizaçāo?*</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Telefone</label>
                     <input type="tel" id="telefone" name="organizacao-telefone" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd"required>
                 </div>
 
-                <h5>E-mail da Organizaçāo*</h5>
+                <h4>6. Qual o e-mail da sua organizaçāo?*</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Email</label>
                     <input type="email" name="email" class="f1-last-name form-control"class="f1-last-name form-control" required>
                 </div>
 
-                 <h5>Como sua organizaçāo se identifica*</h5>
+                 <h4>7. Como a sua organizaçāo se identifica?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus" ></label>
                     <select class="f1-last-name form-control" id="organizacao-tipo" name="tipo" required>
@@ -282,7 +282,7 @@
                 </div>
 
 
-                 <h5> Quando sua Organizaçāo iniciou as atividades?*</h5>
+                 <h4> 8. Em que ano começaram as atividades da sua organização?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="year_organizacao" name="anoatividade" required>
@@ -298,7 +298,11 @@
                     </select>
 
 
-                <h5>Quantos colaboradores,funcionários ou voluntários estão envolvidos diretamente neste trabalho?*</h5>
+<<<<<<< HEAD
+                <h5>Quantos colaboradores,funcionários ou voluntários estão envolvidos neste trabalho?*</h5>
+=======
+                <h4>9. Quantos colaboradores,funcionários ou voluntários estão envolvidos diretamente neste trabalho?*</h4>
+>>>>>>> origin/master
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas" required>
@@ -316,7 +320,7 @@
                 </div>
 
 
-                <h5> Qual é o número de pessoas que a sua organização beneficia diretamente?*</h5>
+                <h4>10. Quantas pessoas a sua organização beneficia diretamente?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="pessoas_beneficiadas" name="pessoas_beneficiadas">
@@ -335,32 +339,33 @@
                     </select>
                   </div>
 
-                <h5>Qual foi seu orçamento bruto em:?*</h5>
-                 <h5>2014</h5>
+                <h4>11. Qual foi o orçamento bruto da sua organização? *</h4>
+                 <h5>Em 2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
                     <input type="text" name="orcamento_2014" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2014" required>
 
                 </div>
-                <h5>2015</h5>
+                <h5>Em 2015</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2015</label>
                     <input type="text" name="orcamento_2015"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2015" required>
                 </div>
-                <h5>2016</h5>
+                <h5>Em 2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
                     <input type="text" name="orcamento_2016"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2016"required>
                 </div>
 
                 <!--novo item -->
-                <h5>Não tenho orçamento</h5>
+                <h5>Sem orçamento</h5>
+                <!--  TO DO ajustar esse campo para um radio -->
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name"></label>
                     <input type="text" name="justificativa_orcamento" placeholder=" caso não tem orçamento,descreva o motivo..."class="f1-last-name form-control">
                 </div>
 
-                <h5>Sua Organizaçāo recebe recursos financeiros?</h5>
+                <h5>11.1. A sua Organizaçāo recebe recursos financeiros?</h5>
                 <div class="form-group">
                    <label class="radio-inline">
                         <input type="radio" name="recursos" value="sim" class="form-control-radio"> Sim
@@ -372,7 +377,7 @@
                 </div>
 
 
-               <h5>Quais são as principais fontes de recursos para a realização dos projetos?</h5>
+               <h5>11.1.1. Quais são as principais fontes de recursos para a realização dos projetos?</h5>
                 <div class="form-group">
                     <input type="checkbox" name="recursos_origem[]" value="doação pessoa física">doação pessoa física</br>
                     <input type="checkbox" name="recursos_origem[]" value="edital público governo federal">edital público governo federal</br>
@@ -389,17 +394,32 @@
                     <input type="checkbox" name="recursos_origem[]" value="organizações não governamentais brasileiras ou internacionais">organizações não governamentais brasileiras ou internacionais<br>
                     <input type="checkbox" name="recursos_origem[]" value="subvenções públicas ">subvenções públicas<br>
                     <input type="checkbox" name="recursos_origem[]" value="venda de produtos/prestação de serviços">venda de produtos/prestação de serviços<br>
+
+<<<<<<< HEAD
                     <label class="checkbox-inline">
+                    <input type="checkbox" name="recursos_origem[]" value="outros">Outros<br>
+                    <input type = "text" value="inputoutrosprojetos" name="inputoutrosprojetos" placeholder=" outros..." class="f1-last-name form-control">
+                    </label><br>
+               </div> 
+=======
+                     <label class="checkbox-inline">
                     <input type="checkbox" name="recursos_origem[]" value="outros">Outros<br>
                     <input type = "text" value="inputoutrosprojetos" name="inputoutrosprojetos" placeholder=" outros..." style="display:block;" class="f1-last-name form-control">
                     </label>
-               </div> 
+                    <!--<input type="checkbox" name="recursos_origem[]" value="outros">outros<br>-->
+               </div>
+>>>>>>> origin/master
 
 
 
             <!--Tabela Temas-->
 
-            <h5>Quais são as áreas de atuação da sua organização? Escolha até 5 Temas e todos os Subtemas dentro da sua área de atuação*:</h5>
+<<<<<<< HEAD
+            <h5>Áreas de atuação da organização: escolha até 5 Temas e até 5 Subtemas abaixo*:</h5>
+=======
+           <h4>12. Quais são as áreas de atuação da sua Organização? </h4>
+            <h5>Escolha até 5 Temas e todos os Subtemas dentro da sua área de atuação*:</h5>
+>>>>>>> origin/master
             <div class="form-group" style="border: 1px solid #ddd">
             <div class="table-responsive">
             <table id="form1" name="table_temas"class="table table-hover col-sm-12" >
@@ -552,7 +572,11 @@
 <!--subtemas-->
 
 
-<h5> Clique e escolha todos os subtemas dentro da sua área de atuação*</h5>
+<<<<<<< HEAD
+<h5> Clique e escolha até 5 Subtemas abaixo*</h5>
+=======
+<h5> 12.1. Escolha todos os subtemas dentro da sua área de atuação*</h5>
+>>>>>>> origin/master
  <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar os subtemas.</em></h6>
 <div class="form-group">
 <label for="subtemas" for="f1-google-plus">Subtemas</label>
@@ -592,7 +616,7 @@
             <option value="Preconceito e discriminação">Preconceito e discriminação</option>
             <option value="Promoção à cargos de liderança">Promoção à cargos de liderança</option>
             <option value="Questão presidiária">Questão presidiária</option>
-            <option value="Reciclagem e logística reversa">Reciclagem e logística reversa</option>
+            <option value="Reciclagem e logísitca diversa">Reciclagem e logística reversa</option>
             <option value="Redes Sociais">Redes Sociais</option>
             <option value="Refugiados">Refugiados</option>
             <option value="Reparação-reconstrução">Reparação-reconstrução</option>
@@ -616,7 +640,7 @@
 
           $('#subtemas').change(function(event) {
 
-            if ($(this).val().length > 47) {
+            if ($(this).val().length > 5) {
 
               $(this).val(last_valid_selection);
             } else {
@@ -626,14 +650,15 @@
         });
     </script> 
 
-                <h5>O que faz sua organização?*(até 500 caracteres)</h5>                                  
+            <h4>13. O que faz a sua organização?* </h4> 
+            <h6>(até 500 caracteres)</h6>                                 
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
                     <textarea name="sobre" maxlength="500" placeholder="campo com capacidade para 500 caracteres...." 
                     class="f1-about-yourself form-control" id="sobre" required></textarea>
                 </div>
 
-               <!--   <h5>Qual é a sua função no ecossistema?*</h5>
+                 <h5>Qual é a sua função no ecossistema?*</h5>
 
                  <div class="form-group">
                  <input type="checkbox" name="funcao[ ]" value="Advocacy">Advocacy<br>
@@ -645,10 +670,10 @@
                  <input type="checkbox" name="funcao[ ]" value="público" style="margin-left: 20px"class="form-control-radio">público
                  <input type="checkbox" name="funcao[ ]" value="privado" style="margin-left: 20px"class="form-control-radio">privado
                  <input type="checkbox" name="funcao[ ]" value="social"  style="margin-left: 20px"class="form-control-radio">social⁠⁠⁠⁠   
-                 </div>   --> 
+                 </div>   
 
 
-                 <h5>Qual o público direto atendido pela sua Organizaçāo?*</h5>
+                 <h4>14. Qual o público diretamente atendido pela sua Organizaçāo?*</h4>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -664,7 +689,11 @@
                            
                     </select>
 
-                 <h5>Nomeie e descreva as iniciativas e/ou projetos da sua organização que trabalham com empoderamento das mulheres*?</h5>
+<<<<<<< HEAD
+                 <h5>Nomeie e descreva as iniciativas da sua organização que trabalham com empoderamento das mulheres*?</h5>
+=======
+                 <h4>15. Nomeie e descreva as iniciativas e/ou projetos da sua organização que trabalham com empoderamento das mulheres*?</h4>
+>>>>>>> origin/master
                  <h5>Iniciativa 1</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
@@ -687,7 +716,7 @@
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong3"  data-error = "Campo está em branco, favor preencher."></textarea>
                 </div>
 
-                <h5>Clique nos Estados que sua iniciativa tem atuação direta*</h5>
+                <h4>16. Em quais estados sua iniciativa tem atuação direta*</h4>
                     <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
                     <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -723,7 +752,7 @@
                     </select>
 
 
-                    <h5>Sua Organizaçāo influenciou políticas públicas?*</h5>
+                <h4>17. A sua organizaçāo influenciou políticas públicas?*</h4>
 
                 <div class="form-group" required>
                    <label class="radio-inline">
@@ -734,7 +763,8 @@
                         <input type="radio" name="politicas_publicas" value="sim" class="form-control-radio"> Sim
                     </label>
                 </div>
-                
+
+                <h5>17.1. Se sim, em quais níveis?</h5>
               
                 <div class="form-group">
                    <label class="checkbox-inline">
@@ -756,7 +786,7 @@
                 <!-- Organizacao 27-->
 
 
-<h5>Você realiza monitoramento e avaliação sistematizada das atividades da Organizaçāo?*</h5>
+    <h4>18. A sua organização realiza monitoramento e avaliação sistematizada das atividades?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" name="monitoramento_atv" id="avaliacao" required>
@@ -803,7 +833,7 @@
 
 <!-- 28 Organizacao-->
 
-<h5>Sua Organizaçāo tem uma estratégia de comunicação própria?*</h5>
+<h4>19. A sua organizaçāo tem uma estratégia de comunicação própria?*</h4>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -851,7 +881,7 @@
 
       <!-- 29 Organizacao-->
 
-<h5>A sua Organizaçāo recebeu premiações, certificações etc.?*</h5>
+<h4>20. A sua organizaçāo recebeu premiações, certificações etc.?*</h4>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -897,7 +927,7 @@
                 </div><!--29/Organizacao-->
 
 
-                <!-- <h5>Quais são as organizações com atuação na temática da mulher com que sua organizaçāo se relaciona diretamente?</h5>
+                <h5>Quais são as organizações com atuação na temática da mulher com que sua organizaçāo se relaciona diretamente?</h5>
                  <h5>Organização 1</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
@@ -912,13 +942,13 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="relaciona3" class="f1-last-name form-control">
-                </div> -->
+                </div> 
 
                 
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
                     <button type="button" class="btn btn-next">Próximo</button>
-                </div> 
+                </div>
 
 </fieldset>
 
@@ -939,9 +969,9 @@
                         <option value="sudeste">Sudeste</option>
                     </select> 
                 </div>
-                <h5>UF*</h5>
+                <h5>Estado*</h5>
                  <div class="form-group">
-                    <label class="sr-only" for="f1-google-plus">UF</label>
+                    <label class="sr-only" for="f1-google-plus">Estado</label>
                     <select class="f1-last-name form-control" name="estado" id="estados" required>
                         <option value="escolha um estado"></option>
                         
