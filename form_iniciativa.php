@@ -349,7 +349,7 @@
                 </div>
 
                 <h5>Sem orçamento</h5>
-               <!--  ajustar esse campo para um radio -->
+               <!--  TO DO ajustar esse campo para um radio -->
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name"></label>
                     <input type="text" name="justificativa_orcamento" placeholder=" caso não tem orçamento,descreva o motivo..."class="f1-last-name form-control">
