@@ -353,9 +353,8 @@
         <h5>Sem orçamento</h5>
              <div class = "form-group">
                     <label class="sr-only" for="f1-last-name"></label>
-                    <input type="radio" name="justificativa_orcamento" class="f1-last-name form-control">Sem Orçamento   
-
-             </div>
+                    <input type="radio-inline" name="justificativa_orcamento" class="f1-last-name form-control">Sem Orçamento
+            </div>
              
        
 
