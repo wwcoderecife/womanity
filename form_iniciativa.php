@@ -141,7 +141,7 @@
                     <select class="f1-last-name form-control" name="organizacao-pai" id="organizacao-cnpj" required>
                         <option value=""></option>
                         <option value="sim">sim</option>
-                        <option value="nao">nao</option>
+                        <option value="nao">não</option>
                     </select> 
                 <div class="iniciativapj">     
                <input type="text" id="inputnomeong" name="inputnomeong" class="f1-last-name form-control" placeholder="nome da organizaçāo" style='display: none' />

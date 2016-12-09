@@ -181,7 +181,7 @@
                      
                         <option value="nao"
                         <?php if($edit->getOrganizacaoPai() == ""){ echo "selected"; } ?>
-                         >nao</option>
+                         >não</option>
                     </select> 
                 <div class="iniciativapj">     
                <input type="text" id="inputnomeong" value="<?php echo $edit->getInputnomeong() ?>"  name="inputnomeong" class="f1-last-name form-control" placeholder="nome da organizaçāo" <?php if($edit->getInputnomeong() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> />

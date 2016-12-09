@@ -185,7 +185,7 @@
                          >sim</option>
                         <option value="nao"
                         <?php if($edit->getCnpj() == ""){ echo "selected"; } ?>
-                        >nao</option>
+                        >não</option>
                     </select>    
 
                 <input type="text" id="inputcnpj" name="inputcnpj" value="<?php echo $edit->getCnpj()  ?>" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opcional" <?php if($edit->getCnpj() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> />

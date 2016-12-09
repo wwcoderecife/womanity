@@ -154,7 +154,7 @@
                     <select class="f1-last-name form-control" name="cnpj"id="organizacao-cnpj"required>
                         <option value=""></option>
                         <option value="sim">sim</option>
-                        <option value="nao">nao</option>
+                        <option value="nao">não</option>
                     </select>    
 
                 <input type="text" id="inputcnpj" maxlength="18" name="inputcnpj" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opcional" style='display: none'/>
