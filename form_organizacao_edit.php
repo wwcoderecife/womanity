@@ -532,16 +532,15 @@
                                 if(in_array('venda de produtos/prestação de serviços', $array_recursos_financeiros[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
                     >venda de produtos/prestação de serviços<br>
-                    <input type="checkbox" name="recursos_origem[]" value="outros"
+                   <input type="checkbox" name="recursos_origem[]" value="outros"
                         <?php 
                             for($i = 0; $i <= count($array_recursos_financeiros)-1; $i++){
                                 if(in_array('outros', $array_recursos_financeiros[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
                     >outros<br>
 
-                    <input type="text" id="inputoutrosprojetos" name="inputoutrosprojetos" value="<?php echo $edit->getInputoutrosprojetos() ?>" class="f1-last-name form-control" <?php if($edit->getInputoutros() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?>
-                        
-                    ><br>
+                    <input type="text" id="inputoutrosprojetos" name="inputoutrosprojetos" value="<?php echo $edit->getInputoutrosprojetos() ?>" class="f1-last-name form-control" <?php if($edit->getInputoutros() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?>    
+                    ><br>  
                </div> 
 
 

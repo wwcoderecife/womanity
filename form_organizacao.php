@@ -392,7 +392,7 @@
 
 
                <h5>11.1.1. Quais são as principais fontes de recursos para a realização dos projetos?</h5>
-                <div class="form-group">
+                   <div class="form-group">
                     <input type="checkbox" name="recursos_origem[]" value="doação pessoa física">doação pessoa física</br>
                     <input type="checkbox" name="recursos_origem[]" value="edital público governo federal">edital público governo federal</br>
                     <input type="checkbox" name="recursos_origem[]" value="edital público governo estadual">edital público governo estadual</br>
@@ -409,28 +409,12 @@
                     <input type="checkbox" name="recursos_origem[]" value="subvenções públicas ">subvenções públicas<br>
                     <input type="checkbox" name="recursos_origem[]" value="venda de produtos/prestação de serviços">venda de produtos/prestação de serviços<br>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <label class="checkbox-inline">
-=======
-                     <label class="checkbox-inline">
->>>>>>> origin/master
                     <input type="checkbox" name="recursos_origem[]" value="outros">Outros<br>
-                    <input type = "text" value="inputoutrosprojetos" name="inputoutrosprojetos" placeholder=" outros..." class="f1-last-name form-control">
-                    </label><br>
-               </div> 
-=======
-                     <label class="checkbox-inline">
-                    <input type="checkbox" name="recursos_origem[]" value="outros">Outros<br>
-                    <input type = "text" value="inputoutrosprojetos" name="inputoutrosprojetos" placeholder=" outros..." style="display:block;" class="f1-last-name form-control">
-                    </label>
-                    <!--<input type="checkbox" name="recursos_origem[]" value="outros">outros<br>-->
-               </div>
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
-
+                    <input type = "text" value="inputoutrosprojetos" name="inputoutrosprojetos" placeholder=" outros..."  class="f1-last-name form-control">
+                    </label></br>
+                    
+               </div>  
 
 
             <!--Tabela Temas-->
