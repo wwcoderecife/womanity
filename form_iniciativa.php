@@ -79,7 +79,7 @@
                     <input type="email" name="email_1"  value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
-                <h5>Telefone</h5>
+                <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
                     <input type="tel" name="telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1" required data-error = "Por favor, preencha corretamente o campo (xx) xxxx-xxxx.">
@@ -133,7 +133,7 @@
             <!--Iniciativa-->
 
         <fieldset class="tab organizacao">
-           <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
+           <h5>1. A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
                 <h6><em>se sim, digite o nome da organizaçāo e cnpj no campo abaixo</em></h5>
               
                  <div class="form-group">
@@ -144,8 +144,8 @@
                         <option value="nao">nao</option>
                     </select> 
                 <div class="iniciativapj">     
-               <input type="text" id="inputnomeong" name="inputnomeong" class="f1-last-name form-control" placeholder="nome da organizaçāo" style='display: none' />
-                <input type="text" id="inputcnpj" maxlength="18" name="organizacao_pai"  class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" style='display: none'/ >
+               <input type="text" id="inputnomeong" name="inputnomeong" class="f1-last-name form-control" placeholder="nome da organizaçāo" style='display: none' required/>
+                <input type="text" id="inputcnpj" maxlength="18" name="organizacao_pai"  class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" required style='display: none'/ >
 
                 </div>
                     <script>
@@ -169,10 +169,10 @@
                 </div>
 
 
-                <h5>A sua iniciativa está localizada na…*</h5>
+                <h5>2. A sua iniciativa está localizada na…*</h5>
                  <div class="form-group">
                     <label class="radio-inline">
-                       <input type="radio" name="zona" value="rural" class="form-control-radio" >Zona Rural
+                       <input type="radio" name="zona" value="rural" class="form-control-radio" required >Zona Rural
                     </label>
 
                     <label class="radio-inline">
@@ -180,28 +180,28 @@
                     </label>
                 </div>
 
-                <h5>Nome da Iniciativa*</h5>
+                <h5>3. Qual o nome da sua iniciativa?*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Nome</label>
                     <input type="text" name="nome" maxlength="50" class="f1-last-name form-control" required>
                 </div>
 
 
-                <h5>Sigla da iniciativa:</h5>
+                <h5>4. Qual a sigla da sua iniciativa?</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Sigla</label>
                     <input type="text" name="sigla" class="f1-last-name form-control">
                                     
                 </div>
 
-                <h5>Telefone da iniciativa*</h5>
+                <h5>5. Informe o telefone da sua iniciativa*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Telefone</label>
-                    <input type="text" name="organizacao-telefone" required placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd" id="inputTel3">
+                    <input type="text" name="organizacao-telefone" required  placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd" id="inputTel3">
                     <div class="help-block with-errors"></div>
                 </div>
 
-                <h5>E-mail da iniciativa*</h5>
+                <h5>6. Informe o e-mail da sua iniciativa*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Email</label>
                     <input type="email" name="email" required class="f1-last-name form-control">
@@ -209,11 +209,11 @@
                 </div>
 
 
-                <h5>Como sua iniciativa se identifica?*</h5>
+                <h5>7. Como a sua iniciativa se identifica?*</h5>
 
                 <div class="form-group">
                     <label class="radio-inline">
-                       <input type="radio" name="identifica" value="acao" class="form-control-radio">Açāo
+                       <input type="radio" name="identifica" value="acao" class="form-control-radio" required>Açāo
                     </label>
 
                     <label class="radio-inline">
@@ -223,10 +223,10 @@
 
                 
 
-                <h5>De qual Natureza?</h5>
+                <h5>7.1. De qual natureza?</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="natureza" name="tipo" required>           
+                    <select class="f1-last-name form-control" id="natureza" name="tipo">           
                         <option value=""></option>
                         <option value="academica">Acadêmica</option>
                         <option value="coletivo">Coletivo</option>
@@ -240,7 +240,7 @@
                         <option value="redes">Redes</option> 
                         <option value="outros">Outros</option>  
                     </select>
-                    <input type="text" id="inputoutros" name="identifica_organizacao_outros" class="f1-last-name form-control" placeholder="descreva outro tipo"style='display: none' />
+                    <input type="text" id="inputoutros" name="identifica_organizacao_outros" class="f1-last-name form-control" required placeholder="descreva outro tipo"style='display: none' />
                     <script>
 
                         var dropdownNatureza = document.getElementById('natureza');
@@ -275,10 +275,10 @@
                 </div>
                     
                 
-                <h5> Quando sua iniciativa começou as atividades?*</h5>
+                <h5> 8. Em que ano começaram as atividades da sua iniciativa?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="year_organizacao" name="anoatividade" >
+                    <select class="f1-last-name form-control" id="year_organizacao" name="anoatividade" required >
                     <div class="help-block with-errors"></div>
                         <script>
                           var myDate = new Date();
@@ -292,10 +292,10 @@
                     </select>
 
 
-               <h5>Quantos colaboradores,funcionários ou voluntários estão envolvidos neste trabalho?*</h5>
+               <h5>9. Quantos colaboradores,funcionários ou voluntários estão envolvidos diretamente neste trabalho?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas" required>
+                    <select class="f1-last-name form-control"  required id="pessoas_envolvidas" name="pessoas_envolvidas" >
                         <option value=""></option>
                         <option value="1-5">1-5</option>
                         <option value="6-10">6-10</option>
@@ -310,10 +310,10 @@
                 </div>
 
 
-                <h5> Qual é o número de pessoas que a sua iniciativa beneficia diretamente?*</h5>
+                <h5> 10. Quantas pessoas a sua iniciativa beneficia diretamente?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="pessoas_beneficiadas" name="pessoas_beneficiadas">
+                    <select class="f1-last-name form-control" required id="pessoas_beneficiadas" name="pessoas_beneficiadas" >
                         <option value=""></option>
                         <option value="até 50">1-5</option>
                         <option value="51-250">51-250</option>
@@ -329,22 +329,23 @@
                     </select>
                   </div>
 
-               <h5>Qual foi o orçamento bruto da sua iniciativa em: *</h5>
+               <h5>11. Qual foi o orçamento bruto da sua iniciativa em: *</h5>
                  <h5>2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
-                    <input type="text" name="orcamento_2014" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2014" data-error = "Campo está em branco, favor preencher." >
+                    <input type="text" name="orcamento_2014" required placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2014" required data-error = "Campo está em branco, favor preencher." >
                     <div class="help-block with-errors"></div>
                 </div>
                 <h5>2015</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2015</label>
-                    <input type="tex" name="orcamento_2015" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2015" data-error = "Campo está em branco, favor preencher.">
+                    <input type="tex" name="orcamento_2015" required placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2015"  data-error = "Campo obrigatório, favor preencher.">
+                    <div class="help-block with-errors"></div>
                 </div>
                 <h5>2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
-                    <input type="tex" name="orcamento_2016" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2016" data-error = "Campo está em branco, favor preencher.">
+                    <input type="tex" name="orcamento_2016" required placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2016"  data-error = "Campo obrigatório, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -380,11 +381,11 @@
                 </script>
              
 
-                <h5>Sua iniciativa recebe recursos financeiros?</h5>     
+                <h5>11.1. A sua iniciativa recebe recursos financeiros?</h5>     
 
               <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="recursos" value="sim" class="form-control-radio"> Sim
+                        <input type="radio" name="recursos" required value="sim" class="form-control-radio"> Sim
                     </label>
 
                     <label class="radio-inline">
@@ -394,7 +395,7 @@
 
             <!--campo novo, substituiu a 19.2-->
 
-                <h5>Quais são as principais fontes de recursos para a realização dos projetos?</h5>
+                <h5>11.1.1. Quais são as principais fontes de recursos para a realização dos projetos?</h5>
                 <div class="form-group">
                     <input type="checkbox" name="recursos_origem[]" value="doação pessoa física">doação pessoa física</br>
                     <input type="checkbox" name="recursos_origem[]" value="edital público governo federal">edital público governo federal</br>
@@ -414,7 +415,7 @@
 
                     <label class="checkbox-inline">
                     <input type="checkbox" name="recursos_origem[]" value="outros">Outros<br>
-                    <input type = "text" id="inputoutrosprojetos" name="inputoutrosprojetos" placeholder=" outrosprojetos..."  class="f1-last-name form-control">
+                    <input type = "text" id="inputoutrosprojetos" name="inputoutrosprojetos" required placeholder=" outrosprojetos..."  class="f1-last-name form-control">
                     </label></br>
                     <!--<input type="checkbox" name="recursos_origem[]" value="outros">outros<br>-->
                </div>  
@@ -422,10 +423,11 @@
 
                    <!--Tabela Temas-->
 
-        <h5>Áreas de atuação da organização: escolha até 5 Temas e até 5 Subtemas abaixo*:</h5>
+        <h5>12. Quais são as áreas de atuação da sua iniciativa?</h5>
+        <h5>Escolha até 5 Temas e todos os Subtemas dentro da sua área de atuação*:</h5>
         <div class="form-group" style="border: 1px solid #ddd">
         <div class="table-responsive">
-        <table id="form1" name="table_temas"class="table table-hover col-sm-12" >
+        <table id="form1" name="table_temas"class="table table-hover col-sm-12" required >
 
              <thead>
                 <tr>
@@ -574,10 +576,11 @@
 
 
 
-<h5> Clique e escolha até 5 Subtemas abaixo*</h5>
+<h5>12.1. Escolha todos os subtemas dentro da sua área de atuação*</h5>
+<h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar os subtemas.</em></h6>
 <div class="form-group">
 <!--<label for="subtemas" for="f1-google-plus">Subtemas</label>-->
-       <select class="f1-last-name form-control"id="subtemas" class="selectpicker" name="subtemas[ ]" data-style="default" multiple>
+       <select class="f1-last-name form-control"id="subtemas" required class="selectpicker" name="subtemas[ ]" data-style="default" multiple>
             <option value="Aborto">Aborto</option>
             <option value="Advocacy">Advocacy</option>
             <option value="Água e saneamento básico">Água e saneamento básico</option>
@@ -637,7 +640,7 @@
 
           $('#subtemas').change(function(event) {
 
-            if ($(this).val().length > 5) {
+            if ($(this).val().length > 47) {
 
               $(this).val(last_valid_selection);
             } else {
@@ -648,11 +651,12 @@
     </script> 
 
 
-           <h5>O que faz sua iniciativa?* (até 500 caracteres).</h5>                                  
+           <h5>13. O que faz a sua iniciativa?* </h5>
+           <h6>(até 500 caracteres)</h6>                                  
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
                     <textarea name="sobre" maxlength="500" placeholder="Fale sobre a sua iniciativa...." 
-                    class="f1-about-yourself form-control" id="sobre" required ></textarea>
+                    class="f1-about-yourself form-control" id="sobre" required  data-error = "Campo obrigatório, favor preencher."></textarea>
                     <div class="help-block with-errors">
                 </div>
 
@@ -673,11 +677,11 @@
 
 
 
-                <h5>Qual o público direto atendido pela sua iniciativa?*</h5>
+                <h5>14. Qual o público diretamente atendido pela sua iniciativa?*</h5>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="publico_alvo" name="publico_alvo" required >
+                    <select class="f1-last-name form-control" required id="publico_alvo" name="publico_alvo">
                     <div class="help-block with-errors"></div> 
                         <option value=""></option>
                         <option value="Empresas">Empresas</option>
@@ -690,11 +694,11 @@
                            
                     </select>
                     
-                    <h5>Clique nos Estados que sua iniciativa tem atuação direta*</h5>
+                    <h5>15. Em quais estados a sua iniciativa tem atuação direta?*</h5>
                     <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
                     <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="organizacao_estado[ ]" multiple required>
+                    <select class="f1-last-name form-control" required name="organizacao_estado[ ]" multiple>
                         <div class="help-block with-errors"></div>
                         <option value="Acre">Acre</option>
                         <option value="Alagoas">Alagoas</option>
@@ -725,10 +729,10 @@
                         <option value="Tocantins">Tocantins</option>
                     </select>
 
-                    <h5>Sua iniciativa influenciou políticas públicas?*</h5>
+                    <h5>16. A sua iniciativa influenciou políticas públicas?*</h5>
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="politicas_publicas" value="nao" class="form-control-radio"> Nāo
+                        <input type="radio" name="politicas_publicas" required value="nao" class="form-control-radio" > Nāo
                     </label>
 
                     <label class="radio-inline">
@@ -739,7 +743,7 @@
                 <div class="form-group">
                    <label class="checkbox-inline">
                         <input type="checkbox" name="politicas_publicas_lista[]" value="municipal" class="form-control-radio">
-                        <div class="help-block with-errors"></div>municipal 
+                        <div class="help-block with-errors" ></div>municipal 
                     </label>
 
                     <label class="checkbox-inline">
@@ -758,7 +762,7 @@
 <!-- 26 Iniciativa-->
 
 
-<h5>Você realiza monitoramento e avaliação sistematizada das atividades desta iniciativa?*</h5>
+<h5>17. A sua iniciativa realiza monitoramento e avaliação sistematizada das atividades?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" name="monitoramento_atv" id="avaliacao" required>
@@ -805,7 +809,7 @@
 
 <!-- 27 Iniciativa-->
 
-<h5>Sua Organizaçāo tem uma estratégia de comunicação própria?*</h5>
+<h5>18. A sua Iniciativa tem uma estratégia de comunicação própria?*</h5>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -853,16 +857,16 @@
 
       <!-- 28 Iniciativa-->
 
-<h5>A sua Iniciativa recebeu premiações, certificações etc.?*</h5>
+<h5>19. A sua Iniciativa recebeu premiações, certificações etc.?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="premiacao" name="premiacao"name="comunicacao"required>
+                    <select class="f1-last-name form-control" id="premiacao" name="premiacao"name="comunicacao" required>
                         <div class="help-block with-errors"></div>
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim, quais?</option>    
                     </select>
-                    <textarea type="text" id="inputPremiacao" name="inputPremiacao" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
+                    <textarea type="text" id="inputPremiacao" name="inputPremiacao" required class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 "style='display: none'></textarea>
                     <script>
 
@@ -940,9 +944,9 @@
                         <option value="sudeste">Sudeste</option>
                     </select> 
                 </div>
-                 <h5>Estado*</h5>
+                 <h5>UF*</h5>
                  <div class="form-group">
-                    <label class="sr-only" for="f1-google-plus">Estado</label>
+                    <label class="sr-only" for="f1-google-plus">UF</label>
                     <select class="f1-last-name form-control" name="estado" id="estados" required>
                         <option value="escolha um estado"></option>
                     </select> 
@@ -957,19 +961,19 @@
                 <h5>Bairro*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Bairro*</label>
-                    <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control"required>
+                    <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control"required data-error= "campo obrigatório, favor preencher">
                         <div class="help-block with-errors"></div>
                 <h5>Rua*</h5>        
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-facebook">Rua*</label>
-                    <input type="text" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control"required>
+                    <input type="text" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control"required data-error= "campo obrigatório, favor preencher">
                         <div class="help-block with-errors"></div>
                 <h5>Número*</h5>        
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número*</label>
-                    <input type="number" name="numero" placeholder="Número...*"class="f1-last-name form-control" required>
+                    <input type="number" name="numero" placeholder="Número...*"class="f1-last-name form-control" required data-error= "campo obrigatório, favor preencher">
                         <div class="help-block with-errors"></div>
                 </div>
                 <h5>Complemento*</h5>
@@ -980,7 +984,7 @@
                 <h5>Cep*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep*</label>
-                    <input type="text" name="cep" id="inputCep"placeholder="Cep xx-xxx-xxx*"class="f1-last-name form-control cep" required>
+                    <input type="text" name="cep" id="inputCep"placeholder="Cep xx-xxx-xxx*"class="f1-last-name form-control cep" required data-error= "Preencher o cep corretamente">
                     <div class="help-block with-errors"></div>
                 </div>              
                 <div class="f1-buttons">
@@ -992,9 +996,9 @@
              <!--Etapa 4 Formulário: Mídia Social-->
 
             <fieldset class="tab redes_sociais">
-                <h5>Onde podemos encontrar mais informação sobre sua organização?*(Preencha pelo menos 1 item):</h5>
+                <h5>Onde podemos encontrar mais informação sobre sua iniciativa?*(Preencha pelo menos 1 item):</h5>
                 <div class="form-group">
-                    <div class="input-group">
+                    <div class="input-group" required>
                       <span class="input-group-addon"><i class="fa fa-mouse-pointer"></i></span>
                       <input class="form-control" type="text" name="site" placeholder="Site">
                     </div>
@@ -1039,57 +1043,57 @@
                 <h4>Indique até três iniciativas que na sua opinião devem participar do processo de mapeamento:</h4>
                 <h5>Iniciativa 1</h5>
 
-                <h5>Nome*</h5>
+                <h5>Nome</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="indica_nome_1" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="text" name="indica_nome_1" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name" required data-error= "campo obrigatório, favor preencher">
                 </div>
-                <h5>E-mail*</h5>
+                <h5>E-mail</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="indica_email_1" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="email" name="indica_email_1" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name" required data-error= "campo obrigatório, favor preencher">
                     
                 </div>
-                <h5>Telefone*</h5>
+                <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel4">
+                    <input type="tel" name="indica_telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel4" required data-error= "campo obrigatório, favor preencher">
                 </div>
                
                 <h5>Iniciativa 2</h5>
 
-                 <h5>Nome*</h5>
+                 <h5>Nome</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="indica_nome_2" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="text" name="indica_nome_2" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name" required data-error= "campo obrigatório, favor preencher" >
                 </div>
-                <h5>E-mail*</h5>
+                <h5>E-mail</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="text" name="indica_email_2" placeholder="email@email.com" class="f1-last-name form-control" id="f1-last-name">                    
+                    <input type="text" name="indica_email_2" placeholder="email@email.com" class="f1-last-name form-control" id="f1-last-name" required data-error= "campo obrigatório, favor preencher">                    
                 </div>
-                 <h5>Telefone*</h5>
+                 <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_2" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel5">
+                    <input type="tel" name="indica_telefone_2" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel5" required data-error= "campo obrigatório, favor preencher">
                 </div>
               
                 <h5>Iniciativa 3</h5>
 
-                  <h5>Nome*</h5>
+                  <h5>Nome</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="indica_nome_3" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="text" name="indica_nome_3" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name" required data-error= "campo obrigatório, favor preencher">
                 </div>
-                 <h5>E-mail*</h5>
+                 <h5>E-mail</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="indica_email_3" placeholder="email@email.com" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="email" name="indica_email_3" placeholder="email@email.com" class="f1-last-name form-control" id="f1-last-name"required data-error= "campo obrigatório, favor preencher">
                 </div>
-                 <h5>Telefone*</h5>
+                 <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_3" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel6">
+                    <input type="tel" name="indica_telefone_3" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel6"required data-error= "campo obrigatório, favor preencher">
                 </div>
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
