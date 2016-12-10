@@ -539,11 +539,9 @@
                         } ?>
                     >outros<br>
 
-                    <input type="text" id="inputoutrosprojetos" name="inputoutrosprojetos" value="<?php echo $edit->getInputoutrosprojetos() ?>" class="f1-last-name form-control" <?php if($edit->getInputoutros() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?>    
+                    <input type="text" id="inputoutrosprojetos" name="inputoutrosprojetos" value="<?php echo $edit->getInputoutrosprojetos() ?>" class="f1-last-name form-control" <?php if($edit->getInputoutrosprojetos() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?>    
                     ><br>  
                </div> 
-
-
 
             <!--Tabela Temas-->
 
