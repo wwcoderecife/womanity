@@ -32,7 +32,18 @@
               $(".form-ong input").attr('readonly',false);
               $(".form-ong textarea").attr('readonly',false);
               $(".edit-button").attr('disabled', false);
+               if ($('input[name="nao_tem_orcamento[]"]:checked').length > 0){
+
+                        $('#nao_tenho_orcamento_input').attr('value', 'Não tenho orçamento');
+                        $('#orcamento_2014').attr('value', '');
+                        $('#orcamento_2015').attr('value', '');
+                        $('#orcamento_2016').attr('value', '');
+                        $('#orcamento_2014').attr('disabled', true);
+                        $('#orcamento_2015').attr('disabled', true);
+                        $('#orcamento_2016').attr('disabled', true);
+                    }
               open_dialog("ok", "Agora você pode editar os dados!", 'success');
+
            }
             </script>
 
@@ -392,26 +403,54 @@
                  <h5>Em 2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
-                    <input type="text" name="orcamento_2014" value="<?php  echo $edit->getOrcamento_2014(); ?>" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2014">
+                    <input type="text" id="orcamento_2014" name="orcamento_2014" 
+                    value="<?php  if($edit->getJustificativaOrcamento() == '' ){ echo $edit->getOrcamento_2014(); } ?>" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2014">
 
                 </div>
                 <h5>Em 2015</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2015</label>
-                    <input type="text" name="orcamento_2015" value="<?php  echo $edit->getOrcamento_2015(); ?>"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2015" >
+                    <input type="text" id="orcamento_2015" name="orcamento_2015" 
+                    value="<?php  if($edit->getJustificativaOrcamento() =='' ){ echo $edit->getOrcamento_2015(); } ?>"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2015" >
                 </div>
                 <h5>Em 2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
-                    <input type="text" name="orcamento_2016" value="<?php  echo $edit->getOrcamento_2016(); ?>"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2016">
+                    <input type="text" id="orcamento_2016" name="orcamento_2016" 
+                    value="<?php  if($edit->getJustificativaOrcamento() == ''){ echo $edit->getOrcamento_2016(); } ?>"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2016">
                 </div>
 
                 <!--novo item -->
                 <h5>Não tenho orçamento</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name"></label>
-                    <input type="text" name="justificativa_orcamento" value="<?php echo $edit->getJustificativaOrcamento(); ?>" placeholder=" caso não tem orçamento,descreva o motivo..." class="f1-last-name form-control">
+                    <input type="checkbox" value="sim" name="nao_tem_orcamento[]" onclick="check_orcamento();"
+                    <?php if($edit->getJustificativaOrcamento() != ""){ echo "checked"; } ?>
+                    > Não tenho Orçamento
+                    <input type="HIDDEN" id="nao_tenho_orcamento_input" name="justificativa_orcamento" class="f1-last-name form-control">
                 </div>
+                <script type="text/javascript">
+
+                function check_orcamento(){
+                    if ($('input[name="nao_tem_orcamento[]"]:checked').length > 0){
+
+                        $('#nao_tenho_orcamento_input').attr('value', 'Não tenho orçamento');
+                        $('#orcamento_2014').attr('value', '');
+                        $('#orcamento_2015').attr('value', '');
+                        $('#orcamento_2016').attr('value', '');
+                        $('#orcamento_2014').attr('disabled', true);
+                        $('#orcamento_2015').attr('disabled', true);
+                        $('#orcamento_2016').attr('disabled', true);
+                    }else{
+                        $('#orcamento_2014').attr('disabled', false);
+                        $('#orcamento_2015').attr('disabled', false);
+                        $('#orcamento_2016').attr('disabled', false);
+                        $('#nao_tenho_orcamento_input').attr('value', '');
+                    }
+
+                    console.log( $('#nao_tenho_orcamento_input').val());
+                }
+                </script>
 
                 <h5>11.1. A sua Organizaçāo recebe recursos financeiros?</h5>
                 <div class="form-group">

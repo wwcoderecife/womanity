@@ -42,7 +42,6 @@
     <body>
 <?php
 
-require_once "Crud.class.php";
 include_once 'Conexao.class.php';
 
 class CadastrarAll extends Conexao {

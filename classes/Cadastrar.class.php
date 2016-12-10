@@ -1,6 +1,5 @@
 <?php
 
-require_once "Crud.class.php";
 require_once "Usuario.class.php";
 
 class Cadastrar extends Conexao {

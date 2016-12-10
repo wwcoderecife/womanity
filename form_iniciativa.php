@@ -349,19 +349,35 @@
                 </div>
 
 
-                <h5>Não tenho orçamento</h5>
+               <h5>Não tenho orçamento</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name"></label>
-                    <input type="text" name="justificativa_orcamento" placeholder=" caso não tem orçamento,descreva o motivo..."class="f1-last-name form-control">
+                    <input type="checkbox" value="sim" name="nao_tem_orcamento[]" onclick="check_orcamento(); "> Não tenho Orçamento
+                    <input type="HIDDEN" id="nao_tenho_orcamento_input" name="justificativa_orcamento" class="f1-last-name form-control">
                 </div>
 
-                <!-- Sem Orçamento Novo
-           
-                <div class="form-group">
-                   <label class="radio-inline">
-                        <input type="radio" name="justificativa_orcamento" value="sim" class="form-control-radio">Sem Orçamento
-                </label>
-            -->
+                <script type="text/javascript">
+
+                function check_orcamento(){
+                    if ($('input[name="nao_tem_orcamento[]"]:checked').length > 0){
+
+                        $('#nao_tenho_orcamento_input').attr('value', 'Não tenho orçamento');
+                        $('#orcamento_2014').attr('value', '');
+                        $('#orcamento_2015').attr('value', '');
+                        $('#orcamento_2016').attr('value', '');
+                        $('#orcamento_2014').attr('disabled', true);
+                        $('#orcamento_2015').attr('disabled', true);
+                        $('#orcamento_2016').attr('disabled', true);
+                    }else{
+                        $('#orcamento_2014').attr('disabled', false);
+                        $('#orcamento_2015').attr('disabled', false);
+                        $('#orcamento_2016').attr('disabled', false);
+                        $('#nao_tenho_orcamento_input').attr('value', '');
+                    }
+
+                    console.log( $('#nao_tenho_orcamento_input').val());
+                }
+                </script>
              
 
                 <h5>Sua iniciativa recebe recursos financeiros?</h5>     
