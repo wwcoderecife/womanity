@@ -52,15 +52,13 @@
     $array_politicas_publicas = $edit->getPoliticasPublicasList();  
     $array_subtema = $edit->getSubtemas();
     $array_estados = $edit->getEstados();
-
-    echo $edit->getInicioAtv();
 ?>       
 
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
         <form role="form" action="classes/prepare_cadastro.php" method="post" class="f1 form-ong">
             <input type="hidden" value="editar" name="form_type" />
-    		<h3>Cadastro UNA Ecossistema<br>Iniciativa</h3>
+    		<h3>Cadastro do Ecossistema<br>Iniciativa</h3>
     		<p>Preencha os campos obrigatórios*</p>
     		<div class="f1-steps">
     			<div class="f1-progress">
@@ -167,8 +165,8 @@
             <!--Iniciativa-->
 
         <fieldset>
-           <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
-                <h6><em>se sim, digite o nome da organizaçāo e cnpj no campo abaixo</em></h5>
+           <h4>1. A sua iniciativa está dentro de uma organização juridicamente constituída?*</h4>
+                <h6><em>Se sim, digite o nome da organizaçāo e cnpj nos campos abaixo</em></h5>
               
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -180,7 +178,7 @@
                      
                         <option value="nao"
                         <?php if($edit->getOrganizacaoPai() == ""){ echo "selected"; } ?>
-                         >nao</option>
+                         >não</option>
                     </select> 
                 <div class="iniciativapj">     
                <input type="text" id="inputnomeong" value="<?php echo $edit->getInputnomeong() ?>"  name="inputnomeong" class="f1-last-name form-control" placeholder="nome da organizaçāo" <?php if($edit->getInputnomeong() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> />
@@ -210,7 +208,7 @@
                 </div>
 
 
-                <h5>A sua iniciativa está localizada na…*</h5>
+                <h4>2. Onde a sua iniciativa está localizada?*</h4>
                  <div class="form-group">
                     <label class="radio-inline">
                        <input type="radio" name="zona" value="rural" class="form-control-radio" 
@@ -225,28 +223,28 @@
                     </label>
                 </div>
 
-                <h5>Nome da Iniciativa*</h5>
+                <h4>3. Qual o nome da sua iniciativa?*</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Nome</label>
                     <input type="text" name="nome" value="<?php echo $edit->getNome() ?>" maxlength="50" class="f1-last-name form-control" required>
                 </div>
 
 
-                <h5>Sigla da iniciativa:</h5>
+                <h4>4. Qual a sigla da sua iniciativa?</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Sigla</label>
                     <input type="text" name="sigla" value="<?php echo $edit->getSigla() ?>" class="f1-last-name form-control">
                                     
                 </div>
 
-                <h5>Telefone da iniciativa*</h5>
+                <h4>5. Informe o telefone da sua iniciativa*</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Telefone</label>
                     <input type="text" name="organizacao-telefone" value="<?php echo $edit->getTelefone() ?>" required placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd" id="inputTel3">
                     <div class="help-block with-errors"></div>
                 </div>
 
-                <h5>E-mail da iniciativa*</h5>
+                <h4>6. Informe o e-mail da sua iniciativa*</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Email</label>
                     <input type="email" name="email" value="<?php echo $edit->getEmail() ?>" required class="f1-last-name form-control">
@@ -254,7 +252,7 @@
                 </div>
 
                 <!--verificar o get e set, se está correto -->
-                <h5>Como sua iniciativa se identifica?*</h5>
+                <h4>7. Como a sua iniciativa se identifica?*</h4>
 
                 <div class="form-group">
                     <label class="radio-inline">
@@ -272,7 +270,7 @@
 
                 
 
-                <h5>De qual Natureza?</h5>
+                <h5>7.1. De qual natureza?</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="natureza" name="tipo" required>           
@@ -300,7 +298,8 @@
                         <option value="outros"<?=($edit->getTipo() == 'outros')?'selected':''?>>
                             Outros</option>  
                     </select>
-                    <!-- <input type="text" id="inputoutros" name="inputoutros" class="f1-last-name form-control" placeholder="descreva outro tipo"style='display: none' /> -->
+                    <input type="text" id="inputoutros" name="identifica_organizacao_outros" value="<?php echo $edit->getIdentificaOrganizacaoOutros() ?>" class="f1-last-name form-control" 
+                    placeholder="descreva outro tipo" <?php if($edit->getIdentificaOrganizacaoOutros() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> />
                     <script>
 
                         var dropdownNatureza = document.getElementById('natureza');
@@ -335,7 +334,7 @@
                 </div>
                     
                 
-                <h5> Quando sua iniciativa começou as atividades?*</h5>
+                <h4> 8. Em que ano começaram as atividades da sua iniciativa?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="year_organizacao" name="anoatividade" required>
@@ -358,7 +357,7 @@
                     </select>
 
 
-              <h5>Quantos colaboradores,funcionários ou voluntários estão envolvidos neste trabalho?*</h5>
+              <h4>9. Quantos colaboradores,funcionários ou voluntários estão envolvidos diretamente neste trabalho?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas">
@@ -375,7 +374,7 @@
                     </select>
                 </div>
 
-                <h5>Qual é o número de pessoas que a sua iniciativa beneficia diretamente?*</h5>
+                <h4>10. Quantas pessoas a sua iniciativa beneficia diretamente?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="pessoas_beneficiadas" name="pessoas_beneficiadas" required>
@@ -394,19 +393,19 @@
                     </select>
                 </div>
 
-               <h5>Qual foi o orçamento bruto da sua iniciativa em: *</h5>
-                 <h5>2014</h5>
+               <h4>11. Qual foi o orçamento bruto da sua iniciativa? *</h4>
+                 <h5>Em 2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
                     <input type="text" name="orcamento_2014" value="<?php  echo $edit->getOrcamento_2014(); ?>" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2014"required data-error = "Campo está em branco, favor preencher." >
                     <div class="help-block with-errors"></div>
                 </div>
-                <h5>2015</h5>
+                <h5>Em 2015</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2015</label>
                     <input type="tex" name="orcamento_2015" value="<?php  echo $edit->getOrcamento_2015(); ?>" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2015"required data-error = "Campo está em branco, favor preencher.">
                 </div>
-                <h5>2016</h5>
+                <h5>Em 2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
                     <input type="tex" name="orcamento_2016" value="<?php  echo $edit->getOrcamento_2016(); ?>" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2016"required data-error = "Campo está em branco, favor preencher.">
@@ -420,7 +419,7 @@
                     <input type="text" name="justificativa_orcamento" value="<?php echo $edit->getJustificativaOrcamento(); ?>" placeholder=" caso não tem orçamento,descreva o motivo..." class="f1-last-name form-control">
                 </div>
 
-                <h5>Sua iniciativa recebe recursos financeiros?</h5>     
+                <h5>11.1. A sua iniciativa recebe recursos financeiros?</h5>         
 
               <div class="form-group">
                    <label class="radio-inline">
@@ -437,7 +436,7 @@
                 </div>
 
 
-              <h5>Quais são as principais fontes de recursos para a realização dos projetos?</h5>
+              <h5>11.1.1. Quais são as principais fontes de recursos para a realização dos projetos?</h5>
                 <div class="form-group">
                     <input type="checkbox" name="recursos_origem[]" value="doação pessoa física"
                         <?php 
@@ -541,7 +540,8 @@
 
                    <!--Tabela Temas-->
 
-        <h5>Áreas de atuação da iniciativa: escolha até 5 Temas e até 5 Subtemas abaixo*:</h5>
+        <h4>12. Quais são as áreas de atuação da sua iniciativa? </h4>
+        <h5>Escolha até 5 Temas e todos os Subtemas dentro da sua área de atuação*:</h5>
         <div class="form-group" style="border: 1px solid #ddd">
         <div class="table-responsive">
         <table id="form1" name="table_temas"class="table table-hover col-sm-12" >
@@ -781,7 +781,7 @@
 
 
 
-<h5> Clique e escolha até 5 Subtemas abaixo*</h5>
+<h5> 12.1. Escolha todos os subtemas dentro da sua área de atuação*</h5>
 <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar os subtemas.</em></h6>
 <div class="form-group">
 <!--<label for="subtemas" for="f1-google-plus">Subtemas</label>-->
@@ -987,7 +987,7 @@
             <option value="Promoção à cargos de liderança"
             <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
-                    if(in_array('Preconceito e discriminação', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                    if(in_array('Promoção à cargos de liderança', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Promoção à cargos de liderança</option>
             <option value="Questão presidiária"
@@ -996,7 +996,7 @@
                     if(in_array('Questão presidiária', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Questão presidiária</option>
-             <option value="Reciclagem e logísitca diversa"
+             <option value="Reciclagem e logística reversa"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Reciclagem e logísitca diversa', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
@@ -1085,7 +1085,8 @@
     </script> 
 
 
-           <h5>O que faz sua iniciativa?* (até 500 caracteres).</h5>                                  
+           <h4>13. O que faz a sua iniciativa?* </h4> 
+            <h6>(até 500 caracteres)</h6>
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
                     <textarea name="sobre" maxlength="500" placeholder="Fale sobre a sua iniciativa...." required
@@ -1093,60 +1094,7 @@
                     <div class="help-block with-errors">
                 </div>
 
-
-                 <h5>Qual é a sua função no ecossistema?*</h5>
-
-                 <div class="form-group">
-                 <input type="checkbox" name="funcao[ ]" value="Advocacy"
-                 <?php 
-                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
-                            if(in_array('Advocacy', $array_temas[$i])) : ?> checked="checked" <?php endif; 
-                        } ?>
-                 >Advocacy<br>
-                 <input type="checkbox" name="funcao[ ]" value="Atuação direta com mulheres, homens, LGBTT, etc" class="form-control-radio"
-                 <?php 
-                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
-                            if(in_array('Atuação direta com mulheres, homens, LGBTT, etc', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
-                        } ?>
-                 >Atuação direta com mulheres, homens, LGBTT, etc<br>
-
-                 <input type="numeric"  name="numero_beneficiarios" value="<?php echo $edit->getNumeroBeneficiarios(); ?>" placeholder="número de beneficiários diretos" style="margin-left: 20px" class="f1-last-name form-control"><br>
-                 <input type="checkbox" name="funcao[ ]" value="Financiadores"class="form-control-radio"
-                 <?php 
-                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
-                            if(in_array('Financiadores', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
-                        } ?>
-
-                 >Financiadores<br>
-                 <input type="checkbox" name="funcao[ ]" value="Fortalecedor institucional"class="form-control-radio"
-                 <?php 
-                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
-                            if(in_array('Fortalecedor institucional', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
-                        } ?>
-                 >Fortalecedor institucional<br>
-                 <input type="checkbox" name="funcao[ ]" value="público" style="margin-left: 20px"class="form-control-radio"
-                 <?php 
-                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
-                            if(in_array('público', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
-                        } ?>
-                 >público
-                 <input type="checkbox" name="funcao[ ]" value="privado" style="margin-left: 20px"class="form-control-radio"
-                 <?php 
-                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
-                            if(in_array('privado', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
-                        } ?>
-                 >privado
-                 <input type="checkbox" name="funcao[ ]" value="social"  style="margin-left: 20px"class="form-control-radio"
-                 <?php 
-                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
-                            if(in_array('social', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
-                        } ?>
-                 >social⁠⁠⁠⁠   
-                 </div>   
-
-
-
-                <h5>Qual o público direto atendido pela sua iniciativa?*</h5>
+                <h4>14. Qual o público diretamente atendido pela sua iniciativa?*</h4>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -1176,7 +1124,7 @@
                             >Mulheres</option>          
                     </select>
                     
-                    <h5>Clique nos Estados que sua iniciativa tem atuação direta*</h5>
+                    <h4>15. Em quais estados a sua iniciativa tem atuação direta?*</h4>
                     <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
                     <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -1344,7 +1292,7 @@
                         >Tocantins</option>
                     </select>
 
-                    <h5>Sua iniciativa influenciou políticas públicas?*</h5>
+                    <h4>16. A sua iniciativa influenciou políticas públicas?*</h4>
                 <div class="form-group">
                    <label class="radio-inline">
                         <input type="radio" name="politicas_publicas" <?=($edit->getPoliticasPublicas() == '')?'checked=checked':''?>
@@ -1356,7 +1304,7 @@
                         value="sim" class="form-control-radio"> Sim
                     </label>
                 </div>
-
+					<h5>16.1. Se sim, em quais níveis?</h5>
                 <div class="form-group">
                    <label class="checkbox-inline">
                         <input type="checkbox" name="politicas_publicas_lista[]" value="municipal" class="form-control-radio"
@@ -1392,7 +1340,7 @@
 <!-- 26 Iniciativa-->
 
 
-<h5>Você realiza monitoramento e avaliação sistematizada das atividades desta iniciativa?*</h5>
+			<h4>17. A sua iniciativa realiza monitoramento e avaliação sistematizada das atividades?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" name="monitoramento_atv" id="avaliacao" required>
@@ -1443,7 +1391,7 @@
 
 <!-- 27 Iniciativa-->
 
-<h5>Sua Iniciativa tem uma estratégia de comunicação própria?*</h5>
+			<h4>18. A sua Iniciativa tem uma estratégia de comunicação própria?*</h4>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -1494,7 +1442,7 @@
 
       <!-- 28 Iniciativa-->
 
-<h5>A sua Iniciativa recebeu premiações, certificações etc.?*</h5>
+			<h4>19. A sua iniciativa recebeu premiações, certificações, etc.?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="premiacao" name="premiacao"name="comunicacao"required>
@@ -1544,7 +1492,7 @@
 
                 <!-- 29-->
 
-                 <h5>Quais são as organizações com atuação na temática da mulher com que sua iniciativa se relaciona diretamente?</h5>
+                 <!-- <h5>Quais são as organizações com atuação na temática da mulher com que sua iniciativa se relaciona diretamente?</h5>
                  <h5>Organização 1</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
@@ -1559,7 +1507,7 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="relaciona3" class="f1-last-name form-control"  value="<?php echo (explode("_3",$edit->getRelaciona_3())[0]); ?>">
-                </div>
+                </div> -->
 
 
                 <div class="f1-buttons">
@@ -1587,9 +1535,9 @@
                         >Sudeste</option>
                     </select> 
                 </div>
-                 <h5>Estado*</h5>
+                 <h5>UF*</h5>
                  <div class="form-group">
-                    <label class="sr-only" for="f1-google-plus">Estado</label>
+                    <label class="sr-only" for="f1-google-plus">UF</label>
                     <select class="f1-last-name form-control" name="estado" id="estados">
 
                         <?php echo "<script type='text/javascript'> var estado = '".$edit->getEstado()."'; </script>"; ?>

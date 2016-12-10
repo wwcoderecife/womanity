@@ -70,6 +70,8 @@ class CadastrarAll extends Conexao {
     private $inputnomeong;
     private $justificativa_orcamento;
     private $qtde_beneficiadas;
+    private $identifica_organizacao_outros;
+    private $fonte_recursos_outros;
 
 
     //******Contatos*******//
@@ -222,6 +224,13 @@ class CadastrarAll extends Conexao {
     public function setQtdeBeneficiadas($qtde_beneficiadas){
         $this->qtde_beneficiadas = $qtde_beneficiadas;
     }
+    public function setIdentificaOrganizacaOutros($identifica_organizacao_outros){
+        $this->identifica_organizacao_outros = $identifica_organizacao_outros;
+    }
+
+    public function setFonteRecursosOutros($fonte_recursos_outros){
+        $this->fonte_recursos_outros = $fonte_recursos_outros;
+    }
     
 
     //organizacoes Gets
@@ -295,6 +304,13 @@ class CadastrarAll extends Conexao {
        return $this->qtde_beneficiadas;
     }
 
+    public function getIdentificaOrganizacaOutros(){
+        return $this->identifica_organizacao_outros;
+    }
+
+    public function getFonteRecursosOutros(){
+        return $this->fonte_recursos_outros;
+    }
 
 
     //contatos Sets
@@ -686,8 +702,9 @@ class CadastrarAll extends Conexao {
             $inserir_ong = $pdo->prepare("insert into organizacoes (
                 cnpj, localizacao, nome, sigla, telefone, email, tipo, inicio_atv, qtde_pessoas, recursos_financeiros,
                 descricao,  publico_atendido, politicas_publicas, monitoramento_atividades, estrategia_comunicacao,
-                premiacao_certificacao, organizacao_pai, identifica_iniciativa, usuario_id, inputnomeong, justificativa_orcamento, pessoas_benefeciadas)
-                                    values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                premiacao_certificacao, organizacao_pai, identifica_iniciativa, usuario_id, inputnomeong, justificativa_orcamento, 
+                pessoas_benefeciadas, identifica_organizacao_outros, fonte_recursos_outros)
+                                    values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             $inserir_ong->bindValue(1, $this->getCnpj());
             $inserir_ong->bindValue(2, $this->getLocalizacao());
             $inserir_ong->bindValue(3, $this->getNome());
@@ -710,6 +727,8 @@ class CadastrarAll extends Conexao {
             $inserir_ong->bindValue(20, $this->getInputnomeong());
             $inserir_ong->bindValue(21, $this->getJustificativaOrcamento());
             $inserir_ong->bindValue(22, $this->getQtdeBeneficiadas());
+            $inserir_ong->bindValue(23, $this->getIdentificaOrganizacaOutros());
+            $inserir_ong->bindValue(24, $this->getFonteRecursosOutros());
             $inserir_ong->execute();
             $organizacao_id = $pdo->lastInsertId();
             $_SESSION['organizacao_id'] = $organizacao_id;
@@ -958,19 +977,19 @@ class CadastrarAll extends Conexao {
         }
         catch (Exception $e){
               $pdo->rollback();
-              echo $e->getMessage();
-               // echo "<script type='text/javascript'>
+              //echo $e->getMessage();
+               echo "<script type='text/javascript'>
 
-               //          sweetAlert({
-               //            title: 'Erro',
-               //             text: 'Não foi possível realizar o cadastro!',
-               //              type: 'error'
-               //            },
-               //            function(){
-               //              window.location.href = '../form.php';
-               //          });
+                        sweetAlert({
+                          title: 'Erro',
+                           text: 'Não foi possível realizar o cadastro!',
+                            type: 'error'
+                          },
+                          function(){
+                            window.location.href = '../form.php';
+                        });
 
-               //      </script>";
+                    </script>";
 
         }
 
@@ -992,7 +1011,8 @@ class CadastrarAll extends Conexao {
             $edit_ong = $pdo->prepare("update organizacoes set cnpj = ? , localizacao = ? , nome = ?, sigla = ?,
                 telefone = ?, email = ?, tipo = ?, inicio_atv = ?, qtde_pessoas = ?, recursos_financeiros = ?,
                 descricao = ?,  publico_atendido = ?, politicas_publicas = ?, monitoramento_atividades = ?, estrategia_comunicacao = ?,
-                premiacao_certificacao = ?, organizacao_pai = ?, identifica_iniciativa = ?, inputnomeong = ?, justificativa_orcamento = ?, pessoas_benefeciadas = ?
+                premiacao_certificacao = ?, organizacao_pai = ?, identifica_iniciativa = ?, inputnomeong = ?, justificativa_orcamento = ?, 
+                pessoas_benefeciadas = ?, identifica_organizacao_outros = ?, fonte_recursos_outros = ?
                 where usuario_id = ? ");
             $edit_ong->bindValue(1, $this->getCnpj());
             $edit_ong->bindValue(2, $this->getLocalizacao());
@@ -1015,7 +1035,9 @@ class CadastrarAll extends Conexao {
             $edit_ong->bindValue(19, $this->getInputnomeong());
             $edit_ong->bindValue(20, $this->getJustificativaOrcamento());
             $edit_ong->bindValue(21, $this->getQtdeBeneficiadas());
-            $edit_ong->bindValue(22, $this->getUsuarioId());
+            $edit_ong->bindValue(22, $this->getIdentificaOrganizacaOutros());
+            $edit_ong->bindValue(23, $this->getFonteRecursosOutros());
+            $edit_ong->bindValue(24, $this->getUsuarioId());
             
             $edit_ong->execute();
 

@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>UNA Ecossistema</title>
+        <title>Ecossistema</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
@@ -69,7 +69,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.html">UNA Ecossistema</a>
+					<a class="navbar-brand" href="index.html">Ecossistema</a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="top-navbar-1">
@@ -90,13 +90,13 @@
                 
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2 text">
-                        <h1><strong>UNA </strong>Ecossistema</h1>
+                        <h1><strong>Ecossistema de iniciativas </strong>para equidade de gênero e empoderamento da mulher</h1>
                         <div class="description">
-                       	    <p>
+                       	   <!--  <p>
                                 <strong>Ecossistema de Atores pelos Direitos e Empoderamento das Mulheres:</strong>:<br>
                                  Interconexões para maximizar impacto</br>
                             
-                            </p>
+                            </p> -->
                         </div>
                     </div>
                 </div>

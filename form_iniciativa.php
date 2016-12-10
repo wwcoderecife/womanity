@@ -240,7 +240,7 @@
                         <option value="redes">Redes</option> 
                         <option value="outros">Outros</option>  
                     </select>
-                    <input type="text" id="inputoutros" name="inputoutros" class="f1-last-name form-control" placeholder="descreva outro tipo"style='display: none' />
+                    <input type="text" id="inputoutros" name="identifica_organizacao_outros" class="f1-last-name form-control" placeholder="descreva outro tipo"style='display: none' />
                     <script>
 
                         var dropdownNatureza = document.getElementById('natureza');
@@ -628,7 +628,7 @@
                 </div>
 
 
-                 <h5>Qual é a sua função no ecossistema?*</h5>
+                 <!-- <h5>Qual é a sua função no ecossistema?*</h5>
 
                  <div class="form-group">
                  <input type="checkbox" name="funcao[ ]" value="Advocacy">Advocacy<br>
@@ -640,7 +640,7 @@
                  <input type="checkbox" name="funcao[ ]" value="público" style="margin-left: 20px"class="form-control-radio">público
                  <input type="checkbox" name="funcao[ ]" value="privado" style="margin-left: 20px"class="form-control-radio">privado
                  <input type="checkbox" name="funcao[ ]" value="social"  style="margin-left: 20px"class="form-control-radio">social⁠⁠⁠⁠   
-                 </div>   
+                 </div>   -->
 
 
 
@@ -871,7 +871,7 @@
 
                 <!-- 29-->
 
-                 <h5>Quais são as organizações com atuação na temática da mulher com que sua organizaçāo se relaciona diretamente?</h5>
+                <!--  <h5>Quais são as organizações com atuação na temática da mulher com que sua organizaçāo se relaciona diretamente?</h5>
                  <h5>Organização 1</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
@@ -886,7 +886,7 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="relaciona3" class="f1-last-name form-control">
-                </div>
+                </div> -->
 
 
                 <div class="f1-buttons">

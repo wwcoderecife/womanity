@@ -29,6 +29,9 @@
     $inputnomeong = filter_input(INPUT_POST, "inputnomeong", FILTER_SANITIZE_MAGIC_QUOTES);
     $justificativa_orcamento = filter_input(INPUT_POST, "justificativa_orcamento", FILTER_SANITIZE_MAGIC_QUOTES);
     $usuario_id = $_SESSION['usuario_id'];
+    $identifica_organizacao_outros = filter_input(INPUT_POST, "identifica_organizacao_outros", FILTER_SANITIZE_MAGIC_QUOTES);
+    $fonte_recursos_outros = filter_input(INPUT_POST, "fonte_recursos_outros", FILTER_SANITIZE_MAGIC_QUOTES);
+
     
 
     //contato 1
@@ -136,6 +139,8 @@
         $novo->setUsuarioId($usuario_id);
         $novo->setJustificativaOrcamento($justificativa_orcamento);
         $novo->setInputnomeong($inputnomeong);
+        $novo->setIdentificaOrganizacaOutros($identifica_organizacao_outros);
+        $novo->setFonteRecursosOutros($fonte_recursos_outros);
       
 
         //contato
