@@ -403,7 +403,7 @@
 
                     <label class="checkbox-inline">
                     <input type="checkbox" name="recursos_origem[]" value="outros">Outros<br>
-                    <input type = "text" value="inputoutrosprojetos" name="inputoutrosprojetos" placeholder=" outros..."  class="f1-last-name form-control">
+                    <input type = "text" id="inputoutrosprojetos" name="inputoutrosprojetos" placeholder=" outrosprojetos..."  class="f1-last-name form-control">
                     </label></br>
                     
                </div>  

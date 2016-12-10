@@ -1073,7 +1073,7 @@
         </select>
 
      </div>
-
+<!--
 <script>
      $(document).ready(function() {
 
@@ -1090,7 +1090,7 @@
           });
         });
     </script> 
-
+ -->   
 
             <h4>13. O que faz a sua organização?* </h4> 
            <h6>(até 500 caracteres)</h6>                                 
@@ -1105,46 +1105,46 @@
                  <div class="form-group">
                  <input type="checkbox" name="funcao[ ]" value="Advocacy"
                     <?php 
-                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
-                            if(in_array('Advocacy', $array_temas[$i])) : ?> checked="checked" <?php endif; 
+                        //for($i = 0; $i <= count($array_funcoes)-1; $i++){
+                           // if(in_array('Advocacy', $array_temas[$i])) : ?> checked="checked" <?php //endif; 
                         } ?>
                     >Advocacy<br>
                  <input type="checkbox" name="funcao[ ]" value="Atuação direta com mulheres, homens, LGBTT, etc" class="form-control-radio"
                  <?php 
-                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
-                            if(in_array('Atuação direta com mulheres, homens, LGBTT, etc', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
+                        //for($i = 0; $i <= count($array_funcoes)-1; $i++){
+                            //if(in_array('Atuação direta com mulheres, homens, LGBTT, etc', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
                     >Atuação direta com mulheres, homens, LGBTT, etc<br>
 
-                 <input type="numeric"  name="numero_beneficiarios" value="<?php echo $edit->getNumeroBeneficiarios(); ?>" placeholder="número de beneficiários diretos" style="margin-left: 20px" class="f1-last-name form-control"><br>
+                 <input type="numeric"  name="numero_beneficiarios" value="<?php //echo $edit->getNumeroBeneficiarios(); ?>" placeholder="número de beneficiários diretos" style="margin-left: 20px" class="f1-last-name form-control"><br>
                  <input type="checkbox" name="funcao[ ]" value="Financiadores"class="form-control-radio"
                     <?php 
-                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
-                            if(in_array('Financiadores', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
+                        //for($i = 0; $i <= count($array_funcoes)-1; $i++){
+                            //if(in_array('Financiadores', $array_funcoes[$i])) : ?> checked="checked" <?php //endif; 
                         } ?>
                     >Financiadores<br>
                  <input type="checkbox" name="funcao[ ]" value="Fortalecedor institucional"class="form-control-radio"
                     <?php 
-                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
-                            if(in_array('Fortalecedor institucional', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
+                        //for($i = 0; $i <= count($array_funcoes)-1; $i++){
+                           // if(in_array('Fortalecedor institucional', $array_funcoes[$i])) : ?> checked="checked" <?php //endif; 
                         } ?>
                     >Fortalecedor institucional<br>
                  <input type="checkbox" name="funcao[ ]" value="público" style="margin-left: 20px"class="form-control-radio"
                     <?php 
-                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
-                            if(in_array('público', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
+                        //for($i = 0; $i <= count($array_funcoes)-1; $i++){
+                            //if(in_array('público', $array_funcoes[$i])) : ?> checked="checked" <?php //endif; 
                         } ?>
                     >público
                  <input type="checkbox" name="funcao[ ]" value="privado" style="margin-left: 20px"class="form-control-radio"
                     <?php 
-                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
-                            if(in_array('privado', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
+                        //for($i = 0; $i <= count($array_funcoes)-1; $i++){
+                           // if(in_array('privado', $array_funcoes[$i])) : ?> checked="checked" <?php //endif; 
                         } ?>
                     >privado
                  <input type="checkbox" name="funcao[ ]" value="social"  style="margin-left: 20px"class="form-control-radio"
                     <?php 
-                        for($i = 0; $i <= count($array_funcoes)-1; $i++){
-                            if(in_array('social', $array_funcoes[$i])) : ?> checked="checked" <?php endif; 
+                        //for($i = 0; $i <= count($array_funcoes)-1; $i++){
+                            //if(in_array('social', $array_funcoes[$i])) : ?> checked="checked" <?php //endif; 
                         } ?>
                     >social⁠⁠⁠⁠   
                  </div>  -->  
@@ -1570,17 +1570,17 @@
                  <h5>Organização 1</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                <input type="text" name="relaciona1"  class="f1-last-name form-control" value="<?php echo (explode("_1",$edit->getRelaciona_1())[0]); ?>" >
+                <input type="text" name="relaciona1"  class="f1-last-name form-control" value="<?php //echo (explode("_1",$edit->getRelaciona_1())[0]); ?>" >
                 </div>
                 <h5>Organização 2</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="relaciona2"  class="f1-last-name form-control" value="<?php echo (explode("_2",$edit->getRelaciona_2())[0]); ?>">
+                    <input type="text" name="relaciona2"  class="f1-last-name form-control" value="<?php //echo (explode("_2",$edit->getRelaciona_2())[0]); ?>">
                 </div>
                 <h5>Organização 3</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="relaciona3" class="f1-last-name form-control" value="<?php echo (explode("_3",$edit->getRelaciona_3())[0]); ?>">
+                    <input type="text" name="relaciona3" class="f1-last-name form-control" value="<?php //echo (explode("_3",$edit->getRelaciona_3())[0]); ?>">
                 </div>  -->
 
                 
