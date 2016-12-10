@@ -247,7 +247,7 @@
                         <option value="redes">Redes</option> 
                         <option value="outros">Outros</option>
                     </select> 
-                    <!-- <input type="text" id="inputoutros" name="inputoutros" class="f1-last-name form-control" placeholder="descreva outro tipo"style='display: none' /> -->
+                      <input type="text" id="inputoutros" name="inputoutros" class="f1-last-name form-control" placeholder="descreva outro tipo"style='display: none' />
                     <script>
 
                         var dropdownIdentifica = document.getElementById('organizacao-tipo');
@@ -297,16 +297,8 @@
                           </script>
                     </select>
 
+                <h4>9. Quantos colaboradores,funcionários ou voluntários estão envolvidos diretamente neste trabalho?*</h4>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <h5>Quantos colaboradores,funcionários ou voluntários estão envolvidos neste trabalho?*</h5>
-=======
-                <h4>9. Quantos colaboradores,funcionários ou voluntários estão envolvidos diretamente neste trabalho?*</h4>
->>>>>>> origin/master
-=======
-                <h4>9. Quantos colaboradores,funcionários ou voluntários estão envolvidos diretamente neste trabalho?*</h4>
->>>>>>> origin/master
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas" required>
@@ -419,17 +411,9 @@
 
             <!--Tabela Temas-->
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <h5>Áreas de atuação da organização: escolha até 5 Temas e até 5 Subtemas abaixo*:</h5>
-=======
            <h4>12. Quais são as áreas de atuação da sua Organização? </h4>
             <h5>Escolha até 5 Temas e todos os Subtemas dentro da sua área de atuação*:</h5>
->>>>>>> origin/master
-=======
-           <h4>12. Quais são as áreas de atuação da sua Organização? </h4>
-            <h5>Escolha até 5 Temas e todos os Subtemas dentro da sua área de atuação*:</h5>
->>>>>>> origin/master
+
             <div class="form-group" style="border: 1px solid #ddd">
             <div class="table-responsive">
             <table id="form1" name="table_temas"class="table table-hover col-sm-12" >
@@ -581,16 +565,8 @@
 
 <!--subtemas-->
 
+<h5> 12.1. Escolha todos os subtemas dentro da sua área de atuação*</h5>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<h5> Clique e escolha até 5 Subtemas abaixo*</h5>
-=======
-<h5> 12.1. Escolha todos os subtemas dentro da sua área de atuação*</h5>
->>>>>>> origin/master
-=======
-<h5> 12.1. Escolha todos os subtemas dentro da sua área de atuação*</h5>
->>>>>>> origin/master
  <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar os subtemas.</em></h6>
 <div class="form-group">
 <label for="subtemas" for="f1-google-plus">Subtemas</label>
@@ -646,7 +622,7 @@
         </select>
 
      </div>
-
+<!--
 <script>
      $(document).ready(function() {
 
@@ -663,6 +639,7 @@
           });
         });
     </script> 
+  -->  
 
             <h4>13. O que faz a sua organização?* </h4> 
             <h6>(até 500 caracteres)</h6>                                 
@@ -703,15 +680,9 @@
                            
                     </select>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                 <h5>Nomeie e descreva as iniciativas da sua organização que trabalham com empoderamento das mulheres*?</h5>
-=======
+                
                  <h4>15. Nomeie e descreva as iniciativas e/ou projetos da sua organização que trabalham com empoderamento das mulheres*?</h4>
->>>>>>> origin/master
-=======
-                 <h4>15. Nomeie e descreva as iniciativas e/ou projetos da sua organização que trabalham com empoderamento das mulheres*?</h4>
->>>>>>> origin/master
+
                  <h5>Iniciativa 1</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
@@ -1138,6 +1109,5 @@
             </fieldset>
         </form>
     </div>
-
 </div>
     
