@@ -59,7 +59,7 @@
     //Politicas publicas lista
     $politicas_publicas_lista = $_POST['politicas_publicas_lista'];
 
-    $funcoes = $_POST['funcao'];
+    // $funcoes = $_POST['funcao'];
     $numero_beneficiarios = filter_input(INPUT_POST, "numero_beneficiarios", FILTER_SANITIZE_MAGIC_QUOTES);
 
     //Iniciantivas com empoderamento
@@ -166,7 +166,7 @@
         //Politicas Publicas List
         $novo->setPoliticasPublicasList($politicas_publicas_lista);
 
-        $novo->setFuncoes($funcoes);
+        // $novo->setFuncoes($funcoes);
         $novo->setNumeroBeneficiarios($numero_beneficiarios);
 
         //Iniciantivas com empoderamento

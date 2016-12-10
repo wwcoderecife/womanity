@@ -25,16 +25,16 @@ function open_dialog(title, message, type){
 
 jQuery(document).ready(function() {
 	
-    /*
+       /*
         Fullscreen background
     */
     $.backstretch("assets/img/backgrounds/1.jpg");
     
     $('#top-navbar-1').on('shown.bs.collapse', function(){
-    	$.backstretch("resize");
+        $.backstretch("resize");
     });
     $('#top-navbar-1').on('hidden.bs.collapse', function(){
-    	$.backstretch("resize");
+        $.backstretch("resize");
     });
     
     /*
@@ -42,85 +42,194 @@ jQuery(document).ready(function() {
     */
     $('.f1 fieldset:first').fadeIn('slow');
     
-    $('.f1 input[type="text"], .f1 input[type="password"], .f1 textarea').on('focus', function() {
-    	$(this).removeClass('input-error');
+    // $('.f1 input[type="text"], .f1 input[type="password"], .f1 textarea').on('focus', function() {
+    //     $(this).removeClass('input-error');
+    // });
+    
+
+
+    var tab_pool = ["dados_pessoais", "organizacao", "endereco", "redes_sociais", "indicacao"];
+    var visible = $(".f1:visible").attr('class').split(" ")[1];
+    var curr_ind = $.inArray(visible, tab_pool);
+    //$(".submit").hide();
+    //$(".btn-previous").hide();
+
+    var validator = $('.form-ong').validate({
+        ignore: 'input[type="button"],input[type="submit"]'
+
     });
+
     
     // next step
-    $('.f1 .btn-next').on('click', function() {
-    	var parent_fieldset = $(this).parents('fieldset');
-    	var next_step = true;
-    	// navigation steps / progress steps
-    	var current_active_step = $(this).parents('.f1').find('.f1-step.active');
-    	var progress_line = $(this).parents('.f1').find('.f1-progress-line');
-    	
+    // $('.f1 .btn-next').on('click', function() {
+    //  var parent_fieldset = $(this).parents('fieldset');
+    //  var next_step = true;
+    //  // navigation steps / progress steps
+    //  var current_active_step = $(this).parents('.f1').find('.f1-step.active');
+    //  var progress_line = $(this).parents('.f1').find('.f1-progress-line');
+        
         /*
-    	// fields validation
-    	parent_fieldset.find('input[type="text"], input[type="password"], textarea').each(function() {
-    		if( $(this).val() == "" ) {
-    			$(this).addClass('input-error');
-    			next_step = false;
-    		}
-    		else {
-    			$(this).removeClass('input-error');
-    		}
-    	});
-    	// fields validation
+        fields validation
+        parent_fieldset.find('input[type="text"], input[type="password"], textarea').each(function() {
+            if( $(this).val() == "" ) {
+                $(this).addClass('input-error');
+                next_step = false;
+            }
+            else {
+                $(this).removeClass('input-error');
+            }
+        });
+        // fields validation
 
         */
-    	
-    	if( next_step ) {
-    		parent_fieldset.fadeOut(400, function() {
-    			// change icons
-    			current_active_step.removeClass('active').addClass('activated').next().addClass('active');
-    			// progress bar
-    			bar_progress(progress_line, 'right');
-    			// show next step
-	    		$(this).next().fadeIn();
-	    		// scroll window to beginning of the form
-    			scroll_to_class( $('.f1'), 20 );
-	    	});
-    	}
-    	
-    });
+        
+    //  if( next_step ) {
+    //      parent_fieldset.fadeOut(400, function() {
+    //          // change icons
+    //          current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+    //          // progress bar
+    //          bar_progress(progress_line, 'right');
+    //          // show next step
+       //       $(this).next().fadeIn();
+       //       // scroll window to beginning of the form
+    //          scroll_to_class( $('.f1'), 20 );
+       //   });
+    //  }
+        
+    // });
+
+    
     
     // previous step
-    $('.f1 .btn-previous').on('click', function() {
-    	// navigation steps / progress steps
-    	var current_active_step = $(this).parents('.f1').find('.f1-step.active');
-    	var progress_line = $(this).parents('.f1').find('.f1-progress-line');
-    	
-    	$(this).parents('fieldset').fadeOut(400, function() {
-    		// change icons
-    		current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
-    		// progress bar
-    		bar_progress(progress_line, 'left');
-    		// show previous step
-    		$(this).prev().fadeIn();
-    		// scroll window to beginning of the form
-			scroll_to_class( $('.f1'), 20 );
-    	});
+   //  $('.f1 .btn-previous').on('click', function() {
+   //   // navigation steps / progress steps
+   //   var current_active_step = $(this).parents('.f1').find('.f1-step.active');
+   //   var progress_line = $(this).parents('.f1').find('.f1-progress-line');
+        
+   //   $(this).parents('fieldset').fadeOut(400, function() {
+   //       // change icons
+   //       current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
+   //       // progress bar
+   //       bar_progress(progress_line, 'left');
+   //       // show previous step
+   //       $(this).prev().fadeIn();
+   //       // scroll window to beginning of the form
+            // scroll_to_class( $('.f1'), 20 );
+   //   });
+   //  });
+    
+   //  // submit
+   //  $('.f1').on('submit', function(e) {
+
+
+        /*
+        // fields validation
+        $(this).find('input[type="text"], input[type="password"], textarea').each(function() {
+            if( $(this).val() == "" ) {
+                e.preventDefault();
+                $(this).addClass('input-error');
+            }
+            else {
+                $(this).removeClass('input-error');
+            }
+        });
+        // fields validation
+        */
+        
+    // });
+
+    $('.f1 .btn-next').on('click', function() {
+        console.log("next");
+        var parent_fieldset = $(this).parents('fieldset');
+        var next_step = true;
+        // navigation steps / progress steps
+        var current_active_step = $(this).parents('.f1').find('.f1-step.active');
+        var progress_line = $(this).parents('.f1').find('.f1-progress-line');
+
+        var tab = $(".tab:visible");
+        
+        var valid = true;
+        $('input', tab).each(function(i, v){
+            valid = validator.element(v) && valid;
+            // if(!valid){
+            //     $(this).addClass('input-error');
+            // }else{
+            //     $(this).removeClass('input-error');
+            // }
+        });
+        
+        if(!valid){
+            console.log("erro");
+            open_dialog("Erro", "Preencha todos os campos obrigatórios!", "error");
+           // $('.f1 input[type="text"], .f1 input[type="password"], .f1 textarea').on('focus', function() {
+           //      $(this).addClass('input-error');
+           //  });
+            // console.log($(this));
+        }else{
+             parent_fieldset.fadeOut(400, function() {
+                // change icons
+                current_active_step.removeClass('active').addClass('activated').next().addClass('active');
+                // progress bar
+                bar_progress(progress_line, 'right');
+                // show next step
+                $(this).next().fadeIn();
+                // scroll window to beginning of the form
+                scroll_to_class( $('.f1'), 20 );
+                $(this).removeClass('input-error');
+            });
+        }
+        
+        // if (curr_ind < 2) {
+        //     $(".tab:visible").hide();
+        //     curr_ind = curr_ind + 1;
+        //     $("." + tab_pool[curr_ind]).show();
+        //     $(".submit").hide();
+        //     $(".btn-previous").show();
+        // }
+        // if (curr_ind == 2) {
+        //     $(".submit").show();
+        //     $(".btn-next").hide();
+        // }
+    });
+
+    $('.f1 .btn-previous').click(function () {
+        // if (curr_ind > 0) {
+        //     $(".tab:visible").hide();
+        //     curr_ind = curr_ind - 1;
+        //     $("." + tab_pool[curr_ind]).show();
+        //     $(".submit").hide();
+        //     $(".btn-next").show();
+        // }
+        // if (curr_ind == 0) {
+        //     $(".btn-previous").hide();
+        // }
+
+
+
+        // navigation steps / progress steps
+     var current_active_step = $(this).parents('.f1').find('.f1-step.active');
+     var progress_line = $(this).parents('.f1').find('.f1-progress-line');
+        
+     $(this).parents('fieldset').fadeOut(400, function() {
+         // change icons
+         current_active_step.removeClass('active').prev().removeClass('activated').addClass('active');
+         // progress bar
+         bar_progress(progress_line, 'left');
+         // show previous step
+         $(this).prev().fadeIn();
+         // scroll window to beginning of the form
+            scroll_to_class( $('.f1'), 20 );
+     });
+
+
+
+
     });
     
-    // submit
-    $('.f1').on('submit', function(e) {
-
-
-    	/*
-    	// fields validation
-    	$(this).find('input[type="text"], input[type="password"], textarea').each(function() {
-    		if( $(this).val() == "" ) {
-    			e.preventDefault();
-    			$(this).addClass('input-error');
-    		}
-    		else {
-    			$(this).removeClass('input-error');
-    		}
-    	});
-    	// fields validation
-        */
-    	
-    });
+    console.log($('.form-ong').valid());
+    if ($('.form-ong').valid()){
+        console.log("enviar");
+    }
 
 
     //populando os combos de cidade e estado

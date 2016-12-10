@@ -33,6 +33,8 @@
         <script src="assets/js/scripts.js"></script>
         <!--<script src="assets/js/validator.min.js"></script>-->
         <script src="assets/js/jquery.maskedinput.js" type="text/javascript"></script>
+        <script src="assets/js/jquery.validate.min.js" type="text/javascript"></script>
+        <script src="assets/js/config-messages.js" type="text/javascript"></script>
         
         <!--[if lt IE 10]>
             <script src="assets/js/placeholder.js"></script>

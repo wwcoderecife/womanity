@@ -62,89 +62,83 @@
         <!-- Formulário: Tipo Organizaçāo -->
 
 
-          <fieldset>
+          <fieldset class="tab dados_pessoais" >
                 <h4>Dados Pessoais Contato 1:</h4>
-
                 <h5>Nome*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
                     <input type="text" name="nome1" placeholder="responsável pelo preenchimento do cadastro" class="f1-last-name form-control" id="inputNome1" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
-                 <h5>Cargo*</h5>
+                <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="cargo_1" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo1" >
+                    <input type="text" name="cargo_1" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name"  required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="email_1" placeholder="E-mail" value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="email" name="email_1"  value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
-
-                 <h5>Telefone*</h5>
+                <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="telefone_1" placeholder="Telefone (xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1" required data-error = "Por favor, preencha corretamente o campo (xx) xxxx-xxxx.">
- 
+                    <input type="tel" name="telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1" required data-error = "Por favor, preencha corretamente o campo (xx) xxxx-xxxx.">
                     <div class="help-block with-errors"></div>
                 </div>
-
-                 <h5>Celular*</h5>
+                <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_1" placeholder="Celular (xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel1"required data-error = "Por favor, preencha corretamente o campo (xx) xxxxx-xxxx.">
- 
+                    <input type="tel" name="celular_1" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel1" required data-error = "Por favor, preencha corretamente o campo (xx) xxxxx-xxxx.">
                     <div class="help-block with-errors"></div>
                 </div>
 
-                 <h4>Dados Pessoais Contato 2:</h4>
-                 <h5>Nome*</h5>
+                <h4>Dados Pessoais Contato 2:</h4>
+                <h5>Nome*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
                     <input type="text" name="nome2" placeholder="responsável pela organização ou suplente" class="f1-last-name form-control" id="inputNome2" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
-                  <h5>Cargo*</h5>
+                <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="cargo_2" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo2" required data-error = "Campo está em branco, favor preencher.">
-                </div>
-
-                <h5>E-mail*</h5>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="email_2" placeholder="E-mail" class="f1-last-name form-control" id="email2" required data-error = "Campo está em branco, favor preencher.">
-                    <div class="help-block with-errors"></div>                    
-                </div>
-
-                 <h5>Telefone*</h5>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="telefone_2" placeholder="Telefone (xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel2"required data-error = "Por favor, preencha corretamente o campo (xx) xxxx-xxxx.">
+                    <input type="text" name="cargo_2" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
+                 <h5>E-mail*</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">E-mail</label>
+                    <input type="email" name="email_2" placeholder="email@email.com" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
+                    <div class="help-block with-errors"></div>
+                    
+                </div>
 
+                <h5>Telefone*</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">Telefone</label>
+                    <input type="tel" name="telefone_2" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel2"required data-error = "Por favor, preencha corretamente o campo (xx) xxxx-xxxx.">
+                </div>
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_2" placeholder="Celular (xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel2"required data-error = "Por favor, preencha corretamente o campo (xx) xxxxx-xxxx.">
+                    <input type="tel" name="celular_2" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel2"required data-error = "Por favor, preencha corretamente o campo (xx) xxxxx-xxxx.">
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <div class="f1-buttons">
-                <button type="button" class="btn btn-next">Próximo</button>
-                </div>
+                <button type="button" class="btn btn-next" >Próximo</button>
+               </div>
             </fieldset><!--Dados Pessoais-->
 
 
           
              <!--Etapa 2 Formulário: Organizaçāo -->
 
-        <fieldset>
+        <fieldset class="tab organizacao">
                 <h4>1. A sua organização está juridicamente constituída?*</h5>
                 <h6><em>Se sim, digite o CNPJ no campo abaixo</em></h5>
              
@@ -930,7 +924,7 @@
             <!--Etapa 3 Formulário: Endereço/Organizaçāo -->
 
 
-            <fieldset>
+            <fieldset class="tab endereco">
                 <h5>Regiāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Região</label>
@@ -994,7 +988,7 @@
  
           <!--Etapa 4 Formulário: Mídia Social-->
 
-            <fieldset>
+            <fieldset class="tab redes_sociais">
                 <div class="form-group">
                     <div class="input-group">
                       <span class="input-group-addon"><i class="fa fa-mouse-pointer"></i></span>
@@ -1037,7 +1031,7 @@
                 </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="tab indicacao">
                 <h4>Indique até três iniciativas que na sua opinião devem participar do processo de mapeamento:</h4>
                 <h5>Organizaçāo 1</h5>
                  <h5>Nome</h5>

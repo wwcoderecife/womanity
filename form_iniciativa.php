@@ -25,7 +25,7 @@
 
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-    	 <form role="form"  action="classes/prepare_cadastro.php" method="post" class="f1">
+    	 <form role="form"  action="classes/prepare_cadastro.php" method="post" class="f1 form-ong">
 
     		<h3>Cadastro UNA Ecossistema<br>Iniciativa</h3>
     		<p>Preencha os campos obrigatórios*</p>
@@ -58,7 +58,7 @@
              <!-- Formulário: Tipo Iniciativa -->
 
 
-            <fieldset >
+            <fieldset class="tab dados_pessoais" >
                 <h4>Dados Pessoais Contato 1:</h4>
                 <h5>Nome*</h5>
                 <div class="form-group">
@@ -132,7 +132,7 @@
 
             <!--Iniciativa-->
 
-        <fieldset>
+        <fieldset class="tab organizacao">
            <h5>A sua iniciativa está dentro de uma organização juridicamente constituída?*</h5>
                 <h6><em>se sim, digite o nome da organizaçāo e cnpj no campo abaixo</em></h5>
               
@@ -910,7 +910,7 @@
 
              <!--Etapa 3 Formulário: Endereço/Iniciativa -->
 
-            <fieldset>
+            <fieldset class="tab endereco">
                 <h5>Regiāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -975,7 +975,7 @@
 
              <!--Etapa 4 Formulário: Mídia Social-->
 
-            <fieldset>
+            <fieldset class="tab redes_sociais">
                 <h5>Onde podemos encontrar mais informação sobre sua organização?*(Preencha pelo menos 1 item):</h5>
                 <div class="form-group">
                     <div class="input-group">
@@ -1019,7 +1019,7 @@
                 </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="tab indicacao">
                 <h4>Indique até três iniciativas que na sua opinião devem participar do processo de mapeamento:</h4>
                 <h5>Iniciativa 1</h5>
 

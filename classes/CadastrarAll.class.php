@@ -1135,29 +1135,29 @@ class CadastrarAll extends Conexao {
                 }
 
 
-            //Delete
-            $delete_funcoes = $pdo->prepare("delete from funcoes where organizacao_id = ?");
-            $delete_funcoes->bindValue(1, $organizacao_id);
-            $delete_funcoes->execute();
+            // //Delete
+            // $delete_funcoes = $pdo->prepare("delete from funcoes where organizacao_id = ?");
+            // $delete_funcoes->bindValue(1, $organizacao_id);
+            // $delete_funcoes->execute();
 
-            $edit_funcoes = $pdo->prepare("insert into funcoes (tipo, complemento, organizacao_id)
-                                   values (?, ?, ?)");
-            $funcoes = $this->getFuncoes();
+            // $edit_funcoes = $pdo->prepare("insert into funcoes (tipo, complemento, organizacao_id)
+            //                        values (?, ?, ?)");
+            // $funcoes = $this->getFuncoes();
 
-                foreach ($funcoes  as $funcao){
-                    if ($funcao == "Atuação direta com mulheres, homens, LGBTT, etc"){
-                        $edit_funcoes->bindValue(1, $funcao);
-                        $edit_funcoes->bindValue(2, $this->getNumeroBeneficiarios());
-                        $edit_funcoes->bindValue(3, $organizacao_id);
-                        $edit_funcoes->execute();
-                    }else{
-                        $edit_funcoes->bindValue(1, $funcao);
-                        $edit_funcoes->bindValue(2, 0);
-                        $edit_funcoes->bindValue(3, $organizacao_id);
-                        $edit_funcoes->execute();
-                    }
+            //     foreach ($funcoes  as $funcao){
+            //         if ($funcao == "Atuação direta com mulheres, homens, LGBTT, etc"){
+            //             $edit_funcoes->bindValue(1, $funcao);
+            //             $edit_funcoes->bindValue(2, $this->getNumeroBeneficiarios());
+            //             $edit_funcoes->bindValue(3, $organizacao_id);
+            //             $edit_funcoes->execute();
+            //         }else{
+            //             $edit_funcoes->bindValue(1, $funcao);
+            //             $edit_funcoes->bindValue(2, 0);
+            //             $edit_funcoes->bindValue(3, $organizacao_id);
+            //             $edit_funcoes->execute();
+            //         }
                    
-                }
+            //     }
 
 
             //Delete
@@ -1349,7 +1349,7 @@ class CadastrarAll extends Conexao {
         }
         catch (Exception $e){
               $pdo->rollback();
-              echo $e->getMessage();
+              //echo $e->getMessage();
                echo "<script type='text/javascript'>
 
                         sweetAlert({

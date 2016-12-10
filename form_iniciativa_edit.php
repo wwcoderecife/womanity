@@ -89,18 +89,18 @@
              <!-- Formulário: Tipo Iniciativa -->
 
 
-            <fieldset >
+            <fieldset class="tab dados_pessoais" >
                 <h4>Dados Pessoais Contato 1:</h4>
                 <h5>Nome*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="nome1" value="<?php echo $edit->getNome_1() ?>" placeholder="responsável pelo preenchimento do cadastro" class="f1-last-name form-control" id="inputNome1" required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="nome1" value="<?php echo $edit->getNome_1() ?>" placeholder="responsável pelo preenchimento do cadastro" class="f1-last-name form-control" id="inputNome1" required data-match-error="Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
                 <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="cargo_1" value="<?php echo $edit->getCargo_1() ?>" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name"  required data-error = "Campo está em branco, favor preencher.">
+                    <input type="text" name="cargo_1" value="<?php echo $edit->getCargo_1() ?>" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name"  required data-msg="Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -152,7 +152,7 @@
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_2" value="<?php echo $edit->getCelular_2() ?>" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel2"required data-error = "Por favor, preencha corretamente o campo (xx) xxxxx-xxxx.">
+                    <input type="tel" name="celular_2" value="<?php echo $edit->getCelular_2() ?>" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel2"required data-match-error="Por favor, preencha corretamente o campo (xx) xxxxx-xxxx.">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -164,14 +164,14 @@
 
             <!--Iniciativa-->
 
-        <fieldset>
+        <fieldset class="tab organizacao">
            <h4>1. A sua iniciativa está dentro de uma organização juridicamente constituída?*</h4>
                 <h6><em>Se sim, digite o nome da organizaçāo e cnpj nos campos abaixo</em></h5>
               
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" name="organizacao-pai" id="organizacao-cnpj" required>
-                        <option value=""></option>
+                        
                         <option value="sim"  
                         <?php if($edit->getOrganizacaoPai() != ""){ echo "selected"; } ?>
                         >sim</option>
@@ -274,7 +274,7 @@
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="natureza" name="tipo" required>           
-                        <option value=""></option>
+                        
                         <option value="academica" <?=($edit->getTipo() == 'academica')?'selected':''?>>
                             Acadêmica</option>
                         <option value="coletivo" <?=($edit->getTipo() == 'coletivo')?'selected':''?>>
@@ -338,7 +338,6 @@
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="year_organizacao" name="anoatividade" required>
-                        <option value=""></option>
                         <?php echo "<script type='text/javascript'> var ano = '".$edit->getInicioAtv()."'; </script>"; ?>
                         <script>
 
@@ -361,7 +360,7 @@
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="pessoas_envolvidas" name="pessoas_envolvidas">
-                        <option value=""></option>
+                        
                         <option value="1-5" <?=($edit->getQtdePessoas() == '1-5')?'selected':''?>>1-5</option>
                         <option value="6-10" <?=($edit->getQtdePessoas() == '6-10')?'selected':''?>>6-10</option>
                         <option value="11-20" <?=($edit->getQtdePessoas() == '11-20')?'selected':''?>>11-20</option>
@@ -378,7 +377,7 @@
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="pessoas_beneficiadas" name="pessoas_beneficiadas" required>
-                        <option value=""></option>
+                        
                         <option value="até 50" <?=($edit->getQtdeBeneficiadas() == 'até 50')?'selected':''?>>até 50</option>
                         <option value="51-250" <?=($edit->getQtdeBeneficiadas() == '51-250')?'selected':''?>>51-250</option>
                         <option value="251-500" <?=($edit->getQtdeBeneficiadas() == '251-500')?'selected':''?>>251-500</option>
@@ -1100,7 +1099,7 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="publico_alvo" name="publico_alvo" required >
                     <div class="help-block with-errors"></div> 
-                        <option value=""></option>
+                        
                         <option value="Empresas" <?=($edit->getPublicoAtendido() == 'Empresas')?'selected':''?>
                             >Empresas</option>
 
@@ -1344,7 +1343,7 @@
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" name="monitoramento_atv" id="avaliacao" required>
-                        <option value=""></option>
+                        
                         <option value="0" <?=($edit->getMonitoramentoAtividades() == '')?'selected':''?>
                         >Nāo</option>
                         <option value="1" <?=($edit->getMonitoramentoAtividades() !== '')?'selected':''?>
@@ -1396,7 +1395,7 @@
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="iniciativa-comunicacao" required>
-                        <option value=""></option>
+                        
                         <option value="0" <?=($edit->getEstrategiaComunicacao() == '')?'selected':''?>
                         >Nāo</option>
                         <option value="1" <?=($edit->getEstrategiaComunicacao() != '')?'selected':''?>
@@ -1445,9 +1444,9 @@
 			<h4>19. A sua iniciativa recebeu premiações, certificações, etc.?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="premiacao" name="premiacao"name="comunicacao"required>
+                    <select class="f1-last-name form-control" id="premiacao" name="premiacao"name="comunicacao" required>
                         <div class="help-block with-errors"></div>
-                        <option value=""></option>
+                        
                         <option value="0" <?=($edit->getPremiacaoCertificacao() == '')?'selected':''?>
                         >Nāo</option>
                         <option value="1" <?=($edit->getPremiacaoCertificacao() != '')?'selected':''?>
@@ -1518,7 +1517,7 @@
 
              <!--Etapa 3 Formulário: Endereço/Iniciativa -->
 
-            <fieldset>
+            <fieldset class="tab endereco">
                 <h5>Regiāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -1552,7 +1551,7 @@
 
                         });
                         </script>
-                        <option value=""></option>
+                        
                     </select> 
                 </div>
 
@@ -1563,7 +1562,7 @@
 
                         <?php echo "<script type='text/javascript'> var cidade = '".$edit->getCidade()."'; </script>"; ?>
                         
-                        <option value=""></option>
+                        
 
                     </select> 
                 </div>
@@ -1604,7 +1603,7 @@
 
              <!--Etapa 4 Formulário: Mídia Social-->
 
-            <fieldset>
+            <fieldset class="tab redes_sociais">
                 <h5>Onde podemos encontrar mais informação sobre sua iniciativa?*(Preencha pelo menos 1 item):</h5>
                 <div class="form-group">
                     <div class="input-group">
@@ -1648,7 +1647,7 @@
                 </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="tab indicacao">
                 <h4>Indique até três iniciativas que na sua opinião devem participar do processo de mapeamento:</h4>
                 <h5>Iniciativa 1</h5>
 

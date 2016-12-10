@@ -90,88 +90,84 @@
         <!-- Formulário: Tipo Organizaçāo -->
 
 
-          <fieldset>
+          <fieldset class="tab dados_pessoais" >
                 <h4>Dados Pessoais Contato 1:</h4>
-
                 <h5>Nome*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="nome1" value="<?php echo $edit->getNome_1() ?>" placeholder="responsável pelo preenchimento do cadastro" class="f1-last-name form-control" id="inputNome1" >
+                    <input type="text" name="nome1" value="<?php echo $edit->getNome_1() ?>" placeholder="responsável pelo preenchimento do cadastro" class="f1-last-name form-control" id="inputNome1" required data-match-error="Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
-                 <h5>Cargo*</h5>
+                <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="cargo_1" value="<?php echo $edit->getCargo_1() ?>" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo1" >
+                    <input type="text" name="cargo_1" value="<?php echo $edit->getCargo_1() ?>" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name"  required data-msg="Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="email_1" value="<?php echo $edit->getEmail_1() ?>" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name">
+                    <input type="email" name="email_1"  value="<?php echo $edit->getEmail_1() ?>" class="f1-last-name form-control" id="f1-last-name" required data-error = "Campo está em branco, favor preencher.">
                     <div class="help-block with-errors"></div>
                 </div>
-
-                 <h5>Telefone*</h5>
+                <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="telefone_1" value="<?php echo $edit->getTelefone_1() ?>" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel1" >
+                    <input type="tel" name="telefone_1" value="<?php echo $edit->getTelefone_1() ?>" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1" required data-error = "Por favor, preencha corretamente o campo (xx) xxxx-xxxx.">
                     <div class="help-block with-errors"></div>
                 </div>
-
-                 <h5>Celular*</h5>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_1" value="<?php echo $edit->getCelular_1() ?>" placeholder="Celular" class="f1-last-name form-control phone_with_dddcel" id="inputCel1">
-                    <div class="help-block with-errors"></div>
-                </div>
-
-                 <h4>Dados Pessoais Contato 2:</h4>
-                 <h5>Nome*</h5>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="nome2" value="<?php echo $edit->getNome_2() ?>" placeholder="responsável pela organização ou suplente" class="f1-last-name form-control" id="inputNome2" >
-                    <div class="help-block with-errors"></div>
-                </div>
-                  <h5>Cargo*</h5>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="cargo_2" value="<?php echo $edit->getCargo_2() ?>" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo2">
-                </div>
-
-                <h5>E-mail*</h5>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="email_2" value="<?php echo $edit->getEmail_2() ?>" placeholder="E-mail" class="f1-last-name form-control" id="email2">
-                    <div class="help-block with-errors"></div>                    
-                </div>
-
-                 <h5>Telefone*</h5>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="telefone_2" value="<?php echo $edit->getTelefone_2() ?>" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel2">
-                    <div class="help-block with-errors"></div>
-                </div>
-
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_2" value="<?php echo $edit->getCelular_2() ?>" placeholder="Celular" class="f1-last-name form-control phone_with_dddcel" id="inputCel2">
+                    <input type="tel" name="celular_1" value="<?php echo $edit->getCelular_1() ?>" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel1" required data-error = "Por favor, preencha corretamente o campo (xx) xxxxx-xxxx.">
                     <div class="help-block with-errors"></div>
                 </div>
 
-                <div class="f1-buttons">
-                    <button type="button" class="btn btn-warning" onclick="desbloquearCampos();" title="Desbloquear campos para edição">Editar</button>
-                <button type="button" class="btn btn-next">Próximo</button>
+                <h4>Dados Pessoais Contato 2:</h4>
+                <h5>Nome*</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">Nome</label>
+                    <input type="text" name="nome2" value="<?php echo $edit->getNome_2() ?>" placeholder="responsável pela organização ou suplente" class="f1-last-name form-control" id="inputNome2" required data-error = "Campo está em branco, favor preencher.">
+                    <div class="help-block with-errors"></div>
                 </div>
+                <h5>Cargo*</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">Cargo</label>
+                    <input type="text" name="cargo_2" value="<?php echo $edit->getCargo_2() ?>" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
+                    <div class="help-block with-errors"></div>
+                </div>
+                 <h5>E-mail*</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">E-mail</label>
+                    <input type="email" name="email_2" value="<?php echo $edit->getEmail_2() ?>" placeholder="email@email.com" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo está em branco, favor preencher.">
+                    <div class="help-block with-errors"></div>
+                    
+                </div>
+
+                <h5>Telefone*</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">Telefone</label>
+                    <input type="tel" name="telefone_2" value="<?php echo $edit->getTelefone_2() ?>" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel2"required data-error = "Por favor, preencha corretamente o campo (xx) xxxx-xxxx.">
+                </div>
+                <h5>Celular*</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">Celular</label>
+                    <input type="tel" name="celular_2" value="<?php echo $edit->getCelular_2() ?>" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel2"required data-match-error="Por favor, preencha corretamente o campo (xx) xxxxx-xxxx.">
+                    <div class="help-block with-errors"></div>
+                </div>
+
+                <div class="f1-buttons">    
+                <button type="button" class="btn btn-warning" onclick="desbloquearCampos();" title="Desbloquear campos para edição">Editar</button>
+                <button type="button" class="btn btn-next" >Próximo</button>
+               </div>
             </fieldset><!--Dados Pessoais-->
 
 
           
              <!--Etapa 2 Formulário: Organizaçāo -->
 
-        <fieldset>
+        <fieldset class="tab organizacao">
                 <h4>1. A sua organização está juridicamente constituída?*</h4>
                 <h6><em>Se sim, digite o CNPJ no campo abaixo</em></h5>
              
@@ -1538,7 +1534,7 @@
             <!--Etapa 3 Formulário: Endereço/Organizaçāo -->
 
 
-            <fieldset>
+            <fieldset class="tab endereco">
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Região</label>
                     <select class="f1-last-name form-control" name="regiao" id="regiao">
@@ -1613,7 +1609,7 @@
  
           <!--Etapa 4 Formulário: Mídia Social-->
 
-            <fieldset>
+            <fieldset class="tab redes_sociais">
                 <div class="form-group">
                     <div class="input-group">
                       <span class="input-group-addon"><i class="fa fa-mouse-pointer"></i></span>
@@ -1657,7 +1653,7 @@
                 </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="tab indicacao">
                 <h4>Indique até três iniciativas que na sua opinião devem participar do processo de mapeamento:</h4>
                 <h5>Iniciativa 1</h5>
                 <div class="form-group">
