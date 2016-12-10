@@ -25,7 +25,7 @@
 
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-    	 <form role="form" action="classes/prepare_cadastro.php" method="post" class="f1">
+    	 <form role="form"  action="classes/prepare_cadastro.php" method="post" class="f1">
 
     		<h3>Cadastro UNA Ecossistema<br>Iniciativa</h3>
     		<p>Preencha os campos obrigatórios*</p>
@@ -348,12 +348,21 @@
                     <div class="help-block with-errors"></div>
                 </div>
 
+
                 <h5>Não tenho orçamento</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name"></label>
                     <input type="text" name="justificativa_orcamento" placeholder=" caso não tem orçamento,descreva o motivo..."class="f1-last-name form-control">
                 </div>
 
+                <!-- Sem Orçamento Novo
+           
+                <div class="form-group">
+                   <label class="radio-inline">
+                        <input type="radio" name="justificativa_orcamento" value="sim" class="form-control-radio">Sem Orçamento
+                </label>
+            -->
+             
 
                 <h5>Sua iniciativa recebe recursos financeiros?</h5>     
 
@@ -386,14 +395,18 @@
                     <input type="checkbox" name="recursos_origem[]" value="organizações não governamentais brasileiras ou internacionais">organizações não governamentais brasileiras ou internacionais<br>
                     <input type="checkbox" name="recursos_origem[]" value="subvenções públicas ">subvenções públicas<br>
                     <input type="checkbox" name="recursos_origem[]" value="venda de produtos/prestação de serviços">venda de produtos/prestação de serviços<br>
-                    <input type="checkbox" name="recursos_origem[]" value="outros">outros<br>
-                    <!-- <input type="text"     name="outrosprojetos" placeholder=" outros..." style="display:block;" class="f1-last-name form-control"> -->
+
+                    <label class="checkbox-inline">
+                    <input type="checkbox" name="recursos_origem[]" value="outros">Outros<br>
+                    <input type = "text" id="inputoutrosprojetos" name="inputoutrosprojetos" placeholder=" outrosprojetos..."  class="f1-last-name form-control">
+                    </label></br>
+                    <!--<input type="checkbox" name="recursos_origem[]" value="outros">outros<br>-->
                </div>  
 
 
                    <!--Tabela Temas-->
 
-        <h5>Áreas de atuação da organização: escolha até 3 Temas e até 3 Subtemas abaixo*:</h5>
+        <h5>Áreas de atuação da organização: escolha até 5 Temas e até 5 Subtemas abaixo*:</h5>
         <div class="form-group" style="border: 1px solid #ddd">
         <div class="table-responsive">
         <table id="form1" name="table_temas"class="table table-hover col-sm-12" >
@@ -545,7 +558,7 @@
 
 
 
-<h5> Clique e escolha até 3 Subtemas abaixo*</h5>
+<h5> Clique e escolha até 5 Subtemas abaixo*</h5>
 <div class="form-group">
 <!--<label for="subtemas" for="f1-google-plus">Subtemas</label>-->
        <select class="f1-last-name form-control"id="subtemas" class="selectpicker" name="subtemas[ ]" data-style="default" multiple>
