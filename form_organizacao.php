@@ -622,7 +622,7 @@
         </select>
 
      </div>
-<!--
+
 <script>
      $(document).ready(function() {
 
@@ -630,7 +630,7 @@
 
           $('#subtemas').change(function(event) {
 
-            if ($(this).val().length > 5) {
+            if ($(this).val().length > 47) {
 
               $(this).val(last_valid_selection);
             } else {
@@ -639,7 +639,7 @@
           });
         });
     </script> 
-  -->  
+  
 
             <h4>13. O que faz a sua organização?* </h4> 
             <h6>(até 500 caracteres)</h6>                                 

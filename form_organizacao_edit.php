@@ -418,7 +418,7 @@
                  <!-- Novo sem Orcamento com radio
                  <div class="form-group">
                     <label class="radio-inline"></label>
-                    <input type="radio" name="justificativa_orcamento" value="<?php echo $edit->getJustificativaOrcamento(); ?>"  class="f1-last-name form-radio">Sem Orçamento
+                    <input type="radio" name="justificativa_orcamento" value="<?php //echo $edit->getJustificativaOrcamento(); ?>"  class="f1-last-name form-radio">Sem Orçamento
                 </div>
                  -->
 
@@ -1073,7 +1073,7 @@
         </select>
 
      </div>
-<!--
+
 <script>
      $(document).ready(function() {
 
@@ -1090,7 +1090,7 @@
           });
         });
     </script> 
- -->   
+   
 
             <h4>13. O que faz a sua organização?* </h4> 
            <h6>(até 500 caracteres)</h6>                                 
