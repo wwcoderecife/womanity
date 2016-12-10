@@ -408,21 +408,21 @@
                     <input type="text" name="orcamento_2016" value="<?php  echo $edit->getOrcamento_2016(); ?>"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2016">
                 </div>
 
- <!-- Novo sem Orcamento com radio-->
+              
+                <h5>Não tenho orçamento</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name"></label>
+                    <input type="text" name="justificativa_orcamento" value="<?php echo $edit->getJustificativaOrcamento(); ?>" placeholder=" caso não tem orçamento,descreva o motivo..." class="f1-last-name form-control">
+                </div>
+
+                 <!-- Novo sem Orcamento com radio
                  <div class="form-group">
                     <label class="radio-inline"></label>
                     <input type="radio" name="justificativa_orcamento" value="<?php echo $edit->getJustificativaOrcamento(); ?>"  class="f1-last-name form-radio">Sem Orçamento
                 </div>
+                 -->
 
-           
-              <!--
-                <h5>Anterior Sem orçamento</h5>
-                
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name"></label>
-                    <input type="text" name="justificativa_orcamento" value="<?php //echo $edit->getJustificativaOrcamento(); ?>" placeholder=" caso não tem orçamento,descreva o motivo..." class="f1-last-name form-control">
-                </div>
-            -->
+            
 
 
                 <h5>11.1. A sua Organizaçāo recebe recursos financeiros?</h5>
