@@ -567,7 +567,8 @@
                                 if(in_array('outros', $array_recursos_financeiros[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
                     >outros<br>
-                    <!-- <input type="text"     name="outrosprojetos" placeholder=" outros..." style="display:block;" class="f1-last-name form-control"> -->
+                    <input type="text" required  value="<?php echo $edit->getFonteRecursosOutros() ?>"   name="fonte_recursos_outros" placeholder=" outros..." 
+                    <?php if($edit->getFonteRecursosOutros() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> class="f1-last-name form-control">
                </div> 
 
 
