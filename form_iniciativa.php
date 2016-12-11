@@ -345,7 +345,7 @@
                 <h5>2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
-                    <input type="tex" name="orcamento_2016" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2016"  data-error = "Campo obrigatório, favor preencher.">
+                    <input type="tex" name="orcamento_2016" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2016" >
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -653,7 +653,7 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
                     <textarea name="sobre" maxlength="500" placeholder="Fale sobre a sua iniciativa...." 
-                    class="f1-about-yourself form-control" id="sobre" required  data-error = "Campo obrigatório, favor preencher."></textarea>
+                    class="f1-about-yourself form-control" id="sobre" required ></textarea>
                     <div class="help-block with-errors">
                 </div>
 
