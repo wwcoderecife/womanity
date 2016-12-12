@@ -2,13 +2,13 @@
         <!-- Bootstrap core JavaScript
          ================================================== -->
 
-            <script src="assets/js/jquery-1.11.1.min.js"></script>
+            <!--<script src="assets/js/jquery-1.11.1.min.js"></script>-->
             <script src="assets/bootstrap/js/bootstrap.min.js"></script>
             <!--<script src="assets/js/bootstrap.min.js"></script>-->
             <script src="assets/js/jquery.backstretch.min.js"></script>
             <script src="assets/js/retina-1.1.0.min.js"></script>
             <!--<script src="assets/js/validator.min.js"></script>-->
-            <script src="assets/js/scripts.js"></script>
+            <!--<script src="assets/js/scripts.js"></script>-->
           
             <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
 
@@ -27,7 +27,7 @@
 
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-        <form role="form" action="classes/prepare_cadastro.php" method="post" class="f1">
+        <form role="form" action="classes/prepare_cadastro.php" method="post" class="f1 form-ong">
 
             <h3>Cadastro do Ecossistema<br>Organizaçāo</h3>
             <p>Preencha os campos obrigatórios *</p>
@@ -151,7 +151,7 @@
                         <option value="nao">nao</option>
                     </select>    
 
-                <input type="text" required  id="inputcnpj" maxlength="18" name="inputcnpj" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opcional" style='display: none'/>
+                <input type="text" id="inputcnpj" maxlength="18" name="inputcnpj" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opcional" style='display: none'/>
                     <script>
 
                         var dropdownCnpj = document.getElementById('organizacao-cnpj');
@@ -241,7 +241,7 @@
                         <option value="redes">Redes</option> 
                         <option value="outros">Outros</option>
                     </select> 
-                    <input type="text" id="inputoutros" required name="identifica_organizacao_outros" class="f1-last-name form-control" placeholder="descreva outro tipo"style='display: none' />
+                    <input type="text" id="inputoutros" name="identifica_organizacao_outros" class="f1-last-name form-control" placeholder="descreva outro tipo"style='display: none' />
                     <script>
 
                         var dropdownIdentifica = document.getElementById('organizacao-tipo');
@@ -420,7 +420,7 @@
 
             <div class="form-group" style="border: 1px solid #ddd">
             <div class="table-responsive">
-            <table id="form1" name="table_temas"class="table table-hover col-sm-12" required >
+            <table id="form1" name="table_temas"class="table table-hover col-sm-12">
 
              <thead>
                 <tr>
@@ -704,7 +704,7 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona3" required class="f1-last-name form-control">
-                    <textarea name="sobre_iniciativas3" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
+                    <textarea name="sobre_iniciativas3" required maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong3"  ></textarea>
                 </div>
 
@@ -786,7 +786,7 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim</option>
                     </select>
-                    <textarea type="text" required id="inputAvaliacaoOng" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
+                    <textarea type="text" id="inputAvaliacaoOng" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
                         "style='display: none'/></textarea>
                     <script>
 
@@ -834,7 +834,7 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
                     </select>
-                    <textarea type="text" required id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
+                    <textarea type="text"  id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 "style='display: none'/></textarea>
                     <script>
 
@@ -883,7 +883,7 @@
                         <option value="1">Sim, quais?</option> 
                         
                     </select>
-                    <textarea type="text" required id="inputPremiacaoOng" name="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
+                    <textarea type="text" id="inputPremiacaoOng" name="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 "style='display: none'/></textarea>
                     <script>
 
@@ -990,7 +990,7 @@
                 <h5>Número*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número</label>
-                    <input type="text" name="numero" placeholder="Número...*" class="f1-last-name form-control"required>
+                    <input type="number" name="numero" placeholder="Número...*" class="f1-last-name form-control"required>
                 </div>
                 <h5>Complemento</h5>
                 <div class="form-group">
@@ -1014,7 +1014,7 @@
 
             <fieldset class="tab redes_sociais">
                 <div class="form-group">
-                    <div class="input-group" required >
+                    <div class="input-group">
                       <span class="input-group-addon"><i class="fa fa-mouse-pointer"></i></span>
                     <input class="form-control" type="text" name="site" placeholder="Site">
                     </div>
@@ -1112,6 +1112,5 @@
             </fieldset>
         </form>
     </div>
-
 </div>
     

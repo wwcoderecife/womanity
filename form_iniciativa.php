@@ -144,8 +144,8 @@
                         <option value="nao">nao</option>
                     </select> 
                 <div class="iniciativapj">     
-               <input type="text" id="inputnomeong" name="inputnomeong" class="f1-last-name form-control" placeholder="nome da organizaçāo" style='display: none' required/>
-                <input type="text" id="inputcnpj" maxlength="18" name="organizacao_pai"  class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" required style='display: none'/ >
+               <input type="text" id="inputnomeong" name="inputnomeong" class="f1-last-name form-control" placeholder="nome da organizaçāo" style='display: none' />
+                <input type="text" id="inputcnpj" maxlength="18" name="organizacao_pai"  class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" style='display: none'/ >
 
                 </div>
                     <script>
@@ -176,7 +176,7 @@
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="zona" value="urbana" class="form-control-radio" required >Zona Urbana
+                        <input type="radio" name="zona" value="urbana" class="form-control-radio" >Zona Urbana
                     </label>
                 </div>
 
@@ -213,7 +213,7 @@
 
                 <div class="form-group">
                     <label class="radio-inline">
-                       <input type="radio" name="identifica" value="acao" class="form-control-radio" required>Açāo
+                       <input type="radio" name="identifica" value="acao" class="form-control-radio">Açāo
                     </label>
 
                     <label class="radio-inline">
@@ -240,7 +240,7 @@
                         <option value="redes">Redes</option> 
                         <option value="outros">Outros</option>  
                     </select>
-                    <input type="text" id="inputoutros" name="identifica_organizacao_outros" class="f1-last-name form-control" required placeholder="descreva outro tipo"style='display: none' />
+                    <input type="text" id="inputoutros" name="identifica_organizacao_outros" class="f1-last-name form-control" placeholder="descreva outro tipo"style='display: none' />
                     <script>
 
                         var dropdownNatureza = document.getElementById('natureza');
@@ -385,7 +385,7 @@
 
               <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="recursos" required value="sim" class="form-control-radio"> Sim
+                        <input type="radio" name="recursos" value="sim" class="form-control-radio"> Sim
                     </label>
 
                     <label class="radio-inline">
@@ -424,7 +424,7 @@
         <h5>Escolha até 5 Temas e todos os Subtemas dentro da sua área de atuação*:</h5>
         <div class="form-group" style="border: 1px solid #ddd">
         <div class="table-responsive">
-        <table id="form1" name="table_temas"class="table table-hover col-sm-12" required >
+        <table id="form1" name="table_temas"class="table table-hover col-sm-12">
 
              <thead>
                 <tr>
@@ -654,7 +654,7 @@
                     <label class="sr-only" for="f1-about-yourself"></label>
                     <textarea name="sobre" maxlength="500" placeholder="Fale sobre a sua iniciativa...." 
                     class="f1-about-yourself form-control" id="sobre" required ></textarea>
-                    <div class="help-block with-errors">
+                    
                 </div>
 
 
@@ -729,13 +729,15 @@
                     <h5>16. A sua iniciativa influenciou políticas públicas?*</h5>
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="politicas_publicas" required value="nao" class="form-control-radio" > Nāo
+                        <input type="radio" name="politicas_publicas"  value="nao" class="form-control-radio"> Nāo
                     </label>
 
                     <label class="radio-inline">
                         <input type="radio" name="politicas_publicas" value="sim" class="form-control-radio"> Sim
                     </label>
                 </div>
+
+                <h5>16.1. Se sim, em quais níveis?</h5>
 
                 <div class="form-group">
                    <label class="checkbox-inline">
@@ -815,7 +817,7 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
                     </select>
-                    <textarea type="text" required id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
+                    <textarea type="text" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 "style='display: none' /></textarea>
                     <script>
 
@@ -858,12 +860,12 @@
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="premiacao" name="premiacao"name="comunicacao" required>
-                        <div class="help-block with-errors"></div>
+                        
                         <option value=""></option>
                         <option value="0">Nāo</option>
                         <option value="1">Sim, quais?</option>    
                     </select>
-                    <textarea type="text" id="inputPremiacao" name="inputPremiacao" required class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
+                    <textarea type="text" id="inputPremiacao" name="inputPremiacao" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 "style='display: none'></textarea>
                     <script>
 
@@ -995,7 +997,7 @@
             <fieldset class="tab redes_sociais">
                 <h5>Onde podemos encontrar mais informação sobre sua iniciativa?*(Preencha pelo menos 1 item):</h5>
                 <div class="form-group">
-                    <div class="input-group" required>
+                    <div class="input-group">
                       <span class="input-group-addon"><i class="fa fa-mouse-pointer"></i></span>
                       <input class="form-control" type="text" name="site" placeholder="Site">
                     </div>
@@ -1067,7 +1069,7 @@
                 <h5>E-mail</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="text" name="indica_email_2" placeholder="email@email.com" class="f1-last-name form-control" id="f1-last-name" required >                    
+                    <input type="email" name="indica_email_2" placeholder="email@email.com" class="f1-last-name form-control" id="f1-last-name" required >                    
                 </div>
                  <h5>Telefone</h5>
                 <div class="form-group">
