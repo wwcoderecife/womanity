@@ -7,8 +7,11 @@
             <!--<script src="assets/js/bootstrap.min.js"></script>-->
             <script src="assets/js/jquery.backstretch.min.js"></script>
             <script src="assets/js/retina-1.1.0.min.js"></script>
+<<<<<<< HEAD
             <!--<script src="assets/js/validator.min.js"></script>-->
             <!--<script src="assets/js/scripts.js"></script>-->
+=======
+>>>>>>> origin/master
           
             <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
 

@@ -2,8 +2,8 @@
 
 abstract class Conexao {
 
-	const USER = "bd2c508dbbcf1d";
-	const PASS = "2031b10a";
+	const USER = "b2e65ea0e96181";
+	const PASS = "71783f6f";
 
 	private static $instance = null;
 
@@ -11,7 +11,7 @@ abstract class Conexao {
 
 		try {
 			if (self::$instance == null):
-				$dsn = "mysql:host=br-cdbr-azure-south-b.cloudapp.net;dbname=womanity_ecossistema";
+				$dsn = "mysql:host=br-cdbr-azure-south-b.cloudapp.net;dbname=ecossistema";
 				self::$instance = new PDO($dsn, self::USER, self::PASS);
 				self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			
