@@ -651,8 +651,8 @@
            <h5>13. O que faz a sua iniciativa?* </h5>
            <h6>(até 500 caracteres)</h6>                                  
                 <div class="form-group">
-                    <label class="sr-only ls-label" for="f1-about-yourself"></label>
-                    <textarea name="sobre" data-ls-module="charCounter" maxlength="500" placeholder="Fale sobre a sua iniciativa...." 
+                    <label class="sr-only" for="f1-about-yourself"></label>
+                    <textarea name="sobre" maxlength="500" placeholder="Fale sobre a sua iniciativa...." 
                     class="f1-about-yourself form-control" id="sobre" required ></textarea>
        
                 </div>
@@ -751,7 +751,7 @@
                     <label class="checkbox-inline">
                         <input type="checkbox" name="politicas_publicas_lista[]" value="nacional" class="form-control-radio">nacional
                     </label>
-                    <textarea data-ls-module="charCounter" name="organizaçāo_politica_publica" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
+                    <textarea name="organizaçāo_politica_publica" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
                     class="f1-about-yourself form-control" id="sobre_iniciativa">
                    </textarea>
                 </div>
@@ -767,7 +767,7 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim</option>
                     </select>
-                    <textarea type="text" id="inputAvaliacaoOng" name="inputAvaliacaoOng" class="f1-last-name form-control" data-ls-module="charCounter" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
+                    <textarea type="text" id="inputAvaliacaoOng" name="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
                         "style='display: none' /></textarea>
                     <script>
 
@@ -815,7 +815,7 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
                     </select>
-                    <textarea type="text" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" data-ls-module="charCounter" maxlength="500" placeholder="Descreva estratégia de comunicação..
+                    <textarea type="text" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 "style='display: none' /></textarea>
                     <script>
 
@@ -863,7 +863,7 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim, quais?</option>    
                     </select>
-                    <textarea type="text" id="inputPremiacao" name="inputPremiacao" class="f1-last-name form-control" data-ls-module="charCounter" maxlength="500"placeholder="Premiações/Certificações..
+                    <textarea type="text" id="inputPremiacao" name="inputPremiacao" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 "style='display: none'></textarea>
                     <script>
 
