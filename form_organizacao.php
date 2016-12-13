@@ -1004,7 +1004,7 @@
                  <h5>Cep</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep</label>
-                    <input type="text" name="cep" id="inputCep" placeholder="Cep xx-xxx-xxx*" class="f1-last-name form-control cep"required>
+                    <input type="text" name="cep"  maxlength="10" maxlength="10" id="inputCep" placeholder="Cep xx-xxx-xxx*" class="f1-last-name form-control cep"required>
                 </div> 
 
                <div class="f1-buttons">
