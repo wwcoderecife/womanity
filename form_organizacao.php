@@ -95,7 +95,7 @@
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_1" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel1" required >
+                    <input type="tel" name="celular_1" min= "10" maxlength="11" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel1" required >
                     
                 </div>
 
@@ -128,7 +128,7 @@
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_2" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel2"required >
+                    <input type="tel" name="celular_2" min= "10" maxlength="11" min= "10" maxlength="11" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel2"required >
                     
                 </div>
 
@@ -769,6 +769,7 @@
                     <label class="checkbox-inline">
                         <input type="checkbox" name="politicas_publicas_lista[]" value="estadual" class="form-control-radio">estadual
                     </label>
+
                     <label class="checkbox-inline">
                         <input type="checkbox" name="politicas_publicas_lista[]" value="nacional" class="form-control-radio">nacional
                     </label>
@@ -1074,7 +1075,7 @@
                 <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                <input type="tel" name="indica_telefone_1" placeholder="Telefone (xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel3">
+                <input type="tel" name="indica_telefone_1"  placeholder="Telefone (xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel3">
                 </div>
                 <h5>Nome</h5>
                 <h5>Organizaçāo 2</h5>

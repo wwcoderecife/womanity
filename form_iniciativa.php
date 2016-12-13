@@ -88,7 +88,7 @@
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_1" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel1" required >
+                    <input type="tel" min= "10" maxlength="11" name="celular_1" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel1" required >
                     
                 </div>
 
@@ -121,7 +121,7 @@
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_2" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel2"required >
+                    <input type="tel" name="celular_2" min= "10" maxlength="11" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel2"required >
                     
                 </div>
 
@@ -729,7 +729,7 @@
                     <h5>16. A sua iniciativa influenciou políticas públicas?*</h5>
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="politicas_publicas"  value="nao" class="form-control-radio"> Nāo
+                        <input type="radio" name="politicas_publicas" required value="nao" class="form-control-radio"> Nāo
                     </label>
 
                     <label class="radio-inline">
@@ -740,18 +740,16 @@
                 <h5>16.1. Se sim, em quais níveis?</h5>
 
                 <div class="form-group">
-                   <label class="checkbox-inline">
-                        <input type="checkbox" name="politicas_publicas_lista[]" value="municipal" class="form-control-radio">
-                        </div>municipal 
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="municipal" class="form-control-radio">municipal
+                    </label>
+
+                     <label class="checkbox-inline">
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="estadual" class="form-control-radio">estadual
                     </label>
 
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="politicas_publicas_lista[]" value="estadual" class="form-control-radio">
-                       </div>estadual
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" name="politicas_publicas_lista[]" value="nacional" class="form-control-radio">
-                        </div>nacional 
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="nacional" class="form-control-radio">nacional
                     </label>
                     <textarea name="organizaçāo_politica_publica" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
                     class="f1-about-yourself form-control" id="sobre_iniciativa">
