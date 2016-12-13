@@ -7,11 +7,6 @@
             <!--<script src="assets/js/bootstrap.min.js"></script>-->
             <script src="assets/js/jquery.backstretch.min.js"></script>
             <script src="assets/js/retina-1.1.0.min.js"></script>
-<<<<<<< HEAD
-            <!--<script src="assets/js/validator.min.js"></script>-->
-            <!--<script src="assets/js/scripts.js"></script>-->
-=======
->>>>>>> origin/master
           
             <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
 
@@ -95,7 +90,7 @@
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_1" min= "10" maxlength="11" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel1" required >
+                    <input type="tel" name="celular_1" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel1" required >
                     
                 </div>
 
@@ -128,7 +123,7 @@
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_2" min= "10" maxlength="11" min= "10" maxlength="11" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel2"required >
+                    <input type="tel" name="celular_2" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputCel2"required >
                     
                 </div>
 
@@ -336,18 +331,18 @@
                  <h5>Em 2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
-                    <input type="text" name="orcamento_2014"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2014">
+                    <input type="text" id="orcamento_2014" name="orcamento_2014"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2014">
 
                 </div>
                 <h5>Em 2015</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2015</label>
-                    <input type="text" name="orcamento_2015"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2015">
+                    <input type="text" id="orcamento_2015" name="orcamento_2015"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2015">
                 </div>
                 <h5>Em 2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
-                    <input type="text" name="orcamento_2016"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2016">
+                    <input type="text" id="orcamento_2015" name="orcamento_2016"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2016">
                 </div>
 
                 
