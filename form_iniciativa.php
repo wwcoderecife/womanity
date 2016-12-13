@@ -651,7 +651,7 @@
            <h5>13. O que faz a sua iniciativa?* </h5>
            <h6>(até 500 caracteres)</h6>                                  
                 <div class="form-group">
-                    <label class="sr-only" for="f1-about-yourself"></label>
+                    <label class="sr-only ls-label" for="f1-about-yourself"></label>
                     <textarea name="sobre" data-ls-module="charCounter" maxlength="500" placeholder="Fale sobre a sua iniciativa...." 
                     class="f1-about-yourself form-control" id="sobre" required ></textarea>
        
