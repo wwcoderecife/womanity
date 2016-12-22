@@ -359,9 +359,9 @@
                     if ($('input[name="nao_tem_orcamento[]"]:checked').length > 0){
 
                         $('#nao_tenho_orcamento_input').attr('value', 'Não tenho orçamento');
-                        $('#orcamento_2014').attr('value', '');
-                        $('#orcamento_2015').attr('value', '');
-                        $('#orcamento_2016').attr('value', '');
+                        $('#orcamento_2014').val('');
+                        $('#orcamento_2015').val('');
+                        $('#orcamento_2016').val('');
                         $('#orcamento_2014').attr('disabled', true);
                         $('#orcamento_2015').attr('disabled', true);
                         $('#orcamento_2016').attr('disabled', true);
