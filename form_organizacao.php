@@ -6,7 +6,9 @@
             <script src="assets/bootstrap/js/bootstrap.min.js"></script>
             <!--<script src="assets/js/bootstrap.min.js"></script>-->
             <script src="assets/js/jquery.backstretch.min.js"></script>
-            <script src="assets/js/retina-1.1.0.min.js"></script>
+            <script src="assets/js/retina-1.1.0.min.js"></script>	
+            <script src="assets/js/validatortel.js"></script>
+
           
             <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
 
@@ -84,14 +86,14 @@
                 <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1" required >
-                    
+                    <input type="tel" onblur="ExitField('inputTel1','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" name="telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1" required >
+                    <label id="msgTel" ></label>
                 </div>
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_1" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel1" required >
-                    
+                    <input type="tel" onblur="ExitField('inputCel1','msgCel','Celular inválido, número deve conter 15 caracteres',15);" name="celular_1" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel1" required >
+                    <label id="msgCel" ></label>
                 </div>
 
                 <h4>Dados Pessoais Contato 2:</h4>
@@ -118,13 +120,14 @@
                 <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="telefone_2" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel2"required >
+                    <input type="tel" onblur="ExitField('inputTel2','msgTel2','Telefone inválido, número deve conter 14 caracteres ', 14);" name="telefone_2" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel2"required >
+		    <label id="msgTel2" ></label>	
                 </div>
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_2" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputCel2"required >
-                    
+                    <input type="tel" onblur="ExitField('inputCel2','msgCel2','Celular inválido, número deve conter 15 caracteres',15);" name="celular_2" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputCel2"required >
+                    <label id="msgCel2" ></label>
                 </div>
 
                 <div class="f1-buttons">
@@ -149,7 +152,8 @@
                         <option value="nao">nao</option>
                     </select>    
 
-                <input type="text" id="inputcnpj" maxlength="18" name="inputcnpj" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opcional" style='display: none'/>
+                <input type="text" id="inputcnpj" onblur="ExitField('inputcnpj','msgCnpj','CNPJ inválido, número deve conter 18 caracteres ', 18);" name="inputcnpj" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxx/xxxx-xx, a inserção deste número é opcional" style='display: none'/>
+		<label id="msgCnpj"></label>	 
                     <script>
 
                         var dropdownCnpj = document.getElementById('organizacao-cnpj');
@@ -184,7 +188,7 @@
                 </div>
                     
 
-                <h4>2. Onde a sua organizaçāo está localizada?*</h4>
+                <h4>2. Onde a sua organizaçāo atua?*</h4>
                 <div class="form-group">
                     <label class="radio-inline">
                        <input type="radio" name="zona" value="rural" class="form-control-radio" required>Zona Rural
@@ -193,6 +197,10 @@
                     <label class="radio-inline">
                         <input type="radio" name="zona" value="urbana" class="form-control-radio">Zona Urbana
                     </label>
+			
+			<label class="radio-inline">
+                           <input type="radio" name="zona" value="ambas" class="form-control-radio">Ambas
+                        </label>
                 </div>
 
                 <h4>3. Qual o nome da sua organizaçāo?*</h4>
@@ -999,7 +1007,8 @@
                  <h5>Cep</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep</label>
-                    <input type="text" name="cep"  maxlength="10" maxlength="10" id="inputCep" placeholder="Cep xx-xxx-xxx*" class="f1-last-name form-control cep"required>
+                    <input type="text" name="cep" onblur="ExitField('inputCep','msgCep','Cep inválido, número deve conter 9 caracteres',9);" id="inputCep" placeholder="Cep xx-xxx-xxx*" class="f1-last-name form-control cep"required>
+		    <label id="msgCep"></label>	
                 </div> 
 
                <div class="f1-buttons">
