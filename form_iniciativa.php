@@ -171,7 +171,7 @@
                 </div>
 
 
-                <h5>2. A sua iniciativa está localizada na…*</h5>
+                <h5>2. Onde a sua iniciativa atua?*</h5>
                  <div class="form-group">
                     <label class="radio-inline">
                        <input type="radio" name="zona" value="rural" class="form-control-radio" >Zona Rural
@@ -180,6 +180,12 @@
                     <label class="radio-inline">
                         <input type="radio" name="zona" value="urbana" class="form-control-radio" >Zona Urbana
                     </label>
+                   
+                   <label class="radio-inline">
+                        <input type="radio" name="zona" value="ambas" class="form-control-radio" >Ambas
+                    </label>
+                   
+                  
                 </div>
 
                 <h5>3. Qual o nome da sua iniciativa?*</h5>
