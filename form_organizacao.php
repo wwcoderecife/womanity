@@ -126,7 +126,7 @@
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" onblur="ExitField('inputCel2','msgCel2','Celular inválido, número deve conter 15 caracteres',15);" name="celular_2" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputCel2"required >
+                    <input type="tel" onblur="ExitField('inputCel2','msgCel2','Celular inválido, número deve conter 15 caracteres',15);" name="celular_2" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel2"required >
                     <label id="msgCel2" ></label>
                 </div>
 
