@@ -391,7 +391,7 @@
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="recursos" value="nao" class="form-control-radio"> Nāo
+                        <input type="radio" name="recursos" checked value="nao" class="form-control-radio"> Nāo
                     </label>
                 </div>
 
