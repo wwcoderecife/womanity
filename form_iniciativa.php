@@ -147,7 +147,7 @@
                     </select> 
                 <div class="iniciativapj">     
                <input type="text" id="inputnomeong" name="inputnomeong" class="f1-last-name form-control" placeholder="nome da organizaçāo" style='display: none' />
-               <input type="text" onblur="ExitField('inputcnpj','msgCnpj','CNPJ inválido, número deve conter 18 caracteres ', 18);" id="inputcnpj"  name="organizacao_pai"  class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" style='display: none'/ >
+               <input type="text" onblur="ExitField('inputcnpj','msgCnpj','CNPJ inválido, número deve conter 18 caracteres ', 18);" id="inputcnpj"  name="organizacao_pai"  class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opcional" style='display: none'/ >
                <label id="msgCnpj"></label>
                 </div>
                     <script>
@@ -182,7 +182,7 @@
                     </label>
                    
                    <label class="radio-inline">
-                        <input type="radio" name="zona" value="ambas" class="form-control-radio" >Ambas
+                        <input type="radio" name="zona" checked value="ambas" class="form-control-radio" >Ambas
                     </label>
                    
                   
@@ -737,7 +737,7 @@
                     <h5>16. A sua iniciativa influenciou políticas públicas?*</h5>
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="politicas_publicas" required value="nao" class="form-control-radio"> Nāo
+                        <input type="radio" name="politicas_publicas" value="nao" class="form-control-radio"> Nāo
                     </label>
 
                     <label class="radio-inline">

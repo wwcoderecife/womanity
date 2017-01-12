@@ -191,7 +191,7 @@
                 <h4>2. Onde a sua organizaçāo atua?*</h4>
                 <div class="form-group">
                     <label class="radio-inline">
-                       <input type="radio" name="zona" value="rural" class="form-control-radio" required>Zona Rural
+                       <input type="radio" name="zona" value="rural" class="form-control-radio" >Zona Rural
                     </label>
 
                     <label class="radio-inline">
@@ -199,7 +199,7 @@
                     </label>
 			
 			<label class="radio-inline">
-                           <input type="radio" name="zona" value="ambas" class="form-control-radio">Ambas
+                           <input type="radio" name="zona" checked value="ambas" class="form-control-radio">Ambas
                         </label>
                 </div>
 
@@ -754,7 +754,7 @@
 
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="politicas_publicas" required value="nao" class="form-control-radio"> Nāo
+                        <input type="radio" name="politicas_publicas" checked value="nao" class="form-control-radio"> Nāo
                     </label>
 
                     <label class="radio-inline">
