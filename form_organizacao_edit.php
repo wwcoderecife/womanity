@@ -1444,7 +1444,7 @@
 
 <!-- 28 Organizacao-->
 
-<h4>18. A sua organização realiza monitoramento e avaliação sistematizada das atividades?*</h4>
+<h4>19. A sua organizaçāo tem uma estratégia de comunicação própria?*</h4>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
