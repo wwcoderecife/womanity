@@ -218,7 +218,7 @@
                 </div>
 
 
-                <h4>2. Onde a sua iniciativa está localizada?*</h4>
+                <h4>2. Onde a sua iniciativa atua?*</h4>
                  <div class="form-group">
                     <label class="radio-inline">
                        <input type="radio" name="zona"  value="rural" class="form-control-radio" 
@@ -229,6 +229,12 @@
                     <label class="radio-inline">
                         <input type="radio" name="zona" value="urbana" class="form-control-radio"
                          <?php if($edit->getLocalizacao() == "urbana"){ echo "checked='checked'"; } ?>
+                        >Zona Urbana
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="zona" value="ambas" class="form-control-radio"
+                         <?php if($edit->getLocalizacao() == "ambas"){ echo "checked='checked'"; } ?>
                         >Zona Urbana
                     </label>
                 </div>
