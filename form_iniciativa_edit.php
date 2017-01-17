@@ -143,13 +143,13 @@
                 <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="cargo_2" value="<?php echo $edit->getCargo_2() ?>" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name" >
+                    <input type="text" required name="cargo_2" value="<?php echo $edit->getCargo_2() ?>" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name" >
                     
                 </div>
                  <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="email_2" value="<?php echo $edit->getEmail_2() ?>" placeholder="email@email.com" class="f1-last-name form-control" id="f1-last-name" >
+                    <input type="email" required  name="email_2" value="<?php echo $edit->getEmail_2() ?>" placeholder="email@email.com" class="f1-last-name form-control" id="f1-last-name" >
                     
                     
                 </div>
@@ -157,12 +157,12 @@
                 <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="telefone_2" value="<?php echo $edit->getTelefone_2() ?>" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel2">
+                    <input type="tel" required  name="telefone_2" value="<?php echo $edit->getTelefone_2() ?>" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel2">
                 </div>
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_2" value="<?php echo $edit->getCelular_2() ?>" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel2">
+                    <input type="tel" required  name="celular_2" value="<?php echo $edit->getCelular_2() ?>" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel2">
                     
                 </div>
 
@@ -180,7 +180,7 @@
               
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="organizacao-pai" id="organizacao-cnpj">
+                    <select class="f1-last-name form-control" required  name="organizacao-pai" id="organizacao-cnpj">
                         
                         <option value="sim"  
                         <?php if($edit->getOrganizacaoPai() != ""){ echo "selected"; } ?>
@@ -192,7 +192,7 @@
                     </select> 
                 <div class="iniciativapj">     
                <input type="text" id="inputnomeong"  value="<?php echo $edit->getInputnomeong() ?>"  name="inputnomeong" class="f1-last-name form-control" placeholder="nome da organizaçāo" <?php if($edit->getInputnomeong() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> />
-                <input type="text"  id="inputcnpj" maxlength="18" value="<?php echo $edit->getOrganizacaoPai()  ?>" name="organizacao_pai" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" <?php if($edit->getOrganizacaoPai() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> />
+               <input type="text"  id="inputcnpj" value="<?php echo $edit->getOrganizacaoPai()  ?>" name="organizacao_pai" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" <?php if($edit->getOrganizacaoPai() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> />
 
                 </div>
                     <script>
@@ -242,7 +242,7 @@
                 <h4>3. Qual o nome da sua iniciativa?*</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Nome</label>
-                    <input type="text" name="nome" value="<?php echo $edit->getNome() ?>" maxlength="50" class="f1-last-name form-control" >
+                    <input type="text" required  name="nome" value="<?php echo $edit->getNome() ?>" maxlength="50" class="f1-last-name form-control" >
                 </div>
 
 
@@ -256,14 +256,14 @@
                 <h4>5. Informe o telefone da sua iniciativa*</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Telefone</label>
-                    <input type="text" name="organizacao-telefone" value="<?php echo $edit->getTelefone() ?>"  placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd" id="inputTel3">
+                    <input type="text" required  name="organizacao-telefone" value="<?php echo $edit->getTelefone() ?>"  placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd" id="inputTel3">
                     
                 </div>
 
                 <h4>6. Informe o e-mail da sua iniciativa*</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Email</label>
-                    <input type="email" name="email" value="<?php echo $edit->getEmail() ?>"  class="f1-last-name form-control">
+                    <input type="email" required  name="email" value="<?php echo $edit->getEmail() ?>"  class="f1-last-name form-control">
                   
                 </div>
 
@@ -289,7 +289,7 @@
                 <h5>7.1. De qual natureza?</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="natureza" name="tipo" >           
+                    <select class="f1-last-name form-control"  id="natureza" name="tipo" >           
                         
                         <option value="academica" <?=($edit->getTipo() == 'academica')?'selected':''?>>
                             Acadêmica</option>
@@ -353,7 +353,7 @@
                 <h4> 8. Em que ano começaram as atividades da sua iniciativa?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="year_organizacao" name="anoatividade" >
+                    <select class="f1-last-name form-control" required  id="year_organizacao" name="anoatividade" >
                         <?php echo "<script type='text/javascript'> var ano = '".$edit->getInicioAtv()."'; </script>"; ?>
                         <script>
 
@@ -375,7 +375,7 @@
               <h4>9. Quantos colaboradores,funcionários ou voluntários estão envolvidos diretamente neste trabalho?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control"   id="pessoas_envolvidas" name="pessoas_envolvidas">
+                    <select class="f1-last-name form-control" required  id="pessoas_envolvidas" name="pessoas_envolvidas">
                         
                         <option value="1-5" <?=($edit->getQtdePessoas() == '1-5')?'selected':''?>>1-5</option>
                         <option value="6-10" <?=($edit->getQtdePessoas() == '6-10')?'selected':''?>>6-10</option>
@@ -392,7 +392,7 @@
                 <h4>10. Quantas pessoas a sua iniciativa beneficia diretamente?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control"  id="pessoas_beneficiadas" name="pessoas_beneficiadas" >
+                    <select class="f1-last-name form-control" required id="pessoas_beneficiadas" name="pessoas_beneficiadas" >
                         
                         <option value="até 50" <?=($edit->getQtdeBeneficiadas() == 'até 50')?'selected':''?>>até 50</option>
                         <option value="51-250" <?=($edit->getQtdeBeneficiadas() == '51-250')?'selected':''?>>51-250</option>
@@ -412,18 +412,18 @@
                  <h5>Em 2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
-                    <input type="text" id="orcamento_2014" name="orcamento_2014"  value="<?php  echo $edit->getOrcamento_2014(); ?>" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2014">
+                    <input type="text" required  id="orcamento_2014" name="orcamento_2014"  value="<?php  echo $edit->getOrcamento_2014(); ?>" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2014">
                     <div class="help-block with-errors"></div>
                 </div>
                 <h5>Em 2015</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2015</label>
-                    <input type="tex" id="orcamento_2015" name="orcamento_2015"   value="<?php  echo $edit->getOrcamento_2015(); ?>" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2015">
+                    <input type="tex" required  id="orcamento_2015" name="orcamento_2015"   value="<?php  echo $edit->getOrcamento_2015(); ?>" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2015">
                 </div>
                 <h5>Em 2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
-                    <input type="tex" id="orcamento_2016" name="orcamento_2016"  value="<?php  echo $edit->getOrcamento_2016(); ?>" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2016">
+                    <input type="tex" required  id="orcamento_2016" name="orcamento_2016"  value="<?php  echo $edit->getOrcamento_2016(); ?>" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2016">
                     <div class="help-block with-errors"></div>
                 </div>
 
@@ -584,7 +584,7 @@
         <h5>Escolha até 5 Temas e todos os Subtemas dentro da sua área de atuação*:</h5>
         <div class="form-group" style="border: 1px solid #ddd">
         <div class="table-responsive">
-        <table id="form1" name="table_temas"class="table table-hover col-sm-12"  >
+        <table id="form1" name="table_temas"class="table table-hover col-sm-12" required  >
 
              <thead>
                 <tr>
@@ -825,7 +825,7 @@
 <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar os subtemas.</em></h6>
 <div class="form-group">
 <!--<label for="subtemas" for="f1-google-plus">Subtemas</label>-->
-       <select class="f1-last-name form-control"id="subtemas"  class="selectpicker" name="subtemas[ ]" data-style="default" multiple>
+       <select class="f1-last-name form-control"id="subtemas" required  class="selectpicker" name="subtemas[ ]" data-style="default" multiple>
             <option value="Aborto"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
@@ -1129,7 +1129,7 @@
             <h6>(até 500 caracteres)</h6>
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
-                    <textarea name="sobre" maxlength="500" placeholder="Fale sobre a sua iniciativa...." 
+                    <textarea name="sobre" maxlength="500" required  placeholder="Fale sobre a sua iniciativa...." 
                     class="f1-about-yourself form-control" id="sobre"><?php echo $edit->getDescricao() ?></textarea>
                     
                 </div>
@@ -1138,7 +1138,7 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="publico_alvo" name="publico_alvo"  >
+                    <select class="f1-last-name form-control" required  id="publico_alvo" name="publico_alvo"  >
                     
                         
                         <option value="Empresas" <?=($edit->getPublicoAtendido() == 'Empresas')?'selected':''?>
@@ -1168,7 +1168,7 @@
                     <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
                     <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="organizacao_estado[ ]" multiple >
+                    <select class="f1-last-name form-control" name="organizacao_estado[ ]" multiple required  >
                         <div class="help-block with-errors"></div>
                         <option value="Acre"
                         <?php 
@@ -1383,14 +1383,14 @@
 			<h4>17. A sua iniciativa realiza monitoramento e avaliação sistematizada das atividades?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="monitoramento_atv" id="avaliacao" >
+                    <select class="f1-last-name form-control" name="monitoramento_atv" id="avaliacao" required  >
                         
                         <option value="0" <?=($edit->getMonitoramentoAtividades() == '')?'selected':''?>
                         >Nāo</option>
                         <option value="1" <?=($edit->getMonitoramentoAtividades() !== '')?'selected':''?>
                         >Sim</option>
                     </select>
-                    <textarea type="text" id="inputAvaliacaoOng" 
+                    <textarea type="text" required  id="inputAvaliacaoOng" 
                      name="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
                         " <?php if($edit->getMonitoramentoAtividades() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getMonitoramentoAtividades(); ?></textarea>
                     <script>
@@ -1435,14 +1435,14 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="iniciativa-comunicacao" >
+                    <select class="f1-last-name form-control" id="iniciativa-comunicacao" required  >
                         
                         <option value="0" <?=($edit->getEstrategiaComunicacao() == '')?'selected':''?>
                         >Nāo</option>
                         <option value="1" <?=($edit->getEstrategiaComunicacao() != '')?'selected':''?>
                         >Sim, qual?</option>
                     </select>
-                    <textarea type="text" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
+                    <textarea type="text" required  id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 " <?php if($edit->getEstrategiaComunicacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getEstrategiaComunicacao(); ?></textarea>
                     <script>
 
@@ -1485,7 +1485,7 @@
 			<h4>19. A sua iniciativa recebeu premiações, certificações, etc.?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" id="premiacao" name="premiacao"name="comunicacao" >
+                    <select class="f1-last-name form-control" id="premiacao" required  name="premiacao"name="comunicacao" >
                         <div class="help-block with-errors"></div>
                         
                         <option value="0" <?=($edit->getPremiacaoCertificacao() == '')?'selected':''?>
@@ -1493,7 +1493,7 @@
                         <option value="1" <?=($edit->getPremiacaoCertificacao() != '')?'selected':''?>
                         >Sim, quais?</option>    
                     </select>
-                    <textarea type="text"  id="inputPremiacao" name="inputPremiacao" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
+                    <textarea type="text" required id="inputPremiacao" name="inputPremiacao" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 " <?php if($edit->getPremiacaoCertificacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getPremiacaoCertificacao(); ?></textarea>
                     <script>
 
@@ -1536,17 +1536,17 @@
                  <h5>Organização 1</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="relaciona1"  class="f1-last-name form-control" value="<?php echo (explode("_1",$edit->getRelaciona_1())[0]); ?>" >
+                    <input type="text" name="relaciona1"  class="f1-last-name form-control" value="<?php //echo (explode("_1",$edit->getRelaciona_1())[0]); ?>" >
                 </div>
                 <h5>Organização 2</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="relaciona2"   class="f1-last-name form-control" value="<?php echo (explode("_2",$edit->getRelaciona_2())[0]); ?>" >
+                    <input type="text" name="relaciona2"   class="f1-last-name form-control" value="<?php //echo (explode("_2",$edit->getRelaciona_2())[0]); ?>" >
                 </div>
                 <h5>Organização 3</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="relaciona3" class="f1-last-name form-control"  value="<?php echo (explode("_3",$edit->getRelaciona_3())[0]); ?>">
+                    <input type="text" name="relaciona3" class="f1-last-name form-control"  value="<?php //echo (explode("_3",$edit->getRelaciona_3())[0]); ?>">
                 </div> -->
 
 
@@ -1562,7 +1562,7 @@
                 <h5>Regiāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" name="regiao" id="regiao" >
+                    <select class="f1-last-name form-control" required  name="regiao" id="regiao" >
                         <option value="norte" <?=($edit->getRegiao() == 'norte')?'selected':''?>
                         >Norte</option>
                         <option value="nordeste" <?=($edit->getRegiao() == 'nordeste')?'selected':''?>
@@ -1578,7 +1578,7 @@
                  <h5>UF*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">UF</label>
-                    <select class="f1-last-name form-control" name="estado" id="estados" >
+                    <select class="f1-last-name form-control"  required name="estado" id="estados" >
 
                         <?php echo "<script type='text/javascript'> var estado = '".$edit->getEstado()."'; </script>"; ?>
                         <script type="text/javascript">
@@ -1599,7 +1599,7 @@
                 <h5>Cidade*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cidade</label>
-                    <select class="f1-last-name form-control" name="cidade" id="cidades" > 
+                    <select class="f1-last-name form-control" required  name="cidade" id="cidades" > 
 
                         <?php echo "<script type='text/javascript'> var cidade = '".$edit->getCidade()."'; </script>"; ?>
                         
@@ -1610,22 +1610,22 @@
                 <h5>Bairro*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Bairro*</label>
-                    <input type="text"  value="<?php echo $edit->getBairro(); ?>" name="bairro" placeholder="Bairro..." class="f1-last-name form-control">
+                    <input type="text" required  value="<?php echo $edit->getBairro(); ?>" name="bairro" placeholder="Bairro..." class="f1-last-name form-control">
                      
                 <h5>Rua*</h5>        
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-facebook">Rua*</label>
-                    <input type="text"  value="<?php echo $edit->getRua(); ?>" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control">
+                    <input type="text" required   value="<?php echo $edit->getRua(); ?>" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control">
                        
                 <h5>Número*</h5>        
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número*</label>
-                    <input type="number"  value="<?php echo $edit->getNumero(); ?>" name="numero" placeholder="Número...*"class="f1-last-name form-control" >
+                    <input type="number" required  value="<?php echo $edit->getNumero(); ?>" name="numero" placeholder="Número...*"class="f1-last-name form-control" >
                         
                 </div>
-                <h5>Complemento*</h5>
+                <h5>Complemento</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Complemento</label>
                     <input type="text"  value="<?php echo $edit->getComplemento(); ?>" name="complemento" placeholder="Complemento..."class="f1-last-name form-control">
@@ -1633,7 +1633,7 @@
                 <h5>Cep*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep*</label>
-                    <input type="text"  value="<?php echo $edit->getCep(); ?>" name="cep" id="inputCep"placeholder="Cep xx-xxx-xxx*"class="f1-last-name form-control cep" >
+                    <input type="text" required  value="<?php echo $edit->getCep(); ?>" name="cep" id="inputCep"placeholder="Cep xx-xxx-xxx*"class="f1-last-name form-control cep" >
                    
                 </div>              
                 <div class="f1-buttons">
@@ -1649,7 +1649,7 @@
                 <div class="form-group">
                     <div class="input-group">
                       <span class="input-group-addon"><i class="fa fa-mouse-pointer"></i></span>
-                      <input class="form-control"   value="<?php echo $edit->getSite(); ?>" type="text" name="site" placeholder="Site">
+                      <input class="form-control" value="<?php echo $edit->getSite(); ?>" type="text" name="site" placeholder="Site">
                     </div>
                 </div>
                 <div class="form-group">
@@ -1695,20 +1695,20 @@
                 <h5>Nome*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="indica_nome_1"  placeholder="Nome" class="f1-last-name form-control" id="f1-last-name"
+                    <input type="text" required  name="indica_nome_1"  placeholder="Nome" class="f1-last-name form-control" id="f1-last-name"
                     value="<?php echo (explode("_1",$edit->getIndicaNome_1())[0]); ?>" >
                 </div>
                 <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email"  name="indica_email_1" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name"
+                    <input type="email"  required  name="indica_email_1" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name"
                     value="<?php echo $edit->getIndicaEmail_1(); ?>" >
                     
                 </div>
                 <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel"  name="indica_telefone_1" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel3"
+                    <input type="tel" required  name="indica_telefone_1" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel3"
                     value="<?php echo $edit->getIndicaTelefone_1(); ?>" >
                 </div>
                

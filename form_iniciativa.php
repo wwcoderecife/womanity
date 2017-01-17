@@ -1052,18 +1052,18 @@
                 <h5>Nome</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="indica_nome_1" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name" required >
+                    <input type="text" required name="indica_nome_1" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name" >
                 </div>
                 <h5>E-mail</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="indica_email_1" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name" required >
+                    <input type="email" required  name="indica_email_1" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name" >
                     
                 </div>
                 <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel4" required >
+                    <input type="tel" required  name="indica_telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel4" >
                 </div>
                
                 <h5>Iniciativa 2</h5>
@@ -1071,17 +1071,17 @@
                  <h5>Nome</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="indica_nome_2" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name" required  >
+                    <input type="text" name="indica_nome_2" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name" >
                 </div>
                 <h5>E-mail</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="indica_email_2" placeholder="email@email.com" class="f1-last-name form-control" id="f1-last-name" required >                    
+                    <input type="email" name="indica_email_2" placeholder="email@email.com" class="f1-last-name form-control" id="f1-last-name" >                    
                 </div>
                  <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_2" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel5" required >
+                    <input type="tel" name="indica_telefone_2" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel5" >
                 </div>
               
                 <h5>Iniciativa 3</h5>
@@ -1089,17 +1089,17 @@
                   <h5>Nome</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="indica_nome_3" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name" required >
+                    <input type="text" name="indica_nome_3" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name" >
                 </div>
                  <h5>E-mail</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="indica_email_3" placeholder="email@email.com" class="f1-last-name form-control" id="f1-last-name"required >
+                    <input type="email" name="indica_email_3" placeholder="email@email.com" class="f1-last-name form-control" id="f1-last-name">
                 </div>
                  <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_3" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel6"required >
+                    <input type="tel" name="indica_telefone_3" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel6">
                 </div>
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
