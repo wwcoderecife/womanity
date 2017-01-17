@@ -40,6 +40,24 @@
             <script src="assets/js/placeholder.js"></script>
         <![endif]-->
 
+        <script type="text/javascript">
+            function logout(){
+                sweetAlert({
+                  title: "Deseja sair?",
+                  text: "Lembre-se de preencher todos os campos obrigatórios em todas as etapas e clicar no botão ENVIAR na etapa 5",
+                  type: "warning",
+                  showCancelButton: true,
+                  cancelButtonText: 'Cencelar',
+                  confirmButtonColor: "#DD6B55",
+                  confirmButtonText: "Sim, desejo sair",
+                  closeOnConfirm: false
+                },
+                function(){
+                  window.location.href = '?logout=sair';
+                });
+            }
+        </script>
+
     </head>
 
     <body>
@@ -79,7 +97,7 @@
 						<li>
 
                             <span>Seja bem-vindo(a)</span><br>
-                            <span title="Sair do Sistema"><a href="?logout=sair" class="logout">Sair do sistema</a></span>
+                            <span title="Sair do Sistema"><a href="#" onclick="logout();" class="logout">Sair do sistema</a></span>
 						</li>
 					</ul>
 				</div>
