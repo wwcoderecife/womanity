@@ -350,7 +350,7 @@
                 <h5>Em 2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
-                    <input type="text" id="orcamento_2015" name="orcamento_2016"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2016">
+                    <input type="text" id="orcamento_2016" name="orcamento_2016"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2016">
                 </div>
 
                 
@@ -1002,7 +1002,7 @@
                 <h5>Complemento</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Complemento</label>
-                    <input type="text" name="complemento" placeholder="Complemento..." class="f1-last-name form-control"required>
+                    <input type="text" name="complemento" placeholder="Complemento..." class="f1-last-name form-control">
                 </div>
                  <h5>Cep</h5>
                 <div class="form-group">

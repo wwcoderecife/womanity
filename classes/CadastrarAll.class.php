@@ -695,6 +695,8 @@ class CadastrarAll extends Conexao {
         $pdo = parent::getDB();
         try{
 
+            $data_atual = date("Y-m-d");
+
 
             $pdo->beginTransaction();
 
@@ -702,8 +704,8 @@ class CadastrarAll extends Conexao {
                 cnpj, localizacao, nome, sigla, telefone, email, tipo, inicio_atv, qtde_pessoas, recursos_financeiros,
                 descricao,  publico_atendido, politicas_publicas, monitoramento_atividades, estrategia_comunicacao,
                 premiacao_certificacao, organizacao_pai, identifica_iniciativa, usuario_id, inputnomeong, justificativa_orcamento, 
-                pessoas_benefeciadas, identifica_organizacao_outros, fonte_recursos_outros)
-                                    values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                pessoas_benefeciadas, identifica_organizacao_outros, fonte_recursos_outros, created_at)
+                                    values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             $inserir_ong->bindValue(1, $this->getCnpj());
             $inserir_ong->bindValue(2, $this->getLocalizacao());
             $inserir_ong->bindValue(3, $this->getNome());
@@ -728,6 +730,7 @@ class CadastrarAll extends Conexao {
             $inserir_ong->bindValue(22, $this->getQtdeBeneficiadas());
             $inserir_ong->bindValue(23, $this->getIdentificaOrganizacaOutros());
             $inserir_ong->bindValue(24, $this->getFonteRecursosOutros());
+            $inserir_ong->bindValue(25, $data_atual);
             $inserir_ong->execute();
             $organizacao_id = $pdo->lastInsertId();
             $_SESSION['organizacao_id'] = $organizacao_id;
@@ -976,7 +979,15 @@ class CadastrarAll extends Conexao {
         }
         catch (Exception $e){
               $pdo->rollback();
-              //echo $e->getMessage();
+              
+            $inserir_erro = $pdo->prepare("insert into erro_logs (erro, data, usuario_id)
+                               values (?, ?, ?)");
+            $inserir_erro->bindValue(1, $e->getMessage());
+            $inserir_erro->bindValue(2, $data_atual);
+            $inserir_erro->bindValue(3, $this->getUsuarioId());
+            $inserir_erro->execute();
+
+
                echo "<script type='text/javascript'>
 
                         sweetAlert({
@@ -1004,6 +1015,7 @@ class CadastrarAll extends Conexao {
         $pdo = parent::getDB();
         try{
 
+            $data_atual = date("Y-m-d");
 
             $pdo->beginTransaction();
 
@@ -1011,7 +1023,7 @@ class CadastrarAll extends Conexao {
                 telefone = ?, email = ?, tipo = ?, inicio_atv = ?, qtde_pessoas = ?, recursos_financeiros = ?,
                 descricao = ?,  publico_atendido = ?, politicas_publicas = ?, monitoramento_atividades = ?, estrategia_comunicacao = ?,
                 premiacao_certificacao = ?, organizacao_pai = ?, identifica_iniciativa = ?, inputnomeong = ?, justificativa_orcamento = ?, 
-                pessoas_benefeciadas = ?, identifica_organizacao_outros = ?, fonte_recursos_outros = ?
+                pessoas_benefeciadas = ?, identifica_organizacao_outros = ?, fonte_recursos_outros = ?, updated_at = ?
                 where usuario_id = ? ");
             $edit_ong->bindValue(1, $this->getCnpj());
             $edit_ong->bindValue(2, $this->getLocalizacao());
@@ -1036,7 +1048,8 @@ class CadastrarAll extends Conexao {
             $edit_ong->bindValue(21, $this->getQtdeBeneficiadas());
             $edit_ong->bindValue(22, $this->getIdentificaOrganizacaOutros());
             $edit_ong->bindValue(23, $this->getFonteRecursosOutros());
-            $edit_ong->bindValue(24, $this->getUsuarioId());
+            $edit_ong->bindValue(24, $data_atual);
+            $edit_ong->bindValue(25, $this->getUsuarioId());
             
             $edit_ong->execute();
 
@@ -1349,6 +1362,14 @@ class CadastrarAll extends Conexao {
         catch (Exception $e){
               $pdo->rollback();
               //echo $e->getMessage();
+            
+            $inserir_erro = $pdo->prepare("insert into erro_logs (erro, data, usuario_id)
+                               values (?, ?, ?)");
+            $inserir_erro->bindValue(1, $e->getMessage());
+            $inserir_erro->bindValue(2, $data_atual);
+            $inserir_erro->bindValue(3, $this->getUsuarioId());
+            $inserir_erro->execute();
+            
                echo "<script type='text/javascript'>
 
                         sweetAlert({
