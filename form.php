@@ -44,12 +44,12 @@
             function logout(){
                 sweetAlert({
                   title: "Deseja sair?",
-                  text: "Lembre-se de preencher todos os campos obrigatórios em todas as etapas e clicar no botão ENVIAR na etapa 5",
+                  text: "Lembre-se de preencher os campos obrigatórios em todas as etapas e clicar no botão ENVIAR na etapa 5",
                   type: "warning",
                   showCancelButton: true,
-                  cancelButtonText: 'Cencelar',
+                  cancelButtonText: 'Continuar preenchendo',
                   confirmButtonColor: "#DD6B55",
-                  confirmButtonText: "Sim, desejo sair",
+                  confirmButtonText: "Sair",
                   closeOnConfirm: false
                 },
                 function(){
