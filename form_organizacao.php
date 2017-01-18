@@ -776,7 +776,7 @@
                     <label class="checkbox-inline">
                         <input type="checkbox" name="politicas_publicas_lista[]" value="nacional" class="form-control-radio">nacional
                     </label>
-                    <textarea name="organizaçāo_politica_publica" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
+                    <textarea name="organizaçāo_politica_publica" maxlength="500" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
 
                     class="f1-about-yourself form-control" id="organizaçāo_politica_publica"></textarea>
                 </div>
@@ -997,7 +997,7 @@
                 <h5>Número*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número</label>
-                    <input type="number" name="numero" placeholder="Número...*" class="f1-last-name form-control"required>
+                    <input type="number" name="numero" min="1" placeholder="Número...*" class="f1-last-name form-control"required>
                 </div>
                 <h5>Complemento</h5>
                 <div class="form-group">

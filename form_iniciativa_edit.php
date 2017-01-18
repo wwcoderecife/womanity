@@ -104,32 +104,32 @@
                 <h5>Nome*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="nome1" value="<?php echo $edit->getNome_1() ?>"  class="f1-last-name form-control" id="inputNome1" >
+                    <input type="text" name="nome1" required value="<?php echo $edit->getNome_1() ?>"  class="f1-last-name form-control" id="inputNome1" >
                     
                 </div>
                 <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="cargo_1" value="<?php echo $edit->getCargo_1() ?>" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name" >
+                    <input type="text" name="cargo_1" required value="<?php echo $edit->getCargo_1() ?>" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name" >
                     
                 </div>
 
                 <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="email_1"  value="<?php echo $edit->getEmail_1() ?>" class="f1-last-name form-control" id="f1-last-name"  >
+                    <input type="email" name="email_1" required value="<?php echo $edit->getEmail_1() ?>" class="f1-last-name form-control" id="f1-last-name"  >
                     
                 </div>
-                <h5>Telefone</h5>
+                <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="telefone_1" value="<?php echo $edit->getTelefone_1() ?>" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1" >
+                    <input type="tel" name="telefone_1" required value="<?php echo $edit->getTelefone_1() ?>" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1" >
                     
                 </div>
                 <h5>Celular*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Celular</label>
-                    <input type="tel" name="celular_1" value="<?php echo $edit->getCelular_1() ?>" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel1"  >
+                    <input type="tel" name="celular_1" required value="<?php echo $edit->getCelular_1() ?>" placeholder="(xx) xxxxx-xxxx" class="f1-last-name form-control phone_with_dddcel" id="inputCel1"  >
                     
                 </div>
 
@@ -137,7 +137,7 @@
                 <h5>Nome*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" name="nome2" value="<?php echo $edit->getNome_2() ?>" placeholder="responsável pela organização ou suplente" class="f1-last-name form-control" id="inputNome2" >
+                    <input type="text" name="nome2" required value="<?php echo $edit->getNome_2() ?>" placeholder="responsável pela organização ou suplente" class="f1-last-name form-control" id="inputNome2" >
                     
                 </div>
                 <h5>Cargo*</h5>
@@ -1372,7 +1372,7 @@
                         >nacional
                          
                     </label>
-                    <textarea name="organizaçāo_politica_publica" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
+                    <textarea name="organizaçāo_politica_publica" maxlength="500" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
                     class="f1-about-yourself form-control" id="sobre_iniciativa"><?php echo $edit->getPoliticasPublicas(); ?>
                    </textarea>
                 </div>
@@ -1622,7 +1622,7 @@
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número*</label>
-                    <input type="number" required  value="<?php echo $edit->getNumero(); ?>" name="numero" placeholder="Número...*"class="f1-last-name form-control" >
+                    <input type="number" required min="1" value="<?php echo $edit->getNumero(); ?>" name="numero" placeholder="Número...*"class="f1-last-name form-control" >
                         
                 </div>
                 <h5>Complemento</h5>

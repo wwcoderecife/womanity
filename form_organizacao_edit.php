@@ -1391,7 +1391,7 @@
                         } ?>
                     >nacional
                     </label>
-                    <textarea name="organizaçāo_politica_publica" placeholder="Descreva como se deu essa influência em políticas públicas (em 500 caracteres)"
+                    <textarea name="organizaçāo_politica_publica" maxlength="500" placeholder="Descreva como se deu essa influência em políticas públicas (em 500 caracteres)"
 
                     class="f1-about-yourself form-control" id="organizaçāo_politica_publica"><?php echo $edit->getPoliticasPublicas(); ?></textarea>
                 </div>
@@ -1636,7 +1636,7 @@
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número*</label>
-                    <input type="numeric" required  data-error="campo obrigatório, favor preencher" value="<?php echo $edit->getNumero(); ?>" name="numero" placeholder="Numero...*" class="f1-last-name form-control">
+                    <input type="numeric" required min="1" data-error="campo obrigatório, favor preencher" value="<?php echo $edit->getNumero(); ?>" name="numero" placeholder="Numero...*" class="f1-last-name form-control">
                     <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
