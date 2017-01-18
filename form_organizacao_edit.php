@@ -1130,8 +1130,9 @@
            		<h6>(até 500 caracteres)</h6>                                 
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
-                    <textarea name="sobre" required  maxlength="500" placeholder="campo com capacidade para 500 caracteres...." 
+                    <textarea name="sobre" required onkeyup="caracterTextarea(this.value,500,'contando')" maxlength="500" placeholder="campo com capacidade para 500 caracteres...." 
                     class="f1-about-yourself form-control" id="sobre" ><?php echo $edit->getDescricao() ?></textarea>
+                    <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
 
                  <h4>14. Qual o público diretamente atendido pela sua Organizaçāo?*</h4>

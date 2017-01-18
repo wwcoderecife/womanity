@@ -8,6 +8,7 @@
             <script src="assets/js/jquery.backstretch.min.js"></script>
             <script src="assets/js/retina-1.1.0.min.js"></script>	
             <script src="assets/js/validatortel.js"></script>
+            <script src="assets/js/textarea.js"></script>
 
           
             <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
@@ -655,8 +656,9 @@
                 <h6>(até 500 caracteres)</h6>
 				<div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
-                    <textarea name="sobre" required maxlength="500" placeholder="campo com capacidade para 500 caracteres...." 
+                    <textarea name="sobre" required onkeyup="caracterTextarea(this.value,500,'contando')" maxlength="500" placeholder="campo com capacidade para 500 caracteres...." 
                     class="f1-about-yourself form-control" id="sobre" ></textarea>
+                    <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
 
                 <!-- <h5>Qual é a sua função no ecossistema?*</h5>
