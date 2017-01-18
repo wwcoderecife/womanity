@@ -9,6 +9,6 @@ function caracterTextarea(box,num_max,campospan){
  document.getElementById(campospan).innerHTML = "Limite de caracteres excedido!";
  }
  }else{
- document.getElementById(campospan).innerHTML = "campo com capacidade para 500 caracteres..";
+ document.getElementById(campospan).innerHTML = "Limite de 500 caracteres..";
  }
 }
