@@ -1129,8 +1129,9 @@
             <h6>(até 500 caracteres)</h6>
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
-                    <textarea name="sobre" maxlength="500" required  placeholder="Fale sobre a sua iniciativa...." 
+                    <textarea name="sobre" onkeyup="caracterTextarea(this.value,500,'contando')" maxlength="500" required  placeholder="Fale sobre a sua iniciativa...." 
                     class="f1-about-yourself form-control" id="sobre"><?php echo $edit->getDescricao() ?></textarea>
+                    <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                     
                 </div>
 
@@ -1372,9 +1373,10 @@
                         >nacional
                          
                     </label>
-                    <textarea name="organizaçāo_politica_publica" maxlength="500" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
+                    <textarea name="organizaçāo_politica_publica" onkeyup="caracterTextarea(this.value,500,'contando')" maxlength="500" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
                     class="f1-about-yourself form-control" id="sobre_iniciativa"><?php echo $edit->getPoliticasPublicas(); ?>
                    </textarea>
+                   <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
 
 <!-- 26 Iniciativa-->
@@ -1391,8 +1393,9 @@
                         >Sim</option>
                     </select>
                     <textarea type="text" required  id="inputAvaliacaoOng" 
-                     name="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
+                     name="inputAvaliacaoOng" class="f1-last-name form-control" onkeyup="caracterTextarea(this.value,500,'contando')" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
                         " <?php if($edit->getMonitoramentoAtividades() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getMonitoramentoAtividades(); ?></textarea>
+                        <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -1442,8 +1445,9 @@
                         <option value="1" <?=($edit->getEstrategiaComunicacao() != '')?'selected':''?>
                         >Sim, qual?</option>
                     </select>
-                    <textarea type="text" required  id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
+                    <textarea type="text" required  onkeyup="caracterTextarea(this.value,500,'contando')"  id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 " <?php if($edit->getEstrategiaComunicacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getEstrategiaComunicacao(); ?></textarea>
+<span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                     <script>
 
                         var dropdownComun = document.getElementById('iniciativa-comunicacao');
@@ -1493,8 +1497,9 @@
                         <option value="1" <?=($edit->getPremiacaoCertificacao() != '')?'selected':''?>
                         >Sim, quais?</option>    
                     </select>
-                    <textarea type="text" required id="inputPremiacao" name="inputPremiacao" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
+                    <textarea type="text" required id="inputPremiacao" onkeyup="caracterTextarea(this.value,500,'contando')" name="inputPremiacao" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 " <?php if($edit->getPremiacaoCertificacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getPremiacaoCertificacao(); ?></textarea>
+<span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                     <script>
 
                         var dropdown = document.getElementById('premiacao');

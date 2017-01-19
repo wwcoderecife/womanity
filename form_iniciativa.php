@@ -660,8 +660,9 @@
            <h6>(até 500 caracteres)</h6>                                  
                 <div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
-                    <textarea name="sobre" maxlength="500" placeholder="Fale sobre a sua iniciativa...." 
+                    <textarea name="sobre" maxlength="500" onkeyup="caracterTextarea(this.value,500,'contando')" placeholder="Fale sobre a sua iniciativa...." 
                     class="f1-about-yourself form-control" id="sobre" required ></textarea>
+                    <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
        
                 </div>
 
@@ -759,9 +760,10 @@
                     <label class="checkbox-inline">
                         <input type="checkbox" name="politicas_publicas_lista[]" value="nacional" class="form-control-radio">nacional
                     </label>
-                    <textarea name="organizaçāo_politica_publica" maxlength="500"  placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
+                    <textarea name="organizaçāo_politica_publica" maxlength="500" onkeyup="caracterTextarea(this.value,500,'contando')"  placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
                     class="f1-about-yourself form-control" id="sobre_iniciativa">
                    </textarea>
+                   <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
 
 <!-- 26 Iniciativa-->
@@ -775,8 +777,9 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim</option>
                     </select>
-                    <textarea type="text" id="inputAvaliacaoOng" name="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
+                    <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando')" name="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
                         "style='display: none' /></textarea>
+                        <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -823,8 +826,9 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
                     </select>
-                    <textarea type="text" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
+                    <textarea type="text" id="inputComunicacaoOng" onkeyup="caracterTextarea(this.value,500,'contando')" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 "style='display: none' /></textarea>
+<span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                     <script>
 
                         var dropdownComun = document.getElementById('iniciativa-comunicacao');
@@ -871,8 +875,9 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim, quais?</option>    
                     </select>
-                    <textarea type="text" id="inputPremiacao" name="inputPremiacao" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
+                    <textarea type="text" id="inputPremiacao" onkeyup="caracterTextarea(this.value,500,'contando')" name="inputPremiacao" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 "style='display: none'></textarea>
+<span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                     <script>
 
                         var dropdown = document.getElementById('premiacao');
