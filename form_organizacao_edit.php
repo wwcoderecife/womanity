@@ -1164,25 +1164,25 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" required  name="organizacao-relaciona1" value="<?php echo (explode("_1",$edit->getEmpoderamentoNome_1())[0]); ?>"  class="f1-last-name form-control">
-                    <textarea name="sobre_iniciativas1" onkeyup="caracterTextarea(this.value,500,'contando')" required  maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
+                    <textarea name="sobre_iniciativas1" onkeyup="caracterTextarea(this.value,500,'contando1')" required  maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong1"  data-error = "Campo obrigatório, favor preencher."><?php echo $edit->getEmpoderamentoDesc_1(); ?></textarea>
-                    <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                    <span id="contando1" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
                 <h5>Iniciativa 2</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" required  name="organizacao-relaciona2"  class="f1-last-name form-control" value="<?php echo (explode("_2",$edit->getEmpoderamentoNome_2())[0]); ?>">
-                    <textarea name="sobre_iniciativas2" required onkeyup="caracterTextarea(this.value,500,'contando')"  maxlength="500"  placeholder="descreva as iniciativas da sua organização...." 
+                    <textarea name="sobre_iniciativas2" required onkeyup="caracterTextarea(this.value,500,'contando2')"  maxlength="500"  placeholder="descreva as iniciativas da sua organização...." 
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong2" data-error = "Campo obrigatório, favor preencher."><?php echo $edit->getEmpoderamentoDesc_2(); ?></textarea>
-                    <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                    <span id="contando2" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
                 <h5>Iniciativa 3</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona3" required  class="f1-last-name form-control"  value="<?php echo (explode("_3",$edit->getEmpoderamentoNome_3())[0]); ?>">
-                    <textarea name="sobre_iniciativas3" onkeyup="caracterTextarea(this.value,500,'contando')" maxlength="500" required  placeholder="descreva as iniciativas da sua organização...." 
+                    <textarea name="sobre_iniciativas3" onkeyup="caracterTextarea(this.value,500,'contando3')" maxlength="500" required  placeholder="descreva as iniciativas da sua organização...." 
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong3" data-error = "Campo obrigatório, favor preencher."><?php echo $edit->getEmpoderamentoDesc_3(); ?></textarea>
-                    <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                    <span id="contando3" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
 
                 <h4>16. Em quais estados sua iniciativa tem atuação direta*</h4>
@@ -1396,10 +1396,10 @@
                         } ?>
                     >nacional
                     </label>
-                    <textarea name="organizaçāo_politica_publica" maxlength="500" onkeyup="caracterTextarea(this.value,500,'contando')" placeholder="Descreva como se deu essa influência em políticas públicas (em 500 caracteres)"
+                    <textarea name="organizaçāo_politica_publica" maxlength="500" onkeyup="caracterTextarea(this.value,500,'contando4')" placeholder="Descreva como se deu essa influência em políticas públicas (em 500 caracteres)"
 
                     class="f1-about-yourself form-control" id="organizaçāo_politica_publica"><?php echo $edit->getPoliticasPublicas(); ?></textarea>
-                    <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                    <span id="contando4" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
 s
 
@@ -1416,9 +1416,9 @@ s
                         <option value="sim" <?=($edit->getMonitoramentoAtividades() != '')?'selected':''?>
                         >Sim</option>
                     </select>
-                    <textarea type="text" required onkeyup="caracterTextarea(this.value,500,'contando')" id="inputAvaliacaoOng" name="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres.."
+                    <textarea type="text" required onkeyup="caracterTextarea(this.value,500,'contando5')" id="inputAvaliacaoOng" name="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres.."
                         <?php if($edit->getMonitoramentoAtividades() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getMonitoramentoAtividades(); ?></textarea>
-                        <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                        <span id="contando5" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -1468,9 +1468,9 @@ s
                         <option value="sim" <?=($edit->getEstrategiaComunicacao() != '')?'selected':''?>
                         >Sim, qual?</option>
                     </select>
-                    <textarea type="text" onkeyup="caracterTextarea(this.value,500,'contando')" name="inputComunicacaoOng" id="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
+                    <textarea type="text" onkeyup="caracterTextarea(this.value,500,'contando6')" name="inputComunicacaoOng" id="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 " <?php if($edit->getEstrategiaComunicacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getEstrategiaComunicacao(); ?></textarea>
-<span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+<span id="contando6" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                     <script>
 
                         var dropdownComun = document.getElementById('organizacao-comunicacao');
@@ -1521,9 +1521,9 @@ s
                         >Sim, quais?</option> 
                         
                     </select>
-                    <textarea type="text" onkeyup="caracterTextarea(this.value,500,'contando')" name="inputPremiacaoOng" id="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
+                    <textarea type="text" onkeyup="caracterTextarea(this.value,500,'contando7')" name="inputPremiacaoOng" id="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 " <?php if($edit->getPremiacaoCertificacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getPremiacaoCertificacao(); ?></textarea>
-<span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+<span id="contando7" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                     <script>
 
                     var dropdown = document.getElementById('premiacao');

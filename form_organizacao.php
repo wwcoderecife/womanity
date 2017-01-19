@@ -698,25 +698,25 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona1" required  class="f1-last-name form-control">
-                    <textarea name="sobre_iniciativas1" onkeyup="caracterTextarea(this.value,500,'contando')" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
+                    <textarea name="sobre_iniciativas1" onkeyup="caracterTextarea(this.value,500,'contando1')" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong1" required  ></textarea>
-                    <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                    <span id="contando1" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
                 <h5>Iniciativa 2</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona2" required class="f1-last-name form-control">
-                    <textarea name="sobre_iniciativas2" onkeyup="caracterTextarea(this.value,500,'contando')" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
+                    <textarea name="sobre_iniciativas2" onkeyup="caracterTextarea(this.value,500,'contando2')" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong2"  ></textarea>
-                    <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                    <span id="contando2" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
                 <h5>Iniciativa 3</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona3" required class="f1-last-name form-control">
-                    <textarea name="sobre_iniciativas3" onkeyup="caracterTextarea(this.value,500,'contando')" required maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
+                    <textarea name="sobre_iniciativas3" onkeyup="caracterTextarea(this.value,500,'contando3')" required maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong3"  ></textarea>
-                    <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                    <span id="contando3" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
 
                 <h4>16. Em quais estados sua iniciativa tem atuação direta*</h4>
@@ -781,10 +781,10 @@
                     <label class="checkbox-inline">
                         <input type="checkbox" name="politicas_publicas_lista[]" value="nacional" class="form-control-radio">nacional
                     </label>
-                    <textarea name="organizaçāo_politica_publica" onkeyup="caracterTextarea(this.value,500,'contando')"  maxlength="500" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
+                    <textarea name="organizaçāo_politica_publica" onkeyup="caracterTextarea(this.value,500,'contando4')"  maxlength="500" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
 
                     class="f1-about-yourself form-control" id="organizaçāo_politica_publica"></textarea>
-                    <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                    <span id="contando4" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
 
 
@@ -848,9 +848,9 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
                     </select>
-                    <textarea type="text"  onkeyup="caracterTextarea(this.value,500,'contando')" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
+                    <textarea type="text"  onkeyup="caracterTextarea(this.value,500,'contando5')" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 "style='display: none'/></textarea>
-<span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+<span id="contando5" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                     <script>
 
                         var dropdownComun = document.getElementById('organizacao-comunicacao');
@@ -898,9 +898,9 @@
                         <option value="1">Sim, quais?</option> 
                         
                     </select>
-                    <textarea type="text" id="inputPremiacaoOng" onkeyup="caracterTextarea(this.value,500,'contando')" name="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
+                    <textarea type="text" id="inputPremiacaoOng" onkeyup="caracterTextarea(this.value,500,'contando6')" name="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 "style='display: none'/></textarea>
-<span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+<span id="contando6" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                     <script>
 
                     var dropdown = document.getElementById('premiacao');
