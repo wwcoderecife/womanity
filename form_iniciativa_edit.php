@@ -1374,10 +1374,11 @@
                         >nacional
                          
                     </label>
-                    <textarea name="organizaçāo_politica_publica" onkeyup="caracterTextarea(this.value,500,'contando')" maxlength="500" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
+                    <textarea name="organizaçāo_politica_publica" onkeyup="caracterTextarea(this.value,500,'contando')"  maxlength="500" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
                     class="f1-about-yourself form-control" id="sobre_iniciativa"><?php echo $edit->getPoliticasPublicas(); ?>
                    </textarea>
-                   <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                    <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                  
                 </div>
 
 <!-- 26 Iniciativa-->
@@ -1396,7 +1397,7 @@
                     <textarea type="text" required  id="inputAvaliacaoOng" 
                      name="inputAvaliacaoOng" class="f1-last-name form-control" onkeyup="caracterTextarea(this.value,500,'contando')" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
                         " <?php if($edit->getMonitoramentoAtividades() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getMonitoramentoAtividades(); ?></textarea>
-                        <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                         <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -1500,7 +1501,7 @@
                     </select>
                     <textarea type="text" required id="inputPremiacao" onkeyup="caracterTextarea(this.value,500,'contando')" name="inputPremiacao" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 " <?php if($edit->getPremiacaoCertificacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getPremiacaoCertificacao(); ?></textarea>
-<span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+ <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                     <script>
 
                         var dropdown = document.getElementById('premiacao');
