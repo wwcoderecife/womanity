@@ -410,20 +410,20 @@
                  <h5>Em 2014</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2014</label>
-                    <input type="text" required  id="orcamento_2014" name="orcamento_2014" 
+                    <input type="text"   id="orcamento_2014" name="orcamento_2014" 
                     value="<?php  if($edit->getJustificativaOrcamento() == '' ){ echo $edit->getOrcamento_2014(); } ?>" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2014">
 
                 </div>
                 <h5>Em 2015</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2015</label>
-                    <input type="text" required id="orcamento_2015" name="orcamento_2015" 
+                    <input type="text"  id="orcamento_2015" name="orcamento_2015" 
                     value="<?php  if($edit->getJustificativaOrcamento() =='' ){ echo $edit->getOrcamento_2015(); } ?>"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2015" >
                 </div>
                 <h5>Em 2016</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
-                    <input type="text" required  id="orcamento_2016" name="orcamento_2016" 
+                    <input type="text"  id="orcamento_2016" name="orcamento_2016" 
                     value="<?php  if($edit->getJustificativaOrcamento() == ''){ echo $edit->getOrcamento_2016(); } ?>"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2016">
                 </div>
 
