@@ -8,6 +8,7 @@
             <script src="assets/js/retina-1.1.0.min.js"></script>
             <!--<script src="assets/js/validator.min.js"></script>-->
             <script src="assets/js/validatortel.js"></script>
+            <script src="assets/js/textarea.js"></script>
            
           
             <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
