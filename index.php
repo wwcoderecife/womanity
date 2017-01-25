@@ -161,7 +161,7 @@
 
                             <h3>Cadastro do Ecossistema</h3>
                             <p>Preencha os campos obrigatórios *</p>
-                            <p>Atenção: não é possível interromper o preenchimento e retomá-lo depois; é necessário completar todo o formulário antes de sair do sistema ou os dados não serão gravados.</p>
+                           
 
                              <!-- Etapas do Formulário: -->
                             <div class="f1-steps">
