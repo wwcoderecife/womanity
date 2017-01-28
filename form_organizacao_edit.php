@@ -1124,7 +1124,7 @@
 
           $('#subtemas').change(function(event) {
 
-            if ($(this).val().length > 5) {
+            if ($(this).val().length > 3) {
 
               $(this).val(last_valid_selection);
             } else {
