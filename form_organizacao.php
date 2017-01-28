@@ -706,7 +706,7 @@
                 <h5>Iniciativa 2</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="organizacao-relaciona2" required class="f1-last-name form-control">
+                    <input type="text" name="organizacao-relaciona2" class="f1-last-name form-control">
                     <textarea name="sobre_iniciativas2" onkeyup="caracterTextarea(this.value,500,'contando2')" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong2"  ></textarea>
                     <span id="contando2" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
@@ -714,8 +714,8 @@
                 <h5>Iniciativa 3</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="organizacao-relaciona3" required class="f1-last-name form-control">
-                    <textarea name="sobre_iniciativas3" onkeyup="caracterTextarea(this.value,500,'contando3')" required maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
+                    <input type="text" name="organizacao-relaciona3"class="f1-last-name form-control">
+                    <textarea name="sobre_iniciativas3" onkeyup="caracterTextarea(this.value,500,'contando3')" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong3"  ></textarea>
                     <span id="contando3" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
