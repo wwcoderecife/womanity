@@ -1061,6 +1061,14 @@
                     if(in_array('Reparação-reconstrução', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Reparação-reconstrução</option>
+
+            <option value="Religiāo"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Religiāo', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Religiāo</option>
+
             <option value="Saúde sexual e reprodutiva"
             <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
