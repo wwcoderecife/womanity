@@ -113,7 +113,7 @@
                  <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="email_2" placeholder="email@email.com" class="f1-last-name form-control" id="f1-last-name"required data-error = "Campo obrigatório, favor preencher." >
+                    <input type="email" name="email_2" placeholder="email@email.com" class="f1-last-name form-control" id="f1-last-name"required >
                     
                     
                 </div>
