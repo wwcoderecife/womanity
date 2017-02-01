@@ -6,7 +6,9 @@
             <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
             <script src="assets/js/bootstrap-select.min.js" ></script>
             <link   rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+            <script src="assets/js/jquery.backstretch.min.js"></script>
             <script src="assets/js/textarea.js" ></script>
+            <script src="assets/js/validatortel.js"></script>
            
             
         
