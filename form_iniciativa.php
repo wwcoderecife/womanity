@@ -430,7 +430,7 @@
                    <!--Tabela Temas-->
 
         <h5>12. Quais são as áreas de atuação da sua iniciativa?</h5>
-        <h5>Escolha até 5 Temas e todos os Subtemas dentro da sua área de atuação*:</h5>
+        <h5>Escolha até 5 Temas dentro da sua área de atuação*:</h5>
         <div class="form-group" style="border: 1px solid #ddd">
         <div class="table-responsive">
         <table id="form1" name="table_temas"class="table table-hover col-sm-12">
@@ -582,7 +582,7 @@
 
 
 
-<h5>12.1. Escolha todos os subtemas dentro da sua área de atuação*</h5>
+<h5>12.1. Escolha no mínimo 1 e no máximo 3 subtemas dentro da sua área de atuação*</h5>
 <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar os subtemas.</em></h6>
 <div class="form-group">
 <!--<label for="subtemas" for="f1-google-plus">Subtemas</label>-->
