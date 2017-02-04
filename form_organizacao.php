@@ -423,7 +423,7 @@
             <!--Tabela Temas-->
 
             <h4>12. Quais são as áreas de atuação da sua Organização? </h4>
-			<h5>Escolha até 5 Temas dentro da sua área de atuação*:</h5>
+			<h5>Escolha até 5 Temas e todos os Subtemas dentro da sua área de atuação*:</h5>
 
             <div class="form-group" style="border: 1px solid #ddd">
             <div class="table-responsive">
@@ -442,9 +442,14 @@
                     <td><input type="checkbox" name="temas[ ]" value="arte_cultura" class="no-margin" onclick="verificar()"></td>
                     <td>Arte e Cultura.</td>
                     <td>Promoção do acesso de mulheres à cultura e/ou incentivo à produção das várias expressões artísticas e valorização de práticas culturais e tradicionais.</td>
-                     
+                    <input type="checkbox" name="regioes[  ]" value="norte">Norte
+                    <input type="checkbox" name="regioes[  ]" value="norte">Nordeste
+                    <input type="checkbox" name="regioes[  ]" value="norte">Sul
+                    <input type="checkbox" name="regioes[  ]" value="norte">Sudeste
+                    <input type="checkbox" name="regioes[  ]" value="norte">Centro-oeste
+   
                 </tr>
-                <tr>
+              
                     <td><input type="checkbox" name="temas[ ]"value="ciencia_tecnologia"class="no-margin" onclick="verificar()"></td>
                     <td>Ciência e Tecnologia.</td>
                     <td>Promoção do acesso a linguagens, equipamentos e/ou à produção de ciência e tecnologia por mulheres.</td>
@@ -577,7 +582,7 @@
 <!--subtemas-->
 
 
-<h5> 12.1. Escolha no mínimo 1 e no máximo 3 subtemas dentro da sua área de atuação*</h5>
+<h5> 12.1. Escolha todos os subtemas dentro da sua área de atuação*</h5>
  
 <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar os subtemas.</em></h6>
 <div class="form-group">
@@ -622,7 +627,6 @@
             <option value="Redes Sociais">Redes Sociais</option>
             <option value="Refugiados">Refugiados</option>
             <option value="Reparação-reconstrução">Reparação-reconstrução</option>
-            <option value="Religiāo">Religiāo</option>
             <option value="Saúde sexual e reprodutiva">Saúde sexual e reprodutiva</option>
             <option value="Sustentabilidade">Sustentabilidade</option>
             <option value="Teatro">Teatro</option>
@@ -643,7 +647,7 @@
 
           $('#subtemas').change(function(event) {
 
-            if ($(this).val().length > 3) {
+            if ($(this).val().length > 47) {
 
               $(this).val(last_valid_selection);
             } else {
@@ -657,7 +661,7 @@
                 <h6>(até 500 caracteres)</h6>
 				<div class="form-group">
                     <label class="sr-only" for="f1-about-yourself"></label>
-                    <textarea name="sobre" required onkeyup="caracterTextarea(this.value,500,'contando')" maxlength="500" placeholder="campo com capacidade para 500 caracteres...." 
+                    <textarea name="sobre"  maxlength="500" required onkeyup="caracterTextarea(this.value,500,'contando')" placeholder="campo com capacidade para 500 caracteres...." 
                     class="f1-about-yourself form-control" id="sobre" ></textarea>
                     <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
@@ -699,25 +703,22 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona1" required  class="f1-last-name form-control">
-                    <textarea name="sobre_iniciativas1" onkeyup="caracterTextarea(this.value,500,'contando1')" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
+                    <textarea name="sobre_iniciativas1" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong1" required  ></textarea>
-                    <span id="contando1" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
                 <h5>Iniciativa 2</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="organizacao-relaciona2" class="f1-last-name form-control">
-                    <textarea name="sobre_iniciativas2" onkeyup="caracterTextarea(this.value,500,'contando2')" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
+                    <input type="text" name="organizacao-relaciona2" required class="f1-last-name form-control">
+                    <textarea name="sobre_iniciativas2" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong2"  ></textarea>
-                    <span id="contando2" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
                 <h5>Iniciativa 3</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="organizacao-relaciona3"class="f1-last-name form-control">
-                    <textarea name="sobre_iniciativas3" onkeyup="caracterTextarea(this.value,500,'contando3')" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
+                    <input type="text" name="organizacao-relaciona3" required class="f1-last-name form-control">
+                    <textarea name="sobre_iniciativas3" required maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong3"  ></textarea>
-                    <span id="contando3" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
 
                 <h4>16. Em quais estados sua iniciativa tem atuação direta*</h4>
@@ -782,10 +783,9 @@
                     <label class="checkbox-inline">
                         <input type="checkbox" name="politicas_publicas_lista[]" value="nacional" class="form-control-radio">nacional
                     </label>
-                    <textarea name="organizaçāo_politica_publica" onkeyup="caracterTextarea(this.value,500,'contando4')"  maxlength="500" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
+                    <textarea name="organizaçāo_politica_publica" maxlength="500" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
 
                     class="f1-about-yourself form-control" id="organizaçāo_politica_publica"></textarea>
-                    <span id="contando4" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
 
 
@@ -800,9 +800,8 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim</option>
                     </select>
-                    <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando')" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
+                    <textarea type="text" id="inputAvaliacaoOng" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
                         "style='display: none'/></textarea>
-                        <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -849,9 +848,8 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
                     </select>
-                    <textarea type="text"  onkeyup="caracterTextarea(this.value,500,'contando5')" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
+                    <textarea type="text"  id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 "style='display: none'/></textarea>
-<span id="contando5" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                     <script>
 
                         var dropdownComun = document.getElementById('organizacao-comunicacao');
@@ -899,9 +897,8 @@
                         <option value="1">Sim, quais?</option> 
                         
                     </select>
-                    <textarea type="text" id="inputPremiacaoOng" onkeyup="caracterTextarea(this.value,500,'contando6')" name="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
+                    <textarea type="text" id="inputPremiacaoOng" name="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 "style='display: none'/></textarea>
-<span id="contando6" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                     <script>
 
                     var dropdown = document.getElementById('premiacao');
