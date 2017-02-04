@@ -442,11 +442,7 @@
                     <td><input type="checkbox" name="temas[ ]" value="arte_cultura" class="no-margin" onclick="verificar()"></td>
                     <td>Arte e Cultura.</td>
                     <td>Promoção do acesso de mulheres à cultura e/ou incentivo à produção das várias expressões artísticas e valorização de práticas culturais e tradicionais.</td>
-                    <input type="checkbox" name="regioes[  ]" value="norte">Norte
-                    <input type="checkbox" name="regioes[  ]" value="norte">Nordeste
-                    <input type="checkbox" name="regioes[  ]" value="norte">Sul
-                    <input type="checkbox" name="regioes[  ]" value="norte">Sudeste
-                    <input type="checkbox" name="regioes[  ]" value="norte">Centro-oeste
+                    
    
                 </tr>
               
