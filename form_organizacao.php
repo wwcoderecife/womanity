@@ -905,7 +905,7 @@
                     <label class="checkbox-inline">
                         <input type="checkbox" name="politicas_publicas_lista[]" value="nacional" class="form-control-radio">nacional
                     </label>
-                    <textarea name="organizaçāo_politica_publica" onkeyup="caracterTextarea(this.value,500,'contando4')"  maxlength="500" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
+                    <textarea name="organizaçāo_politica_publica" onkeyup="caracterTextarea(this.value,500,'contando4')"  maxlength="500" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres) detalhe aqui, caso necessário"
 
                     class="f1-about-yourself form-control" id="organizaçāo_politica_publica"></textarea>
                     <span id="contando4" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
