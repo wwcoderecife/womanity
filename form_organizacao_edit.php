@@ -1616,7 +1616,7 @@ s
                 </div>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">UF*</label>
-                    <select class="f1-last-name form-control"   name="estado" id="estados">
+                    <select class="f1-last-name form-control"   name="estado" id="estados" disabled="false">
                         <?php echo "<script type='text/javascript'> var estado = '".$edit->getEstado()."'; </script>"; ?>
                         <script type="text/javascript">
                         jQuery(document).ready(function() {
@@ -1634,7 +1634,7 @@ s
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cidade*</label>
-                    <select class="f1-last-name form-control" required  name="cidade" id="cidades"> 
+                    <select class="f1-last-name form-control" required  name="cidade" id="cidades" disabled="false"> 
                        <?php echo "<script type='text/javascript'> var cidade = '".$edit->getCidade()."'; </script>"; ?>
                         
                         <option value=""></option>
