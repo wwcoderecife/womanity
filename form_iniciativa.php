@@ -31,7 +31,7 @@
 
     		<h3>Cadastro UNA Ecossistema<br>Iniciativa</h3>
     		<p>Preencha os campos obrigatórios*</p>
-            <p>Atenção: não é possível interromper o preenchimento e retomá-lo depois; é necessário completar todo o formulário antes de sair do sistema ou os dados não serão gravados</p>
+            <p>Lembre-se de preencher os campos obrigatórios em todas as etapas e clicar no botão ENVIAR na etapa 5, Pois o sistema não irá salvar informações parcialmente inseridas</p>
     		<div class="f1-steps">
     			<div class="f1-progress">
     			    <div class="f1-progress-line" data-now-value="8" data-number-of-steps="5" style="width: 8%;"></div>
