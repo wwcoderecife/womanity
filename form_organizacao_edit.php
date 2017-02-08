@@ -198,7 +198,7 @@
                         >não</option>
                     </select>    
 
-                <input type="text" id="inputcnpj" name="inputcnpj"  value="<?php echo $edit->getCnpj()  ?>" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opcional" <?php if($edit->getCnpj() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> />
+                <input type="text" id="inputcnpj" name="inputcnpj"  value="<?php echo $edit->getCnpj()  ?>" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx" <?php if($edit->getCnpj() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> />
                     <script>
 
                         var dropdownCnpj = document.getElementById('organizacao-cnpj');

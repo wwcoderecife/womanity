@@ -193,7 +193,7 @@
                     </select> 
                 <div class="iniciativapj">     
                <input type="text" id="inputnomeong"  value="<?php echo $edit->getInputnomeong() ?>"  name="inputnomeong" class="f1-last-name form-control" placeholder="nome da organizaçāo" <?php if($edit->getInputnomeong() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> />
-               <input type="text"  id="inputcnpj" value="<?php echo $edit->getOrganizacaoPai()  ?>" name="organizacao_pai" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opciona" <?php if($edit->getOrganizacaoPai() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> />
+               <input type="text"  id="inputcnpj" value="<?php echo $edit->getOrganizacaoPai()  ?>" name="organizacao_pai" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx" <?php if($edit->getOrganizacaoPai() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> />
 
                 </div>
                     <script>

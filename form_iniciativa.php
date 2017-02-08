@@ -149,7 +149,7 @@
                     </select> 
                 <div class="iniciativapj">     
                <input type="text" id="inputnomeong" name="inputnomeong" class="f1-last-name form-control" placeholder="nome da organizaçāo" style='display: none' />
-               <input type="text" onblur="ExitField('inputcnpj','msgCnpj','CNPJ inválido, número deve conter 18 caracteres ', 18);" id="inputcnpj"  name="organizacao_pai"  class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opcional" style='display: none'/ >
+               <input type="text" onblur="ExitField('inputcnpj','msgCnpj','CNPJ inválido, número deve conter 18 caracteres ', 18);" id="inputcnpj"  name="organizacao_pai"  class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx " style='display: none'/ >
                <label id="msgCnpj"></label>
                 </div>
                     <script>
