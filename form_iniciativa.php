@@ -340,24 +340,6 @@
                   </div>
 
                <h5>11. Qual foi o orçamento bruto da sua iniciativa em: *</h5>
-                 <h5>2014</h5>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">2014</label>
-                    <input type="text" id="orcamento_2014" name="orcamento_2014"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2014"  >
-                    <div class="help-block with-errors"></div>
-                </div>
-                <h5>2015</h5>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">2015</label>
-                    <input type="tex" id="orcamento_2015" name="orcamento_2015"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2015" >
-                    <div class="help-block with-errors"></div>
-                </div>
-                <h5>2016</h5>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">2016</label>
-                    <input type="text" id="orcamento_2016" name="orcamento_2016" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2016" >
-                    <div class="help-block with-errors"></div>
-                </div>
 
 
                <h5>Não tenho orçamento</h5>
@@ -389,6 +371,25 @@
                     console.log( $('#nao_tenho_orcamento_input').val());
                 }
                 </script>
+
+                 <h5>2014</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">2014</label>
+                    <input type="text" id="orcamento_2014" name="orcamento_2014"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2014"  >
+                    <div class="help-block with-errors"></div>
+                </div>
+                <h5>2015</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">2015</label>
+                    <input type="tex" id="orcamento_2015" name="orcamento_2015"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2015" >
+                    <div class="help-block with-errors"></div>
+                </div>
+                <h5>2016</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">2016</label>
+                    <input type="text" id="orcamento_2016" name="orcamento_2016" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2016" >
+                    <div class="help-block with-errors"></div>
+                </div>
              
 
                 <h5>11.1. A sua iniciativa recebe recursos financeiros?</h5>     

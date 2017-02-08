@@ -338,24 +338,6 @@
                   </div>
 
                 <h4>11. Qual foi o orçamento bruto da sua organização? *</h4>
-                 <h5>Em 2014</h5>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">2014</label>
-                    <input type="text" id="orcamento_2014" name="orcamento_2014"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2014">
-
-                </div>
-                <h5>Em 2015</h5>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">2015</label>
-                    <input type="text" id="orcamento_2015" name="orcamento_2015"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2015">
-                </div>
-                <h5>Em 2016</h5>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">2016</label>
-                    <input type="text" id="orcamento_2016" name="orcamento_2016"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2016">
-                </div>
-
-                
                 <h5>Não tenho orçamento</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name"></label>
@@ -386,6 +368,25 @@
                 }
                 </script>
 
+                 <h5>Em 2014</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">2014</label>
+                    <input type="text" id="orcamento_2014" name="orcamento_2014"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2014">
+
+                </div>
+                <h5>Em 2015</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">2015</label>
+                    <input type="text" id="orcamento_2015" name="orcamento_2015"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2015">
+                </div>
+                <h5>Em 2016</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">2016</label>
+                    <input type="text" id="orcamento_2016" name="orcamento_2016"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2016">
+                </div>
+
+                
+                
                 <h5>11.1. A sua Organizaçāo recebe recursos financeiros?</h5>
                 <div class="form-group">
                    <label class="radio-inline">
