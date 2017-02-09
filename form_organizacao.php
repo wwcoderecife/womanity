@@ -9,6 +9,8 @@
             <script src="assets/js/retina-1.1.0.min.js"></script>	
             <script src="assets/js/validatortel.js"></script>
             <script src="assets/js/textarea.js"></script>
+            <script src="assets/js/campobranco.js"></script>
+
 
           
             <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
@@ -133,7 +135,7 @@
                 </div>
 
                 <div class="f1-buttons">
-                <button type="button" class="btn btn-next" >Próximo</button>
+                <button type="button" class="btn btn-next" onclick="validacampobranco();" >Próximo</button>
                </div>
             </fieldset><!--Dados Pessoais-->
 
