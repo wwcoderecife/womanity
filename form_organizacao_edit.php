@@ -6,7 +6,9 @@
             <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
             <script src="assets/js/bootstrap-select.min.js" ></script>
             <link   rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+            <script src="assets/js/jquery.backstretch.min.js"></script>
             <script src="assets/js/textarea.js" ></script>
+            <script src="assets/js/validatortel.js"></script>
            
             
         
@@ -196,7 +198,7 @@
                         >não</option>
                     </select>    
 
-                <input type="text" id="inputcnpj" name="inputcnpj"  value="<?php echo $edit->getCnpj()  ?>" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx, a inserção deste número é opcional" <?php if($edit->getCnpj() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> />
+                <input type="text" id="inputcnpj" name="inputcnpj"  value="<?php echo $edit->getCnpj()  ?>" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxxx/xxxx-xx" <?php if($edit->getCnpj() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> />
                     <script>
 
                         var dropdownCnpj = document.getElementById('organizacao-cnpj');
@@ -581,7 +583,7 @@
             <!--Tabela Temas-->
 
             <h4>12. Quais são as áreas de atuação da sua Organização? </h4>
-            <h5>Escolha até 5 Temas e todos os Subtemas dentro da sua área de atuação*:</h5>
+            <h5>Escolha até 5 Temas dentro da sua área de atuação*:</h5>
             <div class="form-group" style="border: 1px solid #ddd">
             <div class="table-responsive">
             <table id="form1" required   name="table_temas"class="table table-hover col-sm-12" >
@@ -823,7 +825,7 @@
 
 
 
-<h5> 12.1. Escolha todos os subtemas dentro da sua área de atuação*</h5>
+<h5> 12.1. Escolha no mínimo 1 e no máximo 3 subtemas dentro da sua área de atuação*</h5>
  <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar vários subtemas.</em></h6>
 <div class="form-group">
 <label for="subtemas" for="f1-google-plus">Subtemas</label>
@@ -1614,7 +1616,7 @@ s
                 </div>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">UF*</label>
-                    <select class="f1-last-name form-control"   name="estado" id="estados">
+                    <select class="f1-last-name form-control"   name="estado" id="estados" disabled="false">
                         <?php echo "<script type='text/javascript'> var estado = '".$edit->getEstado()."'; </script>"; ?>
                         <script type="text/javascript">
                         jQuery(document).ready(function() {
@@ -1632,7 +1634,7 @@ s
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cidade*</label>
-                    <select class="f1-last-name form-control" required  name="cidade" id="cidades"> 
+                    <select class="f1-last-name form-control" required  name="cidade" id="cidades" disabled="false"> 
                        <?php echo "<script type='text/javascript'> var cidade = '".$edit->getCidade()."'; </script>"; ?>
                         
                         <option value=""></option>

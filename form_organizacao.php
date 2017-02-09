@@ -9,6 +9,8 @@
             <script src="assets/js/retina-1.1.0.min.js"></script>	
             <script src="assets/js/validatortel.js"></script>
             <script src="assets/js/textarea.js"></script>
+            <script src="assets/js/campobranco.js"></script>
+
 
           
             <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
@@ -32,7 +34,7 @@
 
             <h3>Cadastro do Ecossistema<br>Organizaçāo</h3>
             <p>Preencha os campos obrigatórios *</p>
-            <p>Atenção: não é possível interromper o preenchimento e retomá-lo depois; é necessário completar todo o formulário antes de sair do sistema ou os dados não serão gravados</p>
+            <p>Lembre-se de preencher os campos obrigatórios em todas as etapas e clicar no botão ENVIAR na etapa 5, Pois o sistema não irá salvar informações parcialmente inseridas</p>
             <div class="f1-steps">
                 <div class="f1-progress">
                     <div class="f1-progress-line" data-now-value="8" data-number-of-steps="5" style="width: 8%;"></div>
@@ -133,7 +135,7 @@
                 </div>
 
                 <div class="f1-buttons">
-                <button type="button" class="btn btn-next" >Próximo</button>
+                <button type="button" class="btn btn-next" onclick="validacampobranco();" >Próximo</button>
                </div>
             </fieldset><!--Dados Pessoais-->
 
@@ -154,7 +156,7 @@
                         <option value="nao">nao</option>
                     </select>    
 
-                <input type="text" id="inputcnpj" onblur="ExitField('inputcnpj','msgCnpj','CNPJ inválido, número deve conter 18 caracteres ', 18);" name="inputcnpj" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxx/xxxx-xx, a inserção deste número é opcional" style='display: none'/>
+                <input type="text" id="inputcnpj" onblur="ExitField('inputcnpj','msgCnpj','CNPJ inválido, número deve conter 18 caracteres ', 18);" name="inputcnpj" class="f1-last-name form-control cnpj" placeholder="xx.xxx.xxx/xxxx-xx" style='display: none'/>
 		<label id="msgCnpj"></label>	 
                     <script>
 
@@ -338,24 +340,6 @@
                   </div>
 
                 <h4>11. Qual foi o orçamento bruto da sua organização? *</h4>
-                 <h5>Em 2014</h5>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">2014</label>
-                    <input type="text" required  id="orcamento_2014" name="orcamento_2014"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2014">
-
-                </div>
-                <h5>Em 2015</h5>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">2015</label>
-                    <input type="text" required  id="orcamento_2015" name="orcamento_2015"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2015">
-                </div>
-                <h5>Em 2016</h5>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name">2016</label>
-                    <input type="text" required  id="orcamento_2016" name="orcamento_2016"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2016">
-                </div>
-
-                
                 <h5>Não tenho orçamento</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name"></label>
@@ -386,6 +370,25 @@
                 }
                 </script>
 
+                 <h5>Em 2014</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">2014</label>
+                    <input type="text" id="orcamento_2014" name="orcamento_2014"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2014">
+
+                </div>
+                <h5>Em 2015</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">2015</label>
+                    <input type="text" id="orcamento_2015" name="orcamento_2015"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2015">
+                </div>
+                <h5>Em 2016</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name">2016</label>
+                    <input type="text" id="orcamento_2016" name="orcamento_2016"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2016">
+                </div>
+
+                
+                
                 <h5>11.1. A sua Organizaçāo recebe recursos financeiros?</h5>
                 <div class="form-group">
                    <label class="radio-inline">
