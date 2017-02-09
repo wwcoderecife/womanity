@@ -120,6 +120,26 @@ class CadastrarAll extends Conexao {
     //Temas
     private $temas;
 
+    //Temas Regiões
+    private $temas_arte_cultura;
+    private $temas_ciencia_tecnologia;
+    private $temas_democracia_politica;
+    private $temas_educacao_formacao;
+    private $temas_empreendedorismo_feminino;
+    private $temas_enfretamento_violencia;
+    private $temas_equidade_trabalho;
+    private $temas_esportes;
+    private $temas_indigenas;
+    private $temas_lgbtt;
+    private $temas_masculinidades;
+    private $temas_meio_ambiente;
+    private $temas_midia_comunicacao;
+    private $temas_moradia;
+    private $temas_negritude;
+    private $temas_paz_seguranca;
+    private $temas_saude_bemestar;
+
+
     //Subtemas
     private $subtemas;
 
@@ -521,9 +541,115 @@ class CadastrarAll extends Conexao {
         $this->temas = $temas;
     }
 
+    //Set temas regiões
+    public function setTemasArteCultura($temas_arte_cultura){
+        $this->temas_arte_cultura = $temas_arte_cultura;
+    }
+    public function setTemasCienciaTecnologia($temas_ciencia_tecnologia){
+        $this->temas_ciencia_tecnologia = $temas_ciencia_tecnologia;
+    }
+    public function setTemasDemocraciaPolitica($temas_democracia_politica){
+        $this->temas_democracia_politica = $temas_democracia_politica;
+    }
+    public function setTemasEducacaoFormacao($temas_educacao_formacao){
+        $this->temas_educacao_formacao = $temas_educacao_formacao;
+    }
+    public function setTemasEmpreendedorismoFeminino($temas_empreendedorismo_feminino){
+        $this->temas_empreendedorismo_feminino = $temas_empreendedorismo_feminino;
+    }
+    public function setTemasEnfretamentoViolencia($temas_enfretamento_violencia){
+        $this->temas_enfretamento_violencia = $temas_enfretamento_violencia;
+    }
+    public function setTemasEquidadeTrabalho($temas_equidade_trabalho){
+        $this->temas_equidade_trabalho = $temas_equidade_trabalho;
+    }
+    public function setTemasEsportes($temas_esportes){
+        $this->temas_esportes = $temas_esportes;
+    }
+    public function setTemasIndigenas($temas_indigenas){
+        $this->temas_indigenas = $temas_indigenas;
+    }
+    public function setTemasLgbtt($temas_lgbtt){
+        $this->temas_lgbtt = $temas_lgbtt;
+    }
+    public function setTemasMasculinidades($temas_masculinidades){
+        $this->temas_masculinidades = $temas_masculinidades;
+    }
+    public function setTemasMeioAmbiente($temas_meio_ambiente){
+        $this->temas_meio_ambiente = $temas_meio_ambiente;
+    }
+    public function setTemasMidiaComunicacao($temas_midia_comunicacao){
+        $this->temas_midia_comunicacao = $temas_midia_comunicacao;
+    }
+    public function setTemasMoradia($temas_moradia){
+        $this->temas_moradia = $temas_moradia;
+    }
+    public function setTemasNegritude($temas_negritude){
+        $this->temas_negritude = $temas_negritude;
+    }
+    public function setTemasPazSeguranca($temas_paz_seguranca){
+        $this->temas_paz_seguranca = $temas_paz_seguranca;
+    }
+    public function setTemasSaudeBemestar($temas_saude_bemestar){
+        $this->temas_saude_bemestar = $temas_saude_bemestar;
+    }
+
     //Temas Gets
     public function getTemas(){
         return $this->temas;
+    }
+
+    //Get temas regiões
+    public function getTemasArteCultura(){
+        return $this->temas_arte_cultura;
+    }
+    public function getTemasCienciaTecnologia(){
+        return $this->temas_ciencia_tecnologia;
+    }
+    public function getTemasDemocraciaPolitica(){
+        return $this->temas_democracia_politica;
+    }
+    public function getTemasEducacaoFormacao(){
+        return $this->temas_educacao_formacao;
+    }
+    public function getTemasEmpreendedorismoFeminino(){
+        return $this->temas_empreendedorismo_feminino;
+    }
+    public function getTemasEnfretamentoViolencia(){
+        return $this->temas_enfretamento_violencia;
+    }
+    public function getTemasEquidadeTrabalho(){
+        return $this->temas_equidade_trabalho;
+    }
+    public function getTemasEsportes(){
+        return $this->temas_esportes;
+    }
+    public function getTemasIndigenas(){
+        return $this->temas_indigenas;
+    }
+    public function getTemasLgbtt(){
+        return $this->temas_lgbtt;
+    }
+    public function getTemasMasculinidades(){
+        return $this->temas_masculinidades;
+    }
+    public function getTemasMeioAmbiente(){
+        return $this->temas_meio_ambiente;
+    }
+    public function getTemasMidiaComunicacao(){
+        return $this->temas_midia_comunicacao;
+    }
+    public function getTemasMoradia(){
+        return $this->temas_moradia;
+    }
+    public function getTemasNegritude(){
+        return $this->temas_negritude;
+    }
+    public function getTemasPazSeguranca(){
+        return $this->temas_paz_seguranca;
+    }
+    public function getTemasSaudeBemestar(){
+        return $this->temas_saude_bemestar;
     }
 
     //Subtemas Sets
@@ -871,13 +997,55 @@ class CadastrarAll extends Conexao {
             $inserir_relaciona->execute();
 
 
-            $inserir_tema = $pdo->prepare("insert into temas (tema, organizacao_id)
-                                   values (?, ?)");
+            $inserir_tema = $pdo->prepare("insert into temas (tema, regiao, organizacao_id)
+                                   values (?, ?, ?)");
             $temas = $this->getTemas();
             foreach ($temas  as $tema){
-               $inserir_tema->bindValue(1, $tema);
-               $inserir_tema->bindValue(2, $organizacao_id);
-               $inserir_tema->execute();
+
+                $inserir_tema->bindValue(1, $tema);
+                echo "temas";
+                echo $this->getTemasArteCultura();
+                echo implode(",", $this->getTemasArteCultura());
+                
+                if($tema == "arte_cultura"){
+                    $inserir_tema->bindValue(2, implode(",", (array)$this->getTemasArteCultura())); 
+                }else if($tema == "ciencia_tecnologia"){
+                    $inserir_tema->bindValue(2, implode(",", $this->getTemasCienciaTecnologia()));
+                }else if($tema == "democracia_participação_politica"){
+                    $inserir_tema->bindValue(2, implode(",", $this->getTemasDemocraciaPolitica()));
+                }else if($tema == "educacao_formacao"){
+                    $inserir_tema->bindValue(2, implode(",", $this->getTemasEducacaoFormacao()));
+                }else if($tema == "empreendedorismo_feminino_autonomia_economica"){
+                    $inserir_tema->bindValue(2, implode(",", $this->getTemasEmpreendedorismoFeminino()));
+                }else if($tema == "enfrentamento_violencia"){
+                    $inserir_tema->bindValue(2, implode(",", $this->getTemasEnfretamentoViolencia()));
+                }else if($tema == "equidade_Condições_trabalho"){
+                    $inserir_tema->bindValue(2, implode(",", $this->getTemasEquidadeTrabalho()));
+                }else if($tema == "esporte"){
+                    $inserir_tema->bindValue(2, implode(",", $this->getTemasEsportes()));
+                }else if($tema == "indigenas"){
+                    $inserir_tema->bindValue(2, implode(",", $this->getTemasIndigenas()));
+                }else if($tema == "LGBTT"){
+                    $inserir_tema->bindValue(2, implode(",", $this->getTemasLgbtt()));
+                }else if($tema == "masculinidade"){
+                    $inserir_tema->bindValue(2, implode(",", $this->getTemasMasculinidades()));
+                }else if($tema == "meio ambiente,seguranca,agricultura"){
+                    $inserir_tema->bindValue(2, implode(",", $this->getTemasMeioAmbiente()));
+                }else if($tema == "midia_comunicacao"){
+                    $inserir_tema->bindValue(2, implode(",", $this->getTemasMidiaComunicacao()));
+                }else if($tema == "moradia"){
+                    $inserir_tema->bindValue(2, implode(",", $this->getTemasMoradia()));
+                }else if($tema == "negritude"){
+                    $inserir_tema->bindValue(2, implode(",", $this->getTemasNegritude()));
+                }else if($tema == "paz_seguranca_publica"){
+                    $inserir_tema->bindValue(2, implode(",", $this->getTemasPazSeguranca()));
+                }else if($tema == "saude_bemestar"){
+                    $inserir_tema->bindValue(2, implode(",", $this->getTemasSaudeBemestar()));
+                }
+
+                $inserir_tema->bindValue(3, $organizacao_id);
+
+                $inserir_tema->execute();
             }
 
             $inserir_subtema = $pdo->prepare("insert into subtemas (subtema, organizacao_id)

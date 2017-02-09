@@ -81,6 +81,25 @@
     //Temas
     $temas = $_POST['temas'];
 
+    //Temas Regiões
+    $temas_arte_cultura = $_POST['temas_arte_cultura'];
+    $temas_ciencia_tecnologia =  $_POST['temas_ciencia_tecnologia'];
+    $temas_democracia_politica = $_POST['temas_democracia_politica']; 
+    $temas_educacao_formacao = $_POST['temas_educacao_formacao']; 
+    $temas_empreendedorismo_feminino = $_POST['temas_empreendedorismo_feminino']; 
+    $temas_enfretamento_violencia = $_POST['temas_enfretamento_violencia'];  
+    $temas_equidade_trabalho = $_POST['temas_equidade_trabalho']; 
+    $temas_esportes = $_POST['temas_esportes']; 
+    $temas_indigenas = $_POST['temas_indigenas']; 
+    $temas_lgbtt = $_POST['temas_lgbtt']; 
+    $temas_masculinidades = $_POST['temas_masculinidades'];
+    $temas_meio_ambiente = $_POST['temas_meio_ambiente'];
+    $temas_midia_comunicacao = $_POST['temas_midia_comunicacao'];
+    $temas_moradia = $_POST['temas_moradia']; 
+    $temas_negritude = $_POST['temas_negritude']; 
+    $temas_paz_seguranca = $_POST['temas_paz_seguranca']; 
+    $temas_saude_bemestar = $_POST['temas_saude_bemestar']; 
+
     //Subtemas
     $subtemas = $_POST['subtemas'];
 
@@ -187,6 +206,25 @@
 
         //Temas
         $novo->setTemas($temas);
+
+        $novo->setTemasArteCultura($temas_arte_cultura);
+        $novo->setTemasCienciaTecnologia($temas_ciencia_tecnologia);
+        $novo->setTemasDemocraciaPolitica($temas_democracia_politica);
+        $novo->setTemasEducacaoFormacao($temas_educacao_formacao);
+        $novo->setTemasEmpreendedorismoFeminino($temas_empreendedorismo_feminino);
+        $novo->setTemasEnfretamentoViolencia($temas_enfretamento_violencia);
+        $novo->setTemasEquidadeTrabalho($temas_equidade_trabalho);
+        $novo->setTemasEsportes($temas_esportes);
+        $novo->setTemasIndigenas($temas_indigenas);
+        $novo->setTemasLgbtt($temas_lgbtt);
+        $novo->setTemasMasculinidades($temas_masculinidades);
+        $novo->setTemasMeioAmbiente($temas_meio_ambiente);
+        $novo->setTemasMidiaComunicacao($temas_midia_comunicacao);
+        $novo->setTemasMoradia($temas_moradia);
+        $novo->setTemasNegritude($temas_negritude);
+        $novo->setTemasPazSeguranca($temas_paz_seguranca);
+        $novo->setTemasSaudeBemestar($temas_saude_bemestar);
+
 
         //Subtemas
         $novo->setSubtemas($subtemas);
