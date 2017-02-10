@@ -55,4 +55,4 @@ else if(document.getElementById("inputCel2").value == ""{
 document.getElementById("inputCel2").focus();
 return false
  }
-};s
+};
