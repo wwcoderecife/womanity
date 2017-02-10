@@ -47,17 +47,17 @@ jQuery(document).ready(function() {
     // });
     
 
-    
+
     var tab_pool = ["dados_pessoais", "organizacao", "endereco", "redes_sociais", "indicacao"];
     var visible = $(".f1:visible").attr('class').split(" ")[1];
     var curr_ind = $.inArray(visible, tab_pool);
     //$(".submit").hide();
     //$(".btn-previous").hide();
 
-    //var validator = $('.form-ong').validate({
-        //ignore: 'input[type="button"],input[type="submit"]'
+    var validator = $('.form-ong').validate({
+        ignore: 'input[type="button"],input[type="submit"]'
 
-   // });
+    });
 
     
     // next step
@@ -158,12 +158,9 @@ jQuery(document).ready(function() {
             // }
         });
         
-
-        //if(!valid){
-            //console.log("erro");
-           // open_dialog("Erro", "Preencha todos os campos obrigatórios!", "error");
-
-
+        if(!valid){
+            console.log("erro");
+            open_dialog("Erro", "Preencha todos os campos obrigatórios!", "error");
            // $('.f1 input[type="text"], .f1 input[type="password"], .f1 textarea').on('focus', function() {
            //      $(this).addClass('input-error');
            //  });
