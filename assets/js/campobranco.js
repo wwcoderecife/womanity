@@ -7,7 +7,7 @@ document.getElementById("inputNome1").focus();
 return false
 
 }
- /*
+ 
 
  if(document.getElementById("inputCargo1").value == ""){
 
@@ -60,4 +60,4 @@ return false
 document.getElementById("inputCel2").focus();
 return false
   }
-*/  
+  
