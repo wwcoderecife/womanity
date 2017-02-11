@@ -77,6 +77,25 @@ class Editar extends Conexao {
     //Temas
     private $temas;
 
+    //Temas Regiões
+    private $temas_arte_cultura;
+    private $temas_ciencia_tecnologia;
+    private $temas_democracia_politica;
+    private $temas_educacao_formacao;
+    private $temas_empreendedorismo_feminino;
+    private $temas_enfretamento_violencia;
+    private $temas_equidade_trabalho;
+    private $temas_esportes;
+    private $temas_indigenas;
+    private $temas_lgbtt;
+    private $temas_masculinidades;
+    private $temas_meio_ambiente;
+    private $temas_midia_comunicacao;
+    private $temas_moradia;
+    private $temas_negritude;
+    private $temas_paz_seguranca;
+    private $temas_saude_bemestar;
+
     //Subtemas
     private $subtemas;
 
@@ -471,9 +490,116 @@ class Editar extends Conexao {
         $this->temas = $temas;
     }
 
+    //Set temas regiões
+    public function setTemasArteCultura($temas_arte_cultura){
+        $this->temas_arte_cultura = $temas_arte_cultura;
+    }
+    public function setTemasCienciaTecnologia($temas_ciencia_tecnologia){
+        $this->temas_ciencia_tecnologia = $temas_ciencia_tecnologia;
+    }
+    public function setTemasDemocraciaPolitica($temas_democracia_politica){
+        $this->temas_democracia_politica = $temas_democracia_politica;
+    }
+    public function setTemasEducacaoFormacao($temas_educacao_formacao){
+        $this->temas_educacao_formacao = $temas_educacao_formacao;
+    }
+    public function setTemasEmpreendedorismoFeminino($temas_empreendedorismo_feminino){
+        $this->temas_empreendedorismo_feminino = $temas_empreendedorismo_feminino;
+    }
+    public function setTemasEnfretamentoViolencia($temas_enfretamento_violencia){
+        $this->temas_enfretamento_violencia = $temas_enfretamento_violencia;
+    }
+    public function setTemasEquidadeTrabalho($temas_equidade_trabalho){
+        $this->temas_equidade_trabalho = $temas_equidade_trabalho;
+    }
+    public function setTemasEsportes($temas_esportes){
+        $this->temas_esportes = $temas_esportes;
+    }
+    public function setTemasIndigenas($temas_indigenas){
+        $this->temas_indigenas = $temas_indigenas;
+    }
+    public function setTemasLgbtt($temas_lgbtt){
+        $this->temas_lgbtt = $temas_lgbtt;
+    }
+    public function setTemasMasculinidades($temas_masculinidades){
+        $this->temas_masculinidades = $temas_masculinidades;
+    }
+    public function setTemasMeioAmbiente($temas_meio_ambiente){
+        $this->temas_meio_ambiente = $temas_meio_ambiente;
+    }
+    public function setTemasMidiaComunicacao($temas_midia_comunicacao){
+        $this->temas_midia_comunicacao = $temas_midia_comunicacao;
+    }
+    public function setTemasMoradia($temas_moradia){
+        $this->temas_moradia = $temas_moradia;
+    }
+    public function setTemasNegritude($temas_negritude){
+        $this->temas_negritude = $temas_negritude;
+    }
+    public function setTemasPazSeguranca($temas_paz_seguranca){
+        $this->temas_paz_seguranca = $temas_paz_seguranca;
+    }
+    public function setTemasSaudeBemestar($temas_saude_bemestar){
+        $this->temas_saude_bemestar = $temas_saude_bemestar;
+    }
+
+
     //Temas Gets
     public function getTemas(){
         return $this->temas;
+    }
+
+    //Get temas regiões
+    public function getTemasArteCultura(){
+        return $this->temas_arte_cultura;
+    }
+    public function getTemasCienciaTecnologia(){
+        return $this->temas_ciencia_tecnologia;
+    }
+    public function getTemasDemocraciaPolitica(){
+        return $this->temas_democracia_politica;
+    }
+    public function getTemasEducacaoFormacao(){
+        return $this->temas_educacao_formacao;
+    }
+    public function getTemasEmpreendedorismoFeminino(){
+        return $this->temas_empreendedorismo_feminino;
+    }
+    public function getTemasEnfretamentoViolencia(){
+        return $this->temas_enfretamento_violencia;
+    }
+    public function getTemasEquidadeTrabalho(){
+        return $this->temas_equidade_trabalho;
+    }
+    public function getTemasEsportes(){
+        return $this->temas_esportes;
+    }
+    public function getTemasIndigenas(){
+        return $this->temas_indigenas;
+    }
+    public function getTemasLgbtt(){
+        return $this->temas_lgbtt;
+    }
+    public function getTemasMasculinidades(){
+        return $this->temas_masculinidades;
+    }
+    public function getTemasMeioAmbiente(){
+        return $this->temas_meio_ambiente;
+    }
+    public function getTemasMidiaComunicacao(){
+        return $this->temas_midia_comunicacao;
+    }
+    public function getTemasMoradia(){
+        return $this->temas_moradia;
+    }
+    public function getTemasNegritude(){
+        return $this->temas_negritude;
+    }
+    public function getTemasPazSeguranca(){
+        return $this->temas_paz_seguranca;
+    }
+    public function getTemasSaudeBemestar(){
+        return $this->temas_saude_bemestar;
     }
 
     //Subtemas Sets
@@ -801,6 +927,307 @@ class Editar extends Conexao {
            array_push($array_temas, $row);
         }
         $this->setTemas($array_temas);
+
+
+        //Temas por região
+        $temas_arte_cultura_query = $pdo->prepare("select 
+                                        regiao
+                                    from temas
+                                    where organizacao_id = ? and tema = 'arte_cultura' ");
+        $temas_arte_cultura_query->bindValue(1, $organizacao_id);
+        $temas_arte_cultura_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $arte_cultura = $temas_arte_cultura_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_arte_cultura = [];
+        foreach ($arte_cultura as $row){
+            $array_arte_cultura = explode(",",$row['regiao']);
+        }
+         $this->setTemasArteCultura($array_arte_cultura);
+
+
+
+        $temas_ciencia_tecnologia_query = $pdo->prepare("select 
+                                        regiao
+                                    from temas
+                                    where organizacao_id = ? and tema = 'ciencia_tecnologia' ");
+        $temas_ciencia_tecnologia_query->bindValue(1, $organizacao_id);
+        $temas_ciencia_tecnologia_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $ciencia_tecnologia =  $temas_ciencia_tecnologia_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_ciencia_tecnologia = [];
+        foreach ($ciencia_tecnologia as $row){
+            $array_ciencia_tecnologia = explode(",",$row['regiao']);
+        }
+        $this->setTemasCienciaTecnologia($array_ciencia_tecnologia);
+
+
+
+        $temas_democracia_participação_politica_query = $pdo->prepare("select 
+                                        regiao
+                                    from temas
+                                    where organizacao_id = ? and tema = 'democracia_participação_politica' ");
+        $temas_democracia_participação_politica_query->bindValue(1, $organizacao_id);
+        $temas_democracia_participação_politica_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $democracia_participação_politica =  $temas_democracia_participação_politica_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_democracia_participação_politica = [];
+        foreach ($democracia_participação_politica as $row){
+            $array_democracia_participação_politica = explode(",",$row['regiao']);
+        }
+        $this->setTemasDemocraciaPolitica($array_democracia_participação_politica);
+
+
+
+        $temas_educacao_formacao_query = $pdo->prepare("select 
+                                        regiao
+                                    from temas
+                                    where organizacao_id = ? and tema = 'educacao_formacao' ");
+        $temas_educacao_formacao_query->bindValue(1, $organizacao_id);
+        $temas_educacao_formacao_query->execute();
+
+        //passando os valores encontrados para um array
+        $educacao_formacao =  $temas_educacao_formacao_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_educacao_formacao = [];
+        foreach ($educacao_formacao as $row){
+            $array_educacao_formacao = explode(",",$row['regiao']);
+        }
+        $this->setTemasEducacaoFormacao($array_educacao_formacao);
+
+
+        $temas_empreendedorismo_feminino_autonomia_economica_query = $pdo->prepare("select 
+                                        regiao
+                                    from temas
+                                    where organizacao_id = ? and tema = 'empreendedorismo_feminino_autonomia_economica' ");
+        $temas_empreendedorismo_feminino_autonomia_economica_query->bindValue(1, $organizacao_id);
+        $temas_empreendedorismo_feminino_autonomia_economica_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $empreendedorismo_feminino_autonomia_economica =  $temas_empreendedorismo_feminino_autonomia_economica_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_empreendedorismo_feminino_autonomia_economica = [];
+        foreach ($empreendedorismo_feminino_autonomia_economica as $row){
+           $array_empreendedorismo_feminino_autonomia_economica = explode(",",$row['regiao']);
+        }
+        $this->setTemasEmpreendedorismoFeminino($array_empreendedorismo_feminino_autonomia_economica);
+
+
+
+        $temas_enfrentamento_violencia_query = $pdo->prepare("select 
+                                        regiao
+                                    from temas
+                                    where organizacao_id = ? and tema = 'enfrentamento_violencia' ");
+        $temas_enfrentamento_violencia_query->bindValue(1, $organizacao_id);
+        $temas_enfrentamento_violencia_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $enfrentamento_violencia =  $temas_enfrentamento_violencia_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_enfrentamento_violencia = [];
+        foreach ($enfrentamento_violencia as $row){
+           $array_enfrentamento_violencia = explode(",",$row['regiao']);
+        }
+        $this->setTemasEnfretamentoViolencia($array_enfrentamento_violencia);
+
+
+        $temas_equidade_Condições_trabalho_query = $pdo->prepare("select 
+                                        regiao
+                                    from temas
+                                    where organizacao_id = ? and tema = 'equidade_Condições_trabalho' ");
+        $temas_equidade_Condições_trabalho_query->bindValue(1, $organizacao_id);
+        $temas_equidade_Condições_trabalho_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $equidade_Condições_trabalho =  $temas_equidade_Condições_trabalho_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_equidade_Condições_trabalho = [];
+        foreach ($equidade_Condições_trabalho as $row){
+           $array_equidade_Condições_trabalho = explode(",",$row['regiao']);
+        }
+        $this->setTemasEquidadeTrabalho($array_equidade_Condições_trabalho);
+
+
+        $temas_esporte_query = $pdo->prepare("select 
+                                        regiao
+                                    from temas
+                                    where organizacao_id = ? and tema = 'esporte' ");
+        $temas_esporte_query->bindValue(1, $organizacao_id);
+        $temas_esporte_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $esporte =  $temas_esporte_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_esporte = [];
+        foreach ($esporte as $row){
+           $array_esporte = explode(",",$row['regiao']);
+        }
+        $this->setTemasEsportes($array_esporte);
+
+
+
+        $temas_indigenas_query = $pdo->prepare("select 
+                                        regiao
+                                    from temas
+                                    where organizacao_id = ? and tema = 'indigenas' ");
+        $temas_indigenas_query->bindValue(1, $organizacao_id);
+        $temas_indigenas_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $indigenas =  $temas_indigenas_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_indigenas = [];
+        foreach ($indigenas as $row){
+           $array_indigenas = explode(",",$row['regiao']);
+        }
+        $this->setTemasIndigenas($array_indigenas);
+
+
+
+        $temas_LGBTT_query = $pdo->prepare("select 
+                                        regiao
+                                    from temas
+                                    where organizacao_id = ? and tema = 'LGBTT' ");
+        $temas_LGBTT_query->bindValue(1, $organizacao_id);
+        $temas_LGBTT_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $LGBTT =  $temas_LGBTT_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_LGBTT = [];
+        foreach ($LGBTT as $row){
+           $array_LGBTT = explode(",",$row['regiao']);
+        }
+        $this->setTemasLgbtt($array_LGBTT);
+
+
+
+        $temas_masculinidade_query = $pdo->prepare("select 
+                                        regiao
+                                    from temas
+                                    where organizacao_id = ? and tema = 'masculinidade' ");
+        $temas_masculinidade_query->bindValue(1, $organizacao_id);
+        $temas_masculinidade_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $masculinidade =  $temas_masculinidade_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_masculinidade = [];
+        foreach ($masculinidade as $row){
+           $array_masculinidade = explode(",",$row['regiao']);
+        }
+        $this->setTemasMasculinidades($array_masculinidade);
+
+
+
+
+        $temas_meio_ambiente_seguranca_agricultura_query = $pdo->prepare("select 
+                                        regiao
+                                    from temas
+                                    where organizacao_id = ? and tema = 'meio ambiente,seguranca,agricultura' ");
+        $temas_meio_ambiente_seguranca_agricultura_query->bindValue(1, $organizacao_id);
+        $temas_meio_ambiente_seguranca_agricultura_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $meio_ambiente_seguranca_agricultura =  $temas_meio_ambiente_seguranca_agricultura_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_meio_ambiente_seguranca_agricultura = [];
+        foreach ($meio_ambiente_seguranca_agricultura as $row){
+           $array_meio_ambiente_seguranca_agricultura = explode(",",$row['regiao']);
+        }
+        $this->setTemasMeioAmbiente($array_meio_ambiente_seguranca_agricultura);
+
+
+
+        $temas_midia_comunicacao_query = $pdo->prepare("select 
+                                        regiao
+                                    from temas
+                                    where organizacao_id = ? and tema = 'midia_comunicacao' ");
+        $temas_midia_comunicacao_query->bindValue(1, $organizacao_id);
+        $temas_midia_comunicacao_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $midia_comunicacao =  $temas_midia_comunicacao_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_midia_comunicacao = [];
+        foreach ($midia_comunicacao as $row){
+           $array_midia_comunicacao = explode(",",$row['regiao']);
+        }
+        $this->setTemasMidiaComunicacao($array_midia_comunicacao);
+
+
+
+        $temas_moradia_query = $pdo->prepare("select 
+                                        regiao
+                                    from temas
+                                    where organizacao_id = ? and tema = 'moradia' ");
+        $temas_moradia_query->bindValue(1, $organizacao_id);
+        $temas_moradia_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $moradia =  $temas_moradia_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_moradia = [];
+        foreach ($moradia as $row){
+           $array_moradia = explode(",",$row['regiao']);
+        }
+        $this->setTemasMoradia($array_moradia);
+
+
+        $temas_negritude_query = $pdo->prepare("select 
+                                        regiao
+                                    from temas
+                                    where organizacao_id = ? and tema = 'negritude' ");
+        $temas_negritude_query->bindValue(1, $organizacao_id);
+        $temas_negritude_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $negritude =  $temas_negritude_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_negritude = [];
+        foreach ($negritude as $row){
+           $array_negritude = explode(",",$row['regiao']);
+        }
+        $this->setTemasNegritude($array_negritude);
+
+
+        $temas_paz_seguranca_publica_query = $pdo->prepare("select 
+                                        regiao
+                                    from temas
+                                    where organizacao_id = ? and tema = 'paz_seguranca_publica' ");
+        $temas_paz_seguranca_publica_query->bindValue(1, $organizacao_id);
+        $temas_paz_seguranca_publica_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $paz_seguranca_publica =  $temas_paz_seguranca_publica_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_paz_seguranca_publica = [];
+        foreach ($paz_seguranca_publica as $row){
+           $array_paz_seguranca_publica = explode(",",$row['regiao']);
+        }
+        $this->setTemasPazSeguranca($array_paz_seguranca_publica);
+
+
+
+        $temas_saude_bemestar_query = $pdo->prepare("select 
+                                        regiao
+                                    from temas
+                                    where organizacao_id = ? and tema = 'saude_bemestar' ");
+        $temas_saude_bemestar_query->bindValue(1, $organizacao_id);
+        $temas_saude_bemestar_query->execute();
+
+
+        //passando os valores encontrados para um array
+        $saude_bemestar =  $temas_saude_bemestar_query->fetchAll(PDO::FETCH_ASSOC);
+        $array_saude_bemestar = [];
+        foreach ($saude_bemestar as $row){
+           $array_saude_bemestar = explode(",",$row['regiao']);
+        }
+        $this->setTemasSaudeBemestar($array_saude_bemestar);
 
 
         //*****popular checkbox******//

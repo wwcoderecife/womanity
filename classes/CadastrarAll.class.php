@@ -1408,13 +1408,55 @@ class CadastrarAll extends Conexao {
             $delete_temas->execute();
 
 
-           $edit_tema = $pdo->prepare("insert into temas (tema, organizacao_id)
-                                   values (?, ?)");
+            $edit_tema = $pdo->prepare("insert into temas (tema, regiao, organizacao_id)
+                                   values (?, ?, ?)");
             $temas = $this->getTemas();
             foreach ($temas  as $tema){
-               $edit_tema->bindValue(1, $tema);
-               $edit_tema->bindValue(2, $organizacao_id);
-               $edit_tema->execute();
+
+                $edit_tema->bindValue(1, $tema);
+                echo "temas";
+                echo $this->getTemasArteCultura();
+                echo implode(",", $this->getTemasArteCultura());
+                
+                if($tema == "arte_cultura"){
+                    $edit_tema->bindValue(2, implode(",", (array)$this->getTemasArteCultura())); 
+                }else if($tema == "ciencia_tecnologia"){
+                    $edit_tema->bindValue(2, implode(",", $this->getTemasCienciaTecnologia()));
+                }else if($tema == "democracia_participação_politica"){
+                    $edit_tema->bindValue(2, implode(",", $this->getTemasDemocraciaPolitica()));
+                }else if($tema == "educacao_formacao"){
+                    $edit_tema->bindValue(2, implode(",", $this->getTemasEducacaoFormacao()));
+                }else if($tema == "empreendedorismo_feminino_autonomia_economica"){
+                    $edit_tema->bindValue(2, implode(",", $this->getTemasEmpreendedorismoFeminino()));
+                }else if($tema == "enfrentamento_violencia"){
+                    $edit_tema->bindValue(2, implode(",", $this->getTemasEnfretamentoViolencia()));
+                }else if($tema == "equidade_Condições_trabalho"){
+                    $edit_tema->bindValue(2, implode(",", $this->getTemasEquidadeTrabalho()));
+                }else if($tema == "esporte"){
+                    $edit_tema->bindValue(2, implode(",", $this->getTemasEsportes()));
+                }else if($tema == "indigenas"){
+                    $edit_tema->bindValue(2, implode(",", $this->getTemasIndigenas()));
+                }else if($tema == "LGBTT"){
+                    $edit_tema->bindValue(2, implode(",", $this->getTemasLgbtt()));
+                }else if($tema == "masculinidade"){
+                    $edit_tema->bindValue(2, implode(",", $this->getTemasMasculinidades()));
+                }else if($tema == "meio ambiente,seguranca,agricultura"){
+                    $edit_tema->bindValue(2, implode(",", $this->getTemasMeioAmbiente()));
+                }else if($tema == "midia_comunicacao"){
+                    $edit_tema->bindValue(2, implode(",", $this->getTemasMidiaComunicacao()));
+                }else if($tema == "moradia"){
+                    $edit_tema->bindValue(2, implode(",", $this->getTemasMoradia()));
+                }else if($tema == "negritude"){
+                    $edit_tema->bindValue(2, implode(",", $this->getTemasNegritude()));
+                }else if($tema == "paz_seguranca_publica"){
+                    $edit_tema->bindValue(2, implode(",", $this->getTemasPazSeguranca()));
+                }else if($tema == "saude_bemestar"){
+                    $edit_tema->bindValue(2, implode(",", $this->getTemasSaudeBemestar()));
+                }
+
+                $edit_tema->bindValue(3, $organizacao_id);
+
+                $edit_tema->execute();
             }
 
 
