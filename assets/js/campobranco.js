@@ -6,7 +6,7 @@ if(document.getElementById("inputNome1").value == "")
 document.getElementById("inputNome1").focus();
 return false
 
-}
+} 
  
 
  if(document.getElementById("inputCargo1").value == ""){
