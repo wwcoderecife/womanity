@@ -1,3 +1,4 @@
+
           
         <!-- Bootstrap core JavaScript
          ================================================== -->
@@ -10,6 +11,8 @@
             <script src="assets/js/validatortel.js"></script>
             <script src="assets/js/textarea.js"></script>
             <script src="assets/js/campobranco.js"></script>
+            <!--<script src="assets/js/validacampo.js"></script>-->
+
 
 
           
@@ -30,7 +33,7 @@
 
 <div class="row form_inicial">
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-        <form role="form" action="classes/prepare_cadastro.php" method="post" class="f1 form-ong">
+        <form role="form" name="form" action="classes/prepare_cadastro.php" method="post" class="f1 form-ong">
 
             <h3>Cadastro do Ecossistema<br>Organizaçāo</h3>
             <p>Preencha os campos obrigatórios *</p>
@@ -77,14 +80,14 @@
                 <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="cargo_1" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name"  required >
+                    <input type="text" name="cargo_1" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo1"  required >
                     
                 </div>
 
                 <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="email_1"  value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name" required >
+                    <input type="email" name="email_1"  value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="inputEmail1" required >
                    
                 </div>
                 <h5>Telefone</h5>
@@ -110,13 +113,13 @@
                 <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="cargo_2" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name"required >
+                    <input type="text" name="cargo_2" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo2"required >
                     
                 </div>
                  <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="email_2" placeholder="email@email.com" class="f1-last-name form-control" id="f1-last-name"required >
+                    <input type="email" name="email_2" placeholder="email@email.com" class="f1-last-name form-control" id="inputEmail2"required >
                     
                     
                 </div>
@@ -135,7 +138,7 @@
                 </div>
 
                 <div class="f1-buttons">
-                <button type="button" class="btn btn-next" onclick="validacampobranco();" >Próximo</button>
+                <button type="button" class="btn btn-next" onclick=" return validacampobranco();">Próximo</button>
                </div>
             </fieldset><!--Dados Pessoais-->
 
