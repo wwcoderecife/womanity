@@ -30,6 +30,7 @@ var reason = "";
 
  	validateFormOnSubmit(document.getElementById("inputNome1"));
  	validateFormOnSubmit(document.getElementById("inputCargo1"));
+ 	validateFormOnSubmit(document.getElementById("inputTel1"));
 
 /*
 	if(document.getElementById("inputNome1").value === ""){
