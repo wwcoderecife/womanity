@@ -138,9 +138,9 @@
                 </div>
 
                 <div class="f1-buttons">
-                <button type="button" class="btn btn-next" onclick="validacampobranco();">Próximo</button>
+                <button type="button" class="btn btn-next" onclick=" return validacampobranco();">Próximo</button>
                </div>
-            </fieldset><!--Dados Pessoais-->s
+            </fieldset><!--Dados Pessoais-->
 
 
           
