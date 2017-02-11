@@ -1,4 +1,35 @@
 
+function validateEmpty(fld) {
+    var error = "";
+  
+    if (fld.value.length == 0) {
+        fld.style.background = 'Yellow'; 
+        error = "Campo "+ fld.name +" obrigatório.\n"
+    } else {
+        fld.style.background = 'White';
+    }
+    return error;   
+}
+
+function validateFormOnSubmit(theForm) {
+var reason = "";
+
+  reason += validateEmpty(theForm.inputNome1);
+  reason += validateEmpty(theForm.inputCargo1);
+  reason += validateEmpty(theForm.inputTel1);
+  reason += validateEmpty(theForm.inputCel1);
+  reason += validateEmpty(theForm.inputNome2);
+      
+  if (reason != "") {
+    alert("Campos ogrigatório não preenchidos:\n" + reason);
+    return false;
+  }
+
+  return true;
+}
+
+
+
  function validacampobranco(){
 
 	if(document.getElementById("inputNome1").value === ""){
