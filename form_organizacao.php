@@ -138,7 +138,7 @@
                 </div>
 
                 <div class="f1-buttons">
-                <button type="button" class="btn btn-next" onclick=" return validateFormOnSubmit(form);">Próximo</button>
+                <button type="button" class="btn btn-next" onclick=" return validateFormOnSubmit();">Próximo</button>
                </div>
             </fieldset><!--Dados Pessoais-->
 

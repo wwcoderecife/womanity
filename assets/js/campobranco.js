@@ -11,14 +11,10 @@ function validateEmpty(fld) {
     return error;   
 }
 
-function validateFormOnSubmit(theForm) {
+function validateFormOnSubmit() {
 var reason = "";
 
-  reason += validateEmpty(theForm.inputNome1);
-  reason += validateEmpty(theForm.inputCargo1);
-  reason += validateEmpty(theForm.inputTel1);
-  reason += validateEmpty(theForm.inputCel1);
-  reason += validateEmpty(theForm.inputNome2);
+  reason += validateEmpty(document.getElementById("inputNome1"));
       
   if (reason != "") {
     alert("Campos ogrigatório não preenchidos:\n" + reason);
