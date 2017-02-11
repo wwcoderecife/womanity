@@ -1,6 +1,6 @@
 
 function validateEmpty(fld) {
-    var error = "";
+ var error = "";
   
     if (fld.value.length == 0) {
         fld.style.background = 'Yellow'; 
@@ -11,10 +11,10 @@ function validateEmpty(fld) {
     return error;   
 }
 
-function validateFormOnSubmit() {
+function validateFormOnSubmit(fldname) {
 var reason = "";
 
-  reason += validateEmpty(document.getElementById("inputNome1"));
+  reason += validateEmpty(fldname);
       
   if (reason != "") {
     alert("Campos ogrigatório não preenchidos:\n" + reason);
@@ -28,6 +28,9 @@ var reason = "";
 
  function validacampobranco(){
 
+ 	validateFormOnSubmit(document.getElementById("inputNome1"));
+
+/*
 	if(document.getElementById("inputNome1").value === ""){
 	   alert("Por favor preencha o campo Nome");
 	   document.getElementById("inputNome1").focus();
@@ -41,7 +44,7 @@ var reason = "";
 	         return false;
 	}
 
-	/*
+
 	
 	 else if(document.getElementById("inputTel1").value == ""){
 		     alert("Por favor preencha o campo Telefone");
