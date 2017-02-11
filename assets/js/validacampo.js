@@ -6,25 +6,25 @@ var celular= form.celular_1.value;
 
 if (nome == "") {
 alert('Preencha o campo nome');
-form1.nome.focus();
+form.nome.focus();
 return false;
 }
 
 if (cargo == "") {
 alert('Preencha o campo cargo');
-form1.cargo.focus();
+form.cargo.focus();
 return false;
 }
 
 if (telefone == "") {
 alert('Preencha o campo telefone');
-form1.telefone.focus();
+form.telefone.focus();
 return false;
 }
 
 if (celular == "") {
 alert('Preencha o campo celular');
-form1.celular.focus();
+form.celular.focus();
 return false;
 }
 
