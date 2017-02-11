@@ -6,6 +6,7 @@
 	   document.getElementById("inputNome1").focus();
 	   return false;
 	}
+	/*
 	 else if(document.getElementById("inputCargo1").value == ""){
 		     alert("Por favor preencha o campo Cargo");
 	         document.getElementById("inputCargo1").focus();
