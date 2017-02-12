@@ -160,7 +160,7 @@ jQuery(document).ready(function() {
         
         if(!valid){
             console.log("erro");
-            open_dialog("Erro", "Preencha todos os campos obrigatórios!", "error");
+            open_dialog("Erro", "Identificamos campos obrigatórios nāo preenchidos!", "error");
            // $('.f1 input[type="text"], .f1 input[type="password"], .f1 textarea').on('focus', function() {
            //      $(this).addClass('input-error');
            //  });
