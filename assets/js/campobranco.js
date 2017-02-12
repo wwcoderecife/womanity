@@ -2,11 +2,11 @@
 function validateEmpty(fld) {
  var error = "";
   
-    if (fld.value.length == 0) {
-        fld.style.background = '#9370DB'; 
+    if (fld.value.length === 0) {
+        fld.style.background = '#9370DB';
         error = "Campo "+ fld.name +" obrigatório.\n"
     } else {
-        fld.style.background = 'White';
+        fld.style.background = '#FFFFFF';
     }
     return error;   
 }
