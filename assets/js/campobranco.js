@@ -3,7 +3,7 @@ function validateEmpty(fld) {
  var error = "";
   
     if (fld.value.length == 0) {
-        fld.style.background = 'Red'; 
+        fld.style.background = "hsl(290,60%,70%)" 
         error = "Campo "+ fld.name +" obrigatório.\n"
     } else {
         fld.style.background = 'White';
@@ -17,7 +17,7 @@ var reason = "";
   reason += validateEmpty(fldname);
       
   if (reason != "") {
-    alert("Campos ogrigatório não preenchidos:\n" + reason);
+    //alert("Campos ogrigatório não preenchidos:\n" + reason);
     return false;
   }
 
