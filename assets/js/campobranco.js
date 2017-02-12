@@ -3,7 +3,7 @@ function validateEmpty(fld) {
  var error = "";
   
     if (fld.value.length == 0) {
-        fld.style.background = 'Yellow'; 
+        fld.style.background = 'Purple'; 
         error = "Campo "+ fld.name +" obrigatório.\n"
     } else {
         fld.style.background = 'White';
