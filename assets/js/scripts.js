@@ -159,7 +159,7 @@ jQuery(document).ready(function() {
         });
         
         if(!valid){
-            console.log("erro");
+            console.log("alert");
             open_dialog("Alerta", "Identificamos campos obrigatórios nāo preenchidos!", "error");
            // $('.f1 input[type="text"], .f1 input[type="password"], .f1 textarea').on('focus', function() {
            //      $(this).addClass('input-error');
