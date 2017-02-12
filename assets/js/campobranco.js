@@ -34,6 +34,7 @@ var reason = "";
  	validateFormOnSubmit(document.getElementById("inputTel1"));
  	validateFormOnSubmit(document.getElementById("inputCel1"));
  	validateFormOnSubmit(document.getElementById("inputNome2"));
+ 	validateFormOnSubmit(document.getElementById("inputCargo2"));
  	validateFormOnSubmit(document.getElementById("inputEmail2"));
  	validateFormOnSubmit(document.getElementById("inputTel2"));
  	validateFormOnSubmit(document.getElementById("inputCel2"));
