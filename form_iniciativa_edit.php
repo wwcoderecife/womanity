@@ -328,7 +328,7 @@
                         <option value="negocio_social"<?=($edit->getTipo() == 'negocio_social')?'selected':''?>>
                             Negócio Social</option>
                         <option value="ong_sociedade_civil"<?=($edit->getTipo() == 'ong_sociedade_civil')?'selected':''?>>
-                            Organização da Sociedade Civil (ex: associação, ong, oscip, etc)
+                            Organização da Sociedade Civil (ex: associação,  entidade religiosa, instituto, ong, oscip, etc.)
                         <option value="redes"<?=($edit->getTipo() == 'rede')?'selected':''?>>
                             Redes</option> 
                         <option value="outros"<?=($edit->getTipo() == 'outros')?'selected':''?>>
@@ -370,7 +370,7 @@
                 </div>
                     
                 
-                <h4> 8. Em que ano começaram as atividades da sua iniciativa?*</h4>
+                <h4> 8. Em que ano a iniciativa iniciou as atividades?*</h4>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" required  id="year_organizacao" name="anoatividade" >

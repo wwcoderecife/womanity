@@ -32,7 +32,11 @@
 
     		<h3>Cadastro UNA Ecossistema<br>Iniciativa</h3>
     		<p>Preencha os campos obrigatórios*</p>
+<<<<<<< Updated upstream
             <p>Lembre-se de preencher os campos obrigatórios em todas as etapas e clicar no botão ENVIAR na etapa 5, Pois o sistema não irá salvar informações parcialmente inseridas</p>
+=======
+            <p>Atenção: não é possível interromper o preenchimento e retomá-lo depois; é necessário completar todo o formulário antes de sair do sistema ou os dados não serão gravados.</p>
+>>>>>>> Stashed changes
     		<div class="f1-steps">
     			<div class="f1-progress">
     			    <div class="f1-progress-line" data-now-value="8" data-number-of-steps="5" style="width: 8%;"></div>
@@ -247,7 +251,7 @@
                         <option value="governo">Governo</option>
                         <option value="movimento">Movimento</option>
                         <option value="negocio_social">Negócio Social</option>
-                        <option value="ong_sociedade_civil">Organização da Sociedade Civil (ex: associação, ong, oscip, etc)
+                        <option value="ong_sociedade_civil">Organização da Sociedade Civil (ex: associação,  entidade religiosa, instituto, ong, oscip, etc.)
                         <option value="redes">Redes</option> 
                         <option value="outros">Outros</option>  
                     </select>
@@ -286,7 +290,7 @@
                 </div>
                     
                 
-                <h5> 8. Em que ano começaram as atividades da sua iniciativa?*</h5>
+                <h5> 8. Em que ano a iniciativa iniciou as atividades?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="year_organizacao" name="anoatividade" required >

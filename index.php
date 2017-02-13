@@ -147,8 +147,7 @@
                              organização e identificar conexões entre elas. Em um segundo momento, terá a função de automatizar e perpetuar esse processo, permitindo 
                              que novos atores se cadastrem e indiquem outros. 
 
-                             Para garantir a segurança dos dados, cadastre um login e senha para preencher o questionário. As informações poderão ser atualizadas após o
-                             lançamento oficial da plataforma, em novembro/2017.       
+                             Para garantir a segurança dos dados, cadastre um login e senha para preencher o questionário. As informações poderão ser atualizadas após o lançamento oficial da plataforma.       
 
                            </p>    
                         </div>
@@ -159,7 +158,7 @@
                     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
                         <form role="form" data-toggle="validator" action="index.php" method="post" class="f1">
 
-                            <h3>Cadastro do Ecossistema</h3>
+                            <h3>Cadastro no Ecossistema</h3>
                             <p>Preencha os campos obrigatórios *</p>
                            
 
@@ -255,7 +254,7 @@
                                         <label>
                                             <input type="checkbox" name="carta_principios" data-error="Você deve marcar este campo!" value="1" required>
                                             <ul>
-                                                Li e concordo com a Carta <a href = "#" id ="check1" data-toggle="modal" data-target="#login-modal"> de Príncipios e ritérios *</a> 
+                                                Li e concordo com a Carta <a href = "#" id ="check1" data-toggle="modal" data-target="#login-modal"> de Príncipios e Critérios *</a> 
                                                 <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" id= "login-modal">
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
@@ -409,7 +408,7 @@ As iniciativas pelos direitos das mulheres que estiverem de acordo com os pressu
                                             <input type="checkbox" name="politica_privacidade" data-error="Você deve marcar este campo!"  value="1" required>
                                             <ul>
                                                 Li e concordo com a  <a href = "#" id ="check2" data-toggle="modal" data-target="#login-modal2"> Política de Privacidade *</a> 
-                                                <p style="text-align: justify;"> <font size="1.5">DECLARO, PESSOALMENTE OU REPRESENTADO OU ASSISTIDO POR MEU(S) PAI(S) OU REPRESENTANTE(S) LEGAL(IS) QUE LI TODA A POLÍTICA DE PRIVACIDADE, INCLUINDO TODOS OS TERMOS E CONDIÇÕES PARA USO E COMPARTILHAMENTO DAS MINHAS INFORMAÇÕES, ESTOU CIENTE E ACEITO TODAS AS CONDIÇÕES, CONCORDANDO, POR LIVRE E ESPONTÂNEA MANIFESTAÇÃO DE VONTADE, COM TODO O PACTUADO.</font></p>
+                                                <p style="text-align: justify;"> <font size="1.5">DECLARO, EM NOME DA ORGANIZAÇÃO OU INICIATIVA QUE ESTOU CADASTRANDO, QUE LI TODA A POLÍTICA DE PRIVACIDADE, INCLUINDO TODOS OS TERMOS E CONDIÇÕES PARA USO E COMPARTILHAMENTO DAS MINHAS INFORMAÇÕES. ESTOU CIENTE E ACEITO TODAS AS CONDIÇÕES, CONCORDANDO, POR LIVRE E ESPONTÂNEA MANIFESTAÇÃO DE VONTADE, COM TODO O PACTUADO.</font></p>
                                                 <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" id= "login-modal2">
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
