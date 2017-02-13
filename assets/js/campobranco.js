@@ -1,4 +1,4 @@
-
+var FieldFocus = "";
 
 function validateEmpty(fld) {
  var error = "";
@@ -19,6 +19,9 @@ var reason = "";
       
   if (reason != "") {
     //alert("Campos ogrigatório não preenchido:\n" + reason);
+    if( FieldFocus == ""){
+      FieldFocus += fldname;
+    }      
     return false;
   }
 
@@ -27,10 +30,7 @@ var reason = "";
 
  function validacampobranco(){
 
- 	if(validateFormOnSubmit(document.getElementById("inputNome1")) = false){
- 		document.getElementById("inputNome1").focus();	
- 	};
- 	 
+ 	validateFormOnSubmit(document.getElementById("inputNome1"));
  	validateFormOnSubmit(document.getElementById("inputCargo1"));
  	validateFormOnSubmit(document.getElementById("inputTel1"));
  	validateFormOnSubmit(document.getElementById("inputCel1"));
@@ -40,7 +40,9 @@ var reason = "";
  	validateFormOnSubmit(document.getElementById("inputTel2"));
  	validateFormOnSubmit(document.getElementById("inputCel2"));
 
-    
+    if (FieldFocus != ""){
+       FieldFocus.focus();	
+    }
  };		
 
 <!--
