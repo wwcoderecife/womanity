@@ -20,10 +20,10 @@ var reason = "";
       
   if (reason != "") {
     //alert("Campos ogrigatório não preenchido:\n" + reason);
-    if (length(FieldFocus) === 0){
+    if (length(FieldFocus) == 0){
       FieldName = fldname; 	
       FieldFocus += "X";
-    }      
+    };      
     return false;
   }
 
