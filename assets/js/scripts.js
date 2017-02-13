@@ -56,10 +56,10 @@ jQuery(document).ready(function() {
 
     <!--//Testando validacao wizard -->
 
-    //var validator = $('.form-ong').validate({
-        //ignore: 'input[type="button"],input[type="submit"]'
+    var validator = $('.form-ong').validate({
+        ignore: 'input[type="button"],input[type="submit"]'
 
-   // });
+    });
 
     
     // next step
