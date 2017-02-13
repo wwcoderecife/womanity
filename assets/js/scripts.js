@@ -1,22 +1,22 @@
 
 function scroll_to_class(element_class, removed_height) {
-	var scroll_to = $(element_class).offset().top - removed_height;
-	if($(window).scrollTop() != scroll_to) {
-		$('html, body').stop().animate({scrollTop: scroll_to}, 0);
-	}
+    var scroll_to = $(element_class).offset().top - removed_height;
+    if($(window).scrollTop() != scroll_to) {
+        $('html, body').stop().animate({scrollTop: scroll_to}, 0);
+    }
 }
 
 function bar_progress(progress_line_object, direction) {
-	var number_of_steps = progress_line_object.data('number-of-steps');
-	var now_value = progress_line_object.data('now-value');
-	var new_value = 0;
-	if(direction == 'right') {
-		new_value = now_value + ( 100 / number_of_steps );
-	}
-	else if(direction == 'left') {
-		new_value = now_value - ( 100 / number_of_steps );
-	}
-	progress_line_object.attr('style', 'width: ' + new_value + '%;').data('now-value', new_value);
+    var number_of_steps = progress_line_object.data('number-of-steps');
+    var now_value = progress_line_object.data('now-value');
+    var new_value = 0;
+    if(direction == 'right') {
+        new_value = now_value + ( 100 / number_of_steps );
+    }
+    else if(direction == 'left') {
+        new_value = now_value - ( 100 / number_of_steps );
+    }
+    progress_line_object.attr('style', 'width: ' + new_value + '%;').data('now-value', new_value);
 }
 
 function open_dialog(title, message, type){
@@ -24,7 +24,7 @@ function open_dialog(title, message, type){
 }
 
 jQuery(document).ready(function() {
-	
+    
        /*
         Fullscreen background
     */
@@ -54,8 +54,6 @@ jQuery(document).ready(function() {
     //$(".submit").hide();
     //$(".btn-previous").hide();
 
-    <!--//Testando validacao wizard -->
-
     var validator = $('.form-ong').validate({
         ignore: 'input[type="button"],input[type="submit"]'
 
@@ -82,7 +80,6 @@ jQuery(document).ready(function() {
             }
         });
         // fields validation
-
         */
         
     //  if( next_step ) {
@@ -149,19 +146,16 @@ jQuery(document).ready(function() {
         var progress_line = $(this).parents('.f1').find('.f1-progress-line');
 
         var tab = $(".tab:visible");
-
-
-
+        
         var valid = true;
         $('input', tab).each(function(i, v){
             valid = validator.element(v) && valid;
-    
             // if(!valid){
             //     $(this).addClass('input-error');
             // }else{
             //     $(this).removeClass('input-error');
             // }
-       // });
+        });
         
         if(!valid){
             console.log("erro");
@@ -235,6 +229,7 @@ jQuery(document).ready(function() {
     if ($('.form-ong').valid()){
         console.log("enviar");
     }
+
 
 
     //populando os combos de cidade e estado
