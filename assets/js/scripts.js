@@ -150,16 +150,12 @@ jQuery(document).ready(function() {
 
         var tab = $(".tab:visible");
 
-        <!-- //Testando Validacao wizard -->
-        /*
+
 
         var valid = true;
         $('input', tab).each(function(i, v){
             valid = validator.element(v) && valid;
-        */    
-
-      <!-- //Testando Validacao wizard -->   
-      
+    
             // if(!valid){
             //     $(this).addClass('input-error');
             // }else{
