@@ -8,7 +8,7 @@ function validateEmpty(fld) {
     } else {
         fld.style.background = 'White';
     }
-    return error;   
+    return error;
 }
 
 function validateFormOnSubmit(fldname) {
@@ -24,8 +24,6 @@ var reason = "";
   return true;
 }
 
-
-
  function validacampobranco(){
 
  	validateFormOnSubmit(document.getElementById("inputNome1");
@@ -37,6 +35,8 @@ var reason = "";
  	validateFormOnSubmit(document.getElementById("inputEmail2");
  	validateFormOnSubmit(document.getElementById("inputTel2");
  	validateFormOnSubmit(document.getElementById("inputCel2");
+
+ };		
 
 <!--
  //function validacampobranco2(){
@@ -118,5 +118,5 @@ return false
   }
 */
 
-};
+
   
