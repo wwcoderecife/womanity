@@ -54,10 +54,12 @@ jQuery(document).ready(function() {
     //$(".submit").hide();
     //$(".btn-previous").hide();
 
-    var validator = $('.form-ong').validate({
-        ignore: 'input[type="button"],input[type="submit"]'
+    <!--//Testando validacao wizard -->
 
-    });
+    //var validator = $('.form-ong').validate({
+        //ignore: 'input[type="button"],input[type="submit"]'
+
+   // });
 
     
     // next step
@@ -147,16 +149,23 @@ jQuery(document).ready(function() {
         var progress_line = $(this).parents('.f1').find('.f1-progress-line');
 
         var tab = $(".tab:visible");
-        
+
+        <!-- //Testando Validacao wizard -->
+        /*
+
         var valid = true;
         $('input', tab).each(function(i, v){
             valid = validator.element(v) && valid;
+        */    
+
+      <!-- //Testando Validacao wizard -->   
+      
             // if(!valid){
             //     $(this).addClass('input-error');
             // }else{
             //     $(this).removeClass('input-error');
             // }
-        });
+       // });
         
         if(!valid){
             console.log("erro");
