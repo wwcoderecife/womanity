@@ -3,8 +3,8 @@ function validateEmpty(fld) {
  var error = "";
   
     if (fld.value.length === 0) {
-        fld.style.background = 'Yellow'; 
-        error = "Favor Preencher o campo " +"\n"
+        fld.style.background = 'Red'; 
+        error = "Favor Preencher o campo "+fld.name +"\n"
     } else {
         fld.style.background = 'White';
     }
