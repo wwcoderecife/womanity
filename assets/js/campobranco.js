@@ -44,7 +44,7 @@ var reason = "";
  	validateFormOnSubmit(document.getElementById("inputTel2"));
  	validateFormOnSubmit(document.getElementById("inputCel2"));
 
-    if (length(FieldFocus) != 0){
+    if (FieldFocuS != ""){
       FieldName.focus();
     }
 
