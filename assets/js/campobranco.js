@@ -2,7 +2,7 @@
 function validateEmpty(fld) {
  var error = "";
   
-    if (fld.value.length === 0) {
+    if (fld.value.length == 0) {
         fld.style.background = '#D8BFD8'; 
         //error = "Favor Preencher o campo "+ fld.id +"\n"
     } else {
@@ -30,7 +30,6 @@ var reason = "";
 
  	validateFormOnSubmit(document.getElementById("inputNome1"));
  	validateFormOnSubmit(document.getElementById("inputCargo1"));
- 	validateFormOnSubmit(document.getElementById("inputTel1"));
  	validateFormOnSubmit(document.getElementById("inputTel1"));
  	validateFormOnSubmit(document.getElementById("inputCel1"));
  	validateFormOnSubmit(document.getElementById("inputNome2"));
