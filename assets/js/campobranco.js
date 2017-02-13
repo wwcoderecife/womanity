@@ -4,7 +4,7 @@ function validateEmpty(fld) {
   
     if (fld.value.length === 0) {
         fld.style.background = 'Red'; 
-        error = "Favor Preencher o campo "+fld.name +"\n"
+        error = "Favor Preencher o campo "+fld.name +"\n";
     } else {
         fld.style.background = 'White';
     }
