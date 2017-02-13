@@ -20,10 +20,12 @@ var reason = "";
       
   if (reason != "") {
     //alert("Campos ogrigatório não preenchido:\n" + reason);
+    /*
     if (length(FieldFocus) == 0){
       FieldName = fldname; 	
       FieldFocus += "X";
-    };      
+    };
+    */      
     return false;
   }
 
@@ -41,11 +43,11 @@ var reason = "";
  	validateFormOnSubmit(document.getElementById("inputEmail2"));
  	validateFormOnSubmit(document.getElementById("inputTel2"));
  	validateFormOnSubmit(document.getElementById("inputCel2"));
-
+/*
     if (length(FieldFocus) != 0){
       FieldName.focus();
     }
-
+*/
  };		
 
 <!--
