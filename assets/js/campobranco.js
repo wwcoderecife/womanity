@@ -4,7 +4,7 @@ function validateEmpty(fld) {
   
     if (fld.value.length === 0) {
         fld.style.background = '#D8BFD8'; 
-        error = "Favor Preencher o campo "+ fld.id.focus(); +"\n"
+        //error = "Favor Preencher o campo "+ fld.id.focus(); +"\n"
     } else {
         fld.style.background = 'White';
     }
@@ -17,7 +17,7 @@ var reason = "";
   reason += validateEmpty(fldname);
       
   if (reason != "") {
-    alert("Campos ogrigatório não preenchido:\n" + reason);
+    //alert("Campos ogrigatório não preenchido:\n" + reason);
     return false;
   }
 
