@@ -39,27 +39,29 @@ var reason = "";
  	validateFormOnSubmit(document.getElementById("inputTel2"));
  	validateFormOnSubmit(document.getElementById("inputCel2"));
 
+<!--
+ //function validacampobranco2(){
 
- function validacampobranco2(){
+ 	//validateFormOnSubmit(document.getElementById("inputcnpj"));
+ 	//validateFormOnSubmit(document.getElementById("inputNomeOng"));
+ 	//validateFormOnSubmit(document.getElementById("inputelOng"));
+ 	//validateFormOnSubmit(document.getElementById("inputEmailOng"));
+ 	//validateFormOnSubmit(document.getElementById("organizacao-tipo"));
+ 	//validateFormOnSubmit(document.getElementById("year_organizacao"));
+ 	//validateFormOnSubmit(document.getElementById("pessoas_envolvidas"));
+ 	//validateFormOnSubmit(document.getElementById("pessoas_beneficiadas"));
+ 	//validateFormOnSubmit(document.getElementById("sobre"));
+ 	//validateFormOnSubmit(document.getElementById("publico_alvo"));
+ 	//validateFormOnSubmit(document.getElementById("sobre_iniciativa_ong1"));
+ 	//validateFormOnSubmit(document.getElementById("estado_iniciativa"));	
+ 	//validateFormOnSubmit(document.getElementById("avaliacao"));	
+ 	//validateFormOnSubmit(document.getElementById("inputAvaliacaoOng"));	
+ 	//validateFormOnSubmit(document.getElementById("organizacao-comunicacao"));
+ 	//validateFormOnSubmit(document.getElementById("inputComunicacaoOng"));
+ 	//validateFormOnSubmit(document.getElementById("premiacao"));
+ 	//validateFormOnSubmit(document.getElementById("inputPremiacaoOng"));	
 
- 	validateFormOnSubmit(document.getElementById("inputcnpj"));
- 	validateFormOnSubmit(document.getElementById("inputNomeOng"));
- 	validateFormOnSubmit(document.getElementById("inputelOng"));
- 	validateFormOnSubmit(document.getElementById("inputEmailOng"));
- 	validateFormOnSubmit(document.getElementById("organizacao-tipo"));
- 	validateFormOnSubmit(document.getElementById("year_organizacao"));
- 	validateFormOnSubmit(document.getElementById("pessoas_envolvidas"));
- 	validateFormOnSubmit(document.getElementById("pessoas_beneficiadas"));
- 	validateFormOnSubmit(document.getElementById("sobre"));
- 	validateFormOnSubmit(document.getElementById("publico_alvo"));
- 	validateFormOnSubmit(document.getElementById("sobre_iniciativa_ong1"));
- 	validateFormOnSubmit(document.getElementById("estado_iniciativa"));	
- 	validateFormOnSubmit(document.getElementById("avaliacao"));	
- 	validateFormOnSubmit(document.getElementById("inputAvaliacaoOng"));	
- 	validateFormOnSubmit(document.getElementById("organizacao-comunicacao"));
- 	validateFormOnSubmit(document.getElementById("inputComunicacaoOng"));
- 	validateFormOnSubmit(document.getElementById("premiacao"));
- 	validateFormOnSubmit(document.getElementById("inputPremiacaoOng"));	
+ 	-->
 
 /*
 	if(document.getElementById("inputNome1").value === ""){
