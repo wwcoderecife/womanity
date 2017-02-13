@@ -1,16 +1,10 @@
 
-var FieldIDFocus = "";
 
 function validateEmpty(fld) {
  var error = "";
   
     if (fld.value.length === 0) {
-        fld.style.background = '#D8BFD8';
-
-        if( FieldIDFocus == ""){
-          FieldIDFocus = fld;	
-        }
-         
+        fld.style.background = '#D8BFD8';         
         error = "Favor Preencher o campo "+fld.name +"\n";
     } else {
         fld.style.background = 'White';
@@ -33,7 +27,10 @@ var reason = "";
 
  function validacampobranco(){
 
- 	validateFormOnSubmit(document.getElementById("inputNome1")); 
+ 	if(validateFormOnSubmit(document.getElementById("inputNome1")) = false){
+ 		document.getElementById("inputNome1").focus();	
+ 	};
+ 	 
  	validateFormOnSubmit(document.getElementById("inputCargo1"));
  	validateFormOnSubmit(document.getElementById("inputTel1"));
  	validateFormOnSubmit(document.getElementById("inputCel1"));
@@ -43,7 +40,7 @@ var reason = "";
  	validateFormOnSubmit(document.getElementById("inputTel2"));
  	validateFormOnSubmit(document.getElementById("inputCel2"));
 
-    FieldIDFocus.focus();
+    
  };		
 
 <!--
