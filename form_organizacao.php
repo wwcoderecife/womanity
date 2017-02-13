@@ -1085,7 +1085,7 @@
                 
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="button" class="btn btn-next" onclick=" return validacampobranco2();">Próximo</button>
+                    <button type="button" class="btn btn-next">Próximo</button>
                 </div>
 
 </fieldset>
