@@ -25,7 +25,7 @@ var reason = "";
 }
 
  function validacampobranco(){
-
+/*
  	validateFormOnSubmit(document.getElementById("inputNome1");
  	validateFormOnSubmit(document.getElementById("inputCargo1");
  	validateFormOnSubmit(document.getElementById("inputTel1");
@@ -35,6 +35,13 @@ var reason = "";
  	validateFormOnSubmit(document.getElementById("inputEmail2");
  	validateFormOnSubmit(document.getElementById("inputTel2");
  	validateFormOnSubmit(document.getElementById("inputCel2");
+*/
+
+	if(document.getElementById("inputNome1").value === ""){
+	   alert("Por favor preencha o campo Nome");
+	   document.getElementById("inputNome1").focus();
+	   return false;
+	}
 
  };		
 
