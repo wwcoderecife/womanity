@@ -158,9 +158,9 @@ jQuery(document).ready(function() {
             // }
         });
         
-        if(!valid){
-            console.log("erro");
-            open_dialog("Alerta", "Identificamos campos obrigatórios nāo preenchidos!", "warning");
+        //if(!valid){
+            //console.log("erro");
+           // open_dialog("Alerta", "Identificamos campos obrigatórios nāo preenchidos!", "warning");
            // $('.f1 input[type="text"], .f1 input[type="password"], .f1 textarea').on('focus', function() {
            //      $(this).addClass('input-error');
            //  });
