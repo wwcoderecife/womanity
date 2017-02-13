@@ -47,6 +47,7 @@ var reason = "";
     if(FieldFocus == "X"){
       FieldName.focus();
       FieldName.scrollIntoView();
+      FieldFocus = "";
     }
 
  };		
