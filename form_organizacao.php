@@ -1109,7 +1109,7 @@
                 </div>
                 <h5>Estado*</h5>
                  <div class="form-group">
-                    <label class="sr-only" for="f1-google-plus">Estado</label>
+                    <label class="sr-only" >Estado</label>
                     <select class="f1-last-name form-control" name="estado" id="estados" required>
                         <option value="escolha um estado"></option>
                         
@@ -1117,7 +1117,7 @@
                 </div>
                 <h5>Cidade*</h5>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-google-plus">Cidade</label>
+                    <label class="sr-only" >Cidade</label>
                     <select class="f1-last-name form-control" name="cidade" id="cidades"required> 
                         <option value="escolha uma cidade"></option>
                     </select> 
