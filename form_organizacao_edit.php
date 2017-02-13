@@ -500,25 +500,25 @@
                             for($i = 0; $i <= count($array_recursos_financeiros)-1; $i++){
                                 if(in_array('doação pessoa física', $array_recursos_financeiros[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
-                    >doação pessoa física</br>
+                    >doação de pessoa física</br>
                     <input type="checkbox" name="recursos_origem[]" value="edital público governo federal"
                         <?php 
                             for($i = 0; $i <= count($array_recursos_financeiros)-1; $i++){
                                 if(in_array('edital público governo federal', $array_recursos_financeiros[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
-                    >edital público governo federal</br>
+                    >edital público (governo federal)</br>
                     <input type="checkbox" name="recursos_origem[]" value="edital público governo estadual"
                         <?php 
                             for($i = 0; $i <= count($array_recursos_financeiros)-1; $i++){
                                 if(in_array('edital público governo estadual', $array_recursos_financeiros[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
-                    >edital público governo estadual</br>
+                    >edital público (governo estadual)</br>
                     <input type="checkbox" name="recursos_origem[]" value="edital público municipal"
                         <?php 
                             for($i = 0; $i <= count($array_recursos_financeiros)-1; $i++){
                                 if(in_array('edital público municipal', $array_recursos_financeiros[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
-                    >edital público municipal</br>
+                    >edital público (governo municipal)</br>
                     <input type="checkbox" name="recursos_origem[]" value="empresas"
                         <?php 
                             for($i = 0; $i <= count($array_recursos_financeiros)-1; $i++){
@@ -600,7 +600,7 @@
             <!--Tabela Temas-->
 
             <h4>12. Quais são as áreas de atuação da sua Organização? </h4>
-            <h5>Escolha até 5 Temas dentro da sua área de atuação*:</h5>
+            <h5>Escolha até 5 temas dentro da sua área de atuação*:</h5>
             <div class="form-group" style="border: 1px solid #ddd">
             <div class="table-responsive">
             <table id="form1" required   name="table_temas"class="table table-hover col-sm-12" >
@@ -659,7 +659,7 @@
                         } ?>
                     ></td>
                     <td>Ciência e Tecnologia.</td>
-                    <td>Promoção do acesso a linguagens, equipamentos e/ou à produção de ciência e tecnologia por mulheres.</td>
+                    <td>Promoção do acesso a linguagens, equipamentos e/ou a produção de ciência e tecnologia por mulheres.</td>
                     <td class="temas_regioes" style="width:150px">
                         <input type="checkbox" name="temas_ciencia_tecnologia[ ]" value="Norte"
                         <?php 
@@ -772,7 +772,7 @@
                         } ?>
                     ></td>
                     <td>Empreendedorismo feminino e autonomia econômica.</td>
-                    <td>Ações de incentivo ao empreendedorismo feminino e à autonomia econômica, por meio de capacitação e/ou financiamento, tais como capacitações, cooperativismo, microcrédito, etc.</td>
+                    <td>Ações de incentivo ao empreendedorismo feminino e à autonomia econômica, por meio de capacitação e/ou financiamento, tais como cooperativismo, microcrédito, etc.</td>
                     <td class="temas_regioes"style="width:150px">
                         <input type="checkbox" name="temas_empreendedorismo_feminino[ ]" value="Norte"
                         <?php 
@@ -846,7 +846,7 @@
                         } ?>
                     ></td>
                     <td>Equidade e Condições de Trabalho.</td>
-                    <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas 
+                    <td>Oportunidades iguais para mulheres e homens no mercado de trabalho, divisão justa entre ambos os sexos, mesmas 
     possibilidades de desenvolvimento profissional e equipara çãosalarial;participação em cargos de liderança e conselho.</td>    
                     <td class="temas_regioes"style="width:150px">
                         <input type="checkbox" name="temas_equidade_trabalho[ ]" value="Norte"
@@ -922,7 +922,7 @@
                         } ?>
                     ></td>
                     <td>Indígenas.</td>
-                    <td>Ações destinadas à valorização das mulheres indígena; ao enfrentamento de seus problemas específicos, a geração de renda e ao emponderamento político.</td>
+                    <td>Ações destinadas à valorização das mulheres indígena; ao enfrentamento de seus problemas específicos, à geração de renda e ao emponderamento político.</td>
                     <td class="temas_regioes"style="width:150px">
                         <input type="checkbox" name="temas_indigenas[ ]" value="Norte"
                         <?php 
@@ -1072,7 +1072,7 @@
                         } ?>
                     ></td>
                     <td>Mídia e Comunicação.</td>
-                    <td>Promoção do acesso de mulheres aos meios de comunicação pelo domínio de técnicas, equipamentos e linguagens; monitoramento da presença da mulher nas mídias e da cobertura de temas sobre as questões das mulheres.</td>
+                    <td>Promoção do acesso de mulheres aos meios de comunicação pelo domínio de técnicas, equipamentos e linguagens; monitoramento da presença da mulher nas mídias e da cobertura adequada de temas sobre as questões das mulheres.</td>
                     <td class="temas_regioes"style="width:150px">
                         <input type="checkbox" name="temas_midia_comunicacao[ ]" value="Norte"
                         <?php 
@@ -1110,9 +1110,9 @@
                         } ?>
                     ></td>
                     <td>Moradia.</td>
-                    <td>Ações que visam contribuir para o direito das mulheres à moradia e desenvolvimento de habilidades para a construção ou reformas de casas.</td>
+                    <td>Ações que visam contribuir para o direito das mulheres à moradia e ao desenvolvimento de habilidades para a construção ou reformas de casas.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_moradia[ ]" value="Norte"
+                        <input type="checkbox" name="temas_moradia[ ]" value="Norte" 
                         <?php 
                             if(in_array('Norte', $array_moradia)) : ?> checked="checked" <?php endif; 
                         ?>
@@ -1296,7 +1296,7 @@
 
 
 
-<h5> 12.1. Escolha no mínimo 1 e no máximo 3 subtemas dentro da sua área de atuação*</h5>
+<h5> 12.1. Escolha de (um) até (três) subtemas dentro da sua área de atuação*</h5>
  <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar vários subtemas.</em></h6>
 <div class="form-group">
 <label for="subtemas" for="f1-google-plus">Subtemas</label>
@@ -1366,7 +1366,7 @@
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Desenvolvimento e Programação', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
-            >Desenvolvimento e Programação</option>
+            >Desenvolvimento e programação</option>
             <option value="Ecofeminismo"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
@@ -1420,7 +1420,7 @@
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Inclusão Digital', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
-            >Inclusão Digital</option>
+            >Inclusão digital</option>
             <option value="Inserção de mulheres na política"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
@@ -1462,7 +1462,7 @@
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Mulheres no mundo da ciências', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
-            >Mulheres no mundo da ciências</option>
+            >Mulheres nas ciências e tecnologia</option>
             <option value="Obesidade infantil"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
@@ -1522,7 +1522,7 @@
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Redes Sociais', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
-            >Redes Sociais</option>
+            >Redes sociais</option>
             <option value="Refugiados"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
@@ -1566,7 +1566,7 @@
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Tecnologia social e/ou alternativas', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
-            >Tecnologia social e/ou alternativas</option>
+            >Tecnologias sociais e/ou alternativas</option>
             <option value="Tecnologia"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
@@ -1640,7 +1640,7 @@
                            
                     </select>
 
-                    <h4>15. Nomeie e descreva as iniciativas e/ou projetos da sua organização que trabalham com empoderamento das mulheres*?</h4>
+                    <h4>15. Nomeie e descreva as iniciativas e/ou projetos da sua organização que trabalham com empoderamento das mulheres.*</h4>
                  <h5>Iniciativa 1</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
@@ -1666,7 +1666,7 @@
                     <span id="contando3" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
 
-                <h4>16. Em quais estados sua iniciativa tem atuação direta*</h4>
+                <h4>16. Em quais Estados sua iniciativa tem atuação direta?*</h4>
                     <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
                     <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -1858,7 +1858,7 @@
                         for($i = 0; $i <= count($array_politicas_publicas)-1; $i++){
                             if(in_array('municipal', $array_politicas_publicas[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
-                    >municipal
+                    >Municipal
                     </label>
 
                     <label class="checkbox-inline">
@@ -1867,7 +1867,7 @@
                         for($i = 0; $i <= count($array_politicas_publicas)-1; $i++){
                             if(in_array('estadual', $array_politicas_publicas[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
-                    >estadual
+                    >Estadual/Distrital
                     </label>
                     <label class="checkbox-inline">
                         <input type="checkbox" name="politicas_publicas_lista[]" value="nacional" class="form-control-radio"
@@ -1875,7 +1875,7 @@
                         for($i = 0; $i <= count($array_politicas_publicas)-1; $i++){
                             if(in_array('nacional', $array_politicas_publicas[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
-                    >nacional
+                    >Nacional
                     </label>
                     <textarea name="organizaçāo_politica_publica" maxlength="500" onkeyup="caracterTextarea(this.value,500,'contando4')" placeholder="Descreva como se deu essa influência em políticas públicas (em 500 caracteres)"
 

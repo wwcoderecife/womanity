@@ -255,7 +255,7 @@
                                         <label>
                                             <input type="checkbox" name="carta_principios" data-error="Você deve marcar este campo!" value="1" required>
                                             <ul>
-                                                Li e concordo com a carta <a href = "#" id ="check1" data-toggle="modal" data-target="#login-modal"> de príncipios e critérios *</a> 
+                                                Li e concordo com a Carta <a href = "#" id ="check1" data-toggle="modal" data-target="#login-modal"> de Príncipios e ritérios *</a> 
                                                 <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" id= "login-modal">
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">

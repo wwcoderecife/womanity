@@ -3,7 +3,7 @@ function validateEmpty(fld) {
  var error = "";
   
     if (fld.value.length === 0) {
-        fld.style.background = '#D8BFD8'; 
+        fld.style.background = 'Yellow'; 
         //error = "Favor Preencher o campo "+ fld.id.focus(); +"\n"
     } else {
         fld.style.background = 'White';
