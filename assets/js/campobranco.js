@@ -1,9 +1,16 @@
 
+var FieldIDFocus = "";
+
 function validateEmpty(fld) {
  var error = "";
   
     if (fld.value.length === 0) {
-        fld.style.background = 'Red'; 
+        fld.style.background = '#D8BFD8';
+
+        if( FieldIDFocus == ""){
+          FieldIDFocus = fld;	
+        }
+         
         error = "Favor Preencher o campo "+fld.name +"\n";
     } else {
         fld.style.background = 'White';
@@ -36,7 +43,7 @@ var reason = "";
  	validateFormOnSubmit(document.getElementById("inputTel2"));
  	validateFormOnSubmit(document.getElementById("inputCel2"));
 
-
+    FieldIDFocus.focus();
  };		
 
 <!--
