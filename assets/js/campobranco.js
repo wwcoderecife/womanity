@@ -23,7 +23,7 @@ var reason = "";
     
     if(FieldFocus == ""){
       FieldName = fldname; 	
-      FieldFocus = "X";
+      FieldFocus += "X";
     };
           
     return false;
@@ -44,7 +44,7 @@ var reason = "";
  	validateFormOnSubmit(document.getElementById("inputTel2"));
  	validateFormOnSubmit(document.getElementById("inputCel2"));
 
-    if (FieldFocus != ""){
+    if(FieldFocus != ""){
       FieldName.focus();
     }
 
