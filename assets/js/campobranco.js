@@ -17,7 +17,7 @@ var reason = "";
   reason += validateEmpty(fldname);
       
   if (reason != "") {
-    alert("Campos ogrigatório não preenchido:\n" + reason);
+    //alert("Campos ogrigatório não preenchido:\n" + reason);
     return false;
   }
 
