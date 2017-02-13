@@ -1,4 +1,4 @@
-var FieldFocus;
+var FieldFocus = "";
 
 function validateEmpty(fld) {
  var error = "";
@@ -20,7 +20,8 @@ var reason = "";
   if (reason != "") {
     //alert("Campos ogrigatório não preenchido:\n" + reason);
     if( FieldFocus == ""){
-      FieldFocus = fldname;
+      fldname.focus();
+      FieldFocus = "X";
     }      
     return false;
   }
@@ -40,9 +41,6 @@ var reason = "";
  	validateFormOnSubmit(document.getElementById("inputTel2"));
  	validateFormOnSubmit(document.getElementById("inputCel2"));
 
-    if(FieldFocus != ""){
-       FieldFocus.focus();	
-    }
  };		
 
 <!--
