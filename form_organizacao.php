@@ -213,26 +213,26 @@
                 <h4>3. Qual o nome da sua organizaçāo?*</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Nome</label>
-                    <input type="text" name="nome" maxlength="50" class="f1-last-name form-control" required>
+                    <input type="text" name="nome" id="inputNomeOng" maxlength="50" class="f1-last-name form-control" required>
                 </div>
 
 
                 <h4>4. Qual a sigla da sua organizaçāo?</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Sigla</label>
-                    <input type="text" name="sigla" class="f1-last-name form-control">
+                    <input type="text" name="sigla" id="inputSiglaOng" class="f1-last-name form-control">
                 </div>
 
                 <h4>5. Qual o telefone da sua organizaçāo?*</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Telefone</label>
-                    <input type="tel" id="telefone" required name="organizacao-telefone" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd">
+                    <input type="tel" id="inputelOng" required name="organizacao-telefone" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd">
                 </div>
 
                 <h4>6. Qual o e-mail da sua organizaçāo?*</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Email</label>
-                    <input type="email" name="email" required class="f1-last-name form-control"class="f1-last-name form-control">
+                    <input type="email" name="email" id="inputEmailOng"required class="f1-last-name form-control"class="f1-last-name form-control">
                 </div>
 
                  <h4>7. Como a sua organizaçāo se identifica?*</h4>
@@ -827,7 +827,7 @@
 				<h5>Iniciativa 1</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
-                    <input type="text" name="organizacao-relaciona1" required  class="f1-last-name form-control">
+                    <input type="text" id="nome" name="organizacao-relaciona1" required  class="f1-last-name form-control">
                     <textarea name="sobre_iniciativas1" onkeyup="caracterTextarea(this.value,500,'contando1')" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong1" required  ></textarea>
                     <span id="contando1" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
@@ -853,7 +853,7 @@
                     <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
                     <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control"  required name="organizacao_estado[ ]" multiple >
+                    <select class="f1-last-name form-control"  id="estado_iniciativa" required name="organizacao_estado[ ]" multiple >
                         <div class="help-block with-errors"></div>
                         <option value="Acre">Acre</option>
                         <option value="Alagoas">Alagoas</option>
@@ -1085,7 +1085,7 @@
                 
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="button" class="btn btn-next">Próximo</button>
+                    <button type="button" class="btn btn-next" onclick=" return validacampobranco2();">Próximo</button>
                 </div>
 
 </fieldset>
