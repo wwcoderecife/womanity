@@ -37,11 +37,8 @@
 
             <h3>Cadastro do Ecossistema<br>Organizaçāo</h3>
             <p>Preencha os campos obrigatórios *</p>
-<<<<<<< Updated upstream
+
             <p>Lembre-se de preencher os campos obrigatórios em todas as etapas e clicar no botão ENVIAR na etapa 5, Pois o sistema não irá salvar informações parcialmente inseridas</p>
-=======
-             <p>Atenção: não é possível interromper o preenchimento e retomá-lo depois; é necessário completar todo o formulário antes de sair do sistema ou os dados não serão gravados.</p>
->>>>>>> Stashed changes
             <div class="f1-steps">
                 <div class="f1-progress">
                     <div class="f1-progress-line" data-now-value="8" data-number-of-steps="5" style="width: 8%;"></div>
