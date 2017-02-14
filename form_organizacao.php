@@ -810,7 +810,7 @@
                  </div>  --> 
 
 
-                 <h4>14. Qual o público diretamente atendido pela sua Organizaçāo?*</h4>
+                 <h4>14. Quais os principais públicos diretamente atendidos por sua organização? Selecione até três.*</h4>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -853,7 +853,7 @@
                     <span id="contando3" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
 
-                <h4>16. Em quais Estados sua iniciativa tem atuação direta?*</h4>
+                <h4>16. Em quais estados sua iniciativa tem atuação direta?*</h4>
                     <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
                     <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -905,15 +905,15 @@
 
                 <div class="form-group">
                    <label class="checkbox-inline">
-                        <input type="checkbox" name="politicas_publicas_lista[]" value="municipal" class="form-control-radio">Municipal
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="Municipal" class="form-control-radio">Municipal
                     </label>
 
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="politicas_publicas_lista[]" value="estadual" class="form-control-radio">Estadual/Distrital
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="Estadual" class="form-control-radio">Estadual/Distrital
                     </label>
 
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="politicas_publicas_lista[]" value="nacional" class="form-control-radio">Nacional
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="Nacional" class="form-control-radio">Nacional
                     </label>
                     <textarea name="organizaçāo_politica_publica" onkeyup="caracterTextarea(this.value,500,'contando4')"  maxlength="500" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres) detalhe aqui, caso necessário"
 
@@ -1207,7 +1207,7 @@
             </fieldset>
 
             <fieldset class="tab indicacao">
-                <h4>Indique até três iniciativas que na sua opinião devem participar do processo de mapeamento:</h4>
+                <h4>Indique pelo menos 1 (uma) e até 3 (três) organizações e/ ou iniciativas que na sua opinião também devem ser convidadas a preencher este questionário e participar do processo de mapeamento:</h4>
                 <h5>Organizaçāo 1</h5>
                  <h5>Nome</h5>
                 <div class="form-group">

@@ -1616,7 +1616,7 @@
                     
                 </div>
 
-                <h4>14. Qual o público diretamente atendido pela sua iniciativa?*</h4>
+                <h4>14. Quais os principais públicos diretamente atendidos por sua organização? Selecione até três.*</h4>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -1829,29 +1829,29 @@
 					<h5>16.1. Se sim, em quais níveis?</h5>
                 <div class="form-group">
                    <label class="checkbox-inline">
-                        <input type="checkbox" name="politicas_publicas_lista[]" value="municipal" class="form-control-radio"
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="Municipal" class="form-control-radio"
                          <?php 
                         for($i = 0; $i <= count($array_politicas_publicas)-1; $i++){
-                            if(in_array('municipal', $array_politicas_publicas[$i])) : ?> checked="checked" <?php endif; 
+                            if(in_array('Municipal', $array_politicas_publicas[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
-                        >municipal 
+                        >Municipal 
                     </label>
 
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="politicas_publicas_lista[]" value="estadual" class="form-control-radio"
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="Estadual" class="form-control-radio"
                         <?php 
                         for($i = 0; $i <= count($array_politicas_publicas)-1; $i++){
-                            if(in_array('estadual', $array_politicas_publicas[$i])) : ?> checked="checked" <?php endif; 
+                            if(in_array('Estadual', $array_politicas_publicas[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
-                        >estadual
+                        >Estadual/Distrital
                     </label>
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="politicas_publicas_lista[]" value="nacional" class="form-control-radio"
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="Nacional" class="form-control-radio"
                         <?php 
                         for($i = 0; $i <= count($array_politicas_publicas)-1; $i++){
-                            if(in_array('nacional', $array_politicas_publicas[$i])) : ?> checked="checked" <?php endif; 
+                            if(in_array('Nacional', $array_politicas_publicas[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
-                        >nacional
+                        >Nacional
                          
                     </label>
                     <textarea name="organizaçāo_politica_publica" onkeyup="caracterTextarea(this.value,500,'contando1')"  maxlength="500" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
@@ -2176,7 +2176,7 @@
             </fieldset>
 
             <fieldset class="tab indicacao">
-                <h4>Indique até três iniciativas que na sua opinião devem participar do processo de mapeamento:</h4>
+                <h4>Indique pelo menos 1 (uma) e até 3 (três) organizações e/ ou iniciativas que na sua opinião também devem ser convidadas a preencher este questionário e participar do processo de mapeamento:</h4>
                 <h5>Iniciativa 1</h5>
 
                 <h5>Nome*</h5>

@@ -810,7 +810,7 @@ s
 
 
 
-                <h5>14. Qual o público diretamente atendido pela sua iniciativa?*</h5>
+                <h5>14. Quais os principais públicos diretamente atendidos por sua organização? Selecione até três.*</h5>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -877,15 +877,15 @@ s
 
                 <div class="form-group">
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="politicas_publicas_lista[]" value="municipal" class="form-control-radio">municipal
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="Municipal" class="form-control-radio">Municipal
                     </label>
 
                      <label class="checkbox-inline">
-                        <input type="checkbox" name="politicas_publicas_lista[]" value="estadual" class="form-control-radio">estadual
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="Estadual" class="form-control-radio">Estadual/Distrital
                     </label>
 
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="politicas_publicas_lista[]" value="nacional" class="form-control-radio">nacional
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="Nacional" class="form-control-radio">Nacional
                     </label>
                     <textarea name="organizaçāo_politica_publica" maxlength="500" onkeyup="caracterTextarea(this.value,500,'contando1')"  placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
                     class="f1-about-yourself form-control" id="sobre_iniciativa">
@@ -1178,7 +1178,7 @@ s
             </fieldset>
 
             <fieldset class="tab indicacao">
-                <h4>Indique até três iniciativas que na sua opinião devem participar do processo de mapeamento:</h4>
+                <h4>Indique pelo menos 1 (uma) e até 3 (três) organizações e/ ou iniciativas que na sua opinião também devem ser convidadas a preencher este questionário e participar do processo de mapeamento:</h4>
                 <h5>Iniciativa 1</h5>
 
                 <h5>Nome</h5>
