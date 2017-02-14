@@ -2201,7 +2201,7 @@
                 <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" required  name="indica_telefone_1" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel3"
+                    <input type="tel" required onblur="ExitField('inputTel3','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" name="indica_telefone_1" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel3"
                     value="<?php echo $edit->getIndicaTelefone_1(); ?>" >
                 </div>
                
@@ -2222,7 +2222,7 @@
                  <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel"  name="indica_telefone_2" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel4"
+                    <input type="tel"  name="indica_telefone_2" onblur="ExitField('inputTel4','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel4"
                     value="<?php echo $edit->getIndicaTelefone_2(); ?>" >
                 </div>
               
@@ -2243,7 +2243,7 @@
                  <h5>Telefone*</h5>
                 <div class="form-group">
                      <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel"  name="indica_telefone_3" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel5"
+                    <input type="tel"  name="indica_telefone_3" onblur="ExitField('inputTel5','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" placeholder="Telefone" class="f1-last-name form-control phone_with_ddd" id="inputTel5"
                     value="<?php echo $edit->getIndicaTelefone_3(); ?>" >
                 </div>
                 <div class="f1-buttons">

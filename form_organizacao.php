@@ -344,13 +344,7 @@
                   </div>
 
                 <h4>11. Qual foi o orçamento bruto da sua organização? *</h4>
-                <h5>Não tenho orçamento</h5>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name"></label>
-                    <input type="checkbox" value="sim" name="nao_tem_orcamento[]" onclick="check_orcamento(); "> Não tenho Orçamento
-                    <input type="HIDDEN" id="nao_tenho_orcamento_input" name="justificativa_orcamento" class="f1-last-name form-control">
-                </div>
-
+                
                 <script type="text/javascript">
 
                 function check_orcamento(){
@@ -389,6 +383,13 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">2016</label>
                     <input type="text" id="orcamento_2016" name="orcamento_2016"  placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="organizacao_orcamento2016">
+                </div>
+
+                <h5>Não tenho orçamento</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name"></label>
+                    <input type="checkbox" value="sim" name="nao_tem_orcamento[]" onclick="check_orcamento(); "> Não tenho Orçamento
+                    <input type="HIDDEN" id="nao_tenho_orcamento_input" name="justificativa_orcamento" class="f1-last-name form-control">
                 </div>
 
                 
@@ -1220,7 +1221,7 @@
                 <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                <input type="tel" required  name="indica_telefone_1"  placeholder="Telefone (xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel3">
+                <input type="tel" required onblur="ExitField('inputTel3','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" name="indica_telefone_1"  placeholder="Telefone (xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel3">
                 </div>
                 <h5>Nome</h5>
                 <h5>Organizaçāo 2</h5>
@@ -1236,7 +1237,7 @@
                 <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_2" placeholder="Telefone (xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel4">
+                    <input type="tel" name="indica_telefone_2" onblur="ExitField('inputTel4','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" placeholder="Telefone (xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel4">
                 </div>
                 <h5>Nome</h5>
                 <h5>Organizaçāo 3</h5>
@@ -1252,7 +1253,7 @@
                 <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_3" placeholder="Telefone (xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel5">
+                    <input type="tel" name="indica_telefone_3" onblur="ExitField('inputTel5','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" placeholder="Telefone (xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel5">
                 </div>
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>

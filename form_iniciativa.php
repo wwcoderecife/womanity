@@ -1194,7 +1194,7 @@ s
                 <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" required  name="indica_telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel4" >
+                    <input type="tel" required  name="indica_telefone_1" onblur="ExitField('inputTel4','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel4" >
                 </div>
                
                 <h5>Iniciativa 2</h5>
@@ -1212,7 +1212,7 @@ s
                  <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_2" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel5" >
+                    <input type="tel" name="indica_telefone_2" onblur="ExitField('inputTel5','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel5" >
                 </div>
               
                 <h5>Iniciativa 3</h5>
@@ -1230,7 +1230,7 @@ s
                  <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="indica_telefone_3" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel6">
+                    <input type="tel" name="indica_telefone_3" placeholder="(xx) xxxx-xxxx" onblur="ExitField('inputTel6','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" class="f1-last-name form-control phone_with_ddd" id="inputTel6">
                 </div>
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
