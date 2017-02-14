@@ -434,7 +434,7 @@
             <!--Tabela Temas-->
 
             <h4>12. Quais são as áreas de atuação da sua Organização? </h4>
-			<h5>Escolha até 5 temas dentro da sua área de atuação*:</h5>
+			<h5>Escolha até 5 (cinco) temas dentro da sua área de atuação*:</h5>
 
             <div class="form-group" style="border: 1px solid #ddd">
             <div class="table-responsive">
@@ -710,7 +710,7 @@
 <!--subtemas-->
 
 
-<h5> 12.1. Escolha de (um) até (três) subtemas dentro da sua área de atuação*</h5>
+<h5> 12.1. Escolha de 1 (um) até 3 (três) subtemas dentro da sua área de atuação*</h5>
  
 <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar os subtemas.</em></h6>
 <div class="form-group">
@@ -726,7 +726,7 @@
             <option value="Consumo">Consumo</option>
             <option value="Cooperativismo">Cooperativismo</option>
             <option value="Dança">Dança</option>
-            <option value="Desenvolvimento e Programação">Desenvolvimento e programação</option>
+            <option value="Desenvolvimento e Programação">Desenvolvimento e programação (informática)</option>
             <option value="Ecofeminismo">Ecofeminismo</option>
             <option value="Economia criativa">Economia criativa</option>
             <option value="Educomunicação">Educomunicação</option>
@@ -735,24 +735,24 @@
             <option value="Finanças sociais">Finanças sociais</option>
             <option value="Fotografia">Fotografia</option>
             <option value="Incentivo à leitura">Incentivo à leitura</option>
-            <option value="Inclusão Digital">Inclusão digital</option>
+            <option value="Inclusão digital">Inclusão digital</option>
             <option value="Inserção de mulheres na política">Inserção de mulheres na política</option>
             <option value="Liderança">Liderança</option>
             <option value="Marketing">Marketing</option>
             <option value="Microcrédito">Microcrédito</option>
             <option value="Mobilização">Mobilização</option>
             <option value="Mudanças climáticas">Mudanças climáticas</option>
-            <option value="Mulheres no mundo da ciências">Mulheres nas ciências e tecnologia</option>
+            <option value="Mulheres nas ciências e tecnologia">Mulheres nas ciências e tecnologia</option>
             <option value="Obesidade infantil">Obesidade infantil</option>
-            <option value="Parto Humano">Parto Humano</option>
+            <option value="Parto Humanizado">Parto Humanizado</option>
             <option value="Paternidade">Paternidade</option>
             <option value="Pessoa com deficiência">Pessoa com deficiência</option>
             <option value="Povos tradicionais">Povos tradicionais</option>
             <option value="Preconceito e discriminação">Preconceito e discriminação</option>
             <option value="Promoção à cargos de liderança">Promoção à cargos de liderança</option>
             <option value="Questão presidiária">Questão presidiária</option>
-            <option value="Reciclagem e logísitca diversa">Reciclagem e logística reversa</option>
-            <option value="Redes Sociais">Redes sociais</option>
+            <option value="Reciclagem e logística reversa">Reciclagem e logística reversa</option>
+            <option value="Redes sociais">Redes sociais</option>
             <option value="Refugiados">Refugiados</option>
             <option value="Reparação-reconstrução">Reparação-reconstrução</option>
             <option value="Religiāo">Religiāo</option>

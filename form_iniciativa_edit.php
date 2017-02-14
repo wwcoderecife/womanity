@@ -508,19 +508,19 @@
                             for($i = 0; $i <= count($array_recursos_financeiros)-1; $i++){
                                 if(in_array('edital público governo federal', $array_recursos_financeiros[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
-                    >edital público governo federal</br>
+                    >edital público (governo federal)</br>
                     <input type="checkbox" name="recursos_origem[]" value="edital público governo estadual"
                         <?php 
                             for($i = 0; $i <= count($array_recursos_financeiros)-1; $i++){
                                 if(in_array('edital público governo estadual', $array_recursos_financeiros[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
-                    >edital público governo estadual</br>
+                    >edital público (governo estadual)</br>
                     <input type="checkbox" name="recursos_origem[]" value="edital público municipal"
                         <?php 
                             for($i = 0; $i <= count($array_recursos_financeiros)-1; $i++){
                                 if(in_array('edital público municipal', $array_recursos_financeiros[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
-                    >edital público municipal</br>
+                    >edital público (governo municipal)</br>
                     <input type="checkbox" name="recursos_origem[]" value="empresas"
                         <?php 
                             for($i = 0; $i <= count($array_recursos_financeiros)-1; $i++){
@@ -601,7 +601,7 @@
                    <!--Tabela Temas-->
 
         <h4>12. Quais são as áreas de atuação da sua Organização? </h4>
-            <h5>Escolha até 5 Temas dentro da sua área de atuação*:</h5>
+            <h5>Escolha até 5 (cinco) temas dentro da sua área de atuação*:</h5>
             <div class="form-group" style="border: 1px solid #ddd">
             <div class="table-responsive">
             <table id="form1" required   name="table_temas"class="table table-hover col-sm-12" >
@@ -773,7 +773,7 @@
                         } ?>
                     ></td>
                     <td>Empreendedorismo feminino e autonomia econômica.</td>
-                    <td>Ações de incentivo ao empreendedorismo feminino e à autonomia econômica, por meio de capacitação e/ou financiamento, tais como capacitações, cooperativismo, microcrédito, etc.</td>
+                    <td>Ações de incentivo ao empreendedorismo feminino e à autonomia econômica, por meio de capacitação e/ou financiamento, tais como cooperativismo, microcrédito, etc.</td>
                     <td class="temas_regioes"style="width:150px">
                         <input type="checkbox" name="temas_empreendedorismo_feminino[ ]" value="Norte"
                         <?php 
@@ -847,7 +847,7 @@
                         } ?>
                     ></td>
                     <td>Equidade e Condições de Trabalho.</td>
-                    <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas 
+                    <td>Oportunidades iguais para mulheres e homens no mercado de trabalho, divisão justa entre ambos os sexos, mesmas 
     possibilidades de desenvolvimento profissional e equipara çãosalarial;participação em cargos de liderança e conselho.</td>    
                     <td class="temas_regioes"style="width:150px">
                         <input type="checkbox" name="temas_equidade_trabalho[ ]" value="Norte"
@@ -923,7 +923,7 @@
                         } ?>
                     ></td>
                     <td>Indígenas.</td>
-                    <td>Ações destinadas à valorização das mulheres indígena; ao enfrentamento de seus problemas específicos, a geração de renda e ao emponderamento político.</td>
+                    <td>Ações destinadas à valorização das mulheres indígena; ao enfrentamento de seus problemas específicos, à geração de renda e ao emponderamento político.</td>
                     <td class="temas_regioes"style="width:150px">
                         <input type="checkbox" name="temas_indigenas[ ]" value="Norte"
                         <?php 
@@ -1073,7 +1073,7 @@
                         } ?>
                     ></td>
                     <td>Mídia e Comunicação.</td>
-                    <td>Promoção do acesso de mulheres aos meios de comunicação pelo domínio de técnicas, equipamentos e linguagens; monitoramento da presença da mulher nas mídias e da cobertura de temas sobre as questões das mulheres.</td>
+                    <td>Promoção do acesso de mulheres aos meios de comunicação pelo domínio de técnicas, equipamentos e linguagens; monitoramento da presença da mulher nas mídias e da cobertura adequada de temas sobre as questões das mulheres.</td>
                     <td class="temas_regioes"style="width:150px">
                         <input type="checkbox" name="temas_midia_comunicacao[ ]" value="Norte"
                         <?php 
@@ -1111,7 +1111,7 @@
                         } ?>
                     ></td>
                     <td>Moradia.</td>
-                    <td>Ações que visam contribuir para o direito das mulheres à moradia e desenvolvimento de habilidades para a construção ou reformas de casas.</td>
+                    <td>Ações que visam contribuir para o direito das mulheres à moradia e ao desenvolvimento de habilidades para a construção ou reformas de casas.</td>
                     <td class="temas_regioes"style="width:150px">
                         <input type="checkbox" name="temas_moradia[ ]" value="Norte"
                         <?php 
@@ -1294,7 +1294,7 @@
 
 
 
-<h5> 12.1. Escolha no mínimo 1 e no máximo 3 subtemas dentro da sua área de atuação*</h5>
+<h5> 12.1. Escolha de 1 (um) até 3 (três) subtemas dentro da sua área de atuação*</h5>
 <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar os subtemas.</em></h6>
 <div class="form-group">
 <!--<label for="subtemas" for="f1-google-plus">Subtemas</label>-->
@@ -1364,7 +1364,7 @@
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Desenvolvimento e Programação', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
-            >Desenvolvimento e Programação</option>
+            >Desenvolvimento e Programação (informática)</option>
             <option value="Ecofeminismo"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
@@ -1413,12 +1413,12 @@
                     if(in_array('Incentivo à leitura', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Incentivo à leitura</option>
-            <option value="Inclusão Digital"
+            <option value="Inclusão digital"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
-                    if(in_array('Inclusão Digital', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                    if(in_array('Inclusão digital', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
-            >Inclusão Digital</option>
+            >Inclusão digital</option>
             <option value="Inserção de mulheres na política"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
@@ -1455,24 +1455,24 @@
                     if(in_array('Mudanças climáticas', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Mudanças climáticas</option>
-            <option value="Mulheres no mundo da ciências"
+            <option value="Mulheres nas ciências e tecnologia"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
-                    if(in_array('Mulheres no mundo da ciências', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                    if(in_array('Mulheres nas ciências e tecnologia', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
-            >Mulheres no mundo da ciências</option>
+            >Mulheres nas ciências e tecnologia</option>
             <option value="Obesidade infantil"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Obesidade infantil', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Obesidade infantil</option>
-            <option value="Parto Humano"
+            <option value="Parto Humanizado"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
-                    if(in_array('Parto Humano', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                    if(in_array('Parto Humanizado', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
-            >Parto Humano</option>
+            >Parto Humanizado</option>
             <option value="Paternidade" 
             <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
@@ -1512,15 +1512,15 @@
              <option value="Reciclagem e logística reversa"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
-                    if(in_array('Reciclagem e logísitca diversa', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                    if(in_array('Reciclagem e logística reversa', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
-            >Reciclagem e logísitca diversa</option>
-            <option value="Redes Sociais"
+            >Reciclagem e logística reversa</option>
+            <option value="Redes sociais"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
-                    if(in_array('Redes Sociais', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                    if(in_array('Redes sociais', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
-            >Redes Sociais</option>
+            >Redes sociais</option>
             <option value="Refugiados"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
@@ -1559,12 +1559,12 @@
                     if(in_array('Teatro', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Teatro</option>
-            <option value="Tecnologia social e/ou alternativas"
+            <option value="Tecnologias sociais e/ou alternativas"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
-                    if(in_array('Tecnologia social e/ou alternativas', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                    if(in_array('Tecnologias sociais e/ou alternativas', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
-            >Tecnologia social e/ou alternativas</option>
+            >Tecnologias sociais e/ou alternativas</option>
             <option value="Tecnologia"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){

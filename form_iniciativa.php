@@ -414,9 +414,9 @@
                 <h5>11.1.1. Quais são as principais fontes de recursos para a realização dos projetos?</h5>
                 <div class="form-group">
                     <input type="checkbox" name="recursos_origem[]" value="doação pessoa física">doação pessoa física</br>
-                    <input type="checkbox" name="recursos_origem[]" value="edital público governo federal">edital público governo federal</br>
-                    <input type="checkbox" name="recursos_origem[]" value="edital público governo estadual">edital público governo estadual</br>
-                    <input type="checkbox" name="recursos_origem[]" value="edital público municipal">edital público municipal</br>
+                    <input type="checkbox" name="recursos_origem[]" value="edital público governo federal">edital público (governo federal)</br>
+                    <input type="checkbox" name="recursos_origem[]" value="edital público governo estadual">edital público (governo estadual)</br>
+                    <input type="checkbox" name="recursos_origem[]" value="edital público municipal">edital público (governo municipal)</br>
                     <input type="checkbox" name="recursos_origem[]" value="empresas">empresas</br>
                     <input type="checkbox" name="recursos_origem[]" value="endowment/fundo patrimonial">endowment/fundo patrimonial</br>
                     <input type="checkbox" name="recursos_origem[]" value="fomento à pesquisa">fomento à pesquisa</br>
@@ -437,7 +437,7 @@
                    <!--Tabela Temas-->
 
         <h5>12. Quais são as áreas de atuação da sua iniciativa?</h5>
-        <h5>Escolha até 5 Temas dentro da sua área de atuação*:</h5>
+        <h5>Escolha até 5 (cinco) temas dentro da sua área de atuação*:</h5>
         <div class="form-group" style="border: 1px solid #ddd">
         <div class="table-responsive">
         <table id="form1" name="table_temas"class="table table-hover col-sm-12">
@@ -507,7 +507,7 @@
                 <tr>
                     <td><input type="checkbox" name="temas[ ]"value="empreendedorismo_feminino_autonomia_economica"class="no-margin" onclick="verificar()"></td>
                     <td>Empreendedorismo feminino e autonomia econômica.</td>
-                    <td>Ações de incentivo ao empreendedorismo feminino e à autonomia econômica, por meio de capacitação e/ou financiamento, tais como capacitações, cooperativismo, microcrédito, etc.</td>
+                    <td>Ações de incentivo ao empreendedorismo feminino e à autonomia econômica, por meio de capacitação e/ou financiamento, tais como cooperativismo, microcrédito, etc.</td>
                     <td class="temas_regioes"style="width:150">
                         <input type="checkbox" name="temas_empreendedorismo_feminino[ ]" value="Norte">Norte<br>
                         <input type="checkbox" name="temas_empreendedorismo_feminino[ ]" value="Nordeste">Nordeste<br>
@@ -532,7 +532,7 @@
                 <tr>
                     <td><input type="checkbox" name="temas[ ]"value="equidade_Condições_trabalho"class="no-margin" onclick="verificar()"></td>
                     <td>Equidade e Condições de Trabalho.</td>
-                    <td>Oportunidades iguais para mulheres e homens, divisão justa entre ambos os sexos, mesmas 
+                    <td>Oportunidades iguais para mulheres e homens no mercado de trabalho, divisão justa entre ambos os sexos, mesmas 
     possibilidades de desenvolvimento profissional e equiparação salarial; participação em cargos de liderança e conselho.</td> 
                     <td class="temas_regioes"style="width:150">
                         <input type="checkbox" name="temas_equidade_trabalho[ ]" value="Norte">Norte<br>
@@ -558,7 +558,7 @@
                 <tr>
                     <td><input type="checkbox" name="temas[ ]"value="indigenas"class="no-margin" onclick="verificar()"></td>
                     <td>Indígenas.</td>
-                    <td>Ações destinadas à valorização das mulheres indígenas; ao enfrentamento de seus problemas específicos, a geração de renda e ao emponderamento político.</td>
+                    <td>Ações destinadas à valorização das mulheres indígenas; ao enfrentamento de seus problemas específicos, à geração de renda e ao emponderamento político.</td>
                     <td class="temas_regioes">
                         <input type="checkbox" name="temas_indigenas[ ]" value="Norte">Norte<br>
                         <input type="checkbox" name="temas_indigenas[ ]" value="Nordeste">Nordeste<br>
@@ -608,7 +608,7 @@
                 <tr>
                     <td><input type="checkbox" name="temas[ ]"value="midia_comunicacao"class="no-margin" onclick="verificar()"></td>
                     <td>Mídia e Comunicação.</td>
-                    <td>Promoção do acesso de mulheres aos meios de comunicação pelo domínio de técnicas, equipamentos e linguagens; monitoramento da presença da mulher nas mídias e da cobertura de temas sobre as questões das mulheres.</td>
+                    <td>Promoção do acesso de mulheres aos meios de comunicação pelo domínio de técnicas, equipamentos e linguagens; monitoramento da presença da mulher nas mídias e da cobertura adequada de temas sobre as questões das mulheres.</td>
                     <td class="temas_regioes"style="width:150">
                         <input type="checkbox" name="temas_midia_comunicacao[ ]" value="Norte">Norte<br>
                         <input type="checkbox" name="temas_midia_comunicacao[ ]" value="Nordeste">Nordeste<br>
@@ -621,7 +621,7 @@
                 <tr>
                     <td><input type="checkbox" name="temas[ ]"value="moradia"class="no-margin" onclick="verificar()"></td>
                     <td>Moradia.</td>
-                    <td>Ações que visam contribuir para o direito das mulheres à moradia e desenvolvimento de habilidades para a construção ou reformas de casas.</td>
+                    <td>Ações que visam contribuir para o direito das mulheres à moradia e ao desenvolvimento de habilidades para a construção ou reformas de casas.</td>
                     <td class="temas_regioes"style="width:150">
                         <input type="checkbox" name="temas_moradia[ ]" value="Norte">Norte<br>
                         <input type="checkbox" name="temas_moradia[ ]" value="Nordeste">Nordeste<br>
@@ -707,7 +707,7 @@ s
 
 
 
-<h5>12.1. Escolha no mínimo 1 e no máximo 3 subtemas dentro da sua área de atuação*</h5>
+<h5>12.1. Escolha de 1 (um) até 3 (três) subtemas dentro da sua área de atuação*</h5>
 <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar os subtemas.</em></h6>
 <div class="form-group">
 <!--<label for="subtemas" for="f1-google-plus">Subtemas</label>-->
@@ -722,7 +722,7 @@ s
             <option value="Consumo">Consumo</option>
             <option value="Cooperativismo">Cooperativismo</option>
             <option value="Dança">Dança</option>
-            <option value="Desenvolvimento e Programação">Desenvolvimento e Programação</option>
+            <option value="Desenvolvimento e Programação">Desenvolvimento e Programação (informática)</option>
             <option value="Ecofeminismo">Ecofeminismo</option>
             <option value="Economia criativa">Economia criativa</option>
             <option value="Educomunicação">Educomunicação</option>
@@ -731,31 +731,31 @@ s
             <option value="Finanças sociais">Finanças sociais</option>
             <option value="Fotografia">Fotografia</option>
             <option value="Incentivo à leitura">Incentivo à leitura</option>
-            <option value="Inclusão Digital">Inclusão Digital</option>
+            <option value="Inclusão digital">Inclusão digital</option>
             <option value="Inserção de mulheres na política">Inserção de mulheres na política</option>
             <option value="Liderança">Liderança</option>
             <option value="Marketing">Marketing</option>
             <option value="Microcrédito">Microcrédito</option>
             <option value="Mobilização">Mobilização</option>
             <option value="Mudanças climáticas">Mudanças climáticas</option>
-            <option value="Mulheres no mundo da ciências">Mulheres no mundo da ciências</option>
+            <option value="Mulheres nas ciências e tecnologia">Mulheres nas ciências e tecnologia</option>
             <option value="Obesidade infantil">Obesidade infantil</option>
-            <option value="Parto Humano">Parto Humano</option>
+            <option value="Parto Humanizado">Parto Humanizado</option>
             <option value="Paternidade">Paternidade</option>
             <option value="Pessoa com deficiência">Pessoa com deficiência</option>
             <option value="Povos tradicionais">Povos tradicionais</option>
             <option value="Preconceito e discriminação">Preconceito e discriminação</option>
             <option value="Promoção à cargos de liderança">Promoção à cargos de liderança</option>
             <option value="Questão presidiária">Questão presidiária</option>
-            <option value="Reciclagem e logísitca diversa">Reciclagem e logística reversa</option>
-            <option value="Redes Sociais">Redes Sociais</option>
+            <option value="Reciclagem e logística reversa">Reciclagem e logística reversa</option>
+            <option value="Redes sociais">Redes sociais</option>
             <option value="Refugiados">Refugiados</option>
             <option value="Reparação-reconstrução">Reparação-reconstrução</option>
             <option value="Religiāo">Religiāo</option>
             <option value="Saúde sexual e reprodutiva">Saúde sexual e reprodutiva</option>
             <option value="Sustentabilidade">Sustentabilidade</option>
             <option value="Teatro">Teatro</option>
-            <option value="Tecnologia social e/ou alternativas">Tecnologia social e/ou alternativas</option>
+            <option value="Tecnologia social e/ou alternativas">Tecnologias sociais e/ou alternativas</option>
             <option value="Tecnologia">Tecnologia</option>
             <option value="Trabalho digno">Trabalho digno</option>
             <option value="Tráfico de pessoas">Tráfico de pessoas</option>

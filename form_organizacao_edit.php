@@ -600,7 +600,7 @@
             <!--Tabela Temas-->
 
             <h4>12. Quais são as áreas de atuação da sua Organização? </h4>
-            <h5>Escolha até 5 temas dentro da sua área de atuação*:</h5>
+            <h5>Escolha até 5 (cinco) temas dentro da sua área de atuação*:</h5>
             <div class="form-group" style="border: 1px solid #ddd">
             <div class="table-responsive">
             <table id="form1" required   name="table_temas"class="table table-hover col-sm-12" >
@@ -1296,7 +1296,7 @@
 
 
 
-<h5> 12.1. Escolha de (um) até (três) subtemas dentro da sua área de atuação*</h5>
+<h5> 12.1. Escolha de 1 (um) até 3 (três) subtemas dentro da sua área de atuação*</h5>
  <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar vários subtemas.</em></h6>
 <div class="form-group">
 <label for="subtemas" for="f1-google-plus">Subtemas</label>
@@ -1366,7 +1366,7 @@
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Desenvolvimento e Programação', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
-            >Desenvolvimento e programação</option>
+            >Desenvolvimento e programação (informática)</option>
             <option value="Ecofeminismo"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
@@ -1415,10 +1415,10 @@
                     if(in_array('Incentivo à leitura', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Incentivo à leitura</option>
-            <option value="Inclusão Digital"
+            <option value="Inclusão digital"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
-                    if(in_array('Inclusão Digital', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                    if(in_array('Inclusão digital', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Inclusão digital</option>
             <option value="Inserção de mulheres na política"
@@ -1457,10 +1457,10 @@
                     if(in_array('Mudanças climáticas', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Mudanças climáticas</option>
-            <option value="Mulheres no mundo da ciências"
+            <option value="Mulheres nas ciências e tecnologia"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
-                    if(in_array('Mulheres no mundo da ciências', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                    if(in_array('Mulheres nas ciências e tecnologia', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Mulheres nas ciências e tecnologia</option>
             <option value="Obesidade infantil"
@@ -1469,12 +1469,12 @@
                     if(in_array('Obesidade infantil', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Obesidade infantil</option>
-            <option value="Parto Humano"
+            <option value="Parto Humanizado"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
-                    if(in_array('Parto Humano', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                    if(in_array('Parto Humanizado', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
-            >Parto Humano</option>
+            >Parto Humanizado</option>
             <option value="Paternidade" 
             <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
@@ -1514,13 +1514,13 @@
              <option value="Reciclagem e logística reversa"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
-                    if(in_array('Reciclagem e logísitca diversa', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                    if(in_array('Reciclagem e logística reversa', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Reciclagem e logística reversa</option>
-            <option value="Redes Sociais"
+            <option value="Redes sociais"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
-                    if(in_array('Redes Sociais', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                    if(in_array('Redes sociais', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Redes sociais</option>
             <option value="Refugiados"
@@ -1561,10 +1561,10 @@
                     if(in_array('Teatro', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Teatro</option>
-            <option value="Tecnologia social e/ou alternativas"
+            <option value="Tecnologias sociais e/ou alternativas"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
-                    if(in_array('Tecnologia social e/ou alternativas', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                    if(in_array('Tecnologias sociais e/ou alternativas', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Tecnologias sociais e/ou alternativas</option>
             <option value="Tecnologia"
