@@ -275,8 +275,8 @@
 
                 <h4>5. Informe o telefone da sua iniciativa*</h4>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-repeat-password">Telefone</label>
-                    <input type="text" required  name="organizacao-telefone" value="<?php echo $edit->getTelefone() ?>"  placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd" id="inputTel3">
+                    <label class="sr-only">Telefone</label>
+                    <input type="text" onblur="ExitField('inputTel3','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" required  name="organizacao-telefone" value="<?php echo $edit->getTelefone() ?>"  placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd" id="inputTel3">
                     
                 </div>
 

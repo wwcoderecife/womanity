@@ -288,8 +288,8 @@
 
                 <h4>5. Qual o telefone da sua organizaçāo?*</h4>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-repeat-password">Telefone da Organizaçāo</label>
-                    <input type="tel" required  id="telefone" name="organizacao-telefone" value="<?php echo $edit->getTelefone() ?>" placeholder="(xx) xxxxx-xxxx"class="f1-last-name form-control phone_with_ddd">
+                    <label class="sr-only" >Telefone da Organizaçāo</label>
+                    <input type="tel" required  onblur="ExitField('inputelOng','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" id="inputelOng" name="organizacao-telefone" value="<?php echo $edit->getTelefone() ?>" placeholder="(xx) xxxxx-xxxx"class="f1-last-name form-control phone_with_ddd">
                 </div>
 
                 <h4>6. Qual o e-mail da sua organizaçāo?*</h4>

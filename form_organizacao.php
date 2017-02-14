@@ -226,8 +226,8 @@
 
                 <h4>5. Qual o telefone da sua organizaçāo?*</h4>
                 <div class="form-group">
-                    <label class="sr-only" for="f1-repeat-password">Telefone</label>
-                    <input type="tel" id="inputelOng" required name="organizacao-telefone" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd">
+                    <label class="sr-only">Telefone</label>
+                    <input type="tel" onblur="ExitField('inputelOng','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" id="inputelOng" required name="organizacao-telefone" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd">
                 </div>
 
                 <h4>6. Qual o e-mail da sua organizaçāo?*</h4>
