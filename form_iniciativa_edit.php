@@ -2115,7 +2115,7 @@
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número*</label>
-                    <input type="number" required min="1" value="<?php echo $edit->getNumero(); ?>" name="numero" placeholder="Número...*"class="f1-last-name form-control" >
+                    <input type="text" required min="1" value="<?php echo $edit->getNumero(); ?>" name="numero" placeholder="Número...*"class="f1-last-name form-control" >
                         
                 </div>
                 <h5>Complemento</h5>

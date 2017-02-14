@@ -417,7 +417,7 @@
                     <input type="checkbox" name="recursos_origem[]" value="institutos ou fundações empresariais">institutos ou fundações empresariais</br>
                     <input type="checkbox" name="recursos_origem[]" value="investimento direto/patrocínio">investimento direto/patrocínio</br>
                     <input type="checkbox" name="recursos_origem[]" value="investimento de impacto">investimento de impacto</br>
-                    <input type="checkbox" name="recursos_origem[]" value="leis de incentivo">leis de incentivo<br>
+                    <input type="checkbox" name="recursos_origem[]" value="leis de incentivo">leis de incentivo><br>
                     <input type="checkbox" name="recursos_origem[]" value="organizações do sistema ONU">organizações do sistema ONU<br>
                     <input type="checkbox" name="recursos_origem[]" value="organizações não governamentais brasileiras ou internacionais">organizações não governamentais brasileiras ou internacionais<br>
                     <input type="checkbox" name="recursos_origem[]" value="subvenções públicas ">subvenções públicas<br>
@@ -808,7 +808,7 @@
                  </div>  --> 
 
 
-                 <h4>14. Quais os principais públicos diretamente atendidos por sua organização?<!--Selecione até três.-->*</h4>
+                 <h4>14. Quais os principais públicos diretamente atendidos por sua organização? Selecione até três.*</h4>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -1138,7 +1138,7 @@
                 <h5>Número*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número</label>
-                    <input type="number" name="numero" min="1" placeholder="Número...*" class="f1-last-name form-control"required>
+                    <input type="text" name="numero" min="1" placeholder="Número...*" class="f1-last-name form-control"required>
                 </div>
                 <h5>Complemento</h5>
                 <div class="form-group">
@@ -1226,7 +1226,7 @@
                 <h5>Organizaçāo 2</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                <input type="text" name="indica_nome_2" placeholder="Nome" class="f1-last-name form-control" id="nomeIndica1">
+                <input type="text" name="indica_nome_2" placeholder="Nome" class="f1-last-name form-control" id="nomeIndica2">
                 </div>
                 <h5>E-mail</h5>
                 <div class="form-group">
