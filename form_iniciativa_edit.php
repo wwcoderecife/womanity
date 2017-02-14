@@ -562,7 +562,7 @@
                             for($i = 0; $i <= count($array_recursos_financeiros)-1; $i++){
                                 if(in_array('leis de incentivo', $array_recursos_financeiros[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
-                    >leis de incentivo><br>
+                    >leis de incentivo<br>
                     <input type="checkbox" name="recursos_origem[]" value="organizações do sistema ONU"
                          <?php 
                             for($i = 0; $i <= count($array_recursos_financeiros)-1; $i++){

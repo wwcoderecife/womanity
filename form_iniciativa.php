@@ -421,7 +421,7 @@
                     <input type="checkbox" name="recursos_origem[]" value="institutos ou fundações empresariais">institutos ou fundações empresariais</br>
                     <input type="checkbox" name="recursos_origem[]" value="investimento direto/patrocínio">investimento direto/patrocínio</br>
                     <input type="checkbox" name="recursos_origem[]" value="investimento de impacto">investimento de impacto</br>
-                    <input type="checkbox" name="recursos_origem[]" value="leis de incentivo">leis de incentivo><br>
+                    <input type="checkbox" name="recursos_origem[]" value="leis de incentivo">leis de incentivo<br>
                     <input type="checkbox" name="recursos_origem[]" value="organizações do sistema ONU">organizações do sistema ONU<br>
                     <input type="checkbox" name="recursos_origem[]" value="organizações não governamentais brasileiras ou internacionais">organizações não governamentais brasileiras ou internacionais<br>
                     <input type="checkbox" name="recursos_origem[]" value="subvenções públicas ">subvenções públicas<br>
