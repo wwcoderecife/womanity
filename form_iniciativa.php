@@ -809,7 +809,7 @@ s
 
 
 
-                <h5>14. Qual o público diretamente atendido pela sua iniciativa?*</h5>
+                <h5>14. Quais os principais públicos diretamente atendidos por sua iniciativa?<!--Selecione até três.-->*</h5>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>

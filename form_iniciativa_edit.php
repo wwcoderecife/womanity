@@ -1622,7 +1622,7 @@
                     
                 </div>
 
-                <h4>14. Quais os principais públicos diretamente atendidos por sua organização? Selecione até três.*</h4>
+                <h4>14. Quais os principais públicos diretamente atendidos por sua iniciativa?<!--Selecione até três.-->*</h4>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
