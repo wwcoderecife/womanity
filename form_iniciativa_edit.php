@@ -1328,7 +1328,7 @@
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
                     if(in_array('Economia Solidária', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
-            >Economia Solidária</option>
+            >Economia solidária</option>
             <option value="Cadeia produtiva responsável"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){

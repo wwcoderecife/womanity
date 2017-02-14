@@ -714,7 +714,7 @@ s
             <option value="Advocacy">Advocacy</option>
             <option value="Água e saneamento básico">Água e saneamento básico</option>
             <option value="Artes plásticas">Artes plásticas</option>
-            <option value="Economia Solidária">Economia Solidária</option>
+            <option value="Economia Solidária">Economia solidária</option>
             <option value="Cadeia produtiva responsável">Cadeia produtiva responsável</option>
             <option value="Cinema">Cinema</option>
             <option value="Conselhos e outras instâncias">Conselhos e outras instâncias</option>
