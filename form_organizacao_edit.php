@@ -1325,6 +1325,12 @@
                     if(in_array('Artes plásticas', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
                 } ?>
             >Artes plásticas</option>
+            <option value="Economia Solidária"
+             <?php 
+                for($i = 0; $i <= count($array_subtema)-1; $i++){
+                    if(in_array('Economia Solidária', $array_subtema[$i])) : ?> selected='selected' <?php endif; 
+                } ?>
+            >Economia solidária</option>
             <option value="Cadeia produtiva responsável"
              <?php 
                 for($i = 0; $i <= count($array_subtema)-1; $i++){
