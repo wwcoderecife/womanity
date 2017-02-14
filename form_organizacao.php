@@ -1138,7 +1138,7 @@
                 <h5>Número*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número</label>
-                    <input type="text" name="numero" min="1" placeholder="Número...*" class="f1-last-name form-control"required>
+                    <input type="text" name="numero"  placeholder="Número...*" class="f1-last-name form-control"required>
                 </div>
                 <h5>Complemento</h5>
                 <div class="form-group">
