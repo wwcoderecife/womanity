@@ -32,11 +32,9 @@
 
     		<h3>Cadastro UNA Ecossistema<br>Iniciativa</h3>
     		<p>Preencha os campos obrigatórios*</p>
-<<<<<<< Updated upstream
+
             <p>Lembre-se de preencher os campos obrigatórios em todas as etapas e clicar no botão ENVIAR na etapa 5, Pois o sistema não irá salvar informações parcialmente inseridas</p>
-=======
-            <p>Atenção: não é possível interromper o preenchimento e retomá-lo depois; é necessário completar todo o formulário antes de sair do sistema ou os dados não serão gravados.</p>
->>>>>>> Stashed changes
+
     		<div class="f1-steps">
     			<div class="f1-progress">
     			    <div class="f1-progress-line" data-now-value="8" data-number-of-steps="5" style="width: 8%;"></div>
@@ -810,7 +808,7 @@ s
 
 
 
-                <h5>14. Quais os principais públicos diretamente atendidos por sua organização? Selecione até três.*</h5>
+                <h5>14. Qual o público diretamente atendido pela sua iniciativa?*</h5>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -877,15 +875,15 @@ s
 
                 <div class="form-group">
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="politicas_publicas_lista[]" value="Municipal" class="form-control-radio">Municipal
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="municipal" class="form-control-radio">municipal
                     </label>
 
                      <label class="checkbox-inline">
-                        <input type="checkbox" name="politicas_publicas_lista[]" value="Estadual" class="form-control-radio">Estadual/Distrital
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="estadual" class="form-control-radio">estadual
                     </label>
 
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="politicas_publicas_lista[]" value="Nacional" class="form-control-radio">Nacional
+                        <input type="checkbox" name="politicas_publicas_lista[]" value="nacional" class="form-control-radio">nacional
                     </label>
                     <textarea name="organizaçāo_politica_publica" maxlength="500" onkeyup="caracterTextarea(this.value,500,'contando1')"  placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres)"
                     class="f1-about-yourself form-control" id="sobre_iniciativa">
@@ -1178,7 +1176,7 @@ s
             </fieldset>
 
             <fieldset class="tab indicacao">
-                <h4>Indique pelo menos 1 (uma) e até 3 (três) organizações e/ ou iniciativas que na sua opinião também devem ser convidadas a preencher este questionário e participar do processo de mapeamento:</h4>
+                <h4>Indique até três iniciativas que na sua opinião devem participar do processo de mapeamento:</h4>
                 <h5>Iniciativa 1</h5>
 
                 <h5>Nome</h5>
