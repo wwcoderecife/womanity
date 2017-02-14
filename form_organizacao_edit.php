@@ -2203,13 +2203,13 @@ s
                 <h5>Iniciativa 1</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                    <input type="text" required name="indica_nome_1" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name"
+                    <input type="text" required name="indica_nome_1" placeholder="Nome" class="f1-last-name form-control" id="nomeIndica1"
                     value="<?php echo (explode("_1",$edit->getIndicaNome_1())[0]); ?>" >
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                <input type="email" required name="indica_email_1" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name"
+                <input type="email" required name="indica_email_1" placeholder="E-mail" class="f1-last-name form-control" id="emailIndica1"
                 value="<?php echo $edit->getIndicaEmail_1(); ?>" >
                     
                 </div>
@@ -2223,13 +2223,13 @@ s
                 <h5>Iniciativa 2</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                <input type="text" name="indica_nome_2" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name"
+                <input type="text" name="indica_nome_2" placeholder="Nome" class="f1-last-name form-control" id="nomeIndica2"
                  value="<?php echo (explode("_2",$edit->getIndicaNome_2())[0]); ?>" >
                 </div>
 
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                <input type="email" name="indica_email_2" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name"
+                <input type="email" name="indica_email_2" placeholder="E-mail" class="f1-last-name form-control" id="emailIndica2"
                 value="<?php echo $edit->getIndicaEmail_2(); ?>" >                    
                 </div>
                 <div class="form-group">
@@ -2240,12 +2240,12 @@ s
                 <h5>Iniciativa 3</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Nome</label>
-                <input type="text" name="indica_nome_3" placeholder="Nome" class="f1-last-name form-control" id="f1-last-name"
+                <input type="text" name="indica_nome_3" placeholder="Nome" class="f1-last-name form-control" id="nomeIndica3"
                 value="<?php echo (explode("_3",$edit->getIndicaNome_3())[0]); ?>" >
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="indica_email_3" placeholder="E-mail" class="f1-last-name form-control" id="f1-last-name"
+                    <input type="email" name="indica_email_3" placeholder="E-mail" class="f1-last-name form-control" id="emailIndica3"
                     value="<?php echo $edit->getIndicaEmail_3(); ?>" >   
                 </div>
                 <div class="form-group">
