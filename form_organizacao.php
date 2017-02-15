@@ -35,10 +35,10 @@
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
         <form role="form" name="form" action="classes/prepare_cadastro.php" method="post" class="f1 form-ong">
 
-            <h3>Cadastro no Ecossistema<br>Organizaçāo</h3>
+            <h3>Cadastro do Ecossistema<br>Organizaçāo</h3>
             <p>Preencha os campos obrigatórios *</p>
 
-            <p>Lembre-se de preencher os campos obrigatórios em todas as etapas e clicar no botão ENVIAR na etapa 5. O sistema não irá salvar os dados parcialmente informados.</p>
+            <p>Lembre-se de preencher os campos obrigatórios em todas as etapas e clicar no botão ENVIAR na etapa 5, Pois o sistema não irá salvar informações parcialmente inseridas</p>
             <div class="f1-steps">
                 <div class="f1-progress">
                     <div class="f1-progress-line" data-now-value="8" data-number-of-steps="5" style="width: 8%;"></div>
@@ -316,8 +316,8 @@
                         <option value="11-20">11-20</option>
                         <option value="21-50">21-50</option>
                         <option value="51-100">51-100</option>
-                        <option value="101-250">101-250</option>
-                        <option value="251-500">251-500</option>
+                        <option value="101-500">101-500</option>
+                        <option value="251-1000">251-1000</option>
                         <option value="501-1000">501-1000</option>
                         <option value="1001+">1001+</option>     
                     </select>
@@ -329,10 +329,9 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" required  id="pessoas_beneficiadas" name="pessoas_beneficiadas">
                         <option value=""></option>
-                        <option value="até 50">até 50</option>
+                        <option value="até 50">1-5</option>
                         <option value="51-250">51-250</option>
                         <option value="251-500">251-500</option>
-                        <option value="501-1000">501-1000</option>
                         <option value="1001-2500">1001-2500</option>
                         <option value="2501-5000">2501-5000</option>
                         <option value="5001-10000">5001-10000</option>
@@ -808,28 +807,30 @@
                  <input type="checkbox" name="funcao[ ]" value="privado" style="margin-left: 20px"class="form-control-radio">privado
                  <input type="checkbox" name="funcao[ ]" value="social"  style="margin-left: 20px"class="form-control-radio">social⁠⁠⁠⁠   
                  </div>  --> 
-
-               
-                 <h4>14. Quais os principais públicos diretamente atendidos por sua organização? Selecione até três.*</h4>
+<!--
+         <!--      
+                 <h4>14 Quais os principais públicos diretamente atendidos por sua organização? Selecione até três.*</h4>
 
              <tbody>
 
                    <tr>
-                    <!--<td><input type="checkbox" name="publico_alvo[ ]" value="Empresas" class="no-margin" onclick="verificar2()"></td>-->
-                    <!--<td>Empresas.</td><br>-->
+                    <td><input type="checkbox" name="publico_alvo[ ]" value="Empresas" class="no-margin" onclick="verificar2()"></td>
+                    <td>Empresas.</td><br>
                     <td class="publico_alvo" style="width:150px" >
                         <input type="checkbox" name="publico_alvo[ ]" value="Empresas" onclick="verificar2()">Empresas<br>
                         <input type="checkbox" name="publico_alvo[ ]" value="Organizações Sociais" onclick="verificar2()" >Organizações Sociais<br>
                         <input type="checkbox" name="publico_alvo[ ]" value="Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher" onclick="verificar2()">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher<br>
                         <input type="checkbox" name="publico_alvo[ ]" value="Movimentos, coletivos, redes, fóruns" onclick="verificar2()">Movimentos, coletivos, redes, fóruns<br>
                         <input type="checkbox" name="publico_alvo[ ]" value="Adolescentes e jovens" onclick="verificar2()">Adolescentes e jovens<br>
-                        <input type="checkbox" name="publico_alvo[ ]" value="Crianças" onclick="verificar2()">Crianças<br>
                         <input type="checkbox" name="publico_alvo[ ]" value="Homens" onclick="verificar2()">Homens<br>
                         <input type="checkbox" name="publico_alvo[ ]" value="Mulheres" onclick="verificar2()">Mulheres<br>
                     </td> 
 
-            </tbody>        
+            </tbody>   
 
+
+       -->          
+             <!--
                           <script>
                             var CheckMAX = 3;
 
@@ -863,12 +864,16 @@
 
            </script>
 
-                <!--
-                 <h4>14. Quais os principais públicos diretamente atendidos por sua organização? Selecione até três.*</h4>
+
+       -->
+
+                 <h4>14.Quais os principais públicos diretamente atendidos por sua organização? Selecione até três.*</h4>
+                 <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar os subtemas.</em></h6>
+
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control"  required id="publico_alvo" name="publico_alvo" >
+                    <select class="f1-last-name form-control" class="selectpicker" data-style="default" multiple required id="publico_alvo" name="publico_alvo" >
                         <option value=""></option>
                         <option value="Empresas">Empresas</option>
                         <option value="Organizações Sociais">Organizações Sociais</option>
@@ -880,7 +885,26 @@
                            
                     </select>
 
-                -->
+                
+<script>
+     $(document).ready(function() {
+
+          var last_valid_selection = null;
+
+          $('#publico_alvo').change(function(event) {
+
+            if ($(this).val().length > 3) {
+
+              $(this).val(last_valid_selection);
+            } else {
+              last_valid_selection = $(this).val();
+            }
+          });
+        });
+    </script>
+
+
+
 
                  <h4>15. Nomeie e descreva as iniciativas e/ou projetos da sua organização que trabalham com empoderamento das mulheres.*</h4>
                  
@@ -990,9 +1014,9 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim</option>
                     </select>
-                    <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando7')" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Quais foram os resultados comprovados alcançados até hoje? Limite de 500 caracteres..
+                    <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando')" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
                         "style='display: none'/></textarea>
-                        <span id="contando7" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                        <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -1039,7 +1063,7 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
                     </select>
-                    <textarea type="text"  onkeyup="caracterTextarea(this.value,500,'contando5')" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva aqui. Limite de 500 caracteres...
+                    <textarea type="text"  onkeyup="caracterTextarea(this.value,500,'contando5')" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 "style='display: none'/></textarea>
 <span id="contando5" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                     <script>
@@ -1079,7 +1103,7 @@
 
       <!-- 29 Organizacao-->
 
-<h4>20. A sua organizaçāo recebeu premiações, certificações, etc.?*</h4>
+<h4>20. A sua organizaçāo recebeu premiações, certificações etc.?*</h4>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -1089,7 +1113,7 @@
                         <option value="1">Sim, quais?</option> 
                         
                     </select>
-                    <textarea type="text" id="inputPremiacaoOng" onkeyup="caracterTextarea(this.value,500,'contando6')" name="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva aqui. Limite de 500 caracteres...
+                    <textarea type="text" id="inputPremiacaoOng" onkeyup="caracterTextarea(this.value,500,'contando6')" name="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 "style='display: none'/></textarea>
 <span id="contando6" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                     <script>

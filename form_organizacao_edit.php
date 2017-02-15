@@ -1628,7 +1628,7 @@
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" required id="publico_alvo" name="publico_alvo" >
+                    <select class="f1-last-name form-control" class="selectpicker" required id="publico_alvo" data-style="default" multiple name="publico_alvo" >
                         <option value=""></option>
                         <option value="Empresas" <?=($edit->getPublicoAtendido() == 'Empresas')?'selected':''?>
                             >Empresas</option>
