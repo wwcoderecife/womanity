@@ -35,10 +35,10 @@
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
         <form role="form" name="form" action="classes/prepare_cadastro.php" method="post" class="f1 form-ong">
 
-            <h3>Cadastro do Ecossistema<br>Organizaçāo</h3>
+            <h3>Cadastro no Ecossistema<br>Organizaçāo</h3>
             <p>Preencha os campos obrigatórios *</p>
 
-            <p>Lembre-se de preencher os campos obrigatórios em todas as etapas e clicar no botão ENVIAR na etapa 5, Pois o sistema não irá salvar informações parcialmente inseridas</p>
+            <p>Lembre-se de preencher os campos obrigatórios em todas as etapas e clicar no botão ENVIAR na etapa 5. O sistema não irá salvar os dados parcialmente informados.</p>
             <div class="f1-steps">
                 <div class="f1-progress">
                     <div class="f1-progress-line" data-now-value="8" data-number-of-steps="5" style="width: 8%;"></div>
@@ -316,8 +316,8 @@
                         <option value="11-20">11-20</option>
                         <option value="21-50">21-50</option>
                         <option value="51-100">51-100</option>
-                        <option value="101-500">101-500</option>
-                        <option value="251-1000">251-1000</option>
+                        <option value="101-250">101-250</option>
+                        <option value="251-500">251-500</option>
                         <option value="501-1000">501-1000</option>
                         <option value="1001+">1001+</option>     
                     </select>

@@ -88,7 +88,7 @@
     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
         <form role="form" action="classes/prepare_cadastro.php" method="post" class="f1 form-ong">
             <input type="hidden" value="editar" name="form_type" />
-            <h3>Cadastro do Ecossistema<br>Organizaçāo</h3>
+            <h3>Edição do Cadastro<br>Organizaçāo</h3>
             <p>Preencha os campos obrigatórios *</p>
             <div class="f1-steps">
                 <div class="f1-progress">
@@ -399,8 +399,8 @@
                         <option value="11-20" <?=($edit->getQtdePessoas() == '11-20')?'selected':''?>>11-20</option>
                         <option value="21-50" <?=($edit->getQtdePessoas() == '21-50')?'selected':''?>>21-50</option>
                         <option value="51-100" <?=($edit->getQtdePessoas() == '51-100')?'selected':''?>>51-100</option>
-                        <option value="101-500" <?=($edit->getQtdePessoas() == '101-500')?'selected':''?>>101-500</option>
-                        <option value="251-1000" <?=($edit->getQtdePessoas() == '251-1000')?'selected':''?>>251-1000</option>
+                        <option value="101-250" <?=($edit->getQtdePessoas() == '101-250')?'selected':''?>>101-250</option>
+                        <option value="251-500" <?=($edit->getQtdePessoas() == '251-500')?'selected':''?>>251-500</option>
                         <option value="501-1000" <?=($edit->getQtdePessoas() == '501-1000')?'selected':''?>>501-1000</option>
                         <option value="1001+" <?=($edit->getQtdePessoas() == '1001+')?'selected':''?>>1001+</option>     
                     </select>
