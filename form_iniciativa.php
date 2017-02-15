@@ -346,12 +346,6 @@
                <h5>11. Qual foi o orçamento bruto da sua iniciativa em: *</h5>
 
 
-               <h5>Não tenho orçamento</h5>
-                <div class="form-group">
-                    <label class="sr-only" for="f1-last-name"></label>
-                    <input type="checkbox" value="sim" name="nao_tem_orcamento[]" onclick="check_orcamento(); "> Não tenho Orçamento
-                    <input type="HIDDEN" id="nao_tenho_orcamento_input" name="justificativa_orcamento" class="f1-last-name form-control">
-                </div>
 
                 <script type="text/javascript">
 
@@ -393,6 +387,14 @@
                     <label class="sr-only" for="f1-last-name">2016</label>
                     <input type="text" id="orcamento_2016" name="orcamento_2016" placeholder="R$ xxxxxx" class="f1-last-name form-control money" id="iniciativa_orcamento2016" >
                     <div class="help-block with-errors"></div>
+                </div>
+
+
+               <h5>Não tenho orçamento</h5>
+                <div class="form-group">
+                    <label class="sr-only" for="f1-last-name"></label>
+                    <input type="checkbox" value="sim" name="nao_tem_orcamento[]" onclick="check_orcamento(); "> Não tenho Orçamento
+                    <input type="HIDDEN" id="nao_tenho_orcamento_input" name="justificativa_orcamento" class="f1-last-name form-control">
                 </div>
              
 
@@ -888,6 +890,7 @@ s
 
 
                 <h5>14. Quais os principais públicos diretamente atendidos por sua iniciativa?Selecione até três.*</h5>
+                <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar os subtemas.</em></h6>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -903,6 +906,23 @@ s
                         <option value="Mulheres">Mulheres</option>
                            
                     </select>
+
+    <script>
+                 $(document).ready(function() {
+
+                      var last_valid_selection = null;
+
+                      $('#publico_alvo').change(function(event) {
+
+                        if ($(this).val().length > 3) {
+
+                          $(this).val(last_valid_selection);
+                        } else {
+                          last_valid_selection = $(this).val();
+                        }
+                      });
+                    });
+    </script>
 
 
                     

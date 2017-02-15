@@ -456,6 +456,7 @@
                     > Não tenho Orçamento
                     <input type="HIDDEN" id="nao_tenho_orcamento_input" name="justificativa_orcamento" class="f1-last-name form-control">
                 </div>
+
                 <script type="text/javascript">
 
                 function check_orcamento(){
@@ -1623,7 +1624,8 @@
                     
                 </div>
 
-                <h4>14. Quais os principais públicos diretamente atendidos por sua iniciativa?<!--Selecione até três.-->*</h4>
+                <h4>14. Quais os principais públicos diretamente atendidos por sua iniciativa?Selecione até três.*</h4>
+                <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar os subtemas.</em></h6>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -1655,6 +1657,25 @@
                         <option value="Mulheres" <?=($edit->getPublicoAtendido() == 'Mulheres')?'selected':''?>
                             >Mulheres</option>          
                     </select>
+
+
+ <script>
+                 $(document).ready(function() {
+
+                      var last_valid_selection = null;
+
+                      $('#publico_alvo').change(function(event) {
+
+                        if ($(this).val().length > 3) {
+
+                          $(this).val(last_valid_selection);
+                        } else {
+                          last_valid_selection = $(this).val();
+                        }
+                      });
+                    });
+    </script>
+
                     
                     <h4>15. Em quais estados a sua iniciativa tem atuação direta?*</h4>
                     <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
