@@ -819,357 +819,380 @@ class CadastrarAll extends Conexao {
 
     public function inserir_novo(){
         $pdo = parent::getDB();
-        try{
 
-            $data_atual = date("Y-m-d");
+        $verifica = $pdo->prepare("SELECT * FROM organizacoes WHERE usuario_id = ?");
+        $verifica->bindValue(1, $this->getUsuarioId());
+        $verifica->execute();
 
+        $res = $verifica->fetch(PDO::FETCH_OBJ);
 
-            $pdo->beginTransaction();
-
-            $inserir_ong = $pdo->prepare("insert into organizacoes (
-                cnpj, localizacao, nome, sigla, telefone, email, tipo, inicio_atv, qtde_pessoas, recursos_financeiros,
-                descricao,  publico_atendido, politicas_publicas, monitoramento_atividades, estrategia_comunicacao,
-                premiacao_certificacao, organizacao_pai, identifica_iniciativa, usuario_id, inputnomeong, justificativa_orcamento, 
-                pessoas_benefeciadas, identifica_organizacao_outros, fonte_recursos_outros, created_at)
-                                    values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-            $inserir_ong->bindValue(1, $this->getCnpj());
-            $inserir_ong->bindValue(2, $this->getLocalizacao());
-            $inserir_ong->bindValue(3, $this->getNome());
-            $inserir_ong->bindValue(4, $this->getSigla());
-            $inserir_ong->bindValue(5, $this->getTelefone());
-            $inserir_ong->bindValue(6, $this->getEmail());
-            $inserir_ong->bindValue(7, $this->getTipo());
-            $inserir_ong->bindValue(8, $this->getInicioAtv());
-            $inserir_ong->bindValue(9, $this->getQtdePessoas());
-            $inserir_ong->bindValue(10, $this->getRecursosFinaceiros());
-            $inserir_ong->bindValue(11, $this->getDescricao());
-            $inserir_ong->bindValue(12, $this->getPublicoAtendido());
-            $inserir_ong->bindValue(13, $this->getPoliticasPublicas());
-            $inserir_ong->bindValue(14, $this->getMonitoramentoAtividades());
-            $inserir_ong->bindValue(15, $this->getEstrategiaComunicacao());
-            $inserir_ong->bindValue(16, $this->getPremiacaoCertificacao());
-            $inserir_ong->bindValue(17, $this->getOrganizacaoPai());
-            $inserir_ong->bindValue(18, $this->getNatureza());
-            $inserir_ong->bindValue(19, $this->getUsuarioId());
-            $inserir_ong->bindValue(20, $this->getInputnomeong());
-            $inserir_ong->bindValue(21, $this->getJustificativaOrcamento());
-            $inserir_ong->bindValue(22, $this->getQtdeBeneficiadas());
-            $inserir_ong->bindValue(23, $this->getIdentificaOrganizacaOutros());
-            $inserir_ong->bindValue(24, $this->getFonteRecursosOutros());
-            $inserir_ong->bindValue(25, $data_atual);
-            $inserir_ong->execute();
-            $organizacao_id = $pdo->lastInsertId();
-            $_SESSION['organizacao_id'] = $organizacao_id;
-
-            $inserir_contato = $pdo->prepare("insert into contatos (cargo, email, telefone, celular, tipo, organizacao_id, nome)
-                                    values (?, ?, ?, ?, ?, ?, ?)");
-            $inserir_contato->bindValue(1, $this->getCargo_1());
-            $inserir_contato->bindValue(2, $this->getEmail_1());
-            $inserir_contato->bindValue(3, $this->getTelefone_1());
-            $inserir_contato->bindValue(4, $this->getCelular_1());
-            $inserir_contato->bindValue(5, 1);
-            $inserir_contato->bindValue(6, $organizacao_id);
-            $inserir_contato->bindValue(7, $this->getNome_1());
-            $inserir_contato->execute();
-
-            $inserir_contato->bindValue(1, $this->getCargo_2());
-            $inserir_contato->bindValue(2, $this->getEmail_2());
-            $inserir_contato->bindValue(3, $this->getTelefone_2());
-            $inserir_contato->bindValue(4, $this->getCelular_2());
-            $inserir_contato->bindValue(5, 2);
-            $inserir_contato->bindValue(6, $organizacao_id);
-            $inserir_contato->bindValue(7, $this->getNome_2());
-            $inserir_contato->execute();
-
-            $orcamento = $this->getOrcamento_2014();
-            $inserir_orcamentos = $pdo->prepare("insert into orcamentos (ano, valor, organizacao_id)
-                                    values (?, ?, ?)");
-            $inserir_orcamentos->bindValue(1, 2014);
-            if ($orcamento == ""){
-                $inserir_orcamentos->bindValue(2, '0.00');
-            }else{
-                $inserir_orcamentos->bindValue(2, str_replace(',', '.',str_replace('.', '',$this->getOrcamento_2014())));
-            }
-            $inserir_orcamentos->bindValue(3, $organizacao_id);
-            $inserir_orcamentos->execute();
-
-            $orcamento = $this->getOrcamento_2015();
-            $inserir_orcamentos->bindValue(1, 2015);
-            if ($orcamento == ""){
-                $inserir_orcamentos->bindValue(2, '0.00');
-            }else{
-                $inserir_orcamentos->bindValue(2, str_replace(',', '.',str_replace('.', '',$this->getOrcamento_2015())));
-            }
-            $inserir_orcamentos->bindValue(3, $organizacao_id);
-            $inserir_orcamentos->execute();
-
-            $orcamento = $this->getOrcamento_2016();
-            $inserir_orcamentos->bindValue(1, 2016);
-            if ($orcamento == ""){
-                $inserir_orcamentos->bindValue(2, '0.00');
-            }else{
-                $inserir_orcamentos->bindValue(2, str_replace(',', '.',str_replace('.', '',$this->getOrcamento_2016())));
-            }
-            $inserir_orcamentos->bindValue(3, $organizacao_id);
-            $inserir_orcamentos->execute();
-
-
-            $inserir_recursos_financeiros_lista = $pdo->prepare("insert into origem_recursos (tipo, organizacao_id)
-                                   values (?, ?)");
-            $recursos_finaceiros_lista = $this->getRecursosFinaceirosLista();
-                foreach ($recursos_finaceiros_lista  as $recurso){
-                   $inserir_recursos_financeiros_lista->bindValue(1, $recurso);
-                   $inserir_recursos_financeiros_lista->bindValue(2, $organizacao_id);
-                   $inserir_recursos_financeiros_lista->execute();
-                }
-
-            $inserir_politicas_publicas_lista = $pdo->prepare("insert into politicas_publicas (tipo, organizacao_id)
-                                   values (?, ?)");
-            $politicas_publicas_lista = $this->getPoliticasPublicasList();
-                foreach ($politicas_publicas_lista  as $politica){
-                   $inserir_politicas_publicas_lista->bindValue(1, $politica);
-                   $inserir_politicas_publicas_lista->bindValue(2, $organizacao_id);
-                   $inserir_politicas_publicas_lista->execute();
-                }
-
-
-            $inserir_funcoes = $pdo->prepare("insert into funcoes (tipo, complemento, organizacao_id)
-                                   values (?, ?, ?)");
-            $funcoes = $this->getFuncoes();
-
-                foreach ($funcoes  as $funcao){
-                    if ($funcao == "Atuação direta com mulheres, homens, LGBTT, etc"){
-                        $inserir_funcoes->bindValue(1, $funcao);
-                        $inserir_funcoes->bindValue(2, $this->getNumeroBeneficiarios());
-                        $inserir_funcoes->bindValue(3, $organizacao_id);
-                        $inserir_funcoes->execute();
-                    }else{
-                        $inserir_funcoes->bindValue(1, $funcao);
-                        $inserir_funcoes->bindValue(2, 0);
-                        $inserir_funcoes->bindValue(3, $organizacao_id);
-                        $inserir_funcoes->execute();
-                    }
-                   
-                }
-
-            $inserir_empoderamentos = $pdo->prepare("insert into empoderamento (nome, descricao, organizacao_id)
-                                    values (?, ?, ?)");
-            $inserir_empoderamentos->bindValue(1, $this->getEmpoderamentoNome_1());
-            $inserir_empoderamentos->bindValue(2, $this->getEmpoderamentoDesc_1());
-            $inserir_empoderamentos->bindValue(3, $organizacao_id);
-            $inserir_empoderamentos->execute();
-
-            $inserir_empoderamentos->bindValue(1, $this->getEmpoderamentoNome_2());
-            $inserir_empoderamentos->bindValue(2, $this->getEmpoderamentoDesc_2());
-            $inserir_empoderamentos->bindValue(3, $organizacao_id);
-            $inserir_empoderamentos->execute();
-
-            $inserir_empoderamentos->bindValue(1, $this->getEmpoderamentoNome_3());
-            $inserir_empoderamentos->bindValue(2, $this->getEmpoderamentoDesc_3());
-            $inserir_empoderamentos->bindValue(3, $organizacao_id);
-            $inserir_empoderamentos->execute();
-
-
-            $inserir_atuacao_direta = $pdo->prepare("insert into atuacao_direta (estado, organizacao_id)
-                                   values (?, ?)");
-            $estados = $this->getEstados();
-            foreach ($estados  as $estado){
-
-               $inserir_atuacao_direta->bindValue(1, $estado);
-               $inserir_atuacao_direta->bindValue(2, $organizacao_id);
-               $inserir_atuacao_direta->execute();
-            }
-
-
-            $inserir_relaciona = $pdo->prepare("insert into relacionadas (nome, organizacao_id)
-                                   values (?, ?)");
-            $inserir_relaciona->bindValue(1, $this->getRelaciona_1());
-            $inserir_relaciona->bindValue(2, $organizacao_id);
-            $inserir_relaciona->execute();
-
-            $inserir_relaciona->bindValue(1, $this->getRelaciona_2());
-            $inserir_relaciona->bindValue(2, $organizacao_id);
-            $inserir_relaciona->execute();
-
-
-            $inserir_relaciona->bindValue(1, $this->getRelaciona_3());
-            $inserir_relaciona->bindValue(2, $organizacao_id);
-            $inserir_relaciona->execute();
-
-
-            $inserir_tema = $pdo->prepare("insert into temas (tema, regiao, organizacao_id)
-                                   values (?, ?, ?)");
-            $temas = $this->getTemas();
-            foreach ($temas  as $tema){
-
-                $inserir_tema->bindValue(1, $tema);
-                echo "temas";
-                echo $this->getTemasArteCultura();
-                echo implode(",", $this->getTemasArteCultura());
-                
-                if($tema == "arte_cultura"){
-                    $inserir_tema->bindValue(2, implode(",", (array)$this->getTemasArteCultura())); 
-                }else if($tema == "ciencia_tecnologia"){
-                    $inserir_tema->bindValue(2, implode(",", $this->getTemasCienciaTecnologia()));
-                }else if($tema == "democracia_participação_politica"){
-                    $inserir_tema->bindValue(2, implode(",", $this->getTemasDemocraciaPolitica()));
-                }else if($tema == "educacao_formacao"){
-                    $inserir_tema->bindValue(2, implode(",", $this->getTemasEducacaoFormacao()));
-                }else if($tema == "empreendedorismo_feminino_autonomia_economica"){
-                    $inserir_tema->bindValue(2, implode(",", $this->getTemasEmpreendedorismoFeminino()));
-                }else if($tema == "enfrentamento_violencia"){
-                    $inserir_tema->bindValue(2, implode(",", $this->getTemasEnfretamentoViolencia()));
-                }else if($tema == "equidade_Condicoes_trabalho"){
-                    $inserir_tema->bindValue(2, implode(",", $this->getTemasEquidadeTrabalho()));
-                }else if($tema == "esporte"){
-                    $inserir_tema->bindValue(2, implode(",", $this->getTemasEsportes()));
-                }else if($tema == "indigenas"){
-                    $inserir_tema->bindValue(2, implode(",", $this->getTemasIndigenas()));
-                }else if($tema == "LGBTT"){
-                    $inserir_tema->bindValue(2, implode(",", $this->getTemasLgbtt()));
-                }else if($tema == "masculinidade"){
-                    $inserir_tema->bindValue(2, implode(",", $this->getTemasMasculinidades()));
-                }else if($tema == "meio ambiente,seguranca,agricultura"){
-                    $inserir_tema->bindValue(2, implode(",", $this->getTemasMeioAmbiente()));
-                }else if($tema == "midia_comunicacao"){
-                    $inserir_tema->bindValue(2, implode(",", $this->getTemasMidiaComunicacao()));
-                }else if($tema == "moradia"){
-                    $inserir_tema->bindValue(2, implode(",", $this->getTemasMoradia()));
-                }else if($tema == "negritude"){
-                    $inserir_tema->bindValue(2, implode(",", $this->getTemasNegritude()));
-                }else if($tema == "paz_seguranca_publica"){
-                    $inserir_tema->bindValue(2, implode(",", $this->getTemasPazSeguranca()));
-                }else if($tema == "saude_bemestar"){
-                    $inserir_tema->bindValue(2, implode(",", $this->getTemasSaudeBemestar()));
-                }
-
-                $inserir_tema->bindValue(3, $organizacao_id);
-
-                $inserir_tema->execute();
-            }
-
-            $inserir_subtema = $pdo->prepare("insert into subtemas (subtema, organizacao_id)
-                                   values (?, ?)");
-            $subtemas = $this->getSubtemas();
-            foreach ($subtemas  as $subtema){
-               $inserir_subtema->bindValue(1, $subtema);
-               $inserir_subtema->bindValue(2, $organizacao_id);
-               $inserir_subtema->execute();
-            }
-
-            $inserir_endereco =  $pdo->prepare("insert into enderecos (regiao, estado, cidade, bairro,
-                rua, numero, complemento, cep, organizacao_id)
-                                   values (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-            $inserir_endereco->bindValue(1, $this->getRegiao());
-            $inserir_endereco->bindValue(2, $this->getEstado());
-            $inserir_endereco->bindValue(3, $this->getCidade());
-            $inserir_endereco->bindValue(4, $this->getBairro());
-            $inserir_endereco->bindValue(5, $this->getRua());
-            $inserir_endereco->bindValue(6, $this->getNumero());
-            $inserir_endereco->bindValue(7, $this->getComplemento());
-            $inserir_endereco->bindValue(8, $this->getCep());
-            $inserir_endereco->bindValue(9, $organizacao_id);
-            $inserir_endereco->execute();
-
-
-            $inserir_rede_social =  $pdo->prepare("insert into redes_sociais (link, tipo, organizacao_id)
-                                   values (?, ?, ?)");
-            $inserir_rede_social->bindValue(1, $this->getSite());
-            $inserir_rede_social->bindValue(2, 'Site');
-            $inserir_rede_social->bindValue(3, $organizacao_id);
-            $inserir_rede_social->execute();
-
-            $inserir_rede_social->bindValue(1, $this->getFacebook());
-            $inserir_rede_social->bindValue(2, 'Facebook');
-            $inserir_rede_social->bindValue(3, $organizacao_id);
-            $inserir_rede_social->execute();
-
-            $inserir_rede_social->bindValue(1, $this->getInstagram());
-            $inserir_rede_social->bindValue(2, 'Instagram');
-            $inserir_rede_social->bindValue(3, $organizacao_id);
-            $inserir_rede_social->execute();
-
-            $inserir_rede_social->bindValue(1, $this->getTwitter());
-            $inserir_rede_social->bindValue(2, 'Twitter');
-            $inserir_rede_social->bindValue(3, $organizacao_id);
-            $inserir_rede_social->execute();
-
-            $inserir_rede_social->bindValue(1, $this->getLinkedin());
-            $inserir_rede_social->bindValue(2, 'Linkedin');
-            $inserir_rede_social->bindValue(3, $organizacao_id);
-            $inserir_rede_social->execute();
-
-            $inserir_rede_social->bindValue(1, $this->getOutros());
-            $inserir_rede_social->bindValue(2, 'Outros');
-            $inserir_rede_social->bindValue(3, $organizacao_id);
-            $inserir_rede_social->execute();
-
-
-            $inserir_indicacao =  $pdo->prepare("insert into indicacoes (nome, email, telefone, organizacao_id)
-                                   values (?, ?, ?, ?)");
-            $inserir_indicacao->bindValue(1, $this->getIndicaNome_1());
-            $inserir_indicacao->bindValue(2, $this->getIndicaEmail_1());
-            $inserir_indicacao->bindValue(3, $this->getIndicaTelefone_1());
-            $inserir_indicacao->bindValue(4, $organizacao_id);
-            $inserir_indicacao->execute();
-
-            $inserir_indicacao->bindValue(1, $this->getIndicaNome_2());
-            $inserir_indicacao->bindValue(2, $this->getIndicaEmail_2());
-            $inserir_indicacao->bindValue(3, $this->getIndicaTelefone_2());
-            $inserir_indicacao->bindValue(4, $organizacao_id);
-            $inserir_indicacao->execute();
-
-            $inserir_indicacao->bindValue(1, $this->getIndicaNome_3());
-            $inserir_indicacao->bindValue(2, $this->getIndicaEmail_3());
-            $inserir_indicacao->bindValue(3, $this->getIndicaTelefone_3());
-            $inserir_indicacao->bindValue(4, $organizacao_id);
-            $inserir_indicacao->execute();
-
-
-
-            $pdo->commit();
-
-            $_SESSION['cadastro'] = true;
-
+        if ($verifica->rowCount() >= 1):
             echo "<script type='text/javascript'>
 
-                        sweetAlert({
-                          title: '',
-                           text: 'Cadastro realizado!',
-                           type: 'success'
-                          },
-                          function(){
-                            window.location.href = '../form.php';
-                        });
+                            sweetAlert({
+                              title: 'Erro',
+                               text: 'Já existe uma Organização cadastrada para seu usuário!',
+                                type: 'error'
+                              },
+                              function(){
+                                window.location.href = '../form.php';
+                            });
 
-                    </script>";
+                        </script>";
+        else:
 
-        }
-        catch (Exception $e){
-              $pdo->rollback();
-              
-            $inserir_erro = $pdo->prepare("insert into erro_logs (erro, data, usuario_id)
-                               values (?, ?, ?)");
-            $inserir_erro->bindValue(1, $e->getMessage());
-            $inserir_erro->bindValue(2, $data_atual);
-            $inserir_erro->bindValue(3, $this->getUsuarioId());
-            $inserir_erro->execute();
+            try{
+
+                $data_atual = date("Y-m-d");
 
 
-               echo "<script type='text/javascript'>
+                $pdo->beginTransaction();
 
-                        sweetAlert({
-                          title: 'Erro',
-                           text: 'Não foi possível realizar o cadastro!',
-                            type: 'error'
-                          },
-                          function(){
-                            window.location.href = '../form.php';
-                        });
+                $inserir_ong = $pdo->prepare("insert into organizacoes (
+                    cnpj, localizacao, nome, sigla, telefone, email, tipo, inicio_atv, qtde_pessoas, recursos_financeiros,
+                    descricao,  publico_atendido, politicas_publicas, monitoramento_atividades, estrategia_comunicacao,
+                    premiacao_certificacao, organizacao_pai, identifica_iniciativa, usuario_id, inputnomeong, justificativa_orcamento, 
+                    pessoas_benefeciadas, identifica_organizacao_outros, fonte_recursos_outros, created_at)
+                                        values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                $inserir_ong->bindValue(1, $this->getCnpj());
+                $inserir_ong->bindValue(2, $this->getLocalizacao());
+                $inserir_ong->bindValue(3, $this->getNome());
+                $inserir_ong->bindValue(4, $this->getSigla());
+                $inserir_ong->bindValue(5, $this->getTelefone());
+                $inserir_ong->bindValue(6, $this->getEmail());
+                $inserir_ong->bindValue(7, $this->getTipo());
+                $inserir_ong->bindValue(8, $this->getInicioAtv());
+                $inserir_ong->bindValue(9, $this->getQtdePessoas());
+                $inserir_ong->bindValue(10, $this->getRecursosFinaceiros());
+                $inserir_ong->bindValue(11, $this->getDescricao());
+                $inserir_ong->bindValue(12, $this->getPublicoAtendido());
+                $inserir_ong->bindValue(13, $this->getPoliticasPublicas());
+                $inserir_ong->bindValue(14, $this->getMonitoramentoAtividades());
+                $inserir_ong->bindValue(15, $this->getEstrategiaComunicacao());
+                $inserir_ong->bindValue(16, $this->getPremiacaoCertificacao());
+                $inserir_ong->bindValue(17, $this->getOrganizacaoPai());
+                $inserir_ong->bindValue(18, $this->getNatureza());
+                $inserir_ong->bindValue(19, $this->getUsuarioId());
+                $inserir_ong->bindValue(20, $this->getInputnomeong());
+                $inserir_ong->bindValue(21, $this->getJustificativaOrcamento());
+                $inserir_ong->bindValue(22, $this->getQtdeBeneficiadas());
+                $inserir_ong->bindValue(23, $this->getIdentificaOrganizacaOutros());
+                $inserir_ong->bindValue(24, $this->getFonteRecursosOutros());
+                $inserir_ong->bindValue(25, $data_atual);
+                $inserir_ong->execute();
+                $organizacao_id = $pdo->lastInsertId();
+                $_SESSION['organizacao_id'] = $organizacao_id;
 
-                    </script>";
+                $inserir_contato = $pdo->prepare("insert into contatos (cargo, email, telefone, celular, tipo, organizacao_id, nome)
+                                        values (?, ?, ?, ?, ?, ?, ?)");
+                $inserir_contato->bindValue(1, $this->getCargo_1());
+                $inserir_contato->bindValue(2, $this->getEmail_1());
+                $inserir_contato->bindValue(3, $this->getTelefone_1());
+                $inserir_contato->bindValue(4, $this->getCelular_1());
+                $inserir_contato->bindValue(5, 1);
+                $inserir_contato->bindValue(6, $organizacao_id);
+                $inserir_contato->bindValue(7, $this->getNome_1());
+                $inserir_contato->execute();
 
-        }
+                $inserir_contato->bindValue(1, $this->getCargo_2());
+                $inserir_contato->bindValue(2, $this->getEmail_2());
+                $inserir_contato->bindValue(3, $this->getTelefone_2());
+                $inserir_contato->bindValue(4, $this->getCelular_2());
+                $inserir_contato->bindValue(5, 2);
+                $inserir_contato->bindValue(6, $organizacao_id);
+                $inserir_contato->bindValue(7, $this->getNome_2());
+                $inserir_contato->execute();
+
+                $orcamento = $this->getOrcamento_2014();
+                $inserir_orcamentos = $pdo->prepare("insert into orcamentos (ano, valor, organizacao_id)
+                                        values (?, ?, ?)");
+                $inserir_orcamentos->bindValue(1, 2014);
+                if ($orcamento == ""){
+                    $inserir_orcamentos->bindValue(2, '0.00');
+                }else{
+                    $inserir_orcamentos->bindValue(2, str_replace(',', '.',str_replace('.', '',$this->getOrcamento_2014())));
+                }
+                $inserir_orcamentos->bindValue(3, $organizacao_id);
+                $inserir_orcamentos->execute();
+
+                $orcamento = $this->getOrcamento_2015();
+                $inserir_orcamentos->bindValue(1, 2015);
+                if ($orcamento == ""){
+                    $inserir_orcamentos->bindValue(2, '0.00');
+                }else{
+                    $inserir_orcamentos->bindValue(2, str_replace(',', '.',str_replace('.', '',$this->getOrcamento_2015())));
+                }
+                $inserir_orcamentos->bindValue(3, $organizacao_id);
+                $inserir_orcamentos->execute();
+
+                $orcamento = $this->getOrcamento_2016();
+                $inserir_orcamentos->bindValue(1, 2016);
+                if ($orcamento == ""){
+                    $inserir_orcamentos->bindValue(2, '0.00');
+                }else{
+                    $inserir_orcamentos->bindValue(2, str_replace(',', '.',str_replace('.', '',$this->getOrcamento_2016())));
+                }
+                $inserir_orcamentos->bindValue(3, $organizacao_id);
+                $inserir_orcamentos->execute();
+
+
+                $inserir_recursos_financeiros_lista = $pdo->prepare("insert into origem_recursos (tipo, organizacao_id)
+                                       values (?, ?)");
+                $recursos_finaceiros_lista = $this->getRecursosFinaceirosLista();
+                    foreach ($recursos_finaceiros_lista  as $recurso){
+                       $inserir_recursos_financeiros_lista->bindValue(1, $recurso);
+                       $inserir_recursos_financeiros_lista->bindValue(2, $organizacao_id);
+                       $inserir_recursos_financeiros_lista->execute();
+                    }
+
+                $inserir_politicas_publicas_lista = $pdo->prepare("insert into politicas_publicas (tipo, organizacao_id)
+                                       values (?, ?)");
+                $politicas_publicas_lista = $this->getPoliticasPublicasList();
+                    foreach ($politicas_publicas_lista  as $politica){
+                       $inserir_politicas_publicas_lista->bindValue(1, $politica);
+                       $inserir_politicas_publicas_lista->bindValue(2, $organizacao_id);
+                       $inserir_politicas_publicas_lista->execute();
+                    }
+
+
+                $inserir_funcoes = $pdo->prepare("insert into funcoes (tipo, complemento, organizacao_id)
+                                       values (?, ?, ?)");
+                $funcoes = $this->getFuncoes();
+
+                    foreach ($funcoes  as $funcao){
+                        if ($funcao == "Atuação direta com mulheres, homens, LGBTT, etc"){
+                            $inserir_funcoes->bindValue(1, $funcao);
+                            $inserir_funcoes->bindValue(2, $this->getNumeroBeneficiarios());
+                            $inserir_funcoes->bindValue(3, $organizacao_id);
+                            $inserir_funcoes->execute();
+                        }else{
+                            $inserir_funcoes->bindValue(1, $funcao);
+                            $inserir_funcoes->bindValue(2, 0);
+                            $inserir_funcoes->bindValue(3, $organizacao_id);
+                            $inserir_funcoes->execute();
+                        }
+                       
+                    }
+
+                $inserir_empoderamentos = $pdo->prepare("insert into empoderamento (nome, descricao, organizacao_id)
+                                        values (?, ?, ?)");
+                $inserir_empoderamentos->bindValue(1, $this->getEmpoderamentoNome_1());
+                $inserir_empoderamentos->bindValue(2, $this->getEmpoderamentoDesc_1());
+                $inserir_empoderamentos->bindValue(3, $organizacao_id);
+                $inserir_empoderamentos->execute();
+
+                $inserir_empoderamentos->bindValue(1, $this->getEmpoderamentoNome_2());
+                $inserir_empoderamentos->bindValue(2, $this->getEmpoderamentoDesc_2());
+                $inserir_empoderamentos->bindValue(3, $organizacao_id);
+                $inserir_empoderamentos->execute();
+
+                $inserir_empoderamentos->bindValue(1, $this->getEmpoderamentoNome_3());
+                $inserir_empoderamentos->bindValue(2, $this->getEmpoderamentoDesc_3());
+                $inserir_empoderamentos->bindValue(3, $organizacao_id);
+                $inserir_empoderamentos->execute();
+
+
+                $inserir_atuacao_direta = $pdo->prepare("insert into atuacao_direta (estado, organizacao_id)
+                                       values (?, ?)");
+                $estados = $this->getEstados();
+                foreach ($estados  as $estado){
+
+                   $inserir_atuacao_direta->bindValue(1, $estado);
+                   $inserir_atuacao_direta->bindValue(2, $organizacao_id);
+                   $inserir_atuacao_direta->execute();
+                }
+
+
+                $inserir_relaciona = $pdo->prepare("insert into relacionadas (nome, organizacao_id)
+                                       values (?, ?)");
+                $inserir_relaciona->bindValue(1, $this->getRelaciona_1());
+                $inserir_relaciona->bindValue(2, $organizacao_id);
+                $inserir_relaciona->execute();
+
+                $inserir_relaciona->bindValue(1, $this->getRelaciona_2());
+                $inserir_relaciona->bindValue(2, $organizacao_id);
+                $inserir_relaciona->execute();
+
+
+                $inserir_relaciona->bindValue(1, $this->getRelaciona_3());
+                $inserir_relaciona->bindValue(2, $organizacao_id);
+                $inserir_relaciona->execute();
+
+
+                $inserir_tema = $pdo->prepare("insert into temas (tema, regiao, organizacao_id)
+                                       values (?, ?, ?)");
+                $temas = $this->getTemas();
+                foreach ($temas  as $tema){
+
+                    $inserir_tema->bindValue(1, $tema);
+                    echo "temas";
+                    echo $this->getTemasArteCultura();
+                    echo implode(",", $this->getTemasArteCultura());
+                    
+                    if($tema == "arte_cultura"){
+                        $inserir_tema->bindValue(2, implode(",", (array)$this->getTemasArteCultura())); 
+                    }else if($tema == "ciencia_tecnologia"){
+                        $inserir_tema->bindValue(2, implode(",", $this->getTemasCienciaTecnologia()));
+                    }else if($tema == "democracia_participação_politica"){
+                        $inserir_tema->bindValue(2, implode(",", $this->getTemasDemocraciaPolitica()));
+                    }else if($tema == "educacao_formacao"){
+                        $inserir_tema->bindValue(2, implode(",", $this->getTemasEducacaoFormacao()));
+                    }else if($tema == "empreendedorismo_feminino_autonomia_economica"){
+                        $inserir_tema->bindValue(2, implode(",", $this->getTemasEmpreendedorismoFeminino()));
+                    }else if($tema == "enfrentamento_violencia"){
+                        $inserir_tema->bindValue(2, implode(",", $this->getTemasEnfretamentoViolencia()));
+                    }else if($tema == "equidade_Condicoes_trabalho"){
+                        $inserir_tema->bindValue(2, implode(",", $this->getTemasEquidadeTrabalho()));
+                    }else if($tema == "esporte"){
+                        $inserir_tema->bindValue(2, implode(",", $this->getTemasEsportes()));
+                    }else if($tema == "indigenas"){
+                        $inserir_tema->bindValue(2, implode(",", $this->getTemasIndigenas()));
+                    }else if($tema == "LGBTT"){
+                        $inserir_tema->bindValue(2, implode(",", $this->getTemasLgbtt()));
+                    }else if($tema == "masculinidade"){
+                        $inserir_tema->bindValue(2, implode(",", $this->getTemasMasculinidades()));
+                    }else if($tema == "meio ambiente,seguranca,agricultura"){
+                        $inserir_tema->bindValue(2, implode(",", $this->getTemasMeioAmbiente()));
+                    }else if($tema == "midia_comunicacao"){
+                        $inserir_tema->bindValue(2, implode(",", $this->getTemasMidiaComunicacao()));
+                    }else if($tema == "moradia"){
+                        $inserir_tema->bindValue(2, implode(",", $this->getTemasMoradia()));
+                    }else if($tema == "negritude"){
+                        $inserir_tema->bindValue(2, implode(",", $this->getTemasNegritude()));
+                    }else if($tema == "paz_seguranca_publica"){
+                        $inserir_tema->bindValue(2, implode(",", $this->getTemasPazSeguranca()));
+                    }else if($tema == "saude_bemestar"){
+                        $inserir_tema->bindValue(2, implode(",", $this->getTemasSaudeBemestar()));
+                    }
+
+                    $inserir_tema->bindValue(3, $organizacao_id);
+
+                    $inserir_tema->execute();
+                }
+
+                $inserir_subtema = $pdo->prepare("insert into subtemas (subtema, organizacao_id)
+                                       values (?, ?)");
+                $subtemas = $this->getSubtemas();
+                foreach ($subtemas  as $subtema){
+                   $inserir_subtema->bindValue(1, $subtema);
+                   $inserir_subtema->bindValue(2, $organizacao_id);
+                   $inserir_subtema->execute();
+                }
+
+                $inserir_endereco =  $pdo->prepare("insert into enderecos (regiao, estado, cidade, bairro,
+                    rua, numero, complemento, cep, organizacao_id)
+                                       values (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                $inserir_endereco->bindValue(1, $this->getRegiao());
+                $inserir_endereco->bindValue(2, $this->getEstado());
+                $inserir_endereco->bindValue(3, $this->getCidade());
+                $inserir_endereco->bindValue(4, $this->getBairro());
+                $inserir_endereco->bindValue(5, $this->getRua());
+                $inserir_endereco->bindValue(6, $this->getNumero());
+                $inserir_endereco->bindValue(7, $this->getComplemento());
+                $inserir_endereco->bindValue(8, $this->getCep());
+                $inserir_endereco->bindValue(9, $organizacao_id);
+                $inserir_endereco->execute();
+
+
+                $inserir_rede_social =  $pdo->prepare("insert into redes_sociais (link, tipo, organizacao_id)
+                                       values (?, ?, ?)");
+                $inserir_rede_social->bindValue(1, $this->getSite());
+                $inserir_rede_social->bindValue(2, 'Site');
+                $inserir_rede_social->bindValue(3, $organizacao_id);
+                $inserir_rede_social->execute();
+
+                $inserir_rede_social->bindValue(1, $this->getFacebook());
+                $inserir_rede_social->bindValue(2, 'Facebook');
+                $inserir_rede_social->bindValue(3, $organizacao_id);
+                $inserir_rede_social->execute();
+
+                $inserir_rede_social->bindValue(1, $this->getInstagram());
+                $inserir_rede_social->bindValue(2, 'Instagram');
+                $inserir_rede_social->bindValue(3, $organizacao_id);
+                $inserir_rede_social->execute();
+
+                $inserir_rede_social->bindValue(1, $this->getTwitter());
+                $inserir_rede_social->bindValue(2, 'Twitter');
+                $inserir_rede_social->bindValue(3, $organizacao_id);
+                $inserir_rede_social->execute();
+
+                $inserir_rede_social->bindValue(1, $this->getLinkedin());
+                $inserir_rede_social->bindValue(2, 'Linkedin');
+                $inserir_rede_social->bindValue(3, $organizacao_id);
+                $inserir_rede_social->execute();
+
+                $inserir_rede_social->bindValue(1, $this->getOutros());
+                $inserir_rede_social->bindValue(2, 'Outros');
+                $inserir_rede_social->bindValue(3, $organizacao_id);
+                $inserir_rede_social->execute();
+
+
+                $inserir_indicacao =  $pdo->prepare("insert into indicacoes (nome, email, telefone, organizacao_id)
+                                       values (?, ?, ?, ?)");
+                $inserir_indicacao->bindValue(1, $this->getIndicaNome_1());
+                $inserir_indicacao->bindValue(2, $this->getIndicaEmail_1());
+                $inserir_indicacao->bindValue(3, $this->getIndicaTelefone_1());
+                $inserir_indicacao->bindValue(4, $organizacao_id);
+                $inserir_indicacao->execute();
+
+                $inserir_indicacao->bindValue(1, $this->getIndicaNome_2());
+                $inserir_indicacao->bindValue(2, $this->getIndicaEmail_2());
+                $inserir_indicacao->bindValue(3, $this->getIndicaTelefone_2());
+                $inserir_indicacao->bindValue(4, $organizacao_id);
+                $inserir_indicacao->execute();
+
+                $inserir_indicacao->bindValue(1, $this->getIndicaNome_3());
+                $inserir_indicacao->bindValue(2, $this->getIndicaEmail_3());
+                $inserir_indicacao->bindValue(3, $this->getIndicaTelefone_3());
+                $inserir_indicacao->bindValue(4, $organizacao_id);
+                $inserir_indicacao->execute();
+
+
+
+                $pdo->commit();
+
+                $_SESSION['cadastro'] = true;
+
+                echo "<script type='text/javascript'>
+
+                            sweetAlert({
+                              title: '',
+                               text: 'Cadastro realizado!',
+                               type: 'success'
+                              },
+                              function(){
+                                window.location.href = '../form.php';
+                            });
+
+                        </script>";
+
+            }
+            catch (Exception $e){
+                  $pdo->rollback();
+                  
+                $inserir_erro = $pdo->prepare("insert into erro_logs (erro, data, usuario_id)
+                                   values (?, ?, ?)");
+                $inserir_erro->bindValue(1, $e->getMessage());
+                $inserir_erro->bindValue(2, $data_atual);
+                $inserir_erro->bindValue(3, $this->getUsuarioId());
+                $inserir_erro->execute();
+
+
+                   echo "<script type='text/javascript'>
+
+                            sweetAlert({
+                              title: 'Erro',
+                               text: 'Não foi possível realizar o cadastro!',
+                                type: 'error'
+                              },
+                              function(){
+                                window.location.href = '../form.php';
+                            });
+
+                        </script>";
+
+            }
+        endif;
 
 
    }
