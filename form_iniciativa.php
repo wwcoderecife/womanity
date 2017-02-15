@@ -807,9 +807,9 @@ s
                  <input type="checkbox" name="funcao[ ]" value="social"  style="margin-left: 20px"class="form-control-radio">social⁠⁠⁠⁠   
                  </div>   -->
 
+          <!--
 
-
-                <h5>14. Quais os principais públicos diretamente atendidos por sua iniciativa?<!--Selecione até três.-->*</h5>
+                <h5>14. Quais os principais públicos diretamente atendidos por sua iniciativa?Selecione até três.*</h5>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -825,6 +825,61 @@ s
                         <option value="Mulheres">Mulheres</option>
                            
                     </select>
+
+             -->    
+
+
+                 <h4>14 Quais os principais públicos diretamente atendidos por sua iniciativa? Selecione até três.*</h4>
+
+             <tbody>
+
+                   <tr>
+                    <!--<td><input type="checkbox" name="publico_alvo[ ]" value="Empresas" class="no-margin" onclick="verificar2()"></td>-->
+                    <!--<td>Empresas.</td><br>-->
+                    <td class="publico_alvo" style="width:150px" >
+                        <input type="checkbox" name="publico_alvo[ ]" value="Empresas" onclick="verificar2()">Empresas<br>
+                        <input type="checkbox" name="publico_alvo[ ]" value="Organizações Sociais" onclick="verificar2()" >Organizações Sociais<br>
+                        <input type="checkbox" name="publico_alvo[ ]" value="Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher" onclick="verificar2()">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher<br>
+                        <input type="checkbox" name="publico_alvo[ ]" value="Movimentos, coletivos, redes, fóruns" onclick="verificar2()">Movimentos, coletivos, redes, fóruns<br>
+                        <input type="checkbox" name="publico_alvo[ ]" value="Adolescentes e jovens" onclick="verificar2()">Adolescentes e jovens<br>
+                        <input type="checkbox" name="publico_alvo[ ]" value="Homens" onclick="verificar2()">Homens<br>
+                        <input type="checkbox" name="publico_alvo[ ]" value="Mulheres" onclick="verificar2()">Mulheres<br>
+                    </td> 
+
+            </tbody>        
+
+                          <script>
+                            var CheckMAX = 3;
+
+                            function verificar2() {
+                            var Marcados = 1;
+                            var objCheck = $("input[name='publico_alvo[ ]']");
+                            //Percorrendo os checks para ver quantos foram selecionados:
+                            for (var iLoop=0; iLoop<objCheck.length; iLoop++) {
+                            //Se o número máximo de checkboxes ainda não tiver sido atingido, continua a verificação:
+                                if (objCheck[iLoop].checked) {
+                                    Marcados++;
+                                }
+                                
+                                if (Marcados <= CheckMAX) {
+                                //Habilitando todos os checkboxes, pois o máximo ainda não foi alcançado.
+                                for (var i=0; i<objCheck.length; i++) {
+                                    objCheck[i].disabled = false;
+                                }       
+                                //Caso contrário, desabilitar o checkbox;
+                                //Nesse caso, é necessário percorrer todas as opções novamente, desabilitando as não checadas;
+                                
+                                } else {
+                                    for (var i=0; i<objCheck.length; i++) {
+                                        if(objCheck[i].checked == false) {
+                                            objCheck[i].disabled = true;
+                                        }       
+                                    }
+                                }
+                              }
+                           }
+
+           </script>   
                     
                     <h5>15. Em quais estados a sua iniciativa tem atuação direta?*</h5>
                     <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
