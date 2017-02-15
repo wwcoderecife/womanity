@@ -990,9 +990,9 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim</option>
                     </select>
-                    <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando')" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
+                    <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando7')" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
                         "style='display: none'/></textarea>
-                        <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                        <span id="contando7" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
