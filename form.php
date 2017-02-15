@@ -44,7 +44,7 @@
             function logout(){
                 sweetAlert({
                   title: "Deseja sair?",
-                  text: "Lembre-se de preencher os campos obrigatórios em todas as etapas e clicar no botão ENVIAR na etapa 5,o sistema não irá salvar os dados parcialmente informados.",
+                  text: "Lembre-se de preencher os campos obrigatórios em todas as etapas e clicar no botão ENVIAR na etapa 5. O sistema não irá salvar os dados parcialmente informados.",
                   type: "warning",
                   showCancelButton: true,
                   cancelButtonText: 'Continuar preenchendo',
