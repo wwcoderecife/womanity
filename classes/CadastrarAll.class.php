@@ -1019,7 +1019,7 @@ class CadastrarAll extends Conexao {
                     $inserir_tema->bindValue(2, implode(",", $this->getTemasEmpreendedorismoFeminino()));
                 }else if($tema == "enfrentamento_violencia"){
                     $inserir_tema->bindValue(2, implode(",", $this->getTemasEnfretamentoViolencia()));
-                }else if($tema == "equidade_Condições_trabalho"){
+                }else if($tema == "equidade_Condicoes_trabalho"){
                     $inserir_tema->bindValue(2, implode(",", $this->getTemasEquidadeTrabalho()));
                 }else if($tema == "esporte"){
                     $inserir_tema->bindValue(2, implode(",", $this->getTemasEsportes()));

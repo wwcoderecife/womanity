@@ -1038,7 +1038,7 @@ class Editar extends Conexao {
         $temas_equidade_Condições_trabalho_query = $pdo->prepare("select 
                                         regiao
                                     from temas
-                                    where organizacao_id = ? and tema = 'equidade_Condições_trabalho' ");
+                                    where organizacao_id = ? and tema = 'equidade_Condicoes_trabalho' ");
         $temas_equidade_Condições_trabalho_query->bindValue(1, $organizacao_id);
         $temas_equidade_Condições_trabalho_query->execute();
 
