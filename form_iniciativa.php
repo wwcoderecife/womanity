@@ -829,14 +829,15 @@ s
 
              -->    
 
+<!--
 
                  <h4>14. Quais os principais públicos diretamente atendidos por sua iniciativa? Selecione até três.*</h4>
 
              <tbody>
 
                    <tr>
-                    <!--<td><input type="checkbox" name="publico_alvo[ ]" value="Empresas" class="no-margin" onclick="verificar2()"></td>-->
-                    <!--<td>Empresas.</td><br>-->
+                    <td><input type="checkbox" name="publico_alvo[ ]" value="Empresas" class="no-margin" onclick="verificar2()"></td>
+                    <td>Empresas.</td><br>
                     <td class="publico_alvo" style="width:150px" >
                         <input type="checkbox" name="publico_alvo[ ]" value="Empresas" onclick="verificar2()">Empresas<br>
                         <input type="checkbox" name="publico_alvo[ ]" value="Organizações Sociais" onclick="verificar2()" >Organizações Sociais<br>
@@ -881,7 +882,29 @@ s
                               }
                            }
 
-           </script>   
+           </script>  
+
+       -->
+
+
+                <h5>14. Quais os principais públicos diretamente atendidos por sua iniciativa?Selecione até três.*</h5>
+
+                 <div class="form-group">
+                    <label class="sr-only" for="f1-google-plus"></label>
+                    <select class="f1-last-name form-control" required class="selectpicker" data-style="default" multiple id="publico_alvo" name="publico_alvo">
+                    <div class="help-block with-errors"></div> 
+                        <option value=""></option>
+                        <option value="Empresas">Empresas</option>
+                        <option value="Organizações Sociais">Organizações Sociais</option>
+                        <option value="Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher</option><br>
+                        <option value="Movimentos, coletivos, redes, fóruns">Movimentos, coletivos, redes, fóruns</option>
+                        <option value="Adolescentes e jovens">Adolescentes e jovens</option>
+                        <option value="Homens">Homens</option>
+                        <option value="Mulheres">Mulheres</option>
+                           
+                    </select>
+
+
                     
                     <h5>15. Em quais estados a sua iniciativa tem atuação direta?*</h5>
                     <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
