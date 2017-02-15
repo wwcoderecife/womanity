@@ -808,20 +808,32 @@
                  <input type="checkbox" name="funcao[ ]" value="social"  style="margin-left: 20px"class="form-control-radio">social⁠⁠⁠⁠   
                  </div>  --> 
 
+                 <!--
+                <div class="form-group">
+                    <input type="checkbox" name="empresas[]" value="empresas">Empresas</br>
+                    <input type="checkbox" name="Organizações Sociais[]" value="Organizações Sociais">Organizações Sociais</br>
+                    <input type="checkbox" name="Instituições públicas[]" value="Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher</br>
+                    <input type="checkbox" name="Movimentos[]" value="Movimentos">Movimentos, coletivos, redes, fóruns</br>
+                    <input type="checkbox" name="Adolescentes e jovens[]" value="Adolescentes e jovens">Adolescentes e jovens</br>
+                    <input type="checkbox" name="Homens[]" value="Homens">Homens</br>
+                    <input type="checkbox" name="Mulheres[]" value="Mulheres">Mulheres</br>
+
+                   -->
+
 
                  <h4>14 Quais os principais públicos diretamente atendidos por sua organização? Selecione até três.*</h4>
                    
                    <tr>
-                    <td><input type="checkbox" name="publico[ ]" value="publico" class="no-margin" onclick="verificar2()"></td>
-                    
+                    <td><input type="checkbox" name="publico[ ]" value="Empresas" class="no-margin" onclick="verificar2()"></td>
+                    <td>Empresas.</td>
                     <td class="publico_alvo" style="width:150px">
-                        <input type="checkbox" name="Empresas[ ]" value="Empresas">Empresas<br>
-                        <input type="checkbox" name="Instituições públicas[ ]" value="Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher<br>
+                        <input type="checkbox" name="Organizações Sociais[ ]" value="Organizações Sociais" >Organizações Sociais<br>
+                        <input type="checkbox" name="Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher[ ]" value="Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher<br>
                         <input type="checkbox" name="Movimentos, coletivos, redes, fóruns[ ]" value="Movimentos, coletivos, redes, fóruns">Movimentos, coletivos, redes, fóruns<br>
                         <input type="checkbox" name="Adolescentes e jovens[ ]" value="Adolescentes e jovens">Adolescentes e jovens<br>
                         <input type="checkbox" name="Homens[ ]" value="Homens">Homens<br>
                         <input type="checkbox" name="Mulheres[ ]" value="Mulheres">Mulheres<br>
-                    </td>   
+                    </td>   s
 
                           <script>
                             var CheckMaximo = 3;
