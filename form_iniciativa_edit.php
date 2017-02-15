@@ -1645,7 +1645,7 @@
 
                         <option value="Adolescentes e jovens" <?=($edit->getPublicoAtendido() == 'Adolescentes e jovens')?'selected':''?>
                             >Adolescentes e jovens</option>
-                            
+
                         <option value="Crianças" <?=($edit->getPublicoAtendido() == 'Crianças')?'selected':''?>
                             >Crianças</option>
 
@@ -1886,9 +1886,9 @@
                         >Sim</option>
                     </select>
                     <textarea type="text"  id="inputAvaliacaoOng" 
-                     name="inputAvaliacaoOng" class="f1-last-name form-control" onkeyup="caracterTextarea(this.value,500,'contando2')" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
+                     name="inputAvaliacaoOng" class="f1-last-name form-control" onkeyup="caracterTextarea(this.value,500,'contando2')" maxlength="500" placeholder="Quais foram os resultados comprovados alcançados até hoje? Limite de 500 caracteres..
                         " <?php if($edit->getMonitoramentoAtividades() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getMonitoramentoAtividades(); ?></textarea>
-                         <span id="contando2" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                         <!-- <span id="contando2" style="font-family:verdana;">limite de 500 caracteres.</span><br/> -->
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -1938,9 +1938,9 @@
                         <option value="1" <?=($edit->getEstrategiaComunicacao() != '')?'selected':''?>
                         >Sim, qual?</option>
                     </select>
-                    <textarea type="text"  onkeyup="caracterTextarea(this.value,500,'contando3')"  id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
+                    <textarea type="text"  onkeyup="caracterTextarea(this.value,500,'contando3')"  id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva aqui. Limite de 500 caracteres...
 " <?php if($edit->getEstrategiaComunicacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getEstrategiaComunicacao(); ?></textarea>
-<span id="contando3" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+<!-- <span id="contando3" style="font-family:verdana;">limite de 500 caracteres.</span><br/> -->
                     <script>
 
                         var dropdownComun = document.getElementById('iniciativa-comunicacao');
@@ -1990,9 +1990,9 @@
                         <option value="1" <?=($edit->getPremiacaoCertificacao() != '')?'selected':''?>
                         >Sim, quais?</option>    
                     </select>
-                    <textarea type="text" id="inputPremiacao" onkeyup="caracterTextarea(this.value,500,'contando4')" name="inputPremiacao" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
+                    <textarea type="text" id="inputPremiacao" onkeyup="caracterTextarea(this.value,500,'contando4')" name="inputPremiacao" class="f1-last-name form-control" maxlength="500" placeholder="Descreva aqui. Limite de 500 caracteres....
 " <?php if($edit->getPremiacaoCertificacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getPremiacaoCertificacao(); ?></textarea>
- <span id="contando4" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+ <!-- <span id="contando4" style="font-family:verdana;">limite de 500 caracteres.</span><br/> -->
                     <script>
 
                         var dropdown = document.getElementById('premiacao');

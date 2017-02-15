@@ -990,7 +990,7 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim</option>
                     </select>
-                    <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando')" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? Limite de 500 caracteres...
+                    <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando')" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Quais foram os resultados comprovados alcançados até hoje? Limite de 500 caracteres...
                         "style='display: none'/></textarea>
                         <!-- <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/> -->
                     <script>
@@ -1039,7 +1039,7 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
                     </select>
-                    <textarea type="text"  onkeyup="caracterTextarea(this.value,500,'contando5')" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação. Limite de 500 caracteres...
+                    <textarea type="text"  onkeyup="caracterTextarea(this.value,500,'contando5')" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva aqui. Limite de 500 caracteres...
 "style='display: none'/></textarea>
 <!-- <span id="contando5" style="font-family:verdana;">limite de 500 caracteres.</span><br/> -->
                     <script>
@@ -1079,7 +1079,7 @@
 
       <!-- 29 Organizacao-->
 
-<h4>20. A sua organizaçāo recebeu premiações, certificações etc.?*</h4>
+<h4>20. A sua organizaçāo recebeu premiações, certificações, etc.?*</h4>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>

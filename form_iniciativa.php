@@ -830,7 +830,7 @@ s
              -->    
 
 
-                 <h4>14 Quais os principais públicos diretamente atendidos por sua iniciativa? Selecione até três.*</h4>
+                 <h4>14. Quais os principais públicos diretamente atendidos por sua iniciativa? Selecione até três.*</h4>
 
              <tbody>
 
@@ -961,9 +961,9 @@ s
                         <option value="0">Nāo</option>
                         <option value="1">Sim</option>
                     </select>
-                    <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando2')" name="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
+                    <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando2')" name="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Quais foram os resultados comprovados alcançados até hoje? Limite de 500 caracteres..
                         "style='display: none' /></textarea>
-                        <span id="contando2" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                        <!-- <span id="contando2" style="font-family:verdana;">limite de 500 caracteres.</span><br/> -->
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -1001,7 +1001,7 @@ s
 
 <!-- 27 Iniciativa-->
 
-<h5>18. A sua Iniciativa tem uma estratégia de comunicação própria?*</h5>
+<h5>18. A sua iniciativa tem uma estratégia de comunicação própria?*</h5>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -1010,9 +1010,9 @@ s
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
                     </select>
-                    <textarea type="text" id="inputComunicacaoOng" onkeyup="caracterTextarea(this.value,500,'contando3')" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
+                    <textarea type="text" id="inputComunicacaoOng" onkeyup="caracterTextarea(this.value,500,'contando3')" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva aqui. Limite de 500 caracteres...
 "style='display: none' /></textarea>
-<span id="contando3" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+<!-- <span id="contando3" style="font-family:verdana;">limite de 500 caracteres.</span><br/> -->
                     <script>
 
                         var dropdownComun = document.getElementById('iniciativa-comunicacao');
@@ -1050,7 +1050,7 @@ s
 
       <!-- 28 Iniciativa-->
 
-<h5>19. A sua Iniciativa recebeu premiações, certificações etc.?*</h5>
+<h5>19. A sua Iniciativa recebeu premiações, certificações, etc.?*</h5>
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="premiacao" name="premiacao"name="comunicacao" required>
@@ -1059,9 +1059,9 @@ s
                         <option value="0">Nāo</option>
                         <option value="1">Sim, quais?</option>    
                     </select>
-                    <textarea type="text" id="inputPremiacao" onkeyup="caracterTextarea(this.value,500,'contando4')" name="inputPremiacao" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
+                    <textarea type="text" id="inputPremiacao" onkeyup="caracterTextarea(this.value,500,'contando4')" name="inputPremiacao" class="f1-last-name form-control" maxlength="500" placeholder="Descreva aqui. Limite de 500 caracteres...
 "style='display: none'></textarea>
-<span id="contando4" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+<!-- <span id="contando4" style="font-family:verdana;">limite de 500 caracteres.</span><br/> -->
                     <script>
 
                         var dropdown = document.getElementById('premiacao');
