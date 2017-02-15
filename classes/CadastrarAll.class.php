@@ -1025,9 +1025,7 @@ class CadastrarAll extends Conexao {
                 foreach ($temas  as $tema){
 
                     $inserir_tema->bindValue(1, $tema);
-                    echo "temas";
-                    echo $this->getTemasArteCultura();
-                    echo implode(",", $this->getTemasArteCultura());
+
                     
                     if($tema == "arte_cultura"){
                         $inserir_tema->bindValue(2, implode(",", (array)$this->getTemasArteCultura())); 
