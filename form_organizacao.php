@@ -809,6 +809,54 @@
                  </div>  --> 
 
 
+                 <h4>14 Quais os principais públicos diretamente atendidos por sua organização? Selecione até três.*</h4>
+                   
+                   <tr>
+                    <td><input type="checkbox" name="publico[ ]" value="publico" class="no-margin" onclick="verificar2()"></td>
+                    
+                    <td class="publico_alvo" style="width:150px">
+                        <input type="checkbox" name="Empresas[ ]" value="Empresas">Empresas<br>
+                        <input type="checkbox" name="Instituições públicas[ ]" value="Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher<br>
+                        <input type="checkbox" name="Movimentos, coletivos, redes, fóruns[ ]" value="Movimentos, coletivos, redes, fóruns">Movimentos, coletivos, redes, fóruns<br>
+                        <input type="checkbox" name="Adolescentes e jovens[ ]" value="Adolescentes e jovens">Adolescentes e jovens<br>
+                        <input type="checkbox" name="Homens[ ]" value="Homens">Homens<br>
+                        <input type="checkbox" name="Mulheres[ ]" value="Mulheres">Mulheres<br>
+                    </td>   
+
+                          <script>
+                            var CheckMaximo = 3;
+
+                            function verificar2() {
+                            var Marcados = 1;
+                            var objCheck = $("input[name='publico[ ]']");
+                            //Percorrendo os checks para ver quantos foram selecionados:
+                            for (var iLoop=0; iLoop<objCheck.length; iLoop++) {
+                            //Se o número máximo de checkboxes ainda não tiver sido atingido, continua a verificação:
+                                if (objCheck[iLoop].checked) {
+                                    Marcados++;
+                                }
+                                
+                                if (Marcados <= CheckMaximo) {
+                                //Habilitando todos os checkboxes, pois o máximo ainda não foi alcançado.
+                                for (var i=0; i<objCheck.length; i++) {
+                                    objCheck[i].disabled = false;
+                                }       
+                                //Caso contrário, desabilitar o checkbox;
+                                //Nesse caso, é necessário percorrer todas as opções novamente, desabilitando as não checadas;
+                                
+                                } else {
+                                    for (var i=0; i<objCheck.length; i++) {
+                                        if(objCheck[i].checked == false) {
+                                            objCheck[i].disabled = true;
+                                        }       
+                                    }
+                                }
+                              }
+                           }
+
+           </script>
+
+                <!--
                  <h4>14. Quais os principais públicos diretamente atendidos por sua organização? Selecione até três.*</h4>
 
                  <div class="form-group">
@@ -824,6 +872,8 @@
                         <option value="Mulheres">Mulheres</option>
                            
                     </select>
+
+                -->
 
                  <h4>15. Nomeie e descreva as iniciativas e/ou projetos da sua organização que trabalham com empoderamento das mulheres.*</h4>
                  
