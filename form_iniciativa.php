@@ -1148,20 +1148,20 @@ s
                 <h5>Cidade*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cidade</label>
-                    <select class="f1-last-name form-control" name="cidade" id="cidades"required> 
+                    <select class="f1-last-name form-control" name="cidade" id="cidades" required> 
                         <option value="escolha uma cidade"></option>
                     </select> 
                 </div>
                 <h5>Bairro*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Bairro*</label>
-                    <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control"required >
+                    <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control" required >
                         
                 <h5>Rua*</h5>        
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-facebook">Rua*</label>
-                    <input type="text" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control"required >
+                    <input type="text" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control" required >
                         
                 <h5>Número*</h5>        
                 </div>

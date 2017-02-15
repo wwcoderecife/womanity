@@ -91,7 +91,7 @@
                     <input type="email" name="email_1"  value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="inputEmail1" required >
                    
                 </div>
-                <h5>Telefone</h5>
+                <h5>Telefone*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
                     <input type="tel" onblur="ExitField('inputTel1','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" name="telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1" required >
@@ -1159,7 +1159,7 @@
                 <h5>Regiāo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Região</label>
-                    <select class="f1-last-name form-control" name="regiao" id="regiao"required>
+                    <select class="f1-last-name form-control" name="regiao" id="regiao" required>
                         <option value="escolha uma regiāo"></option>
                         <option value="norte">Norte</option>
                         <option value="nordeste">Nordeste</option>
@@ -1179,7 +1179,7 @@
                 <h5>Cidade*</h5>
                 <div class="form-group">
                     <label class="sr-only" >Cidade</label>
-                    <select class="f1-last-name form-control" name="cidade" id="cidades"required> 
+                    <select class="f1-last-name form-control" name="cidade" id="cidades" required> 
                         <option value="escolha uma cidade"></option>
                     </select> 
                 </div>
@@ -1187,27 +1187,27 @@
                 <h5>Bairro*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Bairro</label>
-                <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control"required>
+                <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control" required>
                 </div>
                 <h5>Rua*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-facebook">Rua</label>
-                    <input type="text" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control"required>
+                    <input type="text" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control" required>
                 </div>
                 <h5>Número*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número</label>
-                    <input type="text" name="numero"  placeholder="Número...*" class="f1-last-name form-control"required>
+                    <input type="text" name="numero"  placeholder="Número...*" class="f1-last-name form-control" required>
                 </div>
                 <h5>Complemento</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Complemento</label>
                     <input type="text" name="complemento" placeholder="Complemento..." class="f1-last-name form-control">
                 </div>
-                 <h5>Cep</h5>
+                 <h5>Cep*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep</label>
-                    <input type="text" name="cep" onblur="ExitField('inputCep','msgCep','Cep inválido, número deve conter 9 caracteres',9);" id="inputCep" placeholder="Cep xx-xxx-xxx*" class="f1-last-name form-control cep"required>
+                    <input type="text" name="cep" onblur="ExitField('inputCep','msgCep','Cep inválido, número deve conter 9 caracteres',9);" id="inputCep" placeholder="Cep xx-xxx-xxx*" class="f1-last-name form-control cep" required>
 		    <label id="msgCep"></label>	
                 </div> 
 
