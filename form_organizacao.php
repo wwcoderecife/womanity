@@ -992,7 +992,7 @@
                     </select>
                     <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando')" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
                         "style='display: none'/></textarea>
-                        <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                        
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -1005,9 +1005,10 @@
 
                                 
                                 if(dropdownAvaliacao.options[dropdownAvaliacao.selectedIndex].value == "1") {
-                                    //faz algo quando o valor selecionado for outros
+                                    //faz algo quando o valor selecionado for sim
                                     console.log('Selecionou o valor');
-                                    //mostra o input quando o valor selecionado for outros
+                                    //mostra o input quando o valor selecionado for sim
+                                    <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                                     
                                     meuInput1.style.display = 'block';
                                 }else{
