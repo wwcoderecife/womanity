@@ -1645,6 +1645,9 @@
 
                         <option value="Adolescentes e jovens" <?=($edit->getPublicoAtendido() == 'Adolescentes e jovens')?'selected':''?>
                             >Adolescentes e jovens</option>
+                            
+                        <option value="Crianças" <?=($edit->getPublicoAtendido() == 'Crianças')?'selected':''?>
+                            >Crianças</option>
 
                         <option value="Homens" <?=($edit->getPublicoAtendido() == 'Homens')?'selected':''?>
                             >Homens</option>

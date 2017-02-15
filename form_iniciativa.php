@@ -843,6 +843,7 @@ s
                         <input type="checkbox" name="publico_alvo[ ]" value="Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher" onclick="verificar2()">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher<br>
                         <input type="checkbox" name="publico_alvo[ ]" value="Movimentos, coletivos, redes, fóruns" onclick="verificar2()">Movimentos, coletivos, redes, fóruns<br>
                         <input type="checkbox" name="publico_alvo[ ]" value="Adolescentes e jovens" onclick="verificar2()">Adolescentes e jovens<br>
+                        <input type="checkbox" name="publico_alvo[ ]" value="Crianças" onclick="verificar2()">Crianças<br>
                         <input type="checkbox" name="publico_alvo[ ]" value="Homens" onclick="verificar2()">Homens<br>
                         <input type="checkbox" name="publico_alvo[ ]" value="Mulheres" onclick="verificar2()">Mulheres<br>
                     </td> 
