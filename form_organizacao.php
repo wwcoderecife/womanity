@@ -329,9 +329,10 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" required  id="pessoas_beneficiadas" name="pessoas_beneficiadas">
                         <option value=""></option>
-                        <option value="até 50">1-5</option>
+                        <option value="até 50">até 50</option>
                         <option value="51-250">51-250</option>
                         <option value="251-500">251-500</option>
+                        <option value="501-1000">501-1000</option>
                         <option value="1001-2500">1001-2500</option>
                         <option value="2501-5000">2501-5000</option>
                         <option value="5001-10000">5001-10000</option>
