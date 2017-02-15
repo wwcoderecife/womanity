@@ -992,7 +992,7 @@
                     </select>
                     <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando')" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Quais foram os resultados comprovados alcançados até hoje? Limite de 500 caracteres...
                         "style='display: none'/></textarea>
-                        <!-- <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/> -->
+                        <span id="contando" style="font-family:verdana;"><!-- limite de 500 caracteres.--></span><br/> 
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -1041,7 +1041,7 @@
                     </select>
                     <textarea type="text"  onkeyup="caracterTextarea(this.value,500,'contando5')" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva aqui. Limite de 500 caracteres...
 "style='display: none'/></textarea>
-<!-- <span id="contando5" style="font-family:verdana;">limite de 500 caracteres.</span><br/> -->
+ <span id="contando5" style="font-family:verdana;"><!--limite de 500 caracteres.--></span><br/> 
                     <script>
 
                         var dropdownComun = document.getElementById('organizacao-comunicacao');
@@ -1091,7 +1091,7 @@
                     </select>
                     <textarea type="text" id="inputPremiacaoOng" onkeyup="caracterTextarea(this.value,500,'contando6')" name="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva aqui. Limite de 500 caracteres....
 " style='display: none'/></textarea>
-<!-- <span id="contando6" style="font-family:verdana;">limite de 500 caracteres.</span><br/> -->
+ <span id="contando6" style="font-family:verdana;"><!--limite de 500 caracteres.--></span><br/> 
                     <script>
 
                     var dropdown = document.getElementById('premiacao');
