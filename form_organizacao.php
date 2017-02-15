@@ -990,9 +990,9 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim</option>
                     </select>
-                    <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando')" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
+                    <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando')" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? Limite de 500 caracteres...
                         "style='display: none'/></textarea>
-                        
+                        <!-- <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/> -->
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -1005,10 +1005,9 @@
 
                                 
                                 if(dropdownAvaliacao.options[dropdownAvaliacao.selectedIndex].value == "1") {
-                                    //faz algo quando o valor selecionado for sim
+                                    //faz algo quando o valor selecionado for outros
                                     console.log('Selecionou o valor');
-                                    //mostra o input quando o valor selecionado for sim
-                                    <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                                    //mostra o input quando o valor selecionado for outros
                                     
                                     meuInput1.style.display = 'block';
                                 }else{
@@ -1040,9 +1039,9 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
                     </select>
-                    <textarea type="text"  onkeyup="caracterTextarea(this.value,500,'contando5')" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
+                    <textarea type="text"  onkeyup="caracterTextarea(this.value,500,'contando5')" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação. Limite de 500 caracteres...
 "style='display: none'/></textarea>
-<span id="contando5" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+<!-- <span id="contando5" style="font-family:verdana;">limite de 500 caracteres.</span><br/> -->
                     <script>
 
                         var dropdownComun = document.getElementById('organizacao-comunicacao');
@@ -1090,9 +1089,9 @@
                         <option value="1">Sim, quais?</option> 
                         
                     </select>
-                    <textarea type="text" id="inputPremiacaoOng" onkeyup="caracterTextarea(this.value,500,'contando6')" name="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
-"style='display: none'/></textarea>
-<span id="contando6" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                    <textarea type="text" id="inputPremiacaoOng" onkeyup="caracterTextarea(this.value,500,'contando6')" name="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva aqui. Limite de 500 caracteres....
+" style='display: none'/></textarea>
+<!-- <span id="contando6" style="font-family:verdana;">limite de 500 caracteres.</span><br/> -->
                     <script>
 
                     var dropdown = document.getElementById('premiacao');

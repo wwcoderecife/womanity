@@ -1909,9 +1909,9 @@ s
                         <option value="sim" <?=($edit->getMonitoramentoAtividades() != '')?'selected':''?>
                         >Sim</option>
                     </select>
-                    <textarea type="text" onkeyup="caracterTextarea(this.value,500,'contando5')" id="inputAvaliacaoOng" name="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres.."
+                    <textarea type="text" onkeyup="caracterTextarea(this.value,500,'contando5')" id="inputAvaliacaoOng" name="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? Limite de 500 caracteres.."
                         <?php if($edit->getMonitoramentoAtividades() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getMonitoramentoAtividades(); ?></textarea>
-                        <span id="contando5" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                        <!-- <span id="contando5" style="font-family:verdana;">limite de 500 caracteres.</span><br/> -->
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
