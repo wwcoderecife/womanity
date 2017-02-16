@@ -1203,13 +1203,10 @@
                 <h5>Cidade*</h5>
                 <div class="form-group">
                     <label class="sr-only" >Cidade</label>
-<<<<<<< HEAD
+
                     <select class="f1-last-name form-control" name="cidade" id="cidades" required> 
                         <option value=""></option>
-=======
-                    <select class="f1-last-name form-control" name="cidade" id="cidades"required> 
-                        <option value="escolha uma cidade"></option>
->>>>>>> origin/master
+
                     </select> 
                 </div>
 
