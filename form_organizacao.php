@@ -1171,7 +1171,7 @@
                 
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="button" class="btn btn-next">Próximo</button>
+                    <button type="button" class="btn btn-next" onclick= "return validacampobranco2();">Próximo</button>
                 </div>
 
 </fieldset>
@@ -1214,17 +1214,17 @@
                 <h5>Bairro*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Bairro</label>
-                <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control"required>
+                <input type="text" name="bairro" placeholder="Bairro..." id="bairro" class="f1-last-name form-control"required>
                 </div>
                 <h5>Rua*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-facebook">Rua</label>
-                    <input type="text" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control"required>
+                    <input type="text" name="rua" placeholder="Rua/Av...*" id="rua" class="f1-last-name form-control"required>
                 </div>
                 <h5>Número*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número</label>
-                    <input type="text" name="numero"  placeholder="Número...*" class="f1-last-name form-control" required>
+                    <input type="text" name="numero" id="numero"  placeholder="Número...*" class="f1-last-name form-control" required>
                 </div>
                 <h5>Complemento</h5>
                 <div class="form-group">
@@ -1234,13 +1234,13 @@
                  <h5>Cep*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cep</label>
-                    <input type="text" name="cep" onblur="ExitField('inputCep','msgCep','Cep inválido, número deve conter 9 caracteres',9);" id="inputCep" placeholder="Cep xx-xxx-xxx*" class="f1-last-name form-control cep" required>
+                    <input type="text" name="cep" id="cep" onblur="ExitField('inputCep','msgCep','Cep inválido, número deve conter 9 caracteres',9);" id="inputCep" placeholder="Cep xx-xxx-xxx*" class="f1-last-name form-control cep" required>
 		    <label id="msgCep"></label>	
                 </div> 
 
                <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="button" class="btn btn-next">Próximo</button>
+                    <button type="button" class="btn btn-next" onclick="return validacampobranco3()">Próximo</button>
                 </div>
 
             </fieldset>
@@ -1342,7 +1342,7 @@
                 </div>
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="submit" class="btn btn-submit">Enviar</button>
+                    <button type="submit" class="btn btn-submit" onclick="return validacampobranco4();">Enviar</button>
                 </div>
             </fieldset>
         </form>
