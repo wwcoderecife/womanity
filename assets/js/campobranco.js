@@ -55,16 +55,18 @@ var reason = "";
 
  function validacampobranco2(){
 
+ 	validateFormOnSubmit(document.getElementById("organizacao-cnpj"));
  	validateFormOnSubmit(document.getElementById("inputcnpj"));
  	validateFormOnSubmit(document.getElementById("inputNomeOng"));
  	validateFormOnSubmit(document.getElementById("inputelOng"));
  	validateFormOnSubmit(document.getElementById("inputEmailOng"));
  	validateFormOnSubmit(document.getElementById("organizacao-tipo"));
- 	validateFormOnSubmit(document.getElementById("year_organizacao"));
  	validateFormOnSubmit(document.getElementById("pessoas_envolvidas"));
  	validateFormOnSubmit(document.getElementById("pessoas_beneficiadas"));
+ 	validateFormOnSubmit(document.getElementById("subtemas"));
  	validateFormOnSubmit(document.getElementById("sobre"));
  	validateFormOnSubmit(document.getElementById("publico_alvo"));
+ 	validateFormOnSubmit(document.getElementById("nome"));
  	validateFormOnSubmit(document.getElementById("sobre_iniciativa_ong1"));
  	validateFormOnSubmit(document.getElementById("estado_iniciativa"));	
  	validateFormOnSubmit(document.getElementById("avaliacao"));	
