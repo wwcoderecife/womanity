@@ -441,7 +441,7 @@
         <h5>Escolha até 5 (cinco) temas dentro da sua área de atuação*:</h5>
         <div class="form-group" style="border: 1px solid #ddd">
         <div class="table-responsive">
-        <table id="form1" name="table_temas"class="table table-hover col-sm-12">
+        <table id="form1" name="table_temas"class="table table-hover col-sm-12" required>
 
              <thead>
                 <tr>
@@ -1173,7 +1173,7 @@ s
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" name="regiao" id="regiao" required>
                         <div class="help-block with-errors"></div>
-                        <option value="escolha uma regiāo"></option>
+                        <option value=""></option>
                         <option value="norte">Norte</option>
                         <option value="nordeste">Nordeste</option>
                         <option value="centro-oeste">Centro-Oeste</option>
@@ -1185,14 +1185,14 @@ s
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">UF</label>
                     <select class="f1-last-name form-control" name="estado" id="estados" required>
-                        <option value="escolha um estado"></option>
+                        <option value=""></option>
                     </select> 
                 </div>
                 <h5>Cidade*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Cidade</label>
                     <select class="f1-last-name form-control" name="cidade" id="cidades" required> 
-                        <option value="escolha uma cidade"></option>
+                        <option value=""></option>
                     </select> 
                 </div>
                 <h5>Bairro*</h5>

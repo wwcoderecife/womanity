@@ -606,7 +606,7 @@
             <h5>Escolha até 5 (cinco) temas dentro da sua área de atuação*:</h5>
             <div class="form-group" style="border: 1px solid #ddd">
             <div class="table-responsive">
-            <table id="form1" required   name="table_temas"class="table table-hover col-sm-12" >
+            <table id="form1" required name="table_temas"class="table table-hover col-sm-12" >
 
              <thead>
                 <tr>

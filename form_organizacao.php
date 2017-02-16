@@ -436,7 +436,7 @@
 
             <div class="form-group" style="border: 1px solid #ddd">
             <div class="table-responsive">
-            <table id="form1" name="table_temas"class="table table-hover col-sm-12">
+            <table id="form1" required name="table_temas"class="table table-hover col-sm-12">
 
              <thead>
                 <tr>
@@ -1184,7 +1184,7 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Região</label>
                     <select class="f1-last-name form-control" name="regiao" id="regiao" required>
-                        <option value="escolha uma regiāo"></option>
+                        <option value=""></option>
                         <option value="norte">Norte</option>
                         <option value="nordeste">Nordeste</option>
                         <option value="centro-oeste">Centro-Oeste</option>
@@ -1196,7 +1196,7 @@
                  <div class="form-group">
                     <label class="sr-only" >Estado</label>
                     <select class="f1-last-name form-control" name="estado" id="estados" required>
-                        <option value="escolha um estado"></option>
+                        <option value=""></option>
                         
                     </select> 
                 </div>
@@ -1204,7 +1204,7 @@
                 <div class="form-group">
                     <label class="sr-only" >Cidade</label>
                     <select class="f1-last-name form-control" name="cidade" id="cidades" required> 
-                        <option value="escolha uma cidade"></option>
+                        <option value=""></option>
                     </select> 
                 </div>
 
