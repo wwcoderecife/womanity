@@ -35,6 +35,126 @@
               $(".form-ong input").attr('readonly',false);
               $(".form-ong textarea").attr('readonly',false);
               $(".edit-button").attr('disabled', false);
+               
+              if ( $('#arte_cultura').is( ":checked" ) ){
+                    $(".temas_arte_cultura").attr("disabled", false);
+              }else{
+                $(".temas_arte_cultura").attr("disabled", true);
+                $( ".temas_arte_cultura" ).prop( "checked", false );
+              };
+               
+               if ( $('#ciencia_tecnologia').is( ":checked" ) ){
+                    $(".temas_ciencia_tecnologia").attr("disabled", false);
+                }else{
+                    $(".temas_ciencia_tecnologia").attr("disabled", true);
+                    $( ".temas_ciencia_tecnologia" ).prop( "checked", false );
+                };
+               
+               if ( $('#democracia_participação_politica').is( ":checked" ) ){
+                    $(".temas_democracia_politica").attr("disabled", false);
+                }else{
+                    $(".temas_democracia_politica").attr("disabled", true);
+                    $( ".temas_democracia_politica" ).prop( "checked", false );
+                };
+               
+               if ( $('#educacao_formacao').is( ":checked" ) ){
+                    $(".temas_educacao_formacao").attr("disabled", false);
+                }else{
+                    $(".temas_educacao_formacao").attr("disabled", true);
+                    $( ".temas_educacao_formacao" ).prop( "checked", false );
+                };
+               
+               if ( $('#empreendedorismo_feminino_autonomia_economica').is( ":checked" ) ){
+                    $(".temas_empreendedorismo_feminino").attr("disabled", false);
+                }else{
+                    $(".temas_empreendedorismo_feminino").attr("disabled", true);
+                    $( ".temas_empreendedorismo_feminino" ).prop( "checked", false );
+                };
+               
+               if ( $('#enfrentamento_violencia').is( ":checked" ) ){
+                    $(".temas_enfretamento_violencia").attr("disabled", false);
+                }else{
+                    $(".temas_enfretamento_violencia").attr("disabled", true);
+                    $( ".temas_enfretamento_violencia" ).prop( "checked", false );
+                };
+               
+               if ( $('#equidade_Condicoes_trabalho').is( ":checked" ) ){
+                    $(".temas_equidade_trabalho").attr("disabled", false);
+                }else{
+                    $(".temas_equidade_trabalho").attr("disabled", true);
+                    $( ".temas_equidade_trabalho" ).prop( "checked", false );
+                };
+               
+               if ( $('#esporte').is( ":checked" ) ){
+                    $(".temas_esportes").attr("disabled", false);
+                }else{
+                    $(".temas_esportes").attr("disabled", true);
+                    $( ".temas_esportes" ).prop( "checked", false );
+                };
+               
+               if ( $('#indigenas').is( ":checked" ) ){
+                    $(".temas_indigenas").attr("disabled", false);
+                }else{
+                    $(".temas_indigenas").attr("disabled", true);
+                    $( ".temas_indigenas" ).prop( "checked", false );
+                };
+               
+               if ( $('#LGBTT').is( ":checked" ) ){
+                    $(".temas_lgbtt").attr("disabled", false);
+                }else{
+                    $(".temas_lgbtt").attr("disabled", true);
+                    $( ".temas_lgbtt" ).prop( "checked", false );
+                };
+               
+               if ( $('#masculinidade').is( ":checked" ) ){
+                    $(".temas_masculinidades").attr("disabled", false);
+                }else{
+                    $(".temas_masculinidades").attr("disabled", true);
+                    $( ".temas_masculinidades" ).prop( "checked", false );
+                };
+               
+               if ( $('#meio_ambiente').is( ":checked" ) ){
+                    $(".temas_meio_ambiente").attr("disabled", false);
+                }else{
+                    $(".temas_meio_ambiente").attr("disabled", true);
+                    $( ".temas_meio_ambiente" ).prop( "checked", false );
+                };
+               
+               if ( $('#midia_comunicacao').is( ":checked" ) ){
+                    $(".temas_midia_comunicacao").attr("disabled", false);
+                }else{
+                    $(".temas_midia_comunicacao").attr("disabled", true);
+                    $( ".temas_midia_comunicacao" ).prop( "checked", false );
+                };
+               
+               if ( $('#moradia').is( ":checked" ) ){
+                    $(".temas_moradia").attr("disabled", false);
+                }else{
+                    $(".temas_moradia").attr("disabled", true);
+                    $( ".temas_moradia" ).prop( "checked", false );
+                };
+               
+               if ( $('#negritude').is( ":checked" ) ){
+                    $(".temas_negritude").attr("disabled", false);
+                }else{
+                    $(".temas_negritude").attr("disabled", true);
+                    $( ".temas_negritude" ).prop( "checked", false );
+                };
+               
+               if ( $('#paz_seguranca_publica').is( ":checked" ) ){
+                    $(".temas_paz_seguranca").attr("disabled", false);
+                }else{
+                    $(".temas_paz_seguranca").attr("disabled", true);
+                    $( ".temas_paz_seguranca" ).prop( "checked", false );
+                };
+               
+               if ( $('#saude_bemestar').is( ":checked" ) ){
+                    $(".temas_saude_bemestar").attr("disabled", false);
+                }else{
+                    $(".temas_saude_bemestar").attr("disabled", true);
+                    $( ".temas_saude_bemestar" ).prop( "checked", false );
+                };
+                
                if ($('input[name="nao_tem_orcamento[]"]:checked').length > 0){
 
                         $('#nao_tenho_orcamento_input').attr('value', 'Não tenho orçamento');
@@ -616,7 +736,7 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]" value="arte_cultura" class="no-margin" onclick="verificar()"
+                    <td><input type="checkbox" id="arte_cultura" name="temas[ ]" value="arte_cultura" class="no-margin" onclick="verificar()"
                         <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('arte_cultura', $array_temas[$i])) : ?> checked="checked" <?php endif; 
@@ -625,27 +745,27 @@
                     <td>Arte e Cultura.</td>
                     <td>Promoção do acesso de mulheres à cultura e/ou incentivo à produção das várias expressões artísticas e valorização de práticas culturais e tradicionais.</td>
                     <td class="temas_regioes" style="width:150px">
-                        <input type="checkbox" name="temas_arte_cultura[ ]" value="Norte" 
+                        <input type="checkbox" class="temas_arte_cultura" name="temas_arte_cultura[ ]" value="Norte" 
                         <?php 
                             if(in_array('Norte', $array_arte_cultura)) : ?> checked="checked" <?php endif; 
                          ?>
                         >Norte<br>
-                        <input type="checkbox" name="temas_arte_cultura[ ]" value="Nordeste"
+                        <input type="checkbox" class="temas_arte_cultura" name="temas_arte_cultura[ ]" value="Nordeste"
                         <?php 
                             if(in_array('Nordeste', $array_arte_cultura)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Nordeste<br>
-                        <input type="checkbox" name="temas_arte_cultura[ ]" value="Centro-Oeste"
+                        <input type="checkbox" class="temas_arte_cultura" name="temas_arte_cultura[ ]" value="Centro-Oeste"
                         <?php 
                             if(in_array('Centro-Oeste', $array_arte_cultura)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Centro-Oeste<br>
-                        <input type="checkbox" name="temas_arte_cultura[ ]" value="Sul"
+                        <input type="checkbox" class="temas_arte_cultura" name="temas_arte_cultura[ ]" value="Sul"
                         <?php 
                             if(in_array('Sul', $array_arte_cultura)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Sul<br>
-                        <input type="checkbox" name="temas_arte_cultura[ ]" value="Sudeste"
+                        <input type="checkbox" class="temas_arte_cultura" name="temas_arte_cultura[ ]" value="Sudeste"
                         <?php 
                             if(in_array('Sudeste', $array_arte_cultura)) : ?> checked="checked" <?php endif; 
                         ?>
@@ -653,7 +773,7 @@
                     </td> 
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="ciencia_tecnologia"class="no-margin" onclick="verificar()"
+                    <td><input type="checkbox" id="ciencia_tecnologia" name="temas[ ]"value="ciencia_tecnologia"class="no-margin" onclick="verificar()"
                          <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('ciencia_tecnologia', $array_temas[$i])) : ?> checked="checked" <?php endif; 
@@ -662,27 +782,27 @@
                     <td>Ciência e Tecnologia.</td>
                     <td>Promoção do acesso a linguagens, equipamentos e/ou a produção de ciência e tecnologia por mulheres.</td>
                     <td class="temas_regioes" style="width:150px">
-                        <input type="checkbox" name="temas_ciencia_tecnologia[ ]" value="Norte"
+                        <input type="checkbox" class="temas_ciencia_tecnologia" name="temas_ciencia_tecnologia[ ]" value="Norte"
                         <?php 
                             if(in_array('Norte', $array_ciencia_tecnologia)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Norte<br>
-                        <input type="checkbox" name="temas_ciencia_tecnologia[ ]" value="Nordeste"
+                        <input type="checkbox" class="temas_ciencia_tecnologia" name="temas_ciencia_tecnologia[ ]" value="Nordeste"
                         <?php 
                             if(in_array('Nordeste', $array_ciencia_tecnologia)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Nordeste<br>
-                        <input type="checkbox" name="temas_ciencia_tecnologia[ ]" value="Centro-Oeste"
+                        <input type="checkbox" class="temas_ciencia_tecnologia" name="temas_ciencia_tecnologia[ ]" value="Centro-Oeste"
                         <?php 
                             if(in_array('Centro-Oeste', $array_ciencia_tecnologia)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Centro-Oeste<br>
-                        <input type="checkbox" name="temas_ciencia_tecnologia[ ]" value="Sul"
+                        <input type="checkbox" class="temas_ciencia_tecnologia" name="temas_ciencia_tecnologia[ ]" value="Sul"
                         <?php 
                             if(in_array('Sul', $array_ciencia_tecnologia)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Sul<br>
-                        <input type="checkbox" name="temas_ciencia_tecnologia[ ]" value="Sudeste"
+                        <input type="checkbox" class="temas_ciencia_tecnologia" name="temas_ciencia_tecnologia[ ]" value="Sudeste"
                         <?php 
                             if(in_array('Sudeste', $array_ciencia_tecnologia)) : ?> checked="checked" <?php endif; 
                         ?>
@@ -690,7 +810,7 @@
                     </td>                    
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="democracia_participação_politica"class="no-margin" onclick="verificar()"
+                    <td><input type="checkbox" id="democracia_participação_politica" name="temas[ ]"value="democracia_participação_politica"class="no-margin" onclick="verificar()"
                          <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('democracia_participação_politica', $array_temas[$i])) : ?> checked="checked" <?php endif; 
@@ -699,27 +819,27 @@
                     <td> Democracia e Participação Política.</td>
                     <td>Ações de incentivo à participação de mulheres na vida política e democrática institucional (partidos, conselhos, órgãos e instâncias dos poderes executivo, legislativo e judiciário).</td>
                     <td class="temas_regioes" style="width:150px">
-                        <input type="checkbox" name="temas_democracia_politica[ ]" value="Norte"
+                        <input type="checkbox" class="temas_democracia_politica" name="temas_democracia_politica[ ]" value="Norte"
                         <?php 
                             if(in_array('Norte', $array_democracia_participação_politica)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Norte<br>
-                        <input type="checkbox" name="temas_democracia_politica[ ]" value="Nordeste"
+                        <input type="checkbox" class="temas_democracia_politica" name="temas_democracia_politica[ ]" value="Nordeste"
                         <?php 
                             if(in_array('Nordeste', $array_democracia_participação_politica)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Nordeste<br>
-                        <input type="checkbox" name="temas_democracia_politica[ ]" value="Centro-Oeste"
+                        <input type="checkbox" class="temas_democracia_politica" name="temas_democracia_politica[ ]" value="Centro-Oeste"
                         <?php 
                             if(in_array('Centro-Oeste', $array_democracia_participação_politica)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Centro-Oeste<br>
-                        <input type="checkbox" name="temas_democracia_politica[ ]" value="Sul"
+                        <input type="checkbox" class="temas_democracia_politica" name="temas_democracia_politica[ ]" value="Sul"
                         <?php 
                             if(in_array('Sul', $array_democracia_participação_politica)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Sul<br>
-                        <input type="checkbox" name="temas_democracia_politica[ ]" value="Sudeste"
+                        <input type="checkbox" class="temas_democracia_politica" name="temas_democracia_politica[ ]" value="Sudeste"
                         <?php 
                             if(in_array('Sudeste', $array_democracia_participação_politica)) : ?> checked="checked" <?php endif; 
                         ?>
@@ -728,7 +848,7 @@
                 </tr>
 
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="educacao_formacao"class="no-margin" onclick="verificar()"
+                    <td><input type="checkbox" id="educacao_formacao" name="temas[ ]"value="educacao_formacao"class="no-margin" onclick="verificar()"
                          <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('educacao_formacao', $array_temas[$i])) : ?> checked="checked" <?php endif; 
@@ -737,27 +857,27 @@
                     <td>Educação e Formação.</td>
                     <td>Oferta de educação formal (escolar ou acadêmica), incentivo à escolaridade; formação de atores sociais, ações de educação popular e informal.</td>
                     <td class="temas_regioes" style="width:150px">
-                        <input type="checkbox" name="temas_educacao_formacao[ ]" value="Norte"
+                        <input type="checkbox" class="temas_educacao_formacao" name="temas_educacao_formacao[ ]" value="Norte"
                         <?php 
                             if(in_array('Norte', $array_educacao_formacao)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Norte<br>
-                        <input type="checkbox" name="temas_educacao_formacao[ ]" value="Nordeste"
+                        <input type="checkbox" class="temas_educacao_formacao" name="temas_educacao_formacao[ ]" value="Nordeste"
                         <?php 
                             if(in_array('Nordeste', $array_educacao_formacao)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Nordeste<br>
-                        <input type="checkbox" name="temas_educacao_formacao[ ]" value="Centro-Oeste"
+                        <input type="checkbox" class="temas_educacao_formacao" name="temas_educacao_formacao[ ]" value="Centro-Oeste"
                         <?php 
                             if(in_array('Centro-Oeste', $array_educacao_formacao)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Centro-Oeste<br>
-                        <input type="checkbox" name="temas_educacao_formacao[ ]" value="Sul"
+                        <input type="checkbox" class="temas_educacao_formacao" name="temas_educacao_formacao[ ]" value="Sul"
                         <?php 
                             if(in_array('Sul', $array_educacao_formacao)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Sul<br>
-                        <input type="checkbox" name="temas_educacao_formacao[ ]" value="Sudeste"
+                        <input type="checkbox" class="temas_educacao_formacao" name="temas_educacao_formacao[ ]" value="Sudeste"
                         <?php 
                             if(in_array('Sudeste', $array_educacao_formacao)) : ?> checked="checked" <?php endif; 
                         ?>
@@ -766,7 +886,7 @@
                 </tr>
 
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]" value="empreendedorismo_feminino_autonomia_economica"class="no-margin" onclick="verificar()"
+                    <td><input type="checkbox" id="empreendedorismo_feminino_autonomia_economica" name="temas[ ]" value="empreendedorismo_feminino_autonomia_economica"class="no-margin" onclick="verificar()"
                          <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('empreendedorismo_feminino_autonomia_economica', $array_temas[$i])) : ?> checked="checked" <?php endif; 
@@ -775,27 +895,27 @@
                     <td>Empreendedorismo feminino e autonomia econômica.</td>
                     <td>Ações de incentivo ao empreendedorismo feminino e à autonomia econômica, por meio de capacitação e/ou financiamento, tais como cooperativismo, microcrédito, etc.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_empreendedorismo_feminino[ ]" value="Norte"
+                        <input type="checkbox" class="temas_empreendedorismo_feminino" name="temas_empreendedorismo_feminino[ ]" value="Norte"
                         <?php 
                             if(in_array('Norte', $array_empreendedorismo_feminino_autonomia_economica)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Norte<br>
-                        <input type="checkbox" name="temas_empreendedorismo_feminino[ ]" value="Nordeste"
+                        <input type="checkbox" class="temas_empreendedorismo_feminino" name="temas_empreendedorismo_feminino[ ]" value="Nordeste"
                         <?php 
                             if(in_array('Nordeste', $array_empreendedorismo_feminino_autonomia_economica)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Nordeste<br>
-                        <input type="checkbox" name="temas_empreendedorismo_feminino[ ]" value="Centro-Oeste"
+                        <input type="checkbox" class="temas_empreendedorismo_feminino" name="temas_empreendedorismo_feminino[ ]" value="Centro-Oeste"
                         <?php 
                             if(in_array('Centro-Oeste', $array_empreendedorismo_feminino_autonomia_economica)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Centro-Oeste<br>
-                        <input type="checkbox" name="temas_empreendedorismo_feminino[ ]" value="Sul"
+                        <input type="checkbox" class="temas_empreendedorismo_feminino" name="temas_empreendedorismo_feminino[ ]" value="Sul"
                         <?php 
                             if(in_array('Sul', $array_empreendedorismo_feminino_autonomia_economica)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Sul<br>
-                        <input type="checkbox" name="temas_empreendedorismo_feminino[ ]" value="Sudeste"
+                        <input type="checkbox" class="temas_empreendedorismo_feminino" name="temas_empreendedorismo_feminino[ ]" value="Sudeste"
                         <?php 
                             if(in_array('Sudeste', $array_empreendedorismo_feminino_autonomia_economica)) : ?> checked="checked" <?php endif; 
                         ?>
@@ -804,7 +924,7 @@
                 </tr>
 
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]" value="enfrentamento_violencia"class="no-margin" onclick="verificar()"
+                    <td><input type="checkbox" name="temas[ ]" id="enfrentamento_violencia" value="enfrentamento_violencia"class="no-margin" onclick="verificar()"
                          <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('enfrentamento_violencia', $array_temas[$i])) : ?> checked="checked" <?php endif; 
@@ -813,64 +933,64 @@
                     <td>Enfrentamento à Violência.</td>
                     <td>Trabalho de enfrentamento às mais variadas formas de violência, destinado a mulheres e homens.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_enfretamento_violencia[ ]" value="Norte"
+                        <input type="checkbox" class="temas_enfretamento_violencia" name="temas_enfretamento_violencia[ ]" value="Norte"
                         <?php 
                             if(in_array('Norte', $array_enfrentamento_violencia)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Norte<br>
-                        <input type="checkbox" name="temas_enfretamento_violencia[ ]" value="Nordeste"
+                        <input type="checkbox" class="temas_enfretamento_violencia" name="temas_enfretamento_violencia[ ]" value="Nordeste"
                         <?php 
                             if(in_array('Nordeste', $array_enfrentamento_violencia)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Nordeste<br>
-                        <input type="checkbox" name="temas_enfretamento_violencia[ ]" value="Centro-Oeste"
+                        <input type="checkbox" class="temas_enfretamento_violencia" name="temas_enfretamento_violencia[ ]" value="Centro-Oeste"
                         <?php 
                             if(in_array('Centro-Oeste', $array_enfrentamento_violencia)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Centro-Oeste<br>
-                        <input type="checkbox" name="temas_enfretamento_violencia[ ]" value="Sul"
+                        <input type="checkbox" class="temas_enfretamento_violencia" name="temas_enfretamento_violencia[ ]" value="Sul"
                         <?php 
                             if(in_array('Sul', $array_enfrentamento_violencia)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Sul<br>
-                        <input type="checkbox" name="temas_enfretamento_violencia[ ]" value="Sudeste"
+                        <input type="checkbox" class="temas_enfretamento_violencia" name="temas_enfretamento_violencia[ ]" value="Sudeste"
                         <?php 
                             if(in_array('Sudeste', $array_enfrentamento_violencia)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Sudeste<br>
                     </td>
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]" value="equidade_Condições_trabalho"class="no-margin" onclick="verificar()"
+                    <td><input type="checkbox" id="equidade_Condicoes_trabalho" name="temas[ ]" value="equidade_Condicoes_trabalho"class="no-margin" onclick="verificar()"
                          <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
-                            if(in_array('equidade_Condições_trabalho', $array_temas[$i])) : ?> checked="checked" <?php endif; 
+                            if(in_array('equidade_Condicoes_trabalho', $array_temas[$i])) : ?> checked="checked" <?php endif; 
                         } ?>
                     ></td>
                     <td>Equidade e Condições de Trabalho.</td>
                     <td>Oportunidades iguais para mulheres e homens no mercado de trabalho, divisão justa entre ambos os sexos, mesmas 
     possibilidades de desenvolvimento profissional e equipara çãosalarial;participação em cargos de liderança e conselho.</td>    
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_equidade_trabalho[ ]" value="Norte"
+                        <input type="checkbox" class="temas_equidade_trabalho" name="temas_equidade_trabalho[ ]" value="Norte"
                         <?php 
                             if(in_array('Norte', $array_equidade_Condições_trabalho)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Norte<br>
-                        <input type="checkbox" name="temas_equidade_trabalho[ ]" value="Nordeste"
+                        <input type="checkbox" class="temas_equidade_trabalho" name="temas_equidade_trabalho[ ]" value="Nordeste"
                         <?php 
                             if(in_array('Nordeste', $array_equidade_Condições_trabalho)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Nordeste<br>
-                        <input type="checkbox" name="temas_equidade_trabalho[ ]" value="Centro-Oeste"
+                        <input type="checkbox" class="temas_equidade_trabalho" name="temas_equidade_trabalho[ ]" value="Centro-Oeste"
                         <?php 
                             if(in_array('Centro-Oeste', $array_equidade_Condições_trabalho)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Centro-Oeste<br>
-                        <input type="checkbox" name="temas_equidade_trabalho[ ]" value="Sul"
+                        <input type="checkbox" class="temas_equidade_trabalho" name="temas_equidade_trabalho[ ]" value="Sul"
                         <?php 
                             if(in_array('Sul', $array_equidade_Condições_trabalho)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Sul<br>
-                        <input type="checkbox" name="temas_equidade_trabalho[ ]" value="Sudeste"
+                        <input type="checkbox" class="temas_equidade_trabalho" name="temas_equidade_trabalho[ ]" value="Sudeste"
                         <?php 
                             if(in_array('Sudeste', $array_equidade_Condições_trabalho)) : ?> checked="checked" <?php endif; 
                         ?>
@@ -879,7 +999,7 @@
                 </tr>
 
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="esporte"class="no-margin" onclick="verificar()"
+                    <td><input type="checkbox" id="esporte" name="temas[ ]"value="esporte"class="no-margin" onclick="verificar()"
                         <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('esporte', $array_temas[$i])) : ?> checked="checked" <?php endif; 
@@ -888,27 +1008,27 @@
                     <td>Esportes.</td>
                     <td>Oferta, promoção e incentivo à realização de práticas esportivas por meninas e mulheres, sobretudo em modalidades tradicionalmente dominadas por homens.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_esportes[ ]" value="Norte"
+                        <input type="checkbox" class="temas_esportes" name="temas_esportes[ ]" value="Norte"
                         <?php 
                             if(in_array('Norte', $array_esporte)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Norte<br>
-                        <input type="checkbox" name="temas_esportes[ ]" value="Nordeste"
+                        <input type="checkbox" class="temas_esportes" name="temas_esportes[ ]" value="Nordeste"
                         <?php 
                             if(in_array('Nordeste', $array_esporte)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Nordeste<br>
-                        <input type="checkbox" name="temas_esportes[ ]" value="Centro-Oeste"
+                        <input type="checkbox" class="temas_esportes" name="temas_esportes[ ]" value="Centro-Oeste"
                         <?php 
                             if(in_array('Centro-Oeste', $array_esporte)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Centro-Oeste<br>
-                        <input type="checkbox" name="temas_esportes[ ]" value="Sul"
+                        <input type="checkbox" class="temas_esportes" name="temas_esportes[ ]" value="Sul"
                         <?php 
                             if(in_array('Sul', $array_esporte)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Sul<br>
-                        <input type="checkbox" name="temas_esportes[ ]" value="Sudeste"
+                        <input type="checkbox" class="temas_esportes" name="temas_esportes[ ]" value="Sudeste"
                         <?php 
                             if(in_array('Sudeste', $array_esporte)) : ?> checked="checked" <?php endif; 
                         ?>
@@ -916,7 +1036,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="indigenas"class="no-margin" onclick="verificar()"
+                    <td><input type="checkbox" id="indigenas" name="temas[ ]"value="indigenas"class="no-margin" onclick="verificar()"
                         <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('indigenas', $array_temas[$i])) : ?> checked="checked" <?php endif; 
@@ -925,27 +1045,27 @@
                     <td>Indígenas.</td>
                     <td>Ações destinadas à valorização das mulheres indígena; ao enfrentamento de seus problemas específicos, à geração de renda e ao emponderamento político.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_indigenas[ ]" value="Norte"
+                        <input type="checkbox" class="temas_indigenas" name="temas_indigenas[ ]" value="Norte"
                         <?php 
                             if(in_array('Norte', $array_indigenas)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Norte<br>
-                        <input type="checkbox" name="temas_indigenas[ ]" value="Nordeste"
+                        <input type="checkbox" class="temas_indigenas" name="temas_indigenas[ ]" value="Nordeste"
                         <?php 
                             if(in_array('Nordeste', $array_indigenas)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Nordeste<br>
-                        <input type="checkbox" name="temas_indigenas[ ]" value="Centro-Oeste"
+                        <input type="checkbox" class="temas_indigenas" name="temas_indigenas[ ]" value="Centro-Oeste"
                         <?php 
                             if(in_array('Centro-Oeste', $array_indigenas)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Centro-Oeste<br>
-                        <input type="checkbox" name="temas_indigenas[ ]" value="Sul"
+                        <input type="checkbox" class="temas_indigenas" name="temas_indigenas[ ]" value="Sul"
                         <?php 
                             if(in_array('Sul', $array_indigenas)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Sul<br>
-                        <input type="checkbox" name="temas_indigenas[ ]" value="Sudeste"
+                        <input type="checkbox" class="temas_indigenas" name="temas_indigenas[ ]" value="Sudeste"
                         <?php 
                             if(in_array('Sudeste', $array_indigenas)) : ?> checked="checked" <?php endif; 
                         ?>
@@ -953,7 +1073,7 @@
                     </td
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="LGBTT"class="no-margin" onclick="verificar()"
+                    <td><input type="checkbox" id="LGBTT" name="temas[ ]"value="LGBTT"class="no-margin" onclick="verificar()"
                         <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('LGBTT', $array_temas[$i])) : ?> checked="checked" <?php endif; 
@@ -962,27 +1082,27 @@
                     <td>LGBTT (Lésbicas, Gays, Bissexuais, Travestis, Transexuais e Transgêneros).</td>
                     <td>Projetos que atuam pela valorização e afirmação de pessoas LGBTT e combatem a violência e a discriminação contra esses públicos.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_lgbtt[ ]" value="Norte"
+                        <input type="checkbox" class="temas_lgbtt" name="temas_lgbtt[ ]" value="Norte"
                         <?php 
                             if(in_array('Norte', $array_LGBTT)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Norte<br>
-                        <input type="checkbox" name="temas_lgbtt[ ]" value="Nordeste"
+                        <input type="checkbox" class="temas_lgbtt" name="temas_lgbtt[ ]" value="Nordeste"
                         <?php 
                             if(in_array('Nordeste', $array_LGBTT)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Nordeste<br>
-                        <input type="checkbox" name="temas_lgbtt[ ]" value="Centro-Oeste"
+                        <input type="checkbox" class="temas_lgbtt" name="temas_lgbtt[ ]" value="Centro-Oeste"
                         <?php 
                             if(in_array('Centro-Oeste', $array_LGBTT)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Centro-Oeste<br>
-                        <input type="checkbox" name="temas_lgbtt[ ]" value="Sul"
+                        <input type="checkbox" class="temas_lgbtt" name="temas_lgbtt[ ]" value="Sul"
                         <?php 
                             if(in_array('Sul', $array_LGBTT)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Sul<br>
-                        <input type="checkbox" name="temas_lgbtt[ ]" value="Sudeste"
+                        <input type="checkbox" class="temas_lgbtt" name="temas_lgbtt[ ]" value="Sudeste"
                         <?php 
                             if(in_array('Sudeste', $array_LGBTT)) : ?> checked="checked" <?php endif; 
                         ?>
@@ -990,7 +1110,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="masculinidade"class="no-margin" onclick="verificar()"
+                    <td><input type="checkbox" id="masculinidade" name="temas[ ]"value="masculinidade"class="no-margin" onclick="verificar()"
                         <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('masculinidade', $array_temas[$i])) : ?> checked="checked" <?php endif; 
@@ -999,27 +1119,27 @@
                     <td>Masculinidades.</td>
                     <td>Ações voltadas para questões relativas à revisão do conceito hegemônico de masculinidade, a partir da perspectiva das relações de gênero.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_masculinidades[ ]" value="Norte"
+                        <input type="checkbox" class="temas_masculinidades" name="temas_masculinidades[ ]" value="Norte"
                         <?php 
                             if(in_array('Norte', $array_masculinidade)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Norte<br>
-                        <input type="checkbox" name="temas_masculinidades[ ]" value="Nordeste"
+                        <input type="checkbox" class="temas_masculinidades" name="temas_masculinidades[ ]" value="Nordeste"
                         <?php 
                             if(in_array('Nordeste', $array_masculinidade)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Nordeste<br>
-                        <input type="checkbox" name="temas_masculinidades[ ]" value="Centro-Oeste"
+                        <input type="checkbox" class="temas_masculinidades" name="temas_masculinidades[ ]" value="Centro-Oeste"
                         <?php 
                             if(in_array('Centro-Oeste', $array_masculinidade)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Centro-Oeste<br>
-                        <input type="checkbox" name="temas_masculinidades[ ]" value="Sul"
+                        <input type="checkbox" class="temas_masculinidades" name="temas_masculinidades[ ]" value="Sul"
                         <?php 
                             if(in_array('Sul', $array_masculinidade)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Sul<br>
-                        <input type="checkbox" name="temas_masculinidades[ ]" value="Sudeste"
+                        <input type="checkbox" class="temas_masculinidades" name="temas_masculinidades[ ]" value="Sudeste"
                         <?php 
                             if(in_array('Sudeste', $array_masculinidade)) : ?> checked="checked" <?php endif; 
                         ?>
@@ -1027,7 +1147,7 @@
                     </td>
                 </tr>
                 <tr>
-                     <td><input type="checkbox" name="temas[ ]"value="meio ambiente,seguranca,agricultura"class="no-margin" onclick="verificar()"
+                     <td><input type="checkbox" id="meio_ambiente" name="temas[ ]"value="meio ambiente,seguranca,agricultura"class="no-margin" onclick="verificar()"
                         <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('meio ambiente,seguranca,agricultura', $array_temas[$i])) : ?> checked="checked" <?php endif; 
@@ -1037,27 +1157,27 @@
                     <td>Trabalhos que relacionam questões de gênero, feminismo e meio ambiente. 
     Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis e ambientalmente sustentáveis.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_meio_ambiente[ ]" value="Norte"
+                        <input type="checkbox" class="temas_meio_ambiente" name="temas_meio_ambiente[ ]" value="Norte"
                         <?php 
                             if(in_array('Norte', $array_meio_ambiente_seguranca_agricultura)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Norte<br>
-                        <input type="checkbox" name="temas_meio_ambiente[ ]" value="Nordeste"
+                        <input type="checkbox" class="temas_meio_ambiente" name="temas_meio_ambiente[ ]" value="Nordeste"
                         <?php 
                             if(in_array('Nordeste', $array_meio_ambiente_seguranca_agricultura)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Nordeste<br>
-                        <input type="checkbox" name="temas_meio_ambiente[ ]" value="Centro-Oeste"
+                        <input type="checkbox" class="temas_meio_ambiente" name="temas_meio_ambiente[ ]" value="Centro-Oeste"
                         <?php 
                             if(in_array('Centro-Oeste', $array_meio_ambiente_seguranca_agricultura)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Centro-Oeste<br>
-                        <input type="checkbox" name="temas_meio_ambiente[ ]" value="Sul"
+                        <input type="checkbox" class="temas_meio_ambiente" name="temas_meio_ambiente[ ]" value="Sul"
                         <?php 
                             if(in_array('Sul', $array_meio_ambiente_seguranca_agricultura)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Sul<br>
-                        <input type="checkbox" name="temas_meio_ambiente[ ]" value="Sudeste"
+                        <input type="checkbox" class="temas_meio_ambiente" name="temas_meio_ambiente[ ]" value="Sudeste"
                         <?php 
                             if(in_array('Sudeste', $array_meio_ambiente_seguranca_agricultura)) : ?> checked="checked" <?php endif; 
                         ?>
@@ -1066,7 +1186,7 @@
                 </tr>
 
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="midia_comunicacao"class="no-margin" onclick="verificar()"
+                    <td><input type="checkbox" id="midia_comunicacao" name="temas[ ]"value="midia_comunicacao"class="no-margin" onclick="verificar()"
                         <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('midia_comunicacao', $array_temas[$i])) : ?> checked="checked" <?php endif; 
@@ -1075,27 +1195,27 @@
                     <td>Mídia e Comunicação.</td>
                     <td>Promoção do acesso de mulheres aos meios de comunicação pelo domínio de técnicas, equipamentos e linguagens; monitoramento da presença da mulher nas mídias e da cobertura adequada de temas sobre as questões das mulheres.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_midia_comunicacao[ ]" value="Norte"
+                        <input type="checkbox" class="temas_midia_comunicacao" name="temas_midia_comunicacao[ ]" value="Norte"
                         <?php 
                             if(in_array('Norte', $array_midia_comunicacao)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Norte<br>
-                        <input type="checkbox" name="temas_midia_comunicacao[ ]" value="Nordeste"
+                        <input type="checkbox" class="temas_midia_comunicacao" name="temas_midia_comunicacao[ ]" value="Nordeste"
                         <?php 
                             if(in_array('Nordeste', $array_midia_comunicacao)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Nordeste<br>
-                        <input type="checkbox" name="temas_midia_comunicacao[ ]" value="Centro-Oeste"
+                        <input type="checkbox" class="temas_midia_comunicacao" name="temas_midia_comunicacao[ ]" value="Centro-Oeste"
                         <?php 
                             if(in_array('Centro-Oeste', $array_midia_comunicacao)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Centro-Oeste<br>
-                        <input type="checkbox" name="temas_midia_comunicacao[ ]" value="Sul"
+                        <input type="checkbox" class="temas_midia_comunicacao" name="temas_midia_comunicacao[ ]" value="Sul"
                         <?php 
                             if(in_array('Sul', $array_midia_comunicacao)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Sul<br>
-                        <input type="checkbox" name="temas_midia_comunicacao[ ]" value="Sudeste"
+                        <input type="checkbox" class="temas_midia_comunicacao" name="temas_midia_comunicacao[ ]" value="Sudeste"
                         <?php 
                             if(in_array('Sudeste', $array_midia_comunicacao)) : ?> checked="checked" <?php endif; 
                         ?>
@@ -1104,7 +1224,7 @@
                </tr>
 
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="moradia"class="no-margin" onclick="verificar()"
+                    <td><input type="checkbox" id="moradia" name="temas[ ]"value="moradia"class="no-margin" onclick="verificar()"
                         <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('moradia', $array_temas[$i])) : ?> checked="checked" <?php endif; 
@@ -1113,27 +1233,27 @@
                     <td>Moradia.</td>
                     <td>Ações que visam contribuir para o direito das mulheres à moradia e ao desenvolvimento de habilidades para a construção ou reformas de casas.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_moradia[ ]" value="Norte" 
+                        <input type="checkbox" class="temas_moradia" name="temas_moradia[ ]" value="Norte"
                         <?php 
                             if(in_array('Norte', $array_moradia)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Norte<br>
-                        <input type="checkbox" name="temas_moradia[ ]" value="Nordeste"
+                        <input type="checkbox" class="temas_moradia" name="temas_moradia[ ]" value="Nordeste"
                         <?php 
                             if(in_array('Nordeste', $array_moradia)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Nordeste<br>
-                        <input type="checkbox" name="temas_moradia[ ]" value="Centro-Oeste"
+                        <input type="checkbox" class="temas_moradia" name="temas_moradia[ ]" value="Centro-Oeste"
                         <?php 
                             if(in_array('Centro-Oeste', $array_moradia)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Centro-Oeste<br>
-                        <input type="checkbox" name="temas_moradia[ ]" value="Sul"
+                        <input type="checkbox" class="temas_moradia" name="temas_moradia[ ]" value="Sul"
                         <?php 
                             if(in_array('Sul', $array_moradia)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Sul<br>
-                        <input type="checkbox" name="temas_moradia[ ]" value="Sudeste"
+                        <input type="checkbox" class="temas_moradia" name="temas_moradia[ ]" value="Sudeste"
                         <?php 
                             if(in_array('Sudeste', $array_moradia)) : ?> checked="checked" <?php endif; 
                         ?>
@@ -1142,7 +1262,7 @@
                </tr>
 
                <tr>
-                    <td><input type="checkbox" name="temas[ ]"value="negritude"class="no-margin" onclick="verificar()"
+                    <td><input type="checkbox" id="negritude" name="temas[ ]"value="negritude"class="no-margin" onclick="verificar()"
                         <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('negritude', $array_temas[$i])) : ?> checked="checked" <?php endif; 
@@ -1151,27 +1271,27 @@
                     <td>Negritude.</td>
                     <td>Ações de valorização da estética e da identidade das mulheres negras e de combate ao racismo.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_negritude[ ]" value="Norte"
+                        <input type="checkbox" class="temas_negritude" name="temas_negritude[ ]" value="Norte"
                         <?php 
                             if(in_array('Norte', $array_negritude)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Norte<br>
-                        <input type="checkbox" name="temas_negritude[ ]" value="Nordeste"
+                        <input type="checkbox" class="temas_negritude" name="temas_negritude[ ]" value="Nordeste"
                         <?php 
                             if(in_array('Nordeste', $array_negritude)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Nordeste<br>
-                        <input type="checkbox" name="temas_negritude[ ]" value="Centro-Oeste"
+                        <input type="checkbox" class="temas_negritude" name="temas_negritude[ ]" value="Centro-Oeste"
                         <?php 
                             if(in_array('Centro-Oeste', $array_negritude)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Centro-Oeste<br>
-                        <input type="checkbox" name="temas_negritude[ ]" value="Sul"
+                        <input type="checkbox" class="temas_negritude" name="temas_negritude[ ]" value="Sul"
                         <?php 
                             if(in_array('Sul', $array_negritude)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Sul<br>
-                        <input type="checkbox" name="temas_negritude[ ]" value="Sudeste"
+                        <input type="checkbox" class="temas_negritude" name="temas_negritude[ ]" value="Sudeste"
                         <?php 
                             if(in_array('Sudeste', $array_negritude)) : ?> checked="checked" <?php endif; 
                         ?>
@@ -1180,7 +1300,7 @@
                </tr>
 
                <tr> 
-                    <td><input type="checkbox" name="temas[ ]"value="paz_seguranca_publica"class="no-margin" onclick="verificar()"
+                    <td><input type="checkbox" id="paz_seguranca_publica" name="temas[ ]"value="paz_seguranca_publica"class="no-margin" onclick="verificar()"
                         <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('paz_seguranca_publica', $array_temas[$i])) : ?> checked="checked" <?php endif; 
@@ -1189,27 +1309,27 @@
                     <td>Paz e Segurança pública.</td>
                     <td>Projetos que tratam da interface entre gênero e sistema de segurança pública, sobretudo questões da violência armada.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_paz_seguranca[ ]" value="Norte"
+                        <input type="checkbox" class="temas_paz_seguranca" name="temas_paz_seguranca[ ]" value="Norte"
                         <?php 
                             if(in_array('Norte', $array_paz_seguranca_publica)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Norte<br>
-                        <input type="checkbox" name="temas_paz_seguranca[ ]" value="Nordeste"
+                        <input type="checkbox" class="temas_paz_seguranca" name="temas_paz_seguranca[ ]" value="Nordeste"
                         <?php 
                             if(in_array('Nordeste', $array_paz_seguranca_publica)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Nordeste<br>
-                        <input type="checkbox" name="temas_paz_seguranca[ ]" value="Centro-Oeste"
+                        <input type="checkbox" class="temas_paz_seguranca" name="temas_paz_seguranca[ ]" value="Centro-Oeste"
                         <?php 
                             if(in_array('Centro-Oeste', $array_paz_seguranca_publica)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Centro-Oeste<br>
-                        <input type="checkbox" name="temas_paz_seguranca[ ]" value="Sul"
+                        <input type="checkbox" class="temas_paz_seguranca" name="temas_paz_seguranca[ ]" value="Sul"
                         <?php 
                             if(in_array('Sul', $array_paz_seguranca_publica)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Sul<br>
-                        <input type="checkbox" name="temas_paz_seguranca[ ]" value="Sudeste"
+                        <input type="checkbox" class="temas_paz_seguranca" name="temas_paz_seguranca[ ]" value="Sudeste"
                         <?php 
                             if(in_array('Sudeste', $array_paz_seguranca_publica)) : ?> checked="checked" <?php endif; 
                         ?>
@@ -1218,7 +1338,7 @@
                </tr>
 
                <tr> 
-                <td><input type="checkbox" name="temas[ ]"value="saude_bemestar"class="no-margin" onclick="verificar()"
+                <td><input type="checkbox" id="saude_bemestar" name="temas[ ]"value="saude_bemestar"class="no-margin" onclick="verificar()"
                     <?php 
                         for($i = 0; $i <= count($array_temas)-1; $i++){
                             if(in_array('saude_bemestar', $array_temas[$i])) : ?> checked="checked" <?php endif; 
@@ -1227,27 +1347,27 @@
                     <td>Saúde e Bem-estar.</td>
                     <td>Iniciativas que tratam de questões de autoestima, qualidade de vida, saúde e bem-estar das mulheres.</td>
                     <td class="temas_regioes" style="width:150px">
-                        <input type="checkbox" name="temas_saude_bemestar[ ]" value="Norte"
+                        <input type="checkbox" class="temas_saude_bemestar" name="temas_saude_bemestar[ ]" value="Norte"
                         <?php 
                             if(in_array('Norte', $array_saude_bemestar)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Norte<br>
-                        <input type="checkbox" name="temas_saude_bemestar[ ]" value="Nordeste"
+                        <input type="checkbox" class="temas_saude_bemestar" name="temas_saude_bemestar[ ]" value="Nordeste"
                         <?php 
                             if(in_array('Nordeste', $array_saude_bemestar)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Nordeste<br>
-                        <input type="checkbox" name="temas_saude_bemestar[ ]" value="Centro-Oeste"
+                        <input type="checkbox" class="temas_saude_bemestar" name="temas_saude_bemestar[ ]" value="Centro-Oeste"
                         <?php 
                             if(in_array('Centro-Oeste', $array_saude_bemestar)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Centro-Oeste<br>
-                        <input type="checkbox" name="temas_saude_bemestar[ ]" value="Sul"
+                        <input type="checkbox" class="temas_saude_bemestar" name="temas_saude_bemestar[ ]" value="Sul"
                         <?php 
                             if(in_array('Sul', $array_saude_bemestar)) : ?> checked="checked" <?php endif; 
                         ?>
                         >Sul<br>
-                        <input type="checkbox" name="temas_saude_bemestar[ ]" value="Sudeste"
+                        <input type="checkbox" class="temas_saude_bemestar" name="temas_saude_bemestar[ ]" value="Sudeste"
                         <?php 
                             if(in_array('Sudeste', $array_saude_bemestar)) : ?> checked="checked" <?php endif; 
                         ?>
@@ -1894,7 +2014,7 @@
                     class="f1-about-yourself form-control" id="organizaçāo_politica_publica"><?php echo $edit->getPoliticasPublicas(); ?></textarea>
                     <span id="contando4" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
-s
+
 
                 <!-- Organizacao 27-->
 

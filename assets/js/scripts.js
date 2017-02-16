@@ -146,16 +146,24 @@ jQuery(document).ready(function() {
         var progress_line = $(this).parents('.f1').find('.f1-progress-line');
 
         var tab = $(".tab:visible");
-        
+    
+        console.log(parent_fieldset[0]['className']);
+
         var valid = true;
-        $('input', tab).each(function(i, v){
+        $('input, textarea, select', tab).each(function(i, v){
             valid = validator.element(v) && valid;
             // if(!valid){
             //     $(this).addClass('input-error');
             // }else{
             //     $(this).removeClass('input-error');
             // }
+
+
         });
+
+        
+
+        console.log($('input[name="temas[ ]"]:checked').length);
         
         if(!valid){
             console.log("erro");
@@ -164,6 +172,10 @@ jQuery(document).ready(function() {
            //      $(this).addClass('input-error');
            //  });
             // console.log($(this));
+        }else if (parent_fieldset[0]['className'] == "tab organizacao" && $('input[name="temas[ ]"]:checked').length < 1){
+            valid = false;
+            open_dialog("Alerta", "Selecione pelo menos um Tema!", "warning");
+            return false;
         }else{
              parent_fieldset.fadeOut(400, function() {
                 // change icons
@@ -6013,5 +6025,196 @@ jQuery(document).ready(function() {
     
     //});
 
+    //Desabilitando os checks
+    $(".temas_arte_cultura").attr("disabled", true);
+    $(".temas_ciencia_tecnologia").attr("disabled", true); 
+    $(".temas_democracia_politica").attr("disabled", true); 
+    $(".temas_educacao_formacao").attr("disabled", true); 
+    $(".temas_empreendedorismo_feminino").attr("disabled", true);
+    $(".temas_enfretamento_violencia").attr("disabled", true);
+    $(".temas_equidade_trabalho").attr("disabled", true);
+    $(".temas_esportes").attr("disabled", true);
+    $(".temas_indigenas").attr("disabled", true);
+    $(".temas_lgbtt").attr("disabled", true);
+    $(".temas_masculinidades").attr("disabled", true);
+    $(".temas_meio_ambiente").attr("disabled", true);
+    $(".temas_midia_comunicacao").attr("disabled", true);
+    $(".temas_moradia").attr("disabled", true);
+    $(".temas_negritude").attr("disabled", true);
+    $(".temas_paz_seguranca").attr("disabled", true);
+    $(".temas_saude_bemestar").attr("disabled", true);
+    
+    $('#arte_cultura').click(function (){
+        //Validar Regiões dos temas
+        if ( $('#arte_cultura').is( ":checked" ) ){
+            $(".temas_arte_cultura").attr("disabled", false);
+        }else{
+            $(".temas_arte_cultura").attr("disabled", true);
+            $( ".temas_arte_cultura" ).prop( "checked", false );
+        };
+    });
+
+    $('#ciencia_tecnologia').click(function (){
+        //Validar Regiões dos temas
+        if ( $('#ciencia_tecnologia').is( ":checked" ) ){
+            $(".temas_ciencia_tecnologia").attr("disabled", false);
+        }else{
+            $(".temas_ciencia_tecnologia").attr("disabled", true);
+            $( ".temas_ciencia_tecnologia" ).prop( "checked", false );
+        };
+    });
+
+    $('#democracia_participação_politica').click(function (){
+        //Validar Regiões dos temas
+        if ( $('#democracia_participação_politica').is( ":checked" ) ){
+            $(".temas_democracia_politica").attr("disabled", false);
+        }else{
+            $(".temas_democracia_politica").attr("disabled", true);
+            $( ".temas_democracia_politica" ).prop( "checked", false );
+        };
+    });
+    
+    $('#educacao_formacao').click(function (){
+        //Validar Regiões dos temas
+        if ( $('#educacao_formacao').is( ":checked" ) ){
+            $(".temas_educacao_formacao").attr("disabled", false);
+        }else{
+            $(".temas_educacao_formacao").attr("disabled", true);
+            $( ".temas_educacao_formacao" ).prop( "checked", false );
+        };
+    });
+    
+    $('#empreendedorismo_feminino_autonomia_economica').click(function (){
+        //Validar Regiões dos temas
+        if ( $('#empreendedorismo_feminino_autonomia_economica').is( ":checked" ) ){
+            $(".temas_empreendedorismo_feminino").attr("disabled", false);
+        }else{
+            $(".temas_empreendedorismo_feminino").attr("disabled", true);
+            $( ".temas_empreendedorismo_feminino" ).prop( "checked", false );
+        };
+    });
+    
+    $('#enfrentamento_violencia').click(function (){
+        //Validar Regiões dos temas
+        if ( $('#enfrentamento_violencia').is( ":checked" ) ){
+            $(".temas_enfretamento_violencia").attr("disabled", false);
+        }else{
+            $(".temas_enfretamento_violencia").attr("disabled", true);
+            $( ".temas_enfretamento_violencia" ).prop( "checked", false );
+        };
+    });
+    
+    $('#equidade_Condicoes_trabalho').click(function (){
+        //Validar Regiões dos temas
+        if ( $('#equidade_Condicoes_trabalho').is( ":checked" ) ){
+            $(".temas_equidade_trabalho").attr("disabled", false);
+        }else{
+            $(".temas_equidade_trabalho").attr("disabled", true);
+            $( ".temas_equidade_trabalho" ).prop( "checked", false );
+        };
+    });
+    
+    $('#esporte').click(function (){
+        //Validar Regiões dos temas
+        if ( $('#esporte').is( ":checked" ) ){
+            $(".temas_esportes").attr("disabled", false);
+        }else{
+            $(".temas_esportes").attr("disabled", true);
+            $( ".temas_esportes" ).prop( "checked", false );
+        };
+    });
+    
+    $('#indigenas').click(function (){
+        //Validar Regiões dos temas
+        if ( $('#indigenas').is( ":checked" ) ){
+            $(".temas_indigenas").attr("disabled", false);
+        }else{
+            $(".temas_indigenas").attr("disabled", true);
+            $( ".temas_indigenas" ).prop( "checked", false );
+        };
+    });
+    
+    
+    $('#LGBTT').click(function (){
+        //Validar Regiões dos temas
+        if ( $('#LGBTT').is( ":checked" ) ){
+            $(".temas_lgbtt").attr("disabled", false);
+        }else{
+            $(".temas_lgbtt").attr("disabled", true);
+            $( ".temas_lgbtt" ).prop( "checked", false );
+        };
+    });
+    
+    $('#masculinidade').click(function (){
+        //Validar Regiões dos temas
+        if ( $('#masculinidade').is( ":checked" ) ){
+            $(".temas_masculinidades").attr("disabled", false);
+        }else{
+            $(".temas_masculinidades").attr("disabled", true);
+            $( ".temas_masculinidades" ).prop( "checked", false );
+        };
+    });
+    
+    $('#meio_ambiente').click(function (){
+        //Validar Regiões dos temas
+        if ( $('#meio_ambiente').is( ":checked" ) ){
+            $(".temas_meio_ambiente").attr("disabled", false);
+        }else{
+            $(".temas_meio_ambiente").attr("disabled", true);
+            $( ".temas_meio_ambiente" ).prop( "checked", false );
+        };
+    });
+    
+    $('#midia_comunicacao').click(function (){
+        //Validar Regiões dos temas
+        if ( $('#midia_comunicacao').is( ":checked" ) ){
+            $(".temas_midia_comunicacao").attr("disabled", false);
+        }else{
+            $(".temas_midia_comunicacao").attr("disabled", true);
+            $( ".temas_midia_comunicacao" ).prop( "checked", false );
+        };
+    });
+    
+    $('#moradia').click(function (){
+        //Validar Regiões dos temas
+        if ( $('#moradia').is( ":checked" ) ){
+            $(".temas_moradia").attr("disabled", false);
+        }else{
+            $(".temas_moradia").attr("disabled", true);
+            $( ".temas_moradia" ).prop( "checked", false );
+        };
+    });
+    
+    $('#negritude').click(function (){
+        //Validar Regiões dos temas
+        if ( $('#negritude').is( ":checked" ) ){
+            $(".temas_negritude").attr("disabled", false);
+        }else{
+            $(".temas_negritude").attr("disabled", true);
+            $( ".temas_negritude" ).prop( "checked", false );
+        };
+    });
+    
+    $('#paz_seguranca_publica').click(function (){
+        //Validar Regiões dos temas
+        if ( $('#paz_seguranca_publica').is( ":checked" ) ){
+            $(".temas_paz_seguranca").attr("disabled", false);
+        }else{
+            $(".temas_paz_seguranca").attr("disabled", true);
+            $( ".temas_paz_seguranca" ).prop( "checked", false );
+        };
+    });
+    
+    $('#saude_bemestar').click(function (){
+        //Validar Regiões dos temas
+        if ( $('#saude_bemestar').is( ":checked" ) ){
+            $(".temas_saude_bemestar").attr("disabled", false);
+        }else{
+            $(".temas_saude_bemestar").attr("disabled", true);
+            $( ".temas_saude_bemestar" ).prop( "checked", false );
+        };
+    });
+    
+    
 
 });

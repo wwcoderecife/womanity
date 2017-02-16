@@ -418,7 +418,7 @@
                     <input type="checkbox" name="recursos_origem[]" value="institutos ou fundações empresariais">institutos ou fundações empresariais</br>
                     <input type="checkbox" name="recursos_origem[]" value="investimento direto/patrocínio">investimento direto/patrocínio</br>
                     <input type="checkbox" name="recursos_origem[]" value="investimento de impacto">investimento de impacto</br>
-                    <input type="checkbox" name="recursos_origem[]" value="leis de incentivo">leis de incentivo><br>
+                    <input type="checkbox" name="recursos_origem[]" value="leis de incentivo">leis de incentivo<br>
                     <input type="checkbox" name="recursos_origem[]" value="organizações do sistema ONU">organizações do sistema ONU<br>
                     <input type="checkbox" name="recursos_origem[]" value="organizações não governamentais brasileiras ou internacionais">organizações não governamentais brasileiras ou internacionais<br>
                     <input type="checkbox" name="recursos_origem[]" value="subvenções públicas ">subvenções públicas<br>
@@ -449,222 +449,222 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]" value="arte_cultura" class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" id="arte_cultura" name="temas[ ]" value="arte_cultura" class="no-margin" onclick="verificar()"></td>
                     <td>Arte e Cultura.</td>
                     <td>Promoção do acesso de mulheres à cultura e/ou incentivo à produção das várias expressões artísticas e valorização de práticas culturais e tradicionais.</td>
                     <td class="temas_regioes" style="width:150px">
-                        <input type="checkbox" name="temas_arte_cultura[ ]" value="Norte" >Norte<br>
-                        <input type="checkbox" name="temas_arte_cultura[ ]" value="Nordeste">Nordeste<br>
-                        <input type="checkbox" name="temas_arte_cultura[ ]" value="Centro-Oeste">Centro-Oeste<br>
-                        <input type="checkbox" name="temas_arte_cultura[ ]" value="Sul">Sul<br>
-                        <input type="checkbox" name="temas_arte_cultura[ ]" value="Sudeste">Sudeste<br>
+                        <input type="checkbox" class="temas_arte_cultura" name="temas_arte_cultura[ ]" value="Norte" >Norte<br>
+                        <input type="checkbox" class="temas_arte_cultura" name="temas_arte_cultura[ ]" value="Nordeste">Nordeste<br>
+                        <input type="checkbox" class="temas_arte_cultura" name="temas_arte_cultura[ ]" value="Centro-Oeste">Centro-Oeste<br>
+                        <input type="checkbox" class="temas_arte_cultura" name="temas_arte_cultura[ ]" value="Sul">Sul<br>
+                        <input type="checkbox" class="temas_arte_cultura" name="temas_arte_cultura[ ]" value="Sudeste">Sudeste<br>
                     </td>   
                      
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]" value="ciencia_tecnologia" class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" id="ciencia_tecnologia" name="temas[ ]" value="ciencia_tecnologia" class="no-margin" onclick="verificar()"></td>
                     <td>Ciência e Tecnologia.</td>
                     <td>Promoção do acesso a linguagens, equipamentos e/ou a produção de ciência e tecnologia por mulheres.</td>
                     <td class="temas_regioes" style="width:150px">
-                        <input type="checkbox" name="temas_ciencia_tecnologia[ ]" value="Norte">Norte<br>
-                        <input type="checkbox" name="temas_ciencia_tecnologia[ ]" value="Nordeste">Nordeste<br>
-                        <input type="checkbox" name="temas_ciencia_tecnologia[ ]" value="Centro-Oeste">Centro-Oeste<br>
-                        <input type="checkbox" name="temas_ciencia_tecnologia[ ]" value="Sul">Sul<br>
-                        <input type="checkbox" name="temas_ciencia_tecnologia[ ]" value="Sudeste">Sudeste<br>
+                        <input type="checkbox" class="temas_ciencia_tecnologia" name="temas_ciencia_tecnologia[ ]" value="Norte">Norte<br>
+                        <input type="checkbox" class="temas_ciencia_tecnologia" name="temas_ciencia_tecnologia[ ]" value="Nordeste">Nordeste<br>
+                        <input type="checkbox" class="temas_ciencia_tecnologia" name="temas_ciencia_tecnologia[ ]" value="Centro-Oeste">Centro-Oeste<br>
+                        <input type="checkbox" class="temas_ciencia_tecnologia" name="temas_ciencia_tecnologia[ ]" value="Sul">Sul<br>
+                        <input type="checkbox" class="temas_ciencia_tecnologia" name="temas_ciencia_tecnologia[ ]" value="Sudeste">Sudeste<br>
                     </td> 
                    
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]" value="democracia_participação_politica" class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" id="democracia_participação_politica" name="temas[ ]" value="democracia_participação_politica" class="no-margin" onclick="verificar()"></td>
                     <td> Democracia e Participação Política.</td>
                     <td>Ações de incentivo à participação de mulheres na vida política e democrática institucional (partidos, conselhos, órgãos e instâncias dos poderes executivo, legislativo e judiciário).</td>
                     <td class="temas_regioes" style="width:150px">
-                        <input type="checkbox" name="temas_democracia_politica[ ]" value="Norte">Norte<br>
-                        <input type="checkbox" name="temas_democracia_politica[ ]" value="Nordeste">Nordeste<br>
-                        <input type="checkbox" name="temas_democracia_politica[ ]" value="Centro-Oeste">Centro-Oeste<br>
-                        <input type="checkbox" name="temas_democracia_politica[ ]" value="Sul">Sul<br>
-                        <input type="checkbox" name="temas_democracia_politica[ ]" value="Sudeste">Sudeste<br>
+                        <input type="checkbox" class="temas_democracia_politica" name="temas_democracia_politica[ ]" value="Norte">Norte<br>
+                        <input type="checkbox" class="temas_democracia_politica" name="temas_democracia_politica[ ]" value="Nordeste">Nordeste<br>
+                        <input type="checkbox" class="temas_democracia_politica" name="temas_democracia_politica[ ]" value="Centro-Oeste">Centro-Oeste<br>
+                        <input type="checkbox" class="temas_democracia_politica" name="temas_democracia_politica[ ]" value="Sul">Sul<br>
+                        <input type="checkbox" class="temas_democracia_politica" name="temas_democracia_politica[ ]" value="Sudeste">Sudeste<br>
                     </td> 
                 </tr>
 
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]" value="educacao_formacao" class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" id="educacao_formacao" name="temas[ ]" value="educacao_formacao" class="no-margin" onclick="verificar()"></td>
                     <td>Educação e Formação.</td>
                     <td>Oferta de educação formal (escolar ou acadêmica), incentivo à escolaridade; formação de atores sociais, ações de educação popular e informal.</td>
                     <td class="temas_regioes" style="width:150px">
-                        <input type="checkbox" name="temas_educacao_formacao[ ]" value="Norte">Norte<br>
-                        <input type="checkbox" name="temas_educacao_formacao[ ]" value="Nordeste">Nordeste<br>
-                        <input type="checkbox" name="temas_educacao_formacao[ ]" value="Centro-Oeste">Centro-Oeste<br>
-                        <input type="checkbox" name="temas_educacao_formacao[ ]" value="Sul">Sul<br>
-                        <input type="checkbox" name="temas_educacao_formacao[ ]" value="Sudeste">Sudeste<br>
+                        <input type="checkbox" class="temas_educacao_formacao" name="temas_educacao_formacao[ ]" value="Norte">Norte<br>
+                        <input type="checkbox" class="temas_educacao_formacao" name="temas_educacao_formacao[ ]" value="Nordeste">Nordeste<br>
+                        <input type="checkbox" class="temas_educacao_formacao" name="temas_educacao_formacao[ ]" value="Centro-Oeste">Centro-Oeste<br>
+                        <input type="checkbox" class="temas_educacao_formacao" name="temas_educacao_formacao[ ]" value="Sul">Sul<br>
+                        <input type="checkbox" class="temas_educacao_formacao" name="temas_educacao_formacao[ ]" value="Sudeste">Sudeste<br>
                     </td> 
                 </tr>
 
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]" value="empreendedorismo_feminino_autonomia_economica" class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" id="empreendedorismo_feminino_autonomia_economica" name="temas[ ]" value="empreendedorismo_feminino_autonomia_economica" class="no-margin" onclick="verificar()"></td>
                     <td>Empreendedorismo feminino e autonomia econômica.</td>
                     <td>Ações de incentivo ao empreendedorismo feminino e à autonomia econômica, por meio de capacitação e/ou financiamento, tais como cooperativismo, microcrédito, etc.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_empreendedorismo_feminino[ ]" value="Norte">Norte<br>
-                        <input type="checkbox" name="temas_empreendedorismo_feminino[ ]" value="Nordeste">Nordeste<br>
-                        <input type="checkbox" name="temas_empreendedorismo_feminino[ ]" value="Centro-Oeste">Centro-Oeste<br>
-                        <input type="checkbox" name="temas_empreendedorismo_feminino[ ]" value="Sul">Sul<br>
-                        <input type="checkbox" name="temas_empreendedorismo_feminino[ ]" value="Sudeste">Sudeste<br>
+                        <input type="checkbox" class="temas_empreendedorismo_feminino" name="temas_empreendedorismo_feminino[ ]" value="Norte">Norte<br>
+                        <input type="checkbox" class="temas_empreendedorismo_feminino" name="temas_empreendedorismo_feminino[ ]" value="Nordeste">Nordeste<br>
+                        <input type="checkbox" class="temas_empreendedorismo_feminino" name="temas_empreendedorismo_feminino[ ]" value="Centro-Oeste">Centro-Oeste<br>
+                        <input type="checkbox" class="temas_empreendedorismo_feminino" name="temas_empreendedorismo_feminino[ ]" value="Sul">Sul<br>
+                        <input type="checkbox" class="temas_empreendedorismo_feminino" name="temas_empreendedorismo_feminino[ ]" value="Sudeste">Sudeste<br>
                     </td> 
                 </tr>
 
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]" value="enfrentamento_violencia" class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" id="enfrentamento_violencia" name="temas[ ]" value="enfrentamento_violencia" class="no-margin" onclick="verificar()"></td>
                     <td>Enfrentamento à Violência.</td>
                     <td>Trabalho de enfrentamento às mais variadas formas de violência, destinado a mulheres e homens.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_enfretamento_violencia[ ]" value="Norte">Norte<br>
-                        <input type="checkbox" name="temas_enfretamento_violencia[ ]" value="Nordeste">Nordeste<br>
-                        <input type="checkbox" name="temas_enfretamento_violencia[ ]" value="Centro-Oeste">Centro-Oeste<br>
-                        <input type="checkbox" name="temas_enfretamento_violencia[ ]" value="Sul">Sul<br>
-                        <input type="checkbox" name="temas_enfretamento_violencia[ ]" value="Sudeste">Sudeste<br>
+                        <input type="checkbox" class="temas_enfretamento_violencia" name="temas_enfretamento_violencia[ ]" value="Norte">Norte<br>
+                        <input type="checkbox" class="temas_enfretamento_violencia" name="temas_enfretamento_violencia[ ]" value="Nordeste">Nordeste<br>
+                        <input type="checkbox" class="temas_enfretamento_violencia" name="temas_enfretamento_violencia[ ]" value="Centro-Oeste">Centro-Oeste<br>
+                        <input type="checkbox" class="temas_enfretamento_violencia" name="temas_enfretamento_violencia[ ]" value="Sul">Sul<br>
+                        <input type="checkbox" class="temas_enfretamento_violencia" name="temas_enfretamento_violencia[ ]" value="Sudeste">Sudeste<br>
                     </td>
                   
 
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]" value="equidade_Condições_trabalho" class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" id="equidade_Condicoes_trabalho" name="temas[ ]" value="equidade_Condicoes_trabalho" class="no-margin" onclick="verificar()"></td>
                     <td>Equidade e Condições de Trabalho.</td>
                     <td>Oportunidades iguais para mulheres e homens no mercado de trabalho, divisão justa entre ambos os sexos, mesmas 
     possibilidades de desenvolvimento profissional e equiparação salarial; participação em cargos de liderança e conselho.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_equidade_trabalho[ ]" value="Norte">Norte<br>
-                        <input type="checkbox" name="temas_equidade_trabalho[ ]" value="Nordeste">Nordeste<br>
-                        <input type="checkbox" name="temas_equidade_trabalho[ ]" value="Centro-Oeste">Centro-Oeste<br>
-                        <input type="checkbox" name="temas_equidade_trabalho[ ]" value="Sul">Sul<br>
-                        <input type="checkbox" name="temas_equidade_trabalho[ ]" value="Sudeste">Sudeste<br>
+                        <input type="checkbox" class="temas_equidade_trabalho" name="temas_equidade_trabalho[ ]" value="Norte">Norte<br>
+                        <input type="checkbox" class="temas_equidade_trabalho" name="temas_equidade_trabalho[ ]" value="Nordeste">Nordeste<br>
+                        <input type="checkbox" class="temas_equidade_trabalho" name="temas_equidade_trabalho[ ]" value="Centro-Oeste">Centro-Oeste<br>
+                        <input type="checkbox" class="temas_equidade_trabalho" name="temas_equidade_trabalho[ ]" value="Sul">Sul<br>
+                        <input type="checkbox" class="temas_equidade_trabalho" name="temas_equidade_trabalho[ ]" value="Sudeste">Sudeste<br>
                     </td>    
                 </tr>
 
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]" value="esporte" class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" id="esporte" name="temas[ ]" value="esporte" class="no-margin" onclick="verificar()"></td>
                     <td>Esportes.</td>
                     <td>Oferta, promoção e incentivo à realização de práticas esportivas por meninas e mulheres, sobretudo em modalidades tradicionalmente dominadas por homens.</td>
                      <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_esportes[ ]" value="Norte">Norte<br>
-                        <input type="checkbox" name="temas_esportes[ ]" value="Nordeste">Nordeste<br>
-                        <input type="checkbox" name="temas_esportes[ ]" value="Centro-Oeste">Centro-Oeste<br>
-                        <input type="checkbox" name="temas_esportes[ ]" value="Sul">Sul<br>
-                        <input type="checkbox" name="temas_esportes[ ]" value="Sudeste">Sudeste<br>
+                        <input type="checkbox" class="temas_esportes" name="temas_esportes[ ]" value="Norte">Norte<br>
+                        <input type="checkbox" class="temas_esportes" name="temas_esportes[ ]" value="Nordeste">Nordeste<br>
+                        <input type="checkbox" class="temas_esportes" name="temas_esportes[ ]" value="Centro-Oeste">Centro-Oeste<br>
+                        <input type="checkbox" class="temas_esportes" name="temas_esportes[ ]" value="Sul">Sul<br>
+                        <input type="checkbox" class="temas_esportes" name="temas_esportes[ ]" value="Sudeste">Sudeste<br>
                     </td> 
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]" value="indigenas" class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" id="indigenas" name="temas[ ]" value="indigenas" class="no-margin" onclick="verificar()"></td>
                     <td>Indígenas.</td>
                     <td>Ações destinadas à valorização das mulheres indígenas; ao enfrentamento de seus problemas específicos, à geração de renda e ao emponderamento político.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_indigenas[ ]" value="Norte">Norte<br>
-                        <input type="checkbox" name="temas_indigenas[ ]" value="Nordeste">Nordeste<br>
-                        <input type="checkbox" name="temas_indigenas[ ]" value="Centro-Oeste">Centro-Oeste<br>
-                        <input type="checkbox" name="temas_indigenas[ ]" value="Sul">Sul<br>
-                        <input type="checkbox" name="temas_indigenas[ ]" value="Sudeste">Sudeste<br>
+                        <input type="checkbox" class="temas_indigenas" name="temas_indigenas[ ]" value="Norte">Norte<br>
+                        <input type="checkbox" class="temas_indigenas" name="temas_indigenas[ ]" value="Nordeste">Nordeste<br>
+                        <input type="checkbox" class="temas_indigenas" name="temas_indigenas[ ]" value="Centro-Oeste">Centro-Oeste<br>
+                        <input type="checkbox" class="temas_indigenas" name="temas_indigenas[ ]" value="Sul">Sul<br>
+                        <input type="checkbox" class="temas_indigenas" name="temas_indigenas[ ]" value="Sudeste">Sudeste<br>
                     </td> 
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]" value="LGBTT" class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" id="LGBTT" name="temas[ ]" value="LGBTT" class="no-margin" onclick="verificar()"></td>
                     <td>LGBTT (Lésbicas, Gays, Bissexuais, Travestis, Transexuais e Transgêneros).</td>
                     <td>Projetos que atuam pela valorização e afirmação de pessoas LGBTT e combatem a violência e a discriminação contra esses públicos.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_lgbtt[ ]" value="Norte">Norte<br>
-                        <input type="checkbox" name="temas_lgbtt[ ]" value="Nordeste">Nordeste<br>
-                        <input type="checkbox" name="temas_lgbtt[ ]" value="Centro-Oeste">Centro-Oeste<br>
-                        <input type="checkbox" name="temas_lgbtt[ ]" value="Sul">Sul<br>
-                        <input type="checkbox" name="temas_lgbtt[ ]" value="Sudeste">Sudeste<br>
+                        <input type="checkbox" class="temas_lgbtt" name="temas_lgbtt[ ]" value="Norte">Norte<br>
+                        <input type="checkbox" class="temas_lgbtt" name="temas_lgbtt[ ]" value="Nordeste">Nordeste<br>
+                        <input type="checkbox" class="temas_lgbtt" name="temas_lgbtt[ ]" value="Centro-Oeste">Centro-Oeste<br>
+                        <input type="checkbox" class="temas_lgbtt" name="temas_lgbtt[ ]" value="Sul">Sul<br>
+                        <input type="checkbox" class="temas_lgbtt" name="temas_lgbtt[ ]" value="Sudeste">Sudeste<br>
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]" value="masculinidade" class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" id="masculinidade" name="temas[ ]" value="masculinidade" class="no-margin" onclick="verificar()"></td>
                     <td>Masculinidades.</td>
                     <td>Ações voltadas para questões relativas à revisão do conceito hegemônico de masculinidade, a partir da perspectiva das relações de gênero.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_masculinidades[ ]" value="Norte">Norte<br>
-                        <input type="checkbox" name="temas_masculinidades[ ]" value="Nordeste">Nordeste<br>
-                        <input type="checkbox" name="temas_masculinidades[ ]" value="Centro-Oeste">Centro-Oeste<br>
-                        <input type="checkbox" name="temas_masculinidades[ ]" value="Sul">Sul<br>
-                        <input type="checkbox" name="temas_masculinidades[ ]" value="Sudeste">Sudeste<br>
+                        <input type="checkbox" class="temas_masculinidades" name="temas_masculinidades[ ]" value="Norte">Norte<br>
+                        <input type="checkbox" class="temas_masculinidades" name="temas_masculinidades[ ]" value="Nordeste">Nordeste<br>
+                        <input type="checkbox" class="temas_masculinidades" name="temas_masculinidades[ ]" value="Centro-Oeste">Centro-Oeste<br>
+                        <input type="checkbox" class="temas_masculinidades" name="temas_masculinidades[ ]" value="Sul">Sul<br>
+                        <input type="checkbox" class="temas_masculinidades" name="temas_masculinidades[ ]" value="Sudeste">Sudeste<br>
                     </td>
                 </tr>
                 <tr>
-                     <td><input type="checkbox" name="temas[ ]" value="meio ambiente,seguranca,agricultura" class="no-margin" onclick="verificar()"></td>
+                     <td><input type="checkbox" id="meio_ambiente" name="temas[ ]" value="meio ambiente,seguranca,agricultura" class="no-margin" onclick="verificar()"></td>
                     <td>Meio Ambiente,Segurança Alimentar e Agricultura.</td>
                     <td>Trabalhos que relacionam questões de gênero, feminismo e meio ambiente. 
     Direito e acesso a alimentos de qualidade, em quantidade suficiente, saudáveis e ambientalmente sustentáveis.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_meio_ambiente[ ]" value="Norte">Norte<br>
-                        <input type="checkbox" name="temas_meio_ambiente[ ]" value="Nordeste">Nordeste<br>
-                        <input type="checkbox" name="temas_meio_ambiente[ ]" value="Centro-Oeste">Centro-Oeste<br>
-                        <input type="checkbox" name="temas_meio_ambiente[ ]" value="Sul">Sul<br>
-                        <input type="checkbox" name="temas_meio_ambiente[ ]" value="Sudeste">Sudeste<br>
+                        <input type="checkbox" class="temas_meio_ambiente" name="temas_meio_ambiente[ ]" value="Norte">Norte<br>
+                        <input type="checkbox" class="temas_meio_ambiente" name="temas_meio_ambiente[ ]" value="Nordeste">Nordeste<br>
+                        <input type="checkbox" class="temas_meio_ambiente" name="temas_meio_ambiente[ ]" value="Centro-Oeste">Centro-Oeste<br>
+                        <input type="checkbox" class="temas_meio_ambiente" name="temas_meio_ambiente[ ]" value="Sul">Sul<br>
+                        <input type="checkbox" class="temas_meio_ambiente" name="temas_meio_ambiente[ ]" value="Sudeste">Sudeste<br>
                     </td>
 
                 </tr>
 
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]" value="midia_comunicacao" class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" id="midia_comunicacao" name="temas[ ]" value="midia_comunicacao" class="no-margin" onclick="verificar()"></td>
                     <td>Mídia e Comunicação.</td>
                     <td>Promoção do acesso de mulheres aos meios de comunicação pelo domínio de técnicas, equipamentos e linguagens; monitoramento da presença da mulher nas mídias e da cobertura adequada de temas sobre as questões das mulheres.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_midia_comunicacao[ ]" value="Norte">Norte<br>
-                        <input type="checkbox" name="temas_midia_comunicacao[ ]" value="Nordeste">Nordeste<br>
-                        <input type="checkbox" name="temas_midia_comunicacao[ ]" value="Centro-Oeste">Centro-Oeste<br>
-                        <input type="checkbox" name="temas_midia_comunicacao[ ]" value="Sul">Sul<br>
-                        <input type="checkbox" name="temas_midia_comunicacao[ ]" value="Sudeste">Sudeste<br>
+                        <input type="checkbox" class="temas_midia_comunicacao" name="temas_midia_comunicacao[ ]" value="Norte">Norte<br>
+                        <input type="checkbox" class="temas_midia_comunicacao" name="temas_midia_comunicacao[ ]" value="Nordeste">Nordeste<br>
+                        <input type="checkbox" class="temas_midia_comunicacao" name="temas_midia_comunicacao[ ]" value="Centro-Oeste">Centro-Oeste<br>
+                        <input type="checkbox" class="temas_midia_comunicacao" name="temas_midia_comunicacao[ ]" value="Sul">Sul<br>
+                        <input type="checkbox" class="temas_midia_comunicacao" name="temas_midia_comunicacao[ ]" value="Sudeste">Sudeste<br>
                     </td>
                </tr>
 
                 <tr>
-                    <td><input type="checkbox" name="temas[ ]" value="moradia" class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" id="moradia" name="temas[ ]" value="moradia" class="no-margin" onclick="verificar()"></td>
                     <td>Moradia.</td>
                     <td>Ações que visam contribuir para o direito das mulheres à moradia e ao desenvolvimento de habilidades para a construção ou reformas de casas.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_moradia[ ]" value="Norte">Norte<br>
-                        <input type="checkbox" name="temas_moradia[ ]" value="Nordeste">Nordeste<br>
-                        <input type="checkbox" name="temas_moradia[ ]" value="Centro-Oeste">Centro-Oeste<br>
-                        <input type="checkbox" name="temas_moradia[ ]" value="Sul">Sul<br>
-                        <input type="checkbox" name="temas_moradia[ ]" value="Sudeste">Sudeste<br>
+                        <input type="checkbox" class="temas_moradia" name="temas_moradia[ ]" value="Norte">Norte<br>
+                        <input type="checkbox" class="temas_moradia" name="temas_moradia[ ]" value="Nordeste">Nordeste<br>
+                        <input type="checkbox" class="temas_moradia" name="temas_moradia[ ]" value="Centro-Oeste">Centro-Oeste<br>
+                        <input type="checkbox" class="temas_moradia" name="temas_moradia[ ]" value="Sul">Sul<br>
+                        <input type="checkbox" class="temas_moradia" name="temas_moradia[ ]" value="Sudeste">Sudeste<br>
                     </td>
 
                </tr>
 
                <tr>
-                    <td><input type="checkbox" name="temas[ ]" value="negritude" class="no-margin" onclick="verificar()"></td>
+                    <td><input type="checkbox" id="negritude" name="temas[ ]" value="negritude" class="no-margin" onclick="verificar()"></td>
                     <td>Negritude.</td>
                     <td>Ações de valorização da estética e da identidade das mulheres negras e de combate ao racismo.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_negritude[ ]" value="Norte">Norte<br>
-                        <input type="checkbox" name="temas_negritude[ ]" value="Nordeste">Nordeste<br>
-                        <input type="checkbox" name="temas_negritude[ ]" value="Centro-Oeste">Centro-Oeste<br>
-                        <input type="checkbox" name="temas_negritude[ ]" value="Sul">Sul<br>
-                        <input type="checkbox" name="temas_negritude[ ]" value="Sudeste">Sudeste<br>
+                        <input type="checkbox" class="temas_negritude" name="temas_negritude[ ]" value="Norte">Norte<br>
+                        <input type="checkbox" class="temas_negritude" name="temas_negritude[ ]" value="Nordeste">Nordeste<br>
+                        <input type="checkbox" class="temas_negritude" name="temas_negritude[ ]" value="Centro-Oeste">Centro-Oeste<br>
+                        <input type="checkbox" class="temas_negritude" name="temas_negritude[ ]" value="Sul">Sul<br>
+                        <input type="checkbox" class="temas_negritude" name="temas_negritude[ ]" value="Sudeste">Sudeste<br>
                     </td>    
                         
                </tr>
 
-               <tr> <td><input type="checkbox" name="temas[ ]" value="paz_seguranca_publica" class="no-margin" onclick="verificar()"></td>
+               <tr> <td><input type="checkbox" id="paz_seguranca_publica" name="temas[ ]" value="paz_seguranca_publica" class="no-margin" onclick="verificar()"></td>
                     <td>Paz e Segurança Pública.</td>
                     <td>Projetos que tratam da interface entre gênero e sistema de segurança pública, sobretudo questões da violência armada.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_paz_seguranca[ ]" value="Norte">Norte<br>
-                        <input type="checkbox" name="temas_paz_seguranca[ ]" value="Nordeste">Nordeste<br>
-                        <input type="checkbox" name="temas_paz_seguranca[ ]" value="Centro-Oeste">Centro-Oeste<br>
-                        <input type="checkbox" name="temas_paz_seguranca[ ]" value="Sul">Sul<br>
-                        <input type="checkbox" name="temas_paz_seguranca[ ]" value="Sudeste">Sudeste<br>
+                        <input type="checkbox" class="temas_paz_seguranca" name="temas_paz_seguranca[ ]" value="Norte">Norte<br>
+                        <input type="checkbox" class="temas_paz_seguranca" name="temas_paz_seguranca[ ]" value="Nordeste">Nordeste<br>
+                        <input type="checkbox" class="temas_paz_seguranca" name="temas_paz_seguranca[ ]" value="Centro-Oeste">Centro-Oeste<br>
+                        <input type="checkbox" class="temas_paz_seguranca" name="temas_paz_seguranca[ ]" value="Sul">Sul<br>
+                        <input type="checkbox" class="temas_paz_seguranca" name="temas_paz_seguranca[ ]" value="Sudeste">Sudeste<br>
                     </td> 
                </tr>
 
-               <tr> <td><input type="checkbox" name="temas[ ]" value="saude_bemestar" class="no-margin" onclick="verificar()"></td>
+               <tr> <td><input type="checkbox" id="saude_bemestar" name="temas[ ]" value="saude_bemestar" class="no-margin" onclick="verificar()"></td>
                     <td>Saúde e Bem-estar.</td>
                     <td>Iniciativas que tratam de questões de autoestima, qualidade de vida, saúde e bem-estar das mulheres.</td>
                     <td class="temas_regioes"style="width:150px">
-                        <input type="checkbox" name="temas_saude_bemestar[ ]" value="Norte">Norte<br>
-                        <input type="checkbox" name="temas_saude_bemestar[ ]" value="Nordeste">Nordeste<br>
-                        <input type="checkbox" name="temas_saude_bemestar[ ]" value="Centro-Oeste">Centro-Oeste<br>
-                        <input type="checkbox" name="temas_saude_bemestar[ ]" value="Sul">Sul<br>
-                        <input type="checkbox" name="temas_saude_bemestar[ ]" value="Sudeste">Sudeste<br>
+                        <input type="checkbox" class="temas_saude_bemestar" name="temas_saude_bemestar[ ]" value="Norte">Norte<br>
+                        <input type="checkbox" class="temas_saude_bemestar" name="temas_saude_bemestar[ ]" value="Nordeste">Nordeste<br>
+                        <input type="checkbox" class="temas_saude_bemestar" name="temas_saude_bemestar[ ]" value="Centro-Oeste">Centro-Oeste<br>
+                        <input type="checkbox" class="temas_saude_bemestar" name="temas_saude_bemestar[ ]" value="Sul">Sul<br>
+                        <input type="checkbox" class="temas_saude_bemestar" name="temas_saude_bemestar[ ]" value="Sudeste">Sudeste<br>
                     </td> 
                </tr>
 
@@ -1203,20 +1203,25 @@
                 <h5>Cidade*</h5>
                 <div class="form-group">
                     <label class="sr-only" >Cidade</label>
+<<<<<<< HEAD
                     <select class="f1-last-name form-control" name="cidade" id="cidades" required> 
                         <option value=""></option>
+=======
+                    <select class="f1-last-name form-control" name="cidade" id="cidades"required> 
+                        <option value="escolha uma cidade"></option>
+>>>>>>> origin/master
                     </select> 
                 </div>
 
                 <h5>Bairro*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Bairro</label>
-                <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control" required>
+                <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control"required>
                 </div>
                 <h5>Rua*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-facebook">Rua</label>
-                    <input type="text" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control" required>
+                    <input type="text" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control"required>
                 </div>
                 <h5>Número*</h5>
                 <div class="form-group">
