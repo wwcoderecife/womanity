@@ -310,7 +310,7 @@
 
                 <div class="f1-buttons">    
                 <button type="button" class="btn btn-warning" onclick="desbloquearCampos();" title="Desbloquear campos para edição">Editar</button>
-                <button type="button" class="btn btn-next" >Próximo</button>
+                <button type="button" class="btn btn-next" onclick=" return validacampobranco();" >Próximo</button>
                </div>
             </fieldset><!--Dados Pessoais-->
 
@@ -2192,7 +2192,7 @@
                 
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="button" class="btn btn-next">Próximo</button>
+                    <button type="button" class="btn btn-next" onclick="return validacampobranco2();">Próximo</button>
                 </div>
 
 </fieldset>
@@ -2273,7 +2273,7 @@
 
                <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="button" class="btn btn-next">Próximo</button>
+                    <button type="button" class="btn btn-next" onclick="return validacampobranco3()">Próximo</button>
                 </div>
 
             </fieldset>
@@ -2381,7 +2381,7 @@
                 </div>
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="submit" class="btn btn-submit edit-button">Enviar</button>
+                    <button type="submit" class="btn btn-submit edit-button" onclick="return validacampobranco4();">Enviar</button>
                 </div>
             </fieldset>
         </form>
