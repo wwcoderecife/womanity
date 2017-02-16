@@ -2014,7 +2014,7 @@
                     class="f1-about-yourself form-control" id="organizaçāo_politica_publica"><?php echo $edit->getPoliticasPublicas(); ?></textarea>
                     <span id="contando4" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
-s
+
 
                 <!-- Organizacao 27-->
 
