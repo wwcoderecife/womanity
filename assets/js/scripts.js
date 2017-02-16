@@ -146,7 +146,9 @@ jQuery(document).ready(function() {
         var progress_line = $(this).parents('.f1').find('.f1-progress-line');
 
         var tab = $(".tab:visible");
-        
+    
+        console.log(parent_fieldset[0]['className']);
+
         var valid = true;
         $('input, textarea, select', tab).each(function(i, v){
             valid = validator.element(v) && valid;
@@ -155,7 +157,13 @@ jQuery(document).ready(function() {
             // }else{
             //     $(this).removeClass('input-error');
             // }
+
+
         });
+
+        
+
+        console.log($('input[name="temas[ ]"]:checked').length);
         
         if(!valid){
             console.log("erro");
@@ -164,6 +172,10 @@ jQuery(document).ready(function() {
            //      $(this).addClass('input-error');
            //  });
             // console.log($(this));
+        }else if (parent_fieldset[0]['className'] == "tab organizacao" && $('input[name="temas[ ]"]:checked').length < 1){
+            valid = false;
+            open_dialog("Alerta", "Selecione pelo menos um Tema!", "warning");
+            return false;
         }else{
              parent_fieldset.fadeOut(400, function() {
                 // change icons
