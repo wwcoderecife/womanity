@@ -429,10 +429,17 @@
                     <input type="checkbox" name="recursos_origem[]" value="organizações não governamentais brasileiras ou internacionais">organizações não governamentais brasileiras ou internacionais<br>
                     <input type="checkbox" name="recursos_origem[]" value="subvenções públicas ">subvenções públicas<br>
                     <input type="checkbox" name="recursos_origem[]" value="venda de produtos/prestação de serviços">venda de produtos/prestação de serviços<br>
-                    <input type="checkbox" name="recursos_origem[]" value="outros">outros<br>
+                    <input type="checkbox" name="recursos_origem[]" value="outros" id="outro_recursos" onclick="javascript: habilita(this, 'outrosprojetos');">outros<br>
                     <input type="text" id="outrosprojetos" name="fonte_recursos_outros" placeholder=" outros..." style="display:block;" class="f1-last-name form-control">
                 
                </div>  
+
+
+<script>
+    function habilita(campo, idCampo) {
+        document.getElementById(outrosprojetos).disabled = outro_recursos.checked;
+    }
+</script>
 
 
                    <!--Tabela Temas-->
@@ -672,7 +679,7 @@
                         <input type="checkbox" class="temas_saude_bemestar" name="temas_saude_bemestar[ ]" value="Sudeste">Sudeste<br>
                     </td> 
                </tr>
-s
+
                   </tbody>
                 </table>
             </div>
