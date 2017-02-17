@@ -1026,7 +1026,7 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" name="monitoramento_atv" id="avaliacao" required>
                         <option value=""></option>
-                        <option value="0">Nāo</option>
+                        <option value="0" onclick="caracterTextarea();">Nāo</option>
                         <option value="1">Sim</option>
                     </select>
                     <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando5')" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? limite de 500 caracteres..

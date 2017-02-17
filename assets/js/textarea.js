@@ -7,8 +7,11 @@ function caracterTextarea(box,num_max,campospan){
  }
  if (contagem_carac >= num_max){
  document.getElementById(campospan).innerHTML = "Limite de caracteres excedido!";
+ }if(contagem_carac === 0){
+ 	document.getElementById(campospan).innerHTML = ""
  }
- }/*else{
- document.getElementById(campospan).innerHTML = "Limite de 500 caracteres..";
- }*/
+ //else{
+ //document.getElementById(campospan).innerHTML = "";
+ //}
+}
 }
