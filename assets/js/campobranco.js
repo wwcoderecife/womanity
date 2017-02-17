@@ -122,7 +122,7 @@ var reason = "";
  	validateFormOnSubmit(document.getElementById("nomeIndica1"));
  	validateFormOnSubmit(document.getElementById("emailIndica1"));
  	validateFormOnSubmit(document.getElementById("inputTel3"));
-  validateFormOnSubmit(document.getElementById("inputTel4"));
+ 
  	 	
 
  if(FieldFocus == "X"){
