@@ -10,7 +10,7 @@
             <!--<script src="assets/js/validator.min.js"></script>-->
             <script src="assets/js/validatortel.js"></script>
             <script src="assets/js/textarea.js"></script>
-             <script src="assets/js/campobranco.js"></script>
+             <script src="assets/js/campobrancoiniciativa.js"></script>
            
           
             <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
