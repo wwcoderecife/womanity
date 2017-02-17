@@ -294,6 +294,7 @@
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="year_organizacao" name="anoatividade" required>
+                    <option value=""></option>
                         <script>
                           var myDate = new Date();
                           var year = myDate.getFullYear();
