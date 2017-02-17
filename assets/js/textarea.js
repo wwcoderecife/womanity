@@ -1,17 +1,14 @@
 function caracterTextarea(box,num_max,campospan){
  var contagem_carac = box.length;
  if (contagem_carac != 0){
- document.getElementById(campospan).innerHTML = contagem_carac + " caracteres digitados";
+ document.getElementById(campospan).innerHTML = contagem_carac + "";
  if (contagem_carac == 1){
- document.getElementById(campospan).innerHTML = contagem_carac + " caracter digitado";
+ document.getElementById(campospan).innerHTML = contagem_carac + "";
  }
  if (contagem_carac >= num_max){
  document.getElementById(campospan).innerHTML = "Limite de caracteres excedido!";
- }if(contagem_carac === 0){
- 	document.getElementById(campospan).innerHTML = ""
  }
- //else{
- //document.getElementById(campospan).innerHTML = "";
- //}
-}
+ }else{
+ document.getElementById(campospan).innerHTML = "";
+ }
 }
