@@ -1014,7 +1014,7 @@
                     <textarea name="organizaçāo_politica_publica" onkeyup="caracterTextarea(this.value,500,'contando4')"  maxlength="500" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres) detalhe aqui, caso necessário"
 
                     class="f1-about-yourself form-control" id="organizaçāo_politica_publica"></textarea>
-                    <span id="contando4" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                    <span id="contando4" style="font-family:verdana;"></span><br/>
                 </div>
 
 
@@ -1031,7 +1031,7 @@
                     </select>
                     <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando')" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
                         "style='display: none'/></textarea>
-                        <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                        <span id="contando" style="font-family:verdana;"></span><br/>
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -1080,7 +1080,7 @@
                     </select>
                     <textarea type="text"  onkeyup="caracterTextarea(this.value,500,'contando5')" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
 "style='display: none'/></textarea>
-<span id="contando5" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+<span id="contando5" style="font-family:verdana;"></span><br/>
                     <script>
 
                         var dropdownComun = document.getElementById('organizacao-comunicacao');
@@ -1130,7 +1130,7 @@
                     </select>
                     <textarea type="text" id="inputPremiacaoOng" onkeyup="caracterTextarea(this.value,500,'contando6')" name="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
 "style='display: none'/></textarea>
-<span id="contando6" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+<span id="contando6" style="font-family:verdana;"></span><br/>
                     <script>
 
                     var dropdown = document.getElementById('premiacao');

@@ -2031,7 +2031,7 @@
                     <textarea name="organizaçāo_politica_publica" maxlength="500" onkeyup="caracterTextarea(this.value,500,'contando4')" placeholder="Descreva como se deu essa influência em políticas públicas (em 500 caracteres)"
 
                     class="f1-about-yourself form-control" id="organizaçāo_politica_publica"><?php echo $edit->getPoliticasPublicas(); ?></textarea>
-                    <span id="contando4" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                    <span id="contando4" style="font-family:verdana;"></span><br/>
                 </div>
 
 
@@ -2050,7 +2050,7 @@
                     </select>
                     <textarea type="text" onkeyup="caracterTextarea(this.value,500,'contando5')" required id="inputAvaliacaoOng" name="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Quais foram os resultados comprovados alcançados até hoje? Limite de 500 caracteres.."
                         <?php if($edit->getMonitoramentoAtividades() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getMonitoramentoAtividades(); ?></textarea>
-                        <span id="contando5" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                        <span id="contando5" style="font-family:verdana;"></span><br/>
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -2102,7 +2102,7 @@
                     </select>
                     <textarea type="text" required onkeyup="caracterTextarea(this.value,500,'contando6')" name="inputComunicacaoOng" id="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva aqui. Limite de 500 caracteres.."  
                     <?php if($edit->getEstrategiaComunicacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getEstrategiaComunicacao(); ?></textarea>
-<span id="contando6" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+<span id="contando6" style="font-family:verdana;"></span><br/>
                     <script>
 
                         var dropdownComun = document.getElementById('organizacao-comunicacao');
@@ -2155,7 +2155,7 @@
                     </select>
                     <textarea type="text"  required onkeyup="caracterTextarea(this.value,500,'contando7')" name="inputPremiacaoOng" id="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva aqui. Limite de 500 caracteres...
 " <?php if($edit->getPremiacaoCertificacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getPremiacaoCertificacao(); ?></textarea>
-<span id="contando7" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+<span id="contando7" style="font-family:verdana;"></span><br/>
                     <script>
 
                     var dropdown = document.getElementById('premiacao');
