@@ -1025,7 +1025,7 @@
                     </select>
                     <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando2')" name="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Quais foram os resultados comprovados alcançados até hoje? Limite de 500 caracteres..
                         "style='display: none' /></textarea>
-                        <span id="contando2" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                        <span id="contando2" style="font-family:verdana;"></span><br/>
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -1074,7 +1074,7 @@
                     </select>
                     <textarea type="text" id="inputComunicacaoOng" onkeyup="caracterTextarea(this.value,500,'contando3')" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva aqui. Limite de 500 caracteres...
 "style='display: none' /></textarea>
-<span id="contando3" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+<span id="contando3" style="font-family:verdana;"></span><br/>
                     <script>
 
                         var dropdownComun = document.getElementById('iniciativa-comunicacao');
@@ -1123,7 +1123,7 @@
                     </select>
                     <textarea type="text" id="inputPremiacao" onkeyup="caracterTextarea(this.value,500,'contando4')" name="inputPremiacao" class="f1-last-name form-control" maxlength="500" placeholder="Descreva aqui. Limite de 500 caracteres...
 "style='display: none'></textarea>
-<span id="contando4" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+<span id="contando4" style="font-family:verdana;"></span><br/>
                     <script>
 
                         var dropdown = document.getElementById('premiacao');
