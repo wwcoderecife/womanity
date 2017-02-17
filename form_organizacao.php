@@ -1029,9 +1029,9 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim</option>
                     </select>
-                    <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando')" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? limite de 500 caracteres..
+                    <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando5')" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? limite de 500 caracteres..
                         "style='display: none'/></textarea>
-                        <span id="contando" style="font-family:verdana;"></span><br/>
+                        <span id="contando5" style="font-family:verdana;"></span><br/>
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -1078,9 +1078,9 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
                     </select>
-                    <textarea type="text"  onkeyup="caracterTextarea(this.value,500,'contando5')" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação, limite de 500 caracteres
+                    <textarea type="text"  onkeyup="caracterTextarea(this.value,500,'contando6')" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação, limite de 500 caracteres
 "style='display: none'/></textarea>
-<span id="contando5" style="font-family:verdana;"></span><br/>
+<span id="contando6" style="font-family:verdana;"></span><br/>
                     <script>
 
                         var dropdownComun = document.getElementById('organizacao-comunicacao');
@@ -1128,9 +1128,9 @@
                         <option value="1">Sim, quais?</option> 
                         
                     </select>
-                    <textarea type="text" id="inputPremiacaoOng" onkeyup="caracterTextarea(this.value,500,'contando6')" name="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações, limite de 500 caracteres.
+                    <textarea type="text" id="inputPremiacaoOng" onkeyup="caracterTextarea(this.value,500,'contando7')" name="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações, limite de 500 caracteres.
 "style='display: none'/></textarea>
-<span id="contando6" style="font-family:verdana;"></span><br/>
+<span id="contando7" style="font-family:verdana;"></span><br/>
                     <script>
 
                     var dropdown = document.getElementById('premiacao');
@@ -1185,7 +1185,7 @@
                 
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="button" class="btn btn-next" onclick= "return validacampobranco2();">Próximo</button>
+                    <button type="button" class="btn btn-next" onclick="return validacampobranco2();">Próximo</button>
                 </div>
 
 </fieldset>
