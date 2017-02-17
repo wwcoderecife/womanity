@@ -231,7 +231,7 @@
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="identifica" value="projeto" class="form-control-radio">Projeto
+                        <input type="radio" name="identifica" value="projeto" checked class="form-control-radio">Projeto
                     </label>
                 </div>
 
@@ -1180,7 +1180,7 @@
 
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="button" class="btn btn-next" onclick="return validacampobranco2();">Próximo</button>
+                    <button type="button" class="btn btn-next" onclick="return validacampobrancoiniciativa1();">Próximo</button>
                 </div> 
 </fieldset> 
 
