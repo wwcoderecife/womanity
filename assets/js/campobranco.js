@@ -63,6 +63,7 @@ var reason = "";
  	validateFormOnSubmit(document.getElementById("inputNomeOng"));
  	validateFormOnSubmit(document.getElementById("inputelOng"));
  	validateFormOnSubmit(document.getElementById("inputEmailOng"));
+  validateFormOnSubmit(document.getElementById("year_organizacao"));
  	validateFormOnSubmit(document.getElementById("organizacao-tipo"));
  	validateFormOnSubmit(document.getElementById("pessoas_envolvidas"));
  	validateFormOnSubmit(document.getElementById("pessoas_beneficiadas"));
