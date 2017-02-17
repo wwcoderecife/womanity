@@ -10,6 +10,7 @@
             <!--<script src="assets/js/validator.min.js"></script>-->
             <script src="assets/js/validatortel.js"></script>
             <script src="assets/js/textarea.js"></script>
+             <script src="assets/js/campobranco.js"></script>
            
           
             <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
@@ -75,7 +76,7 @@
                 <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="cargo_1" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name"  required >
+                    <input type="text" name="cargo_1" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo1"  required >
                     
                 </div>
 
@@ -108,13 +109,13 @@
                 <h5>Cargo*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Cargo</label>
-                    <input type="text" name="cargo_2" placeholder="Cargo" class="f1-last-name form-control" id="f1-last-name"required >
+                    <input type="text" name="cargo_2" placeholder="Cargo" class="f1-last-name form-control" id="inputCargo2"required >
                    
                 </div>
                  <h5>E-mail*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">E-mail</label>
-                    <input type="email" name="email_2" placeholder="email@email.com" class="f1-last-name form-control" id="f1-last-name"required >
+                    <input type="email" name="email_2" placeholder="email@email.com" class="f1-last-name form-control" id="inputEmail2"required >
                    
                     
                 </div>
@@ -133,7 +134,7 @@
                 </div>
 
                 <div class="f1-buttons">
-                <button type="button" class="btn btn-next" >Próximo</button>
+                <button type="button" class="btn btn-next" onclick="return validacampobranco();" >Próximo</button>
                </div>
             </fieldset><!--Dados Pessoais-->
 
@@ -196,7 +197,7 @@
                 <h5>3. Qual o nome da sua iniciativa?*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Nome</label>
-                    <input type="text" name="nome" maxlength="50" class="f1-last-name form-control" required>
+                    <input type="text" name="nome" maxlength="50" class="f1-last-name form-control" id="inputNomeIni" required>
                 </div>
 
 
@@ -217,7 +218,7 @@
                 <h5>6. Informe o e-mail da sua iniciativa*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Email</label>
-                    <input type="email" name="email" required class="f1-last-name form-control">
+                    <input type="email" name="email" id="inputEmailIni" required class="f1-last-name form-control">
                  
                 </div>
 
@@ -293,6 +294,7 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" id="year_organizacao" name="anoatividade" required >
                     <div class="help-block with-errors"></div>
+                    <option value=""></option>
                         <script>
                           var myDate = new Date();
                           var year = myDate.getFullYear();
@@ -947,7 +949,7 @@
                     <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
                     <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
-                    <select class="f1-last-name form-control" required name="organizacao_estado[ ]" multiple>
+                    <select class="f1-last-name form-control" id="estado_iniciativa" required name="organizacao_estado[ ]" multiple>
                         <div class="help-block with-errors"></div>
                         <option value="Acre">Acre</option>
                         <option value="Alagoas">Alagoas</option>
@@ -981,7 +983,7 @@
                     <h5>16. A sua iniciativa influenciou políticas públicas?*</h5>
                 <div class="form-group">
                    <label class="radio-inline">
-                        <input type="radio" name="politicas_publicas" value="nao" class="form-control-radio"> Nāo
+                        <input type="radio" name="politicas_publicas" value="nao" checked  class="form-control-radio"> Nāo
                     </label>
 
                     <label class="radio-inline">
@@ -1178,7 +1180,7 @@
 
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="button" class="btn btn-next">Próximo</button>
+                    <button type="button" class="btn btn-next" onclick="return validacampobranco2();">Próximo</button>
                 </div> 
 </fieldset> 
 
@@ -1215,19 +1217,19 @@
                 <h5>Bairro*</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-google-plus">Bairro*</label>
-                    <input type="text" name="bairro" placeholder="Bairro..." class="f1-last-name form-control" required >
+                    <input type="text" name="bairro" placeholder="Bairro..." id="bairro" class="f1-last-name form-control" required >
                         
                 <h5>Rua*</h5>        
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-facebook">Rua*</label>
-                    <input type="text" name="rua" placeholder="Rua/Av...*" class="f1-last-name form-control" required >
+                    <input type="text" name="rua" placeholder="Rua/Av...*" id="rua" class="f1-last-name form-control" required >
                         
                 <h5>Número*</h5>        
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="f1-twitter">Número*</label>
-                    <input type="text" name="numero"  placeholder="Número...*"class="f1-last-name form-control" required >
+                    <input type="text" name="numero" id="numero"  placeholder="Número...*"class="f1-last-name form-control" required >
                         
                 </div>
                 <h5>Complemento</h5>
@@ -1244,7 +1246,7 @@
                 </div>              
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="button" class="btn btn-next">Próximo</button>
+                    <button type="button" class="btn btn-next" onclick="return validacampobranco3();">Próximo</button>
                 </div>
             </fieldset>
 
@@ -1352,7 +1354,7 @@
                 </div>
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="submit" class="btn btn-submit">Enviar</button>
+                    <button type="submit" class="btn btn-submit" onclick ="return validacampobranco4();">Enviar</button>
                 </div>
             </fieldset> 
          </form>

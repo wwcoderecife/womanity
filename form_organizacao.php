@@ -935,7 +935,7 @@
                     <span id="contando3" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
 
-                <h4>16. Em quais estados sua iniciativa tem atuação direta?*</h4>
+                <h4>16. Em quais estados sua organizaçāo tem atuação direta?*</h4>
                     <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar várias opções.</em></h6>
                     <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>

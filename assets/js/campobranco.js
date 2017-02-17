@@ -61,8 +61,14 @@ var reason = "";
  	validateFormOnSubmit(document.getElementById("organizacao-cnpj"));
  	validateFormOnSubmit(document.getElementById("inputcnpj"));
  	validateFormOnSubmit(document.getElementById("inputNomeOng"));
+  validateFormOnSubmit(document.getElementById("inputNomeIni"));
+  validateFormOnSubmit(document.getElementById("inputTel3"));
  	validateFormOnSubmit(document.getElementById("inputelOng"));
  	validateFormOnSubmit(document.getElementById("inputEmailOng"));
+  validateFormOnSubmit(document.getElementById("inputEmailIni"));
+  validateFormOnSubmit(document.getElementById("natureza"));
+  validateFormOnSubmit(document.getElementById("inputoutros"));
+  validateFormOnSubmit(document.getElementById("avaliacao"));
   validateFormOnSubmit(document.getElementById("year_organizacao"));
  	validateFormOnSubmit(document.getElementById("organizacao-tipo"));
  	validateFormOnSubmit(document.getElementById("pessoas_envolvidas"));
@@ -72,7 +78,8 @@ var reason = "";
  	validateFormOnSubmit(document.getElementById("publico_alvo"));
  	validateFormOnSubmit(document.getElementById("nome"));
  	validateFormOnSubmit(document.getElementById("sobre_iniciativa_ong1"));
- 	validateFormOnSubmit(document.getElementById("estado_iniciativa"));	
+ 	validateFormOnSubmit(document.getElementById("estado_iniciativa"));
+  validateFormOnSubmit(document.getElementById("iniciativa-comunicacao"));	
  	validateFormOnSubmit(document.getElementById("avaliacao"));	
  	validateFormOnSubmit(document.getElementById("inputAvaliacaoOng"));	
  	validateFormOnSubmit(document.getElementById("organizacao-comunicacao"));
@@ -103,6 +110,7 @@ var reason = "";
  	validateFormOnSubmit(document.getElementById("rua"));
  	validateFormOnSubmit(document.getElementById("numero"));
  	validateFormOnSubmit(document.getElementById("cep"));
+  validateFormOnSubmit(document.getElementById("inputCep"));
  	
 
  if(FieldFocus == "X"){
@@ -120,6 +128,7 @@ var reason = "";
  	validateFormOnSubmit(document.getElementById("nomeIndica1"));
  	validateFormOnSubmit(document.getElementById("emailIndica1"));
  	validateFormOnSubmit(document.getElementById("inputTel3"));
+  validateFormOnSubmit(document.getElementById("inputTel4"));
  	 	
 
  if(FieldFocus == "X"){
@@ -129,6 +138,9 @@ var reason = "";
     }
 
  };	
+
+
+
 
 
 
