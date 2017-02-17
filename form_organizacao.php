@@ -806,7 +806,7 @@
                     <label class="sr-only" for="f1-about-yourself"></label>
                     <textarea name="sobre" required onkeyup="caracterTextarea(this.value,500,'contando')" maxlength="500" placeholder="campo com capacidade para 500 caracteres...." 
                     class="f1-about-yourself form-control" id="sobre" ></textarea>
-                    <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                    <span id="contando" style="font-family:verdana;"></span><br/>
                 </div>
 
                 <!-- <h5>Qual é a sua função no ecossistema?*</h5>
@@ -927,25 +927,25 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" id="nome" name="organizacao-relaciona1" required  class="f1-last-name form-control">
-                    <textarea name="sobre_iniciativas1" onkeyup="caracterTextarea(this.value,500,'contando1')" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
+                    <textarea name="sobre_iniciativas1" onkeyup="caracterTextarea(this.value,500,'contando1')" maxlength="500" placeholder="descreva as iniciativas da sua organização....Limite de 500 caracteres" 
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong1" required  ></textarea>
-                    <span id="contando1" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                    <span id="contando1" style="font-family:verdana;"></span><br/>
                 </div>
                 <h5>Iniciativa 2</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona2" class="f1-last-name form-control">
-                    <textarea name="sobre_iniciativas2" onkeyup="caracterTextarea(this.value,500,'contando2')" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
+                    <textarea name="sobre_iniciativas2" onkeyup="caracterTextarea(this.value,500,'contando2')" maxlength="500" placeholder="descreva as iniciativas da sua organização....Limite de 500 caracteres" 
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong2"  ></textarea>
-                    <span id="contando2" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                    <span id="contando2" style="font-family:verdana;"></span><br/>
                 </div>
                 <h5>Iniciativa 3</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona3"class="f1-last-name form-control">
-                    <textarea name="sobre_iniciativas3" onkeyup="caracterTextarea(this.value,500,'contando3')" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
+                    <textarea name="sobre_iniciativas3" onkeyup="caracterTextarea(this.value,500,'contando3')" maxlength="500" placeholder="descreva as iniciativas da sua organização....Limite de 500 caracteres" 
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong3"  ></textarea>
-                    <span id="contando3" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                    <span id="contando3" style="font-family:verdana;"></span><br/>
                 </div>
 
                 <h4>16. Em quais estados sua organizaçāo tem atuação direta?*</h4>
@@ -1011,7 +1011,7 @@
                     <label class="checkbox-inline">
                         <input type="checkbox" name="politicas_publicas_lista[]" value="Nacional" class="form-control-radio">Nacional
                     </label>
-                    <textarea name="organizaçāo_politica_publica" onkeyup="caracterTextarea(this.value,500,'contando4')"  maxlength="500" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres) detalhe aqui, caso necessário"
+                    <textarea name="organizaçāo_politica_publica" onkeyup="caracterTextarea(this.value,500,'contando4')"  maxlength="500" placeholder="Descreva como se deu essa influência em políticas públicas detalhe aqui, caso necessário. Limite de 500 caracteres"
 
                     class="f1-about-yourself form-control" id="organizaçāo_politica_publica"></textarea>
                     <span id="contando4" style="font-family:verdana;"></span><br/>
@@ -1029,7 +1029,7 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim</option>
                     </select>
-                    <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando')" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
+                    <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando')" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? limite de 500 caracteres..
                         "style='display: none'/></textarea>
                         <span id="contando" style="font-family:verdana;"></span><br/>
                     <script>
@@ -1078,7 +1078,7 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
                     </select>
-                    <textarea type="text"  onkeyup="caracterTextarea(this.value,500,'contando5')" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
+                    <textarea type="text"  onkeyup="caracterTextarea(this.value,500,'contando5')" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação, limite de 500 caracteres
 "style='display: none'/></textarea>
 <span id="contando5" style="font-family:verdana;"></span><br/>
                     <script>
@@ -1128,7 +1128,7 @@
                         <option value="1">Sim, quais?</option> 
                         
                     </select>
-                    <textarea type="text" id="inputPremiacaoOng" onkeyup="caracterTextarea(this.value,500,'contando6')" name="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
+                    <textarea type="text" id="inputPremiacaoOng" onkeyup="caracterTextarea(this.value,500,'contando6')" name="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações, limite de 500 caracteres.
 "style='display: none'/></textarea>
 <span id="contando6" style="font-family:verdana;"></span><br/>
                     <script>
