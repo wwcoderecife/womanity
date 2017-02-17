@@ -1744,7 +1744,8 @@
                     <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
 
-                 <h4>14. Quais os principais públicos diretamente atendidos por sua organização?<!--Selecione até três.-->*</h4>
+                <h4>14.Quais os principais públicos diretamente atendidos por sua organização? Selecione até três.*</h4>
+                 <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar os subtemas.</em></h6>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -1770,6 +1771,24 @@
                             >Mulheres</option>
                            
                     </select>
+
+
+<script>
+     $(document).ready(function() {
+
+          var last_valid_selection = null;
+
+          $('#publico_alvo').change(function(event) {
+
+            if ($(this).val().length > 3) {
+
+              $(this).val(last_valid_selection);
+            } else {
+              last_valid_selection = $(this).val();
+            }
+          });
+        });
+</script>
 
                     <h4>15. Nomeie e descreva as iniciativas e/ou projetos da sua organização que trabalham com empoderamento das mulheres.*</h4>
                  <h5>Iniciativa 1</h5> 
