@@ -714,7 +714,7 @@
  
 <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar os subtemas.</em></h6>
 <div class="form-group">
-<label for="subtemas" for="f1-google-plus">Subtemas</label>
+<label for="subtemas" for="f1-google-plus"></label>
         <select class="f1-last-name form-control"id="subtemas" required class="selectpicker" name="subtemas[ ]" data-style="default" multiple>
             <option value="Aborto">Aborto</option>
             <option value="Advocacy">Advocacy</option>
