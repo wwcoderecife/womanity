@@ -141,7 +141,7 @@ var reason = "";
   validateFormOnSubmit(document.getElementById("organizacao-cnpj"));
   validateFormOnSubmit(document.getElementById("inputnomeong"));
   validateFormOnSubmit(document.getElementById("inputcnpj"));
-  validateFormOnSubmit(document.getElementById("inputTel4"));
+  validateFormOnSubmit(document.getElementById("inputTel3"));
   validateFormOnSubmit(document.getElementById("inputNomeIni"));
   validateFormOnSubmit(document.getElementById("inputEmailIni"));
   validateFormOnSubmit(document.getElementById("natureza"));
@@ -158,12 +158,9 @@ var reason = "";
   validateFormOnSubmit(document.getElementById("iniciativa-comunicacao"));
   validateFormOnSubmit(document.getElementById("inputComunicacaoOng"));
   validateFormOnSubmit(document.getElementById("iniciativa-comunicacao"));
-  validateFormOnSubmit(document.getElementById("iniciativa-comunicacao"));
-  validateFormOnSubmit(document.getElementById("iniciativa-comunicacao"));
   validateFormOnSubmit(document.getElementById("premiacao"));
   validateFormOnSubmit(document.getElementById("inputPremiacao"));
-  validateFormOnSubmit(document.getElementById("premiacao"));
-  validateFormOnSubmit(document.getElementById("premiacao"));
+  
     
 
  if(FieldFocus == "X"){
