@@ -16,8 +16,6 @@
         <link rel="stylesheet" href="assets/css/sweetalert.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/js/validasenha.js">
-        <link rel="stylesheet" href="assets/js/validaemail.js">
-
 
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -186,8 +184,8 @@
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-email">Email *</label>
-                                    <input type="text" name="email" placeholder="Email*" class="f1-email form-control" id="email" onBlur="validarEmail(this.value,'validacao');" required >
-                                    <div id="validacao"></div>
+                                    <input type="email" name="email" placeholder="Email *"  class="f1-email form-control" id="f1-email" pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$"  required data-error = "Por favor, informe um e-mail correto.">
+                                    <div class="help-block with-errors"></div>
                                 </div>
 
                                 <div class="form-group">
