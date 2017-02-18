@@ -224,17 +224,22 @@
                     <input type="text" name="sigla" id="inputSiglaOng" class="f1-last-name form-control">
                 </div>
 
+
                 <h4>5. Qual o telefone da sua organizaçāo?*</h4>
                 <div class="form-group">
                     <label class="sr-only">Telefone</label>
-                    <input type="tel" onblur="ExitField('inputelOng','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" id="inputelOng" required name="organizacao-telefone" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd">
+                    <input type="tel" onblur="ExitField('inputelOng','msgTel3','Telefone inválido, número deve conter 14 caracteres ', 14);" id="inputelOng" required name="organizacao-telefone" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd">
+                    <label id="msgTel3" ></label>
                 </div>
+
+
 
                 <h4>6. Qual o e-mail da sua organizaçāo?*</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Email</label>
                     <input type="email" name="email" id="inputEmailOng"required class="f1-last-name form-control"class="f1-last-name form-control">
                 </div>
+
 
                  <h4>7. Como a sua organizaçāo se identifica?*</h4>
                  <div class="form-group">

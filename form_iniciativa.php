@@ -212,7 +212,7 @@
                 <div class="form-group">
                     <label class="sr-only" >Telefone</label>
                     <input type="text"  name="organizacao-telefone" onblur="ExitField('inputTel3','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" required  placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd" id="inputTel3">
-                    
+                    <label id="msgTel3" ></label>
                 </div>
 
                 <h5>6. Informe o e-mail da sua iniciativa*</h5>
