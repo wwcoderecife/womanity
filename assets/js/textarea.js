@@ -1,4 +1,4 @@
-function caracterTextarea(box,num_max,campospan){
+function caracterTextarea(box,num_max){
  var contagem_carac = box.length;
  if (contagem_carac != 0){
  document.getElementById().innerHTML = contagem_carac + ".";
