@@ -15,6 +15,8 @@
         <link rel="stylesheet" href="assets/css/form-elements.css">
         <link rel="stylesheet" href="assets/css/sweetalert.css">
         <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/js/validasenha.js">
+
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -188,8 +190,9 @@
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-password">Senha *</label>
-                                    <input type="password" name="password" placeholder="Senha *" class="f1-password form-control" id="f1-password" maxlenght="6" required data-error = "Mínimo de seis (6) digitos">
+                                    <input type="password" name="password" onkeyup="validasenha(this.value,6,'msgSenha ');" placeholder="Senha *" class="f1-password form-control" id="f1-password" maxlenght="6" required data-error = "Mínimo de seis (6) digitos">
                                     <div class="help-block with-errors"></div>
+                                    <span id="msgSenha" style="font-family:verdana;"></span><br/>
                                 </div>
 
                                 <div class="form-group">
