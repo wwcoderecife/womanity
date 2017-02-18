@@ -1026,12 +1026,12 @@
                     <label class="sr-only" for="f1-google-plus"></label>
                     <select class="f1-last-name form-control" name="monitoramento_atv" id="avaliacao" required>
                         <option value=""></option>
-                        <option value="0" onclick="caracterTextarea();">Nāo</option>
+                        <option value="0">Nāo</option>
                         <option value="1">Sim</option>
                     </select>
-                    <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando5')" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? limite de 500 caracteres..
+                    <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'')" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? limite de 500 caracteres..
                         "style='display: none'/></textarea>
-                        <span id="contando5" style="font-family:verdana;"></span><br/>
+                        <span id="" style="font-family:verdana;"></span><br/>
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -1044,9 +1044,9 @@
 
                                 
                                 if(dropdownAvaliacao.options[dropdownAvaliacao.selectedIndex].value == "1") {
-                                    //faz algo quando o valor selecionado for outros
+                                    //faz algo quando o valor selecionado for sim
                                     console.log('Selecionou o valor');
-                                    //mostra o input quando o valor selecionado for outros
+                                    //mostra o input quando o valor selecionado for sim
                                     
                                     meuInput1.style.display = 'block';
                                 }else{
