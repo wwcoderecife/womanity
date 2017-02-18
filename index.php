@@ -16,6 +16,8 @@
         <link rel="stylesheet" href="assets/css/sweetalert.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/js/validasenha.js">
+        <link rel="stylesheet" href="assets/js/validaemail.js">
+
 
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -184,15 +186,15 @@
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-email">Email *</label>
-                                    <input type="email" name="email" placeholder="Email *" class="f1-email form-control" id="f1-email" required data-error = "Por favor, informe um e-mail correto.">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="email" name="email" placeholder="Email *" class="f1-email form-control" id="f1-email" onBlur="validarEmail(this.value, 'validacao');" required >
+                                    <div id="validacao"></div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-password">Senha *</label>
-                                    <input type="password" name="password" onkeyup="validasenha(this.value,6,'msgSenha ');" placeholder="Senha *" class="f1-password form-control" id="f1-password" maxlenght="6" required data-error = "Mínimo de seis (6) digitos">
+                                    <input type="password" name="password" placeholder="Senha *" class="f1-password form-control" id="f1-password" maxlenght="6" required data-error = "Mínimo de seis (6) digitos">
                                     <div class="help-block with-errors"></div>
-                                    <span id="msgSenha" style="font-family:verdana;"></span><br/>
+                                    
                                 </div>
 
                                 <div class="form-group">
