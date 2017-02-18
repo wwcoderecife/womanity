@@ -184,9 +184,24 @@
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-email">Email *</label>
-                                    <input type="email" name="email" placeholder="Email *"  class="f1-email form-control" id="f1-email" pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$"  required data-error = "Por favor, informe um e-mail correto.">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="text" name="email" placeholder="Email *"  class="f1-email form-control" id="email" onBlur="validarEmail(this.value, 'validacao');" required data-error = "Informe um e-mail válido."/>
+                                    <div id="validacao"></div>
                                 </div>
+                                <script>
+
+                                 // funcao valida e-mail 
+                                function validarEmail(email, validacao) {
+                                    var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+                                    var valid = document.getElementById(validacao);
+                                    result = ck_email.test(email);
+                                    if (!result) {
+                                        valid.innerHTML = "Endereço de e-mail inválido";
+                                    } else {
+                                        valid.innerHTML = "Endereço de e-mail válido";
+                                    }
+                                    return result;
+                                }
+                                </script>
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-password">Senha *</label>
