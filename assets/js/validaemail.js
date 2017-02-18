@@ -1,5 +1,5 @@
 function validarEmail(email, validacao) {
-    var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    var ck_email = [A-Za-z0-9\\._-]+@[A-Za-z0-9]+\\..(\\.[A-Za-z]+)*;
     var valid = document.getElementById(validacao);
     result = ck_email.test(email);
     if (!result) {
@@ -8,4 +8,5 @@ function validarEmail(email, validacao) {
         valid.innerHTML = "Endereço de e-mail válido";
     }
     return result;
-}
+
+};
