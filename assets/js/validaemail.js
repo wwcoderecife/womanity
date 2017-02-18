@@ -1,7 +1,7 @@
-function validarEmail(f1-email, validacao) {
+function validarEmail(email, validacao) {
     var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
     var valid = document.getElementById(validacao);
-    result = ck_email.test(f1-email);
+    result = ck_email.test(email);
     if (!result) {
         valid.innerHTML = "Endereço de e-mail inválido";
     } else {
