@@ -187,7 +187,7 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-email">Email *</label>
                                     <input type="email" name="email" placeholder="Email *" class="f1-email form-control" id="email" onBlur="validarEmail(this.value,'validacao');" required >
-                                    <div id="validacao"></div>
+                                    <span id="validacao"></span><br>
                                 </div>
 
                                 <div class="form-group">
