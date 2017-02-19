@@ -212,12 +212,14 @@
 
                                 <script>
 
-                                function validasenha(campotext,max_senha,label ){
+                                function validasenha(campotext,max_senha,campospan ){
 
                                     var senha = campotext.length;
-                                    if(senha.value.length<6){
-                                        document.getElementById(senha).innerHTML = senha + "Preencha SENHA corretamente, mínimo de 6 digítos!";
+                                    if(senha < 6){
+                                        document.getElementById(campospan).innerHTML = senha + "Senha inválida!, mínimo de 6 caracteres!";
 
+                                    }else{
+                                        document.getElementById(campospan).innerHTML = senha + "Senha válida!";
                                     }
 
                                     };  
