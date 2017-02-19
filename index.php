@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="assets/css/form-elements.css">
         <link rel="stylesheet" href="assets/css/sweetalert.css">
         <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/js/validasenha.js">
+       <!-- <link rel="stylesheet" href="assets/js/validasenha.js">-->
 
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
