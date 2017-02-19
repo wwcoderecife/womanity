@@ -205,10 +205,25 @@
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-password">Senha *</label>
-                                    <input type="password" name="password" placeholder="Senha *" class="f1-password form-control" id="f1-password" maxlenght="6" required data-error = "Mínimo de seis (6) digitos">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="password" name="password" placeholder="Senha *" onBlur="validasenha(this.value, 6, label);" class="f1-password form-control" id="f1-password" maxlenght="6" required data-error = "Mínimo de seis (6) digitos">
+                                    <div id="label"></div>
                                     
                                 </div>
+
+                                <script>
+
+                                function validasenha(campotext,max_senha,label ){
+
+                                    var senha = campotext.length;
+                                    if(senha.value.length<6){
+                                        document.getElementById(label).innerHTML = senha + "Preencha SENHA corretamente, mínimo de 6 digítos!";
+
+                                    }
+
+                                    };  
+
+
+                                </script>
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-repeat-password">Repetir Senha *</label>
