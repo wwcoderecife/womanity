@@ -202,7 +202,7 @@
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-password">Senha *</label>
-                                    <input type="password" name="password" placeholder="Senha *" onkeypress=" return validasenha(event);" class="f1-password form-control" id="senha" maxlenght="6" required data-error = "Mínimo de seis (6) digitos">
+                                    <input type="password" name="password" placeholder="Senha *" onBlur=" return validasenha(event);" class="f1-password form-control" id="senha" maxlenght="6" required data-error = "Mínimo de seis (6) digitos">
                                     <span id="label" style="font-family:verdana;"></span>
                                     
                                 </div>
