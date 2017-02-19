@@ -209,17 +209,17 @@
 
                                 <script>
 
+
+
+                                var specialKeys = new Array();
+                                    specialKeys.push(8); //Backspace
+
                                 function validasenha(e ){
-
-
-                                   var specialKeys = new Array();
-                                        specialKeys.push(8); //Backspace
-                                        function IsNumeric(e) {
                                             var keyCode = e.which ? e.which : e.keyCode
                                             var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);
                                             document.getElementById("label").style.display = ret ? "none" : "inline";
                                             return ret;
-                                        }
+                                    
                                 /*    
                                 if(e.length < 6){
  
