@@ -205,7 +205,7 @@
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-password">Senha *</label>
-                                    <input type="password" name="password" placeholder="Senha *" onkeyup="validasenha(this.value, 6, label);" class="f1-password form-control" id="senha" maxlenght="6" required data-error = "Mínimo de seis (6) digitos">
+                                    <input type="password" name="password" placeholder="Senha *" onkeypress="validasenha(this.value, 6, label);" class="f1-password form-control" id="senha" maxlenght="6" required data-error = "Mínimo de seis (6) digitos">
                                     <span id="label" style="font-family:verdana;"></span>
                                     
                                 </div>
@@ -216,13 +216,17 @@
 
                                     var senha = campotext.length;
                                     if(senha < 6){
-                                        document.getElementById(campospan).innerHTML = senha + "Senha inválida!, mínimo de 6 caracteres!";
+                                        document.getElementById(campospan).innerHTML = "Senha inválida!, mínimo de 6 caracteres!";
 
-                                    }else{
-                                        document.getElementById(campospan).innerHTML = senha + "Senha válida!";
-                                    }
+                                        return false;
 
-                                    };  
+                                   }else{
+                                    return true;
+                                   } 
+
+                                   }; 
+
+                                  
 
 
                                 </script>
@@ -230,7 +234,7 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-repeat-password">Repetir Senha *</label>
                                     <input type="password" name="f1-repeat-password" maxlenght="6" placeholder="Repetir Senha *" 
-                                    class="f1-repeat-password form-control" id="f1-repeat-password" data-match="#f1-password" data-match-error="Atenção! As senhas não estão iguais.">
+                                    class="f1-repeat-password form-control" id="f1-repeat-password" data-match="#senha" data-match-error="Atenção! As senhas não estão iguais.">
                                     <div class="help-block with-errors"></div>
                                 </div>
 
