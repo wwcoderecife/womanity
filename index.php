@@ -41,34 +41,6 @@
 
     </head>
 
-
-                                <script>
-
-                                 // funcao valida e-mail 
-                                function validarEmail(email, validacao) {
-                                    var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-                                    var valid = document.getElementById(validacao);
-                                    result = ck_email.test(email);
-                                    if (!result) {
-    
-                                    return result;
-                                }
-
-
-                                function validasenha(e){
-                                   if(e.length < 6){
-                                     document.getElementById("label").style.display = "Senha inválida!, mínimo de 6 caracteres!";
-                                     return false;   
-                                   }else{
-                                     return true;
-                                   } 
-
-                                }; 
-
-
-                                </script>
-
-
     <body>
 <?php
     session_start();
@@ -215,6 +187,18 @@
                                     <input type="text" name="email" placeholder="Email *"  class="f1-email form-control" id="email" onBlur="validarEmail(this.value, 'validacao');" required data-error = "Informe um e-mail válido."/>
                                     <div id="validacao"></div>
                                 </div>
+                                <script>
+
+                                 // funcao valida e-mail 
+                                function validarEmail(email, validacao) {
+                                    var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+                                    var valid = document.getElementById(validacao);
+                                    result = ck_email.test(email);
+                                    if (!result) {
+    
+                                    return result;
+                                }
+                                </script>
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-password">Senha *</label>
@@ -223,6 +207,40 @@
                                     
                                 </div>
 
+                                <script>
+
+                                function validasenha(e ){
+
+
+                                   var specialKeys = new Array();
+                                        specialKeys.push(8); //Backspace
+                                        function IsNumeric(e) {
+                                            var keyCode = e.which ? e.which : e.keyCode
+                                            var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);
+                                            document.getElementById("error").style.display = ret ? "none" : "inline";
+                                            return ret;
+                                        }
+                                /*    
+                                if(e.length < 6){
+ 
+                                   document.getElementById("label").style.display = "Senha inválida!, mínimo de 6 caracteres!";
+                                   return false;   
+
+                                    if(campotext.length < 6){
+                                        document.getElementById(campospan).innerHTML = "Senha inválida!, mínimo de 6 caracteres!";
+                                        return false;
+
+                                   }else{
+                                    return true;
+                                   }
+                                   */ 
+
+                                }; 
+
+                                  
+
+
+                                </script>
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-repeat-password">Repetir Senha *</label>
