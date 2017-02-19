@@ -216,8 +216,8 @@
 
                                 function validasenha(e ){
                                             var keyCode = e.which ? e.which : e.keyCode
-                                            var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);
-                                            document.getElementById("label").style.display = ret ? "none" : "inline";
+                                            var ret = ( Length(keyCode) < 6);
+                                            document.getElementById("label").style.display = "Senha inválida!, mínimo de 6 caracteres!";
                                             return ret;
                                     
                                 /*    
