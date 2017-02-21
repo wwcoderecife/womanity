@@ -262,10 +262,10 @@
                     <input type="email" required  name="email_1"  value="<?php echo $edit->getEmail_1() ?>" class="f1-last-name form-control" id="f1-last-name" >
                     
                 </div>
-                <h5>Telefone*</h5>
+                <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" required  name="telefone_1" value="<?php echo $edit->getTelefone_1() ?>" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1"  data-error = "Por favor, preencha corretamente o campo (xx) xxxx-xxxx.">
+                    <input type="tel"  name="telefone_1" value="<?php echo $edit->getTelefone_1() ?>" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1"  data-error = "Por favor, preencha corretamente o campo (xx) xxxx-xxxx.">
                     
                 </div>
                 <h5>Celular*</h5>
@@ -296,10 +296,10 @@
                     
                 </div>
 
-                <h5>Telefone*</h5>
+                <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" required  name="telefone_2" value="<?php echo $edit->getTelefone_2() ?>" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel2" data-error = "Por favor, preencha corretamente o campo (xx) xxxx-xxxx.">
+                    <input type="tel" name="telefone_2" value="<?php echo $edit->getTelefone_2() ?>" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel2" data-error = "Por favor, preencha corretamente o campo (xx) xxxx-xxxx.">
                 </div>
                 <h5>Celular*</h5>
                 <div class="form-group">
@@ -406,10 +406,10 @@
                     <input type="text" name="sigla" value="<?php echo $edit->getSigla() ?>" class="f1-last-name form-control">
                 </div>
 
-                <h4>5. Qual o telefone da sua organizaçāo?*</h4>
+                <h4>5. Qual o telefone da sua organizaçāo?</h4>
                 <div class="form-group">
                     <label class="sr-only" >Telefone da Organizaçāo</label>
-                    <input type="tel" required  onblur="ExitField('inputelOng','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" id="inputelOng" name="organizacao-telefone" value="<?php echo $edit->getTelefone() ?>" placeholder="(xx) xxxxx-xxxx"class="f1-last-name form-control phone_with_ddd">
+                    <input type="tel" onblur="ExitField('inputelOng','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" id="inputelOng" name="organizacao-telefone" value="<?php echo $edit->getTelefone() ?>" placeholder="(xx) xxxxx-xxxx"class="f1-last-name form-control phone_with_ddd">
                 </div>
 
                 <h4>6. Qual o e-mail da sua organizaçāo?*</h4>
@@ -1744,7 +1744,8 @@
                     <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
                 </div>
 
-                 <h4>14. Quais os principais públicos diretamente atendidos por sua organização?<!--Selecione até três.-->*</h4>
+                <h4>14.Quais os principais públicos diretamente atendidos por sua organização? Selecione até três.*</h4>
+                 <h6><em>Mantenha pressionado o botão Ctrl (windows) / Comando (Mac) para selecionar os subtemas.</em></h6>
 
                  <div class="form-group">
                     <label class="sr-only" for="f1-google-plus"></label>
@@ -1768,8 +1769,31 @@
                             >Homens</option>
                         <option value="Mulheres" <?=($edit->getPublicoAtendido() == 'Mulheres')?'selected':''?>
                             >Mulheres</option>
+
+                        <option value="Mulheres" <?=($edit->getPublicoAtendido() == 'Mulheres')?'selected':''?>
+                            >Mulheres</option>
+                            
+                            
                            
                     </select>
+
+
+<script>
+     $(document).ready(function() {
+
+          var last_valid_selection = null;
+
+          $('#publico_alvo').change(function(event) {
+
+            if ($(this).val().length > 3) {
+
+              $(this).val(last_valid_selection);
+            } else {
+              last_valid_selection = $(this).val();
+            }
+          });
+        });
+</script>
 
                     <h4>15. Nomeie e descreva as iniciativas e/ou projetos da sua organização que trabalham com empoderamento das mulheres.*</h4>
                  <h5>Iniciativa 1</h5> 
@@ -2012,7 +2036,7 @@
                     <textarea name="organizaçāo_politica_publica" maxlength="500" onkeyup="caracterTextarea(this.value,500,'contando4')" placeholder="Descreva como se deu essa influência em políticas públicas (em 500 caracteres)"
 
                     class="f1-about-yourself form-control" id="organizaçāo_politica_publica"><?php echo $edit->getPoliticasPublicas(); ?></textarea>
-                    <span id="contando4" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                    <span id="contando4" style="font-family:verdana;"></span><br/>
                 </div>
 
 
@@ -2029,9 +2053,9 @@
                         <option value="sim" <?=($edit->getMonitoramentoAtividades() != '')?'selected':''?>
                         >Sim</option>
                     </select>
-                    <textarea type="text" onkeyup="caracterTextarea(this.value,500,'contando5')" id="inputAvaliacaoOng" name="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Quais foram os resultados comprovados alcançados até hoje? Limite de 500 caracteres.."
+                    <textarea type="text" onkeyup="caracterTextarea(this.value,500,'contando5')" required id="inputAvaliacaoOng" name="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Quais foram os resultados comprovados alcançados até hoje? Limite de 500 caracteres.."
                         <?php if($edit->getMonitoramentoAtividades() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getMonitoramentoAtividades(); ?></textarea>
-                        <span id="contando5" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                        <span id="contando5" style="font-family:verdana;"></span><br/>
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -2081,9 +2105,9 @@
                         <option value="sim" <?=($edit->getEstrategiaComunicacao() != '')?'selected':''?>
                         >Sim, qual?</option>
                     </select>
-                    <textarea type="text" onkeyup="caracterTextarea(this.value,500,'contando6')" name="inputComunicacaoOng" id="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva aqui. Limite de 500 caracteres.."  
+                    <textarea type="text" required onkeyup="caracterTextarea(this.value,500,'contando6')" name="inputComunicacaoOng" id="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva aqui. Limite de 500 caracteres.."  
                     <?php if($edit->getEstrategiaComunicacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getEstrategiaComunicacao(); ?></textarea>
-<span id="contando6" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+<span id="contando6" style="font-family:verdana;"></span><br/>
                     <script>
 
                         var dropdownComun = document.getElementById('organizacao-comunicacao');
@@ -2134,9 +2158,9 @@
                         >Sim, quais?</option> 
                         
                     </select>
-                    <textarea type="text" onkeyup="caracterTextarea(this.value,500,'contando7')" name="inputPremiacaoOng" id="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva aqui. Limite de 500 caracteres...
+                    <textarea type="text"  required onkeyup="caracterTextarea(this.value,500,'contando7')" name="inputPremiacaoOng" id="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva aqui. Limite de 500 caracteres...
 " <?php if($edit->getPremiacaoCertificacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getPremiacaoCertificacao(); ?></textarea>
-<span id="contando7" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+<span id="contando7" style="font-family:verdana;"></span><br/>
                     <script>
 
                     var dropdown = document.getElementById('premiacao');

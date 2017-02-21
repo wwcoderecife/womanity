@@ -91,10 +91,10 @@
                     <input type="email" name="email_1"  value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="inputEmail1" required >
                    
                 </div>
-                <h5>Telefone*</h5>
+                <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" onblur="ExitField('inputTel1','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" name="telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1" required >
+                    <input type="tel" onblur="ExitField('inputTel1','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" name="telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1"  >
                     <label id="msgTel" ></label>
                 </div>
                 <h5>Celular*</h5>
@@ -125,10 +125,10 @@
                     
                 </div>
 
-                <h5>Telefone*</h5>
+                <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" onblur="ExitField('inputTel2','msgTel2','Telefone inválido, número deve conter 14 caracteres ', 14);" name="telefone_2" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel2"required >
+                    <input type="tel" onblur="ExitField('inputTel2','msgTel2','Telefone inválido, número deve conter 14 caracteres ', 14);" name="telefone_2" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel2" >
 		    <label id="msgTel2" ></label>	
                 </div>
                 <h5>Celular*</h5>
@@ -224,17 +224,22 @@
                     <input type="text" name="sigla" id="inputSiglaOng" class="f1-last-name form-control">
                 </div>
 
-                <h4>5. Qual o telefone da sua organizaçāo?*</h4>
+
+                <h4>5. Qual o telefone da sua organizaçāo?</h4>
                 <div class="form-group">
                     <label class="sr-only">Telefone</label>
-                    <input type="tel" onblur="ExitField('inputelOng','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" id="inputelOng" required name="organizacao-telefone" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd">
+                    <input type="tel" onblur="ExitField('inputelOng','msgTel3','Telefone inválido, número deve conter 14 caracteres ', 14);" id="inputelOng" name="organizacao-telefone" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd">
+                    <label id="msgTel3" ></label>
                 </div>
+
+
 
                 <h4>6. Qual o e-mail da sua organizaçāo?*</h4>
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password">Email</label>
                     <input type="email" name="email" id="inputEmailOng"required class="f1-last-name form-control"class="f1-last-name form-control">
                 </div>
+
 
                  <h4>7. Como a sua organizaçāo se identifica?*</h4>
                  <div class="form-group">
@@ -806,7 +811,7 @@
                     <label class="sr-only" for="f1-about-yourself"></label>
                     <textarea name="sobre" required onkeyup="caracterTextarea(this.value,500,'contando')" maxlength="500" placeholder="campo com capacidade para 500 caracteres...." 
                     class="f1-about-yourself form-control" id="sobre" ></textarea>
-                    <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                    <span id="contando" style="font-family:verdana;"></span><br/>
                 </div>
 
                 <!-- <h5>Qual é a sua função no ecossistema?*</h5>
@@ -895,8 +900,10 @@
                         <option value="Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher</option><br>
                         <option value="Movimentos, coletivos, redes, fóruns">Movimentos, coletivos, redes, fóruns</option>
                         <option value="Adolescentes e jovens">Adolescentes e jovens</option>
+                        <option value="Crianças">Crianças</option>
                         <option value="Homens">Homens</option>
                         <option value="Mulheres">Mulheres</option>
+                      
                            
                     </select>
 
@@ -927,25 +934,25 @@
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" id="nome" name="organizacao-relaciona1" required  class="f1-last-name form-control">
-                    <textarea name="sobre_iniciativas1" onkeyup="caracterTextarea(this.value,500,'contando1')" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
+                    <textarea name="sobre_iniciativas1" onkeyup="caracterTextarea(this.value,500,'contando1')" maxlength="500" placeholder="descreva as iniciativas da sua organização....Limite de 500 caracteres" 
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong1" required  ></textarea>
-                    <span id="contando1" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                    <span id="contando1" style="font-family:verdana;"></span><br/>
                 </div>
                 <h5>Iniciativa 2</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona2" class="f1-last-name form-control">
-                    <textarea name="sobre_iniciativas2" onkeyup="caracterTextarea(this.value,500,'contando2')" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
+                    <textarea name="sobre_iniciativas2" onkeyup="caracterTextarea(this.value,500,'contando2')" maxlength="500" placeholder="descreva as iniciativas da sua organização....Limite de 500 caracteres" 
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong2"  ></textarea>
-                    <span id="contando2" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                    <span id="contando2" style="font-family:verdana;"></span><br/>
                 </div>
                 <h5>Iniciativa 3</h5> 
                 <div class="form-group">
                     <label class="sr-only" for="f1-repeat-password"></label>
                     <input type="text" name="organizacao-relaciona3"class="f1-last-name form-control">
-                    <textarea name="sobre_iniciativas3" onkeyup="caracterTextarea(this.value,500,'contando3')" maxlength="500" placeholder="descreva as iniciativas da sua organização...." 
+                    <textarea name="sobre_iniciativas3" onkeyup="caracterTextarea(this.value,500,'contando3')" maxlength="500" placeholder="descreva as iniciativas da sua organização....Limite de 500 caracteres" 
                     class="f1-about-yourself form-control" id="sobre_iniciativa_ong3"  ></textarea>
-                    <span id="contando3" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                    <span id="contando3" style="font-family:verdana;"></span><br/>
                 </div>
 
                 <h4>16. Em quais estados sua organizaçāo tem atuação direta?*</h4>
@@ -1011,10 +1018,10 @@
                     <label class="checkbox-inline">
                         <input type="checkbox" name="politicas_publicas_lista[]" value="Nacional" class="form-control-radio">Nacional
                     </label>
-                    <textarea name="organizaçāo_politica_publica" onkeyup="caracterTextarea(this.value,500,'contando4')"  maxlength="500" placeholder="Descreva como se deu essa influência em políticas públicas(em 500 caracteres) detalhe aqui, caso necessário"
+                    <textarea name="organizaçāo_politica_publica" onkeyup="caracterTextarea(this.value,500,'contando4')"  maxlength="500" placeholder="Descreva como se deu essa influência em políticas públicas detalhe aqui, caso necessário. Limite de 500 caracteres"
 
                     class="f1-about-yourself form-control" id="organizaçāo_politica_publica"></textarea>
-                    <span id="contando4" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                    <span id="contando4" style="font-family:verdana;"></span><br/>
                 </div>
 
 
@@ -1029,9 +1036,9 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim</option>
                     </select>
-                    <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando')" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? 500 caracteres..
+                    <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando5')" name= "inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="quais foram os resultados comprovados alcançados até hoje? limite de 500 caracteres..
                         "style='display: none'/></textarea>
-                        <span id="contando" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                        <span id="contando5" style="font-family:verdana;"></span><br/>
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -1044,9 +1051,9 @@
 
                                 
                                 if(dropdownAvaliacao.options[dropdownAvaliacao.selectedIndex].value == "1") {
-                                    //faz algo quando o valor selecionado for outros
+                                    //faz algo quando o valor selecionado for sim
                                     console.log('Selecionou o valor');
-                                    //mostra o input quando o valor selecionado for outros
+                                    //mostra o input quando o valor selecionado for sim
                                     
                                     meuInput1.style.display = 'block';
                                 }else{
@@ -1078,9 +1085,9 @@
                         <option value="0">Nāo</option>
                         <option value="1">Sim, qual?</option>
                     </select>
-                    <textarea type="text"  onkeyup="caracterTextarea(this.value,500,'contando5')" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação..
+                    <textarea type="text"  onkeyup="caracterTextarea(this.value,500,'contando6')" id="inputComunicacaoOng" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva estratégia de comunicação, limite de 500 caracteres
 "style='display: none'/></textarea>
-<span id="contando5" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+<span id="contando6" style="font-family:verdana;"></span><br/>
                     <script>
 
                         var dropdownComun = document.getElementById('organizacao-comunicacao');
@@ -1128,9 +1135,9 @@
                         <option value="1">Sim, quais?</option> 
                         
                     </select>
-                    <textarea type="text" id="inputPremiacaoOng" onkeyup="caracterTextarea(this.value,500,'contando6')" name="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações..
+                    <textarea type="text" id="inputPremiacaoOng" onkeyup="caracterTextarea(this.value,500,'contando7')" name="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500"placeholder="Premiações/Certificações, limite de 500 caracteres.
 "style='display: none'/></textarea>
-<span id="contando6" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+<span id="contando7" style="font-family:verdana;"></span><br/>
                     <script>
 
                     var dropdown = document.getElementById('premiacao');
@@ -1185,7 +1192,7 @@
                 
                 <div class="f1-buttons">
                     <button type="button" class="btn btn-previous">Anterior</button>
-                    <button type="button" class="btn btn-next" onclick= "return validacampobranco2();">Próximo</button>
+                    <button type="button" class="btn btn-next" onclick="return validacampobranco2();">Próximo</button>
                 </div>
 
 </fieldset>

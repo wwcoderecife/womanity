@@ -11,4 +11,4 @@ function caracterTextarea(box,num_max,campospan){
  }else{
  document.getElementById(campospan).innerHTML = "Limite de 500 caracteres..";
  }
-}
+};

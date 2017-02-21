@@ -5,7 +5,7 @@
 			  			   			
 		 	   if(value.length != maxSize) {
 
-					  document.getElementById(id).focus();//use javascript to set focus
+					  document.getElementById(id);//use javascript to set focus
 					  document.getElementById(idmsg).innerHTML  = msg;
 					  if(isNaN(value)){
 						document.getElementById(idmsg).style.visibility = 'visible';

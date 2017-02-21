@@ -15,6 +15,8 @@
         <link rel="stylesheet" href="assets/css/form-elements.css">
         <link rel="stylesheet" href="assets/css/sweetalert.css">
         <link rel="stylesheet" href="assets/css/style.css">
+       <!-- <link rel="stylesheet" href="assets/js/validasenha.js">-->
+
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -182,20 +184,68 @@
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-email">Email *</label>
-                                    <input type="email" name="email" placeholder="Email *" class="f1-email form-control" id="f1-email" required data-error = "Por favor, informe um e-mail correto.">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="text" name="email" placeholder="Email *"  class="f1-email form-control" id="email" onBlur="validarEmail(this.value, 'validacao');" required data-error = "Informe um e-mail válido."/>
+                                    <div id="validacao"></div>
                                 </div>
+                                <script>
+
+                                 // funcao valida e-mail 
+                                function validarEmail(email, validacao) {
+                                    var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+                                    var valid = document.getElementById(validacao);
+                                    result = ck_email.test(email);
+                                    if (!result) {
+    
+                                    return result;
+                                }
+                                </script>
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-password">Senha *</label>
-                                    <input type="password" name="password" placeholder="Senha *" class="f1-password form-control" id="f1-password" data-minlenght="6" required data-error = "Mínimo de seis (6) digitos">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="password" name="password" placeholder="Senha *" onBlur=" return validasenha(event);" class="f1-password form-control" id="senha" maxlenght="6" required data-error = "Mínimo de seis (6) digitos">
+                                    <span id="label" style="font-family:verdana;"></span>
+                                    
                                 </div>
+
+                                <script>
+
+
+
+                                var specialKeys = new Array();
+                                    specialKeys.push(8); //Backspace
+
+                                function validasenha(e ){
+                                            var keyCode = e.which ? e.which : e.keyCode
+                                            var ret = ( Length(keyCode) < 6);
+                                            document.getElementById("label").style.display = "Senha inválida!, mínimo de 6 caracteres!";
+                                            return ret;
+                                    
+                                /*    
+                                if(e.length < 6){
+ 
+                                   document.getElementById("label").style.display = "Senha inválida!, mínimo de 6 caracteres!";
+                                   return false;   
+
+                                    if(campotext.length < 6){
+                                        document.getElementById(campospan).innerHTML = "Senha inválida!, mínimo de 6 caracteres!";
+                                        return false;
+
+                                   }else{
+                                    return true;
+                                   }
+                                   */ 
+
+                                }; 
+
+                                  
+
+
+                                </script>
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-repeat-password">Repetir Senha *</label>
-                                    <input type="password" name="f1-repeat-password" placeholder="Repetir Senha *" 
-                                    class="f1-repeat-password form-control" id="f1-repeat-password" data-match="#f1-password" data-match-error="Atenção! As senhas não estão iguais.">
+                                    <input type="password" name="f1-repeat-password" maxlenght="6" placeholder="Repetir Senha *" 
+                                    class="f1-repeat-password form-control" id="f1-repeat-password" data-match="#senha" data-match-error="Atenção! As senhas não estão iguais.">
                                     <div class="help-block with-errors"></div>
                                 </div>
 

@@ -260,10 +260,10 @@
                     <input type="email" name="email_1" required value="<?php echo $edit->getEmail_1() ?>" class="f1-last-name form-control" id="f1-last-name"  >
                     
                 </div>
-                <h5>Telefone*</h5>
+                <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" name="telefone_1" required value="<?php echo $edit->getTelefone_1() ?>" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1" >
+                    <input type="tel" name="telefone_1" value="<?php echo $edit->getTelefone_1() ?>" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1" >
                     
                 </div>
                 <h5>Celular*</h5>
@@ -294,10 +294,10 @@
                     
                 </div>
 
-                <h5>Telefone*</h5>
+                <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" required  name="telefone_2" value="<?php echo $edit->getTelefone_2() ?>" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel2">
+                    <input type="tel" name="telefone_2" value="<?php echo $edit->getTelefone_2() ?>" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel2">
                 </div>
                 <h5>Celular*</h5>
                 <div class="form-group">
@@ -393,10 +393,10 @@
                                     
                 </div>
 
-                <h4>5. Informe o telefone da sua iniciativa*</h4>
+                <h4>5. Informe o telefone da sua iniciativa</h4>
                 <div class="form-group">
                     <label class="sr-only">Telefone</label>
-                    <input type="text" onblur="ExitField('inputTel3','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" required  name="organizacao-telefone" value="<?php echo $edit->getTelefone() ?>"  placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd" id="inputTel3">
+                    <input type="text" onblur="ExitField('inputTel3','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" name="organizacao-telefone" value="<?php echo $edit->getTelefone() ?>"  placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd" id="inputTel3">
                     
                 </div>
 
@@ -1775,7 +1775,9 @@
                             >Homens</option>
 
                         <option value="Mulheres" <?=($edit->getPublicoAtendido() == 'Mulheres')?'selected':''?>
-                            >Mulheres</option>          
+                            >Mulheres</option>
+
+                                        
                     </select>
 
 

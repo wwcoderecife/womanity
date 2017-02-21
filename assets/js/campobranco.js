@@ -61,19 +61,17 @@ var reason = "";
  	validateFormOnSubmit(document.getElementById("organizacao-cnpj"));
   validateFormOnSubmit(document.getElementById("inputcnpj"));
  	validateFormOnSubmit(document.getElementById("inputNomeOng"));
-  validateFormOnSubmit(document.getElementById("inputTel3"));
  	validateFormOnSubmit(document.getElementById("inputelOng"));
  	validateFormOnSubmit(document.getElementById("inputEmailOng"));
-  validateFormOnSubmit(document.getElementById("natureza"));
+  validateFormOnSubmit(document.getElementById("organizacao-tipo"));
   validateFormOnSubmit(document.getElementById("inputoutros"));
-  validateFormOnSubmit(document.getElementById("avaliacao"));
   validateFormOnSubmit(document.getElementById("year_organizacao"));
- 	validateFormOnSubmit(document.getElementById("organizacao-tipo"));
  	validateFormOnSubmit(document.getElementById("pessoas_envolvidas"));
  	validateFormOnSubmit(document.getElementById("pessoas_beneficiadas"));
- 	validateFormOnSubmit(document.getElementById("subtemas"));
+  validateFormOnSubmit(document.getElementById("subtemas"));
+  validateFormOnSubmit(document.getElementById("sobre"));
  	validateFormOnSubmit(document.getElementById("publico_alvo"));
- 	validateFormOnSubmit(document.getElementById("nome"));
+  validateFormOnSubmit(document.getElementById("nome"));
  	validateFormOnSubmit(document.getElementById("sobre_iniciativa_ong1"));
  	validateFormOnSubmit(document.getElementById("estado_iniciativa"));
  	validateFormOnSubmit(document.getElementById("avaliacao"));	
@@ -124,7 +122,7 @@ var reason = "";
  	validateFormOnSubmit(document.getElementById("nomeIndica1"));
  	validateFormOnSubmit(document.getElementById("emailIndica1"));
  	validateFormOnSubmit(document.getElementById("inputTel3"));
-  validateFormOnSubmit(document.getElementById("inputTel4"));
+ 
  	 	
 
  if(FieldFocus == "X"){
@@ -136,49 +134,7 @@ var reason = "";
  };	
 
 
- function validacampobrancoiniciativa1(){
-
-  validateFormOnSubmit(document.getElementById("organizacao-cnpj"));
-  validateFormOnSubmit(document.getElementById("inputnomeong"));
-  validateFormOnSubmit(document.getElementById("inputcnpj"));
-  validateFormOnSubmit(document.getElementById("inputTel4"));
-  validateFormOnSubmit(document.getElementById("inputNomeIni"));
-  validateFormOnSubmit(document.getElementById("inputEmailIni"));
-  validateFormOnSubmit(document.getElementById("natureza"));
-  validateFormOnSubmit(document.getElementById("inputoutros"));
-  validateFormOnSubmit(document.getElementById("year_organizacao"));
-  validateFormOnSubmit(document.getElementById("pessoas_envolvidas"));
-  validateFormOnSubmit(document.getElementById("pessoas_beneficiadas"));
-  validateFormOnSubmit(document.getElementById("subtemas"));
-  validateFormOnSubmit(document.getElementById("sobre"));
-  validateFormOnSubmit(document.getElementById("publico_alvo"));
-  validateFormOnSubmit(document.getElementById("estado_iniciativa"));
-  validateFormOnSubmit(document.getElementById("avaliacao"));
-  validateFormOnSubmit(document.getElementById("inputAvaliacaoOng"));
-  validateFormOnSubmit(document.getElementById("iniciativa-comunicacao"));
-  validateFormOnSubmit(document.getElementById("inputComunicacaoOng"));
-  validateFormOnSubmit(document.getElementById("iniciativa-comunicacao"));
-  validateFormOnSubmit(document.getElementById("iniciativa-comunicacao"));
-  validateFormOnSubmit(document.getElementById("iniciativa-comunicacao"));
-  validateFormOnSubmit(document.getElementById("premiacao"));
-  validateFormOnSubmit(document.getElementById("inputPremiacao"));
-  validateFormOnSubmit(document.getElementById("premiacao"));
-  validateFormOnSubmit(document.getElementById("premiacao"));
-    
-
- if(FieldFocus == "X"){
-      FieldName.focus();
-      FieldName.scrollIntoView();
-      FieldFocus = "";
-    }
-
- }; 
-
-
-
-
-
-
+ 
 
 /*
 	if(document.getElementById("inputNome1").value === ""){

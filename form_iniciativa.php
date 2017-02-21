@@ -10,7 +10,7 @@
             <!--<script src="assets/js/validator.min.js"></script>-->
             <script src="assets/js/validatortel.js"></script>
             <script src="assets/js/textarea.js"></script>
-             <script src="assets/js/campobranco.js"></script>
+             <script src="assets/js/campobrancoiniciativa.js"></script>
            
           
             <script type="text/javascript" src="assets/js/jquery.mask.min.js"></script>
@@ -86,10 +86,10 @@
                     <input type="email" name="email_1"  value="<?php echo $_SESSION['usuario_email']; ?>" class="f1-last-name form-control" id="f1-last-name" required >
                     
                 </div>
-                <h5>Telefone*</h5>
+                <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" onblur="ExitField('inputTel1','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" name="telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1" required >
+                    <input type="tel" onblur="ExitField('inputTel1','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" name="telefone_1" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel1" >
                     <label id="msgTel" ></label>
                 </div>
                 <h5>Celular*</h5>
@@ -120,10 +120,10 @@
                     
                 </div>
 
-                <h5>Telefone*</h5>
+                <h5>Telefone</h5>
                 <div class="form-group">
                     <label class="sr-only" for="f1-last-name">Telefone</label>
-                    <input type="tel" onblur="ExitField('inputTel2','msgTel2','Telefone inválido, número deve conter 14 caracteres ', 14);" name="telefone_2" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel2"required >
+                    <input type="tel" onblur="ExitField('inputTel2','msgTel2','Telefone inválido, número deve conter 14 caracteres ', 14);" name="telefone_2" placeholder="(xx) xxxx-xxxx" class="f1-last-name form-control phone_with_ddd" id="inputTel2">
                     <label id="msgTel2" ></label> 
                 </div>
                 <h5>Celular*</h5>
@@ -208,11 +208,11 @@
                                     
                 </div>
 
-                <h5>5. Informe o telefone da sua iniciativa*</h5>
+                <h5>5. Informe o telefone da sua iniciativa</h5>
                 <div class="form-group">
                     <label class="sr-only" >Telefone</label>
-                    <input type="text"  name="organizacao-telefone" onblur="ExitField('inputTel3','msgTel','Telefone inválido, número deve conter 14 caracteres ', 14);" required  placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd" id="inputTel3">
-                    
+                    <input type="text"  name="organizacao-telefone" onblur="ExitField('inputTel3','msgTel3','Telefone inválido, número deve conter 14 caracteres ', 14);" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd" id="inputTel3">
+                    <label id="msgTel3" ></label>
                 </div>
 
                 <h5>6. Informe o e-mail da sua iniciativa*</h5>
@@ -921,8 +921,10 @@
                         <option value="Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher</option><br>
                         <option value="Movimentos, coletivos, redes, fóruns">Movimentos, coletivos, redes, fóruns</option>
                         <option value="Adolescentes e jovens">Adolescentes e jovens</option>
+                        <option value="Crianças">Crianças</option>
                         <option value="Homens">Homens</option>
                         <option value="Mulheres">Mulheres</option>
+                        
                            
                     </select>
 
@@ -1025,7 +1027,7 @@
                     </select>
                     <textarea type="text" id="inputAvaliacaoOng" onkeyup="caracterTextarea(this.value,500,'contando2')" name="inputAvaliacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Quais foram os resultados comprovados alcançados até hoje? Limite de 500 caracteres..
                         "style='display: none' /></textarea>
-                        <span id="contando2" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+                        <span id="contando2" style="font-family:verdana;"></span><br/>
                     <script>
 
                         var dropdownAvaliacao = document.getElementById('avaliacao');
@@ -1074,7 +1076,7 @@
                     </select>
                     <textarea type="text" id="inputComunicacaoOng" onkeyup="caracterTextarea(this.value,500,'contando3')" name="inputComunicacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva aqui. Limite de 500 caracteres...
 "style='display: none' /></textarea>
-<span id="contando3" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+<span id="contando3" style="font-family:verdana;"></span><br/>
                     <script>
 
                         var dropdownComun = document.getElementById('iniciativa-comunicacao');
@@ -1123,7 +1125,7 @@
                     </select>
                     <textarea type="text" id="inputPremiacao" onkeyup="caracterTextarea(this.value,500,'contando4')" name="inputPremiacao" class="f1-last-name form-control" maxlength="500" placeholder="Descreva aqui. Limite de 500 caracteres...
 "style='display: none'></textarea>
-<span id="contando4" style="font-family:verdana;">limite de 500 caracteres.</span><br/>
+<span id="contando4" style="font-family:verdana;"></span><br/>
                     <script>
 
                         var dropdown = document.getElementById('premiacao');
