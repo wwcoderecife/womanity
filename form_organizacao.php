@@ -322,7 +322,7 @@
                         <option value="11-20">11-20</option>
                         <option value="21-50">21-50</option>
                         <option value="51-100">51-100</option>
-                        <option value="101-500">101-500</option>
+                        <option value="101-500">101-251</option>
                         <option value="251-500">251-500</option>
                         <option value="501-1000">501-1000</option>
                         <option value="1001+">1001+</option>     
