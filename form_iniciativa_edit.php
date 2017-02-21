@@ -1775,7 +1775,10 @@
                             >Homens</option>
 
                         <option value="Mulheres" <?=($edit->getPublicoAtendido() == 'Mulheres')?'selected':''?>
-                            >Mulheres</option>          
+                            >Mulheres</option>
+
+                        <option value="Crianças" <?=($edit->getPublicoAtendido() == 'Crianças')?'selected':''?>
+                            >Crianças</option>                   
                     </select>
 
 

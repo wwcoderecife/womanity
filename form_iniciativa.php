@@ -923,6 +923,7 @@
                         <option value="Adolescentes e jovens">Adolescentes e jovens</option>
                         <option value="Homens">Homens</option>
                         <option value="Mulheres">Mulheres</option>
+                        <option value="Crianças">Crianças</option>
                            
                     </select>
 
