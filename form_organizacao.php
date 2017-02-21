@@ -900,9 +900,10 @@
                         <option value="Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher">Instituições públicas/órgãos públicos/legislativo/delegacia da mulher/secretaria da mulher</option><br>
                         <option value="Movimentos, coletivos, redes, fóruns">Movimentos, coletivos, redes, fóruns</option>
                         <option value="Adolescentes e jovens">Adolescentes e jovens</option>
+                        <option value="Crianças">Crianças</option>
                         <option value="Homens">Homens</option>
                         <option value="Mulheres">Mulheres</option>
-                        <option value="Crianças">Crianças</option>
+                      
                            
                     </select>
 
