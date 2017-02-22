@@ -447,7 +447,7 @@ function habilitar(){
                         $('#outrosprojetos').attr('disabled', true);
                         
                     }else{
-                        $('#outrosprojetos').attr('disabled', false);
+                        $('#outrosprojetos').attr('disabled', true);
                         
                         $('#outros_recuros_input').attr('value', '');
                     }
