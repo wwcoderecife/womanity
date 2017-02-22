@@ -210,7 +210,7 @@
 
                 <h5>5. Informe o telefone da sua iniciativa</h5>
                 <div class="form-group">
-                    <label class="sr-only" >Telefone</label>
+                    <label class="sr-only">Telefone</label>
                     <input type="text"  name="organizacao-telefone" onblur="ExitField('inputTel3','msgTel3','Telefone inválido, número deve conter 14 caracteres ', 14);" placeholder="(xx) xxxx-xxxx"class="f1-last-name form-control phone_with_ddd" id="inputTel3">
                     <label id="msgTel3" ></label>
                 </div>
@@ -443,7 +443,7 @@
             document.getElementById('outrosprojetos').removeAttribute("disabled");
         }
         else {
-            document.getElementById('onoff').value=''; //Evita que o usuário defina um texto e desabilite o campo após realiza-lo
+            document.getElementById('on').value='';
             document.getElementById('outrosprojetos').setAttribute("disabled", "disabled");
         }
     }
