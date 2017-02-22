@@ -210,7 +210,7 @@
                                 <script>
 
                                 function validasenha(x){
-                                    if(x.length < 6){
+                                    if(x.length != 6){
                                          alert(x);   
                                     }
                                 /*    
