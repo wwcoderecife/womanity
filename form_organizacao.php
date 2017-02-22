@@ -438,16 +438,16 @@
 <script>
 
 function habilitar(){
-                    if ($('input[name="fonte_recursos_outros[]"]:checked').length > 0){
+                    if ($('input[id="outro_recursos[]"]:checked').length > 0){
 
                         $('#outrosprojetos').attr('value', 'Outros');
-                        $('#fonte_recursos_outros').val('');
-                        $('#fonte_recursos_outros').attr('disabled', false);
+                        $('#outrosprojetos').val('');
+                        $('#outrosprojetos').attr('disabled', false);
                         
                     }else{
-                        $('#fonte_recursos_outros').attr('disabled', true);
+                        $('#outro_recursos').attr('disabled', true);
                         
-                        $('#fonte_recursos_outros').attr('value', '');
+                        $('#outro_recursos').attr('value', '');
                     }
 
                     console.log( $('#fonte_recursos_outros').val());
