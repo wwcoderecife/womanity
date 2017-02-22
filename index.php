@@ -212,7 +212,7 @@
                                 function validasenha(x){
                                     if(x.length <= 5){
                                       document.getElementById("senha").focus();  
-                                      alert("Senha invalida!");
+                                      //alert("Senha invalida!");
 
                                     }
                                 /*    
