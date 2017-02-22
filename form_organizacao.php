@@ -430,10 +430,32 @@
                     <input type="checkbox" name="recursos_origem[]" value="organizações não governamentais brasileiras ou internacionais">organizações não governamentais brasileiras ou internacionais<br>
                     <input type="checkbox" name="recursos_origem[]" value="subvenções públicas ">subvenções públicas<br>
                     <input type="checkbox" name="recursos_origem[]" value="venda de produtos/prestação de serviços">venda de produtos/prestação de serviços<br>
-                    <input type="checkbox" name="recursos_origem[]" value="outros" id="outro_recursos" onchange="habilitar();">outros<br>
+                    <input type="checkbox" name="recursos_origem[]" value="outros" id="outro_recursos" onclick="habilitar()";>outros<br>
                     <input type="text" id="outrosprojetos" disabled name="fonte_recursos_outros" placeholder=" outros..." style="display:block;" class="f1-last-name form-control">
                </div> 
 
+
+<script>
+
+function habilitar(){
+                    if ($('input[name="fonte_recursos_outros[]"]:checked').length > 0){
+
+                        $('#outrosprojetos').attr('value', 'Outros');
+                        $('#fonte_recursos_outros').val('');
+                        $('#fonte_recursos_outros').attr('disabled', false);
+                        
+                    }else{
+                        $('#fonte_recursos_outros').attr('disabled', true);
+                        
+                        $('#fonte_recursos_outros').attr('value', '');
+                    }
+
+                    console.log( $('#fonte_recursos_outros').val());
+                }
+</script>
+
+
+<!--
 <script>
       function habilitar(){
         if(document.getElementById('outro_recursos').checked){
@@ -445,6 +467,8 @@
         }
     }
 </script>
+
+-->
 
 
 
