@@ -211,7 +211,7 @@
 
                                 function validasenha(x,msg){
                                     if(x.length <= 5){
-                                      document.getElementById("senha").focus().innerHTML= "Preencha senha corretamente, mínimo de seis (6) caracteres";  
+                                      document.getElementById("senha").innerHTML= "Preencha senha corretamente, mínimo de seis (6) caracteres";  
                                       //alert("Senha invalida!");
 
                                     }
