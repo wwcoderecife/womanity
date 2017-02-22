@@ -432,7 +432,7 @@
                     <input type="checkbox" name="recursos_origem[]" value="venda de produtos/prestação de serviços">venda de produtos/prestação de serviços<br>
                     <input type="checkbox" name="recursos_origem[]" value="outros" id="outro_recursos" onclick="habilitar()";>outros<br>
                     <input type="text" id="outrosprojetos" disabled name="fonte_recursos_outros" placeholder=" outros..." style="display:block;" class="f1-last-name form-control">
-                    <input type="HIDDEN" id="outros_recuros_input" class="f1-last-name form-control">
+                    
 
                </div> 
 
