@@ -211,12 +211,12 @@
 
 
 
-                                var specialKeys = new Array();
-                                    specialKeys.push(8); //Backspace
 
-                                function validasenha(e ){
-                                            var keyCode = e.which ? e.which : e.keyCode
-                                            var ret = ( Length(keyCode) < 6);
+                                function validasenha(e){
+                                           // var keyCode = e.which ? e.which : e.keyCode
+                                           
+                                           x=document.form.pass.value;
+                                           var ret = ( x.length < 6); 
                                             document.getElementById("label").style.display = "Senha inválida!, mínimo de 6 caracteres!";
                                             return ret;
                                     
