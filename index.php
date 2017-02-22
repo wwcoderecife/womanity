@@ -158,7 +158,7 @@
 
                  <div class="row">
                     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-                        <form role="form" data-toggle="validator" action="index.php" method="post" class="f1">
+                        <form name="form1" role="form" data-toggle="validator" action="index.php" method="post" class="f1">
 
                             <h3>Cadastro no Ecossistema</h3>
                             <p>Preencha os campos obrigatórios *</p>
@@ -202,7 +202,7 @@
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-password">Senha *</label>
-                                    <input type="password" name="password" placeholder="Senha *" onBlur=" return validasenha(event);" class="f1-password form-control" id="senha" maxlenght="6" required data-error = "Mínimo de seis (6) digitos">
+                                    <input type="password" name="password" placeholder="Senha *" onBlur=" return validasenha();" class="f1-password form-control" id="senha" maxlenght="6" required data-error = "Mínimo de seis (6) digitos">
                                     <span id="label" style="font-family:verdana;"></span>
                                     
                                 </div>
@@ -212,10 +212,10 @@
 
 
 
-                                function validasenha(e){
+                                function validasenha(){
                                            // var keyCode = e.which ? e.which : e.keyCode
                                            
-                                           x=document.form.pass.value;
+                                           x=document.form1.pass.value;
                                            var ret = ( x.length < 6); 
                                             document.getElementById("label").style.display = "Senha inválida!, mínimo de 6 caracteres!";
                                             return ret;
