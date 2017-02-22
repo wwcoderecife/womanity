@@ -211,11 +211,9 @@
 
                                 function validasenha(x){
                                     if(x.length <= 5){
-                                      document.getElementById("label").style.display  = "Senha inválida!, mínimo de 6 caracteres!";
-                                        return false;
-   
-                                    }else{
-                                        return true;
+                                      document.getElementById("senha").focus();  
+                                      alert("Senha invalida!");
+
                                     }
                                 /*    
                                 if(e.length < 6){
