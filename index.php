@@ -216,12 +216,9 @@
                                            // var keyCode = e.which ? e.which : e.keyCode
                                            
                                            var x = document.getElementById("password").value;
-                                           if( x.length < 6){ 
-                                             document.getElementById("label").style.display = "Senha inválida!, mínimo de 6 caracteres!";
-                                             return false;
-                                           }else{
-                                            return true;
-                                           }  
+                                            
+                                            document.getElementById("label").style.display = x;
+                                            
                                     
                                 /*    
                                 if(e.length < 6){
