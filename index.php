@@ -202,16 +202,16 @@
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-password">Senha *</label>
-                                    <input type="password" name="password" placeholder="Senha *" onBlur="return validasenha(this.value,msg,'Senha deve conter no mínimo 6 caracteres' );" class="f1-password form-control" id="senha" maxlenght="6" required data-error = "Mínimo de seis (6) digitos">
-                                    <label id="msg" style="font-family:verdana;"></label>
+                                    <input type="password" name="password" placeholder="Senha *" onBlur="return validasenha(this.value);" class="f1-password form-control" id="senha" maxlenght="6" required data-error = "Mínimo de seis (6) digitos">
+                                    <span id="label" style="font-family:verdana;"></span>
                                     
                                 </div>
 
                                 <script>
 
-                                function validasenha(x,msg){
+                                function validasenha(x){
                                     if(x.length <= 5){
-                                      document.getElementById("senha").focus(); 
+                                      document.getElementById("senha").focus();  
                                       //alert("Senha invalida!");
 
                                     }
@@ -232,6 +232,7 @@
 
                                 }; 
 
+            
 
                                 </script>
 
