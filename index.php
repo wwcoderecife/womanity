@@ -207,6 +207,8 @@
                                     
                                 </div>
 
+                                <!--
+
                                 <script>
 
                                 function validasenha(x){
@@ -235,6 +237,7 @@
             
 
                                 </script>
+                            -->
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-repeat-password">Repetir Senha *</label>
