@@ -2158,7 +2158,7 @@
                         >Sim, quais?</option> 
                         
                     </select>
-                    <textarea type="text"  required onkeyup="caracterTextarea(this.value,500,'contando7')" name="inputPremiacaoOng" id="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva aqui. Limite de 500 caracteres...
+                    <textarea type="text" onkeyup="caracterTextarea(this.value,500,'contando7')" name="inputPremiacaoOng" id="inputPremiacaoOng" class="f1-last-name form-control" maxlength="500" placeholder="Descreva aqui. Limite de 500 caracteres...
 " <?php if($edit->getPremiacaoCertificacao() != ""){ echo "style='display: block'"; }else{echo "style='display: none'";} ?> /><?php echo $edit->getPremiacaoCertificacao(); ?></textarea>
 <span id="contando7" style="font-family:verdana;"></span><br/>
                     <script>
