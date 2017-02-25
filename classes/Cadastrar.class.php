@@ -72,14 +72,27 @@ class Cadastrar extends Conexao {
             $l->setSenha($this->senha);
 
  
-                // the message
-                $msg = "First line of text\nSecond line of text";
+    include('Mail.php');
 
-                // use wordwrap() if lines are longer than 70 characters
-                $msg = wordwrap($msg,70);
+   $recipients = 'machado.karina@gmail.com';
 
-                // send email
-                mail("karinamachado@msn.com","My subject",$msg);
+   $headers['From']    = 'machado.karina@gmail.com';
+   $headers['To']      = 'maikryuge@gmail.com';
+   $headers['Subject'] = 'Test message';
+
+   $body = 'Test message';
+
+   $smtpinfo["host"] = "smtp.gmail.com";
+   $smtpinfo["port"] = "25";
+   $smtpinfo["auth"] = true;
+   $smtpinfo["username"] = "machado.karina@gmail.com";
+   $smtpinfo["password"] = "15975382";
+
+
+   // Create the mail object using the Mail::factory method
+   $mail_object =& Mail::factory("smtp", $smtpinfo);
+
+   $mail_object->send($recipients, $headers, $body);
 
             if($l->logar()):
                 header("Location: form.php");
