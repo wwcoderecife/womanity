@@ -138,7 +138,6 @@ jQuery(document).ready(function() {
     // });
 
     $('.f1 .btn-next').on('click', function() {
-        console.log("next");
         var parent_fieldset = $(this).parents('fieldset');
         var next_step = true;
         // navigation steps / progress steps
@@ -146,8 +145,7 @@ jQuery(document).ready(function() {
         var progress_line = $(this).parents('.f1').find('.f1-progress-line');
 
         var tab = $(".tab:visible");
-    
-        console.log(parent_fieldset[0]['className']);
+
 
         var valid = true;
         $('input, textarea, select', tab).each(function(i, v){
@@ -161,10 +159,26 @@ jQuery(document).ready(function() {
 
         });
 
-        
+        var tema = "";
 
-        console.log($('input[name="temas[ ]"]:checked').length);
+        $('input[name="temas[ ]"]:checked').each(function (){
+            var lista = $(this).closest('tr')[0]['childNodes'][7]['children'];
+            var checked = 0;
+            for(i = 0; i < lista.length; i++){
+                if(lista[i].checked == true){
+                    checked += 1;
+                }
+            }
+            if (checked < 1) { 
+                tema = $(this).closest('tr')[0]['children'][1]['innerText'];
+                console.log("Selecione pelo menos Região do Tema " + tema);
+                return false;
         
+            };
+
+        });
+
+                
         if(!valid){
             console.log("erro");
             open_dialog("Alerta", "Identificamos campos obrigatórios nāo preenchidos!", "warning");
@@ -175,6 +189,10 @@ jQuery(document).ready(function() {
         }else if (parent_fieldset[0]['className'] == "tab organizacao" && $('input[name="temas[ ]"]:checked').length < 1){
             valid = false;
             open_dialog("Alerta", "Selecione pelo menos um Tema!", "warning");
+            return false;
+        }else if (parent_fieldset[0]['className'] == "tab organizacao" && tema != ""){
+            valid = false;
+            open_dialog("Alerta", "Selecione pelo menos uma Região do Tema: " + tema, "warning");
             return false;
         }else{
              parent_fieldset.fadeOut(400, function() {
