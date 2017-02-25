@@ -71,6 +71,16 @@ class Cadastrar extends Conexao {
             $l->setLogin($this->email);
             $l->setSenha($this->senha);
 
+ 
+                // the message
+                $msg = "First line of text\nSecond line of text";
+
+                // use wordwrap() if lines are longer than 70 characters
+                $msg = wordwrap($msg,70);
+
+                // send email
+                mail("karinamachado@msn.com","My subject",$msg);
+
             if($l->logar()):
                 header("Location: form.php");
             else:
