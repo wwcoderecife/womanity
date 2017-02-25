@@ -1,5 +1,7 @@
 <?php
 
+include('Mail.php');
+
 require_once "Usuario.class.php";
 
 class Cadastrar extends Conexao {
@@ -72,7 +74,6 @@ class Cadastrar extends Conexao {
             $l->setSenha($this->senha);
 
  
-    include('Mail.php');
 
    $recipients = 'machado.karina@gmail.com';
 
