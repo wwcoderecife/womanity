@@ -1,6 +1,5 @@
 <?php
 
-include('Mail.php');
 
 require_once "Usuario.class.php";
 
@@ -73,27 +72,6 @@ class Cadastrar extends Conexao {
             $l->setLogin($this->email);
             $l->setSenha($this->senha);
 
- 
-
-   $recipients = 'machado.karina@gmail.com';
-
-   $headers['From']    = 'machado.karina@gmail.com';
-   $headers['To']      = 'maikryuge@gmail.com';
-   $headers['Subject'] = 'Test message';
-
-   $body = 'Test message';
-
-   $smtpinfo["host"] = "smtp.gmail.com";
-   $smtpinfo["port"] = "25";
-   $smtpinfo["auth"] = true;
-   $smtpinfo["username"] = "machado.karina@gmail.com";
-   $smtpinfo["password"] = "15975382";
-
-
-   // Create the mail object using the Mail::factory method
-   $mail_object =& Mail::factory("smtp", $smtpinfo);
-
-   $mail_object->send($recipients, $headers, $body);
 
             if($l->logar()):
                 header("Location: form.php");
