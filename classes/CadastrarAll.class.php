@@ -1149,7 +1149,7 @@ class CadastrarAll extends Conexao {
 
                 $pdo->commit();
                 // Método para envio de email de confirmaçāo de cadastro.
-                sendmail($nome,$nome_1, $email_1);
+                //sendmail($nome,$nome_1, $email_1);
                 
 
 
@@ -1200,40 +1200,41 @@ class CadastrarAll extends Conexao {
    }
 
 
-    public function sendmail($nome,$nome_1, $email_1){
+
+    //public function sendmail($nome,$nome_1, $email_1){
 
         //Incluir a classe PHPMailer
 
-        include("PHPMailer/PHPMailerAutoload.php");
+        //include("PHPMailer/PHPMailerAutoload.php");
 
         //Enviando o e-mail utilizando a classe PHPMail
 
-        $email = new PHPMailer();
-        $email->CharSet = "utf-8";
-        $email->isSMTP();
+        //$email = new PHPMailer();
+        //$email->CharSet = "utf-8";
+        //$email->isSMTP();
         //$email->SMTPDebug = 2;
         //Ask for HTML-friendly debug output
         //$email->Debugoutput = 'html';
 
-        $email->SMTPAuth= true;
-        $email->Username = "machado.karina@gmail.com";
-        $email->Password = "15975382";
-        $email->SMTPSecure = "tls";
-        $email->Host = "smtp.gmail.com";
-        $email->Port = "587";
+        //$email->SMTPAuth= true;
+        //$email->Username = "machado.karina@gmail.com";
+        //$email->Password = "15975382";
+        //$email->SMTPSecure = "tls";
+        //$email->Host = "smtp.gmail.com";
+        //$email->Port = "587";
 
-        $email->setFrom("machado.karina@gmail.com", "Karina Machado DEV");
-        $email->AddAddress=("karina@womenwhocode.com", "Karina Machado DEV");
+        //$email->setFrom("machado.karina@gmail.com", "Karina Machado DEV");
+        //$email->AddAddress=("karina@womenwhocode.com", "Karina Machado DEV");
         //$email->AddAddress="{ $email_1}";
 
-        $email->Subject  =  " Cadastro Ecossistema Mulheres - {$nome}".date("H:i").." - ".date("d/m/Y");
-        $email->IsHTML(true);
-        $email->Body = "Prezado(a) {$nome_1};
-        <br />
-        Todas as informações foram registradas em nosso sistema.
-        Valorizamos muito a sua contribuição para o Mapeamento do Ecossistema de Iniciativas para equidade de gênero e empoderamento da mulher.
-        <br />
-
+        //$email->Subject  =  " Cadastro Ecossistema Mulheres - {$nome}".date("H:i").." - ".date("d/m/Y");
+        //$email->IsHTML(true);
+        //$email->Body = "Prezado(a) {$nome_1};
+        //<br />
+        //Todas as informações foram registradas em nosso sistema.
+        //Valorizamos muito a sua contribuição para o Mapeamento do Ecossistema de Iniciativas para equidade de gênero e empoderamento da mulher.
+        //<br />
+/*
         Muito obrigad@!
 
         Nos próximos meses você poderá conhecer as outras organizações e iniciativas cadastradas e indicar 
@@ -1244,12 +1245,13 @@ class CadastrarAll extends Conexao {
         Até breve!
 
         Equipe Executiva";
+   */     
 
 
 
 //verificaçāo.
 
-
+/*
         if($email->Send())
         {
         echo "Email Successfully sent";
@@ -1259,11 +1261,12 @@ class CadastrarAll extends Conexao {
         echo "Error in Sending Mail".$email->ErrorInfo;
         }
 
+    */    
+
 
 
 
 }
-
 
    //Editar
    public function editar_registro($organizacao_id){
