@@ -43,6 +43,8 @@
 <?php
 
 include_once 'Conexao.class.php';
+include("sendmail.php");
+
 
 class CadastrarAll extends Conexao {
 
@@ -817,6 +819,7 @@ class CadastrarAll extends Conexao {
     }
 
 
+
     public function inserir_novo(){
         $pdo = parent::getDB();
 
@@ -1149,20 +1152,40 @@ class CadastrarAll extends Conexao {
 
                 $pdo->commit();
 
+
+                
                 $_SESSION['cadastro'] = true;
 
-                echo "<script type='text/javascript'>
+                   
+  
+               $email_1 = $this->getEmail();
+               $nome = $this->getNome_1();
 
-                            sweetAlert({
-                              title: '',
-                               text: 'Cadastro realizado!',
-                               type: 'success'
-                              },
-                              function(){
-                                window.location.href = '../form.php';
-                            });
+               $corpo = "Prezado(a) $nome_1
+                            \n\n
+                            Email was generated using PHPMailer with Google SMTP
+                            \n
+                            Welcome to PHPMailer 😀 :)";
+                    $assuntocompleto = "Cadastro Ecossistema " .$nome;
+                    // metodo enviar email
+                    smtpmailer($email_1, "machado.karina@gmail.com", "Karina Machado", $assuntocompleto,$corpo);
 
-                        </script>";
+
+
+                    echo "<script type='text/javascript'>
+
+                                sweetAlert({
+                                  title: '',
+                                   text: 'Cadastro realizado!',
+                                   type: 'success'
+                                  },
+                                  function(){
+                                    window.location.href = '../form.php';
+                                });
+
+                            </script>"; 
+                                   
+
 
             }
             catch (Exception $e){
@@ -1190,6 +1213,7 @@ class CadastrarAll extends Conexao {
                         </script>";
 
             }
+ 
         endif;
 
 
@@ -1435,6 +1459,9 @@ class CadastrarAll extends Conexao {
             foreach ($temas  as $tema){
 
                 $edit_tema->bindValue(1, $tema);
+                echo "temas";
+                echo $this->getTemasArteCultura();
+                echo implode(",", $this->getTemasArteCultura());
                 
                 if($tema == "arte_cultura"){
                     $edit_tema->bindValue(2, implode(",", (array)$this->getTemasArteCultura())); 
@@ -1573,6 +1600,7 @@ class CadastrarAll extends Conexao {
 
             $_SESSION['cadastro'] = true;
 
+            
             echo "<script type='text/javascript'>
 
                         sweetAlert({
@@ -1585,6 +1613,7 @@ class CadastrarAll extends Conexao {
                         });
 
                     </script>";
+                    
 
         }
         catch (Exception $e){
