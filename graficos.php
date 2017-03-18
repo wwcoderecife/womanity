@@ -37,6 +37,7 @@
   </head>
 
   <body>
+    <h1>Mostrar os subtemas mais trabalhados entre as orgs/iniciativas mapeadas.</h1>
     <!--Div that will hold the pie chart-->
     <div id="chart_div"></div>
   </body>
