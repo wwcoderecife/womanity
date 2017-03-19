@@ -1158,7 +1158,7 @@ class CadastrarAll extends Conexao {
 
                    
   
-               $email_1 = $this->getEmail();
+               $email_1 = $this->getEmail_1();
                $nome = $this->getNome_1();
 
                $corpo = "Prezado(a) $nome_1
