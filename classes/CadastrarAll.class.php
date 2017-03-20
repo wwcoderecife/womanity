@@ -1157,7 +1157,7 @@ class CadastrarAll extends Conexao {
                 $_SESSION['cadastro'] = true;
 
                    
-               
+               /*
                $email_1 = $this->getEmail_1();
                $nome = $this->getNome_1();
 
@@ -1178,7 +1178,7 @@ class CadastrarAll extends Conexao {
                     // metodo enviar email
                     smtpmailer($email_1, "machado.karina@gmail.com", "Karina Machado", $assuntocompleto,$corpo);
 
-
+*/
 
                     echo "<script type='text/javascript'>
 
@@ -1607,7 +1607,7 @@ class CadastrarAll extends Conexao {
             $pdo->commit();
 
             $_SESSION['cadastro'] = true;
-
+/*
                $email_1 = $this->getEmail_1();
                $nome = $this->getNome_1();
 
@@ -1628,7 +1628,7 @@ class CadastrarAll extends Conexao {
                     // metodo enviar email
                     smtpmailer($email_1, "machado.karina@gmail.com", "Karina Machado", $assuntocompleto,$corpo);
 
-                      
+           */           
             echo "<script type='text/javascript'>
 
                         sweetAlert({
