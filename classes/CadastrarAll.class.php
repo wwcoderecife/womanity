@@ -1607,11 +1607,15 @@ class CadastrarAll extends Conexao {
             $pdo->commit();
 
             $_SESSION['cadastro'] = true;
-/*
-               $email_1 = $this->getEmail_1();
-               $nome = $this->getNome_1();
 
-               $corpo = "Prezado(a) $nome_1
+              // $email_1 = $this->getEmail_1();
+              // $nome = $this->getNome_1();
+           
+              $email_1 = 'karinateste25@gmail.com';
+               $nome = 'Karina Machado';
+
+
+               $corpo = "Prezado(a) $nome
                             \n\n
                             Todas as informações foram registradas em nosso sistema.
                             \n
@@ -1628,7 +1632,7 @@ class CadastrarAll extends Conexao {
                     // metodo enviar email
                     smtpmailer($email_1, "machado.karina@gmail.com", "Karina Machado", $assuntocompleto,$corpo);
 
-           */           
+                     
             echo "<script type='text/javascript'>
 
                         sweetAlert({
