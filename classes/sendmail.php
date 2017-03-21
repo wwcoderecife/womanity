@@ -23,7 +23,7 @@
 
         $email->SMTPAuth= true;
         $email->Username = "machado.karina@gmail.com";
-        $email->Password = "15975382";
+        $email->Password = "WWcode0801";
         $email->SMTPSecure = "tls";
         $email->Host = "smtp.gmail.com";
         $email->Port = "587";
