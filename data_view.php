@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,22 +25,23 @@
 		$naturezas = $util->getArrayofKeys($result, "tipo");
 		$natPublicoArray = $util->getArrayKeyValue($result, $naturezas, "publico_atendido", "tipo");
 		$natPublicoQuantArray = $util->getQuantidade($natPublicoArray, $naturezas);
+
+		$arrayTitulos = ['Acadêmica', 'Empresa Privada', 'Redes', 'Outros', 'Negócio Social', 'Investimento Social Privado', 'Fundos', 'Organização da Sociedade Civil', 'Coletivo', 'Cooperativa', 'Movimento', 'Governo', 'Grupos Produtivos'];
 		
-		//print_r($natPublicoArray);
+		//print_r($naturezas);
 		//print_r($result2);
 		//print_r($result3);?>
 
 		<script type="text/javascript">
 
-			<?php $i = 0; ?>
-			for(var i = 0; i < 12; i++){
+			<?php
+			for($i = 0; $i < 13; $i++){?>
 		      google.charts.load('current', {
 		      callback: function drawChart() {
-
 		        var data = new google.visualization.arrayToDataTable(<?php $util->getChartdata($natPublicoQuantArray[$naturezas[$i]]);?>);
 
 		        var options = {
-		          title: 'Title',
+		          title: <?php echo "'".$arrayTitulos[$i]."'";?>,
 		          width:400,
       			  height:0,
       			  is3D: true
@@ -55,14 +54,13 @@
 		      },
 		      packages: ['corechart']
 		      });
-
-		      <?php ++$i;?>
-		    } 
+		   <?php 
+			}?> 
 
     	</script>
 
   </head>
   <body>
-  	 <ul id="chart"></ul>
+  	 <div id="chart"></div>
   </body>
 </html>
