@@ -119,12 +119,12 @@ class GetDataReport extends Conexao{
 		if ($lista->rowCount() >= 1){
 			$dados = $lista->fetchAll(PDO::FETCH_ASSOC);
 			$max = sizeof($dados);
-			echo "[['Language', 'Speakers (in millions)'],";
+			echo "[['Subtemas', 'Subtemas'],";
 			for($i=0; $i<$max; $i++){
 				echo "['" . $dados[$i]['subtema'] . "'," . $dados[$i]["qtd"] . "],";
 			}
 			echo "]";
-		}
+		}	
 	}
 
 }

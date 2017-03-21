@@ -81,7 +81,7 @@ class Util {
 
 		echo "[['Language', 'Speakers (in millions)'],";
 		foreach($arrayQuant as $quant){
-			echo "['" . utf8_encode(key($arrayQuant)) . "'," . $quant . "],";
+			echo "['" . key($arrayQuant) . "'," . $quant . "],";
 			next($arrayQuant);
 		}
 		echo "]";

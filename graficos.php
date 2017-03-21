@@ -28,9 +28,33 @@
     function relatorioSubtemasMaisTrabalhados() {
       // Create our data table out of JSON data loaded from server.
       var data = new google.visualization.arrayToDataTable(<?php $report->subtemas_mais_trabalhados() ?>);
+      
+      // set inner height to 30 pixels per row
+      var chartAreaHeight = data.getNumberOfRows() * 30;
+      
+      // add padding to outer height to accomodate title, axis labels, etc
+      var chartHeight = chartAreaHeight + 80;
+      
       // Instantiate and draw our chart, passing in some options.
-      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-      chart.draw(data, {width: 1000, height: 1000});
+      var options = { height: chartHeight,
+        chartArea: {width: '60%', height: chartAreaHeight},
+        hAxis: {
+          title: 'Subtemas mais trabalhados',
+          minValue: 0,
+          textStyle: {
+            bold: true,
+            fontSize: 12,
+            color: '#4d4d4d'
+          },
+          titleTextStyle: {
+            bold: true,
+            fontSize: 18,
+            color: '#4d4d4d'
+          }
+        }
+      };
+      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
     }
 
     </script>
