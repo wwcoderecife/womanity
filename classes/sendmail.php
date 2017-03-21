@@ -13,8 +13,8 @@
 
 
         $email->SMTPAuth= true;
-        $email->Username = "email";
-        $email->Password = "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";
+        $email->Username = "azure_a7d6b1a8e7b3dd854d2fca2c194a9270@azure.com";
+        $email->Password = "Ecomulheres2";
         $email->SMTPSecure = "tls";
         $email->Host = "smtp.sendgrid.net";
         $email->Port = "587";
