@@ -55,7 +55,6 @@
 		      packages: ['corechart']
 		      });
 		   <?php 
-		   		next($natPublicoArray);
 			}?> 
 
     	</script>
