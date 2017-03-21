@@ -1632,7 +1632,7 @@ class CadastrarAll extends Conexao {
                     // metodo enviar email
                     smtpmailer($email_1, "machado.karina@gmail.com", "Karina Machado", $assuntocompleto,$corpo);
 
-                     
+           /*          
             echo "<script type='text/javascript'>
 
                         sweetAlert({
@@ -1645,9 +1645,10 @@ class CadastrarAll extends Conexao {
                         });
 
                     </script>";
-                    
+                 */   
 
         }
+
         catch (Exception $e){
               $pdo->rollback();
               //echo $e->getMessage();
