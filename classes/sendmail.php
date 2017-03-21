@@ -2,6 +2,7 @@
 
  function smtpmailer($para, $de, $de_nome, $assunto,$body) {
 
+        //include_once "vendor/autoload.php";
         include("PHPMailer/PHPMailerAutoload.php");
 
         $email = new PHPMailer();
