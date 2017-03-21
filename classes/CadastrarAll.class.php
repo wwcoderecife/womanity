@@ -1611,8 +1611,8 @@ class CadastrarAll extends Conexao {
               // $email_1 = $this->getEmail_1();
               // $nome = $this->getNome_1();
            
-              $email_1 = 'karinateste25@gmail.com';
-               $nome = 'Karina Machado';
+              $email_1 = 'maikryuge@gmail.com';
+               $nome = 'Maik Ryuge';
 
 
                $corpo = "Prezado(a) $nome
