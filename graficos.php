@@ -18,45 +18,55 @@
 
     ?>
     <script type="text/javascript">
-    
+    <?php
+      $arrayTitulos = ['','Subtemas mais trabalhados por Organizações', 'Subtemas mais trabalhados por Iniciativas', 'Subtemas mais trabalhados por Organizações e Iniciativas'];
+      for($i = 1; $i < 4; $i++){
+        
+    ?>
     // Load the Visualization API and the piechart package.
-    google.charts.load('current', {'packages':['corechart']});
-      
-    // Set a callback to run when the Google Visualization API is loaded.
-    google.charts.setOnLoadCallback(relatorioSubtemasMaisTrabalhados);
-      
-    function relatorioSubtemasMaisTrabalhados() {
+    google.charts.load('current', {
+          callback: function drawChart() {
       // Create our data table out of JSON data loaded from server.
-      var data = new google.visualization.arrayToDataTable(<?php $report->subtemas_mais_trabalhados() ?>);
+      var data = new google.visualization.arrayToDataTable(<?php $report->subtemas_mais_trabalhados($i) ?>);
       
       // set inner height to 30 pixels per row
-      var chartAreaHeight = data.getNumberOfRows() * 30;
+      var chartAreaHeight = data.getNumberOfRows() * 20;
       
       // add padding to outer height to accomodate title, axis labels, etc
       var chartHeight = chartAreaHeight + 80;
       
       // Instantiate and draw our chart, passing in some options.
       var options = { height: chartHeight,
-        chartArea: {width: '60%', height: chartAreaHeight},
+        chartArea: {width: '50%', height: chartAreaHeight},
         hAxis: {
-          title: 'Subtemas mais trabalhados',
+          title: <?php echo "'".$arrayTitulos[$i]."'";?>,
           minValue: 0,
           textStyle: {
             bold: true,
-            fontSize: 12,
+            fontSize: 10,
             color: '#4d4d4d'
           },
           titleTextStyle: {
             bold: true,
-            fontSize: 18,
+            fontSize: 14,
             color: '#4d4d4d'
           }
-        }
+        },
+        legend: 'none'
       };
-      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
-      chart.draw(data, options);
-    }
+      // var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+      // chart.draw(data, options);
 
+     var container = document.getElementById('chart_div').appendChild(document.createElement('div'));
+     var chart = new google.visualization.BarChart(container);
+     chart.draw(data, options);
+    },
+          packages: ['corechart']
+          });
+    <?php 
+      
+      }
+    ?> 
     </script>
   </head>
 

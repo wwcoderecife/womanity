@@ -4,13 +4,19 @@ include_once 'Conexao.class.php';
 class GetDataReport extends Conexao{
 
 
-	public function subtemas_mais_trabalhados(){
-
+	public function subtemas_mais_trabalhados($tipo){
+		if($tipo == 3){
+          $tipo = "1,2";
+        }
 		$pdo = parent::getDB();
 
 		$lista = $pdo->prepare("
 			select * from(
-				select count(subtema) as qtd, subtema from subtemas group by subtema 
+				select count(subtema) as qtd, subtema from subtemas
+                left join organizacoes ong on ong.id = organizacao_id 
+                left join usuarios user on user.id = ong.usuario_id 
+                where user.tipo in (". $tipo .")
+                group by subtema 
 				union all
 				select 0 as qtd, subtema from (
 				select 'Aborto' as subtema
