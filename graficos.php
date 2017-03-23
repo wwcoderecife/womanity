@@ -30,7 +30,7 @@
       var data = new google.visualization.arrayToDataTable(<?php $report->subtemas_mais_trabalhados($i) ?>);
       
       // set inner height to 30 pixels per row
-      var chartAreaHeight = data.getNumberOfRows() * 20;
+      var chartAreaHeight = data.getNumberOfRows() * 30;
       
       // add padding to outer height to accomodate title, axis labels, etc
       var chartHeight = chartAreaHeight + 80;
