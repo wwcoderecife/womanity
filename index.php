@@ -151,7 +151,7 @@
 
                 <!--<div class="container">-->
                     
-                            <p class="modal-body" style="text-align: justify;"> 
+                            <p style="text-align: justify;"> 
 
                              O Ecossistema de iniciativas para equidade de gênero e empoderamento da mulher é uma iniciativa da ONU Mulheres, Womanity Foundation, BrazilFoundation e Instituto C&A.
                              Tem como objetivo principal mapear organizações e iniciativas que trabalham com direitos e empoderamento da mulher para ampliar as interconexões entre elas e seu impacto. 
