@@ -92,6 +92,16 @@ ul.navbar-nav {
 
 .top-content { padding: 0px 0 170px 0; }
 
+.top-content .img{width:100px;
+	height:100px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-50px;
+	margin-left:-50px;
+   
+}
+
 .top-content .text { color: #fff; }
 .top-content .text h1 { color: #fff; }
 .top-content .description { margin: 20px 0 10px 0; }

@@ -136,6 +136,7 @@
 
         <!-- Top content -->
         <div class="top-content">
+            <img src="assets/img/una_logo.png"class="logos"><a href="#"></a>
             <div class="container">
                 
                 <div class="row">
@@ -143,6 +144,17 @@
 
                        <h1><strong>Ecossistema de iniciativas </strong>para equidade de gênero e empoderamento da mulher <br></h1>     
                         <div class="description">
+
+                            <!--Logo UNA -->
+
+                <div class="container">
+                    <div class="row" >
+
+                   <div class="col-md-3">
+                   
+                         <img src="assets/img/una_logo.png"class="logos"><a href="#"></a>
+                   </div>
+
                            <!--  <p>
                                 <strong>Interconexões para maximizar impacto</strong><br>
                                 </br>
