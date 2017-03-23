@@ -148,14 +148,9 @@
                        <h1><strong>Ecossistema de iniciativas </strong>para equidade de gênero e empoderamento da mulher <br></h1>     
                         <div class="description">
 
-                            <!--Logo UNA -->
 
-                <div class="container">
+                <!--<div class="container">-->
                     
-                           <!--  <p>
-                                <strong>Interconexões para maximizar impacto</strong><br>
-                                </br>
-                            </p> -->
                             <p class="modal-body" style="text-align: justify;"> 
 
                              O Ecossistema de iniciativas para equidade de gênero e empoderamento da mulher é uma iniciativa da ONU Mulheres, Womanity Foundation, BrazilFoundation e Instituto C&A.
