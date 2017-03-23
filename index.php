@@ -136,7 +136,10 @@
 
         <!-- Top content -->
         <div class="top-content">
-            <img src="assets/img/una_logo.png"><a href="#"></a>
+            <div class="row">
+                <img src="assets/img/una_logo.png">
+            </div>
+
             <div class="container">
                 
                 <div class="row">
