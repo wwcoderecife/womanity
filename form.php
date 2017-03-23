@@ -62,6 +62,13 @@
 
     <body>
 <?php
+    
+    // server should keep session data for AT LEAST 1 hour
+    ini_set('session.gc_maxlifetime', 14400);
+
+    // each client should remember their session id for EXACTLY 1 hour
+    session_set_cookie_params(14400);
+
     session_start();
 
     require_once "classes/Conexao.class.php";
@@ -106,6 +113,9 @@
 
         <!-- Top content -->
         <div class="top-content">
+            <div class="row">
+                <img src="assets/img/una_logo.png"class="logos">
+            </div>
             <div class="container">
                 
                 <div class="row">

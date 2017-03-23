@@ -43,6 +43,13 @@
 
     <body>
 <?php
+
+    // server should keep session data for AT LEAST 1 hour
+    ini_set('session.gc_maxlifetime', 14400);
+
+    // each client should remember their session id for EXACTLY 1 hour
+    session_set_cookie_params(14400);
+
     session_start();
 
     require_once "classes/Conexao.class.php";
@@ -129,6 +136,10 @@
 
         <!-- Top content -->
         <div class="top-content">
+            <div class="row">
+                <img src="assets/img/una_logo.png"class="logos">
+            </div>
+
             <div class="container">
                 
                 <div class="row">
@@ -136,11 +147,11 @@
 
                        <h1><strong>Ecossistema de iniciativas </strong>para equidade de gênero e empoderamento da mulher <br></h1>     
                         <div class="description">
-                           <!--  <p>
-                                <strong>Interconexões para maximizar impacto</strong><br>
-                                </br>
-                            </p> -->
-                            <p class="modal-body" style="text-align: justify;"> 
+
+
+                <!--<div class="container">-->
+                    
+                            <p style="text-align: justify;"> 
 
                              O Ecossistema de iniciativas para equidade de gênero e empoderamento da mulher é uma iniciativa da ONU Mulheres, Womanity Foundation, BrazilFoundation e Instituto C&A.
                              Tem como objetivo principal mapear organizações e iniciativas que trabalham com direitos e empoderamento da mulher para ampliar as interconexões entre elas e seu impacto. 
@@ -158,7 +169,7 @@
 
                  <div class="row">
                     <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
-                        <form role="form" data-toggle="validator" action="index.php" method="post" class="f1">
+                        <form name="form1" role="form" data-toggle="validator" action="index.php" method="post" class="f1">
 
                             <h3>Cadastro no Ecossistema</h3>
                             <p>Preencha os campos obrigatórios *</p>
@@ -202,24 +213,21 @@
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-password">Senha *</label>
-                                    <input type="password" name="password" placeholder="Senha *" onBlur=" return validasenha(event);" class="f1-password form-control" id="senha" maxlenght="6" required data-error = "Mínimo de seis (6) digitos">
-                                    <span id="label" style="font-family:verdana;"></span>
+                                    <input type="password" name="password" placeholder="Senha *" onBlur="return validasenha(this.value, 'msg');" class="f1-password form-control" id="senha"  maxlenght="6" required data-error = "Mínimo de seis (6) digitos">
+                                    <span id="msg" style="font-family:verdana;"></span>
                                     
                                 </div>
 
+                                <!--
+
                                 <script>
 
+                                function validasenha(x){
+                                    if(x.length <= 5){
+                                      document.getElementById("senha").focus();  
+                                      //alert("Senha invalida!");
 
-
-                                var specialKeys = new Array();
-                                    specialKeys.push(8); //Backspace
-
-                                function validasenha(e ){
-                                            var keyCode = e.which ? e.which : e.keyCode
-                                            var ret = ( Length(keyCode) < 6);
-                                            document.getElementById("label").style.display = "Senha inválida!, mínimo de 6 caracteres!";
-                                            return ret;
-                                    
+                                    }
                                 /*    
                                 if(e.length < 6){
  
@@ -237,10 +245,26 @@
 
                                 }; 
 
-                                  
-
+            
 
                                 </script>
+                            -->
+
+                            <script>
+
+                            function validasenha(msgsenha){
+                                var senha= form1.password.value;
+
+                                if(senha == " " || password.length <=5){
+                                    document.getElementById(msgsenha).innerHTML = "Preencha o campo senha com minimo 6 caracteres";
+                                    form1.senha.focus();
+                                    return false;
+
+                                }
+                            }
+
+
+                            </script>
 
                                 <div class="form-group">
                                     <label class="sr-only" for="f1-repeat-password">Repetir Senha *</label>

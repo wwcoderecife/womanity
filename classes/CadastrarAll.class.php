@@ -44,6 +44,8 @@
 
 include_once 'Conexao.class.php';
 
+
+
 class CadastrarAll extends Conexao {
 
     //******Organizacaoes*******//
@@ -817,6 +819,7 @@ class CadastrarAll extends Conexao {
     }
 
 
+
     public function inserir_novo(){
         $pdo = parent::getDB();
 
@@ -1149,20 +1152,48 @@ class CadastrarAll extends Conexao {
 
                 $pdo->commit();
 
+
+                
                 $_SESSION['cadastro'] = true;
 
-                echo "<script type='text/javascript'>
+                   
+               /*
+               $email_1 = $this->getEmail_1();
+               $nome = $this->getNome_1();
 
-                            sweetAlert({
-                              title: '',
-                               text: 'Cadastro realizado!',
-                               type: 'success'
-                              },
-                              function(){
-                                window.location.href = '../form.php';
-                            });
+               $corpo = "Prezado(a) $nome_1
+                            \n\n
+                            Todas as informações foram registradas em nosso sistema.
+                            \n
+                            Valorizamos muito a sua contribuição para o Mapeamento do Ecossistema de Iniciativas para equidade de gênero e empoderamento da mulher. 
+                            \n
+                            Muito Obrigada
+                            \n
+                            Nos próximos meses você poderá conhecer as outras organizações e iniciativas cadastradas e indicar com quais mais tem se relacionado. 
+                            \n
+                            Até breve!
 
-                        </script>";
+                            Equipe Executiva";
+                    $assuntocompleto = "Cadastro Ecossistema " .$nome;
+                    // metodo enviar email
+                    smtpmailer($email_1, "machado.karina@gmail.com", "Karina Machado", $assuntocompleto,$corpo);
+
+*/
+
+                    echo "<script type='text/javascript'>
+
+                                sweetAlert({
+                                  title: '',
+                                   text: 'Cadastro realizado!',
+                                   type: 'success'
+                                  },
+                                  function(){
+                                    window.location.href = '../form.php';
+                                });
+
+                            </script>"; 
+                                   
+
 
             }
             catch (Exception $e){
@@ -1190,6 +1221,7 @@ class CadastrarAll extends Conexao {
                         </script>";
 
             }
+ 
         endif;
 
 
@@ -1576,6 +1608,7 @@ class CadastrarAll extends Conexao {
 
             $_SESSION['cadastro'] = true;
 
+                    
             echo "<script type='text/javascript'>
 
                         sweetAlert({
@@ -1588,8 +1621,10 @@ class CadastrarAll extends Conexao {
                         });
 
                     </script>";
+                   
 
         }
+
         catch (Exception $e){
               $pdo->rollback();
               //echo $e->getMessage();

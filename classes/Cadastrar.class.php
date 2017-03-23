@@ -1,5 +1,6 @@
 <?php
 
+
 require_once "Usuario.class.php";
 
 class Cadastrar extends Conexao {
@@ -70,6 +71,7 @@ class Cadastrar extends Conexao {
             $l = new Login;
             $l->setLogin($this->email);
             $l->setSenha($this->senha);
+
 
             if($l->logar()):
                 header("Location: form.php");
