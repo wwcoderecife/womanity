@@ -148,13 +148,7 @@
                             <!--Logo UNA -->
 
                 <div class="container">
-                    <div class="row" >
-
-                   <div class="col-md-3">
-                   
-                         <img src="assets/img/una_logo.png"class="logos"><a href="#"></a>
-                   </div>
-
+                    
                            <!--  <p>
                                 <strong>Interconexões para maximizar impacto</strong><br>
                                 </br>
