@@ -2,8 +2,8 @@
 
 abstract class Conexao {
 
-	const USER = "b2e65ea0e96181";
-	const PASS = "71783f6f";
+	const USER = "";
+	const PASS = "";
 
 	private static $instance = null;
 
